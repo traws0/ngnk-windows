@@ -1,0 +1,10 @@
+d:#"OneTwoThreeFourFiveSixSevenEightNine"
++/(100*d
+   9*100*#"Hundred"
+   9*99*#"And"
+   10*+/(d
+         #"TenElevenTwelveThirteenFourteenFifteenSixteenSeventeenEighteenNineteen"
+         10*#"TwentyThirtyFortyFiftySixtySeventyEightyNinety"
+         8*d)
+   #"OneThousand")
+/21124
