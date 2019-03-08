@@ -1,2 +1,14 @@
 x86_64 linux only
-usage: rlwrap ./k repl.k
+usage: ./k file.k
+or interactively: rlwrap ./k repl.k
+
+if you have swap enabled, please create an alias that limits memory use, like
+ alias k='ulimit -v 4000000 && rlwrap ./k repl.k'
+to prevent an os freeze when you type something like !0W by mistake
+
+errors are not recoverable and cause an exit()
+support is poor for floating point, tables (flipped dicts), and i/o other than reading a file with mmap()
+
+deliberate deviations from k:
+ each of a unary verb doesn't require a colon. *'x and *:'x are "first each" but *' in isolation remains "times each"
+ flip always returns a list of lists. +0 is +,0 is ,,0
