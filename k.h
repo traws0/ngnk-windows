@@ -1,8 +1,8 @@
 #define dbg(x...) //x
 
 #define B break
-#define $(x,y...) if(x){y;}
-#define E(x...) else{x;}
+#define $(x,y...)  if(x){y;}
+#define E(x...)    else{x;}
 #define E$(x,y...) else if(x){y;}
 #define N __attribute__((noinline))
 #define O const
@@ -20,24 +20,22 @@
 #define TD typedef
 TD char      C;TD unsigned char      UC;
 TD short     H;TD unsigned short     UH;
-TD int       I;TD unsigned int       UI;
-TD long long L;TD unsigned long long UL;
-TD void V;TD double D;
-TD V*A __attribute__((align_value(16)));
+TD long long I;TD unsigned long long UI;
+TD void V;TD double F;TD V*A __attribute__((align_value(16)));
 
 #define A(x) ((A*)(x))
 #define C(x) ((C*)(x))
-#define L(x) ((L*)(x))
-#define D(x) ((D*)(x))
+#define I(x) ((I*)(x))
+#define F(x) ((F*)(x))
 
-#define fi(n,b...) for(L n_=(n),i=0;i<n_;i++){b;}
-#define fj(n,b...) for(L n_=(n),j=0;j<n_;j++){b;}
+#define fi(n,b...) for(I n_=(n),i=0;i<n_;i++){b;}
+#define fj(n,b...) for(I n_=(n),j=0;j<n_;j++){b;}
 #define min(x,y)   ({typeof(x)x_=(x),y_=(y);x_<y_?x_:y_;})
 #define max(x,y)   ({typeof(x)x_=(x),y_=(y);x_>y_?x_:y_;})
 #define abs(x)     ({typeof(x)x_=(x);x_<0?-x_:x_;})
 
 #include<sys/syscall.h>
-#define sc(f,regs...)      ({L r;asm volatile("syscall":"=a"(r):"0"(SYS_##f)regs:"cc","rcx","r11","memory");r;})
+#define sc(f,regs...)      ({I r;asm volatile("syscall":"=a"(r):"0"(SYS_##f)regs:"cc","rcx","r11","memory");r;})
 #define sc0(f      )       sc(f                      )
 #define sc1(f,x    )       sc(f,,"D"(x)              )
 #define sc2(f,x,y  )       sc(f,,"D"(x),"S"(y)       )
@@ -54,17 +52,17 @@ TD V*A __attribute__((align_value(16)));
 #define munmap(a...)       sc2(munmap,a)
 #define exit(a...)         sc1(exit  ,a)
 #define gettimeofday(a...) sc2(gettimeofday,a)
-#define mmap_(x,y,z,t,u,v) ({register L r10 asm("r10")=t,r8 asm("r8")=u,r9 asm("r9")=v;\
+#define mmap_(x,y,z,t,u,v) ({register I r10 asm("r10")=t,r8 asm("r8")=u,r9 asm("r9")=v;\
                              (V*)sc(mmap,,"D"(x),"S"(y),"d"(z),"r"(r10),"r"(r8),"r"(r9));})
 
-//types
-#define tc  1 // "ab"
-#define tl  2 // 0 1
-#define ts  3 // `a`b
-#define td  4 // 0.1 2.3
-#define th  5 // `a`b!0 1
-#define tg  6 // +`a`b!0 1
-#define tf  7 // {}
+#define tX  0 // ()
+#define tC  1 // "ab"
+#define tI  2 // 0 1
+#define tS  3 // `a`b
+#define tF  4 // 0.1 2.3
+#define ta  5 // `a`b!0 1
+#define tA  6 // +`a`b!0 1
+#define tl  7 // {}
 #define tp  8 // f[0;]
 #define tq  9 // +:+
 #define tr 10 // +/
@@ -72,17 +70,21 @@ TD V*A __attribute__((align_value(16)));
 #define tv 12 // +
 #define tw 13 // /
 #define te 14 // `lib 2:(`f;1)
-#define tn 15
-#define tC (-tc) // "a"
-#define tL (-tl) // 0
-#define tS (-ts) // `a
-#define tD (-td) // 0.1
-SI I isRefType(C t){R 1&((1|1<<th|1<<tg|1<<tf|1<<tp|1<<tq|1<<tr)>>t);}
+#define tn 15 // number of types
+#define to tF // offset
+#define tc (-tC) // "a"
+#define ti (-tI) // 0
+#define ts (-tS) // `a
+#define tf (-tF) // 0.1
+SI I isRef (C t){R 1&((1<<tX|1<<ta|1<<tA|1<<tl|1<<tp|1<<tq|1<<tr)>>t);}
+SI I isFn  (C t){R t>=tl;}
+SI I isAtom(C t){R t<0||t>=tl;}
+SI C tInv  (C t){R -t;} //atom <-> list
+SI C tList (C t){R abs(t);} //atom|list -> list
 
-TD struct{C b,t;UH o;I r;L n;}Hdr; //bucket,type,offset(or verb rank),refcount,length
-TD struct{A s,b,l,g,c,m;}*Fn; //source,bytecode,locals,globals,constants,map
-#define btor(b,t,o,r) ((UC)(b)|(UC)(t)<<8|(UI)(o)<<16|(UL)(r)<<32) //build 1st word of Hdr (bucket,type,offset,refcount)
-#define btr(b,t,r) btor(b,t,0,r)
+TD struct{C b,t;UH o;UI r:32;I n;}Hdr; //bucket,type,offset(or verb rank),refcount,length
+TD struct{A s,b,l,g,c,m;}*L; //lambda:source,bytecode,locals,globals,constants,map
+#define hdr(t,o,r,n) ((UC)(67-__builtin_clzll(((t)==tC?((n)+15)>>3:(n)+1)))|(UC)(t)<<8|(UI)(o)<<16|(UI)(r)<<32)
 
 #define Ab(x) ((Hdr*)(x))[-1].b
 #define At(x) ((Hdr*)(x))[-1].t
@@ -90,7 +92,6 @@ TD struct{A s,b,l,g,c,m;}*Fn; //source,bytecode,locals,globals,constants,map
 #define An(x) ((Hdr*)(x))[-1].n
 #define Ao(x) ((Hdr*)(x))[-1].o
 
-//`0:,/{"#define ",x,y," A",y,"(",x,")"}/:\:/("xyzu";"btrn")
 #define xb Ab(x)
 #define xt At(x)
 #define xr Ar(x)
@@ -108,59 +109,56 @@ TD struct{A s,b,l,g,c,m;}*Fn; //source,bytecode,locals,globals,constants,map
 #define ur Ar(u)
 #define un An(u)
 
-//`0:,/{"#define ",x,(_y)," ",y,"(",x,")"}/:\:/("xyzu";"CLDA")
 #define xc C(x)
-#define xl L(x)
-#define xd D(x)
+#define xi I(x)
+#define xf F(x)
 #define xa A(x)
 #define yc C(y)
-#define yl L(y)
-#define yd D(y)
+#define yi I(y)
+#define yf F(y)
 #define ya A(y)
 #define zc C(z)
-#define zl L(z)
-#define zd D(z)
+#define zi I(z)
+#define zf F(z)
 #define za A(z)
 #define uc C(u)
-#define ul L(u)
-#define ud D(u)
+#define ui I(u)
+#define uf F(u)
 #define ua A(u)
 
-//`0:"#define ",/:+b,/" ",(0 2_b:a@'!#:'a:("xyzu";"clda";"ij")),'"[]"
 #define xci xc[i]
 #define xcj xc[j]
-#define xli xl[i]
-#define xlj xl[j]
-#define xdi xd[i]
-#define xdj xd[j]
+#define xii xi[i]
+#define xij xi[j]
+#define xfi xf[i]
+#define xfj xf[j]
 #define xai xa[i]
 #define xaj xa[j]
 #define yci yc[i]
 #define ycj yc[j]
-#define yli yl[i]
-#define ylj yl[j]
-#define ydi yd[i]
-#define ydj yd[j]
+#define yii yi[i]
+#define yij yi[j]
+#define yfi yf[i]
+#define yfj yf[j]
 #define yai ya[i]
 #define yaj ya[j]
 #define zci zc[i]
 #define zcj zc[j]
-#define zli zl[i]
-#define zlj zl[j]
-#define zdi zd[i]
-#define zdj zd[j]
+#define zii zi[i]
+#define zij zi[j]
+#define zfi zf[i]
+#define zfj zf[j]
 #define zai za[i]
 #define zaj za[j]
 #define uci uc[i]
 #define ucj uc[j]
-#define uli ul[i]
-#define ulj ul[j]
-#define udi ud[i]
-#define udj ud[j]
+#define uii ui[i]
+#define uij ui[j]
+#define ufi uf[i]
+#define ufj uf[j]
 #define uai ua[i]
 #define uaj ua[j]
 
-//`0:{"#define ","xyzu"[x]," ","xyzu"[*x],"a[",($x[1]),"]"}'+!4 2;
 #define xx xa[0]
 #define xy xa[1]
 #define yx ya[0]
@@ -175,18 +173,18 @@ TD struct{A s,b,l,g,c,m;}*Fn; //source,bytecode,locals,globals,constants,map
 #define ZZ(x) (Z(x)/Z(*(x)))
 #define ZV Z(V*)
 #define ZC Z(C)
-#define ZL Z(L)
-#define ZD Z(D)
+#define ZI Z(I)
+#define ZF Z(F)
 #define ZHdr Z(Hdr)
-#define tz(t) tz_[td+(t)] //type size in bytes
+#define tz(t) tz_[to+(t)] //type size in bytes
 extern O C tz_[];
 
 #define W1 0 //1-byte data types
 #define W8 1 //8-byte data types
 #define W0 2 //ref types
-#define h(t,w) ((L)w<<(((31&(t))<<1)))|
-S O L tW_=h(tD,W8)h(tS,W8)h(tL,W8)h(tC,W1)h(0,W0)h(tc,W1)h(tl,W8)h(ts,W8)h(td,W8)
-          h(th,W0)h(tg,W0)h(tf,W0)h(tp,W0)h(tq,W0)h(tr,W0)h(tu,W8)h(tv,W8)h(tw,W8)h(te,W8)0;
+#define h(t,w) ((I)w<<(((31&(t))<<1)))|
+S O I tW_=h(tf,W8)h(ts,W8)h(ti,W8)h(tc,W1)h(tX,W0)h(tC,W1)h(tI,W8)h(tS,W8)h(tF,W8)
+          h(ta,W0)h(tA,W0)h(tl,W0)h(tp,W0)h(tq,W0)h(tr,W0)h(tu,W8)h(tv,W8)h(tw,W8)h(te,W8)0;
 #undef h
 SI C tW(C t){R 3&tW_>>(63&((t)<<1));} //type size as one of W1 W8 W0
 
@@ -202,57 +200,53 @@ SI C tW(C t){R 3&tW_>>(63&((t)<<1));} //type size as one of W1 W8 W0
 #define ez e("lmt"dbg(":"__FILE__":"xstr(__LINE__)))
 #define ev(s) e(s) //value error for name s
 #define ea(x) dbg($(!(x),e(__FILE__":"xstr(__LINE__)": "xstr(x)))) //assert
-A e(C*); //error. gets source offset for the current bytecode instruction from Fn->m
+A e(C*); //error. gets source offset for the current bytecode instruction from the lambda's .m
 V eo(C*,A,UH); //error with explicit source offset
 
 //memory management
 extern A symlist,mx[];
-A mm(L),ma(L,L),acm(C*,C*);V miAll(A),mdAll(A),*memcpy(V*,O V*,L);L m_used(),symidx(C*,L),strlen(O C*);
+A mm(I),ma(I,I),acm(C*,C*);V miAll(A),mdAll(A),*memcpy(V*,O V*,I);I m_used(),symidx(C*,I),strlen(O C*);
 #define nxt(x) A(x)[-2]
 SI V mf_(A x){ea(!xr);UC b=xb;nxt(x)=mx[b];mx[b]=x;} //free (non-recursive)
-SI V mf(A x){$(isRefType(xt),mdAll(x))mf_(x);} //free
-SI A mi(A x){ea(xr>=0);xr++;R x;}        //ref
-SI A mo(A x){ea(xr> 0);xr--;R x;}        //unref without consuming
-SI V mu(A x){ea(xr>=0);$(!  xr,mf(x))}   //consume
-SI V md(A x){ea(xr> 0);$(!--xr,mf(x))}   //unref and consume
-SI L mb(L n){R 67-__builtin_clzll(n+1);} //bucket index. n is size in 64-bit words
-SI A symstr(L i){R A(symlist)[i];}       //get the string corresponding to a `symbol. guranteed '\0' after last char
+SI V mf(A x){$(isRef(xt),mdAll(x))mf_(x);} //free
+SI A mi(A x){ea(xr>=0);xr++;R x;}      //ref
+SI A mo(A x){ea(xr> 0);xr--;R x;}      //unref without consuming
+SI V mu(A x){ea(xr>=0);$(!  xr,mf(x))} //consume
+SI V md(A x){ea(xr> 0);$(!--xr,mf(x))} //unref and consume
+SI A symstr(I i){R A(symlist)[i];}     //get the string corresponding to a `symbol. guranteed '\0' after last char
 
 //constructors
-SI A atnr(C t,L n,L r){R ma(btr(mb(t==tc?(n+7)>>3:n),t,r),n);}
-SI A atno(C t,L n,UH o){R ma(btor(mb(t==tc?(n+7)>>3:n),t,o,0),n);}
-SI A atn(C t,L n){R atnr(t,n,0);} //allocate by type and length
-SI A ax(A x){R xr?atn(xt,xn):x;}  //allocate the same type and length as x, attempting reuse
-SI A aC(C v){A x=atn(tC,1);*xc=v;R x;}
-SI A aL(L v){A x=atn(tL,1);*xl=v;R x;}
-SI A aS(L v){A x=atn(tS,1);*xl=v;R x;}
-SI A aD(D v){A x=atn(tD,1);*xd=v;R x;}
-SI A aa(L n){R atn( 0,n);}
-SI A al(L n){R atn(tl,n);}
-SI A as(L n){R atn(ts,n);}
-SI A ad(L n){R atn(td,n);}
-SI A ac(L n){R atn(tc,n);}
-SI A ag (A x,A y         ){mi(x);mi(y);      A u=atn (tg,2  );ux=x;uy=y;        R u;} //+x!y
-SI A ah (A x,A y         ){mi(x);mi(y);      A u=atn (th,2  );ux=x;uy=y;        R u;} //x!y
-SI A a1 (A x             ){mi(x);            A u=atn (0 ,1  );ux=x;             R u;} //,x
-SI A a2 (A x,A y         ){mi(x);mi(y);      A u=atn (0 ,2  );ux=x;uy=y;        R u;} //(x;y)
-SI A a3 (A x,A y,A z     ){mi(x);mi(y);mi(z);A u=atn (0 ,3  );ux=x;uy=y;ua[2]=z;R u;} //(x;y;z)
-SI A a2o(A x,A y,    UH o){mi(x);mi(y);      A u=atno(0 ,2,o);ux=x;uy=y;        R u;}
-SI A a3o(A x,A y,A z,UH o){mi(x);mi(y);mi(z);A u=atno(0 ,3,o);ux=x;uy=y;ua[2]=z;R u;}
+SI A atnr(C t,I n,I r){R ma(hdr(t,0,r,n),n);}
+SI A atno(C t,I n,UH o){R ma(hdr(t,o,0,n),n);}
+SI A atn(C t,I n){R atnr(t,n,0);} //allocate with type and length
+#define atv(t,v) ({A atv_r=atn((t),1);*(typeof(v)*)atv_r=(v);atv_r;}) //allocate with type and value
+SI A ax(A x){R xr?atn(xt,xn):x;}  //allocate of the same type and length as x, attempting reuse
+SI A aX(I n){R atn(tX,n);}        //allocate a generic list
+SI A aC(I n){R atn(tC,n);} SI A ac(C v){R atv(tc,v);}
+SI A aI(I n){R atn(tI,n);} SI A ai(I v){R atv(ti,v);}
+SI A aS(I n){R atn(tS,n);} SI A as(I v){R atv(ts,v);}
+SI A aF(I n){R atn(tF,n);} SI A af(F v){R atv(tf,v);}
+SI A aA (A x,A y         ){mi(x);mi(y);      A u=atn (tA,2  );ux=x;uy=y;        R u;} //+x!y
+SI A aa (A x,A y         ){mi(x);mi(y);      A u=atn (ta,2  );ux=x;uy=y;        R u;} //x!y
+SI A a1 (A x             ){mi(x);            A u=atn (tX,1  );ux=x;             R u;} //,x
+SI A a2 (A x,A y         ){mi(x);mi(y);      A u=atn (tX,2  );ux=x;uy=y;        R u;} //(x;y)
+SI A a3 (A x,A y,A z     ){mi(x);mi(y);mi(z);A u=atn (tX,3  );ux=x;uy=y;ua[2]=z;R u;} //(x;y;z)
+SI A a2o(A x,A y,    UH o){mi(x);mi(y);      A u=atno(tX,2,o);ux=x;uy=y;        R u;}
+SI A a3o(A x,A y,A z,UH o){mi(x);mi(y);mi(z);A u=atno(tX,3,o);ux=x;uy=y;ua[2]=z;R u;}
 
 #define v1(f) A f(A x)
 #define v2(f) A f(A x,A y)
 TD v1(v1);v1 sam,flp,neg,fst,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,cnt,flr,str,unq,typ,val,u0c,u1c,str0,prs,ldf,blw,sqz,cpl,json,out,nil,gl,gd,id_,cmd,mut,mut01,mut10,hopen,hclose,lst;
 TD v2(v2);v2 dex,add,sub,mul,div,mod,mxm,mnm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,app,v0c,v1c,v2c,sys,cps,idx,idx_,apd;
-TD A advt(A,A*,L);advt eac,rdc,scn,eap,ear,eal;
-A glb,apdc(A,C),apdl(A,L),apdd(A,D),apda(A,A),apply(A,A*,L),run(Fn,A*,L),emptyctx(),amd(A,A,A,A*,L),dmd(A,A,A,A*,L);
-L fndal(A,L),fndl(A,L),fnda(A,A),fndpc(A*,C),fndpl(A*,L),fndpa(A*,A),mtc_(A,A),tru(A);
+TD A advt(A,A*,I);advt eac,rdc,scn,eap,ear,eal;
+A glb,apdc(A,C),apdi(A,I),apdf(A,F),apdx(A,A),apply(A,A*,I),run(L,A*,I),emptyctx(),amd(A*,I),dmd(A*,I),eac_(A,A*,I,I);
+I fndai(A,I),fndi(A,I),fnda(A,A),fndpc(A*,C),fndpi(A*,I),fndpa(A*,A),mtc_(A,A),tru(A);
 V ___();
 
 #define vrbval(x) (31&(((V*)(x)-cu0))/Z(*cuvw_))
-SI V*vrbfnc(A x){ea(xt==tu||xt==tv||xt==tw);R(V*)xl[1];}
+SI V*vrbfnc(A x){ea(xt==tu||xt==tv||xt==tw);R(V*)xi[1];}
 #define _A(x)  (ZHdr+(V*)(x))
-#define cb(i)  _A(cb_[i])        //bools
+#define cb(i)  _A(cb_[i])        //bools (ints 0 and 1)
 #define cu(i)  _A(cuvw_[i])      //unary verbs
 #define cv(i)  _A(cuvw_[32+(i)]) //binary verbs
 #define cw(i)  _A(cuvw_[64+(i)]) //adverbs
@@ -277,22 +271,25 @@ SI V*vrbfnc(A x){ea(xt==tu||xt==tv||xt==tw);R(V*)xl[1];}
 #define _0n    (0.0/0.0)
 #define _0w    (0.1/0.0)
 extern O C cf[20];  //verb symbols
-extern O L cil[11]; //integer identities for arithmetic verbs
-extern O D cid[11]; //floating-point identities for arithmetic verbs
+extern O I cil[11]; //integer identities for arithmetic verbs
+extern O F cid[11]; //floating-point identities for arithmetic verbs
 extern O A cn_[tn]; //nulls
-TD L L4[4]__attribute__((aligned(32)));extern L4 cb_[2],cuvw_[32+32+6],c1h_,cea_; //pre-allocated objects, never freed
-SI L isArith(A x){R cv0<=x&&x<cv(ZZ(cil));}
+TD I I4[4]__attribute__((aligned(32)));extern I4 cb_[2],cuvw_[32+32+6],c1h_,cea_; //pre-allocated objects, never freed
+SI I isArith(A x){R cv0<=x&&x<cv(ZZ(cil));}
 
 //indices of predefined symbols
-#define s_o 4 //`o
-#define s_p 5 //`p
-#define s_j 6 //`j
-#define s_t 7 //`t
+#define s_x 1
+#define s_y 2
+#define s_z 3
+#define s_o 4
+#define s_p 5
+#define s_j 6
+#define s_t 7
 
-SI L gL(A x){L r=*xl;mu(x);R r;}
-SI D gD(A x){D r=*xd;mu(x);R r;}
+SI I gI(A x){mu(x);R*xi;}
+SI F gF(A x){mu(x);R*xf;}
 
-#define arithL(f,n,p)Y(f,,\
+#define arI(f,n,p)Y(f,,\
  Q( 0,fi(n,p ((V)a,b)                 ))\
  Q( 1,fi(n,p a+b                      ))\
  Q( 2,fi(n,p a-b                      ))\
@@ -304,7 +301,7 @@ SI D gD(A x){D r=*xd;mu(x);R r;}
  Q( 8,fi(n,p a<b                      ))\
  Q( 9,fi(n,p a>b                      ))\
  Q(10,fi(n,p a==b                     )))
-#define arithD(f,n,p)Y(f,,\
+#define arF(f,n,p)Y(f,,\
  Q( 0,fi(n,p ((V)a,b)                 ))\
  Q( 1,fi(n,p a+b                      ))\
  Q( 2,fi(n,p a-b                      ))\
@@ -313,13 +310,13 @@ SI D gD(A x){D r=*xd;mu(x);R r;}
  Q( 5,fi(n,p ((V)a,(V)b,_0n) /*todo*/ ))\
  Q( 6,fi(n,p min(a,b)                 ))\
  Q( 7,fi(n,p max(a,b)                 ))\
- Q( 8,fi(n,p *(D*)cb(a<b)             ))\
- Q( 9,fi(n,p *(D*)cb(a>b)             ))\
- Q(10,fi(n,p *(D*)cb(a==b)            )))
+ Q( 8,fi(n,p *(F*)cb(a<b)             ))\
+ Q( 9,fi(n,p *(F*)cb(a>b)             ))\
+ Q(10,fi(n,p *(F*)cb(a==b)            )))
 
 //debugging
-#define pv(x) pv_(#x,(L)(x));
+#define pv(x) pv_(#x,(I)(x));
 #define pa(x) pa_(#x" ",(x));
 #define nop {asm volatile("nop");}
 #define P ps("["__FILE__":"xstr(__LINE__)"]");
-V ps(C*),ph(L),pd(L),pa_(C*,A);L pv_(C*,L);
+V ps(C*),ph(I),pd(I),pa_(C*,A);I pv_(C*,I);
