@@ -1,3 +1,4 @@
+/https://codegolf.stackexchange.com/questions/169214/alternating-pattern/169338#169338
 f:{"*#"i|:/'i>/:i&|i:!x}
 \l 0.k
 t[1;,,"*"]

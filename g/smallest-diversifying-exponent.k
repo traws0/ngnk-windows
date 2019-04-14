@@ -1,3 +1,4 @@
+/https://codegolf.stackexchange.com/questions/177826/smallest-diversifying-exponent/177849#177849
 f:{#{10>#?(+/|\0<|x)#x}{{+/2 99#,/|0 10\x,0}/+/99 99#,/a*\:x,0}\a::|(99#10)\x}
 \l 0.k
 

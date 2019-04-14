@@ -1,3 +1,4 @@
+/https://codegolf.stackexchange.com/questions/61903/code-the-huffman/178621#178621
 f:{h::0#'x;(#1_){{h[x],:!2;y,,,/x}.0 2_x@<#'x}/.=x;(?,/'x,'" ",'|'$h)(?x)?>#'=x}
 \l 0.k
 t["this question is about huffman coding"

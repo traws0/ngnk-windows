@@ -1,0 +1,6 @@
+/https://codegolf.stackexchange.com/questions/181958/multiplicative-persistence/181971#181971
+f:{*/.'$x}\
+\l 0.k
+t[277777788888899
+  277777788888899 4996238671872 438939648 4478976 338688 27648 2688 768 336 54 20 0]
+
