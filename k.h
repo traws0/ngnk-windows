@@ -60,8 +60,8 @@ TD void V;TD double F;TD V*A __attribute__((align_value(16)));
 #define tI  2 // 0 1
 #define tS  3 // `a`b
 #define tF  4 // 0.1 2.3
-#define ta  5 // `a`b!0 1
-#define tA  6 // +`a`b!0 1
+#define tA  5 // +`a`b!0 1
+#define ta  6 // `a`b!0 1
 #define tl  7 // {}
 #define tp  8 // f[0;]
 #define tq  9 // +:+
@@ -238,8 +238,8 @@ SI A a3o(A x,A y,A z,UH o){mi(x);mi(y);mi(z);A u=atno(tX,3,o);ux=x;uy=y;ua[2]=z;
 #define v2(f) A f(A x,A y)
 TD v1(v1);v1 sam,flp,neg,fst,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,cnt,flr,str,unq,typ,val,u0c,u1c,str0,prs,ldf,blw,sqz,cpl,json,out,nil,gl,gd,id_,cmd,mut,mut01,mut10,hopen,hclose,lst;
 TD v2(v2);v2 dex,add,sub,mul,div,mod,mxm,mnm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,app,v0c,v1c,v2c,sys,cps,idx,idx_,apd;
-TD A advt(A,A*,I);advt eac,rdc,scn,eap,ear,eal;
-A glb,apdc(A,C),apdi(A,I),apdf(A,F),apdx(A,A),apply(A,A*,I),run(L,A*,I),emptyctx(),amd(A*,I),dmd(A*,I),eac_(A,A*,I,I);
+TD A vn(A,A*,I);vn eac,rdc,scn,eap,ear,eal;
+A glb,apdc(A,C),apdi(A,I),apdf(A,F),apdx(A,A),apply(A,A*,I),run(L,A*,I),emptyctx(),amd(A*,I),dmd(A*,I),each(vn,A,A*,I,I);
 I fndai(A,I),fndi(A,I),fnda(A,A),fndpc(A*,C),fndpi(A*,I),fndpa(A*,A),mtc_(A,A),tru(A);
 V ___();
 
@@ -286,8 +286,9 @@ SI I isArith(A x){R cv0<=x&&x<cv(ZZ(cil));}
 #define s_j 6
 #define s_t 7
 
-SI I gI(A x){mu(x);R*xi;}
-SI F gF(A x){mu(x);R*xf;}
+SI I  gi(A x){mu(x);R*xi;}
+SI F  gf(A x){mu(x);R*xf;}
+SI UC gc(A x){mu(x);R*xc;}
 
 #define arI(f,n,p)Y(f,,\
  Q( 0,fi(n,p ((V)a,b)                 ))\

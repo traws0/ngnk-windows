@@ -79,7 +79,7 @@ v1(prs){x=str0(x);C*s=xc,*s0=s;I n=1;A t[64];UC g[ZZ(t)];UH o[ZZ(t)];*t=a2(x,aS(
                    S I4 xyz[]={{hdr(tS,0,1,1),1,s_x},
                                {hdr(tS,0,1,2),2,s_x,s_y},
                                {hdr(tS,0,1,3),3,s_x,s_y},{s_z}};
-                   y=mo(xy);$(yt==ti,xy=mi(_A(xyz[gI(y)-1])))E(A z=xy=mi(sqz(y));$(zt!=tS,ep))
+                   y=mo(xy);$(yt==ti,xy=mi(_A(xyz[gi(y)-1])))E(A z=xy=mi(sqz(y));$(zt!=tS,ep))
                    Ao(x)=An(xy);ea(Ao(x));na=0;I j=n-1;W(j>0&&g[j]!=GC,j--)$(j,A z=t[j];z=zy;$(zt==ti,na=zi))))))
  $(x,psh(gx,x,ox))
  $(g[n-1]<=GV,
