@@ -1,4 +1,4 @@
-n:100000 /number of moves to simulate
+n:200000 /number of moves to simulate
 jmps:0 10 11 24 39 5 /GO,JAIL,C1,E3,H2,R1
 c:&40;p:0;m:0 /c:counters, p:position, m:consecutive doubles
 f:{c[p]+:1;d:1+2?4;m+:1;m*:=/d;p::(#c)!p+/d

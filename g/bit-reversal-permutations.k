@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/83373/bit-reversal-permutations/164642#164642
-f:{2/'+|!x#2}
+f:2/|!2|&:
 \l 0.k
 t[1;0 1]
 t[2;0 2 1 3]
