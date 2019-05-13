@@ -9,18 +9,19 @@ S O UC CT_[256]={['0'...'9']=CD,['\'']=CA,['/']=CA,['\\']=CA,['"']=CQ,['`']=CS,
 //     noun verb ()   []   {}   start/end
 S O UC GN=0,GV=1,GP=2,GB=3,GC=4,GG=5; //grammatical categories
 S C unh(C c){R(c&15)+9*(c>'9');} S C num(C*s){R CT(s[*s=='-'])==CD;} S C ldg(C c){R CT(c)<=CD;}
-#define ep {eo("prs",s0,s-s0);R 0;}
+#define ep {ec=1;eo(s0,s-s0);R 0;}
 #define psh(gi,ti,oi){g[n]=gi;t[n]=ti;o[n]=(C)(oi);n++;$(n>ZZ(t),ep)}
 S v1(mon){$(xt==tv&&x!=cv0,R cu(*xi))$(!xt&&xn==2&&xx==cw(0),x=mut10(x);xy=mi(mon(xy)))R x;}
-S I pnm(C**p){C*s=*p,c=*s;
+S I prsname(C**p){C*s=*p,c=*s;
  $(c&0x80,DW(c=*++s,(c&0xc0)==0x80))E$(c==':',DW(c=*++s,ldg(c)||c=='.'||c==':'||c=='/'))E(W(ldg(c),c=*++s))
  I v=sym(*p,s-*p);*p=s;R v;}
-S N A pnms(C**p,C sep){C*s=*p,c=*s;A x=aS(0);W(1,x=apdi(x,pnm(&s));$(*s!=sep,B)c=*++s)*p=s;R x;}
+S N A prsnames(C**p,C sep){C*s=*p,c=*s;A x=aS(0);W(1,x=apdi(x,prsname(&s));$(*s!=sep,B)c=*++s)*p=s;R x;}
 v1(prs){x=str0(x);C*s=xc,*s0=s;I n=1;A t[64];UC g[ZZ(t)];UH o[ZZ(t)];*t=a2(x,aS(0));*g=GG;*o=0;I*na=0;
- W(1,C c=*s;A x=0;C gx=GN;W(c==' ',c=*++s)$(c=='/',DW(c=*++s,c&&c!='\n'));UH ox=s-s0;
+ W(1,C c=*s;A x=0;C gx=GN;W(c==' ',c=*++s)
+  $(c=='/'&&(s==s0||s[-1]==' '||s[-1]=='\n'),DW(c=*++s,c&&c!='\n'));UH ox=s-s0;
   Y(CT(c),ep,
-   Q(CL,C*s1=s;x=pnms(&s,'.');$(xn==1,xt=ts;$(na&&s-s1==1&&(*s1=='y'||*s1=='z'),*na=max(*s1-'w',*na))))
-   Q(CS,s++;x=pnms(&s,'`');c=*s;$(xn>1,x=a1(x)))
+   Q(CL,C*s1=s;x=prsnames(&s,'.');Ao(x)=ox;$(xn==1,xt=ts;$(na&&s-s1==1&&(*s1=='y'||*s1=='z'),*na=max(*s1-'w',*na))))
+   Q(CS,s++;x=prsnames(&s,'`');c=*s;$(xn>1,x=a1(x)))
    Q(CQ,x=aC(0);c=*++s;W(c&&c!='"',$(c=='\\',c=*++s;fi(4,$(c=="tnr0"[i],c="\t\n\r"[i])))x=apdc(x,c);c=*++s)
         $(!c,ep)c=*++s;$(xn==1,xt=tc))
    Q(CA,$(c=='\\'&&(!s[1]||CT(s[1])==CL),c=*++s;C*s1=s;W(c&&c!='\n',c=*++s)x=a2o(cu_cmd,acm(s1,s),ox))
@@ -61,11 +62,8 @@ v1(prs){x=str0(x);C*s=xc,*s0=s;I n=1;A t[64];UC g[ZZ(t)];UH o[ZZ(t)];*t=a2(x,aS(
              Q(']',g[i]=GN;$(xx==cv_lis,x=cut(cb(1),x);$(xt!=tS,ep)n--;t[n-1]=apdx(t[n-1],x));Ao(t[n-1])=o[n-1];
                    $(xn==2&&xy==cv_plc,mo(xy);xy=mi(cu0)))
              Q('}',g[i]=GN;xt=tl;md(xx);xx=mi(acm(s0,s));s0-=o[i]-1;
-                   S I4 xyz[]={{hdr(tS,0,1,1),1,s_x},
-                               {hdr(tS,0,1,2),2,s_x,s_y},
-                               {hdr(tS,0,1,3),3,s_x,s_y},{s_z}};
-                   y=mo(xy);$(yt==ti,xy=mi(_A(xyz[gi(y)-1])))E(A z=xy=mi(sqz(y));$(zt!=tS,ep))
-                   Ao(x)=An(xy);ea(Ao(x));na=0;I j=n-1;W(j>0&&g[j]!=GC,j--)$(j,A z=t[j];z=zy;$(zt==ti,na=zi))))))
+                   y=mo(xy);$(yt==ti,xy=mi(cxyz(gi(y)-1)))E(A z=xy=mi(sqz(y));$(zt!=tS,ep))
+                   Ao(x)=An(xy);asrt(Ao(x));na=0;I j=n-1;W(j>0&&g[j]!=GC,j--)$(j,A z=t[j];z=zy;$(zt==ti,na=zi))))))
  $(x,psh(gx,x,ox))
  $(g[n-1]<=GV,
   W(CT(*s)==CA,C c=*s++,u=*s==':';s+=u;t[n-1]=a2(cw((c!='\'')+(c=='\\')+3*u),t[n-1]);g[n-1]=GV)

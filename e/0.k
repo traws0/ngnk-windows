@@ -7,7 +7,7 @@ isprime:{p:2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61;$[x<62;:~^p?x;~&/p!
 totients:{(!x){[n1;r;p] i:p*1+!(-p)!n1;r[i]:(-p)!r[i]*p-1;r}[x-1]/primes x}
 sigma1:{a:(x#1){[r;p] n:#r;m:1+(-p)!n-1;q:-1_(n>)(p*)\p;@[r;p*!m;*;@[m#p+1;(-1_q)*!'1+(--1_q)!'m-1;+;1_q]]}/p:primes 2+_%x /sum of divisors
         p:(#p)_primes x;a[p*!'1+(-p)!'-1+#a]*:p+1;a[0]:0;a}
-cfsqrt:{a0:_%x;$[x=a0*a0;0;*|+{[a0;x] ~(2*a0)=x 2}[a0]({[N;a0;m;d;a] m:(d*a)-m;d:(-d)!N-m*m;a:(-d)!a0+m;m,d,a}[x;a0].)\0 1,a0]}
+cfsqrt:{a0:_%x;$[x=a0*a0;0;*|+(~(2*a0)=*|:)({[N;a0;m;d;a] m:(d*a)-m;d:(-d)!N-m*m;a:(-d)!a0+m;m,d,a}[x;a0].)\0 1,a0]}
 pell:  {$[x=*/2#_%x;:0N;];r:|0 1{(x 1;y/|x)}/|c:-1_cfsqrt x;$[2!#c;1 0+2*/'r**r;r]}
 pelln1:{$[x=*/2#_%x;:0N;];r:|0 1{(x 1;y/|x)}/|c:-1_cfsqrt x;$[2!#c;r;0N]}
 gcd:{*|(*:)(|!\)/x,y}
