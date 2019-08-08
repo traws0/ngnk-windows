@@ -1,0 +1,28 @@
+ngn/k types as                 bit 63 ................................................... bit 0
+tagged pointers
+                               ptr?
+                         func?  |  dict/tbl?
+                              \ | /
+       _                       fpd
+      |  char          tc "a"  00000001................................................cccccccc  c:value, .:unused
+simple|  long          tl 0    00000010llllllllllllllllllllllllllllllllllllllllllllllllllllllll  l:value
+atoms |  double        td 0.   00000011dddddddddddddddddddddddddddddddddddddddddddddddddddddddd  d:value
+      |_ symbol        ts `a   00000100........ssssssssssssssssssssssssssssssssssssssssssss0000  s:ptr to str with refc permanently >0
+      |  generic list  tX ()   01000000........pppppppppppppppppppppppppppppppppppppppppppp0000  p:ptr to any k object
+      |  char list     tC ""   01000001........pppppppppppppppppppppppppppppppppppppppppppp0000
+lists |  long list     tL !0   01000010........pppppppppppppppppppppppppppppppppppppppppppp0000
+      |  double list   tD 0#0. 01000011........pppppppppppppppppppppppppppppppppppppppppppp0000
+      |_ symbol list   tS ``   01000100........pppppppppppppppppppppppppppppppppppppppppppp0000
+dict  |  dict          ta l!l  01100000........pppppppppppppppppppppppppppppppppppppppppppp0000
+tbl   |_ table         tA +l!l 01110000........pppppppppppppppppppppppppppppppppppppppppppp0000
+      |  user func     to {}   11000kkk........pppppppppppppppppppppppppppppppppppppppppppp0000
+      |  projection    tp 1+   11001kkk........pppppppppppppppppppppppppppppppppppppppppppp0000
+      |  composition   tq ++   11010kkk........pppppppppppppppppppppppppppppppppppppppppppp0000
+funcs |  verb-adverb   tr +/   11011kkk.....wwwpppppppppppppppppppppppppppppppppppppppppppp0000
+      |  unary verb    tu +:   10000001...................................................vvvvv  v:which verb   (0.. for +-*%..)
+      |  binary verb   tv +    10000010...................................................vvvvv
+      |_ adverb        tw /    10001001.....................................................www
+                                    kkk     www
+                                    \_/     \_/
+                                     |       |
+                    k:arity (for funcs)       w:which adverb (0..5 for ' / \ ': /: \:)
