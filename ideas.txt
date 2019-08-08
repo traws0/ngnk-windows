@@ -14,16 +14,16 @@ dict  |_ dict            ta l!l  01000001........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       |  long  (ptr)             10000010........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
       |  double(ptr)             10000011........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
 simple|  char  (packed)  tc "a"  10100001................................................cccccccc  c:value
-atoms |  long  (packed)  tl 0    10100010llllllllllllllllllllllllllllllllllllllllllllllllllllllll  l:value (leading bits assumed 0)
-      |  double(packed)  td 0.   10100011dddddddddddddddddddddddddddddddddddddddddddddddddddddddd  d:value (trailing bits assumed 0)
+atoms |  long  (packed)  tl 0    10100010llllllllllllllllllllllllllllllllllllllllllllllllllllllll  l:value with leading bits assumed 0 (sign-extend?)
+      |  double(packed)  td 0.   10100011dddddddddddddddddddddddddddddddddddddddddddddddddddddddd  d:value with trailing bits assumed 0 (maybe?)
       |_ symbol(packed)  ts `a   10100100........ssssssssssssssssssssssssssssssssssssssssssss0000  s:ptr to str with refc permanently >0
       |  user func       to {}   11000kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
       |  projection      tp 1+   11001kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
       |  composition     tq ++   11010kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
 funcs |  verb-adverb     tr +/   11011kkk.....wwwxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000  w:adverb (0..5 for ' / \ ': /: \:)
-      |  unary  verb     tu +:   11100001.................................................00vvvvv  v:verb   (0..  for +-*%..)
-      |  binary verb     tv +    11100010.................................................01vvvvv
-      |_ adverb          tw /    11100001.................................................1000www
-                                      kkk                                                 \_____/
-                                      \_/                                                  index in a common dispatch table
+      |  unary  verb     tu +:   11100001................................................000vvvvv  v:verb   (0..  for : + - * ..)
+      |  binary verb     tv +    11100010................................................001vvvvv
+      |_ adverb          tw /    11100001................................................01000www
+                                      kkk                                                \______/
+                                      \_/                                                 index in a common dispatch table
                                      arity (for funcs)
