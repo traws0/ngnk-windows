@@ -1,28 +1,29 @@
-ngn/k types as                 bit 63 ................................................... bit 0
-tagged pointers
-                               ptr?
-                         func?  |  dict/tbl?
-                              \ | /
-       _                       fpd
-      |  char          tc "a"  00000001................................................cccccccc  c:value, .:unused
-simple|  long          tl 0    00000010llllllllllllllllllllllllllllllllllllllllllllllllllllllll  l:value
-atoms |  double        td 0.   00000011dddddddddddddddddddddddddddddddddddddddddddddddddddddddd  d:value
-      |_ symbol        ts `a   00000100........ssssssssssssssssssssssssssssssssssssssssssss0000  s:ptr to str with refc permanently >0
-      |  generic list  tX ()   01000000........pppppppppppppppppppppppppppppppppppppppppppp0000  p:ptr to any k object
-      |  char list     tC ""   01000001........pppppppppppppppppppppppppppppppppppppppppppp0000
-lists |  long list     tL !0   01000010........pppppppppppppppppppppppppppppppppppppppppppp0000
-      |  double list   tD 0#0. 01000011........pppppppppppppppppppppppppppppppppppppppppppp0000
-      |_ symbol list   tS ``   01000100........pppppppppppppppppppppppppppppppppppppppppppp0000
-dict  |  dict          ta l!l  01100000........pppppppppppppppppppppppppppppppppppppppppppp0000
-tbl   |_ table         tA +l!l 01110000........pppppppppppppppppppppppppppppppppppppppppppp0000
-      |  user func     to {}   11000kkk........pppppppppppppppppppppppppppppppppppppppppppp0000
-      |  projection    tp 1+   11001kkk........pppppppppppppppppppppppppppppppppppppppppppp0000
-      |  composition   tq ++   11010kkk........pppppppppppppppppppppppppppppppppppppppppppp0000
-funcs |  verb-adverb   tr +/   11011kkk.....wwwpppppppppppppppppppppppppppppppppppppppppppp0000
-      |  unary verb    tu +:   10000001...................................................vvvvv  v:which verb   (0.. for +-*%..)
-      |  binary verb   tv +    10000010...................................................vvvvv
-      |_ adverb        tw /    10001001.....................................................www
-                                    kkk     www
-                                    \_/     \_/
-                                     |       |
-                    k:arity (for funcs)       w:which adverb (0..5 for ' / \ ': /: \:)
+ngn/k tagged ptrs                bit 63 ................................................... bit 0
+
+                                  f:func|dict|tbl?
+                         a:atom?  |  p:packed?
+                                \ | /
+       _                         afp
+      |  generic list    tX ()   00000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000  x:ptr, .:unused
+      |  chars           tC ""   00000001........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+lists |  longs           tL !0   00000010........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+      |  doubles         tD 0#0. 00000011........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+      |_ symbols         tS ``   00000100........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+table |  table           tA +l!l 01000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+dict  |_ dict            ta l!l  01000001........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+      |  long  (ptr)             10000010........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+      |  double(ptr)             10000011........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+simple|  char  (packed)  tc "a"  10100001................................................cccccccc  c:value
+atoms |  long  (packed)  tl 0    10100010llllllllllllllllllllllllllllllllllllllllllllllllllllllll  l:value (leading bits assumed 0)
+      |  double(packed)  td 0.   10100011dddddddddddddddddddddddddddddddddddddddddddddddddddddddd  d:value (trailing bits assumed 0)
+      |_ symbol(packed)  ts `a   10100100........ssssssssssssssssssssssssssssssssssssssssssss0000  s:ptr to str with refc permanently >0
+      |  user func       to {}   11000kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+      |  projection      tp 1+   11001kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+      |  composition     tq ++   11010kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
+funcs |  verb-adverb     tr +/   11011kkk.....wwwxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000  w:adverb (0..5 for ' / \ ': /: \:)
+      |  unary  verb     tu +:   11100001.................................................00vvvvv  v:verb   (0..  for +-*%..)
+      |  binary verb     tv +    11100010.................................................01vvvvv
+      |_ adverb          tw /    11100001.................................................1000www
+                                      kkk                                                 \_____/
+                                      \_/                                                  index in a common dispatch table
+                                     arity (for funcs)
