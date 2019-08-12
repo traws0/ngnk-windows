@@ -1,29 +1,23 @@
-ngn/k tagged ptrs                bit 63 ................................................... bit 0
-
-                                  f:func|dict|tbl?
-                         a:atom?  |  p:packed?
-                                \ | /
-       _                         afp
-      |  generic list    tX ()   00000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000  x:ptr, .:unused
-      |  chars           tC ""   00000001........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-lists |  longs           tL !0   00000010........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-      |  doubles         tD 0#0. 00000011........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-      |_ symbols         tS ``   00000100........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-table |  table           tA +l!l 01000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-dict  |_ dict            ta l!l  01000001........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-      |  long  (ptr)             10000010........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-      |  double(ptr)             10000011........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-simple|  char            tc "a"  10100001................................................cccccccc  c:value
-atoms |  long  (packed)  tl 0    10100010llllllllllllllllllllllllllllllllllllllllllllllllllllllll  l:value with leading bits assumed 0 (sign-extend?)
-      |  double(packed)  td 0.   10100011dddddddddddddddddddddddddddddddddddddddddddddddddddddddd  d:value with trailing bits assumed 0 (maybe?)
-      |_ symbol          ts `a   10100100........ssssssssssssssssssssssssssssssssssssssssssss0000  s:ptr to str with refc permanently >0
-      |  user func       to {}   11000kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-      |  projection      tp 1+   11001kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-      |  composition     tq ++   11010kkk........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000
-funcs |  verb-adverb     tr +/   11011kkk.....wwwxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000  w:adverb (0..5 for ' / \ ': /: \:)
-      |  unary  verb     tu +:   11100001................................................000vvvvv  v:verb   (0..  for : + - * ..)
-      |  binary verb     tv +    11100010................................................001vvvvv
-      |_ adverb          tw /    11100001................................................01000www
-                                      kkk                                                \______/
-                                      \_/                                                 index in a common dispatch table
-                                     arity (for funcs)
+//a:atom?,f:func|tbl|dict?,p:packed?,t:type,k:arity,v:verb,w:adverb,x:ptr,clds:packed value        _
+#define tX  (UC)0b00000000 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ()    |
+#define tC  (UC)0b00000001 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ""    |
+#define tL  (UC)0b00000010 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ,0    |lists
+#define tD  (UC)0b00000011 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ,0.   |
+#define tS  (UC)0b00000100 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ,`   _|
+#define tA  (UC)0b01000000 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 +l!l _|table
+#define ta  (UC)0b01000001 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 l!l  _|dict   _
+#define tc  (UC)0b10000001 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 "a"   |        |  <- to be removed
+#define tl  (UC)0b10000010 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0     |        |
+#define td  (UC)0b10000011 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0.    |        |
+#define ts  (UC)0b10000100 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 `a    |simple  |  <- to be removed
+#define tc0 (UC)0b10100001 //afpttttt................................................cccccccc "a"   |        |
+#define tl0 (UC)0b10100010 //afptttttllllllllllllllllllllllllllllllllllllllllllllllllllllllll 0     |        |
+#define td0 (UC)0b10100011 //afptttttdddddddddddddddddddddddddddddddddddddddddddddddddddddddd 0.    |        |
+#define ts0 (UC)0b10100100 //afpttttt........ssssssssssssssssssssssssssssssssssssssssssss0000 `a   _|        |atoms
+#define to  (UC)0b11000000 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 {}    |        |
+#define tp  (UC)0b11000001 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 1+    |        |
+#define tq  (UC)0b11000010 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ++    |        |
+#define tr  (UC)0b11000011 //afpttttt..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 +/    |func    |
+#define tu  (UC)0b11100000 //afptttttvvvvv001................................................ +:    |        |
+#define tv  (UC)0b11100001 //afptttttvvvvv010................................................ +     |        |
+#define tw  (UC)0b11100010 //afpttttt00www001................................................ /    _|       _|
