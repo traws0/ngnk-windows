@@ -52,6 +52,7 @@ $[n;error+1($n),"/",($#t)," failed\n";1"ok\n"];
 &/0#,(1 2;"34")               / 0W
 "x"/("ab";"c";"def")          / "abxcxdef"
 "xy"/("ab";"cd")              / "abxycd"
+"AB"/"ab"\"abracadabra"       / "ABracadABra"
 ""/("ab";"cd")                / "abcd"
 0xff/,"ab"                    / "ab"
 "x"/()                        / ""
