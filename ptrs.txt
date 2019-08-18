@@ -6,16 +6,16 @@
 #define tS  (UC)0b00000100 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ,`   _|
 #define tA  (UC)0b01000000 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 +l!l _|table
 #define ta  (UC)0b01000001 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 l!l  _|dict   _
-#define tl  (UC)0b10000010 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0     |        |
-#define td  (UC)0b10000011 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0.    |        |
-#define tc0 (UC)0b10100001 //afpttttt................................................cccccccc "a"   |simple  |
-#define tl0 (UC)0b10100010 //afptttttllllllllllllllllllllllllllllllllllllllllllllllllllllllll 0     |atoms   |
-#define td0 (UC)0b10100011 //afptttttdddddddddddddddddddddddddddddddddddddddddddddddddddddddd 0.    |        |         <- td0 nyi
-#define ts0 (UC)0b10100100 //afpttttt........ssssssssssssssssssssssssssssssssssssssssssss0000 `a   _|        |atoms
+#define tlx (UC)0b10000010 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0     |        |
+#define tdx (UC)0b10000011 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0.    |        |
+#define tc  (UC)0b10100001 //afpttttt................................................cccccccc "a"   |simple  |
+#define tl  (UC)0b10100010 //afptttttllllllllllllllllllllllllllllllllllllllllllllllllllllllll 0     |atoms   |
+#define td  (UC)0b10100011 //afptttttdddddddddddddddddddddddddddddddddddddddddddddddddddddddd 0.    |        |
+#define ts  (UC)0b10100100 //afpttttt........................ssssssssssssssssssssssssssssssss `a   _|        |atoms
 #define to  (UC)0b11000000 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 {}    |        |
 #define tp  (UC)0b11000001 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 1+    |        |
 #define tq  (UC)0b11000010 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ++    |        |
-#define tr  (UC)0b11000011 //afpttttt..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 +/    |func    |
+#define tr  (UC)0b11000011 //afpttttt..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 +/    |funcs   |
 #define tu  (UC)0b11100000 //afptttttvvvvv001................................................ +:    |        |
 #define tv  (UC)0b11100001 //afptttttvvvvv010................................................ +     |        |
 #define tw  (UC)0b11100010 //afpttttt00www001................................................ /    _|       _|
