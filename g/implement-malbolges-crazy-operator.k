@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/167683/implement-malbolges-crazy-operator/167714#167714
-f:{3/(3\10267)@3/+(10#3)\x}
+f:3/(3\10267)@3/+(10#3)\
 \l 0.k
 t[0 0;29524]
 t[1 2;29525]

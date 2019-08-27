@@ -10,9 +10,8 @@
 #define tdx (UC)0b10000011 //afpttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 0.    |        |
 #define tc  (UC)0b10100001 //afpttttt................................................cccccccc "a"   |simple  |
 #define tl  (UC)0b10100010 //afptttttllllllllllllllllllllllllllllllllllllllllllllllllllllllll 0     |atoms   |
-#define td  (UC)0b10100011 //afptttttdddddddddddddddddddddddddddddddddddddddddddddddddddddddd 0.    |        |
-#define ts  (UC)0b10100100 //afpttttt........................ssssssssssssssssssssssssssssssss `a   _|        |atoms
-#define to  (UC)0b11000000 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 {}    |        |
+#define ts  (UC)0b10100100 //afpttttt........................ssssssssssssssssssssssssssssssss `a   _|        |
+#define to  (UC)0b11000000 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 {}    |        |atoms
 #define tp  (UC)0b11000001 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 1+    |        |
 #define tq  (UC)0b11000010 //afpttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 ++    |        |
 #define tr  (UC)0b11000011 //afpttttt..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 +/    |funcs   |
