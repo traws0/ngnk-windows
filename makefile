@@ -1,5 +1,6 @@
 t:k
-	@stat -csize:%s k && echo 'testing' && ./k t.k && g/0.sh
+	@echo "size:`stat -c%s k`" "sha1:`sha1sum k|cut -b-40`"
+	@$(MAKE) -C t && g/0.sh
 k:
 	@
 .PHONY: t k

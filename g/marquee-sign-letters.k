@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/183544/marquee-sign-letters/184760#184760
-f:{*+""{(a;x,a:&0|-/#''='(y;x@:1))}\x}
+f:{*+(){(a;x,a:&0|-/#''='(y;x@:1))}\x}
 \l 0.k
 t[("ONE";"TWO";"THREE";"SEVENTEEN")
   ("ONE";"TW";"HRE";"SEEVN")]
