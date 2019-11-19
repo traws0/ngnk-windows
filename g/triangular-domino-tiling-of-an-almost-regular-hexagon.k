@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/196070/triangular-domino-tiling-of-an-almost-regular-hexagon/196076#196076
-f:{%/*/'1 2-\:+/1+!x}
+f:%/*/'1 2-\:+/1+!:
 \l 0.k
 t[1 1 1;2]
 t[1 1 2;3]
