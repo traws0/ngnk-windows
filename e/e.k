@@ -10,7 +10,7 @@ sigma1:{a:(x#1){[r;p] n:#r;m:1+(-p)!n-1;q:-1_(n>)(p*)\p;@[r;p*!m;*;@[m#p+1;(-1_q
 cfsqrt:{a0:_%x;$[x=a0*a0;0;*|+(~(2*a0)=*|:)({[N;a0;m;d;a] m:(d*a)-m;d:(-d)!N-m*m;a:(-d)!a0+m;m,d,a}[x;a0].)\0 1,a0]}
 pell:  {$[x=*/2#_%x;:0N;];r:|0 1{(x 1;y/|x)}/|c:-1_cfsqrt x;$[2!#c;1 0+2*/'r**r;r]}
 pelln1:{$[x=*/2#_%x;:0N;];r:|0 1{(x 1;y/|x)}/|c:-1_cfsqrt x;$[2!#c;r;0N]}
-gcd:{*|(*:)(|!\)/x,y}
+gcd:*|(*:)(|!\)/,
 /combinatorics
 prm:{(x-1){,'/(!1+#x){(,(#*y)#x),y+y>x-1}\:x}/,,0}
 cmb:{$[x=1;,!y;(,&#'*'u),,'/u:i+(x-1)o'y-i:1+!1+y-x]}
@@ -23,8 +23,8 @@ sum:{carry@+/(&'(|/l)-l:#'x),'x}
 add:{sum(x;y)}
 mul:{carry@@[&-1+(#x)+#y;(!#x)+\:!#y;+;x*\:y]}
 max:{$[(#x)<#y;y;(#y)<#x;x;0<*(x-y)^0;x;y]}
-lt:{d:(#x)-#y;$[d;d<0;*>(x;y)]}
-sqrt:{[a] (1,&l){[a;r;i] {[a;i;r] R:r;R[i]+:1;$[lt[mul[R;R];a];R;r]}[a;i]/r}[a]/!l:-2!-1+#a}
+lt:{$[d:(#x)-#y;d<0;*>(x;y)]}
+sqrt:{(1,&l){[x;r;i]{[x;i;r]R:r;R[i]+:1;$[lt[mul[R;R];x];R;r]}[x;i]/r}[x]/!l:-2!-1+#x}
 
 P:{1@"P ",($x),"\n";}
 P 1;+/&|/~5 3!\:!1000
