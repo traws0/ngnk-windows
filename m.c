@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 #define nxt(x) A(x)[-2]
 L mt,mu;S A mx[48];A syml,glb,cn[tn];
 S A ma(UC b)_(asrt(4<b);asrt(b<48);mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)

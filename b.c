@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 S O I mxl=16,mxg=16,mxc=128;enum{bu,bv=0x20,bg=0x40,bs=0x50,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br,bc=0x80,bC=0xff};S A2 rhs;
 #define h(b)({xy=apc(xy,(C)(b));xa[4]=apc(xa[4],o);})
 #define hc(v)({I b=bc+fndpa(xa+5,v);P(b>bC,err("mxc",x))h(b);})

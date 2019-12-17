@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(not,P(xtt,al(!tru(x)))P(xtaAX,ea1(not,x))$(tZ(xt)-ZL,x=N(gL(x)))xr;A u=aL(xn);F(un,uli=!xli)u)A1(neg,sub(al(0),x))
 A1(sqr,P(xtaAX,ea1(sqr,x))x=gD(x);P(xtt,ad(__builtin_sqrt(gd(x))))A u=ax(x);F(xn,udi=__builtin_sqrt(xdi))u)
 S C lwc(C c)_(c+32*(64<c&&c<91))S L fl1(D d)_(d<0?(L)d-(d<(L)d):(L)d)A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))

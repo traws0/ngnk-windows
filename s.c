@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)A1(str,!xtt?ea1(str,x):xtc?enl(x):xts?mR(symstr(gs(x))):kst(x,aC(0)))
 S A strL(L v,A y)_(asrt(Ar(y)==1);y=room(y,20);C*s=yc+yn;
  $(v==_0N,*s++='0';*s++='N')

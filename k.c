@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 O L cil[]={_0N,0,0,1,1,_0W,_0W,-_0W,-_0W,_0W,_0N};O D cid[]={_0n,0,0,1,1,_0w,_0w,-_0w,-_0w,_0w,_0n};S A1(__1,en(x))S A2(__2,en(x,y))S A1(sam,x)
 O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.',0};//1:  2:  3:  4:  5:  6:  7:  8:  9: 10: 11:
 O V*cf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,__1,__1,__1,__1,__1,las,__1,cmd,

@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 S I lt(UC c)_(c|=32;C3('a',c,'z')||c>127)S I dg(C c)_(C3('0',c,'9'))S I ld(C c)_(lt(c)||dg(c))S I cy(UC c)_((c|1)==0xd1)
 S C*s,*s0,na;S A pb(A,C);S I unh(C c)_((c&15)+9*(c>'9'))S I nu(C*s)_(dg(s[*s=='-']))S A1(p1,xn-1?x:fir(x))S I fc(O C*s,C c)_(O C*t=s;W(*t&&*t-c,t++)t-s)
 S A1(v1,P(xtv&&x-cv0,cu(Av(x)))$(xtX&&xn==2&&xx==cw(0),x=mut(x);xy=v1(xy))x)L pu(C**p)_(C*s=*p;L v=0;C c=*s;W(dg(c),v=10*v+c-'0';c=*++s)*p=s;v)

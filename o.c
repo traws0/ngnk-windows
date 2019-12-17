@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 L mtc_(A x/*0*/,A y/*0*/)_(P(x==y,1)P(xtt&&ytt,sim(x)&&sim(y)&&t_nrm(xt)==t_nrm(yt)&&gl_(x)==gl_(y))P(xt-yt||pkd(x)||xn-yn,0)
  P(!ref(x),!memcmp(xc,yc,xn*tZ(xt)))F(xn,P(!mtc_(xai,yai),0))1)
 S I cmp_(A x/*0*/,A y/*0*/)_(P(x==y,0)I d=xt-yt;P(d,d)P(pkd(x),x>y?1:-1)L n=min(xn,yn);I r=(xn>yn)-(xn<yn);

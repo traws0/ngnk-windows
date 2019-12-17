@@ -1,4 +1,4 @@
-1"ngn/k, (c) ngn 2019, GNU AGPLv3, http://bitbucket.org/ngn/k/\n";
+1"ngn/k, (c) 2019 ngn, GNU AGPLv3, http://bitbucket.org/ngn/k/\n";
 h:(": assign             '  each"
    "+ add      flip      /  reduce|join |dec  / comment"
    "- subtract negate    \\  scan  |split|enc  \\ exit"

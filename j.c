@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(json,x=str0(x);A y=0,h[16];I n=0;C*s=xc,c; //no validation or error handling
  W((c=*s++),
   $( c=='[',asrt(!y);h[n++]=a0())

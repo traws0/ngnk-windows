@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) ngn 2019, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 //prng: xoshiro256+ (public domain) http://vigna.di.unimi.it/xorshift/
 //seeded with bits from the central column of rule30, little-endian:  2/|+0N 64#{x n}'(n-1){(|(8#2)\30)@2/(0,-1_x;x;1_x,0)}\n=!1+2*n:256
 SI UL rotl(UL x,I k)_(x<<k|x>>(64-k))
