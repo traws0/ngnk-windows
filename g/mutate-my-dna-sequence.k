@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/194297/mutate-my-dna-sequence/194522#194522
-f:{(1+;x;a)@'*<(*&~^5 6 9?4/+0N 3#)'i@[x;;:;]'a:1&3!i:!#x}
+f:{(1+;x;a)@'*<(*&~^5 6 9?4/+0N 3#)'i@[x;;]'a:1&3!i:!#x}
 \l 0.k
 c:"TAGC"?
 t[c"ATGCACTGTTGGGGAGGCAGCTGTAACTCAAAGCCTTAG";(9;c"T";c"A")]

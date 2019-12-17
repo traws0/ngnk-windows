@@ -1,1 +1,25 @@
-{x}{1@," ";$[#s:0:"";.[{0N!.-1_x};,s;`e@];1@,"\r"];#s}/1;\
+1"ngn/k, (c) ngn 2019, GNU AGPLv3, http://bitbucket.org/ngn/k/\n";
+h:(": assign             '  each"
+   "+ add      flip      /  reduce|join |dec  / comment"
+   "- subtract negate    \\  scan  |split|enc  \\ exit"
+   "* multiply first     ': eachprior         \\t:n x  time"
+   "% divide   sqrt      /: eachright         \\l a.k  load"
+   "! mod|dict enum|key  \\: eachleft          \\w workspace"
+   "& min|and  where"
+   "| max|or   reverse"
+   "< less     asc       0: r/w lines"
+   "> more     desc      1: r/w bytes"
+   "= equal    group"
+   "~ match    not"
+   ", concat   enlist"
+   "^ fill|w/o null?"
+   "# reshape  length"
+   "_ drop|cut floor"
+   "$ cast     string    $[c;t;f] COND"
+   "? find|rnd uniq"
+   "@ apply    type      @[x;i;[f;]y] amend"
+   ". eval     value     .[x;i;[f;]y] dmend\n"
+   "!n enum  !N odometer  n? draw  -n? deal  =n unitmatrix"
+   "`j? json  `k@ fmt  `p@ parse"
+   "`t[] time  `x@(argv;in) fork  `e[] printerror")
+{x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1;\

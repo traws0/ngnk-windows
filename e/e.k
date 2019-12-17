@@ -1,6 +1,6 @@
 /number theory
 primes:{$[x<10;:(x>)#o 10;]
-        r:1+2*&@[(-2!x)#0x010000010001010001010001000001;!3;:;0x01]{$[x@-2!y;@[x;-2!y*y+2*!-2!2+(-y)+(-y)!-1+2*#x;:;0x00];x]}/7+2*!0|-2!-5+_%x
+        r:1+2*&@[(-2!x)#0x010000010001010001010001000001;!3;0x01]{$[x@-2!y;@[x;-2!y*y+2*!-2!2+(-y)+(-y)!-1+2*#x;0x00];x]}/7+2*!0|-2!-5+_%x
         r[0]:2;r}
 isprime:{p:2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61;$[x<62;:~^p?x;~&/p!'x;:0]
          b:|2\x-1;s:b?1;d:s_b;sqr:{x!y*y}[x];ad:(x!*)/((-1+#d)sqr\2 3 61)@&d;a2sd:(s-1)sqr\ad;&/(1=ad)||/a2sd=x-1}
@@ -12,19 +12,10 @@ pell:  {$[x=*/2#_%x;:0N;];r:|0 1{(x 1;y/|x)}/|c:-1_cfsqrt x;$[2!#c;1 0+2*/'r**r;
 pelln1:{$[x=*/2#_%x;:0N;];r:|0 1{(x 1;y/|x)}/|c:-1_cfsqrt x;$[2!#c;r;0N]}
 gcd:*|(*:)(|!\)/,
 /combinatorics
-prm:{(x-1){,'/(!1+#x){(,(#*y)#x),y+y>x-1}\:x}/,,0}
-cmb:{$[x=1;,!y;(,&#'*'u),,'/u:i+(x-1)o'y-i:1+!1+y-x]}
-gon:{-2!y*(4-x)+(x-2)*y} /y-th x-agonal number
+prm:{(x-1){,'/(!1+#x){(,(#*y)#x),y+y>x-1}\:x}/,,0};cmb:{$[x=1;,!y;(,&#'*'u),,'/u:i+(x-1)o'y-i:1+!1+y-x]};gon:{-2!y*(4-x)+(x-2)*y} /y-th x-agonal num
 /bignum
-big:10\
-small:10/
-carry:{(~**x)_((*x),0)+0,*|x:0 10\x}/
-sum:{carry@+/(&'(|/l)-l:#'x),'x}
-add:{sum(x;y)}
-mul:{carry@@[&-1+(#x)+#y;(!#x)+\:!#y;+;x*\:y]}
-max:{$[(#x)<#y;y;(#y)<#x;x;0<*(x-y)^0;x;y]}
-lt:{$[d:(#x)-#y;d<0;*>(x;y)]}
-sqrt:{(1,&l){[x;r;i]{[x;i;r]R:r;R[i]+:1;$[lt[mul[R;R];x];R;r]}[x;i]/r}[x]/!l:-2!-1+#x}
+big:10\;small:10/;carry:{(~**x)_((*x),0)+0,*|x:0 10\x}/;sum:{carry@+/(&'(|/l)-l:#'x),'x};add:{sum(x;y)};mul:{carry@@[&-1+(#x)+#y;(!#x)+\:!#y;+;x*\:y]}
+max:{$[(#x)<#y;y;(#y)<#x;x;0<*(x-y)^0;x;y]};lt:{$[d:(#x)-#y;d<0;*>(x;y)]};sqrt:{(1,&l){{$[lt[mul[Y;Y:@[y;z;+;1]];x];Y;y]}[x;;z]/y}[x]/!l:-2!-1+#x}
 
 P:{1@"P ",($x),"\n";}
 P 1;+/&|/~5 3!\:!1000
@@ -47,11 +38,11 @@ P 12;n:100000
      -2!i*-1+i:*&d>500
 P 13;small 10#add/(0:"i/p013.txt")-"0"
 P 14;n:1000000
-     c:@[&n;1;:;1] /cached collatz chain lengths
+     c:@[&n;1;1] /cached collatz chain lengths
      f:{$[v:0|c x;:v;]
         v:$[2!x;2+o@2+3*-2!x;1+o@-2!x] /if x is odd, take two steps at a time
         $[x<n;c[x]:v;v]}
-     *&r=|/r:f'@[!n;0;:;1]
+     *&r=|/r:f'@[!n;0;1]
 P 15;n:20;*|n(+\)/1,n#1
 P 16;+/1000{add[x;x]}/big 1
 P 17;d:#"OneTwoThreeFourFiveSixSevenEightNine"
@@ -70,12 +61,12 @@ P 21;n:10000;i:!n;s:sigma1[n]-i;+/&(i=s s)>i=s
 P 22;+/,/(1+!#a)*a@<a:(1-"A")+.'","\1:"i/p022_names.txt"
 P 23;n:1+28123
      a:&sigma1[n]>2*!n /abundant numbers
-     +/&@[n#1;a*n>a+:,\a;:;0]
+     +/&@[n#1;a*n>a+:,\a;0]
 P 24;a:!10;.,/${a^:r:a x;r}'(-!-10)\1000000-1
 P 25;#{1000>#*x}{add\|x}\big'1 1
 P 26;1+*>r:{m::x;(#a)-1+a?l:*|a:{l&2>+/x=l:*|x}{x,m!10**|x}/,1}'1+!1000
 P 27;maxp:20000
-     sieve:@[&maxp;primes maxp;:;1]
+     sieve:@[&maxp;primes maxp;1]
      ab:{x@'!#'x}(-1000+!2001;primes 1000)
      {i:&1=sieve@v:(x*x)+(x*ab 0)+ab 1;$[maxp<|/v;ERR;~#i;:x];ab::ab@\:i;x+1}/1;
      **/ab
@@ -117,7 +108,7 @@ P 42;a:+/'(1-"A")+1_'-1_'","\1:"i/p042_words.txt"
      +/~^t?a
 P 43;+/10/p@\:&~+/primes[18]!'10/'3'1_p:prm 10
 P 44;p:gon[5;1+!3000]
-     h:@[&1+*|p;p;:;1]
+     h:@[&1+*|p;p;1]
      p@*&0<+/'&/0|h(p+\:p;p+\:2*p)
 P 45;a:3 5 6  gon\:!1000000
      i:&#a
@@ -125,7 +116,7 @@ P 45;a:3 5 6  gon\:!1000000
 P 46;n:10000
      p:primes n
      s:2*/2#,!1+_%-2!n
-     *1_&@[(n+1)#0 1;(n&s+\:p;p);:;0]
+     *1_&@[(n+1)#0 1;(n&s+\:p;p);0]
 P 47;n:1000000;k:4;p:primes 2+_%n
      omega:(&n){x[y*!(-y)!-1+#x]+:1;x}/p /number of prime factors (or 0 for primes larger than sqrt n)
      *1-k-&(k-1)&':/k=omega
@@ -137,15 +128,12 @@ P 49;p:(999<)#primes 10000
      triples:{(+i)@&&/-1>':i:!3#x}
      r:{=/1_-':x}#,/{x@triples@#x}'{2<#x}#p@.={x@<x}'$p
      .,/$*r^,1487 4817 8147
-P 50;n:1000000;p:primes n
-     a:!0
-     b:-1_p
+P 50;n:1000000;p:primes n;a:!0;b:-1_p
      {x}{b+:(#b)#x_p;b::(n>)#b;a,:b;$[#b;x+1;0]}/1;
-     sieve:@[&n;p;:;1]
-     *|{0|sieve x}#a
+     *|(0|@[&n;p;1]@)#a
 P 51;n:1000000
      p:primes n
-     h:@[n#0x00;p;:;0x01] /sieve
+     h:@[n#0x00;p;0x01] /sieve
      f:{a:10\x
         m:1_'-1_'!(#a)#2              /all patterns except "no stars" and "all stars"
         b:(10/m*a) +/: 10/'(~m)*/:!10 /numbers to test for primality
@@ -170,7 +158,7 @@ P 57;+/>/'#''1000{s:add/x;(add[s;x 1];s)}\big'1 1
 P 58;c:1;n:0 /c:corner values, n:number of primes on diagonals so far
      1+2*{c+:2 4 6+8*x;n+:+/isprime'c;x+(10*n)>4*x}/0 /x:current layer; side is 1+2*x; number of values on diagonals is 1+4*x
 P 59;f:8167 1492 2782 4253 12702 2228 2015 6094 6966 153 772 4025 2406 6749 7507 1929 95 5987 6327 9056 2758 978 2360 150 1974 74 /a-z freqs
-     F:@[&256;"aA"+\:!#f;:;2#,f]          /0x00-0xff freqs
+     F:@[&256;"aA"+\:!#f;2#,f]            /0x00-0xff freqs
      c:(8#2)\.'","\*0:"i/p059_cipher.txt" /ciphertext in binary
      a:{2/~c=(#*c)#'(8#2)\x}'"a"++!3#26   /all possible plaintexts
      +/*`c$a@&{x=|/x}@+/'F a              /best plaintext by sum-of-freqs score
@@ -183,8 +171,7 @@ P 61;a:{@[100#,!0;-100!x;,;100!x]}'(999<)#/:(10000>)#/:(3+!6)gon\:1+!140
      101*+/r[0]{*y@x}\|a 5,r 1
 P 62;a*a*a:**{5=#x}#.={x@<x}'($a*a*a:!10000)-"0"
 P 63;i:big'1+!9
-     a:#''30{i mul'x}\(#i)#,big 1
-     +//a=!#a
+     +//a=!#a:#''30(i mul')\(#i)#,big 1
 P 64;+/~2!#'cfsqrt'!10000
 P 65;n:1+100
      c:n#2,/+(1;2*1+!n;1)
@@ -195,12 +182,9 @@ P 66;pell:{a0:_%x;$[x=a0*a0;:,0;]
            $[2!#c;add[big 1;add/2#,mul/2#,r];r]}
      *&a~\:max/a:pell'!1+1000
 P 67;*{y+1_|':x}/|.''" "\'0:"i/p067_triangle.txt"
-P 68;n:5
-     i:(2*n)!0 1 3+\:2*!n
-     j:,/+i
-     l:*/16#10
+P 68;j:,/+i:(2*n)!0 1 3+\:2*!n:5
      r:prm 2*n
-     |/(l>)#{.,/$x j}'{1=#?+/x i}#+1+r@\:&&/(*r)</:r@2+2*!n-1
+     |/((*/16#10)>)#{.,/$x j}'{1=#?+/x i}#+1+r@\:&&/(*r)</:r@2+2*!n-1
 P 69;n:1000000;*&a=|/a:(-totients n)!'1000*!n
 P 70;phi:totients@*/N:7#10
      t:9(10*)\1
@@ -219,7 +203,7 @@ P 73;n:12000
      +/{a:-3!x+2;b:1+-2!x;+/*/a_'b#'t@&~p!'x}'4+!-3+n
 P 74;f:*\1|!10
      a:+/(|\0<d)*f d:!3,6#10
-     +/60=1000000#{x&61&1+x a}/@[(#a)#61;169 363601 1454 871 45361 872 45362;:;3 3 3 2 2 2 2]
+     +/60=1000000#{x&61&1+x a}/@[(#a)#61;169 363601 1454 871 45361 872 45362;3 3 3 2 2 2 2]
 P 75;M:1500000 /max perimeter
      c:&1+M    /counters
      {x@:<x;L:+/x;$[L>M;:0;];c[L*!1+(-L)!M]+:1
@@ -286,7 +270,7 @@ P 87;n:50000000
      c:(n>)#b*(#b)#p
      bc:(n>)#,/b+\:c
      s:(n>)#,/a+/:bc
-     +/@[&n;s;:;1]
+     +/@[&n;s;1]
 P 88;L:12000
      a:,/{,/x,/:'(*'|'x)_'!'1+(-*/'x)!'2*L}\,'2_!2*L /all factorisations up to 2L
      k:{(#x)+(*/x)-+/x}'a
@@ -299,13 +283,8 @@ P 90;r69:{x+3*x=6}
      c2:+c@cmb[2;#c]
      #c2@&{&/|/(&/'|/''sq=\: x
                 &/'|/''sq=\:|x)}'c2
-P 91;n:1+50
-     pq:!4#n
-     p:2#pq
-     q:2_pq
-     a2:+/*/2#,p
-     b2:+/*/2#,p-q
-     c2:+/*/2#,q
+P 91;(p;q):0 2_!4#n:1+50
+     (a2;b2;c2):(+/*/2#,:)'(p;p-q;q)
      r:+/(c2=a2+b2)&/(a2;b2;c2)>0 /right angle at p
      r+*/2#n-1                    /right angle at origin
 P 92;m:1000
@@ -324,7 +303,7 @@ P 93;R:{$[1<*|x;(-gcd/x)!x;x]} /rational
              h[fab;g[c;d]]
              h[a;g[fbc;d]]
              h[a;g[b;f[c;d]]])}
-     howfar:{+/&\@[~!100;{(99&0|*x)*x[1]=1}@+,/,/(x@+prm 4)bkt/:\:ops@+!3##ops;:;1]}
+     howfar:{+/&\@[~!100;{(99&0|*x)*x[1]=1}@+,/,/(x@+prm 4)bkt/:\:ops@+!3##ops;1]}
      10/*c@&v=|/v:howfar'((!10),'1)c:+cmb[4;10]
 P 94 /sides: (a+d;a;a) where d=1 or d=-1
      /p=(3a+d)/2, S^2=p(p-a+d)(p-a)^2, a=2b+1
@@ -340,7 +319,7 @@ P 95;n:1000000
      &/,/c@&l=|/l:#'c:(a@)\'?*(~~/){A@'x}/A
 P 96;a:.'',/'1_'"\n"\'1_"G"\1:"i/p096_sudoku.txt"
      p,:,3/-3!p:!9 9
-     s:{*(,x)(,/{@[x;y;:;]'(1+!9)^x@&|/p=p@'y}')/&~x}
+     s:{*(,x)(,/{@[x;y;]'(1+!9)^x@&|/p=p@'y}')/&~x}
      +/10/'3#'s'a
 P 97;mod:{(- 10&#x)#x}
      sqr:{mod mul[x;x]}

@@ -1,6 +1,6 @@
 /https://codegolf.stackexchange.com/questions/172922/compute-the-superset/172959#172959
-f:{{(&//x;|//x)}'(&1,1_{y[1]<*x-1}':x)_x:x@<x}
-/x@:<x /todo
+f:{{(&//x;|//x)}'(&1,1_{y[1]<*x-1}':x)_x@:<x}
+/deleted, requires fp - https://codegolf.stackexchange.com/questions/172922/compute-the-superset/172959#comment417377_172922
 \l 0.k
 t[,1 3               ;,1 3         ]
 t[,1 0W              ;,1 0W        ]
