@@ -11,7 +11,7 @@ S A pt(C*v)_(A x;C c=*s;P(c=='"',p1(N(pC())))P(c=='`',++s;x=pSs(c);xn>1?enl(x):x
  P(lt(c),C*t=s;x=pSs('.');$(s-t==1&&(c=='y'||c=='z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
  P(c=='{',C*s1=s0,*t=s0=s++;A y;$(*s-'[',y=cu0)E(s++;y=sqz(N(pb(a0(),']')));P(!ytS||yn>8,ep(y)))
   C nb=na;na=1;A z=pb(a0(),'}');P(!z,yr;s0=s1;0)$(y==cu0,y=atnv(tS,na,(L[]){1,2,3}))E(na=yn)x=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
- I i=fc("'/\\[",c);P(i<3,P(i==2&&(!s[1]||lt(s[1])),c=*++s;C*t=s;W(c&&c-10,c=*++s)AO(t-s0,a2(cu_cmd,aCm(t,s))))I h=s[1]==':';s+=1+h;*v=1;cw(i+3*h))
+ I i=fc("'/\\[",c);P(i<3,c=*++s;P(i==2&&(!c||c=='\\'||lt(c)),C*t=s;W(c&&c-10,c=*++s)AO(t-s0,a2(cu_cmd,aCm(t,s))))I h=c==':';s+=h;*v=1;cw(i+3*h))
  P(nu(s)&&(c-'-'||({C b=s[-1];!ld(b)&&fc(")]}\"",b)==4;})),P(s[1]==':',L u=s[2]==':';s+=2+u;L i=20+c-'0';*v=1;u?cu(i):cv(i))
   P(c=='0'&&s[1]=='x',s+=2;C*p=s;W(dg(*p)||C3('a',*p,'f'),p++)L m=(p-s)/2;x=aC(m);F(m,xci=unh(*s)<<4|unh(s[1]);s+=2)p1(x))
   L fp=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;$(!ld(c),B)W(ld(c)||c=='.'||c==':',fp|=c=='.'||c=='n'||c=='w';c=*++p))

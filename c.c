@@ -3,7 +3,7 @@
 L time()_(struct timeval t;gtod(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A1(cmdw,asrt(xtC);L n=mu;P(!xn,xr;al(n))A y=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):cu0)
 S A1(cmdt,asrt(xtC);C*s=xc;L n=*s==':'?++s,pl(&s):1;L t=time();x=N(cpl(N(prs(N(cut(al(s-xc),x))))));F(n,mr(Nx(app(x,0,0))))xr;al((time()-t+500)/1000))
-A1(cmd,P(!xtC,et(x))$(!xn,exit(0))C c=*xc;
+A1(cmd,P(!xtC,et(x))$(!xn||xn==1&&*xc=='\\',exit(0))C c=*xc;
  $(C3('a',c,'z')&&(xn==1||xc[1]==32||xc[1]==':'),I i=0;W(i<xn&&xci-32&&xci-':',i++)I j=i;W(j<xn&&xcj==32,j++)x=N(cut(al(j),x));
   P(c=='l',ldf(x))P(c=='w',cmdw(x))P(c=='t',cmdt(x)))
  scn(ac(10),A_(N(sys(a2(enl(aCz("/bin/sh")),x)))),1))
