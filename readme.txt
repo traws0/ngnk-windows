@@ -56,7 +56,12 @@ k objs
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
  xc xl xd xa.. - content of x as a char*,long*,double*,A*..
  xci xlj.. - i-th or j-th typed element: xc[i],xl[j]..
-error-reporting fns consume their args and return null:
- err("msg",x,y,z) - generic error. x,y,z are optional
- et(x,y,z) el() en().. - type error, length error, nyi error.. x,y,z are optional
- etn(a,n) eln(a,n).. - variants that consume n objs from the memory pointed by a
+errors
+ error-reporting fns return null after consuming their args:
+  err("msg",x,y,z) - generic error. x,y,z are optional
+  et(x,y,z) el() en().. - type error, length error, nyi error.. x,y,z are optional
+  etn(a,n) eln(a,n).. - variants that consume n objs from the memory pointed by a
+ error-pass-through macros:
+  N(expr) - if expr evaluates to null, N() returns from the current function,
+            otherwise N(expr) is the same as expr
+  Nx(expr) - same as N(), but if there's an error it consumes x
