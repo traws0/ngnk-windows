@@ -101,7 +101,7 @@ SI UC Ab(A x)_(C(x)[-16]   )SI A AB(UC b,A x)_(C(x)[-16]=b;x) //hdr: b.oorrrrnnn
 SI UL An(A x)_(L(x)[-1 ]   )SI A AN(UL n,A x)_(asrt(n<1ull<<48);L(x)[-1 ]=n;x)
 SI UH Ao(A x)_(xts?(UL)x>>32:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x&~(0xffffull<<32)|(UL)o<<32)))H(x)[-7]=o;x)
 #define Ar(x) I(x)[-3]
-SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))SI I pkd(A x)_(xtc||xt==tl||xts||xtu||xtv||xtw)
+SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))SI I pkd(A x)_(xtc||xti||xt==tl||xts||xtu||xtv||xtw)
 SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==tlx?tL:t==tdx?tD:t>=tc&&t<to?t+tC-tc:t)SI UC t_nrm(UC t)_(t==tl?tlx:t)
 
 #define Z sizeof
@@ -110,8 +110,8 @@ SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==tlx?tL:t
 #define ZL Z(L)
 #define ZA 16
 #define ZR 67 //ref
-SI UC tz(UC t)_(t==tC?0:reft(t)?ZR:3)
-SI UC tZ(UC t)_(t==tC?1:reft(t)?ZV:8)
+SI UC tz(UC t)_(t==tC?0:t==tI?2:reft(t)?ZR:3)
+SI UC tZ(UC t)_(t==tC?1:t==tI?4:reft(t)?ZV:8)
 
 A1 a1,asc,ax,blw,cmd,cpl,dsc,enl,enla,fir,flp,flr,gD,gI,gL,grp,hcl,hop,json,las,ldf,len,mr,mRa,mut,neg,not,nul,out,prs,rev,sqr,sys,sqz,str,str0,til,
    typ,u0c,u1c,unq,val,whr;
@@ -128,7 +128,7 @@ SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I gs(A x)_(asrt(xts);(I)x)
 SI A aI(L n)_(atn(tI,n))SI A ai(I v)_(pck(ti,v))SI I gi(A x)_(asrt(xti);(I)x)
-SI A aL(L n)_(atn(tL,n))SI A al(L v)_(v==(I)v?pck(tl,v):atv(tlx,v))SI L  gl(A x)_(pkd(x)?(I)x:(xr,*xl))SI L gl_(A x)_(pkd(x)?(I)x:*xl)
+SI A aL(L n)_(atn(tL,n))SI A al(L v)_(v==(I)v?pck(tl,v):atv(tlx,v))SI L gl(A x)_(pkd(x)?(I)x:(xr,*xl))SI L gl_(A x)_(pkd(x)?(I)x:*xl)
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(tdx,v))SI D  gd(A x)_(D v=*xd;xr;v)SI D gd_(A x)_(*xd)
 
 #define err_(x,y,z,u,n,...) n
@@ -153,10 +153,12 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
 #define cU(c) cu(vi(c))
 #define cV(c) cv(vi(c))
 S O A cu0=cu(0),cv0=cv(0),cu_cmd=cu(31),cv_plc=cv(29),cv_mkl=cv(30),cv_com=cv(31);
-#define _0N (1ull<<63)
-#define _0W (~_0N)
-#define _0n (D)NAN
-#define _0w (D)INFINITY
+#define _0N  (1ull<<63)
+#define _0W  (~_0N)
+#define _0Ni (1<<31)
+#define _0Wi (~_0Ni)
+#define _0n  (D)NAN
+#define _0w  (D)INFINITY
 #define K(s,a...) ({S A f;$(!f,L m=mu;f=val(aCn(s,Z(s)+1));mu=m);app(f,A_(a),Z(A_(a))/ZV);})
 XT O C vc[];XT O L cil[11];XT O D cid[];XT A cn[];XT O V*cf[];SI L ari(A x)_(xtv&&Av(x)<ZZ(cil))
 
@@ -166,7 +168,6 @@ XT O C vc[];XT O L cil[11];XT O D cid[];XT A cn[];XT O V*cf[];SI L ari(A x)_(xtv
  Q(5,F(n,p((V)a,(V)b,_0n)))Q(6,F(n,p a<b?a:b))Q(7,F(n,p a>b?a:b))Q(8,F(n,p l2d(a<b)))Q(9,F(n,p l2d(a>b)))Q(10,F(n,p l2d(a==b))))
 
 #define pv(x) pv_(#x,(L)(x))
-#define px(x) pa_(#x" ",(x))
 #define pp ps("["__FILE__":"xstr(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 SI I ps(O C*x)_(write(2,x,strlen(x)))

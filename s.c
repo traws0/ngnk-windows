@@ -17,7 +17,7 @@ S A ksp(A x,A y,I p)_($(p,hc('('))hx(x);$(p,hc(')'))y)S O C esc(C c)_(F(6,P(c=="
 S A2(ksr,ksp(x,y,                                    xtq||xtr||xtu||xtv||xtw))
 S A2(ksl,ksp(x,y,xtX||xtC?xn==1:xtT?xn<=1:xtaA||     xtq||xtr||xtu||xtv||xtw))
 S A2(kso,ksp(x,y,xtX||xtC?xn==1:xtT?xn<=1:xtaA||xtp||xtq||               xtw))
-A2(kst,P(xtl,strL(gl(x),y))P(xti,strL(gi(x),y))P(xt==tdx,strD(gd(x),y))P(xtT&&xn==1,ksr(fir(x),apc(y,',')))
+A2(kst,P(xtl,strL(gl(x),y))P(xti,apc(strL(gi(x),y),'i'))P(xt==tdx,strD(gd(x),y))P(xtT&&xn==1,ksr(fir(x),apc(y,',')))
  P(xts,hc('`');x=symstr(gl(x));C*s=xc;mr(pS(&s));*s?hx(xn-1?xR:ac(*xc)):catc(y,xc,xn))
  P(xtcC,x=enla(x);I b=0,n=xn,m=n+2;F(n,C c=xci,e=esc(c);$((c<32||126<c)&&!e,b=1;B)m+=!!e)A z=aC(b?2+2*n:m);C*s=zc;
   $(b,*s='0';s[1]='x';s+=2;F(n,C c=xci;*s++=hex(c>>4&15);*s++=hex(c&15)))E(*s++='"';F(n,C c=esc(xci);$(c,*s++='\\';*s++=c)E(*s++=xci))*s='"')
