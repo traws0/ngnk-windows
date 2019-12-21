@@ -50,3 +50,6 @@ a:4(+" ",)/a:0:$20;mn:(m;n):#'(a;*a);a:,/a
  r:f[]
  g:((#g)>)#'(-1<)#'g:,/g+/:(!30)*#g:@[g0;p@|'v;,;p[v]+((-#a;#a)@|/(c>mn-6)|6>c:mn\p)v]
  r,f[]
+a:(.'","\*0:$21),&300;f:{+/r@&127<r:*|I[a;x]}
+ f'("OR A J\nAND B J\nAND C J\nNOT J J\nAND D J\nWALK\n" /(~(A&B&C))&D
+    "OR A J\nAND B J\nAND C J\nNOT J J\nAND D J\nOR I T\nOR F T\nAND E T\nOR H T\nAND T J\nRUN\n") /..&(H|(E&(I|F)))
