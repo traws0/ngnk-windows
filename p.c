@@ -6,7 +6,7 @@ S A0(pC,asrt(*s=='"');A x=aC(0);C c=*++s;W(c&&c!='"',$(c=='\\',c=*++s;I i=fc("tn
 A pS(C**p)_(C*s=*p,c=*s;$(c&0x80,$(cy(c),s+=2;c=*s;W(1,$(dg(c),c=*++s)E$(cy(c),s+=2;c=*s)E(B)))E(W(((c=*++s)&0xc0)==0x80)))
  E$(c==':',W(ld(c=*++s)||fc("./:",c)<3))E(W(ld(c),c=*++s))A u=aCm(*p,s);*p=s;u)
 S A pSs(C d)_(A x=aS(0);W(1,L v=sym(d-'`'||*s-'"'?pS(&s):pC());x=apv(x,&v);P(*s-d,x)++s)0)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
-S A1(shy,P(!xn,x)A y=xa[xn-1];$(ytX&&yn,A z=yx;P(z==cv0||ztu&&yn>2,apd(x,cu0)))x)S A lam(C k,A s,A b,A l)_(AK(k,atnv(tX,6,A_(s,b,l,cu0,cu0,cu0))))
+S A1(shy,P(!xn,x)A y=xa[xn-1];$(ytX&&yn,A z=yx;P(z==cv0||ztu&&yn>2,apd(x,cu0)))x)S A lam(C k,A s,A b,A l)_(AK(k,atnv(tX,5,A_(s,b,l,cu0,cu0))))
 S A pt(C*v)_(A x;C c=*s;P(c=='"',p1(N(pC())))P(c=='`',++s;x=pSs(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(cv_mkl),')'));xn-2?x:xy==cv_plc?xr,a0():las(x))
  P(lt(c),C*t=s;x=pSs('.');$(s-t==1&&(c=='y'||c=='z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
  P(c=='{',C*s1=s0,*t=s0=s++;A y;$(*s-'[',y=cu0)E(s++;y=sqz(N(pb(a0(),']')));P(!ytS||yn>8,ep(y)))
