@@ -44,3 +44,19 @@ If you aren't sure about the legal status of your work, do let us know.
 If you are employed or studying, we advise you obtain an explicit written
 permission to contribute to this project from your employer or educational
 institution.
+
+INTRO
+k objs
+ A - the type of a tagged ptr to a k obj
+ x y z u - var names for A objs. usually x y z are the args and u is the result from the fn.
+ xt xn xb - type, length, and bucket index of x (similarly: yt,zn..)
+ xtc xtL xtX.. - is x of type tc,tL,tX..?
+ xtt - is x a simple atom (not fn or dict)?
+ xtT - is x a simple list (not table)?
+ xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
+ xc xl xd xa.. - content of x as a char*,long*,double*,A*..
+ xci xlj.. - i-th or j-th typed element: xc[i],xl[j]..
+error-reporting fns consume their args and return null:
+ err("msg",x,y,z) - generic error. x,y,z are optional
+ et(x,y,z) el() en().. - type error, length error, nyi error.. x,y,z are optional
+ etn(a,n) eln(a,n).. - variants that consume n objs from the memory pointed by a
