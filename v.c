@@ -30,6 +30,6 @@ A2(cut,
 S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(gi(x)))A u=aC(xn);F(un,uci=xii)xr;u)
   A1(gL,P(xtlL,x)x=N(gI(x));P(xtt,al(gi(x)))A u=aL(xn);F(un,uli=xii)xr;u)
   A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gl(x)))A u=aD(xn);F(un,udi=xli)xr;u)
-  A1(gI,P(xtiI,x)P(xtl,ai(gl(x)))P(xtL,A u=aI(xn);F(un,uii=xli)xr;u)P(xtc,ai((UC)gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
-A2(cst,P(ytX,eac(cV('$'),A_(x,y),2))P(xts,C c=*C(symstr(gs(x)));c=='i'?gL(y):c=='c'?gC(y):c=='f'?gD(y):en(y))
+  A1(gI,P(xtiI,x)P(xtl,ai(gl(x)))P(xtL,A u=aI(xn);F(un,uii=xli)xr;u)P(xtc,ai(gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
+A2(cst,P(ytX,eac(cV('$'),A_(x,y),2))P(xts,C c=*C(symstr(gs(x)));c=='c'?gC(y):c=='i'?gI(y):c=='j'?gL(y):c=='f'?gD(y):en(y))
  P(xtl,L n=gl(x);P(n<0,en(y))P(!ytcC,et(y))y=enla(y);L m=yn;A u=aC(n);yr;mc(uc,yc,min(n,m));F(max(0,n-m),uc[m+i]=32)u)en(x,y))
