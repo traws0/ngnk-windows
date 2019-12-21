@@ -9,22 +9,22 @@ p.c  parser
 b.c  bytecode compiler and virtual machine
 k.c  eval/apply/mend: . @
 a.c  arithmetic verbs
-o.c  order and comparison: <x >x x~y
+o.c  order and equivalence: <x >x x~y
 f.c  find/random: x?y
-s.c  object to string
 h.c  shape-related: x#y ,x x,y
+s.c  object to string
 i.c  i/o: 0: 1: <fd >fd
 v.c  the rest of the verbs
 w.c  adverbs
 c.c  system commands: \w \t:n ..
 j.c  json parser: `j?x
 e.c  error handling
-o/   .o files (build tmp)
 t/   tests
 g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
 a15/ https://adventofcode.com/2015
 a19/ https://adventofcode.com/2019
+o/   .o files (build tmp)
 
 CONTRIBUTING
 For bug reports and ideas for improvement please use
