@@ -7,7 +7,7 @@ O V*cf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,un
 A2(id_/*x0y0*/,!ari(x)?a0():ytdD?ad(cid[Av(x)]):al(cil[Av(x)]))A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y))
 A2(com,AK(Ak(y),AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))UC k=max(n,Ak(x));F(n,k-=a[i]!=cv_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
 SN A getA(A x/*0*/,L i)_(asrt(xtA);A y=xy,u=a0();Fj(yn,u=apd(u,get(yaj,i)))aa(mR(xx),u))
-A get(A x/*0*/,L i)_(xtX?mR(xai):xtL?al(xli):xtS?as(xli):xtC?ac(xci):xtD?ad(xdi):xta?get(xy,i):xtA?getA(x,i):xR)
+A get(A x/*0*/,L i)_(xtX?mR(xai):xtI?ai(xii):xtL?al(xli):xtS?as(xli):xtC?ac(xci):xtD?ad(xdi):xta?get(xy,i):xtA?getA(x,i):xR)
 A getr(A x/*0*/,L i)_(asrt(!xtt);0<=i&&i<xn?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 S A2(idx_/*x0y1*/,asrt(xtT||xtaA);P(y==cv_plc,flp(xR))P(ytX,eac(x,&y,1))P(yta,y=mut(y);yy=idx_(x,yy);y)P(fun(y),et(x,y))P(ytt,getr(x,gl(y)))
  y=N(gL(y));L w=tz(xt);A u=atn(xt,yn);P(xtX,u=AN(0,u);F(yn,u=apd(u,getr(x,yli)))yr;u)
