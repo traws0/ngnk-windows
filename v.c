@@ -8,7 +8,7 @@ L tru(A x/*1*/)_(xr;sim(x)?gl_(x):fun(x)?!xtu||Av(x):xn)A2(dex,xr;y)A1(fir,xtt?x
 A1(flp,P(xtaA,$(xta,A y=xy;P(!ytX||!yn,er(x))F(yn,A z=yai;P(!ztT,en(x)))L m=An(*ya);F(yn,A z=yai;P(zn-m,el(x))))AT(xt^ta^tA,x))P(xtt,enl(enl(x)))
  P(!xtX||!xn,enl(x))L m=xn,n=-1;UC t=t_lst(At(xx));F(m,A y=xai;$(t-t_lst(yt),t=tX)$(!sim(y),P(fun(y),et(x))$(n<0,n=yn)E(P(n-yn,el(x)))))
  A u=aX(n<0?1:n);F(un,A y=a0();Fj(m,y=apd(y,get(xaj,i)))uai=y)xr;u)
-A1(til,P(xtX,xn?ed(x):x)P(xto,val(x))P(xta,fir(AT(tX,x)))P(xtl||xti,L n=gl(x);A u=aL(llabs(n));$(n<0,F(-n,uli=i+n))E(F(n,uli=i))u)P(!xtL,et(x))
+A1(til,P(xtX,xn?ed(x):x)P(xto,val(x))P(xta,fir(AT(tX,x)))P(xtl||xti,L n=gl(x);P(n<0,add(al(n),N(til(al(-n)))))A u=aL(n);F(n,uli=i)u)P(!xtL,et(x))
  L p=1;F(xn,p*=xli;P(xli<0||p<0,ed(x)))L q=p;A u=aX(xn);F(un,L m=xli;A y=uai=aL(p);$(q,q/=m;L v=0;F(p/q,Fj(q,yl[i*q+j]=v);v++;v*=v<m)))xr;u)
 A1(whr,P(xtA||xtX,et(x))P(xta,A y=gkv(&x);idx(x,Nx(whr(y))))
  x=enla(x);x=N(gL(x));L n=0;F(xn,P(xli<0,ed(x))n+=xli)A u=aL(n);xr;n=0;F(xn,Fj(xli,ul[n++]=i))u)
