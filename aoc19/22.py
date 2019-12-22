@@ -7,4 +7,4 @@ for s in list(open('22'))[::-1]:
  elif s[-2]=='k':a=(-a)%n;b=(-(b+1))%n
  else:k=inv(int(l));a=a*k%n;b=b*k%n
 am=pow(a,m,n)
-print((x*am+b*((am-1)*inv(a-1)))%n)
+print((x*am+(am-1)*inv(a-1)*b)%n)
