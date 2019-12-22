@@ -2,7 +2,7 @@
 A rsh_(A x/*0*/,L m,L*pj,L*s,L r)_(L n=llabs(*s);P(r>1,A y=aX(n);F(n,yai=rsh_(x,m,pj,s+1,r-1))y)
  UC t=t_lst(xt);$(t&&!xn,x=cn[t])L j=*s>=0?*pj:(m-n%m)%m,w=tZ(t),q=min(m-j,n);*pj=(j+n)%m;A y=atn(t,n);mc(yc,xc+j*w,q*w);mc(yc+q*w,xc,min(j,n-q)*w);
  W(2*m<=n,mc(yc+m*w,yc,m*w);m*=2)mc(yc+m*w,yc,(n-m)*w);$(t==tX,y=sqz(mRa(y)))y)
-SN A2(flt,P(!ytT,er(x,y))A u=atn(yt,0);F(yn,A z=get(y,i);z=app(x,&z,1);$(!z,ur;u=0;B)P(!ztl,xr;ur;et(y,z))Fj(gl(z),u=apd(u,get(y,i))))xr;yr;u)
+SN A2(flt,P(!ytT,er(x,y))A u=atn(yt,0);F(yn,A z=get(y,i);z=app(x,&z,1);$(!z,ur;u=0;B)z=gL(z);P(!z,xr;yr;ur;0)Fj(gl(z),u=apd(u,get(y,i))))xr;yr;u)
 SN A2(rsh0N,asrt(xtL);asrt(xn==2);asrt(ytT);L m=xl[0],n=xl[1],l=yn,j;xr;P((m<=0&&n<=0)||!l,ed(y))
  $(m==_0N,m=(l-1)/n+1;j=0)E(n=(l-1)/m+1;j=l-m*n)A u=aX(m);F(m,L p=max(0,j),q=min(j+n,l);j+=n;uai=slc_(y,p,q-p))yr;u)
 A2(rsh,P(fun(x),flt(x,y))P(yta&&!xtl,x=enla(x);xR;aa(x,ap1(y,x)))P(ytA,y=mut(y);yy=ear(cV('#'),A_(x,yy),2);y)

@@ -19,6 +19,7 @@ S A2(fil,P(ytX||yta,eac(cV('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))P(yt-xt&&yt-
 A2(xpt,P(xtt,fil(x,y))y=enla(y);P(xtaA||ytaA,en(x,y))$(xtX||xt-yt,x=blw(x);y=blw(y))A u=atn(xt,0);
  $(xtX,F(xn,A z=xai;I b=1;Fj(yn,$(mtc_(z,yaj),b=0;B))$(b,u=apd(u,zR)))u=sqz(u))
  E$(tz(xt)==0,F(xn,C v=xci;I b=1;Fj(yn,$(v==ycj,b=0;B))$(b,u=apv(u,&v))))
+ E$(tz(xt)==2,F(xn,I v=xii;I b=1;Fj(yn,$(v==yij,b=0;B))$(b,u=apv(u,&v))))
  E$(tz(xt)==3,F(xn,L v=xli;I b=1;Fj(yn,$(v==ylj,b=0;B))$(b,u=apv(u,&v))))E(UR)xr;yr;u)
 A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,n*w);$(t==tX,mRa(u);u=sqz(u))u)
 A2(cut,

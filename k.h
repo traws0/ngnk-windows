@@ -120,7 +120,7 @@ A0 aa0;A3 a3,try;AA amd,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;XT A syml
 A err0(O C*),err1(O C*,A),err2(O C*,A,A),err3(O C*,A,A,A),errn(O C*,I,O A*),ea1(A1,A),apv(A,O V*),apc(A,C),catc(A,O C*,L),room(A,L),
   get(A,L),getr(A,L),atn(UC,L),atnv(UC,L,O V*),aCn(O C*,L),aCm(O C*,O C*),aCz(O C*),gkv(A*),pS(C**);
 V mrn(L,O A*),*mc(V*,O V*,L),mz(V*,L);I memcmp(O V*,O V*,L),sym(A),ecl(),epr(),eso(A,L);
-L strlen(O C*),len_(A),fndl(A,L),fndpc(A*,C),fndpl(A*,L),fndpa(A*,A),mtc_(A,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
+L strlen(O C*),len_(A),fndl(A,L),fndpc(A*,C),fndpi(A*,I),fndpl(A*,L),fndpa(A*,A),mtc_(A,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
 
 SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(L i)_(A(syml)[i])
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)V(r_)=(v);r_;})
@@ -132,7 +132,7 @@ SI A aL(L n)_(atn(tL,n))SI A al(L v)_(v==(I)v?pck(tl,v):atv(tlx,v))SI L gl(A x)_
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(tdx,v))SI D  gd(A x)_(D v=*xd;xr;v)SI D gd_(A x)_(*xd)
 
 #define err_(x,y,z,u,n,...) n
-#define err(a...) err_(a,err3,err2,err1,err0)(a)
+#define err(a...) ({dbg(ps("["__FILE__":"xstr(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
 #define en(a...) err((C*)0,##a)
 #define el(a...) err((C*)1,##a)
 #define et(a...) err((C*)2,##a)
@@ -162,6 +162,8 @@ S O A cu0=cu(0),cv0=cv(0),cu_cmd=cu(31),cv_plc=cv(29),cv_mkl=cv(30),cv_com=cv(31
 #define K(s,a...) ({S A f;$(!f,L m=mu;f=val(aCn(s,Z(s)+1));mu=m);app(f,A_(a),Z(A_(a))/ZV);})
 XT O C vc[];XT O L cil[11];XT O D cid[];XT A cn[];XT O V*cf[];SI L ari(A x)_(xtv&&Av(x)<ZZ(cil))
 
+#define arI(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p b?a/b:!a?_0Ni:a>0?_0Wi:-_0Wi))\
+ Q(5,F(n,p a>0?(b%a+a)%a:a?b/-a:_0Ni))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p a<b))Q(9,F(n,p a>b))Q(10,F(n,p a==b)))
 #define arL(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p b?a/b:!a?_0N:a>0?_0W:-_0W))\
  Q(5,F(n,p a>0?(b%a+a)%a:a?b/-a:_0N))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p a<b))Q(9,F(n,p a>b))Q(10,F(n,p a==b)))
 #define arD(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p b?a/b:!a?_0n:a>0?_0w:-_0w))\
