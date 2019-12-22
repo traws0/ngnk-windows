@@ -53,3 +53,5 @@ a:4(+" ",)/a:0:$20;mn:(m;n):#'(a;*a);a:,/a
 a:(.'","\*0:$21),&300;f:{+/r@&127<r:*|I[a;x]}
  f'("OR A J\nAND B J\nAND C J\nNOT J J\nAND D J\nWALK\n" /(~(A&B&C))&D
     "OR A J\nAND B J\nAND C J\nNOT J J\nAND D J\nOR I T\nOR F T\nAND E T\nOR H T\nAND T J\nRUN\n") /..&(H|(E&(I|F)))
+a:0:$22;l:.*|" "\;(2019{10007!$["c"=*y;x-l y;"k"=*|y;-x+1;x*l y]}/a
+                   .-1_`x(,"22.py";""))
