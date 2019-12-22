@@ -1,7 +1,8 @@
 #include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(sqz,P(!xtX||!xn,x)A y=xx;UC t=t_nrm(yt);P(!sim(y)&&t-ta,x)L n=xn;F(n,A y=xai;P(t-t_nrm(yt),x))
  P(t==ta,A z=yx;F(n,A y=xai;P(!mtc_(yx,z),x))aA(zR,flp(ea1(val,x))))
- t=t_lst(t);A u=atn(t,n);Y(t,UR,Q(tC,F(n,uci=gc(xai)))Q(tS,F(n,uli=gs(xai)))Q(tL,F(n,uli=gl_(xai)))Q(tD,F(n,udi=gd_(xai))))xr;u)
+ t=t_lst(t);A u=atn(t,n);
+ $(t==tC,F(n,uci=gc(xai)))E$(t==tS,F(n,uli=gs(xai)))E$(t==tI,F(n,uii=gi(xai)))E$(t==tL,F(n,uli=gl_(xai)))E$(t==tD,F(n,udi=gd_(xai)))E(UR)xr;u)
 A1(blw,P(xtX,x)P(xtt,a1(x))P(xta,et(x))L n=len_(x);A u=aX(n);F(n,uai=get(x,i))xr;u)
 L tru(A x/*1*/)_(xr;sim(x)?gl_(x):fun(x)?!xtu||Av(x):xn)A2(dex,xr;y)A1(fir,xtt?x:dex(x,getr(x,0)))A1(las,xtt?x:dex(x,getr(x,xn-1)))
 A1(flp,P(xtaA,$(xta,A y=xy;P(!ytX||!yn,er(x))F(yn,A z=yai;P(!ztT,en(x)))L m=An(*ya);F(yn,A z=yai;P(zn-m,el(x))))AT(xt^ta^tA,x))P(xtt,enl(enl(x)))
