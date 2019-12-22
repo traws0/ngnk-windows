@@ -16,7 +16,10 @@ A1(rev,P(xtt,x)P(xta,x=mut(x);xy=rev(xy);xx=rev(xx);x)P(xtA,x=mut(x);xy=ea1(rev,
                                        P(w==4,F(m,--j;I v=xii;xii=xij;xij=v)x)
                                        P(w==8,F(m,--j;L v=xli;xli=xlj;xlj=v)x)UR;0)
 A1(typ,xr;al(xt))A1(len,dex(x,al(len_(x))))L len_(A x/*0*/)_(xtT?xn:xta?len_(xy):xtA?len_(*A(xy)):1)
-A1(unq,P(!xtT,et(x))A u=atn(xt,0);Y(tz(xt),UR,Q(ZR,F(xn,fndpa(&u,mR(xai))))Q(0,F(xn,fndpc(&u,xci)))Q(3,F(xn,fndpl(&u,xli))))xr;u)
+A1(unq,P(!xtT,et(x))A u=atn(xt,0);I w=tz(xt);P(w==ZR,F(xn,fndpa(&u,mR(xai)))xr;u)
+                                             P(w== 0,xr;F(xn,fndpc(&u,xci))u)
+                                             P(w== 2,xr;F(xn,fndpi(&u,xii))u)
+                                             P(w== 3,xr;F(xn,fndpl(&u,xli))u)UR;0)
 S A2(fil,P(ytX||yta,eac(cV('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))P(yt-xt&&yt-t_lst(xt),et(x,y))amd(A_(yR,whr(nul(y)),cv0,x),4))
 A2(xpt,P(xtt,fil(x,y))y=enla(y);P(xtaA||ytaA,en(x,y))$(xtX||xt-yt,x=blw(x);y=blw(y))A u=atn(xt,0);
  $(xtX,F(xn,A z=xai;I b=1;Fj(yn,$(mtc_(z,yaj),b=0;B))$(b,u=apd(u,zR)))u=sqz(u))
