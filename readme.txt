@@ -51,8 +51,8 @@ k objs
  x y z u - var names for A objs. usually x y z are the args and u is the result from the fn.
  xt xn xb - type, length, and bucket index of x (similarly: yt,zn..)
  xtc xtL xtX.. - is x of type tc,tL,tX..?
- xtt - is x a simple atom (not fn or dict)?
- xtT - is x a simple list (not table)?
+ xtt - is x an atom? (not dict)
+ xtT - is x a list? (not table)
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
  xc xl xd xa.. - content of x as a char*,long*,double*,A*..
  xci xlj.. - i-th or j-th typed element: xc[i],xl[j]..
