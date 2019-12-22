@@ -6,7 +6,7 @@ S O I mxl=16,mxc=128;enum{bu,bv=0x20,bg=0x40,bs=0x50,bm=0x70,bM,bl,bL,ba,bP,bz,b
 S A3(lhs/*x1y0z0*/,asrt(Ar(x)==1);UH o=pkd(y)&&!yts?0:Ao(y);
  P(zts&&yx==cv0&&Ak(x),L i=fndpl(xa+2,gs(z));i<mxl?h(bs|i),x:err("mxl",x))
  P(ztS&&!Av(yx),hc(cv0);hc(cu0);hc(zR);hc(cV('.'));h(ba);h(4);x)
- P(zts||(ztX&&At(zx)==ts),$(zts,hc(aX(0)))E(F(zn-1,hr(za[zn-1-i]))h(bl);h(zn-1))
+ P(zts||(ztX&&At(zx)==ts),$(zts,hc(a0()))E(F(zn-1,hr(za[zn-1-i]))h(bl);h(zn-1))
   L k=gs(zts?z:zx),i=fndl(xa[2],k);$(i>=0,h(bm);h(i))E(hc(as(k));h(bM))h(Av(yx));x)
  P(ztX&&zx==cv_mkl,h(bL);h(zn-1);F(zn-1,x=N(lhs(x,y,za[i+1]));h(bp))x)en();eso(fir(x),o);0)
 S A2(rhs/*x1y0*/,asrt(Ar(x)==1);UH o=pkd(y)&&!yts?0:Ao(y);$(yts,P(gs(y)==4,h(bo);x)L i=fndl(xa[2],gs(y));P(i>=0,h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
@@ -19,8 +19,8 @@ A1(cpl,UC k=Ak(x);x=mut(x);A y=xy;xy=aC(0);xa[3]=aC(1);xa[4]=a1(cu0);C o=0;F(yn,
 S A sp0[0x10000],*sp=sp0+ZZ(sp0);S A*loc;S C*pc;
 S A1(vm_/*x0*/,W(1,UC b=*pc++;$(b<0x20,N(*sp=((A1*)cf[b])(*sp)))E$(b<0x40,sp++;N(*sp=((A2*)cf[b])(sp[-1],*sp)))
  E$(b<0x50,A*p=loc-(b&(mxl-1));*--sp=mR(*p))E$(b<0x60,A*p=loc-(b&(mxl-1));mr(*p);*p=mR(*sp))E$(b>=bc,*--sp=mR(A(xa[4])[b&(mxc-1)]))
- E$(b==bm,A*p=loc-*pc;sp++;*p =N(dm1(A_(*p,mR(sp[-1]),cv(pc[1]),*sp),4));*sp=N(ap2(mR(*p),sp[-1]));pc+=2)
- E$(b==bM,A y=*sp++;  sp++;A h=N(dmd(A_(y ,mR(sp[-1]),cv(*pc++),*sp),4));*sp=N(ap2(    h ,sp[-1])))
+ E$(b==bm,A*p=loc-*pc++;A y=*sp++;*sp=N(ap2(mR(*p=Ny(dm1(A_(*p,yR,cv(*pc++),*sp),4))),y)))
+ E$(b==bM,A x=*sp++;    A y=*sp++;*sp=N(ap2(      Ny(dmd(A_(x ,yR,cv(*pc++),*sp),4)) ,y)))
  E$(b==bl,UC n=*pc++;A x=sqz(atnv(tX,n,sp));sp+=n-1;*sp=x)E$(b==bL,UC n=*pc++;A x=*sp;P(!xtt&&len_(x)-n,el())F(n,*--sp=get(x,n-1-i)))
  E$(b==ba||b==bP,L n=*pc++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
  E$(b==bz,pc+=1+*pc*!tru(*sp++))E$(b==bj,pc+=*pc)E$(b==bo,*--sp=mR(loc[1]))E$(b==bp,mr(*sp++))E$(b==br,R*sp)E(UR))0)
