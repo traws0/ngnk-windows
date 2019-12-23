@@ -15,7 +15,7 @@ S A2(rhs/*x1y0*/,asrt(Ar(x)==1);UH o=pkd(y)&&!yts?0:Ao(y);$(yts,P(gs(y)==4,h(bo)
  $(u==cU('*')&&n==2,A z=yy;P(ztX&&zn==2&&zx==cU('|'),hr(zy);h(bu|29);x))$(utw&&n==2,A z=yy;P(!ztX&&!zts&&!ztS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,A z=ya[n-1-i];$(z==cv_plc,p=1;hc(zR))E(hr(z)))P(p,hr(yx);h(bP);h(n-1);x)P(u==cv0&&n==2,h(br);x)P(u==cv_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|Av(u));x)P(utv&&n==3,h(bv|Av(u));x)hr(yx);h(ba);h(n-1);x)
-A1(cpl,UC k=Ak(x);x=mut(x);A y=xy;xy=aC(0);xa[3]=aC(1);xa[4]=a1(cu0);C o=0;F(yn,x=Ny(rhs(x,yai));h(i==yn-1?br:bp))yr;AK(k,AT(to,x))) //sblmc
+A1(cpl,UC k=Ak(x);x=mut(x);A y=xy;xy=aC(0);xa[3]=aC(0);xa[4]=a1(cu0);C o=0;F(yn,x=Ny(rhs(x,yai));h(i==yn-1?br:bp))yr;AK(k,AT(to,x))) //sblmc
 S A sp0[0x10000],*sp=sp0+ZZ(sp0);S A*loc;S C*pc;
 S A1(vm_/*x0*/,W(1,UC b=*pc++;$(b<0x20,N(*sp=((A1*)cf[b])(*sp)))E$(b<0x40,sp++;N(*sp=((A2*)cf[b])(sp[-1],*sp)))
  E$(b<0x50,A*p=loc-(b&(mxl-1));*--sp=mR(*p))E$(b<0x60,A*p=loc-(b&(mxl-1));mr(*p);*p=mR(*sp))E$(b>=bc,*--sp=mR(A(xa[4])[b&(mxc-1)]))
@@ -25,5 +25,5 @@ S A1(vm_/*x0*/,W(1,UC b=*pc++;$(b<0x20,N(*sp=((A1*)cf[b])(*sp)))E$(b<0x40,sp++;N
  E$(b==ba||b==bP,L n=*pc++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
  E$(b==bz,pc+=1+*pc*!tru(*sp++))E$(b==bj,pc+=*pc)E$(b==bo,*--sp=mR(loc[1]))E$(b==bp,mr(*sp++))E$(b==br,R*sp)E(UR))0)
 AX(run,asrt(xto);asrt(n==Ak(x));xR;L m=An(xa[2]);P(sp<sp0+m+3,errn("stk",n,a))*--sp=(A)(V*)pc;*--sp=(A)(V*)loc;*--sp=x;pc=C(xy);loc=sp-1;
- F(n,*--sp=a[i])F(m-n,*--sp=cu0)A u=vm_(x);$(!u,eso(mR(xx),C(xa[3])[pc-C(xy)]);W(sp<loc-m,$(*sp,mr(*sp))sp++))
+ F(n,*--sp=a[i])F(m-n,*--sp=cu0)A u=vm_(x);$(!u,eso(mR(xx),C(xa[3])[pc-1-C(xy)]);W(sp<loc-m,$(*sp,mr(*sp))sp++))
  asrt(sp==loc-m);A*p=loc+1;W(p>sp,mr(*p--))sp=loc+4;pc=(C*)sp[-1];loc=(V*)sp[-2];u)
