@@ -1,6 +1,6 @@
 #include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 //prng: xoshiro256+ (public domain) http://vigna.di.unimi.it/xorshift/
-//seeded with bits from the central column of rule30, little-endian:  2/|+0N 64#{x n}'(n-1){(|(8#2)\30)@2/(0,-1_x;x;1_x,0)}\n=!1+2*n:256
+//seeded with bits from the central column of rule30, little-endian: 2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S A rndn(L n,L m)_(S UL a=-3050759188708220101,b=1159352424775454479,c=-9080974122485750305,d=-388592090067015233;
  $(n==_0N,n=-m)A x=aL(llabs(n));F(n,xli=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=d<<45|d>>19)$(m&(m-1),F(xn,xli=(UL)xli%m))E$(m,F(xn,xli&=m-1))
  $(n<0,n=-n;P(n>m,el(x))F(n,L k=m-n+i;L v=((UL*)xl)[i]%=k+1;Fj(i,$(xlj==v,xli=k;B)))A y=rndn(n,0);F(n,L j=(UL)yli%(i+1);swp(xli,xlj))yr)x)
