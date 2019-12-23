@@ -18,4 +18,4 @@ S A grd(A x/*1*/,I d)_(P(xtX,d=d?-1:1;A*a=xa,u=til(al(xn));L*l=ul,n=xn,i=n/2;W(i
  P(xtC||xtI,grd(N(gL(x)),d))P(xtS,grd(N(ea1(str,x)),d))P(xta,A y=gkv(&x);idx(x,N(grd(y,d))))et(x))
 A1(grp,P(xtt,xtl?K("{(2#x)#1,&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();UC w=tz(xt);
  F(xn,L j=w==ZR?fndpa(&y,mR(xai)):!w?fndpc(&y,xci):w==2?fndpi(&y,xii):w==3?fndpl(&y,xli):0;$(j==un,u=apd(u,aL(0)))uaj=apv(uaj,&i))xr;aa(y,u))
-A2(mtc,L r=mtc_(x,y);xr;yr;al(r))A1(asc,xts||xtl?hop(x):grd(x,0))A1(dsc,xtl?hcl(x):grd(x,1))
+A2(mtc,L r=mtc_(x,y);xr;yr;al(r))A1(asc,xts||xti?hop(x):grd(x,0))A1(dsc,xti?hcl(x):grd(x,1))
