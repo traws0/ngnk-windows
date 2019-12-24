@@ -80,8 +80,11 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,UC),AX(A,O A*,UC);
 #define fork() sc(fork)
 #define mmap_(x,y,z,t,u,v) ({register L r10 asm("r10")=t,r8 asm("r8")=u,r9 asm("r9")=v;(V*)sc(mmap,,"D"(x),"S"(y),"d"(z),"r"(r10),"r"(r8),"r"(r9));})
 
-SI L d2l(D v)_(*(L*)(V*)&v)SI L min(L x,L y)_(x<y?x:y)SI L llabs(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<=y&&y<=z)
-SI D l2d(L v)_(*(D*)(V*)&v)SI L max(L x,L y)_(x>y?x:y)SI C hex(I x)_(x+(x>9?'a'-10:'0'))
+#define extr(x,y,c)({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
+#define min(x,y)extr(x,y,<)
+#define max(x,y)extr(x,y,>)
+SI L d2l(D v)_(*(L*)(V*)&v)SI L llabs(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<=y&&y<=z)
+SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))
 
 //   () "" ,0 ,l ,` ,d +!  ! 0W  0.  "a" 0 0j `  {} 1+ ++ +/ +: +  /
 enum{tX,tC,tI,tL,tS,tD,tA,ta,tlx,tdx,tc,ti,tl,ts,to,tp,tq,tr,tu,tv,tw,tn};
@@ -167,7 +170,7 @@ XT O C vc[];XT O L cil[11];XT O D cid[];XT A cn[];XT O V*cf[];SI L ari(A x)_(xtv
 #define arL(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p b?a/b:!a?_0N:a>0?_0W:-_0W))\
  Q(5,F(n,p a>0?(b%a+a)%a:a?b/-a:_0N))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p a<b))Q(9,F(n,p a>b))Q(10,F(n,p a==b)))
 #define arD(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p b?a/b:!a?_0n:a>0?_0w:-_0w))\
- Q(5,F(n,p((V)a,(V)b,_0n)))Q(6,F(n,p a<b?a:b))Q(7,F(n,p a>b?a:b))Q(8,F(n,p l2d(a<b)))Q(9,F(n,p l2d(a>b)))Q(10,F(n,p l2d(a==b))))
+ Q(5,F(n,p((V)a,(V)b,_0n)))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p l2d(a<b)))Q(9,F(n,p l2d(a>b)))Q(10,F(n,p l2d(a==b))))
 
 #define pv(x) pv_(#x,(L)(x))
 #define pp ps("["__FILE__":"xstr(__LINE__)"]");
