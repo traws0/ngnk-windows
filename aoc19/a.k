@@ -53,8 +53,12 @@ a:4(+" ",)/a:0:$20;mn:(m;n):#'(a;*a);a:,/a
 a:(.'","\*0:$21),&300;f:{+/r@&127<r:*|I[a;x]}
  f'("OR A J\nAND B J\nAND C J\nNOT J J\nAND D J\nWALK\n" /(~(A&B&C))&D
     "OR A J\nAND B J\nAND C J\nNOT J J\nAND D J\nOR I T\nOR F T\nAND E T\nOR H T\nAND T J\nRUN\n") /..&(H|(E&(I|F)))
-a:0:$22;l:.*|" "\;(2019{10007!$["c"=*y;x-l y;"k"=*|y;-x+1;x*l y]}/a
-                   .*."\\python3 22.py")
+a:0:$22;l:.*|" "\;r:2019{10007!$["c"=*y;x-l y;"k"=*|y;-x+1;x*l y]}/a /part1
+ n:119315717514047;m:101741582076661 /part2
+ mul:{$[~x;:0;];x:|2\x;(n!+)/x*(-1+#x)(n!2*)\y};sqr:{mul[x;x]};pow:{$[y;(2!y)mul[x]/sqr o[x;-2!y];1]}
+ inv:pow[;n-2];div:{mul[x;inv y]}
+ (a;b):1 0{l:*|" "\y;n!$["c"=* y;x+0,. l;"k"=*|y;-x+0 1;x div'. l]}/|0:$22;
+ am:pow[a;m];r,n!mul[2020;am]+mul[b;div[am-1;a-1]]
 a:(.'","\*0:$23),&300;m:{(0;a;0;,x;!0)}'!50;h:N:!0;r:r2:0N /slow
  f:{(p;m[x;4]):0 3_m[x;4];$[255=*p;N::1_p;m[*p;3],:1_p]}
  g:{Y:N 1;r::Y^r;$[~^h?Y;r2::Y;];h,:*|m[0;3],:N;N::!0}
