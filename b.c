@@ -3,13 +3,13 @@ S O I mxl=16,mxc=128;enum{bu,bv=0x20,bg=0x40,bs=0x50,bm=0x70,bM,bl,bL,ba,bP,bz,b
 #define h(b)({xy=apc(xy,(C)(b));xa[3]=apc(xa[3],o);})
 #define hc(v)({I b=bc+fndpa(xa+4,v);P(b>bC,err("mxc",x))h(b);})
 #define hr(y)({x=N(rhs(x,y));})
-S A3(lhs/*x1y0z0*/,asrt(Ar(x)==1);UH o=pkd(y)&&!yts?0:Ao(y);
+S A3(lhs/*x1y0z0*/,asrt(Ar(x)==1);UH o=Ao(y);
  P(zts&&yx==cv0&&Ak(x),L i=fndpl(xa+2,gs(z));i<mxl?h(bs|i),x:err("mxl",x))
  P(ztS&&!Av(yx),hc(cv0);hc(cu0);hc(zR);hc(cV('.'));h(ba);h(4);x)
  P(zts||(ztX&&At(zx)==ts),$(zts,hc(a0()))E(F(zn-1,hr(za[zn-1-i]))h(bl);h(zn-1))
   L k=gs(zts?z:zx),i=fndl(xa[2],k);$(i>=0,h(bm);h(i))E(hc(as(k));h(bM))h(Av(yx));x)
  P(ztX&&zx==cv_mkl,h(bL);h(zn-1);F(zn-1,x=N(lhs(x,y,za[i+1]));h(bp))x)en();eso(fir(x),o);0)
-S A2(rhs/*x1y0*/,asrt(Ar(x)==1);UH o=pkd(y)&&!yts?0:Ao(y);$(yts,P(gs(y)==4,h(bo);x)L i=fndl(xa[2],gs(y));P(i>=0,h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
+S A2(rhs/*x1y0*/,asrt(Ar(x)==1);UH o=Ao(y);$(yts,P(gs(y)==4,h(bo);x)L i=fndl(xa[2],gs(y));P(i>=0,h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
  P(ytsS,hc(yR);h(bu|vi('.'));x)P(!ytX,hc(y==cv_plc?cu0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)P((utu||u==cv0)&&n==3,hr(ya[2]);lhs(x,y,yy))
  P(u==cV('$')&&n>3,UC d[n];A*a=ya+1;n--;F(n&~1,hr(a[i]);h(i&1?bj:bz);d[i]=An(xy);h(0))hr(n&1?a[n-1]:cu0);A z=xy;F(n&~1,zc[d[i]]=(i&1?zn:d[i+1])-d[i])x)
  $(u==cU('*')&&n==2,A z=yy;P(ztX&&zn==2&&zx==cU('|'),hr(zy);h(bu|29);x))$(utw&&n==2,A z=yy;P(!ztX&&!zts&&!ztS,zR;hc(app(u,&z,1));x))
