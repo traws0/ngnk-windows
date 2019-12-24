@@ -162,7 +162,7 @@ S O A cu0=cu(0),cv0=cv(0),cu_cmd=cu(31),cv_plc=cv(29),cv_mkl=cv(30),cv_com=cv(31
 #define _0n  (D)NAN
 #define _0w  (D)INFINITY
 #define K(s,a...) ({S A f;$(!f,L m=mu;f=val(aCn(s,Z(s)+1));mu=m);app(f,A_(a),Z(A_(a))/ZV);})
-XT O C vc[];XT O L cil[11];XT O D cid[];XT A cn[];XT O V*cf[];SI L ari(A x)_(xtv&&Av(x)<ZZ(cil))
+XT O C vc[];XT A cn[];XT O V*cf[];SI I ari(A x)_(xtv&&Av(x)<11)
 
 #define arI(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p b?a/b:!a?_0Ni:a>0?_0Wi:-_0Wi))\
  Q(5,F(n,p a>0?(b%a+a)%a:a?b/-a:_0Ni))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p a<b))Q(9,F(n,p a>b))Q(10,F(n,p a==b)))
