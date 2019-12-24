@@ -4,10 +4,9 @@ S A sl(L v,A y)_(asrt(Ar(y)==1);y=room(y,20);C*s=yc+yn;
  $(v==_0N,*s++='0';*s++='N')
  E($(v<0,v=-v;*s++='-')$(v==_0W,*s++='0';*s++='W')E(UL l=0,t=10;W(t<=(UL)v,t*=10;l++)s+=l;F(l+1,UL k=(UL)v/10,r=(UL)v%10;*s--='0'+r;v=k)s+=l+2))
  AN(s-yc,y))
-S A sd(D v,A y)_(asrt(Ar(y)==1);y=room(y,400);C*s=yc+yn;
- $(d2l(v)==d2l(_0n),*s++='0';*s++='n')
- E($(v<0,v=-v;*s++='-')$(v==_0w,*s++='0';*s++='w')E(D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)
-                                                    *s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(v==0,B))))
+S A sd(D v,A y)_(asrt(Ar(y)==1);y=room(y,400);C*s=yc+yn;$(v<0,v=-v;*s++='-')
+ $(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n')
+ E(D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(v==0,B)))
  AN(s-yc,y))
 #define h(x)  (y=cat(y,x))
 #define hs(s) (y=catc(y,s,ZZ(s)-1))
