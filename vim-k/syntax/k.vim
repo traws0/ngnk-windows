@@ -13,7 +13,7 @@ sy match  k_string  /"\(\\.\|[^"\n]\)*"/                             nextgroup=@
 sy match  k_q       /\\./                                                             contained               |hi link k_q       specialchar
 sy match  k_u       /[:+\-*%!&|<>=~,^#_$?@.]:\=/                     nextgroup=k_w                            |hi link k_u       function
 sy match  k_v       /\s*[+\-*%!&|<>=~,^#_$?@.]:\=/                   nextgroup=k_w    contained               |hi link k_v       type
-sy match  k_i       /\(\.\=[a-zA-Z\u0400-\u047f0-9]*\)\+/            nextgroup=@k_nvw                         |hi link k_i       variable
+sy match  k_i       /\(\.\=[a-zA-Z0-9\u0400-\u047f]\+\)\+/           nextgroup=@k_nvw                         |hi link k_i       variable
 sy match  k_x       /\<[oxyz]\>/                                     nextgroup=@k_nvw                         |hi link k_x       special
 sy match  k_n       /\v\s*([a-zA-Z0-9)\]}]@<!\-)=\d+([NWnw]|\.\d+)=/ nextgroup=@k_nvw                         |hi link k_n       number
 sy match  k_string  /\<0x\(\x\x\)*\>/                                nextgroup=@k_nvw
