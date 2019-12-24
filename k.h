@@ -110,7 +110,6 @@ SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==tlx?tL:t
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
 #define ZV Z(V*)
-#define ZL Z(L)
 #define ZA 16
 #define ZR 67 //ref
 SI UC tz(UC t)_(t==tC?0:t==tI?2:reft(t)?ZR:3)
