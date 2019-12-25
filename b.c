@@ -1,26 +1,26 @@
 #include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-S O I mxl=16,mxc=128;enum{bu,bv=0x20,bg=0x40,bs=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br,bc=0x80,bC=0xff};S A2 rhs;
-#define fb xy
-#define fl xa[2]
-#define fm xa[3]
-#define fc xa[4]
-#define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);})
-#define hc(v)({I b=bc+fndpa(&fc,v);P(b>bC,err("mxc",x))h(b);})
-#define hr(y)({x=N(rhs(x,y));})
-S I lu[16];
-S A3(lhs/*x1y0z0*/,asrt(Ar(x)==1);UH o=Ao(y);P(zts&&yx==cv0&&Ak(x),L i=fndpl(xa+2,gs(z));i<mxl?(lu[i]=An(fb)),h(bs|i),x:err("mxl",x))
- P(ztS&&!Av(yx),hc(cv0);hc(cu0);hc(zR);hc(cV('.'));h(ba);h(4);x)
- P(zts||(ztX&&At(zx)==ts),$(zts,hc(a0()))E(F(zn-1,hr(za[zn-1-i]))h(bl);h(zn-1))
-  L k=gs(zts?z:zx),i=fndl(fl,k);$(i>=0,lu[i]=An(fb);h(bm);h(i))E(hc(as(k));h(bM))h(Av(yx));x)
- P(ztX&&zx==cv_mkl,h(bL);h(zn-1);F(zn-1,x=N(lhs(x,y,za[i+1]));h(bp))x)en();eso(fir(x),o);0)
-S A2(rhs/*x1y0*/,asrt(Ar(x)==1);UH o=Ao(y);$(yts,P(gs(y)==4,h(bo);x)L i=fndl(fl,gs(y));P(i>=0,lu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
- P(ytsS,hc(yR);h(bu|vi('.'));x)P(!ytX,hc(y==cv_plc?cu0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)
- P((utu||u==cv0)&&n==3,hr(ya[2]);N(lhs(x,y,yy)))
- P(u==cV('$')&&n>3,UC d[n];A*a=ya+1;n--;F(n&~1,hr(a[i]);h(i&1?bj:bz);d[i]=An(fb);h(0))hr(n&1?a[n-1]:cu0);A z=fb;F(n&~1,zc[d[i]]=(i&1?zn:d[i+1])-d[i])x)
- $(u==cU('*')&&n==2,A z=yy;P(ztX&&zn==2&&zx==cU('|'),hr(zy);h(bu|29);x))$(utw&&n==2,A z=yy;P(!ztX&&!zts&&!ztS,zR;hc(app(u,&z,1));x))
- I p=0;F(n-1,A z=ya[n-1-i];$(z==cv_plc,p=1;hc(zR))E(hr(z)))P(p,hr(yx);h(bP);h(n-1);x)P(u==cv0&&n==2,h(br);x)P(u==cv_mkl,h(bl);h(n-1);x)
- P(utu&&n==2,h(bu|Av(u));x)P(utv&&n==3,h(bv|Av(u));x)hr(yx);h(ba);h(n-1);x)
-A1(cpl,UC k=Ak(x);x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(cu0);C o=0;F(16,lu[i]=-1)F(yn,x=Ny(rhs(x,yai));h(i==yn-1?br:bp))yr;
+S O I mxl=16,mxc=128;enum{bu,bv=0x20,bg=0x40,bs=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br,bc=0x80,bC=0xff};S A f;S I lu[16],rhs(A);
+#define fs A(f)[0] //src
+#define fb A(f)[1] //bytecode
+#define fl A(f)[2] //local symbols
+#define fm A(f)[3] //srcmap
+#define fc A(f)[4] //constants
+#define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
+#define hc(x)({I b=bc+fndpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
+S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==cv0&&Ak(f),L i=fndpl(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
+ P(ytS&&!Av(xx),hc(cv0);hc(cu0);hc(yR);hc(cV('.'));h(ba);h(4);1)
+ P(yts||(ytX&&At(yx)==ts),$(yts,hc(a0()))E(F(yn-1,N(rhs(ya[yn-1-i])))h(bl);h(yn-1))
+  L k=gs(yts?y:yx),i=fndl(fl,k);$(i>=0,lu[i]=An(fb);h(bm);h(i))E(hc(as(k));h(bM))h(Av(xx));1)
+ P(ytX&&yx==cv_mkl,h(bL);h(yn-1);F(yn-1,N(lhs(x,ya[i+1]));h(bp))1)en();eso(mR(fs),o);0)
+S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndl(fl,gs(x));P(i>=0,lu[i]=An(fb);h(bg|i);1))P(xtS&&xn==1,hc(as(*xl));1)
+ P(xtsS,hc(xR);h(bu|vi('.'));1)P(!xtX,hc(x==cv_plc?cu0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
+ P((utu||u==cv0)&&n==3,N(rhs(xa[2]));N(lhs(x,xy)))
+ P(u==cV('$')&&n>3,UC d[n];A*a=xa+1;n--;F(n&~1,N(rhs(a[i]));h(i&1?bj:bz);d[i]=An(fb);h(0))N(rhs(n&1?a[n-1]:cu0));
+                   A z=fb;F(n&~1,zc[d[i]]=(i&1?zn:d[i+1])-d[i])1)
+ $(u==cU('*')&&n==2,A z=xy;P(ztX&&zn==2&&zx==cU('|'),N(rhs(zy));h(bu|29);1))$(utw&&n==2,A z=xy;P(!ztX&&!zts&&!ztS,zR;hc(app(u,&z,1));1))
+ I p=0;F(n-1,A z=xa[n-1-i];$(z==cv_plc,p=1;hc(zR))E(N(rhs(z))))P(p,N(rhs(xx));h(bP);h(n-1);1)P(u==cv0&&n==2,h(br);1)P(u==cv_mkl,h(bl);h(n-1);1)
+ P(utu&&n==2,h(bu|Av(u));1)P(utv&&n==3,h(bv|Av(u));1)N(rhs(xx));h(ba);h(n-1);1)
+A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(cu0);C o=0;F(16,lu[i]=-1)F(yn,P(!rhs(yai),xr;yr;0)h(i==yn-1?br:bp))yr;
  y=fb;F(16,I j=lu[i];$(ycj==bg,asrt(Ar(y)==1);ycj=bd))AK(k,AT(to,x)))
 S A sp0[0x10000],*sp=sp0+ZZ(sp0),*loc;S C*pc;
 S A1(vm_/*x0*/,W(1,UC b=*pc++;$(b>=bc,*--sp=mR(A(xa[4])[b&(mxc-1)]))
