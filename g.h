@@ -94,12 +94,16 @@
 #define ur mr(u)
 #define xx xa[0]
 #define xy xa[1]
+#define xz xa[2]
 #define yx ya[0]
 #define yy ya[1]
+#define yz ya[2]
 #define zx za[0]
 #define zy za[1]
+#define zz za[2]
 #define ux ua[0]
 #define uy ua[1]
+#define uz ua[2]
 #define xtX (xt==tX)
 #define xtC (xt==tC)
 #define xtI (xt==tI)

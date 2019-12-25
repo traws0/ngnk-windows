@@ -25,7 +25,7 @@ A2(kst,P(xtl,sl(gl(x),y))P(xtiI,apc(kst(gL(x),y),'i'))P(xt==tdx,sd(gd(x),y))P(xt
        $(xn,C c=xtX?';':xtS?0:32;F(xn,$(i&&c,hc(c))y=kst(get(x,i),y)))E$(xtL||xtI,hs("!0"))E$(xtD,hs("0#0n"))E$(xtS,hs("0#`"))
        $(xtX,hc(')'))xr;y)
  P(xtaA,$(xtA,hc('+'))A z=gkv(&x);ksr(z,apc(ksl(x,y),'!')))P(xto,h(fir(AT(tX,x))))P(xtq,A z=gkv(&x);hx(x);hx(z);y)
- P(xtp,A z=xx;$(xn==3&&(ztv||ztr)&&xy-cv_plc&&xa[2]==cv_plc,y=ksl(mR(xy),y);hx(zR))
+ P(xtp,A z=xx;$(xn==3&&(ztv||ztr)&&xy-cv_plc&&xz==cv_plc,y=ksl(mR(xy),y);hx(zR))
               E(hx(zR);I i=1;W(i<xn,hc(";["[i==1]);$(xai-cv_plc,hx(mR(xai)))i++)hc(']'))xr;y)
  P(xtu||xtv,I v=Av(x);$(v<20,hc(vc[v]))E($(v>=30,hc('1'))hc('0'+(v-20)%10);hc(':'))$(xtu,hc(':'))y)
  P(xtr||xtw,$(xtr,y=kso(fir(AT(tX,x)),y))I v=Av(x);hc("'/\\"[v%3]);$(v>2,hc(':'))y)

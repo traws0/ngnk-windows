@@ -14,7 +14,7 @@ S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==cv0&&Ak(f),L i=fndpl(&fl,gs(y)
  P(ytX&&yx==cv_mkl,h(bL);h(yn-1);F(yn-1,N(lhs(x,ya[i+1]));h(bp))1)en();eso(mR(fs),o);0)
 S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndl(fl,gs(x));P(i>=0,lu[i]=An(fb);h(bg|i);1))P(xtS&&xn==1,hc(as(*xl));1)
  P(xtsS,hc(xR);h(bu|vi('.'));1)P(!xtX,hc(x==cv_plc?cu0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
- P((utu||u==cv0)&&n==3,N(rhs(xa[2]));N(lhs(x,xy)))
+ P((utu||u==cv0)&&n==3,N(rhs(xz));N(lhs(x,xy)))
  P(u==cV('$')&&n>3,UC d[n];A*a=xa+1;n--;F(n&~1,N(rhs(a[i]));h(i&1?bj:bz);d[i]=An(fb);h(0))N(rhs(n&1?a[n-1]:cu0));
                    A z=fb;F(n&~1,zc[d[i]]=(i&1?zn:d[i+1])-d[i])1)
  $(u==cU('*')&&n==2,A z=xy;P(ztX&&zn==2&&zx==cU('|'),N(rhs(zy));h(bu|29);1))$(utw&&n==2,A z=xy;P(!ztX&&!zts&&!ztS,zR;hc(app(u,&z,1));1))
@@ -32,6 +32,6 @@ S A1(vm_/*x0*/,W(1,UC b=*pc++;$(b>=bc,*--sp=mR(A(xa[4])[b&(mxc-1)]))
          E$(b==bz,pc+=1+*pc*!tru(*sp++))E$(b==bj,pc+=*pc)E$(b==bo,*--sp=mR(loc[1]))E$(b==bp,mr(*sp++))E$(b==br,R*sp)E(UR))
  E$(b>=bd,A*p=loc-(b&(mxl-1));*--sp=*p;*p=cu0)E$(b>=bs,A*p=loc-(b&(mxl-1));mr(*p);*p=mR(*sp))E$(b>=bg,A*p=loc-(b&(mxl-1));*--sp=mR(*p))
  E$(b>=bv,sp++;N(*sp=((A2*)cf[b])(sp[-1],*sp)))E(N(*sp=((A1*)cf[b])(*sp))))UR;0)
-AX(run,asrt(xto);asrt(n==Ak(x));xR;L m=An(xa[2]);P(sp<sp0+m+3,errn("stk",n,a))*--sp=(A)(V*)pc;*--sp=(A)(V*)loc;*--sp=x;pc=C(xy);loc=sp-1;
+AX(run,asrt(xto);asrt(n==Ak(x));xR;I m=An(xz);P(sp<sp0+m+3,errn("stk",n,a))*--sp=(A)(V*)pc;*--sp=(A)(V*)loc;*--sp=x;pc=C(xy);loc=sp-1;
  F(n,*--sp=a[i])F(m-n,*--sp=cu0)A u=vm_(x);$(!u,eso(mR(xx),C(xa[3])[pc-1-C(xy)]);W(sp<loc-m,$(*sp,mr(*sp))sp++))
  asrt(sp==loc-m);A*p=loc+1;W(p>sp,mr(*p--))sp=loc+4;pc=(C*)sp[-1];loc=(V*)sp[-2];u)
