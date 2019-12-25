@@ -15,10 +15,10 @@ S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==cv0&&Ak(f),L i=fndpl(&fl,gs(y)
 S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndl(fl,gs(x));P(i>=0,lu[i]=An(fb);h(bg|i);1))P(xtS&&xn==1,hc(as(*xl));1)
  P(xtsS,hc(xR);h(bu|vi('.'));1)P(!xtX,hc(x==cv_plc?cu0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
  P((utu||u==cv0)&&n==3,N(rhs(xz));N(lhs(x,xy)))
- P(u==cV('$')&&n>3,UC d[n];A*a=xa+1;n--;F(n&~1,N(rhs(a[i]));h(i&1?bj:bz);d[i]=An(fb);h(0))N(rhs(n&1?a[n-1]:cu0));
-                   A z=fb;F(n&~1,zc[d[i]]=(i&1?zn:d[i+1])-d[i])1)
- $(u==cU('*')&&n==2,A z=xy;P(ztX&&zn==2&&zx==cU('|'),N(rhs(zy));h(bu|29);1))$(utw&&n==2,A z=xy;P(!ztX&&!zts&&!ztS,zR;hc(app(u,&z,1));1))
- I p=0;F(n-1,A z=xa[n-1-i];$(z==cv_plc,p=1;hc(zR))E(N(rhs(z))))P(p,N(rhs(xx));h(bP);h(n-1);1)P(u==cv0&&n==2,h(br);1)P(u==cv_mkl,h(bl);h(n-1);1)
+ P(u==cV('$')&&n>3,UC d[n];A*a=&xy;n--;F(n&~1,N(rhs(a[i]));h(i&1?bj:bz);d[i]=An(fb);h(0))N(rhs(n&1?a[n-1]:cu0));
+                   A y=fb;F(n&~1,yc[d[i]]=(i&1?yn:d[i+1])-d[i])1)
+ $(u==cU('*')&&n==2,A y=xy;P(ytX&&yn==2&&yx==cU('|'),N(rhs(yy));h(bu|29);1))$(utw&&n==2,A y=xy;P(!ytX&&!ytsS,yR;hc(app(u,&y,1));1))
+ I p=0;F(n-1,A y=xa[n-1-i];$(y==cv_plc,p=1;hc(yR))E(N(rhs(y))))P(p,N(rhs(xx));h(bP);h(n-1);1)P(u==cv0&&n==2,h(br);1)P(u==cv_mkl,h(bl);h(n-1);1)
  P(utu&&n==2,h(bu|Av(u));1)P(utv&&n==3,h(bv|Av(u));1)N(rhs(xx));h(ba);h(n-1);1)
 A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(cu0);C o=0;F(16,lu[i]=-1)F(yn,P(!rhs(yai),xr;yr;0)h(i==yn-1?br:bp))yr;
  y=fb;F(16,I j=lu[i];$(ycj==bg,asrt(Ar(y)==1);ycj=bd))AK(k,AT(to,x)))
