@@ -10,7 +10,7 @@ S AX(join,asrt(xtcC);P(n>1,ern(n,a))A y=*a;P(!ytX,et(y))C*s=xtc?(V*)&x:xc;L m=le
  A u=aC(l);C*p=uc;F(k-1,A z=yai;$(ztc,*p++=gc(z))E(mc(p,zc,zn);p+=zn)mc(p,s,m);p+=m)$(k,A z=ya[k-1];$(ztc,*p=gc(z))E(mc(p,zc,zn)))yr;u)
 A ea1(A1 f,A x)_(P(xtt,f(x))P(xta,x=mut(x);xy=ea1(f,xy);P(!xy,xy=cu0;xr;0)x)
  I b=xtX&&Ar(x)==1;L n=len_(x);P(!n,x)A u=a0();F(n,A y=f(b?xai:get(x,i));$(!y,$(b,mrn(xn-i-1,xa+i+1))xr;ur;u=0;B)u=apd(u,y))$(b,x=AN(0,x))xr;u)
-S AX(sld,P(n>1,ern(n,a))L k=gl(x);x=*a;P(!xtT,et(x))P(k<=0,ed(x))A u=aX(max(0,xn-k+1));
+S AX(sld,P(n>1,ern(n,a))L k=gl_(x);x=*a;P(!xtT,et(x))P(k<=0,ed(x))A u=aX(max(0,xn-k+1));
  $(xtX&&un,I l=min(k,xn-k+1);F(xn,A y=xai;$(!pkd(y),Ar(y)+=min(l,min(1+i,xn-i)))))L w=tZ(xt);F(un,uai=sqz(atnv(xt,k,xc+i*w)))xr;u)
 S L cfm(O A*a/*0*/,L n)_(L m=-1;F(n,A x=a[i];$(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,A z,b[8];F(n,A y=a[i];$(yta,z=yx;B))zR;F(n,A y=b[i]=a[i];$(yta,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))A u=eac(x,b,n);(u?aa:dex)(z,u))
