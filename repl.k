@@ -19,4 +19,5 @@ h:(": assign             '  each"
    "? find|rnd uniq                          `t[] time"
    "@ apply    type      @[x;i;[f;]y] amend  `e[] printerror"
    ". eval     value     .[x;i;[f;]y] drill  `x@(argv;in) fork")
-{x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1;\
+{x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1
+\\
