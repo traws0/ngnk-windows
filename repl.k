@@ -2,13 +2,13 @@
 h:(": assign             '  each"
    "+ add      flip      /  fold|join |dec   / comment"
    "- subtract negate    \\  scan|split|enc   \\ exit"
-   "* multiply first     ': eachprior        \\t:n x  time"
-   "% divide   sqrt      /: eachright        \\l a.k  load"
-   "! mod|dict enum|key  \\: eachleft         \\w workspace"
-   "& min|and  where"
+   "* multiply first     ': eachprior        \\cmd args"
+   "% divide   sqrt      /: eachright        \\t:n x  time"
+   "! mod|dict enum|key  \\: eachleft         \\l a.k  load"
+   "& min|and  where                         \\w workspace"
    "| max|or   reverse"
-   "< less     asc       0: r/w lines"
-   "> more     desc      1: r/w bytes          !n enum"
+   "< less     asc       0: lines i/o"
+   "> more     desc      1: bytes i/o          !n enum"
    "= equal    group                           !N odometer"
    "~ match    not                            n?x draw"
    ", concat   enlist                        -n?x deal"
@@ -19,5 +19,5 @@ h:(": assign             '  each"
    "? find|rnd uniq                          `t[] time"
    "@ apply    type      @[x;i;[f;]y] amend  `e[] printerror"
    ". eval     value     .[x;i;[f;]y] drill  `x@(argv;in) fork")
-{x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1
+{x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1;
 \\
