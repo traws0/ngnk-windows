@@ -1,17 +1,14 @@
 #include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-A1(json,x=str0(x);A y=0,h[16];I n=0;C*s=xc,c; //no validation or error handling
- W((c=*s++),
-  $( c=='[',asrt(!y);h[n++]=a0())
-  E$(c=='{',asrt(!y);h[n++]=aS(0);h[n++]=a0())
-  E$(c==',',asrt( y);h[n-1]=apd(h[n-1],y);y=0)
-  E$(c==':',asrt( y);asrt(ytC);h[n-2]=apd(h[n-2],as(sym(y)));y=0)
-  E$(c==']',asrt( n);$(y,h[n-1]=apd(h[n-1],y);y=0)y=h[--n])
-  E$(c=='}',asrt( n);$(y,h[n-1]=apd(h[n-1],y);y=0)y=aa(h[n-2],h[n-1]);n-=2)
-  E$(c=='f',asrt(!y);s+=4;y=al(0))
-  E$(c=='t',asrt(!y);s+=3;y=al(1))
-  E$(c=='n',asrt(!y);s+=3;y=mR(cn[tl]))
-  E$(c=='-'||C3('0',c,'9'),asrt(!y);s--;y=al(pl(&s)))
-  E$(c=='"',asrt(!y);y=aC(0);
-   W('"'-((c=*s++)),asrt(c);$(c=='\\',c=*s++;C d=0;F(5,$(c=="bfnrt"[i],d="\b\f\n\r\t"[i];c=0;B))c=d;P(!c,yr;ern(n,h)))y=apv(y,&c)))
-  E$(c-32&&c-9&&c-10&&c-13,mrn(n,h);$(y,yr)R en(x)))
- asrt(y);asrt(!n);xr;y)
+S C*s;S A0 jv;S I fc(O C*s,C c)_(O C*t=s;W(*t&&*t-c,t++)t-s)S I dg(C c)_(C3('0',c,'9'))S C jw()_(W(fc(" \n\t\r",*s)<4,++s)*s)
+S A0(jd,I m=*s=='-';s+=m;C c=*s++;P(!dg(c),0)D v=c-'0';W(dg(*s),v*=10;v+=*s++-'0')$(*s=='.',s++;D t=1;W(dg(*s),t/=10;v+=(*s++-'0')*t))
+ $(*s=='e'||*s=='E',s++;s+=*s=='+';L e=pl(&s);D t=10;$(e<0,e=-e;t=.1)P(e>308,0)F(e,v*=t))ad(m?-v:v))
+S A1(ju,I v=0;F(4,C c=*s++;v=16*v+c-(dg(c)?'0':C3('a',c,'f')?'a'-10:C3('A',c,'F')?'A'-10:99999);P(v<0,pv(v);s--;0))
+ P(v<128,apc(x,v))P(v<2048,x=apc(x,192|v>>6);apc(x,128|63&v))x=apc(x,224|v>>12);x=apc(x,128|63&v>>6);apc(x,128|63&v))
+S A0(js,s++;A x=aC(0);W(1,C*t=s;UC c=*s++;W(c-'"'&&c-'\\'&&c>31,c=*s++)P(c<32,s--;xr;0)x=catc(x,t,s-1-t);P(c=='"',x)c=*s++;I i=fc("\"\\/bfnrt",c);
+                          $(i<8,x=apc(x,"\"\\/\b\f\n\r\t"[i]))E$(c=='u',x=ju(x))E(xr;s--;R 0)t=s)0)
+S A0(ja,s++;A x=a0();P(jw()==']',s++;x)W(1,x=apd(x,Nx(jv()));P(*s==']',s++;x)Nx(*s==',');s++)0)
+S A0(jo,s++;A x=aa(aS(0),a0());C c=jw();P(c=='}',s++;x)
+ W(1,Nx(c=='"');xx=apd(xx,gS(Nx(js())));Nx(jw()==':');s++;xy=apd(xy,Nx(jv()));P(*s=='}',s++;x)Nx(*s==',');s++;c=jw())0)
+S A jr(O C*t,L v)_(C c;W((c=*t++),P(c-*s,0)s++)al(v))
+S A0(jv,C c=jw();A x=c=='['?ja():c=='{'?jo():c=='"'?js():c=='-'||dg(c)?jd():c=='t'?jr("true",1):c=='f'?jr("false",0):c=='n'?jr("null",_0N):0;jw();x)
+A1(json,P(!xtcC,et(x))x=str0(enla(x));s=xc;A u=jv();$(u&&*s,ur;u=0)P(!u,eso(x,s-xc);err("json");0)xr;u)
