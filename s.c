@@ -27,7 +27,7 @@ A2(kst,P(xtl,sl(gl(x),y))P(xtiI,apc(kst(gL(x),y),'i'))P(xt==tdx,sd(gd(x),y))P(xt
  P(xtaA,$(xtA,hc('+'))A z=gkv(&x);ksr(z,apc(ksl(x,y),'!')))P(xto,h(fir(AT(tX,x))))P(xtq,A z=gkv(&x);hx(x);hx(z);y)
  P(xtp,A z=xx;$(xn==3&&(ztv||ztr)&&xy-cv_plc&&xz==cv_plc,y=ksl(mR(xy),y);hx(zR))
               E(hx(zR);I i=1;W(i<xn,hc(";["[i==1]);$(xai-cv_plc,hx(mR(xai)))i++)hc(']'))xr;y)
- P(xtu||xtv,I v=Av(x);$(v<20,hc(vc[v]))E($(v>=30,hc('1'))hc('0'+(v-20)%10);hc(':'))$(xtu,hc(':'))y)
+ P(xtu||xtv,I v=Av(x);$(v<20,hc(vc[v]))E(hx(al(v-20));hc(':'))$(xtu,hc(':'))y)
  P(xtr||xtw,$(xtr,y=kso(fir(AT(tX,x)),y))I v=Av(x);hc("'/\\"[v%3]);$(v>2,hc(':'))y)
  xr;hs("???");y)
 A1(out,A y;P(x==cu0,x)$(xtX&&xn>1,y=aCn("(",1);F(xn,$(i,hs("\n "))hx(mR(xai)))hs(")\n"))E(y=kst(xR,aC(0));hc(10))yr;write(1,yc,yn);x)
