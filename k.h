@@ -84,7 +84,7 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,UC),AX(A,O A*,UC);
 #define min(x,y)extr(x,y,<)
 #define max(x,y)extr(x,y,>)
 SI L d2l(D v)_(*(L*)(V*)&v)SI L llabs(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<=y&&y<=z)
-SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))
+SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(C3('0',c,'9'))
 
 //   () "" ,0 ,l ,` ,d +!  ! 0W  0.  "a" 0 0j `  {} 1+ ++ +/ +: +  /
 enum{tX,tC,tI,tL,tS,tD,tA,ta,tlx,tdx,tc,ti,tl,ts,to,tp,tq,tr,tu,tv,tw,tn};
