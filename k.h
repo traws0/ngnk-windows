@@ -171,11 +171,12 @@ XT O C vc[];XT A cn[];XT O V*cf[];SI I ari(A x)_(xtv&&Av(x)<11)
 #define arD(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p a/b))\
  Q(5,F(n,p((V)a,(V)b,_0n)))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p l2d(a<b)))Q(9,F(n,p l2d(a>b)))Q(10,F(n,p l2d(a==b))))
 
-#define pv(x) pv_(#x,(L)(x))
+#define pv(x) pv_(#x":",(L)(x))
+#define px(x) px_(#x":",(A)(x))
 #define pp ps("["__FILE__":"xstr(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 SI I ps(O C*x)_(write(2,x,strlen(x)))
 SI I ph(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
 SI I pd(L x)_(C b[32],*u=b+31;L m=x<0;$(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);$(m,*u--='-')write(2,u+1,b+31-u))
 SI L pv_(C*s,L x)_(ps(s);write(2,"           ",max(1,10-strlen(s)));ph((L)x);write(2,"\n",1);x)
-SI A pa_(C*s,A x)_(ps(s);ph((L)x);P(!x,0)$(!pkd(x),ps(" b");pd(xb);ps("t");pd(xt);ps("r");pd(Ar(x));ps("n");pd(xn))ps(" ");out(x))
+SI A px_(C*s,A x)_(ps(s);ph((L)x);P(!x,0)$(!pkd(x),ps(" b");pd(xb);ps("t");pd(xt);ps("r");pd(Ar(x));ps("n");pd(xn))ps(" ");out(x))
