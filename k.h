@@ -122,7 +122,7 @@ A0 aa0;A3 a3,try;AA amd,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;XT A syml
 A err0(O C*),err1(O C*,A),err2(O C*,A,A),err3(O C*,A,A,A),errn(O C*,I,O A*),ea1(A1,A),apv(A,O V*),apc(A,C),catc(A,O C*,L),room(A,L),
   get(A,L),getr(A,L),atn(UC,L),atnv(UC,L,O V*),aCn(O C*,L),aCm(O C*,O C*),aCz(O C*),gkv(A*),pS(C**);
 V mrn(L,O A*),*mc(V*,O V*,L),mz(V*,L);I memcmp(O V*,O V*,L),sym(A),ecl(),epr(),eso(A,L),Ci(O C*,C);
-L strlen(O C*),len_(A),fndl(A,L),fndpc(A*,C),fndpi(A*,I),fndpl(A*,L),fndpa(A*,A),mtc_(A,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
+L strlen(O C*),len_(A),fndl(A,L),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),mtc_(A,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
 
 SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(L i)_(A(syml)[i])
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)V(r_)=(v);r_;})

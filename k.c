@@ -41,8 +41,8 @@ AA(amd,asrt(n>2);A x=*a,y=a[1],z=a[2];P(xtt,etn(n,a))P(n==3&&!fun(z),amd(A_(x,y,
   E$(xtL,arL(f,yn,L j=yli;cki(j,xn,x)L a=xlj;L b=ul[d*i];xlj=))x)
  P(n==4&&xtC&&ytL&&z==cv0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];L d=utT;u=enla(u);yr;ur;$(d&&yn-un,el(x))F(yn,L j=yli;cki(j,xn,x)xcj=uc[d*i])x)
  rdc(cV('@'),a,n))
-S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)==tX);L j=fndpl(&yx,*xl);$(j==An(yy),yy=apd(yy,xn>1?aa0():cu0))A*p=A(yy)+j;
- F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fndpl(&yx,xl[i+1]);A u=yy;P(!utX,(A*)ed(x))yy=j==un?apd(u,aa0()):mut(u);
+S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)==tX);L j=fpl(&yx,*xl);$(j==An(yy),yy=apd(yy,xn>1?aa0():cu0))A*p=A(yy)+j;
+ F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fpl(&yx,xl[i+1]);A u=yy;P(!utX,(A*)ed(x))yy=j==un?apd(u,aa0()):mut(u);
   asrt(Ar(yy)==1);p=A(yy)+j)
  xr;p)
 AA(dm1,A x=*a,y=a[1],z=a[2];P(y==cu0||ytT&&!yn,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*ZV);dex(z,app(z,b,n-2)))y=enla(y);P(yn>8,eln(n,a))

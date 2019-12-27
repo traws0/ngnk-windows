@@ -6,8 +6,8 @@ S O I mxl=16,mxc=128;enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba
 #define fm A(f)[3] //srcmap
 #define fc A(f)[4] //constants
 #define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
-#define hc(x)({I b=bc+fndpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
-S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==cv0&&Ak(f),L i=fndpl(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
+#define hc(x)({I b=bc+fpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
+S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==cv0&&Ak(f),L i=fpl(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
  P(ytS&&!Av(xx),hc(cv0);hc(cu0);hc(yR);hc(cV('.'));h(ba);h(4);1)
  P(yts||(ytX&&At(yx)==ts),$(yts,hc(a0()))E(F(yn-1,N(rhs(ya[yn-1-i])))h(bl);h(yn-1))
   L k=gs(yts?y:yx),i=fndl(fl,k);$(i>=0,lu[i]=An(fb);h(bm);h(i))E(hc(as(k));h(bM))h(Av(xx));1)
