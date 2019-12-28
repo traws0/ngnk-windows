@@ -26,7 +26,7 @@ S A pT(C*v)_(A x=N(pt(v));W(1,C c=*s;I i=Ci("'/\\[",c);P(i>3,x)s++;$(i>2,x=AO(s-
 S V pw()_(C c=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
 S A pe(A x,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;A u=pe(0,v);P(!u,$(x,xr)0);*v=0;u=a2(cu_out,u);$(x,u=a2(x,u))u)
  UH o=s-s0;C w=0;A y=pT(&w);P(!y,$(x,xr)0)P(y==cv_plc,x?x:y)P(!w,A z=pe(y,v);P(!x,z)Nx(z);*v?a3(cv_com,x,z):AO(o,a2(x,z)))
- A z=pe(0,v);P(!z,$(x,xr)yr;0)P(z==cv_plc,*v=1;x?AO(o,a3(y,x,z)):y)
+ A z=pe(0,v);P(!z,$(x,xr)yr;0)P(z==cv_plc,*v=1;!x?y:!ytu?AO(o,a3(y,x,z)):ep(x,y))
  *v&=y!=cv0;$(!x,y=v1(y))*v?a3(cv_com,x?AO(o,a3(y,x,cv_plc)):y,z):AO(o,x?a3(y,x,z):a2(y,z)))
 S A pb(A x,C e)_(W(1,C v=0;A y=Nx(pe(0,&v));$(y==cv_plc&&(!e||e=='}'),y=cu0)x=apv(x,&y);$(*s-';'&&*s-10,B)s++)P(*s-e,ep(x))s++;x)
 A1(prs,P(!xtC,et(x))s=s0=C(x=str0(x));A y=*s=='\\'?a1(a2(cu_cmd,aCz(s+1))):pb(a0(),0);!y?eso(x,s-s0),0:lam(0,x,shy(y),aS(0)))
