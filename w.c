@@ -17,9 +17,9 @@ S AX(eaca,A z,b[8];F(n,A y=a[i];$(yta,z=yx;B))zR;F(n,A y=b[i]=a[i];$(yta,P(!mtc_
 AX(eac,P(xtil,sld(x,a,n))
  C t[8];L m=-1;F(n,A y=a[i];P(yta,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytX?2+(Ar(y)>1):4;$(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))A b[8];F(n,A y=b[i]=a[i];$(t[i]==1,Ar(y)+=m)) //0:pkdatm,1:refatm,2:tX(r=1),3:tX(r>1),4:other
- A u=a0();F(m,Fj(n,A y=a[j];$(t[j]==2,b[j]=yai)$(t[j]==3,b[j]=mR(yai))$(t[j]>3,b[j]=get(y,i)))
-               A z=app(x,b,n);$(!z,ur;u=0;Fj(n,A y=a[j];$(t[j]==1,Ar(y)+=i+1-m)$(t[i]==2,mrn(n-i-1,ya+i+1)))B)u=apd(u,z))
- F(n,A y=a[i];$(t[i]==2,y=AN(0,y))yr)u)
+ A u=a0();F(m,Fj(n,A y=a[j];$(t[j]==2,b[j]=yai)$(t[j]>2,b[j]=get(y,i)))
+              A z=app(x,b,n);$(!z,ur;u=0;Fj(n,A y=a[j];$(t[j]==1,Ar(y)-=m-i-1)$(t[j]==2,mrn(m-i-1,ya+i+1)))B)u=apd(u,z))
+ F(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 S AX(cvg,P(n==2,A y=*a,u=a[1];P(ytil,F(gl(y),u=N(app(x,&u,1)))u)W(1,uR;A z=N2(y,u,app(y,&u,1));$(!tru(z),B)u=Ny(app(x,&u,1)))yr;u)
  P(n==1,A y=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));$(mtc_(u,y)||mtc_(u,z),B)zr;z=u)yr;zr;u)ern(n,a))
 AX(rdc,P(xtiIlL,dec(x,a,n))P(xtcC,join(x,a,n))P(Ak(x)<=1,cvg(x,a,n))
