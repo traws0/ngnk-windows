@@ -99,7 +99,7 @@ enum{tX,tC,tI,tL,tS,tD,tA,ta,tlx,tdx,tc,ti,tl,ts,to,tp,tq,tr,tu,tv,tw,tn};
 //t:type,v:verb,k:arity,o:offset,x:ptr,cils:value
 SI UC At(A x)_((UL)x>>56   )SI A AT(UC t,A x)_((A)((UL)t<<56|(UL)x<<8>>8))
 SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))SI I pkd(A x)_(xtc||xti||xt==tl||xts||xtu||xtv||xtw)
-SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==tlx?tL:t==tdx?tD:t>=tc&&t<to?t+tC-tc:t)SI UC t_nrm(UC t)_(t==tl?tlx:t)
+SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==tlx?tL:t==tdx?tD:t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)SI UC t_nrm(UC t)_(t==tl?tlx:t)
 SI UC Ak(A x)_((UL)x>>48&7 )SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);(A)(((UL)x&~( 7ull<<48))|(UL)k<<48))
 SI UC Av(A x)_((UL)x>>51&31)SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);(A)(((UL)x&~(31ull<<51))|(UL)v<<51))
 SI UC Ab(A x)_(C(x)[-16]   )SI A AB(UC b,A x)_(C(x)[-16]=b;x) //hdr: b.oorrrrnnnnnnnn
