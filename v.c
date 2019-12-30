@@ -21,7 +21,7 @@ A1(unq,P(!xtT,et(x))A u=atn(xt,0);I w=tz(xt);P(w==ZR,F(xn,fpa(&u,mR(xai)))xr;u)
                                              P(w==0,F(xn,fpc(&u,xci))xr;u)
                                              P(w==2,F(xn,fpi(&u,xii))xr;u)
                                              P(w==3,F(xn,fpl(&u,xli))xr;u)UR;0)
-S A2(fil,P(ytX||yta,eac(cV('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))P(yt-xt&&yt-t_lst(xt),et(x,y))amd(A_(yR,whr(nul(y)),cv0,x),4))
+S A2(fil,P(ytX||yta,eac(cV('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))P(yt-xt&&yt-t_lst(xt),et(x,y))amd(A_(yR,whr(nul(y)),av0,x),4))
 A2(xpt,P(xtt,fil(x,y))y=enla(y);P(xtaA||ytaA,en(x,y))$(xtX||xt-yt,x=blw(x);y=blw(y))A u=atn(xt,0);
  $(xtX,F(xn,A z=xai;I b=1;Fj(yn,$(mtc_(z,yaj),b=0;B))$(b,u=apd(u,zR)))u=sqz(u))
  E$(tz(xt)==0,F(xn,C v=xci;I b=1;Fj(yn,$(v==ycj,b=0;B))$(b,u=apv(u,&v))))
