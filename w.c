@@ -15,12 +15,11 @@ S AX(sld,P(n>1,ern(n,a))L k=gl_(x);x=*a;P(!xtT,et(x))P(k<=0,ed(x))A u=aX(max(0,x
 S L cfm(O A*a/*0*/,L n)_(L m=-1;F(n,A x=a[i];$(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,A z,b[8];F(n,A y=a[i];$(yta,z=yx;B))zR;F(n,A y=b[i]=a[i];$(yta,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))A u=eac(x,b,n);(u?aa:dex)(z,u))
 AX(eac,P(xtil,sld(x,a,n)) //0:pkdatm,1:refatm,2:tX(r=1),3:tX(r>1),4:other
- A b[8];C t[8];L m=-1;F(n,A y=a[i];P(yta,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytX?2+(Ar(y)>1):4;$(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
- P(m<0,app(x,a,n))
- F(n,A y=b[i]=a[i];$(t[i]==1,Ar(y)+=m))
- A u=a0();L j=0;
- W(j<m,F(n,A y=a[i];$(t[i]==2,b[i]=yaj)$(t[i]>2,b[i]=get(y,j)))
-       A z=app(x,b,n);$(!z,ur;u=0;F(n,A y=a[i];$(t[i]==1,Ar(y)-=m-j-1)$(t[i]==2,mrn(m-j-1,ya+j+1)))B)u=apd(u,z);j++)
+ A b[8];C t[8];L m=-1;F(n,A y=b[i]=a[i];P(yta,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytX?2+(Ar(y)>1):4;$(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
+ P(m<0,app(x,a,n))F(n,$(t[i]==1,Ar(a[i])+=m))A u=m?0:a0();
+ Fj(m,F(n,A y=a[i];$(t[i]==2,b[i]=yaj)$(t[i]>2,b[i]=get(y,j)))
+      A z=app(x,b,n);$(!z,ur;u=0;F(n,A y=a[i];$(t[i]==1,Ar(y)-=m-j-1)$(t[i]==2,mrn(m-j-1,ya+j+1)))B)
+      $(!j,u=sim(zt)?AN(0,atn(t_lst(zt),m)):a0())u=apd(u,z))
  F(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 S AX(cvg,P(n==2,A y=*a,u=a[1];P(ytil,F(gl(y),u=N(app(x,&u,1)))u)W(1,uR;A z=N2(y,u,app(y,&u,1));$(!tru(z),B)u=Ny(app(x,&u,1)))yr;u)
  P(n==1,A y=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));$(mtc_(u,y)||mtc_(u,z),B)zr;z=u)yr;zr;u)ern(n,a))
