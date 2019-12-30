@@ -56,6 +56,14 @@ k objs
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
  xc xl xd xa.. - content of x as a char*,long*,double*,A*..
  xci xlj.. - i-th or j-th typed element: xc[i],xl[j]..
+calling conventions
+ A0 A1 A2 A3 - the types of functions with 0..3 args, accepting and returning type A.
+  all args are consumed (their refcounts are decremented or they are returned as result).
+  macros: A0(f,body) A1(f,body).. define such fns with args names x,y,z
+ AA - like above but accepts a ptr to A and length; arg names: a and n
+ AX - like AA but also accepts a separate arg called x, which is *not* consumed
+ fns with ugly names (eg trailing "_" or uppercase) might not follow the conventions
+ /*0*/ after an arg means "not consumed", /*1*/ means "consumed"
 errors
  error-reporting fns return null after consuming their args:
   err("msg",x,y,z) - generic error. x,y,z are optional
