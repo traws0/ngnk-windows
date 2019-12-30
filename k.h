@@ -147,14 +147,14 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
 #undef h
 
 #define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))
-#define cu(i) tvk(tu,i,1)
-#define cv(i) tvk(tv,i,2)
-#define cw(i) tvk(tw,i,1)
+#define au(i) tvk(tu,i,1)
+#define av(i) tvk(tv,i,2)
+#define aw(i) tvk(tw,i,1)
 #define vi(c) (c==':'?0:c=='+'?1:c=='-'?2:c=='*'?3:c=='%'?4:c=='!'?5:c=='&'?6:c=='|'?7:c=='<'?8:c=='>'?9:c=='='?10:c=='~'?11:c==','?12:\
  c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:-1)
-#define cU(c) cu(vi(c))
-#define cV(c) cv(vi(c))
-S O A cu0=cu(0),cv0=cv(0),cu_out=cu(28),cu_cmd=cu(31),cv_plc=cv(29),cv_mkl=cv(30),cv_com=cv(31);
+#define cU(c) au(vi(c))
+#define cV(c) av(vi(c))
+S O A cu0=au(0),cv0=av(0),cu_out=au(28),cu_cmd=au(31),cv_plc=av(29),cv_mkl=av(30),cv_com=av(31);
 #define _0N  (1ull<<63)
 #define _0W  (~_0N)
 #define _0Ni (1<<31)

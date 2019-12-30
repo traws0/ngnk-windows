@@ -4,7 +4,7 @@ A1(sqr,P(xtaAX,ea1(sqr,x))x=gD(x);P(xtt,ad(__builtin_sqrt(gd(x))))A u=ax(x);F(xn
 S C lwc(C c)_(c+32*C3('A',c,'Z'))S L fl1(D d)_(d<0?(L)d-(d<(L)d):(L)d)A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))
 A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=ax(x);F(un,uci=lwc(xci))u)P(xtaAX,ea1(flr,x))
  x=N(gD(x));P(xtt,al(fl1(gd(x))))xr;A u=aL(xn);F(xn,uli=fl1(xdi))u)
-S A pen2(A x,A y,I f)_(P(xta&&yta,A u=gkv(&y);amd(A_(x,y,cv(f),u),4))P(xtaAX||ytaAX,eac(cv(f),A_(x,y),2))
+S A pen2(A x,A y,I f)_(P(xta&&yta,A u=gkv(&y);amd(A_(x,y,av(f),u),4))P(xtaAX||ytaAX,eac(av(f),A_(x,y),2))
  I d=xtdD||ytdD,k=xtT<<1|ytT;
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));
  P(k==0,P(xtdD,D a=gd(x),b=gd(y),r;arD(f,1,r=);f<8?ad(r):al(d2l(r)))

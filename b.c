@@ -25,8 +25,8 @@ A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(cu0);C o=0;F(16,lu[i]=
 
 S A sp0[0x10000],*sp=sp0+ZZ(sp0),*loc;S C*ip;
 S A vm_(A f/*0*/)_(W(1,UC b=*ip++;$(b>=bc,*--sp=mR(A(fc)[b&(mxc-1)]))
- E$(b>=bm,$(b==bm,A*p=loc-*ip++;A y=*sp++;*sp=N(ap2(mR(*p=Ny(dm1(A_(*p,yR,cv(*ip++),*sp),4))),y)))
-         E$(b==bM,A x=*sp++;    A y=*sp++;*sp=N(ap2(      Ny(dmd(A_(x ,yR,cv(*ip++),*sp),4)) ,y)))
+ E$(b>=bm,$(b==bm,A*p=loc-*ip++;A y=*sp++;*sp=N(ap2(mR(*p=Ny(dm1(A_(*p,yR,av(*ip++),*sp),4))),y)))
+         E$(b==bM,A x=*sp++;    A y=*sp++;*sp=N(ap2(      Ny(dmd(A_(x ,yR,av(*ip++),*sp),4)) ,y)))
          E$(b==bl,UC n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n-1;*sp=x)
          E$(b==bL,UC n=*ip++;A x=*sp;P(!xtt&&len_(x)-n,el())F(n,*--sp=get(x,n-1-i)))
          E$(b==ba||b==bP,L n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))

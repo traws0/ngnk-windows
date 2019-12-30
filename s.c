@@ -32,6 +32,6 @@ A1(kst,
  P(xtq,K(",/`k'.:",x))
  P(xtp,A z=xx;P(xn==3&&(ztv||ztr)&&xy-cv_plc&&xz==cv_plc,dex(x,cat(kl(mR(xy)),kst(zR))))
        K("{x:`k'. x;@[0x3b/x;#*x;0x5b],0x5d}",x))
- P(xtr,cat(ka(fir(AT(tX,x))),kst(cw(Av(x)))))
+ P(xtr,cat(ka(fir(AT(tX,x))),kst(aw(Av(x)))))
  xr;aCz("???"))
 A1(out,K("{$[x~(::);x;((@())=@x)&1<#x;1(0x28,0x0a20/`k'x),0x290a;1`k[x],0x0a];x}",x))
