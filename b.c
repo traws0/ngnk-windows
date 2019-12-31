@@ -2,8 +2,8 @@
 S O I mxl=16,mxc=128;enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br,bc=0x80,bC=0xff};S A f;S I lu[16],rhs(A);
 #define fs A(f)[0] //src
 #define fb A(f)[1] //bytecode
-#define fl A(f)[2] //local symbols
-#define fm A(f)[3] //srcmap
+#define fm A(f)[2] //srcmap
+#define fl A(f)[3] //local symbols
 #define fc A(f)[4] //constants
 #define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
 #define hc(x)({I b=bc+fpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
