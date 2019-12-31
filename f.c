@@ -10,6 +10,6 @@ S L fndc(A x,C v)_(asrt(tz(xt)==0);F(xn,P(xci==v,i))_0N)     L fpc(A*p,C v)_(A x
   L fndi(A x,I v)_(asrt(tz(xt)==2);F(xn,P(xii==v,i))_0N)     L fpi(A*p,I v)_(A x=*p;L n=xn;F(n,P(xii==v,i))*p=apv(x,&v);n)
   L fndl(A x,L v)_(asrt(tz(xt)==3);F(xn,P(xli==v,i))_0N)     L fpl(A*p,L v)_(A x=*p;L n=xn;F(n,P(xli==v,i))*p=apv(x,&v);n)
 A2(fnd,P(xtt,P(xtl,rnd(x,y))P(xts,C*s=C(symstr(gs(x)));*s=='j'&&!s[1]?json(y):ed(y))et(x,y))P(xta,A z=gkv(&x);idx(x,fnd(z,y)))P(xtA,en(x,y))
- P(ytt,fir(fnd(x,enl(y))))P(!xtX&&ytX,ear(cV('?'),A_(x,y),2))P(!xtX&&yt-xt,xr;rsh(len(y),mR(cn[tl])))
+ P(ytt,fir(fnd(x,enl(y))))P(!xtX&&ytX,ear(cv('?'),A_(x,y),2))P(!xtX&&yt-xt,xr;rsh(len(y),mR(cn[tl])))
  A u=aL(yn);I w=tz(xt);P(ref(x),F(un,A z=get(y,i);uli=fnda(x,z);zr)xr;yr;u)
  P(w==0,F(un,uli=fndc(x,yci))xr;yr;u)P(w==2,F(un,uli=fndc(x,yii))xr;yr;u)P(w==3,F(un,uli=fndl(x,yli))xr;yr;u)en(x,y,u))

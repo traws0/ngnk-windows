@@ -15,12 +15,12 @@ S A2(idx_/*x0y1*/,asrt(xtT||xtaA);P(y==av_plc,flp(xR))P(ytX,eac(x,&y,1))P(yta,y=
  L h=gl_(cn[xt]);yr;P(w==0,F(un,L j=yli;uci=0<=j&&j<xn?xcj:h)u)
                     P(w==2,F(un,L j=yli;uii=0<=j&&j<xn?xij:h)u)
                     P(w==3,F(un,L j=yli;uli=0<=j&&j<xn?xlj:h)u)en(y,u))
-AX(app,P(xtT,P(xtX,L c=1;F(n,A y=a[i];L c0=c;c=ytt;x=N(!c0?eal(cV('@'),A_(x,y),2):i?idx(x,y):idx_(x,y)))x)n==1?idx_(x,*a):ein(n,a))
+AX(app,P(xtT,P(xtX,L c=1;F(n,A y=a[i];L c0=c;c=ytt;x=N(!c0?eal(cv('@'),A_(x,y),2):i?idx(x,y):idx_(x,y)))x)n==1?idx_(x,*a):ein(n,a))
  P(xts,C*s=C(symstr(gs(x))),c=*s;A y=*a;s[1]?enn(n,a):n>1?ern(n,a):c=='j'?json(y):c=='k'?kst(y):c=='p'?prs(y):c=='t'?dex(y,al(time())):
   c=='x'?sys(y):c=='e'?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));P(n==1,y)dex(y,app(y,a+1,n-1)))P(xtA,P(n>1,ern(n,a))A y=*a;P(ytil,idx_(x,y))app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;$(ytc,y=enl(y))E(P(!ytC,et(y)))write(gl_(x),yc,yn);y)
- P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)cf[32+Av(x)])(*a,a[1]):x==cV('@')?amd(a,n):x==cV('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)cf[64+Av(x)])(xx,a,n))
+ P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)cf[32+Av(x)])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)cf[64+Av(x)])(xx,a,n))
  P(n>Ak(x),ern(n,a))P(xtu,((A1*)cf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
  P(xtp,L m=xn-1,j=0;A b[m+n];F(xn-1,b[i]=xa[i+1]==av_plc&&j<n?a[j++]:mR(xa[i+1]))W(j<n,b[m++]=a[j++])app(xx,b,m))
  P(xtq,app(xx,&(A){N(app(xy,a,n))},1))etn(n,a))
@@ -41,7 +41,7 @@ AA(amd,asrt(n>2);A x=*a,y=a[1],z=a[2];P(xtt,etn(n,a))P(n==3&&!fun(z),amd(A_(x,y,
   E$(xtI,arI(f,yn,L j=yii;cki(j,xn,x)I a=xij;I b=ui[d*i];xij=))
   E$(xtL,arL(f,yn,L j=yli;cki(j,xn,x)L a=xlj;L b=ul[d*i];xlj=))x)
  P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];L d=utT;u=enla(u);yr;ur;$(d&&yn-un,el(x))F(yn,L j=yli;cki(j,xn,x)xcj=uc[d*i])x)
- rdc(cV('@'),a,n))
+ rdc(cv('@'),a,n))
 S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)==tX);L j=fpl(&yx,*xl);$(j==An(yy),yy=apd(yy,xn>1?aa0():au0))A*p=A(yy)+j;
  F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fpl(&yx,xl[i+1]);A u=yy;P(!utX,(A*)ed(x))yy=j==un?apd(u,aa0()):mut(u);
   asrt(Ar(yy)==1);p=A(yy)+j)

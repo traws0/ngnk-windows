@@ -152,8 +152,8 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
 #define aw(i) tvk(tw,i,1)
 #define vi(c) (c==':'?0:c=='+'?1:c=='-'?2:c=='*'?3:c=='%'?4:c=='!'?5:c=='&'?6:c=='|'?7:c=='<'?8:c=='>'?9:c=='='?10:c=='~'?11:c==','?12:\
  c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:20+c-'0')
-#define cU(c) au(vi(c))
-#define cV(c) av(vi(c))
+#define cu(c) au(vi(c))
+#define cv(c) av(vi(c))
 S O A au0=au(0),av0=av(0),au_out=au(28),au_cmd=au(31),av_plc=av(29),av_mkl=av(30),av_com=av(31);
 #define _0N  (1ull<<63)
 #define _0W  (~_0N)
