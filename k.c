@@ -45,9 +45,7 @@ S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)
  F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fpl(&yx,xl[i+1]);A u=yy;P(!utX,(A*)ed(x))yy=j==un?apd(u,aa0()):mut(u);
   asrt(Ar(yy)==1);p=A(yy)+j)
  xr;p)
-AA(dm1,A x=*a,y=a[1],z=a[2];
- P(!len_(y)||y==au0,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*ZV);dex(z,app(z,b,n-2)))
- P(len_(y)==1,A b[8];mc(b,a,n*ZV);b[1]=fir(y);amd(b,n))
- K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))
+AA(dm1,A x=*a,y=a[1],z=a[2];L m=len_(y);P(!m||y==au0,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*ZV);dex(z,app(z,b,n-2)))
+ P(m==1,A b[8];mc(b,a,n*ZV);b[1]=fir(y);amd(b,n))P(n!=4,enn(n,a))K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))
 AA(dmd,A x=*a,y=a[1],z=a[2];P(n==3&&fun(x),try(x,y,z))P(n==3&&!fun(z),dmd(A_(x,y,av0,z),4))
  P(xtsS,A*p=pth(x);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*ZV);*p=mR(N(dm1(b,n))))dm1(a,n))
