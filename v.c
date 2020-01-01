@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(sqz,P(!xtX||!xn,x)A y=xx;UC t=t_nrm(yt);P(!sim(y)&&t-ta,x)L n=xn;F(n,A y=xai;P(t-t_nrm(yt),x))
  P(t==ta,A z=yx;F(n,A y=xai;P(!mtc_(yx,z),x))aA(zR,flp(ea1(val,x))))
  t=t_lst(t);A u=atn(t,n);

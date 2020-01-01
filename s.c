@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 S A sl(L v)_(C b[20],*s=b;
  $(v==_0N,*s++='0';*s++='N')
  E($(v<0,v=-v;*s++='-')$(v==_0W,*s++='0';*s++='W')E(UL l=0,t=10;W(t<=(UL)v,t*=10;l++)s+=l;F(l+1,UL k=(UL)v/10,r=(UL)v%10;*s--='0'+r;v=k)s+=l+2))
