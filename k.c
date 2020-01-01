@@ -1,8 +1,9 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-S O L cil[]={_0N,0,0,1,1,_0W,_0W,-_0W,-_0W,_0W,_0N};S O I cii[]={_0Ni,0,0,1,1,_0Wi,_0Wi,-_0Wi,-_0Wi,_0Wi,_0Ni};
-S O D cid[]={_0n,0,0,1,1,_0w,_0w,-_0w,-_0w,_0w,_0n};S A1(__1,en(x))S A2(__2,en(x,y))S A1(sam,x)
+S O L cil[]={_0N ,0,0,1,1,_0W ,_0W ,-_0W ,-_0W ,_0W ,_0N };
+S O I cii[]={_0Ni,0,0,1,1,_0Wi,_0Wi,-_0Wi,-_0Wi,_0Wi,_0Ni};
+S O D cid[]={_0n ,0,0,1,1,_0w ,_0w ,-_0w ,-_0w ,_0w ,_0n };S A1(__1,en(x))S A2(__2,en(x,y))
 O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5','6','7','8','9','A','B'};
-O V*cf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,__1,__1,__1,__1,out,las,__1,cmd,
+O V*cf[]={__1,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,__1,__1,__1,__1,out,las,__1,cmd,
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,__2,__2,__2,__2,__2,__2,__2,__2,__2,com,
           eac,rdc,scn,eap,ear,eal}; // ' / \ ': /: \:
 A2(id_/*x0y0*/,!ari(x)?a0():ytdD?ad(cid[Av(x)]):ytiI?ai(cii[Av(x)]):al(cil[Av(x)]))A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y))
@@ -47,6 +48,6 @@ S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)
   asrt(Ar(yy)==1);p=A(yy)+j)
  xr;p)
 AA(dm1,A x=*a,y=a[1],z=a[2];L m=len_(y);P(!m||y==au0,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*ZV);dex(z,app(z,b,n-2)))
- P(m==1,A b[8];mc(b,a,n*ZV);b[1]=fir(y);amd(b,n))P(n!=4,enn(n,a))K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))
+ P(m==1,A b[8];mc(b,a,n*ZV);b[1]=fir(y);amd(b,n))P(n-4,enn(n,a))K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))
 AA(dmd,A x=*a,y=a[1],z=a[2];P(n==3&&fun(x),try(x,y,z))P(n==3&&!fun(z),dmd(A_(x,y,av0,z),4))
  P(xtsS,A*p=pth(x);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*ZV);*p=mR(N(dm1(b,n))))dm1(a,n))
