@@ -1,6 +1,6 @@
 1"ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE\n";
 h:(": assign   RETURN    '  each|slidingwin"
-   "+ add      flip      /  fold|join |dec   / comment"
+   "+ add      transpose /  fold|join |dec   / comment"
    "- subtract negate    \\  scan|split|enc   \\ exit"
    "* multiply first     ': eachprior        \\cmd args"
    "% divide   sqrt      /: eachright        \\t:n x  time"
