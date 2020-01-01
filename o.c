@@ -1,5 +1,5 @@
 #include"k.h" // ngn/k, (c) 2019 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-L mtc_(A x/*0*/,A y/*0*/)_(P(x==y,1)P(xtt&&ytt,sim(x)&&sim(y)&&t_nrm(xt)==t_nrm(yt)&&gl_(x)==gl_(y))P(xt-yt||pkd(x)||xn-yn,0)
+I mtc_(A x/*0*/,A y/*0*/)_(P(x==y,1)P(xtt&&ytt,sim(x)&&sim(y)&&t_nrm(xt)==t_nrm(yt)&&gl_(x)==gl_(y))P(xt-yt||pkd(x)||xn-yn,0)
  P(!ref(x),!memcmp(xc,yc,xn*tZ(xt)))F(xn,P(!mtc_(xai,yai),0))1)
 S I cmp_(A x/*0*/,A y/*0*/)_(P(x==y,0)I d=xt-yt;P(d,d)P(pkd(x),x>y?1:-1)L n=min(xn,yn);I r=(xn>yn)-(xn<yn);
  P(ref(x)   ,F(n,I d=cmp_(xai,yai);P(d,d))r)
@@ -18,4 +18,4 @@ S A grd(A x/*1*/,I d)_(P(xtX,d=d?-1:1;A*a=xa,u=til(al(xn));L*l=ul,n=xn,i=n/2;W(i
  P(xtC||xtI,grd(N(gL(x)),d))P(xtS,grd(N(ea1(str,x)),d))P(xta,A y=gkv(&x);idx(x,N(grd(y,d))))et(x))
 A1(grp,P(xtt,xtl?K("{(2#x)#1,&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();UC w=tz(xt);
  F(xn,L j=w==ZR?fpa(&y,mR(xai)):!w?fpc(&y,xci):w==2?fpi(&y,xii):w==3?fpl(&y,xli):0;$(j==un,u=apd(u,aL(0)))uaj=apv(uaj,&i))xr;aa(y,u))
-A2(mtc,L r=mtc_(x,y);xr;yr;al(r))A1(asc,xts||xti?hop(x):grd(x,0))A1(dsc,xti?hcl(x):grd(x,1))
+A2(mtc,I r=mtc_(x,y);xr;yr;ai(r))A1(asc,xts||xti?hop(x):grd(x,0))A1(dsc,xti?hcl(x):grd(x,1))
