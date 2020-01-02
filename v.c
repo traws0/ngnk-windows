@@ -22,7 +22,7 @@ A1(unq,P(!xtT,et(x))A u=atn(xt,0);I w=tz(xt);P(w==ZR,F(xn,fpa(&u,mR(xai)))xr;u)
                                              P(w==0,F(xn,fpc(&u,xci))xr;u)
                                              P(w==2,F(xn,fpi(&u,xii))xr;u)
                                              P(w==3,F(xn,fpl(&u,xli))xr;u)UR;0)
-S A2(fil,P(ytX||yta,eac(cv('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))P(yt-xt&&yt-t_lst(xt),et(x,y))amd(A_(yR,whr(nul(y)),av0,x),4))
+S A2(fil,P(ytX||yta,eac(cv('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))K("{@[y;&^y;:;x]}",x,y))
 A2(xpt,P(xtt,fil(x,y))P(xtaA||ytaA,en(x,y))y=enla(y);$(xtX,y=blw(y))K("{x@&^y?x}",x,y))
 A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,n*w);$(t==tX,mRa(u);u=sqz(u))u)
 A2(cut,
