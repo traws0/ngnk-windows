@@ -1,12 +1,11 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-S O L cil[]={_0N ,0,0,1,1,_0W ,_0W ,-_0W ,-_0W ,_0W ,_0N };
-S O I cii[]={_0Ni,0,0,1,1,_0Wi,_0Wi,-_0Wi,-_0Wi,_0Wi,_0Ni};
-S O D cid[]={_0n ,0,0,1,1,_0w ,_0w ,-_0w ,-_0w ,_0w ,_0n };S A1(__1,en(x))S A2(__2,en(x,y))S A1(sam,x)
+S A1(__1,en(x))S A2(__2,en(x,y))S A1(sam,x)
 O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5','6','7','8','9','A','B'};
 O V*cf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,__1,__1,__1,__1,out,las,__1,cmd,
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,__2,__2,__2,__2,__2,__2,__2,__2,__2,com,
           eac,rdc,scn,eap,ear,eal}; // ' / \ ': /: \:
-A2(id_/*x0y0*/,!ari(x)?a0():ytdD?ad(cid[Av(x)]):ytiI?ai(cii[Av(x)]):al(cil[Av(x)]))A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y))
+A2(id_/*x0y0*/,S O C t[]={4,0,0,1,1,2,2,3,3,2,4};ari(x)?mR(ci[ytdD?0:ytiI?1:2][t[Av(x)]]):a0())
+A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y))
 A2(com,AK(Ak(y),AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))UC k=max(n,Ak(x));F(n,k-=a[i]!=av_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
 SN A getA(A x/*0*/,L i)_(asrt(xtA);A y=xy,u=a0();Fj(yn,u=apd(u,get(yaj,i)))aa(mR(xx),u))
 A get(A x/*0*/,L i)_(xtX?mR(xai):xtI?ai(xii):xtL?al(xli):xtS?as(xli):xtC?ac(xci):xtD?ad(xdi):xta?get(xy,i):xtA?getA(x,i):xR)
