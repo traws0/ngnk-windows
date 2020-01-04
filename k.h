@@ -44,7 +44,7 @@
 #endif
 
 TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
-TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,UC),AX(A,O A*,UC);
+TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define V(x) ((V*)((UL)(x)<<16>>16))
 #define C(x) ((C*)V(x))
 #define H(x) ((H*)V(x))
@@ -53,12 +53,12 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,UC),AX(A,O A*,UC);
 #define D(x) ((D*)V(x))
 #define A(x) ((A*)V(x))
 #define A_(a...) (A[]){a}
-#define A0(f,b...) A f()              _(b)
-#define A1(f,b...) A f(A x)           _(b)
-#define A2(f,b...) A f(A x,A y)       _(b)
-#define A3(f,b...) A f(A x,A y,A z)   _(b)
-#define AA(f,b...) A f(O A*a,UC n)    _(b)
-#define AX(f,b...) A f(A x,O A*a,UC n)_(b)
+#define A0(f,b...) A f()             _(b)
+#define A1(f,b...) A f(A x)          _(b)
+#define A2(f,b...) A f(A x,A y)      _(b)
+#define A3(f,b...) A f(A x,A y,A z)  _(b)
+#define AA(f,b...) A f(O A*a,I n)    _(b)
+#define AX(f,b...) A f(A x,O A*a,I n)_(b)
 
 #define sc(f,a...  ) ({L r;asm volatile("syscall":"=a"(r):"0"(SYS_##f)a:"cc","rcx","r11","memory");r;})
 #define sc1(f,x    ) sc(f,,"D"(x)              )
