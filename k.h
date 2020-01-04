@@ -86,20 +86,19 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 SI L d2l(D v)_(*(L*)(V*)&v)SI L llabs(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<=y&&y<=z)
 SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(C3('0',c,'9'))
 
-//   () "" ,0 ,l ,` ,d +!  ! 0W  0. "a" 0 0j `  {} 1+ ++ +/ +: +  /
-enum{tX,tC,tI,tL,tS,tD,tA,ta,tlx,td,tc,ti,tl,ts,to,tp,tq,tr,tu,tv,tw,tn};
-//tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tlx,td
+//   () "" ,0 ,l ,d ,` +!  ! "a" 0 0j 0. `  {} 1+ ++ +/ +: +  /
+enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};
+//tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
 //tttttttt................................................cccccccc tc
 //tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
-//tttttttt........................llllllllllllllllllllllllllllllll tl
 //tttttttt........oooooooooooooooossssssssssssssssssssssssssssssss ts
 //tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 to,tp,tq
 //tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tr
 //ttttttttvvvvvkkk................................................ tu,tv,tw
 //t:type,v:verb,k:arity,o:offset,x:ptr,cils:value
 SI UC At(A x)_((UL)x>>56   )SI A AT(UC t,A x)_((A)((UL)t<<56|(UL)x<<8>>8))
-SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))SI I pkd(A x)_(xtc||xti||xt==tl||xts||xtu||xtv||xtw)
-SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==tlx?tL:t==td?tD:t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)SI UC t_nrm(UC t)_(t==tl?tlx:t)
+SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))SI I pkd(A x)_(xtc||xti||xts||xtu||xtv||xtw)
+SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)SI UC t_nrm(UC t)_(t)
 SI UC Ak(A x)_((UL)x>>48&7 )SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);(A)(((UL)x&~( 7ull<<48))|(UL)k<<48))
 SI UC Av(A x)_((UL)x>>51&31)SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);(A)(((UL)x&~(31ull<<51))|(UL)v<<51))
 SI UC Ab(A x)_(C(x)[-16]   )SI A AB(UC b,A x)_(C(x)[-16]=b;x) //hdr: b.oorrrrnnnnnnnn
@@ -131,7 +130,7 @@ SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I gs(A x)_(asrt(xts);(I)x)
 SI A aI(L n)_(atn(tI,n))SI A ai(I v)_(pck(ti,v))SI I gi(A x)_(asrt(xti);(I)x)
-SI A aL(L n)_(atn(tL,n))SI A al(L v)_(v==(I)v?pck(tl,v):atv(tlx,v))SI L gl(A x)_(pkd(x)?(I)x:(xr,*xl))SI L gl_(A x)_(pkd(x)?(I)x:*xl)
+SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl(A x)_(!pkd(x)?xr,*xl:(I)x)SI L gl_(A x)_(pkd(x)?(I)x:*xl)
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd(A x)_(D v=*xd;xr;v)SI D gd_(A x)_(*xd)
 
 #define err_(x,y,z,u,n,...) n
