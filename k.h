@@ -118,7 +118,7 @@ SI UC tZ(UC t)_(t==tC?1:t==tI?4:reft(t)?ZV:8)
 A1 a1,asc,ax,blw,cmd,cpl,dsc,enl,enla,fir,flp,flr,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,mr,mRa,mut,neg,not,nul,out,prs,rev,sqr,sys,sqz,
    str,str0,til,typ,u0c,u1c,unq,val,whr;
 A2 a2,aa,aA,add,ap1,ap2,apd,cat,com,cst,cut,dex,dvd,eql,fnd,id_,gtn,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
-A0 aa0;A3 a3,try;AA amd,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;XT A syml,glb;XT L mu;
+A0 aa0;A3 a3,try;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;XT A syml,glb;XT L mu;
 A err0(O C*),err1(O C*,A),err2(O C*,A,A),err3(O C*,A,A,A),errn(O C*,I,O A*),ea1(A1,A),apv(A,O V*),apc(A,C),catc(A,O C*,L),room(A,L),
   get(A,L),getr(A,L),atn(UC,L),atnv(UC,L,O V*),aCn(O C*,L),aCm(O C*,O C*),aCz(O C*),gkv(A*),pS(C**);
 V mrn(L,O A*),*mc(V*,O V*,L),mz(V*,L);
