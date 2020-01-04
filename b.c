@@ -7,12 +7,12 @@ S O I mxl=16,mxc=128;enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba
 #define fc A(f)[4] //constants
 #define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
 #define hc(x)({I b=bc+fpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
-S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==av0&&Ak(f),L i=fpl(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
+S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==av0&&Ak(f),L i=fpi(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
  P(ytS&&!Av(xx),hc(av0);hc(au0);hc(yR);hc(cv('.'));h(ba);h(4);1)
  P(yts||(ytX&&At(yx)==ts),$(yts,hc(a0()))E(F(yn-1,N(rhs(ya[yn-1-i])))h(bl);h(yn-1))
-  L k=gs(yts?y:yx),i=fndl(fl,k);$(i>=0,lu[i]=An(fb);h(bm);h(i))E(hc(as(k));h(bM))h(Av(xx));1)
+  A k=gs(yts?y:yx);L i=fndi(fl,k);$(i>=0,lu[i]=An(fb);h(bm);h(i))E(hc(as(k));h(bM))h(Av(xx));1)
  P(ytX&&yx==av_mkl,h(bL);h(yn-1);F(yn-1,N(lhs(x,ya[i+1]));h(bp))1)en();eso(mR(fs),o);0)
-S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndl(fl,gs(x));P(i>=0,lu[i]=An(fb);h(bg|i);1))P(xtS&&xn==1,hc(as(*xl));1)
+S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndi(fl,gs(x));P(i>=0,lu[i]=An(fb);h(bg|i);1))P(xtS&&xn==1,hc(as(*xl));1)
  P(xtsS,hc(xR);h(bu|vi('.'));1)P(!xtX,hc(x==av_plc?au0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
  P((utu||u==av0)&&n==3,N(rhs(xz));N(lhs(x,xy)))
  P(u==cv('$')&&n>3,UC d[n];A*a=&xy;n--;F(n&~1,N(rhs(a[i]));h(i&1?bj:bz);d[i]=An(fb);h(0))N(rhs(n&1?a[n-1]:au0));

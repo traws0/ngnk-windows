@@ -112,8 +112,8 @@ SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x
 #define ZV Z(V*)
 #define ZA 16
 #define ZR 67 //ref
-SI UC tz(UC t)_(t==tC?0:t==tI?2:reft(t)?ZR:3)
-SI UC tZ(UC t)_(t==tC?1:t==tI?4:reft(t)?ZV:8)
+SI UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3)
+SI UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8)
 
 A1 a1,asc,ax,blw,cmd,cpl,dsc,enl,enla,fir,flp,flr,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,mr,mRa,mut,neg,not,nul,out,prs,rev,sqr,sys,sqz,
    str,str0,til,typ,u0c,u1c,unq,val,whr;
@@ -123,9 +123,9 @@ A err0(O C*),err1(O C*,A),err2(O C*,A,A),err3(O C*,A,A,A),errn(O C*,I,O A*),ea1(
   get(A,L),getr(A,L),atn(UC,L),atnv(UC,L,O V*),aCn(O C*,L),aCm(O C*,O C*),aCz(O C*),gkv(A*),pS(C**);
 V mrn(L,O A*),*mc(V*,O V*,L),mz(V*,L);
 I Ci(O C*,C),epr(),eso(A,L),memcmp(O V*,O V*,L),mtc_(A,A),sym(A);
-L strlen(O C*),len_(A),fndl(A,L),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
+L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
 
-SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(L i)_(A(syml)[i])
+SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i])
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)V(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)

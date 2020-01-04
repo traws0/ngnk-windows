@@ -12,4 +12,4 @@ S L fndc(A x,C v)_(asrt(tz(xt)==0);F(xn,P(xci==v,i))_0N)     L fpc(A*p,C v)_(A x
 A2(fnd,P(xtt,P(xtl,rnd(x,y))P(xts,C*s=C(symstr(gs(x)));*s=='j'&&!s[1]?json(y):ed(y))et(x,y))P(xta,A z=gkv(&x);idx(x,fnd(z,y)))P(xtA,en(x,y))
  P(ytt,fir(fnd(x,enl(y))))P(!xtX&&ytX,ear(cv('?'),A_(x,y),2))P(!xtX&&yt-xt,xr;rsh(len(y),mR(cn[tl])))
  A u=aL(yn);I w=tz(xt);P(ref(x),F(un,A z=get(y,i);uli=fnda(x,z);zr)xr;yr;u)
- P(w==0,F(un,uli=fndc(x,yci))xr;yr;u)P(w==2,F(un,uli=fndc(x,yii))xr;yr;u)P(w==3,F(un,uli=fndl(x,yli))xr;yr;u)en(x,y,u))
+ P(w==0,F(un,uli=fndc(x,yci))xr;yr;u)P(w==2,F(un,uli=fndi(x,yii))xr;yr;u)P(w==3,F(un,uli=fndl(x,yli))xr;yr;u)en(x,y,u))
