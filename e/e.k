@@ -150,9 +150,9 @@ P 79;a:?.''0:"i/p079_keylog.txt"
      e:?,/2''a /edges of a graph
      10/|{?x,d@&~+/'d=\:*'{2=#x}#e^\:x}/!0 /topological sorting, and the code turns out to be only 8 digits
 P 80;+/{$[x=r*r:_%x;0;+/100#sqrt@(10\x),&200]}'1+!100
-P 81;m:-2!0W;*|*|{x&a+(m,'-1_'x)&m,-1_x}/+\+\'a:.''","\'0:"i/p081_matrix.txt"
-P 82;m:-2!0W;&/*|+{x&a+(1_x,m)&(m,-1_x)&m,'-1_'x}/+\'a:.''","\'0:"i/p082_matrix.txt"
-P 83;m:-2!0W;*|*|{x&a+&/(m,-1_x;1_x,m;m,'-1_'x;1_'x,'m)}/+\+\'a:.''","\'0:"i/p083_matrix.txt"
+P 81;m:-2!0N-1;*|*|{x&a+(m,'-1_'x)&m,-1_x}/+\+\'a:.''","\'0:"i/p081_matrix.txt"
+P 82;m:-2!0N-1;&/*|+{x&a+(1_x,m)&(m,-1_x)&m,'-1_'x}/+\'a:.''","\'0:"i/p082_matrix.txt"
+P 83;m:-2!0N-1;*|*|{x&a+&/(m,-1_x;1_x,m;m,'-1_'x;1_'x,'m)}/+\+\'a:.''","\'0:"i/p083_matrix.txt"
 P 84;n:200000;j:0 10 11 24 39 5;c:&40;p:0;m:0 /n:nr of moves to simulate, j:GO,JAIL,C1,E3,H2,R1, c:counters, p:position, m:consecutive doubles
      f:{c[p]+:1;d:1+2?4;m+:1;m*:=/d;p::(#c)!p+/d
         $[(p=30)|m>2;p::10                    /if on G2J or got 3 consecutive doubles, go to JAIL
@@ -169,7 +169,7 @@ P 85;*/2#,/&'a=&/&/a|:-a:2000000-t*\:t:-2!i*1+i:!2000
 P 86;c:0;{c<1000000}{x{c+:$[~a=r*r:_%a:(y*y)+x*x;0;y>x;1+x--2!1+y;-2!y];}'3_!1+2*x+:1;x}/2
 P 87;+/@[&n;;1]f#,/a+/:f#,/b+\:f#{x*(#x)#p}b:f#{x*(#x)#p}a:(f:n>)#p*p:primes 1+_%n:50000000
 P 88;a:,/{,/x,/:'(*'|'x)_'!'1+(-*/'x)!'2*L}\,'2_!2*L:12000 /all factorisations up to 2L
-     +/?2_@[0,L#0W;k*(L+1)>k:{(#x)+(*/x)-+/x}'a;&;*/'a]
+     +/?2_@[0,L#0N-1;k*(L+1)>k:{(#x)+(*/x)-+/x}'a;&;*/'a]
 P 89;r:(,(!10)#'"M"),($`CDM`XLC`IVX)@\:(!0;0;0 0;0 0 0;0 1;1;1 0;1 0 0;1 0 0 0;0 2)
      +/{(#x)-#,/r@'(4#10)\+/a*1-2*<':a:1 5 10 50 100 500 1000"IVXLCDM"?|x}'0:"i/p089_roman.txt"
 P 90;sq:(+(f:{x+3*x=6})@10\i*i:1+!9)
