@@ -31,7 +31,7 @@ A2(cut,
  $(xtL,L n=xn,l=yn;x=apv(x,&l);L p,q=*xl;F(n,p=q;q=xl[i+1];P(p>q,ed(x,y))P(p<0||q>m,el(x,y)))q=*xl;u=aX(n);F(n,p=q;q=xl[i+1];uai=slc_(y,p,q-p)))
  E(L p=gl_(x);P(p==_0N,ed(x,y))$(llabs(p)<m,u=slc_(y,p<0?0:p,m-llabs(p)))E(u=atn(yt,0)))
  xr;yr;u)
-  A1(gL,P(xtlL,x)P(xt==tdx,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)
+  A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)
                  x=N(gI(x));P(xtt,al(gi(x)))A u=aL(xn);F(un,uli=xii)xr;u)
 S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(gi(x)))A u=aC(xn);F(un,uci=xii)xr;u)
   A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gl(x)))A u=aD(xn);F(un,udi=xli)xr;u)

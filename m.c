@@ -16,8 +16,8 @@ S I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p
 A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 asm(".globl _start\n_start:pop %rdi\nmov %rsp,%rsi\njmp main");
 V main(L n,C**a)_(A x=syml=aX(5);F(xn,xai=aCn(&"_xyzo"[i],!!i))glb=aa0();cn[tX]=aX(0);cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=cn[tlx]=al(_0N);
- cn[tI]=cn[ti]=al(_0Ni);cn[tD]=cn[tdx]=ad(_0n);cn[tS]=cn[ts]=as(0);cn[to]=cn[tp]=cn[tq]=cn[tr]=cn[tu]=cn[tv]=cn[tw]=au0;
- ci[0][0]=ad(0);ci[0][1]=ad(1);ci[0][2]=ad(_0w );ci[0][3]=ad(-_0w );ci[0][4]=cn[tdx];
+ cn[tI]=cn[ti]=al(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);cn[to]=cn[tp]=cn[tq]=cn[tr]=cn[tu]=cn[tv]=cn[tw]=au0;
+ ci[0][0]=ad(0);ci[0][1]=ad(1);ci[0][2]=ad(_0w );ci[0][3]=ad(-_0w );ci[0][4]=cn[td];
  ci[1][0]=ai(0);ci[1][1]=ai(1);ci[1][2]=ai(_0Wi);ci[1][3]=ai(-_0Wi);ci[1][4]=cn[ti];
  ci[2][0]=al(0);ci[2][1]=al(1);ci[2][2]=al(_0W );ci[2][3]=al(-_0W );ci[2][4]=cn[tl];mu=0;
  $(n>1,exit(!ldf(aCz(a[1]))))C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,$(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p));exit(0))
