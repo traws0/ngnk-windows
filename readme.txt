@@ -83,8 +83,8 @@ kdb+/q k4  c?  eula    600k kx.com/download                    type \ to switch 
 kuc    k5? c   gpl3   1700k github.com/zholos/kuc              closures
 ok     k6  js  mit   js:40k github.com/johnearnest/ok          graphics, sound, keyboard api
 ngn/k  k6  c   agpl3   110k bitbucket.org/ngn/k
-ktye/i k7  go  ?          ? github.com/ktye/i
-shakti k7  b?  eula    250k anaconda.org/shaktidb/shakti/files parallelism, crypto
+ktye/i k7  go  ?      1400k github.com/ktye/i                  wasm(300kB)
+shakti k7  ?   eula    250k anaconda.org/shaktidb/shakti/files parallelism, crypto
 
        tryonline                                 replhelp docs
 kona   tio.run/##y9bNzs9L/P/fUMFIwVjbRMFUwez/fwA \        wiki        github.com/kevinlawler/kona/wiki#verbs
