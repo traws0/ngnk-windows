@@ -32,7 +32,7 @@ A2(cut,
  E(L p=gl_(x);P(p==_0N,ed(x,y))$(llabs(p)<m,u=slc_(y,p<0?0:p,m-llabs(p)))E(u=atn(yt,0)))
  xr;yr;u)
 S L i2l(I i)_(i==_0Ni?_0N:i)S I l2i(L l)_(l==_0N?_0Ni:l)
-A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)x=N(gI(x));P(xtt,al(gi(x)))A u=aL(xn);F(un,uli=i2l(xii))xr;u)
+A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)x=N(gI(x));P(xtt,al(i2l(gi(x))))A u=aL(xn);F(un,uli=i2l(xii))xr;u)
 S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(i2l(gi(x))))A u=aC(xn);F(un,uci=xii)xr;u)
 A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gl(x)))A u=aD(xn);F(un,udi=xli)xr;u)
 A1(gI,P(xtiI,x)P(xtl,ai(l2i(gl(x))))P(xtL,A u=aI(xn);F(un,uii=l2i(xli))xr;u)P(xtc,ai(gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
