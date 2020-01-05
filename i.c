@@ -9,10 +9,10 @@ S L hskt(UI h,UH p)_(L f=skt(AF_INET,SOCK_STREAM,0);P(f<0,err("skt"),0)
  struct sockaddr_in sa;sa.sin_family=AF_INET;sa.sin_addr.s_addr=h;sa.sin_port=htons_(p);0>conn(f,(struct sockaddr*)&sa,Z(sa))?err("conn"),0:f)
 S L hops(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("open"),0:f)
  UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:hskt(h,p))
-S L hop_(A x/*1*/,L fl)_(P(xtil,hskt(lh,gi(x)))P(xts,C*s=symptr(gs(x));!*s?1:*s-':'?et(),0:hops(s+1,fl))P(xtC,x=str0(x);dex(x,hops(xc,fl)))et(x))
+S I hop_(A x/*1*/,I fl)_(P(xtil,hskt(lh,gi(x)))P(xts,C*s=symptr(gs(x));!*s?1:*s-':'?et(),0:hops(s+1,fl))P(xtC,x=str0(x);dex(x,hops(xc,fl)))et(x))
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))A1(hcl,asrt(xti);close(gi(x));au0)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
-A1(u1c,I f=gi(N(hop_(x,O_RDONLY)));struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;
+A1(u1c,I f=N(hop_(x,O_RDONLY));struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;
  V*p=mmap_(0,n+ZP,3,0x22/*anon|priv*/,-1,0);P(p==(V*)-1,err("file"))A u=(A)(p+ZP);asrt(!(u%ZP));ul[-2]=0;u=AT(tC,AN(n,u));uR;
  V*q=mmap_(uc,n,1,0x12/*fixed|priv*/,f,0);close(f);P(q==(V*)-1,err("file"))asrt(q==uc);u)
 A2(v0c,$(ytX,y=N(rdc(ac(10),&y,1)))ytC?v1c(x,N(apv(y,"\n"))):et(x,y))
