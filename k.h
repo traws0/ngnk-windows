@@ -129,7 +129,7 @@ SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I gs(A x)_(asrt(xts);(I)x)
-SI A aI(L n)_(atn(tI,n))SI A ai(I v)_(pck(ti,v))SI I gi(A x)_(asrt(xti);(I)x)
+SI A aI(L n)_(atn(tI,n))SI A ai(I v)_(pck(ti,v))SI I gi(A x)_(asrt(xti||xts);(I)x)
 SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl(A x)_(!pkd(x)?xr,*xl:(I)x)SI L gl_(A x)_(pkd(x)?(I)x:*xl)
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd(A x)_(D v=*xd;xr;v)SI D gd_(A x)_(*xd)
 
@@ -154,7 +154,7 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
  c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:20+c-'0')
 #define cu(c) au(vi(c))
 #define cv(c) av(vi(c))
-S O A au0=au(0),av0=av(0),au_out=au(28),au_cmd=au(31),av_plc=av(29),av_mkl=av(30),av_com=av(31);
+S O A au0=au(0),av0=av(0),au_out=au(26),au_cmd=au(29),av_plc=av(27),av_mkl=av(28),av_com=av(29);
 #define _0N  (1ull<<63)
 #define _0W  (~_0N)
 #define _0Ni (1<<31)
