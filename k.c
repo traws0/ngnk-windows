@@ -17,7 +17,7 @@ S A2(idx_/*x0y1*/,asrt(xtT||xtaA);P(y==av_plc,flp(xR))P(ytX,eac(x,&y,1))P(yta,y=
  P(w==3,L h=gl_(cn[xt]);yr;F(un,L j=yli;uli=0<=j&&j<xn?xlj:h)u)en(y,u))
 AX(app,P(xtT,P(xtX,L c=1;F(n,A y=a[i];L c0=c;c=ytt;x=N(!c0?eal(cv('@'),A_(x,y),2):i?idx(x,y):idx_(x,y)))x)n==1?idx_(x,*a):ein(n,a))
  P(xts,C*s=symptr(gs(x)),c=*s;A y=*a;s[1]?enn(n,a):n>1?ern(n,a):c=='j'?json(y):c=='k'?kst(y):c=='p'?prs(y):c=='t'?dex(y,al(time())):
-  c=='x'?sys(y):c=='e'?yr,epr(),au0:enn(n,a))
+  c=='x'?frk(y):c=='e'?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));P(n==1,y)dex(y,app(y,a+1,n-1)))P(xtA,P(n>1,ern(n,a))A y=*a;P(ytilIL,idx_(x,y))app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;$(ytc,y=enl(y))E(P(!ytC,et(y)))write(gl_(x),yc,yn);y)
  P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)vf[32+Av(x)])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[64+Av(x)])(xx,a,n))
