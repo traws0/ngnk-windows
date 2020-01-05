@@ -5,7 +5,7 @@ O V*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,un
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,__2,__2,__2,__2,__2,com,__2,__2,0,0,
           eac,rdc,scn,eap,ear,eal}; // ' / \ ': /: \:                                                                     mkl plc
 A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y))
-A2(id_/*x0y0*/,S O C t[]={4,0,0,1,1,2,2,3,3,2,4};ari(x)?mR(ci[ytdD?0:ytiI?1:2][t[Av(x)]]):mkn(fir(yR)))
+A2(id_/*x0y0*/,S O C t[]={4,0,0,1,1,2,2,3,3,2,4};ari(x)?mR(ci[t[Av(x)]][ytdD?0:ytiI?1:2]):mkn(fir(yR)))
 A2(com,AK(Ak(y),AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))UC k=max(n,Ak(x));F(n,k-=a[i]!=av_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
 SN A getA(A x/*0*/,L i)_(asrt(xtA);A y=xy,u=a0();Fj(yn,u=apd(u,get(yaj,i)))aa(mR(xx),u))
 A get(A x/*0*/,L i)_(xtX?mR(xai):xtI?ai(xii):xtL?al(xli):xtS?as(xii):xtC?ac(xci):xtD?ad(xdi):xta?get(xy,i):xtA?getA(x,i):xR)

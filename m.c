@@ -1,6 +1,6 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 #define nxt(x) A(x)[-2]
-L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[3][5];S cold A em()_(write(1,"oom\n",4);exit(1);0)
+L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];S cold A em()_(write(1,"oom\n",4);exit(1);0)
 S A ma(I b)_(asrt(4<b);P(b>47,em())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  $(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))E(i=max(b,24);V*p=mmap_(0,1L<<i,3,0x22/*anon|priv*/,-1,0);P((L)p<=0,em())mt+=1L<<i;x=(A)(p+ZA))
  W(i>b,i--;A y=mx[i]=(A)(x+(1L<<i));nxt(y)=0)AB(b,x))
@@ -17,6 +17,6 @@ A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]==
 asm(".globl _start\n_start:pop %rdi\nmov %rsp,%rsi\njmp main");
 V main(L n,C**a)_(A x=syml=aX(5);F(xn,xai=aCn(&"_xyzo"[i],!!i))glb=aa0();cn[tX]=aX(0);cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0N);
  cn[tI]=cn[ti]=al(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);cn[to]=cn[tp]=cn[tq]=cn[tr]=cn[tu]=cn[tv]=cn[tw]=au0;
- S O D cid[]={0,1,_0w,-_0w,_0n};S O I cii[]={0,1,_0Wi,-_0Wi,_0Ni};S O L cil[]={0,1,_0W,-_0W,_0N};
- F(5,ci[0][i]=ad(cid[i]);ci[1][i]=ai(cii[i]);ci[2][i]=al(cil[i]))
+ S O struct{D d;L i,l;}t[]={{0,0,0},{1,1,1},{_0w,_0Wi,_0W},{-_0w,-_0Wi,-_0W},{_0n,_0Ni,_0N}};
+ F(5,ci[i][0]=ad(t[i].d);ci[i][1]=ai(t[i].i);ci[i][2]=al(t[i].l))
  $(n>1,exit(!ldf(aCz(a[1]))))C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,$(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p));exit(0))
