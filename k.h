@@ -154,7 +154,7 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
  c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:20+c-'0')
 #define cu(c) au(vi(c))
 #define cv(c) av(vi(c))
-S O A au0=au(0),av0=av(0),au_out=au(28),au_cmd=au(29),av_plc=av(27),av_mkl=av(28),av_com=av(29);
+S O A au0=au(0),av0=av(0),au_out=au(28),au_cmd=au(29),av_com=av(27),av_mkl=av(28),av_plc=av(29);
 #define _0N  (1ull<<63)
 #define _0W  (~_0N)
 #define _0Ni (1<<31)
