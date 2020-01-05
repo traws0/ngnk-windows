@@ -92,5 +92,5 @@ kdb+/q -                                                  q ref       code.kx.co
 kuc    -                                                  -
 ok     johnearnest.github.io/ok/ike/ike.html              manual      github.com/JohnEarnest/ok/blob/gh-pages/docs/Manual.md
 ngn/k  tio.run/##y9bNS8/7/99QwUjBWNtEwVTB7P9/AA  \h       -
-ktye/i ktye.github.io                            \h       single-page github.com/ktye/i/blob/master/_/i1/README
+ktye/i ktye.github.io                            \h       single-page github.com/ktye/i
 shakti -                                         \h       unofficial  kparc.github.io/ref
