@@ -124,7 +124,7 @@ V mrn(L,O A*),*mc(V*,O V*,L),mz(V*,L);
 I Ci(O C*,C),epr(),eso(A,L),memcmp(O V*,O V*,L),mtc_(A,A),sym(A);
 L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),time(),pl(C**),slc_(A,L,L),pu(C**);
 
-SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i])
+SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i])SI C*symptr(I i)_(C(symstr(i)))
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)V(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
