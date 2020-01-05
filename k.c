@@ -1,7 +1,7 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 S A1(__1,en(x))S A2(__2,en(x,y))S A1(sam,x)
 O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5','6','7','8','9','?','?'};
-O V*cf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,__1,__1,__2,las,out,cmd,0,0,
+O V*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,__1,__1,__2,las,out,cmd,0,0,
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,__2,__2,__2,__2,__2,com,__2,__2,0,0,
           eac,rdc,scn,eap,ear,eal}; // ' / \ ': /: \:                                                                     mkl plc
 A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y))
@@ -20,8 +20,8 @@ AX(app,P(xtT,P(xtX,L c=1;F(n,A y=a[i];L c0=c;c=ytt;x=N(!c0?eal(cv('@'),A_(x,y),2
   c=='x'?sys(y):c=='e'?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));P(n==1,y)dex(y,app(y,a+1,n-1)))P(xtA,P(n>1,ern(n,a))A y=*a;P(ytilIL,idx_(x,y))app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;$(ytc,y=enl(y))E(P(!ytC,et(y)))write(gl_(x),yc,yn);y)
- P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)cf[32+Av(x)])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)cf[64+Av(x)])(xx,a,n))
- P(n>Ak(x),ern(n,a))P(xtu,((A1*)cf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
+ P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)vf[32+Av(x)])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[64+Av(x)])(xx,a,n))
+ P(n>Ak(x),ern(n,a))P(xtu,((A1*)vf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
  P(xtp,L m=xn-1,j=0;A b[m+n];F(xn-1,b[i]=xa[i+1]==av_plc&&j<n?a[j++]:mR(xa[i+1]))W(j<n,b[m++]=a[j++])app(xx,b,m))
  P(xtq,app(xx,&(A){N(app(xy,a,n))},1))etn(n,a))
 A1(val,P(xtS,A y=glb;xr;F(xn,P(!yta,et())A z=yx,u=yy;P(!ztS||!utX,ed())I k=xii;L j=fndi(z,k);P(j<0,err(symptr(k)))y=uaj)yR)

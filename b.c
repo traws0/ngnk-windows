@@ -32,7 +32,7 @@ S A vm_(A f/*0*/)_(W(1,UC b=*ip++;$(b>=bc,*--sp=mR(A(fc)[b&(mxc-1)]))
          E$(b==ba||b==bP,L n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
          E$(b==bz,ip+=1+*ip*!tru(*sp++))E$(b==bj,ip+=*ip)E$(b==bo,*--sp=mR(loc[1]))E$(b==bp,mr(*sp++))E$(b==br,R*sp)E(UR))
  E$(b>=bs,A*p=loc-(b&(mxl-1));$(b>=bd,*--sp=*p;*p=au0)E$(b>=bg,*--sp=mR(*p))E(mr(*p);*p=mR(*sp)))
- E$(b>=bv,sp++;N(*sp=((A2*)cf[b])(sp[-1],*sp)))E(N(*sp=((A1*)cf[b])(*sp))))UR;0)
+ E$(b>=bv,sp++;N(*sp=((A2*)vf[b])(sp[-1],*sp)))E(N(*sp=((A1*)vf[b])(*sp))))UR;0)
 AX(run,asrt(xto);asrt(n==Ak(x));A f=xR;I m=An(fl);P(sp<sp0+m+3,errn("stk",n,a))*--sp=(A)(V*)ip;*--sp=(A)(V*)loc;*--sp=f;ip=C(fb);loc=sp-1;
  F(n,*--sp=a[i])F(m-n,*--sp=au0)A u=vm_(f);$(!u,eso(mR(fs),C(fm)[ip-1-C(fb)]);W(sp<loc-m,$(*sp,mr(*sp))sp++))
  asrt(sp==loc-m);A*p=loc+1;W(p>sp,mr(*p--))sp=loc+4;ip=(C*)sp[-1];loc=(V*)sp[-2];u)
