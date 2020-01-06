@@ -74,23 +74,5 @@ errors
             otherwise N(expr) is the same as expr
   Nx(expr) - same as N(), but if there's an error it consumes x
 
-
-K IMPL COMPARISON (jan 2020)
-
-  dialect impl license size home                               remarks
-kona   k3  c   isc    1500k github.com/kevinlawler/kona
-kdb+/q k4  c?  eula    600k kx.com/download                    type \ to switch from q to k
-kuc    k5? c   gpl3   1700k github.com/zholos/kuc              closures
-ok     k6  js  mit   js:40k github.com/johnearnest/ok          graphics, sound, keyboard api
-ngn/k  k6  c   agpl3   110k bitbucket.org/ngn/k
-ktye/i k7  go  ?      1400k github.com/ktye/i                  wasm(300kB)
-shakti k7  ?   eula    250k anaconda.org/shaktidb/shakti/files parallelism, crypto
-
-       tryonline                                 replhelp docs
-kona   tio.run/##y9bNzs9L/P/fUMFIwVjbRMFUwez/fwA \        wiki        github.com/kevinlawler/kona/wiki#verbs
-kdb+/q -                                                  q ref       code.kx.com/q/ref
-kuc    -                                                  -
-ok     johnearnest.github.io/ok/ike/ike.html              manual      github.com/JohnEarnest/ok/blob/gh-pages/docs/Manual.md
-ngn/k  tio.run/##y9bNS8/7/99QwUjBWNtEwVTB7P9/AA  \h       -
-ktye/i ktye.github.io                            \h       single-page github.com/ktye/i
-shakti -                                         \h       unofficial  kparc.github.io/ref
+COMPARISON
+with other k impls: https://ngn.bitbucket.io/k.html
