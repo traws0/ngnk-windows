@@ -21,7 +21,7 @@ AX(app,P(xtT,P(xtX,L c=1;F(n,A y=a[i];L c0=c;c=ytt;x=N(!c0?eal(cv('@'),A_(x,y),2
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));P(n==1,y)dex(y,app(y,a+1,n-1)))P(xtA,P(n>1,ern(n,a))A y=*a;P(ytilIL,idx_(x,y))app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;$(ytc,y=enl(y))E(P(!ytC,et(y)))write(gl_(x),yc,yn);y)
  P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)vf[32+Av(x)])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[64+Av(x)])(xx,a,n))
- P(n>Ak(x),ern(n,a))P(xtu,((A1*)vf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
+ P(n>Ak(x),ern(n,a))P(xtu,((A1*)vf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4&&Ak(*a)==2?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
  P(xtp,L m=xn-1,j=0;A b[m+n];F(xn-1,b[i]=xa[i+1]==av_plc&&j<n?a[j++]:mR(xa[i+1]))W(j<n,b[m++]=a[j++])app(xx,b,m))
  P(xtq,app(xx,&(A){N(app(xy,a,n))},1))etn(n,a))
 A1(val,P(xtS,A y=glb;xr;F(xn,P(!yta,et())A z=yx,u=yy;P(!ztS||!utX,ed())I k=xii;L j=fndi(z,k);P(j<0,err(symptr(k)))y=uaj)yR)
