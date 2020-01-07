@@ -87,7 +87,8 @@ SI L d2l(D v)_(*(L*)(V*)&v)SI L llabs(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<
 SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(C3('0',c,'9'))
 
 //   () "" ,0 ,l ,d ,` +!  ! "a" 0 0j 0. `  {} 1+ ++ +/ +: +  /
-enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};S O C*tsym="XCILDSAacildsopqruvw";
+enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};
+#define tsym "XCILDSAacildsopqruvw"
 //tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
 //tttttttt................................................cccccccc tc
 //tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
