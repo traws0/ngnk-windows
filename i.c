@@ -1,4 +1,5 @@
 #include<sys/mman.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include<sys/stat.h>
 #include<fcntl.h>
 #include<arpa/inet.h>
 #include"k.h"
