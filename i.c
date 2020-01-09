@@ -16,7 +16,7 @@ S I hop_(A x/*1*/,I fl)_(P(xtil,hskt(lh,gi(x)))P(xts,C*s=symptr(gs(x));!*s?1:*s-
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))A1(hcl,asrt(xti);close(gi(x));au0)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A1(u1c,I f=N(hop_(x,O_RDONLY));struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;
- V*p=mmap_(0,n+ZP,3,0x22/*anon|priv*/,-1,0);P(p==(V*)-1,err("file"))A u=(A)(p+ZP);asrt(!(u%ZP));ul[-2]=0;u=AT(tC,AN(n,u));uR;
- V*q=mmap_(uc,n,1,0x12/*fixed|priv*/,f,0);close(f);P(q==(V*)-1,err("file"))asrt(q==uc);u)
+ V*p=mmap_(0,n+ZP,3,MAP_PRIVATE|MAP_ANON,-1,0);P(p==(V*)-1,err("file"))A u=(A)(p+ZP);asrt(!(u%ZP));ul[-2]=0;u=AT(tC,AN(n,u));uR;
+ V*q=mmap_(uc,n,1,MAP_PRIVATE|MAP_FIXED,f,0);close(f);P(q==(V*)-1,err("file"))asrt(q==uc);u)
 A2(v0c,$(ytX,y=N(rdc(ac(10),&y,1)))ytC?v1c(x,N(apv(y,"\n"))):et(x,y))
 A2(v1c,L f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;yr;W(n>0,L k=write(f,s,n);P(k<=0,err("write"))s+=k;n-=k)$(f-1,close(f));au0)
