@@ -1,7 +1,6 @@
 # faster builds: export MAKEFLAGS=-j8
 C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -Werror -Wunused -Wno-assume -Wfatal-errors -march=native
 t:k
-	@echo "size:`stat -c%s k`" "sha1:`sha1sum k|cut -b-40`"
 	@$(MAKE) -C t && g/0.sh
 c:
 	@echo 'cleaning up' && rm -rfv k o t/t
