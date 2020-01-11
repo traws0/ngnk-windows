@@ -89,15 +89,15 @@ SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(C3('
 //   () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};
 #define tsym "XCILDSAacildsopqruvw"
-//header bytes (b=bucket,o=srcoffset,r=refcount,n=length): bfoorrrrnnnnnnnn
+//header bytes: bfoorrrrnnnnnnnn (b=bucket,f=flags,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
-//tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
-//tttttttt................................................cccccccc tc
-//tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
-//tttttttt........oooooooooooooooossssssssssssssssssssssssssssssss ts
-//tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 to,tp,tq
-//tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tr
-//ttttttttvvvvvkkk................................................ tu,tv,tw
+// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
+// tttttttt................................................cccccccc tc
+// tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
+// tttttttt........oooooooooooooooossssssssssssssssssssssssssssssss ts
+// tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 to,tp,tq
+// tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tr
+// ttttttttvvvvvkkk................................................ tu,tv,tw
 SI UC At(A x)_((UL)x>>56   )SI A AT(UC t,A x)_((A)((UL)t<<56|(UL)x<<8>>8))
 SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))SI I pkd(A x)_(xtc||xti||xts||xtu||xtv||xtw)
 SI I sim(A x)_(ta<xt&&xt<to)SI I fun(A x)_(to<=xt)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)
@@ -112,9 +112,9 @@ SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x
 #define ZZ(x) (Z(x)/Z(*(x)))
 #define ZV Z(V*)
 #define ZA 16
-#define ZR 67 //ref
-SI UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3)
-SI UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8)
+#define ZR 4 //ref
+SI UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ) with a special value ZR for ref types
+SI UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
 
 A1 a1,asc,ax,blw,cmd,cpl,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,mr,mRa,mut,neg,not,nul,out,prs,rev,sqr,sqz,
    str,str0,til,typ,u0c,u1c,unq,val,whr;
