@@ -3,7 +3,8 @@
 #define nxt(x) A(x)[-2]
 L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];S cold A em()_(write(1,"oom\n",4);exit(1);0)
 S A ma(I b)_(asrt(4<b);P(b>47,em())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
- $(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))E(i=max(b,24);V*p=mmap_(0,1L<<i,3,MAP_PRIVATE|MAP_ANON,-1,0);P((L)p<=0,em())mt+=1L<<i;x=(A)(p+ZA))
+ $(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
+ E(i=max(b,24);V*p=mmap_(0,1L<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,em())mt+=1L<<i;x=(A)(p+ZA))
  W(i>b,i--;A y=mx[i]=(A)(x+(1L<<i));nxt(y)=0)AB(b,x))
 S A1(mf,asrt(!pkd(x));asrt(!Ar(x));UC b=xb;nxt(x)=mx[b];mx[b]=x;mu-=1ll<<b;0)A1(mut,P(pkd(x)||Ar(x)==1,x)xr;A y=atnv(xt,xn,xc);$(ref(y),mRa(y))y)
 A1(mr,asrt(x);P(pkd(x),0)asrt(Ar(x)>0);$(!--Ar(x),mf(x);$(ref(x),mrn(xn,xa)))0)V mrn(L n,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)
