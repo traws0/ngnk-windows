@@ -17,7 +17,7 @@ A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))A1(hcl,asrt(xti);close(gi(x));au0)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A1(u1c,I f=N(hop_(x,O_RDONLY));struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;
  V*p=mmap_(0,n+ZP,PROT_READ           ,MAP_PRIVATE|MAP_ANON ,-1,0);P(((L)p>>4)==-1,err("mmap0"))
- V*q=mmap_(p,  ZP,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON|MAP_FIXED,-1,0);P(p-q,err("mmap1"))A u=(A)(p+ZP);asrt(!(u%ZP));ul[-2]=0;u=AT(tC,AN(n,u));uR;
- V*r=mmap_(uc,  n,PROT_READ           ,MAP_PRIVATE|MAP_FIXED, f,0);close(f);P(((L)r>>4)==-1,err("mmap2"))asrt(r==uc);u)
+ V*q=mmap_(p,  ZP,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON|MAP_FIXED,-1,0);P(p-q,err("mmap1"))A u=(A)(p+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
+ V*r=mmap_(uc,  n,PROT_READ           ,MAP_PRIVATE|MAP_FIXED, f,0);close(f);P(r-(V*)uc,err("mmap2"))u)
 A2(v0c,$(ytX,y=N(rdc(ac(10),&y,1)))ytC?v1c(x,N(apv(y,"\n"))):et(x,y))
 A2(v1c,L f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;yr;W(n>0,L k=write(f,s,n);P(k<=0,err("write"))s+=k;n-=k)$(f-1,close(f));au0)
