@@ -110,10 +110,11 @@ SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x
 
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
-#define ZV Z(V*)
-#define ZA 16
-#define ZR 4 //ref
-SI UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ) with a special value ZR for ref types
+#define ZV Z(V*)  //ptr
+#define ZP 4096ll //page
+#define ZA 16     //hdr
+#define ZR 4
+SI UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ(t)) with a special value ZR for ref types
 SI UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
 
 A1 a1,asc,ax,blw,cmd,cpl,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,mr,mRa,mut,neg,not,nul,out,prs,rev,sqr,sqz,
