@@ -174,7 +174,7 @@ XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];SI I ari(A x)_(xtv&&Av(x)<11)
 #define arD(f,n,p)Y(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))Q(4,F(n,p a/b))\
  Q(5,F(n,p((V)a,(V)b,_0n)))Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,F(n,p l2d(a<b)))Q(9,F(n,p l2d(a>b)))Q(10,F(n,p l2d(a==b))))
 
-#define mr2(x,a...)({A t_=mr0(x);__typeof__({a;})r_=({a;});mr1(t_);r_;})
+#define mr2(x,a...)({A t_=mr0(x);__typeof__({a;})r_=({a;});dbg((x)=0;)mr1(t_);r_;})
 
 #define pv(x) pv_(#x":",(L)(x))
 #define px(x) px_(#x":",(A)(x))
