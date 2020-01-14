@@ -16,7 +16,7 @@ S A pen2(A x,A y,I f)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(f),u),4))P(xtaAX||yt
  P(k==3&&xn-yn,el(x,y))UC t=d&&f<8?tD:xtiI?tI:tL;
  P(xt==t&&Ar(x)==1,mr2(y,pen2_(x,y,f,d,k,x)))
  P(yt==t&&Ar(y)==1,mr2(x,pen2_(x,y,f,d,k,y)))
- mr2(x,mr2(y,pen2_(x,y,f,d,k,atn(t,k==2?xn:yn)))))
+ A u=atn(t,k==2?xn:yn);mr2(x,mr2(y,pen2_(x,y,f,d,k,u))))
 S A1(s2l,xts?al(gs(x)):AT(tL,x))A2(eql,$(xtsS&&ytsS,x=s2l(x);y=s2l(y))pen2(x,y,vi('=')))
 A2(mod,P(xtl,xtl&&*xl==_0N?xr,out(y):pen2(x,y,vi('!')))$(xtt||xta,$(xta,x=enl(x))x=rsh(al(len_(y)),x))
                                                        $(ytt||yta,$(yta,y=enl(y))y=rsh(al(len_(x)),y))len_(x)-len_(y)?el(x,y):aa(x,y))
