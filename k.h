@@ -133,7 +133,7 @@ SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I gs(A x)_(asrt(xts);(I)x)
 SI A aI(L n)_(atn(tI,n))SI A ai(I v)_(pck(ti,v))SI I gi(A x)_(asrt(xti||xtc||xts);(I)x)
-SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl(A x)_(!pkd(x)?xr,*xl:(I)x)SI L gl_(A x)_(pkd(x)?(I)x:*xl)
+SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl(A x)_(P(pkd(x),(I)x)L v=*xl;xr;v)SI L gl_(A x)_(pkd(x)?(I)x:*xl)
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd(A x)_(D v=*xd;xr;v)SI D gd_(A x)_(*xd)
 
 #define err_(x,y,z,u,n,...) n
