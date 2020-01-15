@@ -22,4 +22,4 @@ A u1c_(I f)_(struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;I pr=PROT_REA
  V*q=mmap_(p+ZP,n,pr,fl|MAP_FIXED,f,0);P(p+ZP-q,err("mmap1"))u)
 A1(u1c,I f=N(hop_(x,O_RDONLY));A u=u1c_(f);close(f);u)
 A2(v0c,$(ytX,y=N(rdc(ac(10),&y,1)))ytC?v1c(x,N(apv(y,"\n"))):et(x,y))
-A2(v1c,L f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;mr2(y,W(n>0,L k=write(f,s,n);P(k<=0,err("write"))s+=k;n-=k)$(f-1,close(f));au0))
+A2(v1c,I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;mr2(y,A u=au0;W(n>0,L k=write(f,s,n);$(k<=0,u=err("write");B)s+=k;n-=k)$(f>2,close(f))u))
