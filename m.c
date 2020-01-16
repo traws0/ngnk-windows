@@ -6,11 +6,8 @@ S A ma(I b)_(asrt(4<b);P(b>47,em())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x)
  $(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap_(0,1L<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,em())mt+=1L<<i;x=(A)(p+ZA))
  W(i>b,i--;A y=mx[i]=(A)(x+(1L<<i));nxt(y)=0)AB(b,x))
-S A1(mf,asrt(!pkd(x));asrt(!Ar(x));UC b=xb;nxt(x)=mx[b];mx[b]=x;mu-=1ll<<b;0)
-A1(mr0,asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)P(!Ab(x),x)mf(x);$(ref(x),mrn(xn,xa))x)
-A1(mr1,$(x,$(!Ab(x),munmap(xc-ZP,xn+ZP))E$(!xtL,dbg(F(xn*tZ(xt),xci=0xab))))0)
-A1(mr,mr1(mr0(x)))V mrn(L n,O A*a)_(F(n,mr(a[i])))A1(mRa,F(xn,mR(xai))x)
-A1(mut,P(pkd(x)||Ar(x)==1,x)A y=mr2(x,atnv(xt,xn,xc));$(ref(y),mRa(y))y)
+S A1(mf,asrt(!pkd(x));asrt(!Ar(x));UC b=xb;nxt(x)=mx[b];mx[b]=x;mu-=1ll<<b;0)A1(mut,P(pkd(x)||Ar(x)==1,x)xr;A y=atnv(xt,xn,xc);$(ref(y),mRa(y))y)
+A1(mr,asrt(x);P(pkd(x),0)asrt(Ar(x)>0);$(!--Ar(x),mf(x);$(ref(x),mrn(xn,xa)))0)V mrn(L n,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)
 A gkv(A*p)_(A x=*p;asrt(xn==2);P(--Ar(x),*p=mR(xx);mR(xy))mf(x);*p=xx;xy)I sym(A x/*1*/)_(L m=mu-((Ar(x)==1)<<Ab(x));A u=fpa(&syml,str0(x));mu=m;u)
 A atn(UC t,L n)_(I b=67-__builtin_clzll((ZA>>3)+(t==tC?n>>3:n));A x=N(ma(b));Ar(x)=1;AN(n,AT(t,x)))
 A atnv(UC t,L n,O V*v)_(A u=atn(t,n);mc(uc,v,n*tZ(t));u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,aa(enl(as(0)),enl(au0)))
@@ -21,7 +18,7 @@ S I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p
 A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 V main(L n,C**a)_(A x=syml=aX(5);F(xn,xai=aCn(&"_xyzo"[i],!!i))glb=aa0();cn[tX]=aX(0);cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0N);
  cn[tI]=cn[ti]=al(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);cn[to]=cn[tp]=cn[tq]=cn[tr]=cn[tu]=cn[tv]=cn[tw]=au0;
- S O struct{D d;I i;L l;}t[]={{0,0,0},{1,1,1},{_0w,_0Wi,_0W},{-_0w,-_0Wi,-_0W},{_0n,_0Ni,_0N}};
+ S O struct{D d;L i,l;}t[]={{0,0,0},{1,1,1},{_0w,_0Wi,_0W},{-_0w,-_0Wi,-_0W},{_0n,_0Ni,_0N}};
  F(5,ci[i][0]=ad(t[i].d);ci[i][1]=ai(t[i].i);ci[i][2]=al(t[i].l))
  $(n>1,exit(!ldf(aCz(a[1]))))C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,$(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p));exit(0))
 #if __FreeBSD__
