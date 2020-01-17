@@ -14,9 +14,9 @@ A2(cat,P(xtaA&&ytaA,P(xta&&yta,A z=gkv(&y);amd(A_(x,y,z),3))P(!mtc_(xx,yx),ed(x,
  A u;$(Ar(x)==1&&ZA+(m+n)*w<=1<<Ab(x),u=AN(m+n,x))E(u=atn(xt,m+n);mc(uc,xc,m*w);$(xtX,$(Ar(x)==1,mr(AN(0,x)))E(mRa(x);xr))E(xr))
  mc(uc+m*w,yc,n*w);$(ytX,mRa(y))yr;u)
 A apv(A x,O V*v)_(asrt(xtT);L n=xn,w=tZ(xt);
- $(Ar(x)==1&&ZA+w+n*w<=1L<<xb,x=AN(n+1,x))E(A y=atn(xt,n+1);$(Ar(x)>1&&xtX,mRa(x))E(x=AT(tL,x);asrt(ZV==8))xr;mc(yc,xc,n*w);x=y)
+ $(Ar(x)==1&&ZA+w+n*w<=1L<<xb,x=AN(n+1,x))E(A y=atn(xt,n+1);$(Ar(x)>1&&xtX,mRa(x))E(x=AT(tL,x);asrt(ZV==8))mr2(x,mc(yc,xc,n*w));x=y)
  V*p=xc+n*w;$(w==1,*(C*)p=*(C*)v)$(w==2,*(H*)p=*(H*)v)$(w==4,*(I*)p=*(I*)v)$(w==8,*(L*)p=*(L*)v)x)
 A2(apd,asrt(xtT||xtA);P(xtA,P(!yta||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);A z=xy=mut(xy);F(An(z),zai=apd(zai,get(yy,i)))yr;x)
  $(!xtX&&(!ytt||xt-t_lst(yt)),x=blw(x))P(!xn,xr;enl(y))L v=xtX?(L)y:gl(y);apv(x,&v))
-A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)xr;AN(n,atnv(tC,n+l,xc)))
+A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)mr2(x,AN(n,atnv(tC,n+l,xc))))
 A apc(A x,C c)_(asrt(xtC);x=room(x,1);xc[xn]=c;AN(xn+1,x))A catc(A x,O C*s,L l)_(asrt(xtC);x=room(x,l);mc(xc+xn,s,l);AN(xn+l,x))
