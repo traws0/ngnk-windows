@@ -8,6 +8,6 @@ A1(cmd,P(!xtC,et(x))$(!xn||xn==1&&*xc=='\\',exit(0))C c=*xc;
   P(c=='l',ldf(x))P(c=='w',cmdw(x))P(c=='t',cmdt(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
 A1(frk,P(!xtX||xn-2,ed(x))A y=gkv(&x);P(!xtX||!ytC,ed(x,y))x=mut(x);C*a[xn+1];F(xn,A z=xai;$(!ztC,ed(x,y))a[i]=C(xai=str0(z))) //`x((exe;a1;a2;..);in)
- a[xn]=0;xr;yr;I p[4];pipe2(p,0);pipe2(p+2,0);P(!fork(),dup2(*p,0);dup2(p[3],1);F(4,close(p[i]))exit(execve(*a,a,0));0)close(*p);close(p[3]);
- write(p[1],yc,yn);close(p[1]);A u=aC(256-ZA);L m=0,k;W((k=read(p[2],uc+m,un-m))>0,m+=k;$(m+1000000>un&&2*m>un,A z=aC(2*un+ZA);mc(zc,uc,m);ur;u=z))
+ a[xn]=0;xr;I p[4];pipe2(p,0);pipe2(p+2,0);P(!fork(),yr;dup2(*p,0);dup2(p[3],1);F(4,close(p[i]))exit(execve(*a,a,0));0)close(*p);close(p[3]);
+ mr2(y,write(p[1],yc,yn));close(p[1]);A u=aC(256-ZA);L m=0,k;W((k=read(p[2],uc+m,un-m))>0,m+=k;$(m+1000000>un&&2*m>un,A z=aC(2*un+ZA);mc(zc,uc,m);ur;u=z))
  close(p[2]);AN(m,u))
