@@ -1,9 +1,9 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(neg,sub(ai(0),x))A1(not,xtaAX?ea1(not,x):fun(x)?mtc(x,au0):eql(x,xtsS?as(0):ac(0)))
-A1(sqr,P(xtaAX,ea1(sqr,x))x=gD(x);P(xtt,ad(__builtin_sqrt(gd(x))))A u=ax(x);F(xn,udi=__builtin_sqrt(xdi))u)
+A1(sqr,P(xtaAX,ea1(sqr,x))x=gD(x);P(xtt,ad(__builtin_sqrt(gd(x))))UC t=xt;mr2(x,A u=atn(t,xn);F(xn,udi=__builtin_sqrt(xdi))u))
 S C lwc(C c)_(c+32*C3('A',c,'Z'))S L fl1(D d)_(d<0?(L)d-(d<(L)d):(L)d)A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))
-A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=ax(x);F(un,uci=lwc(xci))u)P(xtaAX,ea1(flr,x))
- x=N(gD(x));P(xtt,al(fl1(gd(x))))xr;A u=aL(xn);F(xn,uli=fl1(xdi))u)
+A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,mr2(x,A u=aC(xn);F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
+ x=N(gD(x));P(xtt,al(fl1(gd(x))))mr2(x,A u=aL(xn);F(xn,uli=fl1(xdi))u))
 S A pen2(A x,A y,I f)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(f),u),4))P(xtaAX||ytaAX,eac(av(f),A_(x,y),2))
  I d=xtdD||ytdD,k=xtT<<1|ytT;
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));
