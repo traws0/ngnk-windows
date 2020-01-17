@@ -133,8 +133,8 @@ SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I gs(A x)_(asrt(xts);(I)x)
 SI A aI(L n)_(atn(tI,n))SI A ai(I v)_(pck(ti,v))SI I gi(A x)_(asrt(xti||xtc||xts);(I)x)
-SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl(A x)_(!pkd(x)?xr,*xl:(I)x)SI L gl_(A x)_(pkd(x)?(I)x:*xl)
-SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd(A x)_(D v=*xd;xr;v)SI D gd_(A x)_(*xd)
+SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl_(A x)_(pkd(x)?(I)x:*xl)SI L gl(A x)_(L r=gl_(x);xr;r)
+SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd_(A x)_(*xd)SI D gd(A x)_(D v=*xd;xr;v)
 
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(ps("["__FILE__":"xstr(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
