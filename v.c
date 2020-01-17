@@ -17,7 +17,7 @@ A1(rev,P(xtt,x)P(xta,AT(ta,N(ea1(rev,AT(tX,x)))))P(xtA,A y=gkv(&x);aA(x,Nx(ea1(r
  x=mut(x);L j=xn,m=(xn+1)/2;I w=tZ(xt);P(w==1,F(m,--j;swp(xci,xcj))x)
                                        P(w==4,F(m,--j;swp(xii,xij))x)
                                        P(w==8,F(m,--j;swp(xli,xlj))x)UR;0)
-A1(typ,xr;as(sym(atnv(tC,1,&tsym[xt]))))A1(len,dex(x,al(len_(x))))L len_(A x/*0*/)_(xtT?xn:xta?len_(xy):!xtA?1:An(xy)?len_(*A(xy)):1)
+A1(typ,UC t=xt;xr;as(sym(atnv(tC,1,&tsym[t]))))A1(len,dex(x,al(len_(x))))L len_(A x/*0*/)_(xtT?xn:xta?len_(xy):!xtA?1:An(xy)?len_(*A(xy)):1)
 A1(unq,P(!xtT,et(x))A u=atn(xt,0);I w=tz(xt);P(w==ZR,F(xn,fpa(&u,mR(xai)))xr;u)
                                              P(w==0,F(xn,fpc(&u,xci))xr;u)
                                              P(w==2,F(xn,fpi(&u,xii))xr;u)
