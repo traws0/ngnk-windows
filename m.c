@@ -1,15 +1,15 @@
 #include<sys/mman.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 #include"k.h"
 #define nxt(x) A(x)[-2]
-L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];S cold A em()_(write(1,"oom\n",4);exit(1);0)
-S A ma(I b)_(asrt(4<b);P(b>47,em())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
+L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];dbg(S I ml;/*prevent allocations*/)S cold A em()_(write(1,"oom\n",4);exit(1);0)
+S A ma(I b)_(dbg(asrt(!ml));asrt(4<b);P(b>47,em())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  $(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap_(0,1L<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,em())mt+=1L<<i;x=(A)(p+ZA))
  W(i>b,i--;A y=mx[i]=(A)(x+(1L<<i));nxt(y)=0)AB(b,x))
-A1(mut,P(pkd(x)||Ar(x)==1,x)A y=mr2(x,atnv(xt,xn,xc));$(ref(y),mRa(y))y)
-A1(mr0,asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)UC b=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x;mu-=1ll<<b;$(ref(x),mrn(xn,xa))x)
-A1(mr1,P(!x,0)P(xt==tn,munmap(xc-ZP,xn+ZP);0)dbg(F(xn*tZ(xt),xci=0xab));0)
+A1(mr0,dbg(ml++);asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)UC b=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x;mu-=1ll<<b;$(ref(x),mrn(xn,xa))x)
+A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xc-ZP,xn+ZP);0)dbg(F(xn*tZ(xt),xci=0xab));0)
 A1(mr,mr1(mr0(x)))
+A1(mut,P(pkd(x)||Ar(x)==1,x)A u=atnv(xt,xn,xc);xr;$(ref(u),mRa(u))u)
 V mrn(L n,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)
 A gkv(A*p)_(A x=*p;asrt(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;A u=xy;mr(AN(0,x));u)
 I sym(A x/*1*/)_(L m=mu-((Ar(x)==1)<<Ab(x));A u=fpa(&syml,str0(x));mu=m;u)

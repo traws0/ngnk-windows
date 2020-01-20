@@ -18,5 +18,5 @@ A apv(A x,O V*v)_(asrt(xtT);L n=xn,w=tZ(xt);
  V*p=xc+n*w;$(w==1,*(C*)p=*(C*)v)$(w==2,*(H*)p=*(H*)v)$(w==4,*(I*)p=*(I*)v)$(w==8,*(L*)p=*(L*)v)x)
 A2(apd,asrt(xtT||xtA);P(xtA,P(!yta||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);A z=xy=mut(xy);F(An(z),zai=apd(zai,get(yy,i)))yr;x)
  $(!xtX&&(!ytt||xt-t_lst(yt)),x=blw(x))P(!xn,xr;enl(y))L v=xtX?(L)y:gl(y);apv(x,&v))
-A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)mr2(x,AN(n,atnv(tC,n+l,xc))))
+A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)A u=AN(n,atnv(tC,n+l,xc));xr;u)
 A apc(A x,C c)_(asrt(xtC);x=room(x,1);xc[xn]=c;AN(xn+1,x))A catc(A x,O C*s,L l)_(asrt(xtC);x=room(x,l);mc(xc+xn,s,l);AN(xn+l,x))
