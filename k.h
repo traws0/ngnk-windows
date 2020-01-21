@@ -179,7 +179,7 @@ XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];SI I ari(A x)_(xtv&&Av(x)<11)
 #define pp ps("["__FILE__":"xstr(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 SI I ps(O C*x)_(write(2,x,strlen(x)))
-SI I ph(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
-SI I pd(L x)_(C b[32],*u=b+31;L m=x<0;$(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);$(m,*u--='-')write(2,u+1,b+31-u))
-SI L pv_(C*s,L x)_(ps(s);write(2,"           ",max(1,10-strlen(s)));ph((L)x);write(2,"\n",1);x)
-SI A px_(C*s,A x)_(ps(s);ph((L)x);P(!x,0)$(!pkd(x),ps(" b");pd(xb);ps("t");pd(xt);ps("r");pd(Ar(x));ps("n");pd(xn))ps(" ");out(x))
+SI I phex(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
+SI I pdec(L x)_(C b[32],*u=b+31;L m=x<0;$(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);$(m,*u--='-')write(2,u+1,b+31-u))
+SI L pv_(C*s,L x)_(ps(s);write(2,"           ",max(1,10-strlen(s)));phex((L)x);write(2,"\n",1);x)
+SI A px_(C*s,A x)_(ps(s);phex((L)x);P(!x,0)$(!pkd(x),ps(" b");pdec(xb);ps("t");pdec(xt);ps("r");pdec(Ar(x));ps("n");pdec(xn))ps(" ");out(x))
