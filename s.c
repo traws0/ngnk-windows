@@ -1,10 +1,8 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 S A sl(L v)_(P(v==_0N,aCn("0N",2))C b[20],*s=b;$(v<0,v=-v;*s++='-')
  UL l=0,t=10;W(t<=(UL)v,t*=10;l++)s+=l;F(l+1,UL k=(UL)v/10,r=(UL)v%10;*s--='0'+r;v=k)s+=l+2;aCm(b,s))
-S A sd(D v)_(C b[400],*s=b;$(v<0,v=-v;*s++='-')
- $(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n')
- E(D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(v==0,B)))
- aCm(b,s))
+S A sd(D v)_(C b[400],*s=b;$(v<0,v=-v;*s++='-')P(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n';aCm(b,s))
+ D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(v==0,B))aCm(b,s))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
