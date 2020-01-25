@@ -1,6 +1,7 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-S A sl(L v)_(P(v==_0N,aCn("0N",2))C b[20],*s=b;$(v<0,v=-v;*s++='-')
- UL l=0,t=10;W(t<=(UL)v,t*=10;l++)s+=l;F(l+1,UL k=(UL)v/10,r=(UL)v%10;*s--='0'+r;v=k)s+=l+2;aCm(b,s))
+S C*su_(UL v,C*s)_(UL l=0,t=10;W(t<=(UL)v,t*=10;l++)s+=l;F(l+1,UL k=(UL)v/10,r=(UL)v%10;*s--='0'+r;v=k)s+l+2)
+S C*sl_(L v,C*s)_($(v<0,P(v==_0N,*s++='0';*s++='N';s)v=-v;*s++='-')su_(v,s))
+S A sl(L v)_(C s[20];aCm(s,sl_(v,s)))
 S A sd(D v)_(C b[400],*s=b;$(v<0,v=-v;*s++='-')P(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n';aCm(b,s))
  D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(v==0,B))aCm(b,s))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
