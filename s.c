@@ -2,8 +2,9 @@
 S C*su_(UL v,C*s)_(UL l=0,t=10;W(t<=v,t*=10;l++)s+=l;F(l+1,UL k=v/10;*s--='0'+v%10;v=k)s+l+2)
 S C*sl_(L v,C*s)_($(v<0,P(v==_0N,*s++='0';*s++='N';s)v=-v;*s++='-')su_(v,s))
 S A sl(L v)_(C s[20];aCm(s,sl_(v,s)))
-S A sd(D v)_(C b[400],*s=b;$(v<0,v=-v;*s++='-')P(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n';aCm(b,s))
- D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(v==0,B))aCm(b,s))
+S C*sd_(D v,C*s)_($(v<0,v=-v;*s++='-')P(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n';s)
+ D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(!v,B))s)
+S A sd(D v)_(C s[400];aCm(s,sd_(v,s)))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
