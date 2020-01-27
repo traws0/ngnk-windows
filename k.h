@@ -3,14 +3,14 @@
 #include<sys/syscall.h>
 #include<math.h>
 #include"g.h"
-#define     _(a...) {R({a;});}
-#define   $(x,a...) if(x){a;}
-#define   P(x,a...) $(x,_(a))
-#define     E(a...) else{a;}
-#define  E$(x,a...) else if(x){a;}
-#define   W(x,a...) while(x){a;}
-#define   F(x,a...) for(L n_=(x),i=0;i<n_;i++){a;}
-#define  Fj(x,a...) for(L n_=(x),j=0;j<n_;j++){a;}
+#define    _(a...) {R({a;});}
+#define  $(x,a...) if(x){a;}
+#define  P(x,a...) $(x,_(a))
+#define    E(a...) else{a;}
+#define E$(x,a...) else if(x){a;}
+#define  W(x,a...) while(x){a;}
+#define  F(x,a...) for(L n_=(x),i=0;i<n_;i++){a;}
+#define Fj(x,a...) for(L n_=(x),j=0;j<n_;j++){a;}
 #define B break
 #define O const
 #define R return
