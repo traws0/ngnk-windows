@@ -2,9 +2,16 @@
 S C*su_(UL v,C*s)_(UL l=0,t=10;W(t<=v,t*=10;l++)s+=l;F(l+1,UL k=v/10;*s--='0'+v%10;v=k)s+l+2)
 S C*sl_(L v,C*s)_($(v<0,P(v==_0N,*s++='0';*s++='N';s)v=-v;*s++='-')su_(v,s))
 S A sl(L v)_(C s[20];aCm(s,sl_(v,s)))
-S C*sd_(D v,C*s)_($(v<0,v=-v;*s++='-')P(d2l(v)<<1>>53==-1,*s++='0';*s++=v==_0w?'w':'n';s)
- D p=1,q=10;W(q<=v,p=q;q*=10)W(p>=1,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d)*s++='.';F(17,L d=(L)(v/p);v-=d*p;p/=10;*s++='0'+d;$(!v,B))s)
-S A sd(D v)_(C s[400];aCm(s,sd_(v,s)))
+S C*sd_(D v0,C*s)_(UL v=*(UL*)&v0;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,*s++='0';*s++='n';s)$(v>>63,*s++='-')P(e==2047,*s++='0';*s++='w';s)
+ P(!e&&!m,*s++='0';*s++='.';*s++='0';s)$(e,m|=1ll<<52)e-=1023+52;I t=0;
+ $(e>0,F(e,$(m>=1ull<<62,t++;m/=5)E(m*=2)))E(F(-e,$(m>=1ull<<60,m/=2)E(t--;m*=5)))
+ W(!(m%10),m/=10;t++)
+ C*r=su_(m,s+1);I l=r-s-1;t+=l-1;
+ I d=1;$(0<=t&&t<7,d=t+1;t=0)
+ F(d,$(s==r-1,*s++='0';r++)E(*s=s[1];s++))
+ *s++='.';$(s==r,*s++='0')E(s=r)
+ $(t,*s++='e';s=sl_(t,s))s)
+S A sd(D v)_(C s[32];aCm(s,sd_(v,s)))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
