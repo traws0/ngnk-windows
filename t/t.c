@@ -5,11 +5,9 @@
 #include<unistd.h>
 #include<sys/mman.h>
 #include<sys/stat.h>
-#include<sys/signal.h>
-#define R return
 #define S static
 #define B break
-#define _(x...){R({x;});}
+#define _(x...){return({x;});}
 #define $(x,y...)if(x){y;}
 #define E(x...)else{x;}
 #define P(x,y...)$(x,_(y))
