@@ -1,4 +1,4 @@
-#include<fcntl.h>
+#include<fcntl.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
