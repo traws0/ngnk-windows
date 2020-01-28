@@ -20,7 +20,7 @@
 #define wr write
 #define cl close
 typedef char C;typedef int I;typedef long long L;
-S C*mm(C*f,C**e)_(I d=open(f,0);struct stat h;fstat(d,&h);L n=h.st_size;C*s=mmap(0,n,1,2,d,0);cl(d);*e=s+n;s)
+S C*mm(C*f,C**e)_(I d=open(f,0);struct stat h;fstat(d,&h);L n=h.st_size;C*s=mmap(0,n,PROT_READ,MAP_PRIVATE,d,0);cl(d);*e=s+n;s)
 S I nl(C*s,I n)_(C*p=s;I i=0;W(i<n,$(s[i]==10&&i<n-1&&s[i+1]==32,*p++=';';i+=2)E(*p++=s[i++]))p-s)
 S I t(C*s,C*e)_(P(*s=='/'||*s==10,0)C*u=strstr(s," /");P(!u,wr(1,"bad test: ",10);wr(1,s,e-s);-1)C*a[]={"../k",0};I p[4];pipe(p);pipe(p+2);
  P(!fork(),dup2(*p,0);dup2(p[3],1);fi(4,cl(p[i]))exit(execve(*a,a,0));0)cl(*p);cl(p[3]);$(*s-32,wr(p[1],"\\w ",3))wr(p[1],s,u-s);wr(p[1],"\n",1);cl(p[1]);
