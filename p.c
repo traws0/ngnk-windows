@@ -8,7 +8,8 @@ A pS(C**p)_(C*s=*p,c=*s;$(c&0x80,$(cy(c),s+=2;c=*s;W(1,$(dgt(c),c=*++s)E$(cy(c),
 S A pSs(C d)_(A x=aS(0);W(1,I v=sym(d-'`'||*s-'"'?pS(&s):pC());x=apv(x,&v);P(*s-d,x)++s)0)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
 S A1(shy,P(!xn,x)A y=xa[xn-1];$(ytX&&yn,A z=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x)S A lam(C k,A s,A b,A l)_(AK(k,atnv(tX,5,A_(s,b,au0,l,au0))))
 S D p10(I n)_(D d=1;F(n,d*=10)d)
-S D pdu()_(D d=pu(&s);C c=*s;P(c=='n',s++;_0n)P(c=='w',s++;_0w)$(*s=='.',C*t=++s;d+=pu(&s)/p10(s-t))P(*s-'e',d)s++;L n=pl(&s);d=n<0?d/p10(-n):d*p10(n))
+S D pdu()_(UL v=pu(&s);C c=*s;P(c=='n'||c=='w',s++;c=='n'?_0n:_0w)I e=0;
+ $(c=='.',c=*++s;W(dgt(c),$(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))$(c=='e',s++;e+=pl(&s))e<0?v/p10(-e):v*p10(e))
 S D pd()_(I m=*s=='-';s+=m;(m?-1:1)*pdu())
 S A pt(C*v)_(A x;C c=*s;P(c=='"',p1(N(pC())))P(c=='`',++s;x=pSs(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(av_mkl),')'));xn-2?x:xy==av_plc?xr,a0():las(x))
  P(ltr(c),C*t=s;x=pSs('.');$(s-t==1&&(c=='y'||c=='z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
