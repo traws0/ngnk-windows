@@ -2,20 +2,16 @@
 S O H*dt=(H*)"0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849"
              "5051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899";
 S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))     S O UI T2=100;
-S C*S4(C*s,UI x)_(S2(S2(s,x/T2),x%T2))S C*s4(C*s,UI x)_(x<T2?s2(s,x):S2(s2(s,x/T2),x%T2))S O UI T4=10000;
-S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T4),x%T4))S O UI T8=100000000;
-S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))S O UL TX=10000000000000000ll;
+S C*S4(C*s,UI x)_(S2(S2(s,x/T2),x%T2))S C*s4(C*s,UI x)_(x<T2?s2(s,x):S2(s2(s,x/T2),x%T2))S O UI T4=1e4;
+S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T4),x%T4))S O UI T8=1e8;
+S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))S O UL TX=1e16;
                                       S C*su(C*s,UL x)_(x<TX?sX(s,x):SX(s4(s,x/TX),x%TX))
-S C*sl_(C*s,L x)_($(x<0,P(x==_0N,*s++='0';*s++='N';s)x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v))) 
-S C*sd_(D x,C*s)_(UL v=*(UL*)&x;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,*s++='0';*s++='n';s)$(v>>63,*s++='-')P(e==2047,*s++='0';*s++='w';s)
- P(!e&&!m,*s++='0';*s++='.';*s++='0';s)$(e,m|=1ll<<52)e-=1023+52;I t=0;
- $(e>0,F(e,$(m>=1ull<<62,t++;m=(m+2)/5)E(m*=2)))E(F(-e,$(m>=1ull<<60,m=(m+1)/2)E(t--;m*=5)))
- W(!(m%10),m/=10;t++)
- C*r=su(s+1,m);I l=r-s-1;t+=l-1;
- I d=1;$(0<=t&&t<7,d=t+1;t=0)
- F(d,$(s==r-1,*s++='0';r++)E(*s=s[1];s++))
- *s++='.';$(s==r,*s++='0')E(s=r)
- $(t,*s++='e';s=sl_(s,t))s)
+#define MC(x,y)(mc(x,y,Z(y)-1)+Z(y)-1)
+S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v))) 
+S C*sd_(D x,C*s)_(UL v=*(UL*)&x;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,MC(s,"0n"))$(v>>63,*s++='-')P(e==2047,MC(s,"0w"))P(!e&&!m,MC(s,"0.0"))
+ $(e,m|=1ll<<52)e-=1023+52;I t=0;$(e>0,F(e,$(m>=1ull<<62,t++;m=(m+2)/5)E(m*=2)))E(F(-e,$(m>=1ull<<60,m=(m+1)/2)E(t--;m*=5)))
+ W(!(m%10),m/=10;t++)C*r=su(s+1,m);I l=r-s-1;t+=l-1;I d=1;$(0<=t&&t<7,d=t+1;t=0)F(d,$(s==r-1,*s++='0';r++)E(*s=s[1];s++))
+ *s++='.';$(s==r,*s++='0')E(s=r)$(t,*s++='e';s=sl_(s,t))s)
 S A sd(D v)_(C s[32];aCm(s,sd_(v,s)))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
