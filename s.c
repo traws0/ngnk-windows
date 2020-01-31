@@ -1,15 +1,13 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
-S O UI T2=100,T4=10000,T8=100000000;S O UL TX=10000000000000000;
 S O H*dt=(H*)"0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849"
              "5051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899";
-S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))
-S C*S4(C*s,UI x)_(S2(S2(s,x/T2),x%T2))S C*s4(C*s,UI x)_(x<T2?s2(s,x):S2(s2(s,x/T2),x%T2))
-S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T4),x%T4))
-S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))
+S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))     S O UI T2=100;
+S C*S4(C*s,UI x)_(S2(S2(s,x/T2),x%T2))S C*s4(C*s,UI x)_(x<T2?s2(s,x):S2(s2(s,x/T2),x%T2))S O UI T4=10000;
+S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T4),x%T4))S O UI T8=100000000;
+S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))S O UL TX=10000000000000000ll;
                                       S C*su(C*s,UL x)_(x<TX?sX(s,x):SX(s4(s,x/TX),x%TX))
-S C*sl_(C*s,L v)_($(v<0,P(v==_0N,*s++='0';*s++='N';s)v=-v;*s++='-')su(s,v))
-S A sl(L v)_(C s[20];aCm(s,sl_(s,v)))
-S C*sd_(D v0,C*s)_(UL v=*(UL*)&v0;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,*s++='0';*s++='n';s)$(v>>63,*s++='-')P(e==2047,*s++='0';*s++='w';s)
+S C*sl_(C*s,L x)_($(x<0,P(x==_0N,*s++='0';*s++='N';s)x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v))) 
+S C*sd_(D x,C*s)_(UL v=*(UL*)&x;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,*s++='0';*s++='n';s)$(v>>63,*s++='-')P(e==2047,*s++='0';*s++='w';s)
  P(!e&&!m,*s++='0';*s++='.';*s++='0';s)$(e,m|=1ll<<52)e-=1023+52;I t=0;
  $(e>0,F(e,$(m>=1ull<<62,t++;m=(m+2)/5)E(m*=2)))E(F(-e,$(m>=1ull<<60,m=(m+1)/2)E(t--;m*=5)))
  W(!(m%10),m/=10;t++)
