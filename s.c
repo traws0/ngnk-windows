@@ -8,11 +8,11 @@ S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T
                                       S C*su(C*s,UL x)_(x<TX?sX(s,x):SX(s4(s,x/TX),x%TX))
 #define MC(x,y)(mc(x,y,Z(y)-1)+Z(y)-1)
 S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v))) 
-S C*sd_(D x,C*s)_(UL v=*(UL*)&x;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,MC(s,"0n"))$(v>>63,*s++='-')P(e==2047,MC(s,"0w"))P(!e&&!m,MC(s,"0.0"))
+S C*sd_(C*s,D x)_(UL v=*(UL*)&x;I e=v<<1>>53;UL m=v<<12>>12;P(e==2047&&m,MC(s,"0n"))$(v>>63,*s++='-')P(e==2047,MC(s,"0w"))P(!e&&!m,MC(s,"0.0"))
  $(e,m|=1ll<<52)e-=1023+52;I t=0;$(e>0,F(e,$(m>=1ull<<62,t++;m=(m+2)/5)E(m*=2)))E(F(-e,$(m>=1ull<<60,m=(m+1)/2)E(t--;m*=5)))
  W(!(m%10),m/=10;t++)C*r=su(s+1,m);I l=r-s-1;t+=l-1;I d=1;$(0<=t&&t<7,d=t+1;t=0)F(d,$(s==r-1,*s++='0';r++)E(*s=s[1];s++))
  *s++='.';$(s==r,*s++='0')E(s=r)$(t,*s++='e';s=sl_(s,t))s)
-S A sd(D v)_(C s[32];aCm(s,sd_(v,s)))
+S A sd(D v)_(C s[32];aCm(s,sd_(s,v)))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
