@@ -26,15 +26,14 @@ S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C
 S UL addcll(UL x,UL y,UL c,UL*p)_(UL u=x+y+c;*p=u<x||u<y;u) // or __builtin_addcll
 S UL POW5[326][2],INV5[342][2];S V set3(UL*x,O UL*y){mc(x,y,24);}S V shr3(UL*x,I d){F(2,x[i]=x[i]>>d|x[i+1]<<(64-d))x[2]>>=d;}
 S V add3(UL*x,O UL*y){UL c=0;F(3,x[i]=addcll(x[i],y[i],c,&c));}S V ash3(UL*x,I d){UL y[3];set3(y,x);shr3(y,d);add3(x,y);}
-V init(){UL x[]={[2]=1ll<<60};F(ZZ(POW5),mc(POW5+i,x+1,16);ash3(x,2);$(x[2]>>61&1,shr3(x,1)))
+SN V init(){UL x[]={[2]=1ll<<60};F(ZZ(POW5),mc(POW5+i,x+1,16);ash3(x,2);$(x[2]>>61&1,shr3(x,1)))
  *x=0;x[1]=1;x[2]=1ll<<61;F(ZZ(INV5),mc(INV5+i,x+1,16);ash3(x,1);Fj(4,ash3(x,4<<j))UL y[3]={x[1],x[2]};add3(x,y);
                                      *y=x[2];y[1]=0;add3(x,y);W(x[2]>>61,shr3(x,1)))}
-S V INIT(){$(!INV5[1][0],init())}
 S UI dm(UL*p)_(UL x=*p,q=x/10;*p=q;(UI)x-10*(UI)q)S UI l10p2(I x)_(x*78913>>18)S UI l10p5(I x)_(x*732923>>20)S I p5b(I x)_(x*1217359>>19)
 S I mp5(UL x,UI p)_(F(p,UL q=x/5;P((UI)x-5*(UI)q,0)x=q)1)S I mp2(UL x,UI p)_(!(x&((1ll<<p)-1)))
 S C*sd_(C*s,D x)_(UL b;mc(&b,&x,8);UL m=b<<12>>12;I e=b<<1>>53;P(m&&e==2047,MC(s,"0n"))$(b>>63,*s++='-')P(e==2047,MC(s,"0w"))
  m|=(UL)!!e<<52;e+=!e-1075;P(!m||(e<1&&e>-53&&mp2(m,-e)),MC(sX(s,m>>-e),".0")) // m*2^e = u*10^t
- UL u;I t;I ev=!(m&1);UI h=m<<12||e<-1073;UL v,w;I u0=0,w0=0;m<<=2;INIT();
+ UL u;I t;I ev=!(m&1);UI h=m<<12||e<-1073;UL v,w;I u0=0,w0=0;m<<=2;$(!INV5[1][0],init())
  $(e>1,t=l10p2(e-2)-(e>5);u=msha(m,INV5[ t],t-e+p5b( t)+127,&v,&w,h);$(t<22,!(m%5)?u0=mp5(m,t):ev?w0=mp5(m-1-h,t):(v-=mp5(m+2,t))))
  E(t=e-2+l10p5(2-e)-(e<1);u=msha(m,POW5[-t],t-e-p5b(-t)+126,&v,&w,h);$(t<e,u0=1;ev?w0=h:--v)E$(t<e+61,u0=mp2(m,t-e+2)))
  $(w0||u0,UC d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)$(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))$(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
