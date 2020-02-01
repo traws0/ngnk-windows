@@ -81,7 +81,7 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define extr(x,y,c)({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
 #define min(x,y)extr(x,y,<)
 #define max(x,y)extr(x,y,>)
-SI L d2l(D v)_(*(L*)(V*)&v)SI L llabs(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<=y&&y<=z)
+SI L d2l(D v)_(*(L*)(V*)&v)SI L absL(L x)_(x<0?-x:x)SI I C3(UC x,UC y,UC z)_(x<=y&&y<=z)
 SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(C3('0',c,'9'))
 
 //   () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
