@@ -22,6 +22,8 @@ S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndi(fl,gs(x));P(i>=0
  P(utu&&n==2,h(bu|Av(u));1)P(utv&&n==3,h(bv|Av(u));1)N(rhs(xx));h(ba);h(n-1);1)
 A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;F(16,lu[i]=-1)F(yn,P(!rhs(yai),xr;yr;0)h(i==yn-1?br:bp))yr;
  y=fb;F(16,I j=lu[i];$(ycj==bg,asrt(Ar(y)==1);ycj=bd))AK(k,AT(to,x)))
+#undef h
+#undef hc
 
 S A sp0[0x10000],*sp=sp0+ZZ(sp0),*loc;S C*ip;
 S A vm_(A f/*0*/)_(W(1,UC b=*ip++;$(b>=bc,*--sp=mR(A(fc)[b&(mxc-1)]))
