@@ -7,7 +7,7 @@ S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T
 S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))S O UL TX=1e16;
                                       S C*su(C*s,UL x)_(x<TX?sX(s,x):SX(s4(s,x/TX),x%TX))
 #define MC(x,y)(mc(x,y,Z(y)-1)+Z(y)-1)
-S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v))) 
+S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v)))
 
 // github.com/ulfjack/ryu (apache2|boost license)
 #if defined(__SIZEOF_INT128__)
@@ -39,8 +39,8 @@ S C*sd_(C*s,D x)_(UL b;mc(&b,&x,8);UL m=b<<12>>12;I e=b<<1>>53;P(m&&e==2047,MC(s
  $(w0||u0,UC d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)$(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))$(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
  E(UC d=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
  s++;UI l=su(s,u)-s;s[-1]=*s;$(l>1,*s='.';s+=l)t+=l-1;P(!t,s)*s++='e';$(t<0,*s++='-';t=-t)s4(s,t))
+S A sd(D v)_(A u=aC(24);AN(sd_(uc,v)-uc,u))
 
-S A sd(D v)_(C s[32];aCm(s,sd_(s,v)))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
