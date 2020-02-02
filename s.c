@@ -18,10 +18,10 @@ S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C
  S UL mult(UL a,UL b,UL*rh)_(UI al=a,ah=a>>32,bl=b,bh=b>>32;UL b00=(UL)al*bl,b01=(UL)al*bh,b10=(UL)ah*bl,b11=(UL)ah*bh;
   UI b00l=b00,b00h=b00>>32;UL m1=b10+b00h;UI m1l=m1,m1h=m1>>32;UL m2=b01+m1l;UI m2l=m2,m2h=m2>>32;*rh=b11+m1h+m2h;(UL)m2l<<32|b00l)
  S UL msha(UL m,O UL*a,I j,UL*v,UL*w,UI sh)_(m>>=1;UL t;UL l=mult(m,*a,&t);UL h;UL m0=t+mult(m,a[1],&h);h+=m0<t;
-  UL l2=l+*a,m2=m0+a[1]+(l2<l),h2=h+(m2<m0);*v=shr(m2,h2,j-64-1);
-  $(sh==1,UL l3=l-*a,m3=m0-a[1]-(l3>l),h3=h-(m3>m0);*w=shr(m3,h3,j-64-1))
+  UL l2=l+*a,m2=m0+a[1]+(l2<l),h2=h+(m2<m0);*v=shr(m2,h2,j-65);
+  $(sh==1,UL l3=l-*a,m3=m0-a[1]-(l3>l),h3=h-(m3>m0);*w=shr(m3,h3,j-65))
   E(UL l3=l+l,m3=m0+m0+(l3<l),h3=h+h+(m3<m0),l4=l3-*a,m4=m3-a[1]-(l4>l3),h4=h3-(m4>m3);*w=shr(m4,h4,j-64))
-  shr(m0,h,j-64-1))
+  shr(m0,h,j-65))
 #endif
 S UL addcll(UL x,UL y,UL c,UL*p)_(UL u=x+y+c;*p=u<x||u<y;u) // or __builtin_addcll
 S UL POW5[326][2],INV5[342][2];S V set3(UL*x,O UL*y){mc(x,y,24);}S V shr3(UL*x,I d){F(2,x[i]=x[i]>>d|x[i+1]<<(64-d))x[2]>>=d;}
