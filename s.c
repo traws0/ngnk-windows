@@ -7,7 +7,7 @@ S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T
 S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))S O UL TX=1e16;
                                       S C*su(C*s,UL x)_(x<TX?sX(s,x):SX(s4(s,x/TX),x%TX))
 #define MC(x,y)(mc(x,y,Z(y)-1)+Z(y)-1)
-S C*sl_(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))S A sl(L v)_(C s[20];aCm(s,sl_(s,v)))
+S C*sl(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))
 
 // github.com/ulfjack/ryu (apache2|boost license)
 #if defined(__SIZEOF_INT128__)
@@ -31,7 +31,7 @@ SN V init(){UL x[]={[2]=1ll<<60};F(ZZ(POW5),mc(POW5+i,x+1,16);ash3(x,2);$(x[2]>>
                                      *y=x[2];y[1]=0;add3(x,y);W(x[2]>>61,shr3(x,1)))}
 S UI dm(UL*p)_(UL x=*p,q=x/10;*p=q;(UI)x-10*(UI)q)S UI l10p2(I x)_(x*78913>>18)S UI l10p5(I x)_(x*732923>>20)S I p5b(I x)_(x*1217359>>19)
 S I mp5(UL x,UI p)_(F(p,UL q=x/5;P((UI)x-5*(UI)q,0)x=q)1)S I mp2(UL x,UI p)_(!(x&((1ll<<p)-1)))
-S C*sd_(C*s,D x)_(UL b;mc(&b,&x,8);UL m=b<<12>>12;I e=b<<1>>53;P(m&&e==2047,MC(s,"0n"))$(b>>63,*s++='-')P(e==2047,MC(s,"0w"))
+S C*sd(C*s,L f)_(UL x=f;UL m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))$(x>>63,*s++='-')P(e==2047,MC(s,"0w"))
  m|=(UL)!!e<<52;e+=!e-1075;P(!m||(e<1&&e>-53&&mp2(m,-e)),MC(sX(s,m>>-e),".0")) // m*2^e = u*10^t
  UL u;I t;I ev=!(m&1);UI h=m<<12||e<-1073;UL v,w;I u0=0,w0=0;m<<=2;$(!INV5[1][0],init())
  $(e>1,t=l10p2(e-2)-(e>5);u=msha(m,INV5[ t],t-e+p5b( t)+127,&v,&w,h);$(t<22,!(m%5)?u0=mp5(m,t):ev?w0=mp5(m-1-h,t):(v-=mp5(m+2,t))))
@@ -39,10 +39,8 @@ S C*sd_(C*s,D x)_(UL b;mc(&b,&x,8);UL m=b<<12>>12;I e=b<<1>>53;P(m&&e==2047,MC(s
  $(w0||u0,UC d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)$(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))$(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
  E(UC d=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
  s++;UI l=su(s,u)-s;s[-1]=*s;$(l>1,*s='.';s+=l)t+=l-1;P(!t,s)*s++='e';$(t<0,*s++='-';t=-t)s4(s,t))
-S A sd(D v)_(A u=aC(24);AN(sd_(uc,v)-uc,u))
-
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
-A1(str,xtc?enl(x):xts?mR(symstr(gs(x))):xtl?sl(gl(x)):xtd?sd(gd(x)):xto?fir(AT(tX,x)):
+A1(str,P(xtl||xtd,UC l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))xtc?enl(x):xts?mR(symstr(gs(x))):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
 S A kp(A x,I p)_(x=kst(x);p?apc(cat(ac('('),x),')'):x)S O C esc(C c)_(c?"tnr\"\\"[Ci("\t\n\r\"\\",c)]:'0')
 S A1(kr,kp(x,                                    xtq||xtr||xtu||xtv||xtw))
