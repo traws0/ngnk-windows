@@ -10,17 +10,12 @@ S C*SX(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T
 S C*sl(C*s,L x)_($(x<0,P(x==_0N,MC(s,"0N"))x=-x;*s++='-')su(s,x))
 
 // github.com/ulfjack/ryu (apache2|boost license)
-#if defined(__SIZEOF_INT128__)
- S UL msh(UL m,O UL*a,I j)_(__uint128_t g=m;((g**a>>64)+g*a[1])>>(j-64))
- S UL msha(UL m,O UL*a,I j,UL*v,UL*w,UI sh)_(*v=msh(m+2,a,j);*w=msh(m-1-sh,a,j);msh(m,a,j))
-#else
- S UL shr(UL l,UL h,UI d)_(h<<(64-d)|l>>d)
- S UL mult(UL a,UL b,UL*rh)_(UI al=a,ah=a>>32,bl=b,bh=b>>32;UL b00=(UL)al*bl,b01=(UL)al*bh,b10=(UL)ah*bl,b11=(UL)ah*bh;
-  UI b00l=b00,b00h=b00>>32;UL m1=b10+b00h;UI m1l=m1,m1h=m1>>32;UL m2=b01+m1l;UI m2l=m2,m2h=m2>>32;*rh=b11+m1h+m2h;(UL)m2l<<32|b00l)
- S UL msha(UL m,O UL*a,I j,UL*v,UL*w,UI sh)_(m>>=1;UL t,l=mult(m,*a,&t),h,m0=t+mult(m,a[1],&h);h+=m0<t;
-  UL l2=l+*a,m2=m0+a[1]+(l2<l),h2=h+(m2<m0);*v=shr(m2,h2,j-65);$(sh==1,UL l3=l-*a,m3=m0-a[1]-(l3>l),h3=h-(m3>m0);*w=shr(m3,h3,j-65))
-  E(UL l3=l+l,m3=m0+m0+(l3<l),h3=h+h+(m3<m0),l4=l3-*a,m4=m3-a[1]-(l4>l3),h4=h3-(m4>m3);*w=shr(m4,h4,j-64))shr(m0,h,j-65))
-#endif
+S UL shr(UL l,UL h,UI d)_(h<<(64-d)|l>>d)
+S UL mult(UL a,UL b,UL*rh)_(UI al=a,ah=a>>32,bl=b,bh=b>>32;UL b00=(UL)al*bl,b01=(UL)al*bh,b10=(UL)ah*bl,b11=(UL)ah*bh;
+ UI b00l=b00,b00h=b00>>32;UL m1=b10+b00h;UI m1l=m1,m1h=m1>>32;UL m2=b01+m1l;UI m2l=m2,m2h=m2>>32;*rh=b11+m1h+m2h;(UL)m2l<<32|b00l)
+S UL msha(UL m,O UL*a,I j,UL*v,UL*w,UI sh)_(m>>=1;UL t,l=mult(m,*a,&t),h,m0=t+mult(m,a[1],&h);h+=m0<t;
+ UL l2=l+*a,m2=m0+a[1]+(l2<l),h2=h+(m2<m0);*v=shr(m2,h2,j-65);$(sh==1,UL l3=l-*a,m3=m0-a[1]-(l3>l),h3=h-(m3>m0);*w=shr(m3,h3,j-65))
+ E(UL l3=l+l,m3=m0+m0+(l3<l),h3=h+h+(m3<m0),l4=l3-*a,m4=m3-a[1]-(l4>l3),h4=h3-(m4>m3);*w=shr(m4,h4,j-64))shr(m0,h,j-65))
 #define NI5 342
 #define NP5 326
 S UL I5[NI5+NP5-1][2];S UL(*P5)[2]=I5+NI5-1;S UL addcll(UL x,UL y,UL c,UL*p)_(UL u=x+y+c;*p=u<x||u<y;u) // or __builtin_addcll
