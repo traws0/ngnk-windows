@@ -26,8 +26,8 @@ SN V pws5(UL(*a)[2],I n,L u,L v,L w){UL x[]={u,v,w},y[3],c;F(n,mc(a+i,x+1,16);sh
 SN V init(){pws5(I5,P5-I5,0xebd5cf2016a52921,0x4ac7ca59a424c507,0x9558b4661b6565f8);**P5=0;P5[0][1]=1ll<<61;pws5(P5,I5+ZZ(I5)-P5,0,0,1ll<<61);}
 S UI dm(UL*p)_(UL x=*p,q=x/10;*p=q;(UI)x-10*(UI)q)S I l10p2(I x)_(x*78913>>18)S I l10p5(I x)_(x*732923>>20)S I p5b(I x)_(x*1217359>>19)
 S I mp5(UL x,UI p)_(F(p,UL q=x/5;P((UI)x-5*(UI)q,0)x=q)1)S I mp2(UL x,UI p)_(!(x&((1ll<<p)-1)))
-S C*sd(C*s,L f)_(UL x=f;UL m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))$(x>>63,*s++='-')P(e==2047,MC(s,"0w"))m|=(UL)!!e<<52;e+=!e-1075;
- P(!m||(e<1&&e>-53&&mp2(m,-e)),MC(sX(s,m>>-e),".0"))e-=2;UL u;I t,ev=!(m&1),h=m<<12||e<-1075,u0=0,w0=0;UL v,w;m<<=2;$(!**P5,init())
+S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))$(x>>63,*s++='-')P(e==2047,MC(s,"0w"))m|=(UL)!!e<<52;e+=!e-1075;
+ P(!m||(e<1&&e>-53&&mp2(m,-e)),MC(sX(s,m>>-e),".0"))e-=2;I t,ev=!(m&1),h=m<<12||e<-1075,u0=0,w0=0;UL u,v,w;m<<=2;$(!**I5,init())
  $(e>1,t=l10p2( e)-(e>7);u=msha(m,P5[-t],t-e+p5b( t)+125,&v,&w,h);$(t<22,!(m%5)?u0=mp5(m,t):ev?w0=mp5(m-1-h,t):(v-=mp5(m+2,t))))
  E(  t=e+l10p5(-e)-(e<3);u=msha(m,P5[-t],t-e-p5b(-t)+124,&v,&w,h);$(t<e+2,u0=1;ev?w0=h:--v)E$(t<e+63,u0=mp2(m,t-e)))
  $(w0||u0,UC d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)$(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))$(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
