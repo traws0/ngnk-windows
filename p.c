@@ -18,7 +18,7 @@ S A pt(C*v)_(A x;C c=*s;P(c=='"',p1(N(pC())))P(c=='`',++s;x=pSs(c);xn>1?enl(x):x
  I i=Ci("'/\\[",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw(i+3*h))
  P(num(s)&&(c-'-'||({C b=s[-1];!ldg(b)&&Ci(")]}\"",b)==4;})),P(s[1]==':',L u=s[2]==':';s+=2+u;L i=20+c-'0';*v=1;u?au(i):av(i))
   P(c=='0'&&s[1]=='x',s+=2;C*p=s;W(dgt(*p)||C3('a',*p,'f'),p++)L m=(p-s)/2;x=aC(m);F(m,xci=unh(*s)<<4|unh(s[1]);s+=2)p1(x))
-  L fp=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;$(!ldg(c),B)W(ldg(c)||c=='.'||c==':',fp|=c=='.'||c=='n'||c=='w';c=*++p))
+  L fp=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;$(!ldg(c),B)W(ldg(c)||c=='.'||c==':',fp|=c=='.'||c=='n'||c=='w'||c=='e';c=*++p))
   P(!fp,x=aL(0);W(1,L l=pl(&s);c=*s;$(!l&&c=='N',l=_0N;c=*++s)x=apv(x,&l);$(c-32||!num(s+1),B)c=*++s)$(c=='i',s++;x=N(gI(x)))E$(c=='j',s++)p1(x))
   x=aD(0);W(1,D d=pd();x=apv(x,&d);c=*s;$(c-32||!num(s+1),B)c=*++s)p1(x))
  i=Ci(vc,c);P(i>19,av_plc)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
