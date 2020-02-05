@@ -121,7 +121,7 @@ A2 a2,aa,aA,add,ap1,ap2,apd,cat,com,cst,cut,dex,dvd,eql,fnd,id_,gtn,idx,ltn,mnm,
 A0 aa0;A3 a3,try;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;XT A syml,glb;XT L mu;
 A err0(O C*),err1(O C*,A),err2(O C*,A,A),err3(O C*,A,A,A),errn(O C*,I,O A*),ea1(A1,A),apv(A,O V*),apc(A,C),catc(A,O C*,L),room(A,L),
   get(A,L),getr(A,L),atn(UC,L),atnv(UC,L,O V*),aCn(O C*,L),aCm(O C*,O C*),aCz(O C*),gkv(A*),pS(C**),till(L);
-V mrn(L,O A*),*mc(V*,O V*,L),mz(V*,L);
+V mrn(L,O A*),*mc(V*,O V*,L),*ms(V*,L,C),*mz(V*,L);
 I Ci(O C*,C),epr(),eso(A,I),memcmp(O V*,O V*,L),mtc_(A,A),sym(A);
 L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),now(),pl(C**),slc_(A,L,L),pu(C**);
 

@@ -32,8 +32,8 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))$(x>>63
  E(  t=e+l10p5(-e)-(e<3);u=msha(m,P5[-t],t-e-p5b(-t)+124,&v,&w,h);$(t<e+2,u0=1;ev?w0=h:--v)E$(t<e+63,u0=mp2(m,t-e)))
  $(w0||u0,UC d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)$(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))$(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
  E(UC d=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
- s++;I l=su(s,u)-s-1;s[-1]=*s;t+=l;P(0<=t&&t<16,F(min(l,t),s[i]=s[i+1])F(t-l,s[l+i]='0')s[t]='.';P(t<l,s+l+1)s[t+1]='0';s+t+2)
- P(-4<t&&t<0,t=-t;F(l+1,s[l+t-i]=s[l-i])s[-1]='0';*s='.';F(t-1,s[i+1]='0')s+l+t+1)
+ s++;I l=su(s,u)-s-1;s[-1]=*s;t+=l;P(0<=t&&t<16,F(min(l,t),s[i]=s[i+1])ms(s+l,t-l,'0');s[t]='.';P(t<l,s+l+1)s[t+1]='0';s+t+2)
+ P(-4<t&&t<0,t=-t;F(l+1,s[l+t-i]=s[l-i])s[-1]='0';*s='.';ms(s+1,t-1,'0')+l+t)
  $(l>0,*s++='.';s+=l)P(!t,s)*s++='e';$(t<0,*s++='-';t=-t)s4(s,t))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,P(xtl||xtd,UC l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))xtc?enl(x):xts?mR(symstr(gs(x))):xto?fir(AT(tX,x)):
