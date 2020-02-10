@@ -17,7 +17,8 @@ S L hops(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("op
 S I hop_(A x/*1*/,I fl)_(P(xtil,hskt(lh,gi(x)))P(xts,C*s=symptr(gs(x));!*s?1:*s-':'?et(),0:hops(s+1,fl))P(xtC,x=str0(x);dex(x,hops(xc,fl)))et(x))
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))
 A2(v0c,$(ytX,y=N(rdc(ac(10),&y,1)))ytC?v1c(x,N(apv(y,"\n"))):et(x,y))
-A2(v1c,I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;mr2(y,A u=au0;W(n>0,L k=write(f,s,n);$(k<=0,u=err("write");B)s+=k;n-=k)$(f>2,close(f))u))
+A2(v1c,P(!ytC,et(x))I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;
+ mr2(y,A u=au0;W(n>0,L k=write(f,s,n);$(k<=0,u=err("write");B)s+=k;n-=k)$(f>2,close(f))u))
 A1(hcl,asrt(xti);close(gi(x));au0)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A u1c_(I f)_(struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;I pr=PROT_READ|PROT_WRITE,fl=MAP_NORESERVE|MAP_PRIVATE;
