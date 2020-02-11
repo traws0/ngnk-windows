@@ -13,6 +13,6 @@ o/%.s:%.c *.h makefile
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(C) $^ -static -o $@
 	@strip -R .comment $@ # -R '.note*'
-k.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
+libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(C) $^ -shared -Dshared -o $@
 .PHONY: t c
