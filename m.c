@@ -25,10 +25,12 @@ V init()_(A x=syml=aX(5);F(xn,xai=aCn(&"_xyzo"[i],!!i))glb=aa0();cn[tX]=aX(0);cn
  cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);cn[to]=cn[tp]=cn[tq]=cn[tr]=cn[tu]=cn[tv]=cn[tw]=au0;
  S O struct{D d;L i,l;}t[]={{0,0,0},{1,1,1},{_0w,_0Wi,_0W},{-_0w,-_0Wi,-_0W},{_0n,_0Ni,_0N}};
  F(5,ci[i][0]=ad(t[i].d);ci[i][1]=ai(t[i].i);ci[i][2]=al(t[i].l)))
-S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,$(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
-V main(L n,C**a)_(init();$(n>1,exit(!ldf(aCz(a[1]))))repl();exit(0))
-#if __FreeBSD__
- V _start(C**p)_(main(*(L*)(V*)p,p+1);UR)
-#else
- asm(".globl _start\n_start:pop %rdi\nmov %rsp,%rsi\njmp main");
+#ifndef shared
+ S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,$(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
+ V main(L n,C**a)_(init();$(n>1,exit(!ldf(aCz(a[1]))))repl();exit(0))
+ #if __FreeBSD__
+  V _start(C**p)_(main(*(L*)(V*)p,p+1);UR)
+ #else
+  asm(".globl _start\n_start:pop %rdi\nmov %rsp,%rsi\njmp main");
+ #endif
 #endif

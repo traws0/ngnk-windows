@@ -5,10 +5,14 @@ t:k
 c:
 	@echo 'cleaning up' && rm -rfv k o t/t
 o/%.o:%.c *.h makefile
-	@echo -n '$< ' && mkdir -pv o >/dev/null && $(C) -c $< -o $@
+	@echo -n '$< ' && mkdir -pv o    >/dev/null && $(C) -c $< -o $@
+o/so/%.o:%.c *.h makefile
+	@echo -n '$< ' && mkdir -pv o/so >/dev/null && $(C) -c $< -o $@ -fPIC
 o/%.s:%.c *.h makefile
 	@echo '$@ ' && mkdir -pv o && $(C) -c $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(C) $^ -static -o $@
 	@strip -R .comment $@ # -R '.note*'
+k.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
+	@echo '$@ ' && $(C) $^ -shared -Dshared -o $@
 .PHONY: t c
