@@ -9,13 +9,9 @@ S A pen2_(A x,A y,I f,I k,A u)_(
  P(xtlL,P(k==1,L a=gl_(x);arL(f,un,L b=yli;uli=)u)P(k==2,L b=gl_(y);arL(f,un,L a=xli;uli=)u)arL(f,un,L a=xli;L b=yli;uli=)u)
         P(k==1,I a=gi (x);arI(f,un,I b=yii;uii=)u)P(k==2,I b=gi (y);arI(f,un,I a=xii;uii=)u)arI(f,un,I a=xii;I b=yii;uii=)u)
 S A pen2(A x,A y,I f)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(f),u),4))P(xtaAX||ytaAX,eac(av(f),A_(x,y),2))
- I d=xtdD||ytdD,k=xtT<<1|ytT;
- A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));
- P(k==0,P(xtdD,D a=gd(x),b=gd(y),r;arD(f,1,r=);f<8?ad(r):al(d2l(r)))
-        P(xtlL,L a=gl(x),b=gl(y),r;arL(f,1,r=);al(r))
-               I a=gi(x),b=gi(y),r;arI(f,1,r=);ai(r))
+ A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));UC t=xtdD&&f<8?tD:xtiI?tI:tL;I k=xtT<<1|ytT;
+ $(!k,t+=ti-tI;P(t==ti,I a=gi(x),b=gi(y),r;arI(f,1,r=);ai(r)))
  P(k==3&&xn-yn,el(x,y))
- UC t=d&&f<8?tD:xtiI?tI:tL;
  P(xt==t&&Ar(x)==1,mr2(y,pen2_(x,y,f,k,x)))
  P(yt==t&&Ar(y)==1,mr2(x,pen2_(x,y,f,k,y)))
  A u=atn(t,k==2?xn:yn);mr2(x,mr2(y,pen2_(x,y,f,k,u))))
