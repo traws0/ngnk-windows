@@ -19,6 +19,7 @@ A1(a1,atnv(tX,1,A_(x)))A2(a2,atnv(tX,2,A_(x,y)))A3(a3,atnv(tX,3,A_(x,y,z)))A2(aA
 A aCn(O C*s,L n)_(atnv(tC,n,s))A aCm(O C*s,O C*t)_(aCn(s,t-s))A aCz(O C*s)_(aCn(s,strlen(s)))
 I memcmp(O V*x,O V*y,L n)_(O C*p=x,*q=y;F(n,I d=*p++-*q++;P(d,d))0)L strlen(O C*x)_(O C*p=x;W(*p,p++)p-x)
 V*mc(V*x,O V*y,L n)_(C*p=x;O C*q=y;F(n,p[i]=q[i])x)V*ms(V*x,L n,C c)_(C*p=x;F(n,*p++=c);x)V*mz(V*x,L n)_(ms(x,n,0))
+A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)A u=AN(n,atnv(tC,n+l,xc));xr;u)
 I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 V init()_(A x=syml=aX(5);F(xn,xai=aCn(&"_xyzo"[i],!!i))glb=aa0();cn[tX]=aX(0);cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0N);
