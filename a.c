@@ -101,17 +101,16 @@ SN V eqlLl(L*a,L*b,L*r,L n){L v=*b;F(n,r[i]=a[i]==v)}
 SN V eqlII(I*a,I*b,I*r,L n){F(n,r[i]=a[i]==b[i])}
 SN V eqlLL(L*a,L*b,L*r,L n){F(n,r[i]=a[i]==b[i])}
 #define eqlDD eqlLL
-#define h(x) {{x##II,x##LL,x##DD},{x##iI,x##lL,x##dD},{x##Ii,x##Ll,x##Dd},{x##II,x##LL,x##DD}},
-S O V*arf[11][4][3]={{},h(add)h(sub)h(mul)h(div)h(mod)h(mnm)h(mxm)h(ltn)h(gtn)h(eql)};
+#define h(x) {{x##iI,x##lL,x##dD},{x##Ii,x##Ll,x##Dd},{x##II,x##LL,x##DD}},
+S O V*arf[11][3][3]={{},h(add)h(sub)h(mul)h(div)h(mod)h(mnm)h(mxm)h(ltn)h(gtn)h(eql)};
 #undef h
-S A pen2(A x,A y,I f)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(f),u),4))P(xtaAX||ytaAX,eac(av(f),A_(x,y),2))
- A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));UC t=xtdD&&f<8?tD:xtiI?tI:tL;I k=xtT<<1|ytT;
- $(!k,t+=ti-tI;P(t==ti,I a=gi(x),b=gi(y),r;arI(f,1,r=);ai(r)))
- P(k==3&&xn-yn,el(x,y))
- V*a=xti?(V*)&x:xc;V*b=yti?(V*)&y:yc;void(*fn)(V*,V*,V*,L)=arf[f][k][xt-(xtt?ti:tI)];
- P(xt==t&&Ar(x)==1,mr2(y,fn(a,b,xc,xn);x))
- P(yt==t&&Ar(y)==1,mr2(x,fn(a,b,yc,yn);y))
- A u=atn(t,k==2?xn:yn);mr2(x,mr2(y,fn(a,b,uc,un);u)))
+S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2))
+ A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;P(k==3&&xn-yn,el(x,y))
+ V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[v][k-!!k][xt-(xtt?ti:tI)];UC t=xtdD&&v<8?tD:xtiI?tI:tL;
+ $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);ai(r)))
+ P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))
+ P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
+ A u=atn(t,k-1?xn:yn);mr2(x,mr2(y,f(a,b,uc,un);u)))
 S A1(s2l,xts?al(gs(x)):AT(tL,x))A2(eql,$(xtsS&&ytsS,x=s2l(x);y=s2l(y))pen2(x,y,vi('=')))
 A2(mod,P(xtl,xtl&&*xl==_0N?xr,out(y):pen2(x,y,vi('!')))$(xtt||xta,$(xta,x=enl(x))x=rsh(al(len_(y)),x))
                                                        $(ytt||yta,$(yta,y=enl(y))y=rsh(al(len_(x)),y))len_(x)-len_(y)?el(x,y):aa(x,y))
