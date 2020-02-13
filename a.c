@@ -11,102 +11,49 @@ A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(x
 #define modi(x,y) (x>0?(y%x+x)%x:x?y/-x:_0Ni)
 #define modl(x,y) (x>0?(y%x+x)%x:x?y/-x:_0N )
 #define modd(x,y) ((V)x,(V)y,_0n)
-SN V addiI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=v+b[i])}
-SN V addlL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=v+b[i])}
-SN V adddD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=v+b[i])}
-SN V addIi(I*a,I*b,I*r,L n){addiI(b,a,r,n);}
-SN V addLl(L*a,L*b,L*r,L n){addlL(b,a,r,n);}
-SN V addDd(D*a,D*b,D*r,L n){D v=*b;F(n,r[i]=a[i]+v)}
-SN V addII(I*a,I*b,I*r,L n){F(n,r[i]=a[i]+b[i])}
-SN V addLL(L*a,L*b,L*r,L n){F(n,r[i]=a[i]+b[i])}
-SN V addDD(D*a,D*b,D*r,L n){F(n,r[i]=a[i]+b[i])}
-SN V subiI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=v-b[i])}
-SN V sublL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=v-b[i])}
-SN V subdD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=v-b[i])}
-SN V subIi(I*a,I*b,I*r,L n){I v=-*b;addIi(a,&v,r,n);}
-SN V subLl(L*a,L*b,L*r,L n){L v=-*b;addLl(a,&v,r,n);}
-SN V subDd(D*a,D*b,D*r,L n){D v=-*b;addDd(a,&v,r,n);}
-SN V subII(I*a,I*b,I*r,L n){F(n,r[i]=a[i]-b[i])}
-SN V subLL(L*a,L*b,L*r,L n){F(n,r[i]=a[i]-b[i])}
-SN V subDD(D*a,D*b,D*r,L n){F(n,r[i]=a[i]-b[i])}
-SN V muliI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=v*b[i])}
-SN V mullL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=v*b[i])}
-SN V muldD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=v*b[i])}
-SN V mulIi(I*a,I*b,I*r,L n){muliI(b,a,r,n);}
-SN V mulLl(L*a,L*b,L*r,L n){mullL(b,a,r,n);}
-SN V mulDd(D*a,D*b,D*r,L n){muldD(b,a,r,n);}
-SN V mulII(I*a,I*b,I*r,L n){F(n,r[i]=a[i]*b[i])}
-SN V mulLL(L*a,L*b,L*r,L n){F(n,r[i]=a[i]*b[i])}
-SN V mulDD(D*a,D*b,D*r,L n){F(n,r[i]=a[i]*b[i])}
-SN V diviI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=divi(v,b[i]))}
-SN V divlL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=divl(v,b[i]))}
-SN V divdD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=divd(v,b[i]))}
-SN V divIi(I*a,I*b,I*r,L n){I v=*b;F(n,r[i]=divi(a[i],v))}
-SN V divLl(L*a,L*b,L*r,L n){L v=*b;F(n,r[i]=divl(a[i],v))}
-SN V divDd(D*a,D*b,D*r,L n){D v=*b;F(n,r[i]=divd(a[i],v))}
-SN V divII(I*a,I*b,I*r,L n){F(n,r[i]=divi(a[i],b[i]))}
-SN V divLL(L*a,L*b,L*r,L n){F(n,r[i]=divl(a[i],b[i]))}
-SN V divDD(D*a,D*b,D*r,L n){F(n,r[i]=divd(a[i],b[i]))}
-SN V modiI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=modi(v,b[i]))}
-SN V modlL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=modl(v,b[i]))}
-SN V moddD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=modd(v,b[i]))}
-SN V modIi(I*a,I*b,I*r,L n){I v=*b;F(n,r[i]=modi(a[i],v))}
-SN V modLl(L*a,L*b,L*r,L n){L v=*b;F(n,r[i]=modl(a[i],v))}
-SN V modDd(D*a,D*b,D*r,L n){D v=*b;F(n,r[i]=modd(a[i],v))}
-SN V modII(I*a,I*b,I*r,L n){F(n,r[i]=modi(a[i],b[i]))}
-SN V modLL(L*a,L*b,L*r,L n){F(n,r[i]=modl(a[i],b[i]))}
-SN V modDD(D*a,D*b,D*r,L n){F(n,r[i]=modd(a[i],b[i]))}
-SN V mnmiI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=min(v,b[i]))}
-SN V mnmlL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=min(v,b[i]))}
-SN V mnmdD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=min(v,b[i]))}
-SN V mnmIi(I*a,I*b,I*r,L n){mnmiI(b,a,r,n);}
-SN V mnmLl(L*a,L*b,L*r,L n){mnmlL(b,a,r,n);}
-SN V mnmDd(D*a,D*b,D*r,L n){mnmdD(b,a,r,n);}
-SN V mnmII(I*a,I*b,I*r,L n){F(n,r[i]=min(a[i],b[i]))}
-SN V mnmLL(L*a,L*b,L*r,L n){F(n,r[i]=min(a[i],b[i]))}
-SN V mnmDD(D*a,D*b,D*r,L n){F(n,r[i]=min(a[i],b[i]))}
-SN V mxmiI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=max(v,b[i]))}
-SN V mxmlL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=max(v,b[i]))}
-SN V mxmdD(D*a,D*b,D*r,L n){D v=*a;F(n,r[i]=max(v,b[i]))}
-SN V mxmIi(I*a,I*b,I*r,L n){mxmiI(b,a,r,n);}
-SN V mxmLl(L*a,L*b,L*r,L n){mxmlL(b,a,r,n);}
-SN V mxmDd(D*a,D*b,D*r,L n){mxmdD(b,a,r,n);}
-SN V mxmII(I*a,I*b,I*r,L n){F(n,r[i]=max(a[i],b[i]))}
-SN V mxmLL(L*a,L*b,L*r,L n){F(n,r[i]=max(a[i],b[i]))}
-SN V mxmDD(D*a,D*b,D*r,L n){F(n,r[i]=max(a[i],b[i]))}
-SN V ltniI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=v<b[i])}
-SN V ltnlL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=v<b[i])}
-SN V ltndD(D*a,D*b,L*r,L n){D v=*a;F(n,r[i]=v<b[i])}
-SN V ltnIi(I*a,I*b,I*r,L n){I v=*b;F(n,r[i]=a[i]<v)}
-SN V ltnLl(L*a,L*b,L*r,L n){L v=*b;F(n,r[i]=a[i]<v)}
-SN V ltnDd(D*a,D*b,L*r,L n){D v=*b;F(n,r[i]=a[i]<v)}
-SN V ltnII(I*a,I*b,I*r,L n){F(n,r[i]=a[i]<b[i])}
-SN V ltnLL(L*a,L*b,L*r,L n){F(n,r[i]=a[i]<b[i])}
-SN V ltnDD(D*a,D*b,L*r,L n){F(n,r[i]=a[i]<b[i])}
-SN V gtniI(I*a,I*b,I*r,L n){ltnIi(b,a,r,n);}
-SN V gtnlL(L*a,L*b,L*r,L n){ltnLl(b,a,r,n);}
-SN V gtndD(D*a,D*b,L*r,L n){ltnDd(b,a,r,n);}
-SN V gtnIi(I*a,I*b,I*r,L n){ltniI(b,a,r,n);}
-SN V gtnLl(L*a,L*b,L*r,L n){ltnlL(b,a,r,n);}
-SN V gtnDd(D*a,D*b,L*r,L n){ltndD(b,a,r,n);}
-SN V gtnII(I*a,I*b,I*r,L n){ltnII(b,a,r,n);}
-SN V gtnLL(L*a,L*b,L*r,L n){ltnLL(b,a,r,n);}
-SN V gtnDD(D*a,D*b,L*r,L n){ltnDD(b,a,r,n);}
-SN V eqliI(I*a,I*b,I*r,L n){I v=*a;F(n,r[i]=v==b[i])}
-SN V eqllL(L*a,L*b,L*r,L n){L v=*a;F(n,r[i]=v==b[i])}
-#define eqldD eqllL
-SN V eqlIi(I*a,I*b,I*r,L n){I v=*b;F(n,r[i]=a[i]==v)}
-SN V eqlLl(L*a,L*b,L*r,L n){L v=*b;F(n,r[i]=a[i]==v)}
-#define eqlDd eqlLl
-SN V eqlII(I*a,I*b,I*r,L n){F(n,r[i]=a[i]==b[i])}
-SN V eqlLL(L*a,L*b,L*r,L n){F(n,r[i]=a[i]==b[i])}
-#define eqlDD eqlLL
+#define AR1(x,t,rt,c) SN V x(t*a,t*b,rt*r,L n){c;}
+#define ARF(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD) AR1(x##iI,I,I,xiI)AR1(x##Ii,I,I,xIi)AR1(x##II,I,I,xII)\
+                                                   AR1(x##lL,L,L,xlL)AR1(x##Ll,L,L,xLl)AR1(x##LL,L,L,xLL)\
+                                                   AR1(x##dD,D,D,xdD)AR1(x##Dd,D,D,xDd)AR1(x##DD,D,D,xDD)
+#define CMF(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD) AR1(x##iI,I,I,xiI)AR1(x##Ii,I,I,xIi)AR1(x##II,I,I,xII)\
+                                                   AR1(x##lL,L,L,xlL)AR1(x##Ll,L,L,xLl)AR1(x##LL,L,L,xLL)\
+                                                   AR1(x##dD,D,L,xdD)AR1(x##Dd,D,L,xDd)AR1(x##DD,D,L,xDD)
+ARF(add,{I v=*a;F(n,r[i]=     v+b[i] )},{addiI(b,a,r,n);              },{F(n,r[i]=     a[i]+b[i] )},
+        {L v=*a;F(n,r[i]=     v+b[i] )},{addlL(b,a,r,n);              },{F(n,r[i]=     a[i]+b[i] )},
+        {D v=*a;F(n,r[i]=     v+b[i] )},{D v=*b;F(n,r[i]=a[i]+v)      },{F(n,r[i]=     a[i]+b[i] )})
+ARF(sub,{I v=*a;F(n,r[i]=     v-b[i] )},{I v=-*b;addIi(a,&v,r,n);     },{F(n,r[i]=     a[i]-b[i] )},
+        {L v=*a;F(n,r[i]=     v-b[i] )},{L v=-*b;addLl(a,&v,r,n);     },{F(n,r[i]=     a[i]-b[i] )},
+        {D v=*a;F(n,r[i]=     v-b[i] )},{D v=-*b;addDd(a,&v,r,n);     },{F(n,r[i]=     a[i]-b[i] )})
+ARF(mul,{I v=*a;F(n,r[i]=     v*b[i] )},{muliI(b,a,r,n);              },{F(n,r[i]=     a[i]*b[i] )},
+        {L v=*a;F(n,r[i]=     v*b[i] )},{mullL(b,a,r,n);              },{F(n,r[i]=     a[i]*b[i] )},
+        {D v=*a;F(n,r[i]=     v*b[i] )},{muldD(b,a,r,n);              },{F(n,r[i]=     a[i]*b[i] )})
+ARF(div,{I v=*a;F(n,r[i]=divi(v,b[i]))},{I v=*b;F(n,r[i]=divi(a[i],v))},{F(n,r[i]=divi(a[i],b[i]))},
+        {L v=*a;F(n,r[i]=divl(v,b[i]))},{L v=*b;F(n,r[i]=divl(a[i],v))},{F(n,r[i]=divl(a[i],b[i]))},
+        {D v=*a;F(n,r[i]=divd(v,b[i]))},{D v=*b;F(n,r[i]=divd(a[i],v))},{F(n,r[i]=divd(a[i],b[i]))})
+ARF(mod,{I v=*a;F(n,r[i]=modi(v,b[i]))},{I v=*b;F(n,r[i]=modi(a[i],v))},{F(n,r[i]=modi(a[i],b[i]))},
+        {L v=*a;F(n,r[i]=modl(v,b[i]))},{L v=*b;F(n,r[i]=modl(a[i],v))},{F(n,r[i]=modl(a[i],b[i]))},
+        {D v=*a;F(n,r[i]=modd(v,b[i]))},{D v=*b;F(n,r[i]=modd(a[i],v))},{F(n,r[i]=modd(a[i],b[i]))})
+ARF(mnm,{I v=*a;F(n,r[i]= min(v,b[i]))},{mnmiI(b,a,r,n);              },{F(n,r[i]= min(a[i],b[i]))},
+        {L v=*a;F(n,r[i]= min(v,b[i]))},{mnmlL(b,a,r,n);              },{F(n,r[i]= min(a[i],b[i]))},
+        {D v=*a;F(n,r[i]= min(v,b[i]))},{mnmdD(b,a,r,n);              },{F(n,r[i]= min(a[i],b[i]))})
+ARF(mxm,{I v=*a;F(n,r[i]= max(v,b[i]))},{mxmiI(b,a,r,n);              },{F(n,r[i]= max(a[i],b[i]))},
+        {L v=*a;F(n,r[i]= max(v,b[i]))},{mxmlL(b,a,r,n);              },{F(n,r[i]= max(a[i],b[i]))},
+        {D v=*a;F(n,r[i]= max(v,b[i]))},{mxmdD(b,a,r,n);              },{F(n,r[i]= max(a[i],b[i]))})
+CMF(ltn,{I v=*a;F(n,r[i]=     v<b[i] )},{I v=*b;F(n,r[i]=a[i]<v)      },{F(n,r[i]=     a[i]<b[i] )},
+        {L v=*a;F(n,r[i]=     v<b[i] )},{L v=*b;F(n,r[i]=a[i]<v)      },{F(n,r[i]=     a[i]<b[i] )},
+        {D v=*a;F(n,r[i]=     v<b[i] )},{D v=*b;F(n,r[i]=a[i]<v)      },{F(n,r[i]=     a[i]<b[i] )})
+CMF(gtn,{ltnIi(b,a,r,n);              },{ltniI(b,a,r,n);              },{ltnII(b,a,r,n);          },
+        {ltnLl(b,a,r,n);              },{ltnlL(b,a,r,n);              },{ltnLL(b,a,r,n);          },
+        {ltnDd(b,a,r,n);              },{ltndD(b,a,r,n);              },{ltnDD(b,a,r,n);          })
+CMF(eql,{I v=*a;F(n,r[i]=    v==b[i] )},{eqliI(b,a,r,n);              },{F(n,r[i]=     a[i]==b[i])},
+        {L v=*a;F(n,r[i]=    v==b[i] )},{eqllL(b,a,r,n);              },{F(n,r[i]=     a[i]==b[i])},
+        {eqllL((V*)a,(V*)b,r,n);      },{eqllL((V*)b,(V*)a,r,n);      },{eqlLL((V*)a,(V*)b,r,n);  })
 #define h(x) {{x##iI,x##lL,x##dD},{x##Ii,x##Ll,x##Dd},{x##II,x##LL,x##DD}},
-S O V*arf[11][3][3]={{},h(add)h(sub)h(mul)h(div)h(mod)h(mnm)h(mxm)h(ltn)h(gtn)h(eql)};
+S O V*arf[10][3][3]={h(add)h(sub)h(mul)h(div)h(mod)h(mnm)h(mxm)h(ltn)h(gtn)h(eql)};
 #undef h
 S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;P(k==3&&xn-yn,el(x,y))
- V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[v][k-!!k][xt-(xtt?ti:tI)];UC t=xtdD&&v<8?tD:xtiI?tI:tL;
+ V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[v-1][k-!!k][xt-(xtt?ti:tI)];UC t=xtdD&&v<8?tD:xtiI?tI:tL;
  $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);ai(r)))
  P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))
  P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
