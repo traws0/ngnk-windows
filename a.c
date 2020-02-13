@@ -5,13 +5,12 @@ A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*C3('A',c,'Z'))S L f
 A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 
-#define divi(x,y) (y?x/y:!x?_0Ni:a>0?_0Wi:-_0Wi)
-#define divl(x,y) (y?x/y:!x?_0N :a>0?_0W :-_0W )
-#define divd(x,y) (x/y)
-#define modi(x,y) (x>0?(y%x+x)%x:x?y/-x:_0Ni)
-#define modl(x,y) (x>0?(y%x+x)%x:x?y/-x:_0N )
-#define modd(x,y) ((V)x,(V)y,_0n)
-#define hf(x,t,rt,c) SN V x(t*a,t*b,rt*r,L n){c;}
+#define divi(x,y)(y?x/y:!x?_0Ni:a>0?_0Wi:-_0Wi)
+#define divl(x,y)(y?x/y:!x?_0N :a>0?_0W :-_0W )
+#define modi(x,y)(x>0?(y%x+x)%x:x?y/-x:_0Ni)
+#define modl(x,y)(x>0?(y%x+x)%x:x?y/-x:_0N )
+#define modd(x,y)((V)x,(V)y,_0n)
+#define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n){c;}
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rD)\
  hf(x##iI,I,I,xiI)hf(x##Ii,I,I,xIi)hf(x##II,I,I,xII)\
  hf(x##lL,L,L,xlL)hf(x##Ll,L,L,xLl)hf(x##LL,L,L,xLL)\
@@ -22,20 +21,20 @@ A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(x
 #define hTt(f)__typeof__(*b)v=*b;F(n,r[i]=f(a[i],v))
 #define hTTo(o)F(n,r[i]=a[i]o b[i])
 #define hTT(f)F(n,r[i]=f(a[i],b[i]))
-#define hs b,a,r,n
-#define hv (V*)a,(V*)b,r,n
+#define hs(x)x(b,a,r,n)
+#define hv(x)x((V*)a,(V*)b,r,n)
 #define hn(x)__typeof__(*b)v=-*b;x(a,&v,r,n);
-//     iI       ,Ii       ,II       ,lL       ,Ll       ,LL       ,dD       ,Dd       ,DD
-ha(add,htTo(+)  ,addiI(hs),hTTo(+)  ,htTo(+)  ,addlL(hs),hTTo(+)  ,htTo(+)  ,hTto(+)  ,hTTo(+)  ,D)
+//     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
+ha(add,htTo(+)  ,hs(addiI),hTTo(+)  ,htTo(+)  ,hs(addlL),hTTo(+)  ,htTo(+)  ,hTto(+)  ,hTTo(+)  ,D)
 ha(sub,htTo(-)  ,hn(addIi),hTTo(-)  ,htTo(-)  ,hn(addLl),hTTo(-)  ,htTo(-)  ,hn(addDd),hTTo(-)  ,D)
-ha(mul,htTo(*)  ,muliI(hs),hTTo(*)  ,htTo(*)  ,mullL(hs),hTTo(*)  ,htTo(*)  ,muldD(hs),hTTo(*)  ,D)
-ha(div,htT(divi),hTt(divi),hTT(divi),htT(divl),hTt(divl),hTT(divl),htT(divd),hTt(divd),hTT(divd),D)
+ha(mul,htTo(*)  ,hs(muliI),hTTo(*)  ,htTo(*)  ,hs(mullL),hTTo(*)  ,htTo(*)  ,hs(muldD),hTTo(*)  ,D)
+ha(div,htT(divi),hTt(divi),hTT(divi),htT(divl),hTt(divl),hTT(divl),htTo(/)  ,hTto(/)  ,hTTo(/)  ,D)
 ha(mod,htT(modi),hTt(modi),hTT(modi),htT(modl),hTt(modl),hTT(modl),htT(modd),hTt(modd),hTT(modd),D)
-ha(mnm,htT(min) ,mnmiI(hs),hTT(min) ,htT(min) ,mnmlL(hs),hTT(min) ,htT(min) ,mnmdD(hs),hTT(min) ,D)
-ha(mxm,htT(max) ,mxmiI(hs),hTT(max) ,htT(max) ,mxmlL(hs),hTT(max) ,htT(max) ,mxmdD(hs),hTT(max) ,D)
+ha(mnm,htT(min) ,hs(mnmiI),hTT(min) ,htT(min) ,hs(mnmlL),hTT(min) ,htT(min) ,hs(mnmdD),hTT(min) ,D)
+ha(mxm,htT(max) ,hs(mxmiI),hTT(max) ,htT(max) ,hs(mxmlL),hTT(max) ,htT(max) ,hs(mxmdD),hTT(max) ,D)
 ha(ltn,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,L)
-ha(gtn,ltnIi(hs),ltniI(hs),ltnII(hs),ltnLl(hs),ltnlL(hs),ltnLL(hs),ltnDd(hs),ltndD(hs),ltnDD(hs),L)
-ha(eql,htTo(==) ,eqliI(hs),hTTo(==) ,htTo(==) ,eqllL(hs),hTTo(==) ,eqllL(hv),eqllL(hv),eqlLL(hv),L)
+ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),L)
+ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(eqllL),hv(eqlLL),L)
 #undef hn
 #undef hv
 #undef hs
