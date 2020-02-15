@@ -28,7 +28,7 @@ ha(div,htT(divi),hTt(divi),hTT(divi),htT(divl),hTt(divl),hTT(divl),htTo(/)  ,hTt
 ha(mod,htT(modi),hTt(modi),hTT(modi),htT(modl),hTt(modl),hTT(modl),htT(modd),hTt(modd),hTT(modd),D)
 ha(mnm,htT(min) ,hs(mnmiI),hTT(min) ,htT(min) ,hs(mnmlL),hTT(min) ,htT(min) ,hs(mnmdD),hTT(min) ,D)
 ha(mxm,htT(max) ,hs(mxmiI),hTT(max) ,htT(max) ,hs(mxmlL),hTT(max) ,htT(max) ,hs(mxmdD),hTT(max) ,D)
-ha(ltn,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,L)
+ha(ltn,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,;        ,;        ,;        ,L)
 ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),L)
 ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(eqlLl),hv(eqlLL),L)
 #undef hn
@@ -42,6 +42,10 @@ ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(
 #undef htTo
 #undef ha
 #undef hf
+S L cmpd(L x)_(x<0?x^((1ll<<63)-1):x)
+S V ltnDD(D*a,D*b,L*r,L n){L*p=(V*)a,*q=(V*)b;F(n,r[i]=cmpd(p[i])<cmpd(q[i]))}
+S V ltndD(D*a,D*b,L*r,L n){L*p=(V*)a,*q=(V*)b;L v=cmpd(*p);F(n,r[i]=v<cmpd(q[i]))}
+S V ltnDd(D*a,D*b,L*r,L n){L*p=(V*)a,*q=(V*)b;L v=cmpd(*q);F(n,r[i]=cmpd(p[i])<v)}
 
 #define h(x,y,z){x##y##z,x##z##y,x##z##z},
 #define h1(a...){h(add,a)h(sub,a)h(mul,a)h(div,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)},
