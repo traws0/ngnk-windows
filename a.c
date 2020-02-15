@@ -6,11 +6,12 @@ A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(x
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 S I divi(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S I modi(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni)
 S L divl(L x,L y)_(y?x/y:(UL)_0N +(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0N )S D modd(D x,D y)_(_0n)
+S L cmpd(L x)_(x^((UL)(x>>63)>>1))S I ltnd(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)<cmpd(b))
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
-#define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,t)\
- hf(x##iI,I,I,xiI)hf(x##Ii,I,I,xIi)hf(x##II,I,I,xII)\
- hf(x##lL,L,L,xlL)hf(x##Ll,L,L,xLl)hf(x##LL,L,L,xLL)\
- hf(x##dD,D,t,xdD)hf(x##Dd,D,t,xDd)hf(x##DD,D,t,xDD)
+#define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,ri,rl,rd)\
+ hf(x##iI,I,ri,xiI)hf(x##Ii,I,ri,xIi)hf(x##II,I,ri,xII)\
+ hf(x##lL,L,rl,xlL)hf(x##Ll,L,rl,xLl)hf(x##LL,L,rl,xLL)\
+ hf(x##dD,D,rd,xdD)hf(x##Dd,D,rd,xDd)hf(x##DD,D,rd,xDD)
 #define htTo(o){__typeof__(*a)v=*a;F(n,r[i]=v o b[i] )}
 #define htT(f) {__typeof__(*a)v=*a;F(n,r[i]=f(v,b[i]))}
 #define hTto(o){__typeof__(*b)v=*b;F(n,r[i]=a[i]o v  )}
@@ -21,16 +22,16 @@ S L divl(L x,L y)_(y?x/y:(UL)_0N +(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x
 #define hv(x)  {x((V*)a,(V*)b,r,n);}
 #define hn(x)  {__typeof__(*b)v=-*b;x(a,&v,r,n);}
 //     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
-ha(add,htTo(+)  ,hs(addiI),hTTo(+)  ,htTo(+)  ,hs(addlL),hTTo(+)  ,htTo(+)  ,hTto(+)  ,hTTo(+)  ,D)
-ha(sub,htTo(-)  ,hn(addIi),hTTo(-)  ,htTo(-)  ,hn(addLl),hTTo(-)  ,htTo(-)  ,hn(addDd),hTTo(-)  ,D)
-ha(mul,htTo(*)  ,hs(muliI),hTTo(*)  ,htTo(*)  ,hs(mullL),hTTo(*)  ,htTo(*)  ,hs(muldD),hTTo(*)  ,D)
-ha(div,htT(divi),hTt(divi),hTT(divi),htT(divl),hTt(divl),hTT(divl),htTo(/)  ,hTto(/)  ,hTTo(/)  ,D)
-ha(mod,htT(modi),hTt(modi),hTT(modi),htT(modl),hTt(modl),hTT(modl),htT(modd),hTt(modd),hTT(modd),D)
-ha(mnm,htT(min) ,hs(mnmiI),hTT(min) ,htT(min) ,hs(mnmlL),hTT(min) ,htT(min) ,hs(mnmdD),hTT(min) ,D)
-ha(mxm,htT(max) ,hs(mxmiI),hTT(max) ,htT(max) ,hs(mxmlL),hTT(max) ,htT(max) ,hs(mxmdD),hTT(max) ,D)
-ha(ltn,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,;        ,;        ,;        ,L)
-ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),L)
-ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(eqlLl),hv(eqlLL),L)
+ha(add,htTo(+)  ,hs(addiI),hTTo(+)  ,htTo(+)  ,hs(addlL),hTTo(+)  ,htTo(+)  ,hTto(+)  ,hTTo(+)  ,I,L,D)
+ha(sub,htTo(-)  ,hn(addIi),hTTo(-)  ,htTo(-)  ,hn(addLl),hTTo(-)  ,htTo(-)  ,hn(addDd),hTTo(-)  ,I,L,D)
+ha(mul,htTo(*)  ,hs(muliI),hTTo(*)  ,htTo(*)  ,hs(mullL),hTTo(*)  ,htTo(*)  ,hs(muldD),hTTo(*)  ,I,L,D)
+ha(div,htT(divi),hTt(divi),hTT(divi),htT(divl),hTt(divl),hTT(divl),htTo(/)  ,hTto(/)  ,hTTo(/)  ,I,L,D)
+ha(mod,htT(modi),hTt(modi),hTT(modi),htT(modl),hTt(modl),hTT(modl),htT(modd),hTt(modd),hTT(modd),I,L,D)
+ha(mnm,htT(min) ,hs(mnmiI),hTT(min) ,htT(min) ,hs(mnmlL),hTT(min) ,htT(min) ,hs(mnmdD),hTT(min) ,I,L,D)
+ha(mxm,htT(max) ,hs(mxmiI),hTT(max) ,htT(max) ,hs(mxmlL),hTT(max) ,htT(max) ,hs(mxmdD),hTT(max) ,I,L,D)
+ha(ltn,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htT(ltnd),hTt(ltnd),hTT(ltnd),I,L,I)
+ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),I,L,I)
+ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(eqlLl),hv(eqlLL),I,L,L)
 #undef hn
 #undef hv
 #undef hs
@@ -42,10 +43,6 @@ ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(
 #undef htTo
 #undef ha
 #undef hf
-S L cmpd(L x)_(x<0?x^((1ll<<63)-1):x)
-S V ltnDD(D*a,D*b,L*r,L n){L*p=(V*)a,*q=(V*)b;F(n,r[i]=cmpd(p[i])<cmpd(q[i]))}
-S V ltndD(D*a,D*b,L*r,L n){L*p=(V*)a,*q=(V*)b;L v=cmpd(*p);F(n,r[i]=v<cmpd(q[i]))}
-S V ltnDd(D*a,D*b,L*r,L n){L*p=(V*)a,*q=(V*)b;L v=cmpd(*q);F(n,r[i]=cmpd(p[i])<v)}
 
 #define h(x,y,z){x##y##z,x##z##y,x##z##z},
 #define h1(a...){h(add,a)h(sub,a)h(mul,a)h(div,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)},
@@ -54,10 +51,10 @@ O V*arf[3][10][3]={h1(i,I)h1(l,L)h1(d,D)};
 #undef h
 S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;P(k==3&&xn-yn,el(x,y))
- V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v-1][k-!!k];UC t=xtdD&&v<8?tD:xtiI?tI:tL;
- $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);ai(r)))P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
+ V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v-1][k-!!k];UC t=xtiI?tI:xtlL?tL:v<8?tD:v==vi('=')?tL:tI;
+ $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
  A u=atn(t,k-1?xn:yn);mr2(x,mr2(y,f(a,b,uc,un);u)))
-S A1(s2l,xts?al(gs(x)):AT(tL,x))A2(eql,$(xtsS&&ytsS,x=s2l(x);y=s2l(y))pen2(x,y,vi('=')))
+S A1(s2i,xts?al(gs(x)):AT(tI,x))A2(eql,$(xtsS&&ytsS,x=s2i(x);y=s2i(y))pen2(x,y,vi('=')))
 A2(mod,P(xtl,xtl&&*xl==_0N?xr,out(y):pen2(x,y,vi('!')))$(xtt||xta,$(xta,x=enl(x))x=rsh(al(len_(y)),x))
                                                        $(ytt||yta,$(yta,y=enl(y))y=rsh(al(len_(x)),y))len_(x)-len_(y)?el(x,y):aa(x,y))
 #define h(c,s) A2(s,pen2(x,y,vi(c)))
