@@ -6,20 +6,20 @@ A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(x
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 S I divi(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S I modi(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni)
 S L divl(L x,L y)_(y?x/y:(UL)_0N +(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0N )S D modd(D x,D y)_(_0n)
-#define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n){c;}
+#define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,t)\
  hf(x##iI,I,I,xiI)hf(x##Ii,I,I,xIi)hf(x##II,I,I,xII)\
  hf(x##lL,L,L,xlL)hf(x##Ll,L,L,xLl)hf(x##LL,L,L,xLL)\
  hf(x##dD,D,t,xdD)hf(x##Dd,D,t,xDd)hf(x##DD,D,t,xDD)
-#define htTo(o)__typeof__(*a)v=*a;F(n,r[i]=v o b[i])
-#define htT(f)__typeof__(*a)v=*a;F(n,r[i]=f(v,b[i]))
-#define hTto(o)__typeof__(*b)v=*b;F(n,r[i]=a[i]o v)
-#define hTt(f)__typeof__(*b)v=*b;F(n,r[i]=f(a[i],v))
-#define hTTo(o)F(n,r[i]=a[i]o b[i])
-#define hTT(f)F(n,r[i]=f(a[i],b[i]))
-#define hs(x)x(b,a,r,n)
-#define hv(x)x((V*)a,(V*)b,r,n)
-#define hn(x)__typeof__(*b)v=-*b;x(a,&v,r,n);
+#define htTo(o){__typeof__(*a)v=*a;F(n,r[i]=v o b[i] )}
+#define htT(f) {__typeof__(*a)v=*a;F(n,r[i]=f(v,b[i]))}
+#define hTto(o){__typeof__(*b)v=*b;F(n,r[i]=a[i]o v  )}
+#define hTt(f) {__typeof__(*b)v=*b;F(n,r[i]=f(a[i],v))}
+#define hTTo(o){F(n,r[i]=a[i]o b[i]  )}
+#define hTT(f) {F(n,r[i]=f(a[i],b[i]))}
+#define hs(x)  {x(b,a,r,n);}
+#define hv(x)  {x((V*)a,(V*)b,r,n);}
+#define hn(x)  {__typeof__(*b)v=-*b;x(a,&v,r,n);}
 //     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
 ha(add,htTo(+)  ,hs(addiI),hTTo(+)  ,htTo(+)  ,hs(addlL),hTTo(+)  ,htTo(+)  ,hTto(+)  ,hTTo(+)  ,D)
 ha(sub,htTo(-)  ,hn(addIi),hTTo(-)  ,htTo(-)  ,hn(addLl),hTTo(-)  ,htTo(-)  ,hn(addDd),hTTo(-)  ,D)
