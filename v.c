@@ -24,7 +24,7 @@ A1(unq,P(!xtT,et(x))P(xn<2,x)I w=tz(xt);
  A y=asc(xR),u=atn(xt,0),z=aC(xn);mz(zc,zn);
  P(w==0,C v=~xc[*yl];F(xn,L j=yli;zcj=v!=xcj;v=xcj)F(xn,$(zci,u=apv(u,&xci)))xr;yr;zr;u)
  P(w==2,I v=~xi[*yl];F(xn,L j=yli;zcj=v!=xij;v=xij)F(xn,$(zci,u=apv(u,&xii)))xr;yr;zr;u)
- P(w==3,L v=~xl[*yl];F(xn,L j=yli;zcj=v!=xlj;v=xlj)F(xn,$(zci,u=apv(u,&xli)))xr;yr;zr;u)
+ P(w==3,K("{x@&@[&#x;i;]@[;0;1]@~=':x@i:<x}",x))
  UR;0)
 S A2(fil,P(ytX||yta,eac(cv('^'),A_(x,y),2))P(ytt,fir(xpt(x,enl(y))))K("{@[y;&^y;x]}",x,y))
 A2(xpt,P(xtt,fil(x,y))P(xtaA||ytaA,en(x,y))y=enla(y);$(xtX,y=blw(y))K("{x@&^y?x}",x,y))
