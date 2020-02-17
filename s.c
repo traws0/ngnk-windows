@@ -39,7 +39,7 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))$(x>>63
  P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,-t-1,'0')+l-t)
  $(l>0,*s++='.';s+=l)*s++='e';$(t<0,t=-t;*s++='-')s4(s,t))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
-A1(str,P(xtl||xtd,UC l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))xtc?enl(x):xts?mR(symstr(gs(x))):xto?fir(AT(tX,x)):
+A1(str,P(xtl||xtd,UC l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))P(xtiI,str(gL(x)))xtc?enl(x):xts?mR(symstr(gs(x))):xto?fir(AT(tX,x)):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):xtt?kst(x):ea1(str,x))
 S A kp(A x,I p)_(x=kst(x);p?apc(cat(ac('('),x),')'):x)S O C esc(C c)_(c?"tnr\"\\"[Ci("\t\n\r\"\\",c)]:'0')
 S A1(kr,kp(x,                                    xtq||xtr||xtu||xtv||xtw))
