@@ -46,5 +46,5 @@ AX(eap,P(n==1&&xtilIL,eac(x,a,n))P(n>2,ern(n,a))A y=n==1?id_(x,*a):*a,z=a[n-1];P
                          P(ytil&&(ztL||ztC),L a=gl(gL(y));z=N(gL(z));A u=ax(z);arL(f,n,L b=a;a=zli;uli=)u)
                          P(ytd||ztD        ,D a=gd(gD(y));z=N(gD(z));A u=ax(z);arD(f,n,D b=a;a=zdi;udi=)u))
  A u=a0();F(zn,y=app(x,A_(get(z,i),y),2);P(!y,zr;ur;0)u=apd(u,y);y=get(z,i))yr;zr;u)
-AX(ear,P(n==1&&xtilIL,rdc(x,a,n))P(n-2,enn(n,a))x=prj(x,A_(*a,av_plc  ),n);dex(x,eac(x,a+1,1)))
-AX(eal,P(n==1&&xtilIL,scn(x,a,n))P(n-2,enn(n,a))x=prj(x,A_(av_plc,a[1]),n);dex(x,eac(x,a  ,1)))
+AX(ear,P(n==1&&xtilIL,rdc(x,a,n))P(n-2,enn(n,a))x=prj(x,A_(*a,au_plc  ),n);dex(x,eac(x,a+1,1)))
+AX(eal,P(n==1&&xtilIL,scn(x,a,n))P(n-2,enn(n,a))x=prj(x,A_(au_plc,a[1]),n);dex(x,eac(x,a  ,1)))
