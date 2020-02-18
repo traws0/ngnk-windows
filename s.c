@@ -38,28 +38,25 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))$(x>>63
  P(0<=t&&t<16,I k=l<t?l:t;mc(s,s+1,k);ms(s+l,t-l,'0');s+=t;*s++='.';s+=l-k;$(t>=l,*s++='0')s)
  P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,-t-1,'0')+l-t)
  $(l>0,*s++='.';s+=l)*s++='e';$(t<0,t=-t;*s++='-')s4(s,t))
-A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
-S A kp(A x,I p)_(x=kst(x);p?apc(cat(ac('('),x),')'):x)S O C esc(C c)_(c?"tnr\"\\"[Ci("\t\n\r\"\\",c)]:'0')
+S A kp(A x,I p)_(x=kst(x);p?apc(cat(ac('('),x),')'):x)S O C esc(C c)_(c?"tnr\"\\"[Ci("\t\n\r\"\\",c)]:'0')A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 S A1(kr,kp(x,                                    xtq||xtr||xtu||xtv||xtw))
 S A1(kl,kp(x,xtX||xtC?xn==1:xtT?xn<=1:xtaA||     xtq||xtr||xtu||xtv||xtw))
 S A1(ka,kp(x,xtX||xtC?xn==1:xtT?xn<=1:xtaA||xtp||xtq||               xtw))
 A1(str,
  P(xtl||xtd,UC l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))
  P(xta,A y=gkv(&x);cat(apc(kl(x),'!'),kr(y)))
- P(xtp,A y=xx;xn==3&&(ytv||ytr)&&xy-au_plc&&xz==au_plc?dex(x,cat(kl(mR(xy)),kst(yR))):K("{@[0x3b/x;#*x:`k'. x;0x5b],0x5d}",x))
+ P(xtp,A y=xx;xn==3&&(ytv||ytr)&&xy-au_plc&&xz==au_plc?dex(x,cat(kl(mR(xy)),str(yR))):K("{@[0x3b/x;#*x:`k'.:x;0x5b],0x5d}",x))
  xts?mR(symstr(gs(x))):
- xtr?cat(ka(fir(AT(tX,x))),kst(aw(Av(x)))):
+ xtr?cat(ka(fir(AT(tX,x))),str(aw(Av(x)))):
  xtu||xtv?atnv(tC,1+(Av(x)>19)+xtu,(C[]){vc[Av(x)],':',':'}):
- xtw?atnv(tC,1+(Av(x)>2),(C[]){"'/\\'/\\"[Av(x)],':'}):
- xtt?K("{$[`c=t:@x;,x;`i=t;$`l$x;`o=t;*.:x;`q=t;,/`k'.:x;\"???\"]}",x):
- ea1(str,x))
+ K("{$[`c=t:@x;,x;`i=t;$`l$x;`o=t;*.:x;`q=t;,/`k'.:x;`w=t;(\"'/\\\\'/\\\\\"@.:x),(2<.:x)#\":\";$'x]}",x))
 A1(kst,
  P(x==au_plc,aC(0))
- P(xtiI,apc(kst(gL(x)),'i'))
  P(xtT&&xn==1,cat(ac(','),kr(fir(x))))
  P(xts,x=str(x);C*s=xc;mr(pS(&s));cat(ac('`'),*s?kst(xn-1?x:fir(x)):x))
  P(xtcC,x=enla(x);I b=0,n=xn,m=n+2;F(n,C c=xci,e=esc(c);$(!C3(32,c,126)&&!e,b=1;B)m+=!!e)A z=aC(b?2+2*n:m);C*s=zc;
   $(b,s=MC(s,"0x");F(n,C c=xci;*s++=hex(c>>4&15);*s++=hex(c&15)))E(*s++='"';F(n,C c=esc(xci);$(c,*s++='\\';*s++=c)E(*s++=xci))*s='"')xr;z)
- P(xtT||xtA,K("{$[`X=t:@x;(0x28,0x3b/`k'x),0x29;`S=t;$[#x;,/`k'x;\"0#`\"];`A=t;\"+\",`k@+x;#x;0x20/`k'x;`D=t;\"0#0n\";`L=t;\"!0\";\"???\"]}",x))
+ P(xti||xtT||xtA,K("{$[|/`I`i=t:@x;(`k@`l$x),\"i\";`X=t;(0x28,0x3b/`k'x),0x29;`S=t;$[#x;,/`k'x;\"0#`\"];`A=t;\"+\",`k@+x"
+                   ";#x;0x20/`k'x;`D=t;\"0#0n\";`L=t;\"!0\";\"???\"]}",x))
  str(x))
 A1(out,K("{$[x~(::);x;(`X=@x)&1<#x;1(0x28,0x0a20/`k'x),0x290a;1`k[x],0x0a];x}",x))
