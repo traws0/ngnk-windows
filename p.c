@@ -20,8 +20,8 @@ S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;A y;$(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),
 S A pt(C*v)_(A x;C c=*s;P(c=='`',s++;x=pSs(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(av_mkl),')'));xn-2?x:xy==au_plc?xr,a0():las(x))P(c=='{',po())
  P(c=='"',p1(N(pC())))P(ltr(c),C*t=s;x=pSs('.');$(s-t==1&&(c=='y'||c=='z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
  P(C3('0',c,'3')&&s[1]==':',I u=s[2]==':';s+=2+u;I i=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(p0x()))
- P(num(s)&&(c-'-'||({C b=s[-1];!ldg(b)&&Ci(")]}\"",b)==4;})),
-  L fp=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;$(!ldg(c),B)W(ldg(c)||c=='.'||c==':',fp|=c=='.'||c=='n'||c=='w'||c=='e';c=*++p))p1(fp?pD():pIL()))
+ P(num(s)&&(c-'-'||(!ldg(s[-1])&&Ci(")]}\"",s[-1])==4)),
+  L d=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;$(!ldg(c),B)W(ldg(c)||c=='.'||c==':',d|=c=='.'||c=='n'||c=='w'||c=='e';c=*++p))p1(d?pD():pIL()))
  I i=Ci(vc,c);P(i>25&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,au_plc)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
 S A pT(C*v)_(A x=N(pt(v));W(1,C c=*s;I i=Ci(vc+26,c);P(i>3,x)s++;$(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));$(xn==2&&xy==au_plc,xy=au0)*v=0)
                                                                  E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
