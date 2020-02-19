@@ -45,24 +45,26 @@ A1(str,P(xtl||xtd,I l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))P(xts,mR
 A1(kst,
  P(x==au_plc,aC(0))
  P(xts,x=str(x);C*s=xc;mr(pS(&s));cat(ac('`'),*s?kst(xn-1?x:fir(x)):x))
- P(xtp||xtcC,
+ P(xtcC,
   K("{kl:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`q`r`u`v`w=t]{0x28,x,0x29}/`k@x};"
      "kr:{(|/`q`r`u`v`w=@x){0x28,x,0x29}/`k@x};"
      "ka:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`p`q`w=t]{0x28,x,0x29}/`k@x};"
      "t:@x;n:#x;"
-     "$[(`c=t)|(`C=t)&~1=n;$[&/(</x</:32 127)|~^(e:0x00090a0d225c)?x;0x22,(,/((0x5c,'0x30746e72225c),x)(e,x)?x),0x22;\"0x\",,/+\"0123456789abcdef\"@16 16\\x];"
+     "$["
+       "(`c=t)|(`C=t)&~1=n;$[&/(</x</:32 127)|~^(e:0x00090a0d225c)?x;0x22,(,/((0x5c,'0x30746e72225c),x)(e,x)?x),0x22;\"0x\",,/+\"0123456789abcdef\"@16 16\\x];"
        "(`C=t)&1=n;\",\",kr@*x;"
-       "`p=t;$[$[~3=#a:.:x;0;~|/`v`r=@*a;0;</~[*|.(1+)]'1_a];kl[a 1],$*a;@[0x3b/b;#*b:`k'a;0x5b],0x5d];"
        "\"???\"]}",x))
- P(xti||xtr||xtT||xtaA,
+ P(xti||xtp||xtr||xtT||xtaA,
   K("{kl:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`q`r`u`v`w=t]{0x28,x,0x29}/`k@x};"
      "kr:{(|/`q`r`u`v`w=@x){0x28,x,0x29}/`k@x};"
      "ka:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`p`q`w=t]{0x28,x,0x29}/`k@x};"
      "t:@x;n:#x;"
-     "$[(|/`X`C`I`L`D`S=t)&1=n;0x2c,kr@*x;"
+     "$[(|/`X`C`I`L`D`S=t)&1=n;:0x2c,kr@*x;]"
+     "$["
        "|/`I`i=t;(`k@`l$x),\"i\";"
        "`X=t;(0x28,0x3b/`k'x),0x29;"
        "`S=t;$[n;,/`k'x;\"0#`\"];"
+       "`p=t;$[$[~3=#a:.:x;0;~|/`v`r=@*a;0;</~[*|.(1+)]'1_a];kl[a 1],$*a;@[0x3b/b;#*b:`k'a;0x5b],0x5d];"
        "`r=t;,/(ka;$:)@'.:x;"
        "`A=t;0x2b,`k@+x;"
        "`a=t;kl[!x],0x21,kr@.:x;"
