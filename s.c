@@ -43,9 +43,9 @@ A1(str,P(xtl||xtd,I l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))P(xts,mR
  K("{$[`c=t:@x;,x;`i=t;$`l$x;`o=t;*.:x;`q=t;,/`k'.:x;|/`p`r=t;`k@x;|/`u`v=t;\":+-*%!&|<>=~,^#_$?@.0123456789\"[i],((`u=t)+19<i:.:x)#0x3a;"
    "`w=t;0x272f5c[3!i],(2<i:.:x)#0x3a;$'x]}",x))
 A1(kst,P(x==au_plc,aC(0))P(xts,x=str(x);C*s=xc;mr(pS(&s));cat(ac('`'),*s?kst(xn-1?x:fir(x)):x))
- K("{kl:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`q`r`u`v`w=t]{0x28,x,0x29}/`k@x};"
-    "kr:{(|/`q`r`u`v`w=@x){0x28,x,0x29}/`k@x};"
-    "ka:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`p`q`w=t]{0x28,x,0x29}/`k@x};"
+ K("{kl:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`q`r`u`v`w=t]{0x28,x,0x29}/`k@x};" //parenthesized as left arg
+    "kr:{(|/`q`r`u`v`w=@x){0x28,x,0x29}/`k@x};"                                        //as right arg
+    "ka:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`p`q`w=t]{0x28,x,0x29}/`k@x};"     //under an adverb
     "t:@x;n:#x;"
     "$[|/`l`d`o`q`u`v`w=t;:$x;];"
     "$[|/`c`C=t;$[(`C=t)&1=n;0x2c,kr@*x;"
