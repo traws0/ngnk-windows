@@ -162,7 +162,8 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(26),au_plc=au(29),av_com=av(24
 #define _0Wi (~_0Ni)
 #define _0n  (D)NAN
 #define _0w  (D)INFINITY
-#define K(s,a...) ({S A f;$(!f,L m=mu;f=val(aCn(s,Z(s)+1));mu=m);app(f,A_(a),Z(A_(a))/ZV);})
+#define K(s,a...) ({S A f;$(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
+A K0(O C*,I);
 XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];SI I ari(A x)_(xtv&&Av(x)<11)
 
 XT O V*arf[3][10][3];
