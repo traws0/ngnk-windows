@@ -16,7 +16,7 @@ S I rhs(A x/*0*/)_(UH o=Ao(x);$(xts,P(gs(x)==4,h(bo);1)L i=fndi(fl,gs(x));P(i>=0
  P(xtsS,hc(xR);h(bu|vi('.'));1)P(!xtX,hc(x==au_plc?au0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
  P((utu||u==av0)&&n==3,N(rhs(xz));N(lhs(x,xy)))
  P(u==cv('$')&&n>3,n--;I p[n];A*a=xa;F(n&~1,N(rhs(*++a));h(i&1?bj:bz);p[i]=An(fb);h(0))N(rhs(n&1?*++a:au0));
-  A y=fb;F(n&~1,I d=(i&1?yn:p[i+1])-p[i];P(d>255,err("mxj");0)yc[p[i]]=d)1)
+  A y=fb;F(n&~1,I d=(i&1?yn:p[i+1])-p[i];$(i&1,I j=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))P(d>255,err("mxj");0)yc[p[i]]=d)1)
  $(u==cu('*')&&n==2,A y=xy;P(ytX&&yn==2&&yx==cu('|'),N(rhs(yy));h(bu|24);1))$(utw&&n==2,A y=xy;P(!ytX&&!ytsS,yR;hc(app(u,&y,1));1))
  I p=0;F(n-1,A y=xa[n-1-i];y==au_plc?(p=1),hc(yR):N(rhs(y)))P(p,N(rhs(xx));h(bP);h(n-1);1)P(u==av0&&n==2,h(br);1)P(u==av_mkl,h(bl);h(n-1);1)
  P(utu&&n==2,h(bu|Av(u));1)P(utv&&n==3,h(bv|Av(u));1)N(rhs(xx));h(ba);h(n-1);1)

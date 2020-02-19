@@ -47,8 +47,8 @@ A1(kst,P(x==au_plc,aC(0))P(xts,x=str(x);C*s=xc;mr(pS(&s));cat(ac('`'),*s?kst(xn-
     "kr:{(|/`q`r`u`v`w=@x){0x28,x,0x29}/`k@x};"                                        //as right arg
     "ka:{$[|/`X`C=t:@x;1=#x;|/`I`L`D`S=t;2>#x;|/`A`a`p`q`w=t]{0x28,x,0x29}/`k@x};"     //under an adverb
     "t:@x;n:#x;"
-    "$[|/`l`d`o`q`u`v`w=t;:$x;];"
-    "$[|/`c`C=t;$[(`C=t)&1=n;0x2c,kr@*x;"
+    "$[|/`l`d`o`q`u`v`w=t;$x;"
+      "|/`c`C=t;$[(`C=t)&1=n;0x2c,kr@*x;"
                   "&/(</x</:32 127)|~^(e:0x00090a0d225c)?x;0x22,(,/((0x5c,'0x30746e72225c),x)(e,x)?x),0x22;"
                   "\"0x\",,/+\"0123456789abcdef\"@16 16\\x];"
       "(|/`X`I`L`D`S=t)&1=n;0x2c,kr@*x;"
