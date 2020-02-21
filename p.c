@@ -7,7 +7,7 @@ S D pdu()_(UL v=pu(&s);C c=*s;P(c=='n'||c=='w',s++;c=='n'?_0n:_0w)I e=0;
  $(c=='.',c=*++s;W(dgt(c),$(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))$(c=='e',s++;e+=pl(&s))e<0?v/p10(-e):v*p10(e))
 S D pd()_(I m=*s=='-';s+=m;(m?-1:1)*pdu())
 S A0(pD,A x=aD(0);C c;W(1,D d=pd();x=apv(x,&d);c=*s;$(c-32||!num(s+1),B)c=*++s)x)
-S A0(pIL,A x=aL(0);C c;W(1,L l=pl(&s);c=*s;$(!l&&c=='N',l=_0N;c=*++s)x=apv(x,&l);$(c-32||!num(s+1),B)c=*++s)$(c=='i',s++;x=N(gI(x)))E$(c=='j',s++)x)
+S A0(pIL,A x=aL(0);C c;W(1,L l=pl(&s);c=*s;$(!l&&c=='N',l=_0N;c=*++s)x=apv(x,&l);$(c-32||!num(s+1),B)c=*++s)c=='i'?s++,N(gI(x)):c=='j'?s++,x:x)
 S A0(pC,A x=aC(0);C c=*++s;W(c&&c!='"',$(c=='\\',c=*++s;I i=Ci("tnr0",c);$(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)P(!c,ep())c=*++s;x)
 S A0(p0x,s+=2;C*p=s;W(ldg(*p),p++)L m=(p-s)/2;A x=aC(m);F(m,xci=unh(*s)<<4|unh(s[1]);s+=2)x)
 A pS(C**p)_(C*s=*p,c=*s;$(c&0x80,$(cy(c),s+=2;c=*s;W(1,$(dgt(c),c=*++s)E$(cy(c),s+=2;c=*s)E(B)))E(W(((c=*++s)&0xc0)==0x80)))
