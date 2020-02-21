@@ -54,7 +54,7 @@ S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||yt
  V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v-1][k-!!k];UC t=xtiI?tI:xtlL?tL:v<8?tD:v==vi('=')?tL:tI;
  $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
  A u=atn(t,k-1?xn:yn);mr2(x,mr2(y,f(a,b,uc,un);u)))
-S A1(s2i,xts?al(gs(x)):AT(tI,x))A2(eql,$(xtsS&&ytsS,x=s2i(x);y=s2i(y))pen2(x,y,vi('=')))
+S A1(s2i,xts?ai(gs(x)):AT(tI,x))A2(eql,$(xtsS&&ytsS,x=s2i(x);y=s2i(y))pen2(x,y,vi('=')))
 A2(mod,P(xtil,gl_(x)==_0N||gi(x)==_0Ni?out(dex(x,y)):pen2(x,y,vi('!')))
  $(xtt||xta,$(xta,x=enl(x))x=rsh(al(len_(y)),x))$(ytt||yta,$(yta,y=enl(y))y=rsh(al(len_(x)),y))len_(x)-len_(y)?el(x,y):aa(x,y))
 #define h(c,s) A2(s,pen2(x,y,vi(c)))
