@@ -40,5 +40,6 @@ A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gDL(gl(x))))A u=aD(xn);F(un,udi=gDL(xli))xr;u
 A1(gI,P(xtiI,x)P(xtdD,gI(gL(x)))P(xtl,ai(gIL(gl(x))))P(xtL,A u=aI(xn);F(un,uii=gIL(xli))xr;u)P(xtc,ai(gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
 A1(gS,P(xtsS,x)P(xtcC,as(sym(enla(x))))et(x))
 A2(cst,P(ytaAX,eac(cv('$'),A_(x,y),2))
- P(xts,C*s=symptr(gs(x)),c=*s*!s[1];!c?gS(y):c=='c'?gC(y):c=='i'?gI(y):c=='j'||c=='l'?gL(y):c=='f'||c=='d'?gD(y):en(y))
+ P(xts,S A1*cstf[26]={['s'-'a']=gS,['c'-'a']=gC,['i'-'a']=gI,['l'-'a']=gL,['j'-'a']=gL,['d'-'a']=gD,['f'-'a']=gD};
+  C*s=symptr(gs(x));A1*f=s[1]?0:C3('a',*s,'z')?cstf[*s-'a']:*s?0:gS;f?f(y):ed(y))
  P(xtl,L n=gl(x);P(n<0,en(y))P(!ytcC,et(y))A u=aC(n);y=enla(y);L m=yn;mr2(y,mc(uc,yc,min(n,m)));F(max(0,n-m),uc[m+i]=32)u)en(x,y))
