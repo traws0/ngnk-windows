@@ -135,7 +135,7 @@ SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl_(A x)_(pkd(x)?(I)x:*xl)S
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd_(A x)_(*xd)SI D gd(A x)_(D v=*xd;xr;v)
 
 #define err_(x,y,z,u,n,...) n
-#define err(a...) ({dbg(ps("["__FILE__":"xstr(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
+#define err(a...) ({dbg(os("["__FILE__":"xstr(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
 #define en(a...) err((C*)0,##a)
 #define el(a...) err((C*)1,##a)
 #define et(a...) err((C*)2,##a)
@@ -176,12 +176,12 @@ XT O V*arf[3][10][3];
 
 #define mr2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;})
 
-#define pv(x) pv_(#x":",(L)(x))
-#define px(x) px_(#x":",(A)(x))
-#define pp ps("["__FILE__":"xstr(__LINE__)"]");
+#define ov(x) ov_(#x":",(L)(x))
+#define ox(x) ox_(#x":",(A)(x))
+#define oo os("["__FILE__":"xstr(__LINE__)"]");
 #define nop {asm volatile("fnop");}
-SI I ps(O C*x)_(write(2,x,strlen(x)))
-SI I phex(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
-SI I pdec(L x)_(C b[32],*u=b+31;L m=x<0;$(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);$(m,*u--='-')write(2,u+1,b+31-u))
-SI L pv_(C*s,L x)_(ps(s);write(2,"           ",max(1,10-strlen(s)));phex((L)x);write(2,"\n",1);x)
-SI A px_(C*s,A x)_(ps(s);phex((L)x);P(!x,0)$(!pkd(x),ps(" b");pdec(xb);ps("t");pdec(xt);ps("r");pdec(Ar(x));ps("n");pdec(xn))ps(" ");out(x))
+SI I os(O C*x)_(write(2,x,strlen(x)))
+SI I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
+SI I ol(L x)_(C b[32],*u=b+31;L m=x<0;$(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);$(m,*u--='-')write(2,u+1,b+31-u))
+SI L ov_(C*s,L x)_(os(s);write(2,"           ",max(1,10-strlen(s)));oh((L)x);write(2,"\n",1);x)
+SI A ox_(C*s,A x)_(os(s);oh((L)x);P(!x,0)$(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
