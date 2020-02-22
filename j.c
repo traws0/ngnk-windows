@@ -10,5 +10,5 @@ S A0(ja,s++;A x=a0();P(jw()==']',s++;x)W(1,x=apd(x,Nx(jv()));P(*s==']',s++;x)Nx(
 S A0(jo,s++;A x=aa(aS(0),a0());C c=jw();P(c=='}',s++;x)
  W(1,Nx(c=='"');xx=apd(xx,gS(Nx(js())));Nx(jw()==':');s++;xy=apd(xy,Nx(jv()));P(*s=='}',s++;x)Nx(*s==',');s++;c=jw())0)
 S A jr(O C*t,L v)_(C c;W((c=*t++),P(c-*s,0)s++)al(v))
-S A0(jv,C c=jw();A x=c=='['?ja():c=='{'?jo():c=='"'?js():c=='-'||dgt(c)?jd():c=='t'?jr("true",1):c=='f'?jr("false",0):c=='n'?jr("null",_0N):0;jw();x)
+S A0(jv,C c=jw();A x=c=='['?ja():c=='{'?jo():c=='"'?js():c=='-'||dgt(c)?jd():c=='t'?jr("true",1):c=='f'?jr("false",0):c=='n'?jr("null",_0Nl):0;jw();x)
 A1(json,P(!xtcC,et(x))x=str0(enla(x));s=xc;A u=jv();$(u&&*s,ur;u=0)P(!u,eso(x,s-xc);err("json"))xr;u)

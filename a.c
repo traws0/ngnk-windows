@@ -5,7 +5,7 @@ A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*C3('A',c,'Z'))S L f
 A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 S I divi(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S I modi(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni)
-S L divl(L x,L y)_(y?x/y:(UL)_0N +(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0N )S D modd(D x,D y)_(_0n)
+S L divl(L x,L y)_(y?x/y:(UL)_0Nl+(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0Nl)S D modd(D x,D y)_(_0n)
 S L cmpd(L x)_(x^((UL)(x>>63)>>1))S I ltnd(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)<cmpd(b))
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,ri,rl,rd)\
@@ -55,7 +55,7 @@ S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||yt
  $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
  A u=atn(t,k-1?xn:yn);mr2(x,mr2(y,f(a,b,uc,un);u)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):pen2(x,y,vi('=')))
-A2(mod,P(xtil,gl_(x)-_0N&&gi(x)-_0Ni?pen2(x,y,vi('!')):out(dex(x,y)))
+A2(mod,P(xtil,gl_(x)-_0Nl&&gi(x)-_0Ni?pen2(x,y,vi('!')):out(dex(x,y)))
  $(xtt||xta,$(xta,x=enl(x))x=rsh(al(len_(y)),x))$(ytt||yta,$(yta,y=enl(y))y=rsh(al(len_(x)),y))len_(x)-len_(y)?el(x,y):aa(x,y))
 #define h(c,s) A2(s,pen2(x,y,vi(c)))
 h('+',add)h('-',sub)h('*',mul)h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)h('>',gtn)

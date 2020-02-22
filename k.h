@@ -156,8 +156,8 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
 #define cu(c) au(vi(c))
 #define cv(c) av(vi(c))
 S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(26),au_plc=au(29),av_com=av(24),av_mkl=av(25);
-#define _0N  (1ull<<63)
-#define _0W  (~_0N)
+#define _0Nl (1ull<<63)
+#define _0Wl (~_0Nl)
 #define _0Ni (1<<31)
 #define _0Wi (~_0Ni)
 #define _0n  (D)NAN
@@ -171,7 +171,7 @@ XT O V*arf[3][10][3];
 #define ar_(f,n,p,a4,a5,a8,a9,a10) switch(f){default:UR;B;Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))\
  Q(4,a4)Q(5,a5)Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,a8)Q(9,a9)Q(10,a10)}
 #define arI(f,n,p)ar_(f,n,p,F(n,p b?a/b:!a?_0Ni:a>0?_0Wi:-_0Wi),F(n,p a>0?(b%a+a)%a:a?b/-a:_0Ni),F(n,p a<b     ),F(n,p a>b     ),F(n,p a==b))
-#define arL(f,n,p)ar_(f,n,p,F(n,p b?a/b:!a?_0N :a>0?_0W :-_0W ),F(n,p a>0?(b%a+a)%a:a?b/-a:_0N) ,F(n,p a<b     ),F(n,p a>b     ),F(n,p a==b))
+#define arL(f,n,p)ar_(f,n,p,F(n,p b?a/b:!a?_0Nl:a>0?_0Wl:-_0Wl),F(n,p a>0?(b%a+a)%a:a?b/-a:_0Nl) ,F(n,p a<b     ),F(n,p a>b     ),F(n,p a==b))
 #define arD(f,n,p)ar_(f,n,p,F(n,p   a/b                       ),F(n,p((V)a,(V)b,_0n))           ,F(n,p l2d(a<b)),F(n,p l2d(a>b)),F(n,p l2d(a==b)))
 
 #define mr2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;})
