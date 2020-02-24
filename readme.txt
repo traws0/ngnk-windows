@@ -26,26 +26,6 @@ a15/ https://adventofcode.com/2015
 a19/ https://adventofcode.com/2019
 o/   .o files (build tmp)
 
-CONTRIBUTING
-For bug reports and ideas for improvement please use
- https://bitbucket.org/ngn/k/issues
-If you also want to contribute code to this project, first you must read
-carefully, fill in, and sign one of the two copyright assignment
-agreements:
- * HA-CAA-I if doing it as an individual
- * HA-CAA-E if it's on behalf of a company or other legal entity
-then send it via email to the address printed by the following k expression:
- ".@acgiklmnov"@9 5 3 6 0 9 5 3 6 10 7 10 11 1 4 8 2 5 7 0 3 10 8
-and wait for confirmation.
-NOTE about section 3 (d) from the agreements:
-ngn/k accepts only contributions for which the contributor owns the copyright
-of the entire work of authorship and is at liberty to transfer it.
-If you aren't sure about the legal status of your work, do let us know.
-If you are employed or studying, we advise you obtain an explicit written
-permission to contribute to this project from your employer or educational
-institution.
-
-INTRO
 k objs
  A - the type of a tagged ptr to a k obj
  x y z u - var names for A objs. usually x y z are the args and u is the result from the fn.
@@ -74,5 +54,4 @@ errors
             otherwise N(expr) is the same as expr
   Nx(expr) - same as N(), but if there's an error it consumes x
 
-COMPARISON
-with other k impls: https://ngn.bitbucket.io/k.html
+comparison with other k impls: https://ngn.bitbucket.io/k.html
