@@ -29,11 +29,10 @@ A2(xpt,P(xtt,fil(x,y))P(xtaA||ytaA,en(x,y))y=enla(y);$(xtX,y=blw(y))K("{x@&^y?x}
 A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,n*w);$(t==tX,mRa(u);u=sqz(u))u)
 A2(cut,
  P(ytl,P(!xtT,et(x,y))L i=gl(y);P(i<0||i>=xn,x)A u=atn(xt,xn-1);L w=tZ(xt);mc(uc,xc,i*w);mc(uc+i*w,xc+i*w+w,(xn-i-1)*w);$(xtX,u=sqz(mRa(u)))xr;u)
- P(yta,rsh(xpt(mR(yx),x),y))P(ytt,et(x,y))x=Ny(gL(x));A u;L m=yn;
- $(xtL,L n=xn,l=yn;x=apv(x,&l);L p,q=*xl;F(n,p=q;q=xl[i+1];P(p>q,ed(x,y))P(p<0||q>m,el(x,y)))q=*xl;u=aX(n);F(n,p=q;q=xl[i+1];uai=slc_(y,p,q-p)))
- E(L p=gl_(x);P(p==_0Nl,ed(x,y))$(absL(p)<m,u=slc_(y,p<0?0:p,m-absL(p)))E(u=atn(yt,0)))
- xr;yr;u)
-S L gLI(I i)_(i==_0Ni?_0Nl:i)S I gIL(L l)_(l==_0Nl?_0Ni:l)S D gDL(L l)_(l==_0Nl?_0n:(D)l)
+ P(yta,rsh(xpt(mR(yx),x),y))P(ytt,et(x,y))
+ x=Ny(gL(x));P(xtl,L p=gl_(x);P(p==_0Nl,ed(x,y))A u=absL(p)<yn?slc_(y,p<0?0:p,yn-absL(p)):atn(yt,0);xr;yr;u)
+ L n=xn,l=yn;x=apv(x,&l);L p,q=*xl;F(n,p=q;q=xl[i+1];P(p>q,ed(x,y))P(p<0||q>yn,el(x,y)))q=*xl;A u=aX(n);F(n,p=q;q=xl[i+1];uai=slc_(y,p,q-p))xr;yr;u)
+S L gLI(I i)_(i-_0Ni?i:_0Nl)S I gIL(L l)_(l-_0Nl?l:_0Ni)S D gDL(L l)_(l-_0Nl?(D)l:_0n)
 A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)x=N(gI(x));P(xtt,al(gLI(gi(x))))A u=aL(xn);F(un,uli=gLI(xii))xr;u)
 S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(gLI(gi(x))))A u=aC(xn);F(un,uci=xii)xr;u)
 A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gDL(gl(x))))A u=aD(xn);F(un,udi=gDL(xli))xr;u)
