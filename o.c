@@ -12,6 +12,6 @@ S A grd(A x/*1*/,I d)_(P(xtX,d=d?-1:1;A*a=xa,u=till(xn);L*l=ul,n=xn,i=n/2;W(i-->
   Fj(8/Z(*a)-1,F(n,a[i]=xl[uli]>>(j+1)*8*Z(*a))mz(c,8*nc);F(n,c[a[i]+1]++)$(c[1+*a]-n,F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,zl[c[a[i]]++]=uli)swp(z,u)))
   xr;yr;zr;R u)
  P(xtC||xtI,grd(N(gL(x)),d))P(xtS,grd(N(ea1(str,x)),d))P(xta,A y=gkv(&x);idx(x,N(grd(y,d))))P(xtD,grd(blw(x),d))et(x))
-A1(grp,P(xtt,xtl?K("{(2#x)#1,&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();UC w=tz(xt);
+A1(grp,P(xtt,xtil?K("{(2#x)#1,&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();UC w=tz(xt);
  F(xn,L j=w==ZR?fpa(&y,mR(xai)):!w?fpc(&y,xci):w==2?fpi(&y,xii):w==3?fpl(&y,xli):0;$(j==un,u=apd(u,aL(0)))uaj=apv(uaj,&i))xr;aa(y,u))
 A2(mtc,I r=mtc_(x,y);xr;yr;ai(r))A1(asc,xts||xti?hop(x):grd(x,0))A1(dsc,xti?hcl(x):grd(x,1))
