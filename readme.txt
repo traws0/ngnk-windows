@@ -29,23 +29,31 @@ o/   .o files (build tmp)
 k objs
  A - the type of a tagged ptr to a k obj
  x y z u - var names for A objs. usually x y z are the args and u is the result from the fn.
- xt xn xb - type, length, and bucket index of x (similarly: yt,zn..)
- xtc xtL xtX.. - is x of type tc,tL,tX..?
- xtt - is x an atom? (not dict)
- xtT - is x a list? (not table)
+ xt xn xb - type, length, and bucket(as in buddy system) of x. similarly: yt,zn..
+ tc tL tX.. - constants for k types
+  tn - number of types
+  tZ(t) - type size in bytes
+  tz(t) - logarithm of tZ(t)
+ xtc xtL xtX.. - is x of type tc,tL,tX..? equivalent to xt==tc xt==tL xt==tX..
+ xtt - is x an atom? (dicts are not considered atoms here)
+ xtT - is x a list? (tables are not considered lists here)
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
- xc xl xd xa.. - content of x as a char*,long*,double*,A*..
+  mr(x) - equivalent to xr
+  mr2(x,code) - execute a block of code after refcount-- but before collecting the obj
+ xc xl xd xa.. - ptr to content of x as a char*,long*,double*,A*..
  xci xlj.. - i-th or j-th typed element: xc[i],xl[j]..
+ AT(x) AK(x) AV(x) AB(x) AN(x) AO(x) - setters for type,arity,verb,bucket,length,srcoffset
+ At(x) Ak(x) Av(x) Ab(x) An(x) Ao(x) - getters, the actual fns behind the xt,xn.. macros
 calling conventions
  A0 A1 A2 A3 - the types of functions with 0..3 args, accepting and returning type A.
   all args are consumed (their refcounts are decremented or they are returned as result).
-  macros: A0(f,body) A1(f,body).. define such fns with args names x,y,z
+  macros: A0(f,code) A1(f,code).. define such fns with args names x,y,z
  AA - like above but accepts a ptr to A and length; arg names: a and n
  AX - like AA but also accepts a separate arg called x, which is *not* consumed
  fns with ugly names (eg trailing "_" or uppercase) might not follow the conventions
  /*0*/ after an arg means "not consumed", /*1*/ means "consumed"
 errors
- error-reporting fns return null after consuming their args:
+ error-reporting fns return a null ptr after consuming their args:
   err("msg",x,y,z) - generic error. x,y,z are optional
   et(x,y,z) el() en().. - type error, length error, nyi error.. x,y,z are optional
   etn(a,n) eln(a,n).. - variants that consume n objs from the memory pointed by a
