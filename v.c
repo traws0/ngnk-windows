@@ -40,5 +40,5 @@ A1(gI,P(xtiI,x)P(xtdD,gI(gL(x)))P(xtl,ai(gIL(gl(x))))P(xtL,A u=aI(xn);F(un,uii=g
 A1(gS,P(xtsS,x)P(xtcC,as(sym(enla(x))))et(x))
 A2(cst,P(ytaAX,eac(cv('$'),A_(x,y),2))
  P(xts,S A1*t['s'-'c'+1]={['s'-'c']=gS,['c'-'c']=gC,['i'-'c']=gI,['l'-'c']=gL,['j'-'c']=gL,['d'-'c']=gD,['f'-'c']=gD};
-  C*s=symptr(gs(x));A1*f=s[1]?0:C3('c',*s,'s')?t[*s-'c']:*s?0:gS;f?f(y):ed(y))
+  C*s=symptr(gs(x));A1*f=s[1]?0:c3('c',*s,'s')?t[*s-'c']:*s?0:gS;f?f(y):ed(y))
  P(xtl,L n=gl(x);P(n<0,en(y))P(!ytcC,et(y))A u=aC(n);y=enla(y);L m=yn;mr2(y,mc(uc,yc,min(n,m)));F(max(0,n-m),uc[m+i]=32)u)en(x,y))
