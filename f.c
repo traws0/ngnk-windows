@@ -11,11 +11,7 @@ S L fndc(A x,C v)_(asrt(tz(xt)==0);F(xn,P(xci==v,i))_0Nl)     L fpc(A*p,C v)_(A 
 S A1(uns,P(!xtC||xn-9||*xc-'d',ed(x))D v=*(D*)(xc+1);xr;ad(v))
 A2(fnd,
  P(xts,C*s=symptr(gs(x)),c=*s;s[1]?ed(y):c=='j'?json(y):!c?uns(y):ed(y))
- P(xtil,P(ytl,rnd(gl(gL(x)),gl(y)))
-        P(ytc,C c=gc(y);P('a'-(32|c),ed())K("{`c$y+x?26}",x,ac(c)))
-        P(yti,K("{`i$x?`l$y}",x,y))
-        P(ytT,K("{y@x?#y}",x,y))
-        et(y))
+ P(xtil,ytl?rnd(gl(gL(x)),gl(y)):ytc||yti||ytT?K("{$[`c=t:@y;`c$$[y~\"A\";y;\"a\"]+x?26;`i=t;`i$x?`l$y;y@x?#y]}",x,y):et(y))
  P(xtt,et(x,y))
  P(xta,A z=gkv(&x);idx(x,fnd(z,y)))
  P(xtA,en(x,y))
