@@ -6,7 +6,10 @@ A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(x
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 S I divi(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S I modi(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni)
 S L divl(L x,L y)_(y?x/y:(UL)_0Nl+(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0Nl)S D modd(D x,D y)_(_0n)
-S L cmpd(L x)_(x^((UL)(x>>63)>>1))S I ltnd(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)<cmpd(b))
+S L cmpd(L x)_(x^((UL)(x>>63)>>1))
+S I ltnd(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)<cmpd(b))
+S I eqld(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)==cmpd(b))
+
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,ri,rl,rd)\
  hf(x##iI,I,ri,xiI)hf(x##Ii,I,ri,xIi)hf(x##II,I,ri,xII)\
@@ -31,7 +34,7 @@ ha(mnm,htT(min) ,hs(mnmiI),hTT(min) ,htT(min) ,hs(mnmlL),hTT(min) ,htT(min) ,hs(
 ha(mxm,htT(max) ,hs(mxmiI),hTT(max) ,htT(max) ,hs(mxmlL),hTT(max) ,htT(max) ,hs(mxmdD),hTT(max) ,I,L,D)
 ha(ltn,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htTo(<)  ,hTto(<)  ,hTTo(<)  ,htT(ltnd),hTt(ltnd),hTT(ltnd),I,L,I)
 ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),I,L,I)
-ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,hv(eqllL),hv(eqlLl),hv(eqlLL),I,L,L)
+ha(eql,htTo(==) ,hs(eqliI),hTTo(==) ,htTo(==) ,hs(eqllL),hTTo(==) ,htT(eqld),hs(eqldD),hTT(eqld),I,L,I)
 #undef hn
 #undef hv
 #undef hs
@@ -51,7 +54,7 @@ O V*arf[3][10][3]={h1(i,I)h1(l,L)h1(d,D)};
 #undef h
 S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;P(k==3&&xn-yn,el(x,y))
- V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v-1][k-!!k];UC t=xtiI?tI:xtlL?tL:v<8?tD:v==vi('=')?tL:tI;
+ V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v-1][k-!!k];UC t=xtiI?tI:xtlL?tL:v<8?tD:tI;
  $(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))
  A u=atn(t,k-1?xn:yn);mr2(x,mr2(y,f(a,b,uc,un);u)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):pen2(x,y,vi('=')))
