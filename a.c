@@ -6,9 +6,7 @@ A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(x
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 S I divi(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S I modi(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni)
 S L divl(L x,L y)_(y?x/y:(UL)_0Nl+(x<0)-(x>0))S L modl(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0Nl)S D modd(D x,D y)_(_0n)
-S L cmpd(L x)_(x^((UL)(x>>63)>>1))
-S I ltnd(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)<cmpd(b))
-S I eqld(D x,D y)_(L a=*(L*)&x,b=*(L*)&y;cmpd(a)==cmpd(b))
+S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1))S I ltnd(D x,D y)_(cmpd(x)<cmpd(y))S I eqld(D x,D y)_(cmpd(x)==cmpd(y))
 
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,ri,rl,rd)\
