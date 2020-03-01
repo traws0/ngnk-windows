@@ -18,12 +18,7 @@ A1(rev,P(xtt,x)P(xta,AT(ta,N(ea1(rev,AT(tX,x)))))P(xtA,A y=gkv(&x);aA(x,Nx(ea1(r
                                        P(w==4,F(m,--j;swp(xii,xij))x)
                                        P(w==8,F(m,--j;swp(xli,xlj))x)UR;0)
 A1(typ,UC t=xt;xr;as(sym(atnv(tC,1,&tsym[t]))))A1(len,dex(x,al(len_(x))))L len_(A x/*0*/)_(xtT?xn:xta?len_(xy):!xtA?1:An(xy)?len_(*A(xy)):1)
-A1(unq,P(!xtT,et(x))P(xn<2,x)I w=tz(xt);
- P(w==ZR,A u=atn(xt,0);F(xn,fpa(&u,mR(xai)))xr;u)
- P(w==0,K("{x@&@[&#x;i;]@[;0;1 ]@~=':x@i:<x}",x))
- P(w==2,K("{x@&@[&#x;i;]@[;0;1i]@~=':y@i:<y}",x,AT(tI,xR)))
- P(w==3,K("{x@&@[&#x;i;]@[;0;1 ]@~=':x@i:<x}",x))
- UR;0)
+A1(unq,P(!xtT,et(x))P(xn<2,x)P(ref(x),A u=atn(xt,0);F(xn,fpa(&u,mR(xai)))xr;u)K("{x@&@[&#x;i;]@[;0;a=a:*a]@a:~=':x@i:<x}",x))
 S A2(fil,ytX||yta?eac(cv('^'),A_(x,y),2):ytt?fir(xpt(x,enl(y))):K("{@[y;&^y;x]}",x,y))
 A2(xpt,P(xtt,fil(x,y))P(xtaA||ytaA,en(x,y))y=enla(y);$(xtX,y=blw(y))K("{x@&^y?x}",x,y))
 A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,n*w);$(t==tX,mRa(u);u=sqz(u))u)

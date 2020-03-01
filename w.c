@@ -41,7 +41,7 @@ AX(scn,P(xtilIL,enc(x,a,n))P(xtcC,spl(x,a,n))P(Ak(x)<=1,cvi(x,a,n))
  $(n==2,A u=a[1];P(uta,u=mut(u);uy=scn(x,A_(*a,uy),2);u)P(!un,mr(*a),u))
  A y=*a++;n--;L m=cfm(a,n);P(m==-2,yr;eln(n,a))A u=a0(),b[8];
  F(m,*b=y;Fj(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);P(!y,mrn(n,a);ur;0)u=apd(u,yR))mrn(n,a);yr;u)
-AX(eap,P(n==1&&xtilIL,eac(x,a,n))P(n>2,ern(n,a))A y=n==1?id_(x,*a):*a,z=a[n-1];P(!ztT,et(y,z))P(!zn,yr;z)
+AX(eap,P(n==1&&xtilIL,eac(x,a,n))P(n>2,ern(n,a))A z=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);P(!ztT,et(y,z))P(!zn,yr;z)
  $(ari(x),L f=Av(x),n=zn;P(yti&&(ztI||ztC) ,I a=gi(gI(y));z=N(gI(z));A u=ax(z);arI(f,n,I b=a;a=zii;uii=)u)
                          P(ytil&&(ztL||ztC),L a=gl(gL(y));z=N(gL(z));A u=ax(z);arL(f,n,L b=a;a=zli;uli=)u)
                          P(ytd||ztD        ,D a=gd(gD(y));z=N(gD(z));A u=ax(z);arD(f,n,D b=a;a=zdi;udi=)u))
