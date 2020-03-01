@@ -33,7 +33,7 @@ S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(gLI(gi(x))))A u=aC(xn);F(un,uci=xii)xr;u)
 A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gDL(gl(x))))A u=aD(xn);F(un,udi=gDL(xli))xr;u)
 A1(gI,P(xtiI,x)P(xtdD,gI(gL(x)))P(xtl,ai(gIL(gl(x))))P(xtL,A u=aI(xn);F(un,uii=gIL(xli))xr;u)P(xtc,ai(gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
 A1(gS,P(xtsS,x)P(xtcC,as(sym(enla(x))))et(x))
-A2(cst,P(ytaAX,eac(cv('$'),A_(x,y),2))P(xtl&&ytcC,K("{y@!x}",x,y))
+A2(cst,P(ytaAX,eac(cv('$'),A_(x,y),2))P(xtil&&ytcC,K("{y@!x}",x,y))
  P(xts,S A1*t['s'-'c'+1]={['s'-'c']=gS,['c'-'c']=gC,['i'-'c']=gI,['l'-'c']=gL,['j'-'c']=gL,['d'-'c']=gD,['f'-'c']=gD};
   C*s=symptr(gs(x));A1*f=s[1]?0:c3('c',*s,'s')?t[*s-'c']:*s?0:gS;f?f(y):ed(y))
  en(x,y))
