@@ -42,7 +42,7 @@ AA(am1,A x=*a,y=a[1],z=a[2];P(n==3&&!fun(z),am1(A_(x,y,av0,z),4))P(xtt,etn(n,a))
  P(n==4&&(xtIL||xtD)&&ytIL&&ari(z)&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];L f=Av(z),d=utT;u=enla(u);y=gL(y);$(d&&yn-un,el(x,y,u))
   mr2(y,mr2(u,
    $( xtD,arD(f,yn,L j=yli;$(j<0||xn<=j,x=ei(x);B)D a=xdj;D b=ud[d*i];xdj=))
-   E$(xtI,arI(f,yn,L j=yii;$(j<0||xn<=j,x=ei(x);B)I a=xij;I b=ui[d*i];xij=))
+   E$(xtI,arI(f,yn,L j=yli;$(j<0||xn<=j,x=ei(x);B)I a=xij;I b=ui[d*i];xij=))
    E$(xtL,arL(f,yn,L j=yli;$(j<0||xn<=j,x=ei(x);B)L a=xlj;L b=ul[d*i];xlj=))x)))
  P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];L d=utT;u=enla(u);$(d&&yn-un,el(x,y,u))
   mr2(y,mr2(u,F(yn,L j=yli;$(j<0||xn<=j,x=ei(x);B)xcj=uc[d*i])x)))
