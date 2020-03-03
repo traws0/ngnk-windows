@@ -38,7 +38,7 @@ AA(am1,A x=*a,y=a[1],z=a[2];P(n==3&&!fun(z),am1(A_(x,y,av0,z),4))P(xtt,etn(n,a))
  P(xta,x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rsh(al(An(xx)-An(xy)),id_(z,xy)));
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*ZV);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
-  L i=gl(y);P(i<0||i>=xn,xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;Nx(u);set(x,i,u))
+  L i=gl(y);P(i<0||i>=xn,xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
  P(n==4&&(xtIL||xtD)&&ytIL&&ari(z)&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];L f=Av(z),d=utT;u=enla(u);y=gL(y);$(d&&yn-un,el(x,y,u))
   mr2(y,mr2(u,
    $( xtD,arD(f,yn,L j=yli;$(j<0||xn<=j,x=ei(x);B)D a=xdj;D b=ud[d*i];xdj=))
