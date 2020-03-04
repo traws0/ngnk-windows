@@ -11,6 +11,8 @@
 #define  W(x,a...) while(x){a;}
 #define  F(x,a...) for(__typeof__(x)n_=(x),i=0;i<n_;i++){a;}
 #define Fj(x,a...) for(__typeof__(x)n_=(x),j=0;j<n_;j++){a;}
+#define  Q(x,a...) case x:{a;B;}
+#define SW(x,y,a...) switch(x){default:{y;B;}a}
 #define B break
 #define O const
 #define R return
@@ -167,9 +169,8 @@ A K0(O C*,I);
 XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];SI I ari(A x)_(xtv&&Av(x)<11)
 
 XT O V*arf[3][10][3];
-#define Q(x,a...) case x:{a;B;}
-#define ar_(f,n,p,a4,a5,a8,a9,a10) switch(f){default:UR;B;Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))\
- Q(4,a4)Q(5,a5)Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,a8)Q(9,a9)Q(10,a10)}
+#define ar_(f,n,p,a4,a5,a8,a9,a10) SW(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))\
+ Q(4,a4)Q(5,a5)Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,a8)Q(9,a9)Q(10,a10))
 #define arI(f,n,p)ar_(f,n,p,F(n,p b?a/b:!a?_0Ni:a>0?_0Wi:-_0Wi),F(n,p a>0?(b%a+a)%a:a?b/-a:_0Ni),F(n,p a<b     ),F(n,p a>b     ),F(n,p a==b))
 #define arL(f,n,p)ar_(f,n,p,F(n,p b?a/b:!a?_0Nl:a>0?_0Wl:-_0Wl),F(n,p a>0?(b%a+a)%a:a?b/-a:_0Nl),F(n,p a<b     ),F(n,p a>b     ),F(n,p a==b))
 #define arD(f,n,p)ar_(f,n,p,F(n,p   a/b                       ),F(n,p((V)a,(V)b,_0n))           ,F(n,p l2d(a<b)),F(n,p l2d(a>b)),F(n,p l2d(a==b)))
