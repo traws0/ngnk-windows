@@ -27,7 +27,7 @@ SI I iX(I x,I y)_(x==y)                      SI I lX(L x,L y)_(x==y)            
 #define hs(x){x(b,a,r,n);}
 #define hn(x){__typeof__(*b)c=-*b;x(a,&c,r,n);}
 //   iI      Ii      II      lL      Ll      LL      dD      Dd      DD
-ha(1,htT(i1),hs(iI1),hTT(i1),htT(l1),hs(lL1),hTT(l1),htT(d1),hTt(d1),hTT(d1),L,D)
+ha(1,htT(i1),hs(iI1),hTT(i1),htT(l1),hs(lL1),hTT(l1),htT(d1),hs(dD1),hTT(d1),L,D)
 ha(2,htT(i2),hn(Ii1),hTT(i2),htT(l2),hn(Ll1),hTT(l2),htT(d2),hn(Dd1),hTT(d2),L,D)
 ha(3,htT(i3),hs(iI3),hTT(i3),htT(l3),hs(lL3),hTT(l3),htT(d3),hs(dD3),hTT(d3),L,D)
 ha(4,htT(i4),hTt(i4),hTT(i4),htT(l4),hTt(l4),hTT(l4),htT(d4),hTt(d4),hTT(d4),L,D)
