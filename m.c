@@ -1,7 +1,7 @@
 #include<sys/mman.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
 #include"k.h"
 #define nxt(x) A(x)[-2]
-L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];dbg(S I ml;/*prevent allocations*/)S cold A oom()_(write(1,"oom\n",4);exit(1);0)
+L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];dbg(S I ml;/*prevent allocations*/)S CD A oom()_(write(1,"oom\n",4);exit(1);0)
 S A ma(I b)_(dbg(asrt(!ml));asrt(4<b);P(b>47,oom())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  $(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap_(0,1L<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())mt+=1L<<i;x=(A)(p+ZA))

@@ -17,13 +17,13 @@
 #define O const
 #define R return
 #define S static
-#define NI __attribute__((noinline))
 #define SI S inline
 #define SN S NI
+#define NI __attribute__((noinline))
+#define UR __builtin_unreachable();
+#define CD __attribute__((cold))
 #define XT extern
 #define TD typedef
-#define UR __builtin_unreachable();
-#define cold __attribute__((cold))
 #define MS(x) #x
 #define XS(x) MS(x)
 #define N(r)      ({A r_=(r);P(!r_,            0);r_;})
