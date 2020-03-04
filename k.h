@@ -20,7 +20,11 @@
 #define SI S inline
 #define SN S NI
 #define NI __attribute__((noinline))
-#define UR __builtin_unreachable();
+#if __clang__||__GNUC__
+ #define UR __builtin_unreachable();
+#else
+ #define UR
+#endif
 #define CD __attribute__((cold))
 #define XT extern
 #define TD typedef
