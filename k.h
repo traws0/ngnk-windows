@@ -4,10 +4,10 @@
 #include<math.h>
 #include"g.h"
 #define    _(a...) {R({a;});}
-#define  $(x,a...) if(x){a;}
-#define  P(x,a...) $(x,_(a))
+#define  Y(x,a...) if(x){a;}
+#define  P(x,a...) Y(x,_(a))
 #define    E(a...) else{a;}
-#define E$(x,a...) else if(x){a;}
+#define EY(x,a...) else if(x){a;}
 #define  W(x,a...) while(x){a;}
 #define  F(x,a...) for(__typeof__(x)n_=(x),i=0;i<n_;i++){a;}
 #define Fj(x,a...) for(__typeof__(x)n_=(x),j=0;j<n_;j++){a;}
@@ -33,7 +33,7 @@
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
- #define asrt(x) $(!(x),die(__FILE__":"XS(__LINE__)": "XS(x)))
+ #define asrt(x) Y(!(x),die(__FILE__":"XS(__LINE__)": "XS(x)))
 #else
  #define dbg(x)
  #ifdef __clang__
@@ -163,7 +163,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(26),au_plc=au(29),av_com=av(24
 #define _0Wi (~_0Ni)
 #define _0n  (D)NAN
 #define _0w  (D)INFINITY
-#define K(s,a...) ({S A f;$(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
+#define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
 A K0(O C*,I);
 XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];SI I ari(A x)_(xtv&&Av(x)<11)
 
@@ -182,6 +182,6 @@ XT O V*arf[3][10][3];
 #define nop {asm volatile("fnop");}
 SI I os(O C*x)_(write(2,x,strlen(x)))
 SI I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
-SI I ol(L x)_(C b[32],*u=b+31;L m=x<0;$(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);$(m,*u--='-')write(2,u+1,b+31-u))
+SI I ol(L x)_(C b[32],*u=b+31;L m=x<0;Y(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);Y(m,*u--='-')write(2,u+1,b+31-u))
 SI L ov_(C*s,L x)_(os(s);write(2,"           ",max(1,10-strlen(s)));oh((L)x);write(2,"\n",1);x)
-SI A ox_(C*s,A x)_(os(s);oh((L)x);P(!x,0)$(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
+SI A ox_(C*s,A x)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
