@@ -24,8 +24,8 @@
 #define TD typedef
 #define UR __builtin_unreachable();
 #define cold __attribute__((cold))
-#define mstr(x) #x
-#define xstr(x) mstr(x)
+#define MS(x) #x
+#define XS(x) MS(x)
 #define N(r)      ({A r_=(r);P(!r_,            0);r_;})
 #define N1(x,r)   ({A r_=(r);P(!r_,mr(x);      0);r_;})
 #define N2(x,y,r) ({A r_=(r);P(!r_,mr(x);mr(y);0);r_;})
@@ -33,7 +33,7 @@
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
- #define asrt(x) $(!(x),die(__FILE__":"xstr(__LINE__)": "xstr(x)))
+ #define asrt(x) $(!(x),die(__FILE__":"XS(__LINE__)": "XS(x)))
 #else
  #define dbg(x)
  #ifdef __clang__
@@ -137,7 +137,7 @@ SI A aL(L n)_(atn(tL,n))SI A al(L v)_(atv(tl,v))SI L gl_(A x)_(pkd(x)?(I)x:*xl)S
 SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd_(A x)_(*xd)SI D gd(A x)_(D v=*xd;xr;v)
 
 #define err_(x,y,z,u,n,...) n
-#define err(a...) ({dbg(os("["__FILE__":"xstr(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
+#define err(a...) ({dbg(os("["__FILE__":"XS(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
 #define en(a...) err((C*)0,##a)
 #define el(a...) err((C*)1,##a)
 #define et(a...) err((C*)2,##a)
@@ -179,7 +179,7 @@ XT O V*arf[3][10][3];
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))
-#define oo os("["__FILE__":"xstr(__LINE__)"]");
+#define oo os("["__FILE__":"XS(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 SI I os(O C*x)_(write(2,x,strlen(x)))
 SI I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
