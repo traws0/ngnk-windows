@@ -12,7 +12,7 @@ A1(asc,P(xtX,A*a=xa,u=till(xn);L*l=ul,n=xn,i=n/2;W(i-->0,sft(a,l,i,n-1))i=n-1;W(
   F(n,a[i]=xli)F(n,c[a[i]+1]++)F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,ul[c[a[i]]++]=i)
   Fj(8/Z(*a)-1,F(n,a[i]=xl[uli]>>(j+1)*8*Z(*a))mz(c,8*nc);F(n,c[a[i]+1]++)Y(c[1+*a]-n,F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,zl[c[a[i]]++]=uli)swp(z,u)))
   xr;yr;zr;R u)
- P(xtC||xtI,asc(N(gL(x))))P(xtS,asc(N(ea1(str,x))))P(xtD,asc(blw(x)))P(xts||xti,hop(x))P(xta,A y=gkv(&x);idx(x,N(asc(y))))et(x))
+ P(xta,A y=gkv(&x);idx(x,N(asc(y))))xtC||xtI?asc(N(gL(x))):xtS?asc(N(ea1(str,x))):xtD?asc(blw(x)):xts||xti?hop(x):et(x))
 A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))sub(al(len_(x)-1),rev(asc(rev(x)))))
 A1(grp,P(xtt,xtil?K("{(2#x)#1i,`i$&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();UC w=tz(xt);
  F(xn,L j=w==ZR?fpa(&y,mR(xai)):!w?fpc(&y,xci):w==2?fpi(&y,xii):w==3?fpl(&y,xli):0;Y(j==un,u=apd(u,aL(0)))uaj=apv(uaj,&i))xr;aa(y,u))
