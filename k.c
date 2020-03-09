@@ -4,7 +4,7 @@ O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?
 O V*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,__1,__1,las,out, cmd,  0,   0,  0,  0,  0,
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,__2,__2,com,  0, eac,rdc, scn,eap,ear,eal};
 A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y)) //                                       mkl   '   /    \  ':   /:  \:
-A2(id_/*x0y0*/,S O C t[]={4,0,0,1,1,2,2,3,3,2,4};ari(x)?mR(ci[t[Av(x)]][ytdD?0:ytiI?1:2]):mkn(fir(yR)))
+A2(id_/*x0y0*/,S O C t[]={4,0,0,1,1,2,2,3,3,2,4};xtv&&Av(x)<11?mR(ci[t[Av(x)]][ytdD?0:ytiI?1:2]):mkn(fir(yR)))
 A2(com,AK(Ak(y),AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))UC k=max(n,Ak(x));F(n,k-=a[i]!=au_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
 S I in(L i,L n)_(0<=i&&i<n)
 S A getA(A x/*0*/,L i)_(asrt(xtA);A y=xy,u=a0();Fj(yn,u=apd(u,get(yaj,i)))aa(mR(xx),u))
@@ -40,7 +40,7 @@ AA(am1,A x=*a,y=a[1],z=a[2];P(n==3&&!fun(z),am1(A_(x,y,av0,z),4))P(xtt,etn(n,a))
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*ZV);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   L i=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
- P(n==4&&(xtIL||xtD)&&ytIL&&ari(z)&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];L f=Av(z),d=utT;u=enla(u);P(d&&yn-un,el(x,y,u))y=gL(y);
+ P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&Av(z)<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];L f=Av(z),d=utT;u=enla(u);P(d&&yn-un,el(x,y,u))y=gL(y);
   mr2(y,mr2(u,Y(x,Y(xtD,arD(f,yn,L j=yli;Y(!in(j,xn),x=ei(x);B)D a=xdj;D b=ud[d*i];xdj=))
                  EY(xtI,arI(f,yn,L j=yli;Y(!in(j,xn),x=ei(x);B)I a=xij;I b=ui[d*i];xij=))
                  EY(xtL,arL(f,yn,L j=yli;Y(!in(j,xn),x=ei(x);B)L a=xlj;L b=ul[d*i];xlj=)))x)))
