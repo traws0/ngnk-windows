@@ -42,9 +42,10 @@ AX(scn,P(xtilIL,enc(x,a,n))P(xtcC,spl(x,a,n))P(Ak(x)<=1,cvi(x,a,n))
  A y=*a++;n--;L m=cfm(a,n);P(m==-2,yr;eln(n,a))A u=a0(),b[8];
  F(m,*b=y;Fj(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);P(!y,mrn(n,a);ur;0)u=apd(u,yR))mrn(n,a);yr;u)
 AX(eap,P(n==1&&xtilIL,eac(x,a,n))P(n>2,ern(n,a))A z=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);P(!ztT,et(y,z))P(!zn,yr;z)
- Y(xtv&&Av(x)<11,L f=Av(x),n=zn;P(yti&&(ztI||ztC) ,I a=gi(gI(y));z=N(gI(z));A u=ax(z);arI(f,n,I b=a;a=zii;uii=)u)
-                                P(ytil&&(ztL||ztC),L a=gl(gL(y));z=N(gL(z));A u=ax(z);arL(f,n,L b=a;a=zli;uli=)u)
-                                P(ytd||ztD        ,D a=gd(gD(y));z=N(gD(z));A u=ax(z);arD(f,n,D b=a;a=zdi;udi=)u))
+ Y(xtv&&Av(x)<11,
+  P(yti&&(ztI||ztC) ,I a=gi(gI(y));z=N(gI(z));A u=ax(z);((void(*)(I,I*,I*,L))arf[0][Av(x)-1][5])(a,zi,ui,zn);u)
+  P(ytil&&(ztL||ztC),L a=gl(gL(y));z=N(gL(z));A u=ax(z);((void(*)(L,L*,L*,L))arf[1][Av(x)-1][5])(a,zl,ul,zn);u)
+  P(ytd||ztD        ,D a=gd(gD(y));z=N(gD(z));A u=ax(z);((void(*)(D,D*,D*,L))arf[2][Av(x)-1][5])(a,zd,ud,zn);u))
  A u=a0();F(zn,y=app(x,A_(get(z,i),y),2);P(!y,zr;ur;0)u=apd(u,y);y=get(z,i))yr;zr;u)
 AX(ear,P(n==1&&xtilIL,rdc(x,a,n))P(n-2,enn(n,a))x=prj(x,A_(*a,au_plc  ),n);dex(x,eac(x,a+1,1)))
 AX(eal,P(n==1&&xtilIL,scn(x,a,n))P(n-2,enn(n,a))x=prj(x,A_(au_plc,a[1]),n);dex(x,eac(x,a  ,1)))
