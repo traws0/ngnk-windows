@@ -46,19 +46,14 @@ ha(X,htT(iX),hs(iIX),hTT(iX),htT(lX),hs(lLX),hTT(lX),htT(dX),hs(dDX),hTT(dX),L,I
 #undef ha
 #undef hf
 
-#define hr(v,t,T) S T T##v##rdc(T a,T*b,L n)_(F(n,a=t##v(a,b[i]))a)
-#define hs(v,t,T) S V T##v##scn(T a,T*b,T*r,L n)_(F(n,r[i]=a=t##v(a,b[i])))
-#define hp(v,t,T) S V T##v##eap(T a,T*b,T*r,L n)_(F(n,T c=b[i];r[i]=t##v(b[i],a);a=c))
-#define hm(v,t,T) S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(j<0||j>=n,0)a[j]=t##v(a[j],b[d*i]))1)
-#define ht(v,t,T) hr(v,t,T)hs(v,t,T)hp(v,t,T)hm(v,t,T)
+#define ht(v,t,T) S T T##v##rdc(T a,T*b,L n)_(F(n,a=t##v(a,b[i]))a)\
+                  S V T##v##scn(T a,T*b,T*r,L n)_(F(n,r[i]=a=t##v(a,b[i])))\
+                  S V T##v##eap(T a,T*b,T*r,L n)_(F(n,T c=b[i];r[i]=t##v(b[i],a);a=c))\
+                  S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(j<0||j>=n,0)a[j]=t##v(a[j],b[d*i]))1)
 #define h(v) ht(v,i,I)ht(v,l,L)ht(v,d,D)
 h(1)h(2)h(3)h(4)h(5)h(6)h(7)h(8)h(9)h(X)
 #undef h
 #undef ht
-#undef hr
-#undef hs
-#undef hp
-#undef hm
 
 #define h(v,t,T){t##T##v,T##t##v,T##T##v,T##v##rdc,T##v##scn,T##v##eap,T##v##amd},
 #define h1(a...){h(1,a)h(2,a)h(3,a)h(4,a)h(5,a)h(6,a)h(7,a)h(8,a)h(9,a)h(X,a)},
