@@ -49,13 +49,8 @@
 
 TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
 TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
-#define V(x) ((V*)((UL)(x)<<16>>16))
-#define C(x) ((C*)V(x))
-#define H(x) ((H*)V(x))
-#define I(x) ((I*)V(x))
-#define L(x) ((L*)V(x))
-#define D(x) ((D*)V(x))
-#define A(x) ((A*)V(x))
+#define data(x) ((V*)((UL)(x)<<16>>16))
+#define A(x) ((A*)data(x))
 #define A_(a...) (A[]){a}
 #define A0(f,b...) A f()             _(b)
 #define A1(f,b...) A f(A x)          _(b)
@@ -108,8 +103,8 @@ SI UC Ak(A x)_((UL)x>>48&7 )SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);(A)
 SI UC Av(A x)_((UL)x>>51&31)SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);(A)(((UL)x&~(31ull<<51))|(UL)v<<51))
 SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)SI A AB(UC b,A x)_(asrt(b<48);xc[-16]=b;x)
 SI UL An(A x)_(L n=xl[-1];asrt(0<=n);asrt(n<(1ll<<48));n)SI A AN(L n,A x)_(asrt(0<=n);asrt(n<1ull<<48);xl[-1]=n;x)
-SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x&~(0xffffull<<32)|(UL)o<<32)))H(x)[-7]=o;x)
-#define Ar(x) I(x)[-3]
+SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x&~(0xffffull<<32)|(UL)o<<32)))xh[-7]=o;x)
+#define Ar(x) ((I*)data(x))[-3]
 
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
@@ -130,8 +125,8 @@ V mrn(L,O A*),*mc(V*,O V*,L),*ms(V*,L,C),*mz(V*,L),init();
 I Ci(O C*,C),epr(),eso(A,I),memcmp(O V*,O V*,L),mtc_(A,A),sym(A);
 L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),now(),pl(C**),slc_(A,L,L),pu(C**);
 
-SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i])SI C*symptr(I i)_(C(symstr(i)))
-#define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)V(r_)=(v);r_;})
+SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i])SI C*symptr(I i)_(data(symstr(i)))
+#define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)data(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I gs(A x)_(asrt(xts);(I)x)
