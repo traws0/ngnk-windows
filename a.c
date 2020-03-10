@@ -15,10 +15,13 @@ hh(6,min(x,y))hh(7,max(x,y))h(8,x<y,x<y,cmpd(x)<cmpd(y))h(9,x>y,x>y,cmpd(x)>cmpd
 #undef h
 
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
-#define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd)\
- hf(iI##x,I,I ,xiI)hf(Ii##x,I,I ,xIi)hf(II##x,I,I ,xII)\
- hf(lL##x,L,rl,xlL)hf(Ll##x,L,rl,xLl)hf(LL##x,L,rl,xLL)\
- hf(dD##x,D,rd,xdD)hf(Dd##x,D,rd,xDd)hf(DD##x,D,rd,xDD)
+#define ht(v,t,T,xtT,xTt,xTT,rt)\
+ hf(t##T##v,T,rt,xtT)hf(T##t##v,T,rt,xTt)hf(T##T##v,T,rt,xTT)\
+ S T T##v##rdc(T a,T*b,L n)_(F(n,a=t##v(a,b[i]))a)\
+ S V T##v##scn(T a,T*b,T*r,L n)_(F(n,r[i]=a=t##v(a,b[i])))\
+ S V T##v##eap(T a,T*b,T*r,L n)_(F(n,T c=b[i];r[i]=t##v(b[i],a);a=c))\
+ S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(j<0||j>=n,0)a[j]=t##v(a[j],b[d*i]))1)
+#define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
 #define htT(f){__typeof__(*a)c=*a;F(n,r[i]=f(c,b[i]))}
 #define hTt(f){__typeof__(*b)c=*b;F(n,r[i]=f(a[i],c))}
 #define hTT(f){F(n,r[i]=f(a[i],b[i]))}
@@ -42,16 +45,8 @@ ha(X,htT(iX),hs(iIX),hTT(iX),htT(lX),hs(lLX),hTT(lX),htT(dX),hs(dDX),hTT(dX),L,I
 #undef hTt
 #undef htT
 #undef ha
-#undef hf
-
-#define ht(v,t,T) S T T##v##rdc(T a,T*b,L n)_(F(n,a=t##v(a,b[i]))a)\
-                  S V T##v##scn(T a,T*b,T*r,L n)_(F(n,r[i]=a=t##v(a,b[i])))\
-                  S V T##v##eap(T a,T*b,T*r,L n)_(F(n,T c=b[i];r[i]=t##v(b[i],a);a=c))\
-                  S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(j<0||j>=n,0)a[j]=t##v(a[j],b[d*i]))1)
-#define h(v) ht(v,i,I)ht(v,l,L)ht(v,d,D)
-h(0)h(1)h(2)h(3)h(4)h(5)h(6)h(7)h(8)h(9)h(X)
-#undef h
 #undef ht
+#undef hf
 
 #define h(v,t,T){t##T##v,T##t##v,T##T##v,T##v##rdc,T##v##scn,T##v##eap,T##v##amd},
 #define h1(a...){h(0,a)h(1,a)h(2,a)h(3,a)h(4,a)h(5,a)h(6,a)h(7,a)h(8,a)h(9,a)h(X,a)},
