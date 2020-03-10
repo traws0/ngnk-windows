@@ -171,7 +171,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(26),au_plc=au(29),av_com=av(24
 A K0(O C*,I);
 XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];
 
-XT O V*arf[3][10][6];
+XT O V*arf[3][10][7];
 #define ar_(f,n,p,a4,a5,a8,a9,a10) SW(f,UR,Q(0,F(n,p ((V)a,b)))Q(1,F(n,p a+b))Q(2,F(n,p a-b))Q(3,F(n,p a*b))\
  Q(4,a4)Q(5,a5)Q(6,F(n,p min(a,b)))Q(7,F(n,p max(a,b)))Q(8,a8)Q(9,a9)Q(10,a10))
 #define arI(f,n,p)ar_(f,n,p,F(n,p b?a/b:!a?_0Ni:a>0?_0Wi:-_0Wi),F(n,p a>0?(b%a+a)%a:a?b/-a:_0Ni),F(n,p a<b     ),F(n,p a>b     ),F(n,p a==b))
