@@ -40,12 +40,13 @@ AA(am1,A x=*a,y=a[1],z=a[2];P(n==3&&!fun(z),am1(A_(x,y,av0,z),4))P(xtt,etn(n,a))
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*ZV);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   L i=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
- P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&Av(z)&&Av(z)<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];I d=utT;u=enla(u);P(d&&yn-un,el(x,y,u))y=gL(y);
-  mr2(y,mr2(u,Y(x,
-   Y( xtI,I r=((int(*)(I*,L,L*,L,I*,I))arf[0][Av(z)-1][6])(xi,xn,yl,yn,ui,d);Y(!r,x=ei(x)))
-   EY(xtL,I r=((int(*)(L*,L,L*,L,L*,I))arf[1][Av(z)-1][6])(xl,xn,yl,yn,ul,d);Y(!r,x=ei(x)))
-   EY(xtD,I r=((int(*)(D*,L,L*,L,D*,I))arf[2][Av(z)-1][6])(xd,xn,yl,yn,ud,d);Y(!r,x=ei(x)))
-  )x)))
+ P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&Av(z)&&Av(z)<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];I d=utT;u=enla(u);P(d&&yn-un,el(x,y,u))y=gL(y);I r=1;
+  x=mr2(y,mr2(u,Y(x,
+   Y( xtI,r=((int(*)(I*,L,L*,L,I*,I))arf[0][Av(z)-1][6])(xi,xn,yl,yn,ui,d))
+   EY(xtL,r=((int(*)(L*,L,L*,L,L*,I))arf[1][Av(z)-1][6])(xl,xn,yl,yn,ul,d))
+   EY(xtD,r=((int(*)(D*,L,L*,L,D*,I))arf[2][Av(z)-1][6])(xd,xn,yl,yn,ud,d))
+  )x));
+  r?x:ei(x))
  P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];L d=utT;u=enla(u);Y(d&&yn-un,el(x,y,u))
   mr2(y,mr2(u,F(yn,L j=yli;Y(!in(j,xn),x=ei(x);B)xcj=uc[d*i])x)))
  rdc(cv('@'),a,n))
