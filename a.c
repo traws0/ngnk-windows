@@ -5,18 +5,14 @@ A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*c3('A',c,'Z'))S L f
 A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 
-S I i0(I x,I y)_(y)                         S L l0(I x,I y)_(y)                         S D d0(I x,I y)_(y)                //:
-S I i1(I x,I y)_(x+y)                       S L l1(L x,L y)_(x+y)                       S D d1(D x,D y)_(x+y)              //+
-S I i2(I x,I y)_(x-y)                       S L l2(L x,L y)_(x-y)                       S D d2(D x,D y)_(x-y)              //-
-S I i3(I x,I y)_(x*y)                       S L l3(L x,L y)_(x*y)                       S D d3(D x,D y)_(x*y)              //*
-S I i4(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S L l4(L x,L y)_(y?x/y:(UL)_0Nl+(x<0)-(x>0))S D d4(D x,D y)_(x/y)              //%
-S I i5(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni) S L l5(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0Nl) S D d5(D x,D y)_(_0n)              //!
-S I i6(I x,I y)_(min(x,y))                  S L l6(L x,L y)_(min(x,y))                  S D d6(D x,D y)_(min(x,y))         //&
-S I i7(I x,I y)_(max(x,y))                  S L l7(L x,L y)_(max(x,y))                  S D d7(D x,D y)_(max(x,y))         //|
 S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1))
-S I i8(I x,I y)_(x<y)                       S I l8(L x,L y)_(x<y)                       S I d8(D x,D y)_(cmpd(x)<cmpd(y))  //<
-S I i9(I x,I y)_(x>y)                       S I l9(L x,L y)_(x>y)                       S I d9(D x,D y)_(cmpd(x)>cmpd(y))  //>
-S I iX(I x,I y)_(x==y)                      S I lX(L x,L y)_(x==y)                      S I dX(D x,D y)_(*(L*)&x==*(L*)&y) //=
+#define h(v,fi,fl,fd) S I i##v(I x,I y)_(fi) S L l##v(L x,L y)_(fl) S D d##v(D x,D y)_(fd)
+#define hh(v,f) h(v,f,f,f)
+hh(0,y)hh(1,x+y)hh(2,x-y)hh(3,x*y)
+h(4,y?x/y:(UI)_0Ni+(x<0)-(x>0),y?x/y:(UL)_0Nl+(x<0)-(x>0),x/y)h(5,x>0?(y%x+x)%x:x?y/-x:_0Ni,x>0?(y%x+x)%x:x?y/-x:_0Nl,_0n)
+hh(6,min(x,y))hh(7,max(x,y))h(8,x<y,x<y,cmpd(x)<cmpd(y))h(9,x>y,x>y,cmpd(x)>cmpd(y))h(X,x==y,x==y,*(L*)&x==*(L*)&y)
+#undef hh
+#undef h
 
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd)\
