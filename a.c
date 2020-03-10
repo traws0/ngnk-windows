@@ -5,18 +5,18 @@ A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*c3('A',c,'Z'))S L f
 A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 
-SI I i0(I x,I y)_(y)                         SI L l0(I x,I y)_(y)                         SI D d0(I x,I y)_(y)                //:
-SI I i1(I x,I y)_(x+y)                       SI L l1(L x,L y)_(x+y)                       SI D d1(D x,D y)_(x+y)              //+
-SI I i2(I x,I y)_(x-y)                       SI L l2(L x,L y)_(x-y)                       SI D d2(D x,D y)_(x-y)              //-
-SI I i3(I x,I y)_(x*y)                       SI L l3(L x,L y)_(x*y)                       SI D d3(D x,D y)_(x*y)              //*
-SI I i4(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))SI L l4(L x,L y)_(y?x/y:(UL)_0Nl+(x<0)-(x>0))SI D d4(D x,D y)_(x/y)              //%
-SI I i5(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni) SI L l5(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0Nl) SI D d5(D x,D y)_(_0n)              //!
-SI I i6(I x,I y)_(min(x,y))                  SI L l6(L x,L y)_(min(x,y))                  SI D d6(D x,D y)_(min(x,y))         //&
-SI I i7(I x,I y)_(max(x,y))                  SI L l7(L x,L y)_(max(x,y))                  SI D d7(D x,D y)_(max(x,y))         //|
-SI L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1))
-SI I i8(I x,I y)_(x<y)                       SI I l8(L x,L y)_(x<y)                       SI I d8(D x,D y)_(cmpd(x)<cmpd(y))  //<
-SI I i9(I x,I y)_(x>y)                       SI I l9(L x,L y)_(x>y)                       SI I d9(D x,D y)_(cmpd(x)>cmpd(y))  //>
-SI I iX(I x,I y)_(x==y)                      SI I lX(L x,L y)_(x==y)                      SI I dX(D x,D y)_(*(L*)&x==*(L*)&y) //=
+S I i0(I x,I y)_(y)                         S L l0(I x,I y)_(y)                         S D d0(I x,I y)_(y)                //:
+S I i1(I x,I y)_(x+y)                       S L l1(L x,L y)_(x+y)                       S D d1(D x,D y)_(x+y)              //+
+S I i2(I x,I y)_(x-y)                       S L l2(L x,L y)_(x-y)                       S D d2(D x,D y)_(x-y)              //-
+S I i3(I x,I y)_(x*y)                       S L l3(L x,L y)_(x*y)                       S D d3(D x,D y)_(x*y)              //*
+S I i4(I x,I y)_(y?x/y:(UI)_0Ni+(x<0)-(x>0))S L l4(L x,L y)_(y?x/y:(UL)_0Nl+(x<0)-(x>0))S D d4(D x,D y)_(x/y)              //%
+S I i5(I x,I y)_(x>0?(y%x+x)%x:x?y/-x:_0Ni) S L l5(L x,L y)_(x>0?(y%x+x)%x:x?y/-x:_0Nl) S D d5(D x,D y)_(_0n)              //!
+S I i6(I x,I y)_(min(x,y))                  S L l6(L x,L y)_(min(x,y))                  S D d6(D x,D y)_(min(x,y))         //&
+S I i7(I x,I y)_(max(x,y))                  S L l7(L x,L y)_(max(x,y))                  S D d7(D x,D y)_(max(x,y))         //|
+S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1))
+S I i8(I x,I y)_(x<y)                       S I l8(L x,L y)_(x<y)                       S I d8(D x,D y)_(cmpd(x)<cmpd(y))  //<
+S I i9(I x,I y)_(x>y)                       S I l9(L x,L y)_(x>y)                       S I d9(D x,D y)_(cmpd(x)>cmpd(y))  //>
+S I iX(I x,I y)_(x==y)                      S I lX(L x,L y)_(x==y)                      S I dX(D x,D y)_(*(L*)&x==*(L*)&y) //=
 
 #define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
 #define ha(x,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd)\
