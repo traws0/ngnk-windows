@@ -2,7 +2,7 @@
 A1(neg,sub(ai(0),x))A1(not,xtaAX?ea1(not,x):fun(x)?mtc(x,au0):eql(x,xtsS?as(0):ac(0)))
 A1(sqr,P(xtaAX,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)
 A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*c3('A',c,'Z'))S L fl1(D d)_(d<0?(L)d-(d<(L)d):(L)d)
-A1(flr,P(xtlL||xtiI,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
+A1(flr,P(xtilIL,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 
 S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1))
@@ -28,17 +28,17 @@ hh(6,min(x,y))hh(7,max(x,y))h(8,x<y,x<y,cmpd(x)<cmpd(y))h(9,x>y,x>y,cmpd(x)>cmpd
 #define hs(x){x(b,a,r,n);}
 #define hn(x){__typeof__(*b)c=-*b;x(a,&c,r,n);}
 //   iI      Ii      II      lL      Ll      LL      dD      Dd      DD
-ha(0,htT(i0),hTt(i0),hTT(i0),htT(l0),hTt(l0),hTT(l0),htT(d0),hTt(d0),hTT(d0),L,D)
-ha(1,htT(i1),hs(iI1),hTT(i1),htT(l1),hs(lL1),hTT(l1),htT(d1),hs(dD1),hTT(d1),L,D)
-ha(2,htT(i2),hn(Ii1),hTT(i2),htT(l2),hn(Ll1),hTT(l2),htT(d2),hn(Dd1),hTT(d2),L,D)
-ha(3,htT(i3),hs(iI3),hTT(i3),htT(l3),hs(lL3),hTT(l3),htT(d3),hs(dD3),hTT(d3),L,D)
-ha(4,htT(i4),hTt(i4),hTT(i4),htT(l4),hTt(l4),hTT(l4),htT(d4),hTt(d4),hTT(d4),L,D)
-ha(5,htT(i5),hTt(i5),hTT(i5),htT(l5),hTt(l5),hTT(l5),htT(d5),hTt(d5),hTT(d5),L,D)
-ha(6,htT(i6),hs(iI6),hTT(i6),htT(l6),hs(lL6),hTT(l6),htT(d6),hs(dD6),hTT(d6),L,D)
-ha(7,htT(i7),hs(iI7),hTT(i7),htT(l7),hs(lL7),hTT(l7),htT(d7),hs(dD7),hTT(d7),L,D)
-ha(8,htT(i8),hTt(i8),hTT(i8),htT(l8),hTt(l8),hTT(l8),htT(d8),hTt(d8),hTT(d8),L,I)
-ha(9,hs(Ii8),hs(iI8),hs(II8),hs(Ll8),hs(lL8),hs(LL8),hs(Dd8),hs(dD8),hs(DD8),L,I)
-ha(X,htT(iX),hs(iIX),hTT(iX),htT(lX),hs(lLX),hTT(lX),htT(dX),hs(dDX),hTT(dX),L,I)
+ha(0,htT(i0),hTt(i0),hTT(i0),htT(l0),hTt(l0),hTT(l0),htT(d0),hTt(d0),hTT(d0),L,D) // :
+ha(1,htT(i1),hs(iI1),hTT(i1),htT(l1),hs(lL1),hTT(l1),htT(d1),hs(dD1),hTT(d1),L,D) // +
+ha(2,htT(i2),hn(Ii1),hTT(i2),htT(l2),hn(Ll1),hTT(l2),htT(d2),hn(Dd1),hTT(d2),L,D) // -
+ha(3,htT(i3),hs(iI3),hTT(i3),htT(l3),hs(lL3),hTT(l3),htT(d3),hs(dD3),hTT(d3),L,D) // *
+ha(4,htT(i4),hTt(i4),hTT(i4),htT(l4),hTt(l4),hTT(l4),htT(d4),hTt(d4),hTT(d4),L,D) // %
+ha(5,htT(i5),hTt(i5),hTT(i5),htT(l5),hTt(l5),hTT(l5),htT(d5),hTt(d5),hTT(d5),L,D) // !
+ha(6,htT(i6),hs(iI6),hTT(i6),htT(l6),hs(lL6),hTT(l6),htT(d6),hs(dD6),hTT(d6),L,D) // &
+ha(7,htT(i7),hs(iI7),hTT(i7),htT(l7),hs(lL7),hTT(l7),htT(d7),hs(dD7),hTT(d7),L,D) // |
+ha(8,htT(i8),hTt(i8),hTT(i8),htT(l8),hTt(l8),hTT(l8),htT(d8),hTt(d8),hTT(d8),L,I) // <
+ha(9,hs(Ii8),hs(iI8),hs(II8),hs(Ll8),hs(lL8),hs(LL8),hs(Dd8),hs(dD8),hs(DD8),L,I) // >
+ha(X,htT(iX),hs(iIX),hTT(iX),htT(lX),hs(lLX),hTT(lX),htT(dX),hs(dDX),hTT(dX),L,I) // =
 #undef hn
 #undef hs
 #undef hTT
