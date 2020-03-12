@@ -25,8 +25,8 @@ A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,
 A2(cut,
  P(ytil,P(!xtT,et(x,y))L i=gl(gL(y));P(i<0||i>=xn,x)A u=atn(xt,xn-1);L w=tZ(xt);mc(uc,xc,i*w);mc(uc+i*w,xc+i*w+w,(xn-i-1)*w);Y(xtX,u=sqz(mRa(u)))xr;u)
  P(yta,rsh(xpt(mR(yx),x),y))P(ytt,et(x,y))
- x=Ny(gL(x));P(xtl,L p=gl_(x);P(p==_0Nl,ed(x,y))A u=absL(p)<yn?slc_(y,p<0?0:p,yn-absL(p)):atn(yt,0);xr;yr;u)
- L n=xn,l=yn;x=apv(x,&l);L p,q=*xl;F(n,p=q;q=xl[i+1];P(p>q,ed(x,y))P(p<0||q>yn,el(x,y)))q=*xl;A u=aX(n);F(n,p=q;q=xl[i+1];uai=slc_(y,p,q-p))xr;yr;u)
+ x=Ny(gL(x));P(xtl,L p=gl_(x);p-_0Nl?K("{n:#y;y$[n<x|-x;!0;x<0;!n+x;x+!n-x]}",x,y):ed(x,y))
+ K("{y x+!'1_-':x,#y}",x,y))
 S L gLI(I i)_(i-_0Ni?i:_0Nl)S I gIL(L l)_(l-_0Nl?l:_0Ni)S D gDL(L l)_(l-_0Nl?(D)l:_0n)
 A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)x=N(gI(x));P(xtt,al(gLI(gi(x))))A u=aL(xn);F(un,uli=gLI(xii))xr;u)
 S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(gLI(gi(x))))A u=aC(xn);F(un,uci=xii)xr;u)
