@@ -1,4 +1,4 @@
-// ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+// ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 //#define DEBUG
 #include<sys/syscall.h>
 #include<math.h>

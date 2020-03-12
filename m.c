@@ -1,4 +1,4 @@
-#include<sys/mman.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include<sys/mman.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 #include"k.h"
 #define nxt(x) A(x)[-2]
 L mt,mu;S A mx[48];A syml,glb,cn[tn],ci[5][3];dbg(S I ml;/*prevent allocations*/)S CD A oom()_(write(1,"oom\n",4);exit(1);0)

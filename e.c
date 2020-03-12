@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S C em[32];S UC en;S A es;S I eo;S O C*eM[]={"nyi","len","typ","dom","rnk","idx","prs"};
 CD A err0(O C*m)_(Y((UL)m<128,m=eM[(L)m])en=min(strlen(m),Z(em)-1);mc(em,m,en);em[en]=0;0)
 CD A err1(O C*m,A x)_(xr;err0(m))CD A err2(O C*m,A x,A y)_(yr;err1(m,x))CD A err3(O C*m,A x,A y,A z)_(zr;err2(m,x,y))

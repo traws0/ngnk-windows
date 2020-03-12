@@ -1,4 +1,4 @@
-1"ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - http://bitbucket.org/ngn/k/raw/master/LICENSE\n";
+1"ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE\n";
 h:(": assign   RETURN    '  each|slidingwin"
    "+ add      transpose /  fold|join |dec   / comment"
    "- subtract negate    \\  scan|split|enc   \\ exit"
