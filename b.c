@@ -13,7 +13,7 @@ S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==av0&&Ak(f),L i=fpi(&fl,gs(y));
   A k=gs(yts?y:yx);L i=fndi(fl,k);Y(i>=0,lu[i]=An(fb);h(bm);h(i))E(hc(as(k));h(bM))h(Av(xx));1)
  P(ytX&&yx==av_mkl,h(bL);h(yn-1);F(yn-1,N(lhs(x,ya[i+1]));h(bp))1)en();eso(mR(fs),o);0)
 S I rhs(A x/*0*/)_(UH o=Ao(x);Y(xts,P(gs(x)==4,h(bo);1)L i=fndi(fl,gs(x));P(i>=0,lu[i]=An(fb);h(bg|i);1))P(xtS&&xn==1,hc(as(*xl));1)
- P(xtsS,hc(xR);h(bu|vi('.'));1)P(!xtX,hc(x==au_plc?au0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
+ P(xtsS,hc(AO(0,xR));h(bu|vi('.'));1)P(!xtX,hc(x==au_plc?au0:xR);1)L n=xn;P(!n,hc(xR);1)A u=xx;P(utS&&n==1,hc(uR);1)
  P((utu||u==av0)&&n==3,N(rhs(xz));N(lhs(x,xy)))
  P(u==cv('$')&&n>3,n--;I p[n];A*a=xa;F(n&~1,N(rhs(*++a));h(i&1?bj:bz);p[i]=An(fb);h(0))N(rhs(n&1?*++a:au0));
   A y=fb;F(n&~1,I d=(i&1?yn:p[i+1])-p[i];Y(i&1,I j=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))P(d>255,err("mxj");0)yc[p[i]]=d)1)
