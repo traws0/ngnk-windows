@@ -143,8 +143,9 @@ SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd_(A x)_(*xd)SI D gd(A x)_
 #define er(a...) err((C*)4,##a)
 #define ei(a...) err((C*)5,##a)
 #define ep(a...) err((C*)6,##a)
+#define es(a...) err((C*)7,##a)
 #define h(t,i) SI A e##t##n(I n,O A*a)_(errn((C*)i,n,a))
-h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)
+h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #undef h
 
 #define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))
