@@ -164,7 +164,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define _0w  (D)INFINITY
 #define mr2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
-A K0(O C*,I);XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];XT O V*arf[3][11][7];
+A K0(O C*,I);XT A cn[],ci[5][3];XT O C vc[];XT O V*vf[],*arf[3][11][7];
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))
