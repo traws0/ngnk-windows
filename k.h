@@ -11,8 +11,6 @@
 #define  W(x,a...) while(x){a;}
 #define  F(x,a...) for(__typeof__(x)n_=(x),i=0;i<n_;i++){a;}
 #define Fj(x,a...) for(__typeof__(x)n_=(x),j=0;j<n_;j++){a;}
-#define  Q(x,a...) case x:{a;B;}
-#define SW(x,y,a...) switch(x){default:{y;B;}a}
 #define B break
 #define O const
 #define R return
