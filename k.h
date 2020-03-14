@@ -149,7 +149,7 @@ SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd_(A x)_(*xd)SI D gd(A x)_
 h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #undef h
 
-#define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))
+#define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48)) //type,value,arity
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
@@ -164,13 +164,9 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define _0Wi (~_0Ni)
 #define _0n  (D)NAN
 #define _0w  (D)INFINITY
+#define mr2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
-A K0(O C*,I);
-XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];
-
-XT O V*arf[3][11][7];
-
-#define mr2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;})
+A K0(O C*,I);XT O C vc[];XT A cn[],ci[5][3];XT O V*vf[];XT O V*arf[3][11][7];
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))
