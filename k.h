@@ -136,6 +136,7 @@ SI A aD(L n)_(atn(tD,n))SI A ad(D v)_(atv(td,v))SI D gd_(A x)_(*xd)SI D gd(A x)_
 
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(os("["__FILE__":"XS(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
+#define eMs "nyi","len","typ","dom","rnk","idx","prs","stk"
 #define en(a...) err((C*)0,##a)
 #define el(a...) err((C*)1,##a)
 #define et(a...) err((C*)2,##a)
