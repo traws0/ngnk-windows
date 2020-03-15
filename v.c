@@ -25,7 +25,7 @@ S A2(fil,ytX||yta?eac(cv('^'),A_(x,y),2):ytt?fir(xpt(x,enl(y))):K("{@[y;&^y;x]}"
 A2(xpt,P(xtt,fil(x,y))P(xtaA||ytaA,en(x,y))y=enla(y);Y(xtX,y=blw(y))K("{x@&^y?x}",x,y))
 A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,n*w);Y(t==tX,mRa(u);u=sqz(u))u)
 A2(cut,
- P(ytil,P(!xtT,et(x,y))L i=gl(gL(y));P(i<0||i>=xn,x)A u=atn(xt,xn-1);L w=tZ(xt);mc(uc,xc,i*w);mc(uc+i*w,xc+i*w+w,(xn-i-1)*w);Y(xtX,u=sqz(mRa(u)))xr;u)
+ P(ytil,P(!xtT,et(x,y))L i=gl(gL(y));P(!in(i,xn),x)A u=atn(xt,xn-1);L w=tZ(xt);mc(uc,xc,i*w);mc(uc+i*w,xc+i*w+w,(xn-i-1)*w);Y(xtX,u=sqz(mRa(u)))xr;u)
  P(yta,rsh(xpt(mR(yx),x),y))P(ytt,et(x,y))x=Ny(gL(x));K("{n:#y;y$[`l=@x;$[n<x|-x;!0;x<0;!n+x;x+!n-x];x+!'1_-':x,#y]}",x,y))
 S L gLI(I i)_(i-_0Ni?i:_0Nl)S I gIL(L l)_(l-_0Nl?l:_0Ni)S D gDL(L l)_(l-_0Nl?(D)l:_0n)
 A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)x=N(gI(x));P(xtt,al(gLI(gi(x))))A u=aL(xn);F(un,uli=gLI(xii))xr;u)

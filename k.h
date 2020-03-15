@@ -81,6 +81,7 @@ V*mmap_(V*,L,L,L,L,L);
 #define min(x,y)extr(x,y,<)
 #define max(x,y)extr(x,y,>)
 SI L absL(L x)_(x<0?-x:x)SI I c3(UC x,UC y,UC z)_(x<=y&&y<=z)SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(c3('0',c,'9'))
+SI I in(L i,L n)_(0<=i&&i<n)
 
 //   () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};

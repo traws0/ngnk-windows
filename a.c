@@ -20,7 +20,7 @@ hh(6,min(x,y))hh(7,max(x,y))h(8,x<y,x<y,cmpd(x)<cmpd(y))h(9,x>y,x>y,cmpd(x)>cmpd
  S V T##v##rdc(T*a,T*b,L n){T c=*a;F(n,c=t##v(c,b[i]))*a=c;}\
  S V T##v##scn(T*a,T*b,T*r,L n)_(T c=*a;F(n,r[i]=c=t##v(c,b[i])))\
  S V T##v##eap(T*a,T*b,T*r,L n)_(T c=*a;F(n,T d=b[i];r[i]=t##v(b[i],c);c=d))\
- S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(j<0||j>=n,0)a[j]=t##v(a[j],b[d*i]))1)
+ S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=t##v(a[j],b[d*i]))1)
 #define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
 #define htT(f){__typeof__(*a)c=*a;F(n,r[i]=f(c,b[i]))}
 #define hTt(f){__typeof__(*b)c=*b;F(n,r[i]=f(a[i],c))}
