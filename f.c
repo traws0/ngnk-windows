@@ -8,9 +8,8 @@ S L fnda(A x,A y/*0*/)_(asrt(xtX); F(xn,P(mtc_(xai,y),i))_0Nl)L fpa(A*p,A y)_(A 
 S L fndc(A x,C v)_(asrt(tz(xt)==0);F(xn,P(xci==v,i))_0Nl)     L fpc(A*p,C v)_(A x=*p;L n=xn;F(n,P(xci==v,i))*p=apv(x,&v);n)
   L fndi(A x,I v)_(asrt(tz(xt)==2);F(xn,P(xii==v,i))_0Nl)     L fpi(A*p,I v)_(A x=*p;L n=xn;F(n,P(xii==v,i))*p=apv(x,&v);n)
   L fndl(A x,L v)_(asrt(tz(xt)==3);F(xn,P(xli==v,i))_0Nl)     L fpl(A*p,L v)_(A x=*p;L n=xn;F(n,P(xli==v,i))*p=apv(x,&v);n)
-S A1(uns,P(!xtC||xn-9||*xc-'d',ed(x))D v=*(D*)(xc+1);xr;ad(v))
 A2(fnd,
- P(xts,C*s=symptr(gs(x)),c=*s;s[1]?ed(y):c=='j'?json(y):!c?uns(y):ed(y))
+ P(xts,C*s=symptr(gs(x)),c=*s;s[1]?ed(y):c=='j'?json(y):!c?des(y):ed(y))
  P(xtil,ytl?rnd(gl(gL(x)),gl(y)):ytc||yti||ytT?K("{$[`c=t:@y;`c$$[y~\"A\";y;\"a\"]+x?26;`i=t;`i$x?`l$y;y@x?#y]}",x,y):et(y))
  P(xtt,et(x,y))
  P(xta,A z=gkv(&x);idx(x,fnd(z,y)))

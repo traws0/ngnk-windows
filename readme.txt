@@ -18,6 +18,7 @@ v.c  the rest of the verbs
 w.c  adverbs
 c.c  system commands: \w \t:n ..
 j.c  json parser: `j?x
+x.c  serialization
 e.c  error handling
 t/   tests
 g/   https://codegolf.stackexchange.com/
