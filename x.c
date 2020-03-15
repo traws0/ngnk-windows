@@ -2,9 +2,14 @@
 S A2(f,
  y=apc(y,xt);
  P(xtc||xti,catc(y,(V*)&x,8))
- P(xtC||xtI||xtlL||xtdD,mr2(x,catc(y,xc,xn*tZ(xt))))
+ P(xtl||xtd,mr2(x,catc(y,xc,xn*tZ(xt))))
  en(x,y))
 A1(ser,f(x,aC(0)))
-A1(des,
- P(!xtC||xn-9||*xc-'d',ed(x))
- D v=*(D*)(xc+1);xr;ad(v))
+
+S C*s;
+S A g()_(
+ UC t=*s++;
+ P(t==tc||t==ti,*(A*)(V*)s)
+ P(t==tl||t==td,A x=atnv(t,1,s);s+=tZ(t);x)
+ en())
+A1(des,P(!xtC,ed(x))s=xc;dex(x,g()))
