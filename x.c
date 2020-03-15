@@ -1,9 +1,10 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 
+S A f8(V*v,A y)_(catc(y,v,8))
 S A2(f,y=apc(y,xt);
  P(xts,en(x,y))
- P(pkd(x),catc(y,(V*)&x,8))
- P(xtX,catc(y,xc-8,8);F(xn,y=Nx(f(get(x,i),y)))y)
+ P(pkd(x),f8(&x,y))
+ P(xtX,y=Nx(f8(xc-8,y));F(xn,y=Nx(f(get(x,i),y)))y)
  P(xtC||xtI||xtlL||xtdD,I l=8*xtT;mr2(x,catc(y,xc-l,l+xn*tZ(xt))))
  en(x,y))
 A1(ser,f(x,aC(0)))
