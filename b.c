@@ -1,10 +1,10 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S O I mxl=16,mxc=128;enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S A f;S I lu[16],rhs(A);
-#define fs A(f)[0] //src
-#define fb A(f)[1] //bytecode
-#define fm A(f)[2] //srcmap
-#define fl A(f)[3] //local symbols
-#define fc A(f)[4] //constants
+#define fs A(f)[0] //src                  BYTECODE                                              ba:apply n-adic
+#define fb A(f)[1] //bytecode             bu,bv:apply unary|binary verb                         bP:make projection
+#define fm A(f)[2] //srcmap               bs,bg,bd:set|get|delete local                         bz:branch if falsey
+#define fl A(f)[3] //local symbols        bm,bM:local|global modified assign (a[i]+:b)          bj,bp,br:jump|pop|return
+#define fc A(f)[4] //constants            bl,bL:make|destroy list, the latter used for (a;b):c  bc:load constant
 #define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
 #define hc(x)({I b=bc+fpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
 S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==av0&&Ak(f),L i=fpi(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
