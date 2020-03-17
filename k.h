@@ -84,8 +84,14 @@ SI L absL(L x)_(x<0?-x:x)SI I c3(UC x,UC y,UC z)_(x<=y&&y<=z)SI D l2d(L v)_(*(D*
 SI I in(L i,L n)_(0<=i&&i<n)
 
 //   () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
-enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};
+enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define tsym "XCILDSAacildsopqruvw"
+SI UC At(A);
+SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))
+SI I pkdt(UC t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       SI I pkd(A x)_(pkdt(xt))
+SI I funt(UC t)_(t>=to)                                          SI I fun(A x)_(funt(xt))
+SI I sim(A x)_(ta<xt&&xt<to)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)
+
 //header bytes: bfoorrrrnnnnnnnn (b=bucket,f=flags,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
 // tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
@@ -95,16 +101,14 @@ enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn};
 // tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 to,tp,tq
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
-SI UC At(A x)_((UL)x>>56   )SI A AT(UC t,A x)_((A)((UL)t<<56|(UL)x<<8>>8))
-SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))
-SI I pkdt(UC t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       SI I pkd(A x)_(pkdt(xt))
-SI I funt(UC t)_(t>=to)                                          SI I fun(A x)_(funt(xt))
-SI I sim(A x)_(ta<xt&&xt<to)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)
-SI UC Ak(A x)_((UL)x>>48&7 )SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);(A)(((UL)x&~( 7ull<<48))|(UL)k<<48))
-SI UC Av(A x)_((UL)x>>51&31)SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);(A)(((UL)x&~(31ull<<51))|(UL)v<<51))
-SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)SI A AB(UC b,A x)_(asrt(b<48);xc[-16]=b;x)
+
+//getters                                                setters
+SI UC At(A x)_((UL)x>>56   )                             SI A AT(UC t,A x)_((A)((UL)t<<56|(UL)x<<8>>8))
+SI UC Ak(A x)_((UL)x>>48&7 )                             SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);(A)(((UL)x&~( 7ull<<48))|(UL)k<<48))
+SI UC Av(A x)_((UL)x>>51&31)                             SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);(A)(((UL)x&~(31ull<<51))|(UL)v<<51))
+SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)                SI A AB(UC b,A x)_(asrt(b<48);xc[-16]=b;x)
 SI UL An(A x)_(L n=xl[-1];asrt(0<=n);asrt(n<(1ll<<48));n)SI A AN(L n,A x)_(asrt(0<=n);asrt(n<1ull<<48);xl[-1]=n;x)
-SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])SI A AO(UH o,A x)_(P(xts,(A)(((UL)x&~(0xffffull<<32)|(UL)o<<32)))xh[-7]=o;x)
+SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])            SI A AO(UH o,A x)_(P(xts,(A)(((UL)x&~(0xffffull<<32)|(UL)o<<32)))xh[-7]=o;x)
 #define Ar(x) ((I*)data(x))[-3]
 
 #define Z sizeof
@@ -127,6 +131,7 @@ I Ci(O C*,C),epr(),eso(A,I),mtc_(A,A),sym(A);
 L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),now(),pl(C**),pu(C**);
 
 SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)SI A symstr(I i)_(A(syml)[i])SI C*symptr(I i)_(data(symstr(i)))
+
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)data(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(UC v)_(pck(tc,v))SI UC gc(A x)_(asrt(xtc);(UC)x)

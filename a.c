@@ -5,7 +5,7 @@ A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*c3('A',c,'Z'))S L f
 A1(flr,P(xtilIL,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
 
-S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1))
+S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1)) //comparable double
 #define h(v,fi,fl,fd) S I i##v(I x,I y)_(fi) S L l##v(L x,L y)_(fl) S D d##v(D x,D y)_(fd)
 #define hh(v,f) h(v,f,f,f)
 hh(0,y)hh(1,x+y)hh(2,x-y)hh(3,x*y)
@@ -50,10 +50,10 @@ ha(X,htT(iX),hs(iIX),hTT(iX),htT(lX),hs(lLX),hTT(lX),htT(dX),hs(dDX),hTT(dX),L,I
 
 #define h(v,t,T){t##T##v,T##t##v,T##T##v,T##v##rdc,T##v##scn,T##v##eap,T##v##amd},
 #define h1(a...){h(0,a)h(1,a)h(2,a)h(3,a)h(4,a)h(5,a)h(6,a)h(7,a)h(8,a)h(9,a)h(X,a)},
-O V*arf[3][11][7]={h1(i,I)h1(l,L)h1(d,D)};
+O V*arf[3][11][7]={h1(i,I)h1(l,L)h1(d,D)}; //arithfns[type-tI][verb][0=atom-list 1=list-atom 2=list-list 3=reduce 4=scan 5=eachprior 6=amend]
 #undef h1
 #undef h
-S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2))
+S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2)) //dyadic penetrate
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;P(k==3&&xn-yn,el(x,y))
  V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;void(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k-!!k];UC t=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,mr2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,mr2(x,f(a,b,yc,yn);y))

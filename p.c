@@ -5,7 +5,7 @@ L pu(C**p)_(C*s=*p;L v=0;C c=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?_0n:_0w)I e=0;Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))
  Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
 S D pd(C**p)_(I m=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
-S C*s,*s0,na;
+S C*s0,*s,na;
 S A0(pIL,A x=aL(0);C c;I b=0;W(1,L l=pl(&s);c=*s;Y(!l&&c=='N',l=_0Nl;c=*++s)E(b|=l<_0Ni||l>_0Wi)x=apv(x,&l);Y(c-32||!num(s+1),B)c=*++s)
  P(c=='j'||c=='l',s++;x)P(c=='i',!b?s++,gI(x):ep(x))x)
 S A0(pD,A x=aD(0);W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),B)s++)x)
@@ -14,7 +14,7 @@ S A0(p0x,A x=aC(0);s+=2;W(ldg(*s),x=apc(x,ph(*s)<<4|ph(s[1]));s+=2)x)
 S A ps(C**p)_(C*s=*p,c=*s;Y(c&0x80,W(((c=*++s)&0xc0)==0x80))EY(c==':',W(ldg(c=*++s)||Ci("./:",c)<3))E(W(ldg(c),c=*++s))C*t=*p;aCm(t,*p=s))
 S A pS(C d)_(A x=aS(0);W(1,x=apv(x,(I[]){sym(d-'`'||*s-'"'?ps(&s):pC())});P(*s-d,x)++s)0)
 S A lam(C k,A s,A b,A l)_(AK(k,atnv(tX,5,A_(s,b,au0,l,au0))))
-S A1(shy,P(!xn,x)A y=xa[xn-1];Y(ytX&&yn,A z=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x)
+S A1(shy,P(!xn,x)A y=xa[xn-1];Y(ytX&&yn,A z=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x) //if last expr is assignment, make it return ::
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;A y;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),']')));P(!ytS||yn>8,ep(y)))
  A z=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=atnv(tS,na,(I[]){1,2,3}))E(na=yn)A x=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
 S A pt(C*v)_(A x;C c=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(av_mkl),')'));xn-2?x:xy==au_plc?xr,a0():las(x))P(c=='{',po())
