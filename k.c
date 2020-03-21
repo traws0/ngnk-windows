@@ -24,7 +24,7 @@ AX(app,
  P(xts,C*s=symptr(gs(x)),c=*s;A y=*a;!c?ser(y):s[1]?enn(n,a):n>1?ern(n,a):c=='j'?json(y):c=='k'?kst(y):c=='p'?prs(y):c=='t'?yr,al(now()):
   c=='x'?frk(y):c=='e'?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtA,A y=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(ta,x),a,n))
- P(xtil,P(n>1,ern(n,a))A y=*a;Y(ytc,y=enl(y))E(P(!ytC,et(y)))write(gl_(x),yc,yn);y)
+ P(xtil,P(n>1,ern(n,a))A y=*a;P(!ytcC,et(y))y=enla(y);write(gl_(x),yc,yn);y)
  P(n<Ak(x),prj(x,a,n))P(xtv,n==2?((A2*)vf[32+Av(x)])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[58+Av(x)])(xx,a,n))
  P(n>Ak(x),ern(n,a))P(xtu,((A1*)vf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4&&Ak(*a)==2?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
  P(xtp,L m=xn-1,j=0;A b[m+n];F(xn-1,b[i]=xa[i+1]==au_plc&&j<n?a[j++]:mR(xa[i+1]))W(j<n,b[m++]=a[j++])app(xx,b,m))
@@ -34,7 +34,7 @@ A1(val,P(xtS,A y=glb;F(xn,P(!yta,et(x))A z=yx,u=yy;P(!ztS||!utX,ed(x))I k=xii;L 
  xtc||xts?val(enl(x)):xta?las(AT(tX,x)):xtr?cat(AT(tX,x),aw(Av(x))):c3(tu,xt,tw)?al(Av(x)):xto||xtp||xtq?AT(tX,x):et(x))
 A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(ap2,y=enla(y);L n=yn;P(!n,yr;x)P(n>8,err("mxa",x,y))y=mRa(Nx(blw(y)));A u=app(x,ya,n);xr;yr;u)
 S A set(A x,L i,A y)_(asrt(Ar(x)==1);Y(!xtX&&(!sim(y)||xt-t_lst(yt)),x=blw(x))
- P(xtX,mr(xai);xai=y;sim(y)?sqz(x):x)P(xtC,xci=gc(y);x)P(xtI,xii=gi(y);x)P(xtL,xli=gl(y);x)P(xtD,xdi=gd(y);x)P(xtS,xii=gs(y);x)en(x,y))
+ P(xtX,mr(xai);xai=y;sim(y)?sqz(x):x)xtC?xci=gc(y):xtI?xii=gi(y):xtL?xli=gl(y):xtD?xdi=gd(y):xtS?xii=gs(y):(x=en(x,y));x)
 S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)==tX);L j=fpi(&yx,*xi);Y(j==An(yy),yy=apd(yy,xn>1?aa0():au0))
  A*p=(A*)data(yy)+j;F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fpi(&yx,xi[i+1]);A u=yy;P(!utX,(A*)ed(x))
                            yy=j==un?apd(u,aa0()):mut(u);asrt(Ar(yy)==1);p=(A*)data(yy)+j)
