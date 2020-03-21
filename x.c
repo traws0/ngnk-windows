@@ -6,7 +6,7 @@ S A2(serx,y=Nx(apc(y,xt));
  P(pkd(x),ser8(x,y))
  P(xtX||xtS,y=Nx(ser8(xn,y));F(xn,y=Nx(serx(get(x,i),y)))xr;y)
  P(fun(x),serx(AT(tX,x),Nx(apc(y,Av(x)<<3|Ak(x)))))
- I l=8*xtT;mr2(x,catc(y,xc-l,l+xn*tZ(xt))))
+ I l=8*xtT;A u=catc(y,xc-l,l+xn*tZ(xt));xr;u)
 A1(ser,serx(x,aC(0)))
 
 S L des8(C**p)_(L r=*(L*)*p;*p+=8;r)
