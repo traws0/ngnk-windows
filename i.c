@@ -24,5 +24,4 @@ A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(
 A u1cm(I f)_(struct stat s;P(fstat(f,&s),err("stat"))L n=s.st_size;I pr=PROT_READ|PROT_WRITE,fl=MAP_NORESERVE|MAP_PRIVATE;
  V*p=mmap_(0,ZP+n,pr,fl|MAP_ANON,-1,0);P(((L)p>>4)==-1,err("mmap0"))A u=(A)(p+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
  V*q=mmap_(p+ZP,n,pr,fl|MAP_FIXED,f,0);P(q-(V*)uc,err("mmap1"))u)
-A1(u1c,P(xti,C s[1024];I r=read(gi(x),s,Z s);r<0?err("read"):aCn(s,r))
- I f=N(hop_(x,O_RDONLY));A u=u1cm(f);close(f);u)
+A1(u1c,P(xti,C s[1024];I r=read(gi(x),s,Z s);r<0?err("read"):aCn(s,r))P(xtl,u1c(gI(x)))I f=N(hop_(x,O_RDONLY));A u=u1cm(f);close(f);u)
