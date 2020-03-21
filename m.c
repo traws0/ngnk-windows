@@ -29,7 +29,7 @@ V init()_(A x=syml=aX(5);F(xn,xai=aCn(&"_xyzo"[i],!!i))glb=aa0();cn[tX]=aX(0);cn
  F(5,ci[i][0]=ad(t[i].d);ci[i][1]=ai(t[i].i);ci[i][2]=al(t[i].l)))
 #ifndef shared
  S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
- V main(L n,C**a)_(init();Y(n>1,exit(!ldf(aCz(a[1]))))repl();exit(0))
+ I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
  #if __FreeBSD__
   V _start(C**p)_(main(*(L*)(V*)p,p+1);UR)
  #else
