@@ -8,9 +8,9 @@ A2(mtc,I r=mtc_(x,y);xr;yr;ai(r))
 S L bef(A*a,L i,L j)_(L r=cmp_(a[i],a[j]);r?r<0:i<j)
 S V sft(A*a,L*l,L i,L j)_(W(1,L k=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),B)swp(l[i],l[k])i=k))
 A1(asc,P(xtX,A*a=xa,u=till(xn);L*l=ul,n=xn,i=n/2;W(i-->0,sft(a,l,i,n-1))i=n-1;W(i>0,swp(l[i],*l)sft(a,l,0,--i))xr;u)
- Y(xtL,x=N(K("{x-&/x}",x));UC*a;L n=xn;A y=aC(n*Z(*a));a=(UC*)yc;A z=aL(n),u=aL(n);L nc=1+(1<<8*Z(*a));L c[nc];mz(c,8*nc);
+ Y(xtL,x=N(K("{x-&/x}",x));UC*a;L n=xn;A y=aC(n*Z(*a));a=(UC*)yc;A z=aL(n),u=aL(n);L nc=1+(1<<8*Z(*a));L c[nc];ms(c,8*nc,0);
   F(n,a[i]=xli)F(n,c[a[i]+1]++)F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,ul[c[a[i]]++]=i)
-  Fj(8/Z(*a)-1,F(n,a[i]=xl[uli]>>(j+1)*8*Z(*a))mz(c,8*nc);F(n,c[a[i]+1]++)Y(c[1+*a]-n,F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,zl[c[a[i]]++]=uli)swp(z,u)))
+  Fj(8/Z(*a)-1,F(n,a[i]=xl[uli]>>(j+1)*8*Z(*a))ms(c,8*nc,0);F(n,c[a[i]+1]++)Y(c[1+*a]-n,F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,zl[c[a[i]]++]=uli)swp(z,u)))
   xr;yr;zr;R u)
  P(xta,A y=gkv(&x);idx(x,N(asc(y))))xtC||xtI?asc(N(gL(x))):xtS?asc(N(ea1(str,x))):xtD?asc(blw(x)):xts||xti?hop(x):et(x))
 A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))sub(al(len_(x)-1),rev(asc(rev(x)))))
