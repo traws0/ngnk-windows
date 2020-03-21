@@ -40,9 +40,10 @@ S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)
                            yy=j==un?apd(u,aa0()):mut(u);asrt(Ar(yy)==1);p=(A*)data(yy)+j)
  xr;p)
 S A mend(O A*a,I n,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*ZV);*p=mR(N(f(b,n))))
-AA(am1,A x=*a,y=a[1],z=a[2];P(n==3&&!fun(z),am1(A_(x,y,av0,z),4))P(xtt,etn(n,a))
+AA(am1,A x=*a,y=a[1],z=a[2];
  P(xta,x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rsh(al(An(xx)-An(xy)),id_(z,xy)));
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*ZV);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
+ P(xtt,etn(n,a))
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   L i=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
  P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&Av(z)<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];I d=utT;u=enla(u);P(d&&yn-un,el(x,y,u))y=gL(y);
