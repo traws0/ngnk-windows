@@ -64,7 +64,7 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define  write(a...) sc3(       write,a)
 #define   open(a...) sc3(        open,a)
 #define  close(a...) sc1(       close,a)
-#define  fstat(a...) sc2(       fstat,a)
+#define lseek_(a...) sc3(       lseek,a)
 #define   dup2(a...) sc2(        dup2,a)
 #define execve(a...) sc3(      execve,a)
 #if SYS_pipe
