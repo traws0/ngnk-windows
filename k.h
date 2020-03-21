@@ -67,7 +67,7 @@ TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define  fstat(a...) sc2(       fstat,a)
 #define   dup2(a...) sc2(        dup2,a)
 #define execve(a...) sc3(      execve,a)
-#define  pipe2(a...) sc2(       pipe2,a)
+#define   pipe(a...) sc1(        pipe,a)
 #define munmap(a...) sc2(      munmap,a)
 #define    skt(a...) sc3(      socket,a)
 #define   conn(a...) sc3(     connect,a)
