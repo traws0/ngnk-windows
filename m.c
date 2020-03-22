@@ -12,7 +12,7 @@ A1(mr,mr1(mr0(x)))
 A1(mut,P(pkd(x)||Ar(x)==1,x)A u=atnv(xt,xn,xc);xr;Y(ref(u),mRa(u))u)
 V mrn(L n,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)
 A gkv(A*p)_(A x=*p;asrt(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;A u=xy;mr(AN(0,x));u)
-I strcmp(O C*s,O C*t)_(W(*s&&*s==*t,s++;t++)*s-*t)I symc(C c)_(C s[]={c,0};sym(s))C*symptr(I i)_(A x=syml,y=xai;yc)
+I strcmp(O C*s,O C*t)_(W(*s&&*s==*t,s++;t++)*s-*t)I symc(C c)_(c3('a',c,'z')?c-'a'+1:sym((C[]){c,0}))C*symptr(I i)_(A x=syml,y=xai;yc)
 I sym(O C*s)_(A x=syml;I n=xn;F(n,A y=xai;P(!strcmp(s,yc),i))L m=mu;syml=apd(x,str0(aCz(s)));mu=m;n)
 A atn(UC t,L n)_(I b=67-__builtin_clzll((ZA>>3)+(t==tC?n>>3:n));A x=N(ma(b));Ar(x)=1;AN(n,AT(t,x)))
 A atnv(UC t,L n,O V*v)_(A u=atn(t,n);mc(uc,v,n*tZ(t));u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,aa(enl(as(0)),enl(au0)))
@@ -24,7 +24,7 @@ A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)A u=AN(n,atnv(tC,
 I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 asm(".globl mmap_\nmmap_:\nmovq %rcx,%r10\nmovq $"XS(SYS_mmap)",%rax\nsyscall\nret");
-V init()_(A x=syml=aX(27);*xa=aC(0);F(26,xa[i+1]=aCn((C[]){i},1))
+V init()_(A x=syml=aX(27);*xa=aC(0);F(26,xa[i+1]=aCn((C[]){'a'+i},1))
  glb=aa0();cn[tX]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);
  cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  S O struct{D d;L l;I i;}t[]={{0,0,0},{1,1,1},{_0w,_0Wl,_0Wi},{-_0w,-_0Wl,-_0Wi},{_0n,_0Nl,_0Ni}};
