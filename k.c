@@ -19,7 +19,7 @@ S AX(idxX,A y=*a;P(ytX,A b[8];mc(b,a,n);*b=au_plc;A z=prj(x,b,n);dex(z,eac(z,&y,
  x=idx_(x,y);P(n==1,x)P(!x,mrn(n-1,a+1);0)A u=idxX(x,a+1,n-1);xr;u)
 AX(app,
  P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))
- P(xts,C*s=symptr(gs(x)),c=*s;A y=*a;!c?ser(y):s[1]?enn(n,a):n>1?ern(n,a):c=='j'?json(y):c=='k'?kst(y):c=='p'?prs(y):c=='t'?yr,al(now()):
+ P(xts,C*s=syp(gs(x)),c=*s;A y=*a;!c?ser(y):s[1]?enn(n,a):n>1?ern(n,a):c=='j'?json(y):c=='k'?kst(y):c=='p'?prs(y):c=='t'?yr,al(now()):
   c=='x'?frk(y):c=='e'?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtA,A y=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;P(!ytcC,et(y))y=enla(y);write(gl_(x),yc,yn);y)
@@ -27,7 +27,7 @@ AX(app,
  P(n>Ak(x),ern(n,a))P(xtu,((A1*)vf[Av(x)])(*a))P(xtw,C v=Av(x);AK(0<v&&v<4&&Ak(*a)==2?1:fun(*a)?Ak(*a):1,AV(v,atnv(tr,1,a))))P(xto,run(x,a,n))
  P(xtp,L m=xn-1,j=0;A b[m+n];F(xn-1,b[i]=xa[i+1]==au_plc&&j<n?a[j++]:mR(xa[i+1]))W(j<n,b[m++]=a[j++])app(xx,b,m))
  P(xtq,app(xx,&(A){N(app(xy,a,n))},1))etn(n,a))
-A1(val,P(xtS,A y=glb;F(xn,P(!yta,et(x))A z=yx,u=yy;P(!ztS||!utX,ed(x))I k=xii;L j=fndi(z,k);P(j<0,xr;err(symptr(k)))y=uaj)xr;yR)
+A1(val,P(xtS,A y=glb;F(xn,P(!yta,et(x))A z=yx,u=yy;P(!ztS||!utX,ed(x))I k=xii;L j=fndi(z,k);P(j<0,xr;err(syp(k)))y=uaj)xr;yR)
  P(xtX,P(!xn,x)P(xn==1,fir(x))P(xn>9,err("mxa",x))x=mut(x);A u=app(xx,&xy,xn-1);mr(AN(1,x));u)P(xtC,x=N(cpl(N(prs(x))));dex(x,run(x,0,0)))
  xtc||xts?val(enl(x)):xta?las(AT(tX,x)):xtr?cat(AT(tX,x),aw(Av(x))):c3(tu,xt,tw)?al(Av(x)):xto||xtp||xtq?AT(tX,x):et(x))
 A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(ap2,y=enla(y);L n=yn;P(!n,yr;x)P(n>8,err("mxa",x,y))y=mRa(Nx(blw(y)));A u=app(x,ya,n);xr;yr;u)

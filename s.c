@@ -39,7 +39,7 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,-t-1,'0')+l-t)
  Y(l>0,*s++='.';s+=l)*s++='e';Y(t<0,t=-t;*s++='-')s4(s,t))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
-A1(str,P(xtl||xtd,I l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))P(xts,aCz(symptr(gs(x))))
+A1(str,P(xtl||xtd,I l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))P(xts,aCz(syp(gs(x))))
  K("{$[`c=t:@x;,x;`i=t;$`l$x;|/`o`p`q`r`u`v`w=t;`k@x;$'x]}",x))
 A1(kst,K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //p:parenthesize
  "l:p[`X`C;`I`L`D`S]`A`a`q`r`u`v`w;r:p[`;`]`q`r`u`v`w;w:p[`X`C;`I`L`D`S]`A`a`p`q`w;" //l:as left arg, r:as right arg, w:under an adverb
