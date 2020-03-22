@@ -56,7 +56,7 @@ calling conventions
 symbols
  symbols are represented similarly to ints and int lists. the following fns handle I <-> C* conversions:
  I syc(C)  - make a single-char symbol
- I sym(C*) - make a symbol from a ptr to memory
+ I sym(C*) - make a symbol from a ptr to '\0'-terminated memory
  C*syv(I)  - get a ptr to the '\0'-terminated name of a symbol
 errors
  error-reporting fns return a null ptr after consuming their args:
