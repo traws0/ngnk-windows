@@ -2,7 +2,7 @@
 
 S A ser8(L v,A y)_(catc(y,(V*)&v,8))
 S A2(serx,y=Nx(apc(y,xt));
- P(xts,serx(mR(symstr(gi(x))),y))
+ P(xts,O C*s=symptr(gi(x));catc(y,s,strlen(s)+1))
  P(pkd(x),ser8(x,y))
  P(xtX||xtS,y=Nx(ser8(xn,y));F(xn,y=Nx(serx(get(x,i),y)))xr;y)
  P(fun(x),serx(AT(tX,x),Nx(apc(y,Av(x)<<3|Ak(x)))))
@@ -11,7 +11,7 @@ A1(ser,serx(x,aC(0)))
 
 S L des8(C**p)_(L r=*(L*)*p;*p+=8;r)
 S A desx(C**p)_(UC t=*(*p)++;
- P(t==ts,as(sym(N(desx(p)))))
+ P(t==ts,A x=aCz(*p);(*p)+=xn+1;as(sym(x)))
  P(pkdt(t),des8(p))
  P(t==tX||t==tS,L n=des8(p);A x=AN(0,atn(t,n));F(n,x=apd(x,Nx(desx(p))))x)
  P(funt(t),UC vk=*(*p)++;A x=N(desx(p));AT(t,AK(vk&7,AV(vk>>3,x))))
