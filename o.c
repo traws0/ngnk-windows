@@ -2,7 +2,7 @@
 I mtc_(A x,A y/*x0y0*/)_(P(x==y,1)P(xt-yt||pkd(x)||xn-yn||(xtr&&Av(x)-Av(y)),0)P(!ref(x),F(xn*tZ(xt),P(xci-yci,0))1)F(xn,P(!mtc_(xai,yai),0))1)
 S I cmpL(L x,L y)_(x<y?-1:x>y?1:0)
 S I cmp_(A x,A y/*x0y0*/)_(P(x==y,0)I d=xt-yt;P(d,d)P(xti||xtc,(L)gi(x)-(L)gi(y))P(xtl,cmpL(gl_(x),gl_(y)))P(xtd,D u=gd_(x),v=gd_(y);u<v?-1:u>v?1:0)
- P(xts,strcmp(syp(gi(x)),syp(gi(y))))
+ P(xts,strcmp(syp(gs(x)),syp(gs(y))))
  Y(!pkd(x),I r=cmpL(xn,yn);P(xtT,F(min(xn,yn),A z=get(x,i),u=get(y,i);I d=cmp_(z,u);zr;ur;P(d,d))r))cmpL(x,y))
 A2(mtc,I r=mtc_(x,y);xr;yr;ai(r))
 S L bef(A*a,L i,L j)_(I r=cmp_(a[i],a[j]);r?r<0:i<j)
