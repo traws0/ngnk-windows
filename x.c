@@ -14,6 +14,6 @@ S A desx(C**p)_(UC t=*(*p)++;
  P(t==ts,O C*s=*p;*p+=strlen(s)+1;as(sym(s)))
  P(pkdt(t),des8(p))
  P(t==tX||t==tS,L n=des8(p);A x=AN(0,atn(t,n));F(n,x=apd(x,Nx(desx(p))))x)
- P(funt(t),UC vk=*(*p)++;A x=N(desx(p));AT(t,AK(vk&7,AV(vk>>3,x))))
+ P(funt(t),UC vk=*(*p)++;AT(t,AK(vk&7,AV(vk>>3,N(desx(p))))))
  L n=t<ta?des8(p):1;C*v=*p;(*p)+=n*tZ(t);atnv(t,n,v))
 A1(des,P(!xtC,ed(x))C*s=xc;dex(x,desx(&s)))
