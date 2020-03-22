@@ -46,8 +46,8 @@
 #endif
 
 TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
-TD void V;TD L A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
-#define data(x) ((V*)((UL)(x)<<16>>16))
+TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
+#define data(x) ((V*)((x)<<16>>16))
 #define A_(a...) (A[]){a}
 #define A0(f,b...) A f()             _(b)
 #define A1(f,b...) A f(A x)          _(b)
@@ -105,13 +105,13 @@ SI I sim(A x)_(ta<xt&&xt<to)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 
-//getters                                                setters
-SI UC At(A x)_((UL)x>>56   )                             SI A AT(UC t,A x)_((A)((UL)t<<56|(UL)x<<8>>8))
-SI UC Ak(A x)_((UL)x>>48&7 )                             SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);(A)(((UL)x&~( 7ull<<48))|(UL)k<<48))
-SI UC Av(A x)_((UL)x>>51&31)                             SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);(A)(((UL)x&~(31ull<<51))|(UL)v<<51))
-SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)                SI A AB(UC b,A x)_(asrt(b<48);xc[-16]=b;x)
-SI UL An(A x)_(L n=xl[-1];asrt(0<=n);asrt(n<(1ll<<48));n)SI A AN(L n,A x)_(asrt(0<=n);asrt(n<1ull<<48);xl[-1]=n;x)
-SI UH Ao(A x)_(xts?(UL)x>>32:pkd(x)?0:xh[-7])            SI A AO(UH o,A x)_(P(xts,(A)(((UL)x&~(0xffffull<<32)|(UL)o<<32)))xh[-7]=o;x)
+//getters                                    setters
+SI UC At(A x)_(x>>56   )                     SI A AT(UC t,A x)_(asrt(t<=tn);                  (UL)t<<56|x<<8>>8)
+SI UC Ak(A x)_(x>>48&7 )                     SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);x&~( 7ull<<48)|(UL)k<<48)
+SI UC Av(A x)_(x>>51&31)                     SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);x&~(31ull<<51)|(UL)v<<51)
+SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    SI A AB(UC b,A x)_(asrt(b<48);                   xc[-16]=b;x)
+SI UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)SI A AN(UL n,A x)_(asrt(n<1ull<<48);             xl[-1]=n;x)
+SI UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    SI A AO(UH o,A x)_(P(xts,x&~(0xffffull<<32)|(UL)o<<32)xh[-7]=o;x)
 #define Ar(x) ((I*)data(x))[-3]
 
 #define Z sizeof
