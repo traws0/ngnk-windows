@@ -11,7 +11,7 @@ A1(ser,serx(x,aC(0)))
 
 S L des8(C**p)_(L r=*(L*)*p;*p+=8;r)
 S A desx(C**p)_(UC t=*(*p)++;
- P(t==ts,A x=aCz(*p);(*p)+=xn+1;as(sym(x)))
+ P(t==ts,O C*s=*p;*p+=strlen(s)+1;as(sym(s)))
  P(pkdt(t),des8(p))
  P(t==tX||t==tS,L n=des8(p);A x=AN(0,atn(t,n));F(n,x=apd(x,Nx(desx(p))))x)
  P(funt(t),UC vk=*(*p)++;A x=N(desx(p));AT(t,AK(vk&7,AV(vk>>3,x))))

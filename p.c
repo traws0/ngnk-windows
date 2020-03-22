@@ -12,7 +12,7 @@ S A0(pD,A x=aD(0);W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),B)s++)x)
 S A0(pC,A x=aC(0);C c=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;I i=Ci("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)P(!c,ep())c=*++s;x)
 S A0(p0x,A x=aC(0);s+=2;W(ldg(*s),x=apc(x,ph(*s)<<4|ph(s[1]));s+=2)x)
 S A ps(C**p)_(C*s=*p,c=*s;Y(c&0x80,W(((c=*++s)&0xc0)==0x80))EY(c==':',W(ldg(c=*++s)||Ci("./:",c)<3))E(W(ldg(c),c=*++s))C*t=*p;aCm(t,*p=s))
-S A pS(C d)_(A x=aS(0);W(1,x=apv(x,(I[]){sym(d-'`'||*s-'"'?ps(&s):pC())});P(*s-d,x)++s)0)
+S A pS(C d)_(A x=aS(0);W(1,A y=d-'`'||*s-'"'?ps(&s):pC();y=str0(y);x=apv(x,(I[]){sym(yc)});yr;P(*s-d,x)++s)0)
 S A lam(C k,A s,A b,A l)_(AK(k,atnv(tX,5,A_(s,b,au0,l,au0))))
 S A1(shy,P(!xn,x)A y=xa[xn-1];Y(ytX&&yn,A z=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x) //if last expr is assignment, make it return ::
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;A y;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),']')));P(!ytS||yn>8,ep(y)))
