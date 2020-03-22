@@ -15,7 +15,7 @@ S A2(idx_/*x0y1*/,asrt(xtT||xtaA);P(y==au_plc,xR)P(ytX,eac(x,&y,1))P(yta,y=mut(y
  P(w==2,I h=gi (cn[xt]);mr2(y,F(un,L j=yli;uii=in(j,xn)?xij:h)u))
  P(w==0,C h=gc (cn[xt]);mr2(y,F(un,L j=yli;uci=in(j,xn)?xcj:h)u))UR;0)
 S AX(idxX,A y=*a;P(ytX,A b[8];mc(b,a,n);*b=au_plc;A z=prj(x,b,n);dex(z,eac(z,&y,1)))
- P(ytT||y==au_plc,x=idx_(x,y);P(n==1,x)P(!x,mrn(n-1,a+1);0)A b[8];mc(b,a,n);*b=au_plc;A u=aX(0);F(xn,Fj(n-1,mR(a[j+1]))u=apd(u,idxX(xai,a+1,n-1)))xr;u)
+ P(ytT||y==au_plc,x=idx_(x,y);P(n==1,x)P(!x,mrn(n-1,a+1);0)A b[8];mc(b,a,n);*b=au_plc;A u=a0();F(xn,Fj(n-1,mR(a[j+1]))u=apd(u,idxX(xai,a+1,n-1)))xr;u)
  x=idx_(x,y);P(n==1,x)P(!x,mrn(n-1,a+1);0)A u=idxX(x,a+1,n-1);xr;u)
 AX(app,
  P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))
