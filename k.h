@@ -135,7 +135,8 @@ I Ci(O C*,C),epr(),eso(A,I),mtc_(A,A),sym(O C*),strcmp(O C*,O C*);
 L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,A),tru(A),now(),pl(C**),pu(C**);
 
 SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
-SI I syc(C c)_(c3('a',c,'z')?2+2*(c-'a'):sym((C[]){c,0}))
+#define syz(c) (2*((c)-'a'+1)) //make a symbol from 'a'..'z'
+SI I syc(C c)_(c3('a',c,'z')?syz(c):sym((C[]){c,0})) //make a symbol from a single char
 
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)data(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
