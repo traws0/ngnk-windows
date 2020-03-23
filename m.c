@@ -23,7 +23,7 @@ I syP(O C*s)_(O C*p=sy0;W(p<sy1,O C*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,p-s
 I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 asm(".globl mmap_\nmmap_:\nmovq %rcx,%r10\nmovq $"XS(SYS_mmap)",%rax\nsyscall\nret");
-V init()_(C*p=sy0;F(128,*p++=i;*p++=0)sy1=p;
+V init()_(L*p=(V*)sy0,v=0x0003000200010000ull,d=0x0004000400040004;F(32,*p++=v;v+=d)sy1=(V*)p;
  glb=aa0();cn[tX]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);
  cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  S O struct{D d;L l;I i;}t[]={{0,0,0},{1,1,1},{_0w,_0Wl,_0Wi},{-_0w,-_0Wl,-_0Wi},{_0n,_0Nl,_0Ni}};
