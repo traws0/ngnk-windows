@@ -3,7 +3,7 @@
 #include<sys/syscall.h>
 #include<math.h>
 #include"g.h"
-#define    _(a...) {R({a;});}
+#define    _(a...) {return({a;});}
 #define  P(x,a...) if(x)_(a)
 #define  Y(x,a...) if(x){a;}
 #define EY(x,a...) else if(x){a;}
@@ -13,7 +13,6 @@
 #define Fj(x,a...) for(__typeof__(x)n_=(x),j=0;j<n_;j++){a;}
 #define B break
 #define O const
-#define R return
 #define S static
 #define SI S inline
 #define SN S NI

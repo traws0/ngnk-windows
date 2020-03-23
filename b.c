@@ -32,7 +32,7 @@ S A vm_(A f/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)data(fc))[b&(mxc-1)]))
          EY(b==bl,UC n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n-1;*sp=x)
          EY(b==bL,UC n=*ip++;A x=*sp;P(!xtt&&len_(x)-n,el())F(n,*--sp=get(x,n-1-i)))
          EY(b==ba||b==bP,L n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
-         EY(b==bz,ip+=1+(UC)*ip*!tru(*sp++))EY(b==bj,ip+=(UC)*ip)EY(b==bo,*--sp=mR(loc[1]))EY(b==bp,mr(*sp++))EY(b==br,R*sp)E(UR))
+         EY(b==bz,ip+=1+(UC)*ip*!tru(*sp++))EY(b==bj,ip+=(UC)*ip)EY(b==bo,*--sp=mR(loc[1]))EY(b==bp,mr(*sp++))E(asrt(b==br);_(*sp)))
  EY(b>=bs,A*p=loc-(b&(mxl-1));Y(b>=bd,*--sp=*p;*p=au0)EY(b>=bg,*--sp=mR(*p))E(mr(*p);*p=mR(*sp)))
  EY(b>=bv,sp++;N(*sp=((A2*)vf[b])(sp[-1],*sp)))E(N(*sp=((A1*)vf[b])(*sp))))UR;0)
 AX(run,asrt(xto);asrt(n==Ak(x));A f=xR;I m=An(fl);P(sp<stk+m+3,esn(n,a))*--sp=(A)(V*)ip;*--sp=(A)(V*)loc;*--sp=f;ip=data(fb);loc=sp-1;
