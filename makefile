@@ -1,5 +1,5 @@
 # faster builds: export MAKEFLAGS=-j8
-C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -Werror -Wunused -Wno-assume -Wfatal-errors -march=native
+C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -Werror -Wno-assume -Wfatal-errors -march=native
 t:k
 	@$(MAKE) -C t && g/0.sh
 c:
