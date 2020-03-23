@@ -14,9 +14,9 @@ S A2(idx_/*x0y1*/,asrt(xtT||xtaA);P(y==au_plc,xR)P(ytX,eac(x,&y,1))P(yta,y=mut(y
  P(w==3,L h=gl_(cn[xt]);mr2(y,F(un,L j=yli;uli=in(j,xn)?xlj:h)u))
  P(w==2,I h=gi (cn[xt]);mr2(y,F(un,L j=yli;uii=in(j,xn)?xij:h)u))
  P(w==0,C h=gc (cn[xt]);mr2(y,F(un,L j=yli;uci=in(j,xn)?xcj:h)u))UR;0)
-S AX(idxX,A y=*a;P(ytX,A b[8];mc(b,a,n);*b=au_plc;A z=prj(x,b,n);dex(z,eac(z,&y,1)))
- P(ytT||y==au_plc,x=idx_(x,y);P(n==1,x)P(!x,mrn(n-1,a+1);0)A b[8];mc(b,a,n);*b=au_plc;A u=a0();F(xn,Fj(n-1,mR(a[j+1]))u=apd(u,idxX(xai,a+1,n-1)))xr;u)
- x=idx_(x,y);P(n==1,x)P(!x,mrn(n-1,a+1);0)A u=idxX(x,a+1,n-1);xr;u)
+S AX(idxX,A y=*a++;n--;P(ytX,A b[8];*b=au_plc;mc(b+1,a,n);A z=prj(x,b,n+1);dex(z,eac(z,a-1,1)))
+ P(ytT||y==au_plc,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)A b[8];*b=au_plc;mc(b+1,a,n);A u=a0();F(xn,Fj(n,mR(a[j]))u=apd(u,idxX(xai,a,n)))xr;u)
+ x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)A u=idxX(x,a,n);xr;u)
 AX(app,
  P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))
  P(xts,C*s=syp(gs(x)),c=*s;A y=*a;!c?ser(y):s[1]?enn(n,a):n>1?ern(n,a):c=='j'?json(y):c=='k'?kst(y):c=='p'?prs(y):c=='t'?yr,al(now()):
