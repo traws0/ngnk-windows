@@ -14,7 +14,6 @@
 #define B break
 #define O const
 #define S static
-#define SI S
 #define SN S NI
 #define NI __attribute__((noinline))
 #if __clang__||__GNUC__
