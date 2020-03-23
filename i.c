@@ -22,7 +22,7 @@ A2(v1c,P(!ytC,et(x))I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;
  mr2(y,A u=au0;W(n>0,L k=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
 A1(hcl,asrt(xti);close(gi(x));au0)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
-A u1cm(I f)_(L n=lseek_(f,0,SEEK_END);P(n<0,err("lseek"))I pr=PROT_READ|PROT_WRITE,fl=MAP_NORESERVE|MAP_PRIVATE;
- V*p=mmap_(0,ZP+n,pr,fl|MAP_ANON,-1,0);P(((L)p>>4)==-1,err("mmap0"))A u=(A)(p+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
- V*q=mmap_(p+ZP,n,pr,fl|MAP_FIXED,f,0);P(q-(V*)uc,err("mmap1"))u)
+A u1cm(I f)_(L n=lseek_(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
+ V*a=mmap_(0,ZP+n,p,m|MAP_ANON,-1,0);P((L)a>>4==-1,err("mmap0"))A u=(A)(a+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
+ V*b=mmap_(a+ZP,n,p,m|MAP_FIXED,f,0);b==(V*)uc?u:err("mmap1"))
 A1(u1c,P(xti,C s[1024];I r=read(gi(x),s,Z s);r<0?err("read"):aCn(s,r))P(xtl,u1c(gI(x)))I f=N(hop_(x,O_RDONLY));A u=u1cm(f);close(f);u)
