@@ -27,9 +27,9 @@
 #define TD typedef
 #define MS(x) #x
 #define XS(x) MS(x)
-#define N(r)      ({A r_=(r);P(!r_,            0);r_;})
-#define N1(x,r)   ({A r_=(r);P(!r_,mr(x);      0);r_;})
-#define N2(x,y,r) ({A r_=(r);P(!r_,mr(x);mr(y);0);r_;})
+#define N(r)      ({A r_=(r);P(!r_,            0)r_;})
+#define N1(x,r)   ({A r_=(r);P(!r_,mr(x);      0)r_;})
+#define N2(x,y,r) ({A r_=(r);P(!r_,mr(x);mr(y);0)r_;})
 #define swp(x,y) {__typeof__(x)tmp=x;x=y;y=tmp;}
 #ifdef DEBUG
  #define dbg(x) x
@@ -82,17 +82,15 @@ V*mmap_(V*,L,L,L,L,L);
 #define extr(x,y,c)({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
 #define min(x,y)extr(x,y,<)
 #define max(x,y)extr(x,y,>)
-SI L absL(L x)_(x<0?-x:x)SI I c3(UC x,UC y,UC z)_(x<=y&&y<=z)SI D l2d(L v)_(*(D*)(V*)&v)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(c3('0',c,'9'))
-SI I in(L i,L n)_(0<=i&&i<n)
+SI L absL(L x)_(x<0?-x:x)SI I c3(UC x,UC y,UC z)_(x<=y&&y<=z)SI C hex(I x)_(x+(x>9?'a'-10:'0'))SI I dgt(C c)_(c3('0',c,'9'))SI I in(L i,L n)_(0<=i&&i<n)
 
 //   () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define tsym "XCILDSAacildsopqruvw"
-SI UC At(A);
+SI UC At(A);SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)SI I sim(A x)_(ta<xt&&xt<to)
 SI I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)SI I ref(A x)_(reft(xt))
 SI I pkdt(UC t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       SI I pkd(A x)_(pkdt(xt))
 SI I funt(UC t)_(t>=to)                                          SI I fun(A x)_(funt(xt))
-SI I sim(A x)_(ta<xt&&xt<to)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)
 
 //header bytes: bfoorrrrnnnnnnnn (b=bucket,f=flags,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
@@ -105,12 +103,12 @@ SI I sim(A x)_(ta<xt&&xt<to)SI UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 
 //getters                                    setters
-SI UC At(A x)_(x>>56   )                     SI A AT(UC t,A x)_(asrt(t<=tn);                  (UL)t<<56|x<<8>>8)
-SI UC Ak(A x)_(x>>48&7 )                     SI A AK(UC k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);x&~( 7ull<<48)|(UL)k<<48)
-SI UC Av(A x)_(x>>51&31)                     SI A AV(UC v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);x&~(31ull<<51)|(UL)v<<51)
+SI UC At(A x)_(x>>56   )                     SI A AT(UL t,A x)_(asrt(t<=tn);                  t<<56|x<<8>>8)
+SI UC Ak(A x)_(x>>48&7 )                     SI A AK(UL k,A x)_(asrt(k< 8);asrt(xt<tu||tw<xt);x&~( 7ull<<48)|k<<48)
+SI UC Av(A x)_(x>>51&31)                     SI A AV(UL v,A x)_(asrt(v<32);asrt(xt<tu||tw<xt);x&~(31ull<<51)|v<<51)
 SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    SI A AB(UC b,A x)_(asrt(b<48);                   xc[-16]=b;x)
 SI UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)SI A AN(UL n,A x)_(asrt(n<1ull<<48);             xl[-1]=n;x)
-SI UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    SI A AO(UH o,A x)_(P(xts,x&~(0xffffull<<32)|(UL)o<<32)xh[-7]=o;x)
+SI UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    SI A AO(UL o,A x)_(P(xts,x&~(0xffffull<<32)|o<<32)xh[-7]=o;x)
 #define Ar(x) ((I*)data(x))[-3]
 
 #define Z sizeof
