@@ -4,10 +4,10 @@
 #include<math.h>
 #include"g.h"
 #define    _(a...) {R({a;});}
+#define  P(x,a...) if(x)_(a)
 #define  Y(x,a...) if(x){a;}
-#define  P(x,a...) Y(x,_(a))
-#define    E(a...) else{a;}
 #define EY(x,a...) else if(x){a;}
+#define    E(a...) else{a;}
 #define  W(x,a...) while(x){a;}
 #define  F(x,a...) for(__typeof__(x)n_=(x),i=0;i<n_;i++){a;}
 #define Fj(x,a...) for(__typeof__(x)n_=(x),j=0;j<n_;j++){a;}
