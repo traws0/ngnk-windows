@@ -35,8 +35,8 @@ A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(ap2,y=enla(y);L n=yn;P(!n,y
 S A set(A x,L i,A y)_(asrt(Ar(x)==1);Y(!xtX&&(!sim(y)||xt-t_lst(yt)),x=blw(x))
  P(xtX,mr(xai);xai=y;sim(y)?sqz(x):x)xtC?xci=gc(y):xtI?xii=gi(y):xtL?xli=gl(y):xtD?xdi=gd(y):xtS?xii=gs(y):(x=en(x,y));x)
 S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&yta&&At(yx)==tS&&At(yy)==tX);L j=fpi(&yx,*xi);Y(j==An(yy),yy=apd(yy,xn>1?aa0():au0))
- A*p=(A*)data(yy)+j;F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fpi(&yx,xi[i+1]);A u=yy;P(!utX,(A*)ed(x))
-                           yy=j==un?apd(u,aa0()):mut(u);asrt(Ar(yy)==1);p=(A*)data(yy)+j)
+ A*p=(A*)dat(yy)+j;F(xn-1,A y=*p;P(!yta,(A*)ed(x))*p=y=mut(y);A z=yx;P(!ztS,(A*)ed(x))L j=fpi(&yx,xi[i+1]);A u=yy;P(!utX,(A*)ed(x))
+                           yy=j==un?apd(u,aa0()):mut(u);asrt(Ar(yy)==1);p=(A*)dat(yy)+j)
  xr;p)
 S A mend(O A*a,I n,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*ZV);*p=mR(N(f(b,n))))
 AA(am1,A x=*a,y=a[1],z=a[2];

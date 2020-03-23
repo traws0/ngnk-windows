@@ -46,7 +46,7 @@
 
 TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
 TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
-#define data(x) ((V*)((x)<<16>>16))
+#define dat(x) ((V*)((x)<<16>>16))
 #define A_(a...) (A[]){a}
 #define A0(f,b...) A f()             _(b)
 #define A1(f,b...) A f(A x)          _(b)
@@ -109,7 +109,7 @@ SI UC Av(A x)_(x>>51&31)                     SI A AV(UL v,A x)_(asrt(v<32);asrt(
 SI UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    SI A AB(UC b,A x)_(asrt(b<48);                   xc[-16]=b;x)
 SI UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)SI A AN(UL n,A x)_(asrt(n<1ull<<48);             xl[-1]=n;x)
 SI UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    SI A AO(UL o,A x)_(P(xts,x&~(0xffffull<<32)|o<<32)xh[-7]=o;x)
-#define Ar(x) ((I*)data(x))[-3]
+#define Ar(x) ((I*)dat(x))[-3]
 
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
@@ -134,7 +134,7 @@ L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,
 SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define syC(c) (2*(c))
 
-#define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)data(r_)=(v);r_;})
+#define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)dat(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
 SI A aC(L n)_(atn(tC,n))SI A ac(C v)_(pck(tc,v))SI UC gc (A x)_(asrt(xtc);         (UC)x)
 SI A aS(L n)_(atn(tS,n))SI A as(I v)_(pck(ts,v))SI I  gs (A x)_(asrt(xts);          (I)x)

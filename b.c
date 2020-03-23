@@ -1,10 +1,10 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S O I mxl=16,mxc=128;enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S A f;S I lu[16],rhs(A);
-#define fs ((A*)data(f))[0] //src                  BYTECODE                                              ba:apply n-adic
-#define fb ((A*)data(f))[1] //bytecode             bu,bv:apply unary|binary verb                         bP:make projection
-#define fm ((A*)data(f))[2] //srcmap               bs,bg,bd:set|get|delete local                         bz:branch if falsey
-#define fl ((A*)data(f))[3] //local symbols        bm,bM:local|global modified assign (a[i]+:b)          bj,bp,br:jump|pop|return
-#define fc ((A*)data(f))[4] //constants            bl,bL:make|destroy list, the latter used for (a;b):c  bc:load constant
+#define fs ((A*)dat(f))[0] //src                  BYTECODE                                              ba:apply n-adic
+#define fb ((A*)dat(f))[1] //bytecode             bu,bv:apply unary|binary verb                         bP:make projection
+#define fm ((A*)dat(f))[2] //srcmap               bs,bg,bd:set|get|delete local                         bz:branch if falsey
+#define fl ((A*)dat(f))[3] //local symbols        bm,bM:local|global modified assign (a[i]+:b)          bj,bp,br:jump|pop|return
+#define fc ((A*)dat(f))[4] //constants            bl,bL:make|destroy list, the latter used for (a;b):c  bc:load constant
 #define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
 #define hc(x)({I b=bc+fpa(&fc,x);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
 S I lhs(A x/*0*/,A y/*0*/)_(UH o=Ao(x);P(yts&&xx==av0&&Ak(f),L i=fpi(&fl,gs(y));i<mxl?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
@@ -26,7 +26,7 @@ A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;F(16,lu[i]=
 #undef hc
 
 S A stk[0x10000],*sp=stk+ZZ(stk),*loc;S C*ip;
-S A vm_(A f/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)data(fc))[b&(mxc-1)]))
+S A vm_(A f/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)dat(fc))[b&(mxc-1)]))
  EY(b>=bm,Y(b==bm,A*p=loc-*ip++,y=*sp++;*sp=N(ap2(mR(*p=Ny(dm1(A_(*p,yR,av(*ip++),*sp),4))),y)))
          EY(b==bM,A x=*sp++    ,y=*sp++;*sp=N(ap2(      Ny(dmd(A_(x ,yR,av(*ip++),*sp),4)) ,y)))
          EY(b==bl,UC n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n-1;*sp=x)
@@ -35,6 +35,6 @@ S A vm_(A f/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)data(fc))[b&(mxc-1)]))
          EY(b==bz,ip+=1+(UC)*ip*!tru(*sp++))EY(b==bj,ip+=(UC)*ip)EY(b==bo,*--sp=mR(loc[1]))EY(b==bp,mr(*sp++))E(asrt(b==br);_(*sp)))
  EY(b>=bs,A*p=loc-(b&(mxl-1));Y(b>=bd,*--sp=*p;*p=au0)EY(b>=bg,*--sp=mR(*p))E(mr(*p);*p=mR(*sp)))
  EY(b>=bv,sp++;N(*sp=((A2*)vf[b])(sp[-1],*sp)))E(N(*sp=((A1*)vf[b])(*sp))))UR;0)
-AX(run,asrt(xto);asrt(n==Ak(x));A f=xR;I m=An(fl);P(sp<stk+m+3,esn(n,a))*--sp=(A)(V*)ip;*--sp=(A)(V*)loc;*--sp=f;ip=data(fb);loc=sp-1;
- F(n,*--sp=a[i])F(m-n,*--sp=au0)A u=vm_(f);Y(!u,eso(mR(fs),((C*)data(fm))[ip-1-(C*)data(fb)]);W(sp<loc-m,Y(*sp,mr(*sp))sp++))
+AX(run,asrt(xto);asrt(n==Ak(x));A f=xR;I m=An(fl);P(sp<stk+m+3,esn(n,a))*--sp=(A)(V*)ip;*--sp=(A)(V*)loc;*--sp=f;ip=dat(fb);loc=sp-1;
+ F(n,*--sp=a[i])F(m-n,*--sp=au0)A u=vm_(f);Y(!u,eso(mR(fs),((C*)dat(fm))[ip-1-(C*)dat(fb)]);W(sp<loc-m,Y(*sp,mr(*sp))sp++))
  asrt(sp==loc-m);A*p=loc+1;W(p>sp,mr(*p--))sp=loc+4;ip=(C*)sp[-1];loc=(V*)sp[-2];u)
