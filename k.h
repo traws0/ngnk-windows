@@ -102,12 +102,12 @@ S I funt(UC t)_(t>=to)                                          S I fun(A x)_(fu
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 
 //getters                                   setters
-S UC At(A x)_(x>>56   )                     S A AT(UL t,A x)_(asrt(t<=tn);   t<<56|x<<8>>8)
-S UC Ak(A x)_(x>>48&7 )                     S A AK(UL k,A x)_(asrt(k< 8);    x&~( 7ll<<48)|k<<48)
-S UC Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);    x&~(31ll<<51)|v<<51)
-S UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    S A AB(UC b,A x)_(asrt(b<48);    xc[-16]=b;x)
-S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);xl[-1]=n;x)
+S UC At(A x)_(x>>56)                        S A AT(UL t,A x)_(asrt(t<=tn);               x<<8>>8|t<<56)
+S UC Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
+S UC Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<8);           x&~( 7ll<<48)|k<<48)
+S UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    S A AB(UC b,A x)_(asrt(b<48);                  xc[-16]=b;x)
 S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
+S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);               xl[-1]=n;x)
 #define Ar(x) ((I*)dat(x))[-3]
 S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 
