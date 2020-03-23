@@ -116,7 +116,7 @@ A1 a1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,ho
 A2 a2,aa,aA,add,ap1,ap2,apd,cat,com,cst,cut,dex,dvd,eql,fnd,id_,gtn,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(UC,L),atnv(UC,L,O V*),catc(A,O C*,L),ea1(A1,A),err0(O C*),err1(O C*,A),err2(O C*,A,A),
- err3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L),slc_(A,L,L),till(L),K0(O C*,I);
+ err3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L),till(L),K0(O C*,I);
 V init(),*mc(V*,O V*,L),mrn(L,O A*),*ms(V*,L,C);C*syp(I);I Ci(O C*,C),epr(),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),strlen(O C*),tru(A);
 XT A glb,cn[],ci[5][3];XT O C vc[];XT O V*vf[],*arf[3][11][7];XT L mu;

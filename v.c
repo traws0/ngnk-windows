@@ -22,7 +22,6 @@ A1(typ,UC t=xt;xr;as(syC(tsym[t])))A1(len,dex(x,al(len_(x))))L len_(A x/*0*/)_(x
 A1(unq,P(!xtT,et(x))P(xn<2,x)P(ref(x),A u=atn(xt,0);F(xn,fpa(&u,mR(xai)))xr;u)K("{x@&@[&#x;i;:;]@[;0;:;a=a:*a]@a:~=':x@i:<x}",x))
 S A2(fil,ytaAX?eac(cv('^'),A_(x,y),2):ytt?fir(xpt(x,enl(y))):K("{@[y;&^y;:;x]}",x,y))
 A2(xpt,P(xtt,fil(x,y))P(xtaA||ytaA,en(x,y))y=enla(y);Y(xtX,y=blw(y))K("{x@&^y?x}",x,y))
-A slc_(A x/*0*/,L i,L n)_(asrt(xtT);UC t=xt;L w=tZ(t);A u=atn(t,n);mc(uc,xc+i*w,n*w);Y(t==tX,mRa(u);u=sqz(u))u)
 A2(cut,
  P(ytil,P(!xtT,et(x,y))L i=gl(gL(y));P(!in(i,xn),x)A u=atn(xt,xn-1);L w=tZ(xt);mc(uc,xc,i*w);mc(uc+i*w,xc+i*w+w,(xn-i-1)*w);Y(xtX,u=sqz(mRa(u)))xr;u)
  P(yta,rsh(xpt(mR(yx),x),y))P(ytt,et(x,y))x=Ny(gL(x));K("{n:#y;y$[`l=@x;$[n<x|-x;!0;x<0;!n+x;x+!n-x];x+!'1_-':x,#y]}",x,y))
