@@ -136,7 +136,6 @@ L strlen(O C*),len_(A),fndl(A,L),fndi(A,I),fpc(A*,C),fpi(A*,I),fpl(A*,L),fpa(A*,
 
 SI A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define syC(c) (2*(c))
-#define syc(i) ((i)/2)
 
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)data(r_)=(v);r_;})
 SI A aX(L n)_(atn(tX,n))SI A pck(UL t,UI v)_(t<<56|v)SI A0(a0,aX(0))
