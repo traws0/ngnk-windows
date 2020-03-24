@@ -2,8 +2,8 @@
 C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -Werror -Wno-assume -Wfatal-errors -march=native
 t:k
 	@$(MAKE) -C t && g/0.sh
-c:
-	@echo 'cleaning up' && rm -rfv k o t/t
+c: #clean
+	@rm -rfv k libk.so o t/t
 o/%.o:%.c *.h makefile
 	@echo -n '$< ' && mkdir -pv o    >/dev/null && $(C) -c $< -o $@
 o/so/%.o:%.c *.h makefile
