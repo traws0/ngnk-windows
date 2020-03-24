@@ -1,11 +1,11 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S A f;S I lu[16],rhs(A,A);
+enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S I lu[16],rhs(A,A);
 #define fs xx    //src          BYTECODE                                ba:apply n-adic      f[x;y;z]
-#define fb xy    //bytecode     bu,bv:apply unary|binary verb  +x*y     bP:make projection   f[x;;z]
-#define fm xz    //srcmap       bs,bg,bd:set|get|delete local   a:b     bz:branch if falsey  $[x;y;z]
+#define fb xy    //bytecode     bu,bv:apply unary|binary verb    +x*y   bP:make projection   f[x;;z]
+#define fm xz    //srcmap       bs,bg,bd:set|get|delete local     a:b   bz:branch if falsey  $[x;y;z]
 #define fl xa[3] //local syms   bm,bM:loc|glb modified assign a[i]+:b   bj,bp,br:jmp|pop|ret $[x;:y;]
-#define fc xa[4] //constants    bl,bL:make|unmake list        (a;b):c   bc:load constant     12;`a;""
-#define h(b)({fb=apc(fb,(C)(b));fm=apc(fm,o);}) //add byte
+#define fc xa[4] //constants    bl,bL:make|unmake list    (a;b):(c;d)   bc:load constant     12;`a;""
+#define h(a)({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
 #define hc(a)({I b=bc+fpa(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
 S I lhs(A x,A y,A z/*000*/)_(UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));i<16?(lu[i]=An(fb)),h(bs|i),1:err("mxl"))
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);1)
@@ -21,10 +21,10 @@ S I rhs(A x,A y/*00*/)_(UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);1)L i=fndi(fl,gs(y
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):N(rhs(x,z)))P(p,N(rhs(x,yx));h(bP);h(n-1);1)P(u==av0&&n==2,h(br);1)P(u==av_mkl,h(bl);h(n-1);1)
  P(utu&&n==2,h(bu|uv);1)P(utv&&n==3,h(bv|uv);1)N(rhs(x,yx));h(ba);h(n-1);1)
 A1(cpl,UC k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,-1,Z lu);F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
- y=fb;F(16,I j=lu[i];Y(ycj==bg,asrt(Ar(y)==1);ycj=bd))AK(k,AT(to,x)))
+ y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(ycj==bg,ycj=bd))AK(k,AT(to,x)))
 
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;
-S A vm_(A x/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)dat(fc))[b&127]))
+S A vm(A x/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)dat(fc))[b&127]))
  EY(b>=bm,Y(b==bm,A*p=loc-*ip++,y=*sp++;*sp=N(ap2(mR(*p=Ny(dm1(A_(*p,yR,av(*ip++),*sp),4))),y)))
          EY(b==bM,A x=*sp++    ,y=*sp++;*sp=N(ap2(      Ny(dmd(A_(x ,yR,av(*ip++),*sp),4)) ,y)))
          EY(b==bl,UC n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n-1;*sp=x)
@@ -34,7 +34,7 @@ S A vm_(A x/*0*/)_(W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)dat(fc))[b&127]))
  EY(b>=bs,A*p=loc-(b&15);Y(b>=bd,*--sp=*p;*p=au0)EY(b>=bg,*--sp=mR(*p))E(mr(*p);*p=mR(*sp)))
  EY(b>=bv,sp++;N(*sp=((A2*)vf[b])(sp[-1],*sp)))E(N(*sp=((A1*)vf[b])(*sp))))UR;0)
 AX(run,asrt(xto);asrt(n==xk);xR;I m=An(fl);P(sp<stk+m+3,esn(n,a))*--sp=(A)(V*)ip;*--sp=(A)(V*)loc;*--sp=x;ip=dat(fb);loc=sp-1;
- F(n,*--sp=a[i])F(m-n,*--sp=au0)A u=vm_(x);Y(!u,eso(mR(fs),((C*)dat(fm))[ip-1-(C*)dat(fb)]);W(sp<loc-m,Y(*sp,mr(*sp))sp++))
+ F(n,*--sp=a[i])F(m-n,*--sp=au0)A u=vm(x);Y(!u,eso(mR(fs),((C*)dat(fm))[ip-1-(C*)dat(fb)]);W(sp<loc-m,Y(*sp,mr(*sp))sp++))
  asrt(sp==loc-m);A*p=loc+1;W(p>sp,mr(*p--))sp=loc+4;ip=(C*)sp[-1];loc=(V*)sp[-2];u)
 
 #undef fs
