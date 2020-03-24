@@ -83,9 +83,9 @@ V*mmap_(V*,L,L,L,L,L);
 #define max(x,y)extr(x,y,>)
 S L absL(L x)_(x<0?-x:x)S I c3(UC x,UC y,UC z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
 
-//   () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
-enum{tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
-#define tsym "XCILDSAacildsopqruvw"
+//         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
+enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+#define TS QX,QC,QI,QL,QD,QS,QA,Qa,Qc,Qi,Ql,Qd,Qs,Qo,Qp,Qq,Qr,Qu,Qv,Qw
 S UC At(A);S UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) S I sim(A x)_(ta<xt&&xt<to)
 S I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
 S I pkdt(UC t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
