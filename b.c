@@ -21,7 +21,7 @@ S A2(rhs,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)L i=fndi(fl,gs(y));P(i>=0,
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):N(rhs(x,z)))P(p,N(rhs(x,yx));h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)N(rhs(x,yx));h(ba);h(n-1);x)
 A1(cpl,UC k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,-1,Z lu);F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
- y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(ycj==bg,ycj=bd))AK(k,AT(to,x)))
+ y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(j>=0&&ycj==bg,ycj=bd))AK(k,AT(to,x)))
 
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;
 S A1(vm,/*0*/W(1,UC b=*ip++;Y(b>=bc,*--sp=mR(((A*)dat(fc))[b&127]))
