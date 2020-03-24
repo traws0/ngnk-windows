@@ -43,7 +43,7 @@ AA(am1,A x=*a,y=a[1],z=a[2];
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   L i=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
  P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];I d=utT;u=enla(u);P(d&&yn-un,el(x,y,u))y=gL(y);
-  mr2(y,mr2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][6])(xc,xn,yl,yn,uc,d):1))?x:ei(x))
+  mr2(y,mr2(u,x?((I(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][6])(xc,xn,yl,yn,uc,d):1))?x:ei(x))
  P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];I d=utT;u=enla(u);Y(d&&yn-un,el(x,y,u))
   mr2(y,mr2(u,F(yn,L j=yli;Y(!in(j,xn),x=ei(x);B)xcj=uc[d*i])x)))
  rdc(cv('@'),a,n))
