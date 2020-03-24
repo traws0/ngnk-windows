@@ -5,7 +5,7 @@ S A2(serx,y=Nx(apc(y,xt));
  P(xts,O C*s=syp(gs(x));catc(y,s,strlen(s)+1))
  P(pkd(x),ser8(x,y))
  P(xtX||xtS,y=Nx(ser8(xn,y));F(xn,y=Nx(serx(get(x,i),y)))xr;y)
- P(fun(x),serx(AT(tX,x),Nx(apc(y,Av(x)<<3|Ak(x)))))
+ P(fun(x),serx(AT(tX,x),Nx(apc(y,xv<<3|xk))))
  I l=8*xtT;A u=catc(y,xc-l,l+xn*tZ(xt));xr;u)
 A1(ser,serx(x,aC(0)))
 
