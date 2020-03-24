@@ -35,8 +35,8 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  Y(w0||u0,UC d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)Y(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))Y(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
  E(UC d=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
  s++;I l=su(s,u)-s-1;s[-1]=*s;t+=l;
- P(in(t,16),I k=l<t?l:t;mc(s,s+1,k);ms(s+l,t-l,'0');s+=t;*s++='.';s+=l-k;Y(t>=l,*s++='0')s)
- P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,-t-1,'0')+l-t)
+ P(in(t,16),I k=l<t?l:t;mc(s,s+1,k);ms(s+l,'0',t-l);s+=t;*s++='.';s+=l-k;Y(t>=l,*s++='0')s)
+ P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,'0',-t-1)+l-t)
  Y(l>0,*s++='.';s+=l)*s++='e';Y(t<0,t=-t;*s++='-')s4(s,t))
 A1(str0,asrt(xtC);x=room(x,1);xc[xn]=0;x)
 A1(str,P(xtl||xtd,I l=xtl;L v=gl(x);A u=aC(24);AN((l?sl:sd)(uc,v)-uc,u))P(xts,aCz(syp(gs(x))))

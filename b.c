@@ -20,7 +20,7 @@ S I rhs(A x/*0*/)_(UH o=Ao(x);Y(xts,P(gs(x)==syC('o'),h(bo);1)L i=fndi(fl,gs(x))
  Y(u==cu('*')&&n==2,A y=xy;P(ytX&&yn==2&&yx==cu('|'),N(rhs(yy));h(bu|24);1))Y(utw&&n==2,A y=xy;P(!ytX&&!ytsS,yR;hc(app(u,&y,1));1))
  I p=0;F(n-1,A y=xa[n-1-i];y==au_plc?(p=1),hc(yR):N(rhs(y)))P(p,N(rhs(xx));h(bP);h(n-1);1)P(u==av0&&n==2,h(br);1)P(u==av_mkl,h(bl);h(n-1);1)
  P(utu&&n==2,h(bu|Av(u));1)P(utv&&n==3,h(bv|Av(u));1)N(rhs(xx));h(ba);h(n-1);1)
-A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,Z lu,-1);F(yn,P(!rhs(yai),xr;yr;0)h(i==yn-1?br:bp))yr;
+A1(cpl,UC k=Ak(x);f=x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,-1,Z lu);F(yn,P(!rhs(yai),xr;yr;0)h(i==yn-1?br:bp))yr;
  y=fb;F(16,I j=lu[i];Y(ycj==bg,asrt(Ar(y)==1);ycj=bd))AK(k,AT(to,x)))
 
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;
