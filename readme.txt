@@ -55,7 +55,7 @@ calling conventions
  /*0*/ after an arg means "not consumed", /*1*/ means "consumed"
 symbols
  symbols are represented similarly to ints and int lists. the following fns handle I <-> C* conversions:
- I syC(C)  - make a single-char symbol
+ Q(c)      - macro for making a single-char symbol
  I syP(C*) - make a symbol from a '\0'-terminated string
  C*syp(I)  - get a ptr to the '\0'-terminated string
 errors

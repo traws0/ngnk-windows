@@ -20,8 +20,8 @@ S AX(idxX,A y=*a++;n--;
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)A u=idxX(x,a,n);xr;u)
 AX(app,
  P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))
- P(xts,I v=gs(x);A y=*a;n>1?ern(n,a):!v?ser(y):v==syC('j')?json(y):v==syC('k')?kst(y):v==syC('p')?prs(y):v==syC('t')?yr,al(now()):
-  v==syC('x')?frk(y):v==syC('e')?yr,epr(),au0:enn(n,a))
+ P(xts,I v=gs(x);A y=*a;n>1?ern(n,a):!v?ser(y):v==Q('j')?json(y):v==Q('k')?kst(y):v==Q('p')?prs(y):v==Q('t')?yr,al(now()):
+  v==Q('x')?frk(y):v==Q('e')?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtA,A y=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;P(!ytcC,et(y))y=enla(y);write(gl_(x),yc,yn);y)
  P(n<xk,prj(x,a,n))P(xtv,n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[58+xv])(xx,a,n))
