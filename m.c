@@ -18,7 +18,7 @@ A aCn(O C*s,L n)_(atnv(tC,n,s))A aCm(O C*s,O C*t)_(aCn(s,t-s))A aCz(O C*s)_(aCn(
 A gkv(A*p)_(A x=*p;asrt(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;A u=xy;mr(AN(0,x));u) //get key and value
 A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1L<<xb,x)A u=AN(n,atnv(tC,n+l,xc));xr;u)
 S C*sy1,sy0[1<<16];C*syp(I i)_(sy0+i)
-I syP(O C*s)_(UC c=*s;P(c<128&&(!c||!s[1]),Q(c))O C*p=sy0+256;W(p<sy1,O C*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,p-sy0)p=q;W(*p,p++)p++)
+I syP(O C*s)_(UC c=*s;P(c<128&&(!c||!s[1]),syC(c))O C*p=sy0+256;W(p<sy1,O C*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,p-sy0)p=q;W(*p,p++)p++)
  I r=sy1-sy0,n=strlen(s)+1;P(sy1+n>sy0+Z sy0,write(1,"syms ",5);oom())mc(sy1,s,n);sy1+=n;r)
 I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=str0(N(u1c(x)));C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)

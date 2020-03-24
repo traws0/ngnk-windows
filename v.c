@@ -30,6 +30,6 @@ A1(gL,P(xtlL,x)P(xtd,al((L)gd(x)))P(xtD,A u=aL(xn);F(un,uli=(L)xdi)xr;u)x=N(gI(x
 S A1(gC,P(xtcC,x)x=N(gI(x));P(xtt,ac(gLI(gi(x))))A u=aC(xn);F(un,uci=xii)xr;u)
 A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gDL(gl(x))))A u=aD(xn);F(un,udi=gDL(xli))xr;u)
 A1(gI,P(xtiI,x)P(xtdD,gI(gL(x)))P(xtl,ai(gIL(gl(x))))P(xtL,A u=aI(xn);F(un,uii=gIL(xli))xr;u)P(xtc,ai(gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
-A1(gS,P(xtsS,x)P(xtC,x=str0(x);dex(x,as(syP(xc))))P(xtc,as(Q(gc(x))))et(x))
+A1(gS,P(xtsS,x)P(xtC,x=str0(x);dex(x,as(syP(xc))))P(xtc,as(syC(gc(x))))et(x))
 A2(cst,P(ytaAX,eac(cv('$'),A_(x,y),2))P(xtil&&ytcC,ap1(y,Ny(til(x))))
- P(xts,I v=gs(x);A1*f=!v||v==Qs?gS:v==Qc?gC:v==Qi?gI:v==Ql||v==Qj?gL:v==Qd||v==Qf?gD:0;f?f(y):ed(y))en(x,y))
+ P(xts,I v=gs(x);A1*f=!v||v==Ss?gS:v==Sc?gC:v==Si?gI:v==Sl||v==Sj?gL:v==Sd||v==Sf?gD:0;f?f(y):ed(y))en(x,y))

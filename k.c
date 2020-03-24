@@ -18,7 +18,7 @@ S AX(idxX,A y=*a++;n--;P(ytX,A b[8];*b=au_plc;mc(b+1,a,n);A z=prj(x,b,n+1);dex(z
  P(ytT||y==au_plc,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K("{x .\\:y}",x,atnv(tX,n,a)))
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)A u=idxX(x,a,n);xr;u)
 AX(app,P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))
- P(xts,I v=gs(x);A y=*a;n>1?ern(n,a):!v?ser(y):v==Qj?json(y):v==Qk?kst(y):v==Qp?prs(y):v==Qt?yr,al(now()):v==Qx?frk(y):v==Qe?yr,epr(),au0:enn(n,a))
+ P(xts,I v=gs(x);A y=*a;n>1?ern(n,a):!v?ser(y):v==Sj?json(y):v==Sk?kst(y):v==Sp?prs(y):v==St?yr,al(now()):v==Sx?frk(y):v==Se?yr,epr(),au0:enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtA,A y=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(ta,x),a,n))
  P(xtil,P(n>1,ern(n,a))A y=*a;P(!ytcC,et(y))y=enla(y);write(gl_(x),yc,yn);y)
  P(n<xk,prj(x,a,n))P(xtv,n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[58+xv])(xx,a,n))

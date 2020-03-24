@@ -83,7 +83,7 @@ S L absL(L x)_(x<0?-x:x)S I c3(UC x,UC y,UC z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
-#define TS QX,QC,QI,QL,QD,QS,QA,Qa,Qc,Qi,Ql,Qd,Qs,Qo,Qp,Qq,Qr,Qu,Qv,Qw
+#define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw
 S UC At(A);S UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) S I sim(A x)_(ta<xt&&xt<to)
 S I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
 S I pkdt(UC t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
@@ -120,7 +120,7 @@ L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C
 XT A glb,cn[],ci[5][3];XT O C vc[];XT O V*vf[],*arf[3][11][7];XT L mu;
 #define mr2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
-#define Q(c) (2*(c)) //symbols: char to index
+#define syC(c) (2*(c)) //symbols: char to index
 
 #define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)dat(r_)=(v);r_;}) //type,value
 #define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))     //type,value,arity
