@@ -14,11 +14,6 @@
 #define B break
 #define O const
 #define S static
-#if __clang__||__GNUC__
- #define UR __builtin_unreachable();
-#else
- #define UR
-#endif
 #define CD __attribute__((cold))
 #define XT extern
 #define TD typedef
@@ -72,7 +67,7 @@ TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define    skt(a...) sc3(      socket,a)
 #define   conn(a...) sc3(     connect,a)
 #define   gtod(a...) sc2(gettimeofday,a)
-#define   exit(a...){sc1(        exit,a);UR;}
+#define   exit(a...) sc1(        exit,a)
 #define fork() sc(fork)
 V*mmap_(V*,L,L,L,L,L);
 

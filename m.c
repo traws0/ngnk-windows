@@ -32,7 +32,7 @@ V init()_(L*p=(V*)sy0,v=0x0003000200010000ull,d=0x0004000400040004;F(32,*p++=v;v
  S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
  I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
  #if __FreeBSD__
-  V _start(C**p)_(main(*(I*)(V*)p,p+1);UR)
+  V _start(C**p)_(main(*(I*)(V*)p,p+1);)
  #else
   asm(".globl _start\n_start:pop %rdi\nmov %rsp,%rsi\njmp main");
  #endif
