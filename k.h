@@ -27,7 +27,7 @@
 #define N(r)      ({A r_=(r);P(!r_,            0)r_;})
 #define N1(x,r)   ({A r_=(r);P(!r_,mr(x);      0)r_;})
 #define N2(x,y,r) ({A r_=(r);P(!r_,mr(x);mr(y);0)r_;})
-#define SW(x,y) {__typeof__(x)tmp=x;x=y;y=tmp;}
+#define SWP(x,y) {__typeof__(x)tmp=x;x=y;y=tmp;}
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
