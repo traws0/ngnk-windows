@@ -32,4 +32,4 @@ A1(gD,P(xtdD,x)x=N(gL(x));P(xtt,ad(gDL(gl(x))))A u=aD(xn);F(un,udi=gDL(xli))xr;u
 A1(gI,P(xtiI,x)P(xtdD,gI(gL(x)))P(xtl,ai(gIL(gl(x))))P(xtL,A u=aI(xn);F(un,uii=gIL(xli))xr;u)P(xtc,ai(gc(x)))P(xtC,A u=aI(xn);F(un,uii=(UC)xci)xr;u)et(x))
 A1(gS,P(xtsS,x)P(xtC,x=str0(x);dex(x,as(syP(xc))))P(xtc,as(Q(gc(x))))et(x))
 A2(cst,P(ytaAX,eac(cv('$'),A_(x,y),2))P(xtil&&ytcC,ap1(y,Ny(til(x))))
- P(xts,I v=gs(x);A1*f=!v||v==Q('s')?gS:v==Q('c')?gC:v==Q('i')?gI:v==Q('l')||v==Q('j')?gL:v==Q('d')||v==Q('f')?gD:0;f?f(y):ed(y))en(x,y))
+ P(xts,I v=gs(x);A1*f=!v||v==Qs?gS:v==Qc?gC:v==Qi?gI:v==Ql||v==Qj?gL:v==Qd||v==Qf?gD:0;f?f(y):ed(y))en(x,y))
