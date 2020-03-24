@@ -17,7 +17,7 @@ h:(": assign   RETURN     ' each|slidingwin"
    "_ drop|cut floor                         `k@x fmt"
    "$ cast     string    $[c;t;f] COND       `j?s json"
    "? find|rnd uniq                          `t[] time"
-   "@ apply    type      @[x;i;[f;]y] amend  `e[] printerror"
-   ". eval     value     .[x;i;[f;]y] drill  `x@(argv;in) fork")
+   "@ apply(1) type      @[x;i;[f;]y] amend  `e[] printerror"
+   ". apply(n) eval      .[x;i;[f;]y] drill  `x@(argv;in) fork")
 {x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1;
 \\
