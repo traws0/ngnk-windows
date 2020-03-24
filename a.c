@@ -1,9 +1,9 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-A1(neg,sub(ai(0),x))A1(not,xtaAX?ea1(not,x):fun(x)?mtc(x,au0):eql(x,xtsS?as(0):ac(0)))
+A1(neg,sub(ai(0),x))A1(not,xtaAX?ea1(not,x):fun(x)?x==au0:eql(x,xtsS?as(0):ac(0)))
 A1(sqr,P(xtaAX,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)
 A1(nul,xtaAX?ea1(nul,x):eql(x,mR(cn[xt])))S C lwc(C c)_(c+32*c3('A',c,'Z'))S L fl1(D d)_(d<0?(L)d-(d<(L)d):(L)d)
 A1(flr,P(xtilIL,x)P(xtc,ac(lwc(gc(x))))P(xtC,A u=aC(xn);mr2(x,F(un,uci=lwc(xci))u))P(xtaAX,ea1(flr,x))
- x=N(gD(x));A u=atn(xtd?tl:tL,xn);F(un,uli=fl1(xdi))xr;u)
+ x=N(gD(x));A u=atn(xtd?tl:tL,xn);mr2(x,F(un,uli=fl1(xdi))u))
 
 S L cmpd(D x)_(L a=*(L*)&x;a^((UL)(a>>63)>>1)) //comparable double
 #define h(v,fi,fl,fd) S I i##v(I x,I y)_(fi) S L l##v(L x,L y)_(fl) S D d##v(D x,D y)_(fd)
