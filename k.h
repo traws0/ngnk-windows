@@ -14,8 +14,6 @@
 #define B break
 #define O const
 #define S static
-#define SN S NI
-#define NI __attribute__((noinline))
 #if __clang__||__GNUC__
  #define UR __builtin_unreachable();
 #else

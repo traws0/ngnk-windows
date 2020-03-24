@@ -14,7 +14,7 @@ hh(6,min(x,y))hh(7,max(x,y))h(8,x<y,x<y,cmpd(x)<cmpd(y))h(9,x>y,x>y,cmpd(x)>cmpd
 #undef hh
 #undef h
 
-#define hf(x,t,rt,c)SN V x(t*a,t*b,rt*r,L n)c
+#define hf(x,t,rt,c) S V x(t*a,t*b,rt*r,L n)c
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
  hf(t##T##v,T,rt,xtT)hf(T##t##v,T,rt,xTt)hf(T##T##v,T,rt,xTT)\
  S V T##v##rdc(T*a,T*b,L n){T c=*a;F(n,c=t##v(c,b[i]))*a=c;}\
