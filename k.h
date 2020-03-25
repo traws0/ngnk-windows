@@ -71,9 +71,9 @@ TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define fork() sc(fork)
 V*mmap_(V*,L,L,L,L,L);
 
-#define extr(x,y,c)({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
-#define min(x,y)extr(x,y,<)
-#define max(x,y)extr(x,y,>)
+#define extr(x,y,c) ({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
+#define min(x,y) extr(x,y,<)
+#define max(x,y) extr(x,y,>)
 S L absL(L x)_(x<0?-x:x)S I c3(UC x,UC y,UC z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /

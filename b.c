@@ -5,8 +5,8 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define fm xz    //srcmap       bs,bg,bd:set|get|delete local     a:b   bz:branch if falsey  $[x;y;z]
 #define fl xa[3] //local syms   bm,bM:loc|glb modified assign a[i]+:b   bj,bp,br:jmp|pop|ret $[x;:y;]
 #define fc xa[4] //constants    bl,bL:make|unmake list    (a;b):(c;d)   bc:load constant     12;`a;""
-#define h(a)({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
-#define hc(a)({I b=bc+fpa(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
+#define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
+#define hc(a) ({I b=bc+fpa(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
 S A3(lhs,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))lu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztX&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,N(rhs(x,za[zn-1-i])))h(bl);h(zn-1))

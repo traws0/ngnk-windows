@@ -22,11 +22,11 @@ hh(6,min(x,y))hh(7,max(x,y))h(8,x<y,x<y,cmpd(x)<cmpd(y))h(9,x>y,x>y,cmpd(x)>cmpd
  S V T##v##eap(T*a,T*b,T*r,L n)_(T c=*a;F(n,T d=b[i];r[i]=t##v(b[i],c);c=d))\
  S I T##v##amd(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=t##v(a[j],b[d*i]))1)
 #define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
-#define htT(f){__typeof__(*a)c=*a;F(n,r[i]=f(c,b[i]))}
-#define hTt(f){__typeof__(*b)c=*b;F(n,r[i]=f(a[i],c))}
-#define hTT(f){F(n,r[i]=f(a[i],b[i]))}
-#define hs(x){x(b,a,r,n);}
-#define hn(x){__typeof__(*b)c=-*b;x(a,&c,r,n);}
+#define htT(f) {__typeof__(*a)c=*a;F(n,r[i]=f(c,b[i]))}
+#define hTt(f) {__typeof__(*b)c=*b;F(n,r[i]=f(a[i],c))}
+#define hTT(f) {F(n,r[i]=f(a[i],b[i]))}
+#define hs(x) {x(b,a,r,n);}
+#define hn(x) {__typeof__(*b)c=-*b;x(a,&c,r,n);}
 //   iI      Ii      II      lL      Ll      LL      dD      Dd      DD
 ha(0,htT(i0),hTt(i0),hTT(i0),htT(l0),hTt(l0),hTT(l0),htT(d0),hTt(d0),hTT(d0),L,D) // :
 ha(1,htT(i1),hs(iI1),hTT(i1),htT(l1),hs(lL1),hTT(l1),htT(d1),hs(dD1),hTT(d1),L,D) // +
@@ -48,8 +48,8 @@ ha(X,htT(iX),hs(iIX),hTT(iX),htT(lX),hs(lLX),hTT(lX),htT(dX),hs(dDX),hTT(dX),L,I
 #undef ht
 #undef hf
 
-#define h(v,t,T){t##T##v,T##t##v,T##T##v,T##v##rdc,T##v##scn,T##v##eap,T##v##amd},
-#define h1(a...){h(0,a)h(1,a)h(2,a)h(3,a)h(4,a)h(5,a)h(6,a)h(7,a)h(8,a)h(9,a)h(X,a)},
+#define h(v,t,T) {t##T##v,T##t##v,T##T##v,T##v##rdc,T##v##scn,T##v##eap,T##v##amd},
+#define h1(a...) {h(0,a)h(1,a)h(2,a)h(3,a)h(4,a)h(5,a)h(6,a)h(7,a)h(8,a)h(9,a)h(X,a)},
 O V*arf[3][11][7]={h1(i,I)h1(l,L)h1(d,D)}; //arithfns[type-tI][verb][0=atom-list 1=list-atom 2=list-list 3=reduce 4=scan 5=eachprior 6=amend]
 #undef h1
 #undef h
