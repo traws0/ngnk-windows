@@ -35,8 +35,7 @@ S A1(vm,/*0*/W(1,UC b=*ip++;
  EY(b>=bs,A*p=loc-(b&15);Y(b>=bd,psh(*p);*p=au0)EY(b>=bg,psh(mR(*p)))E(mr(*p);*p=mR(*sp)))
  EY(b>=bv,A x=pop();N(*sp=((A2*)vf[b])(x,*sp)))E(N(*sp=((A1*)vf[b])(*sp))))0)
 AX(run,asrt(xto);asrt(n==xk);P(sp<stk+16,esn(n,a))psh((A)(V*)ip);psh((A)(V*)loc);psh(x);ip=dat(fb);loc=sp-1;I m=An(fl);F(n,psh(a[i]))F(m-n,psh(au0))
- A u=vm(x);Y(!u,eso(mR(fs),((C*)dat(fm))[ip-1-(C*)dat(fb)]);W(sp<loc-m,Y(*sp,mr(*sp))))asrt(sp==loc-m);
- mrn(m,sp+1);sp=loc+2;loc=(V*)pop();ip=(V*)pop();u)
+ A u=vm(x);Y(!u,A y=fb,z=fm;eso(mR(fs),zc[ip-1-yc]);W(sp<loc-m,Y(*sp,mr(*sp))))asrt(sp==loc-m);mrn(m,sp+1);sp=loc+2;loc=(V*)pop();ip=(V*)pop();u)
 
 #undef fs
 #undef fb
