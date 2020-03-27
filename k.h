@@ -97,7 +97,7 @@ S I funt(UC t)_(t>=to)                                          S I fun(A x)_(fu
 //getters                                   setters
 S UC At(A x)_(x>>56)                        S A AT(UL t,A x)_(asrt(t<=tn);               x<<8>>8|t<<56)
 S UC Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
-S UC Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<8);           x&~( 7ll<<48)|k<<48)
+S UC Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
 S UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    S A AB(UC b,A x)_(asrt(b<48);                  xc[-16]=b;x)
 S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
 S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);               xl[-1]=n;x)
@@ -154,7 +154,7 @@ S UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ(t)) with a special 
 S UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
 
 #define err_(x,y,z,u,n,...) n
-#define err(a...) ({dbg(os("["__FILE__":"XS(__LINE__)"]"));err_(a,err3,err2,err1,err0)(a);})
+#define err(a...) ({dbg(oo)err_(a,err3,err2,err1,err0)(a);})
 #define eMs "nyi","len","typ","dom","rnk","idx","prs","stk"
 #define en(a...) err((C*)0,##a)
 #define el(a...) err((C*)1,##a)
