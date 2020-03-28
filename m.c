@@ -2,7 +2,7 @@
 #include"k.h"
 #define nxt(x) ((A*)dat(x))[-2]
 L mt,mu;S A mx[48];A glb,cn[tn],ci[5][3];dbg(S I ml;/*prevent allocations*/)S CD A oom()_(write(1,"oom\n",4);exit(1);0)
-S A ma(I b)_(dbg(asrt(!ml));asrt(4<b);P(b>47,oom())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))L i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
+S A ma(I b)_(dbg(asrt(!ml));asrt(4<b);P(b>47,oom())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))I i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap_(0,1L<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())mt+=1L<<i;x=(A)(p+ZA))
  W(i>b,i--;A y=mx[i]=(A)(x+(1L<<i));nxt(y)=0)AB(b,x))
@@ -11,7 +11,7 @@ A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xc-ZP,xn+ZP);0)dbg(ms(xc,0xab,xn*tZ(xt))
 A1(mr,mr1(mr0(x)))V mrn(L n,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)A1(mut,P(pkd(x)||Ar(x)==1,x)A u=atnv(xt,xn,xc);xr;Y(ref(u),mRa(u))u)
 V*mc(V*x,O V*y,L n)_(C*p=x;O C*q=y;F(n,p[i]=q[i])x)V*ms(V*x,I c,L n)_(C*p=x;F(n,*p++=c);x)
 I strcmp(O C*s,O C*t)_(W(*s&&*s==*t,s++;t++)*s-*t)L strlen(O C*x)_(O C*p=x;W(*p,p++)p-x)
-A atn(UC t,L n)_(I b=67-__builtin_clzll((ZA>>3)+(t==tC?n>>3:n));A x=N(ma(b));Ar(x)=1;AN(n,AT(t,x)))
+A atn(UC t,L n)_(I b=67-__builtin_clzll((ZA>>3)+(t==tC?n>>3:n));A x=ma(b);Ar(x)=1;AT(t,AN(n,x)))
 A atnv(UC t,L n,O V*v)_(A u=atn(t,n);mc(uc,v,n*tZ(t));u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,aa(enl(as(0)),enl(au0)))
 A1(a1,atnv(tX,1,A_(x)))A2(a2,atnv(tX,2,A_(x,y)))A3(a3,atnv(tX,3,A_(x,y,z)))A2(aA,atnv(tA,2,A_(x,y)))A2(aa,atnv(ta,2,A_(x,y)))
 A aCn(O C*s,L n)_(atnv(tC,n,s))A aCm(O C*s,O C*t)_(aCn(s,t-s))A aCz(O C*s)_(aCn(s,strlen(s)))
