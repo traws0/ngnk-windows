@@ -14,17 +14,19 @@ hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd
 #undef hh
 #undef h
 
-#define hf(x,t,rt,c) V x(t*a,t*b,rt*r,L n)c
+#define ALN(x) x=__builtin_assume_aligned(x,ZA);
+#define PAD(n,a) n=(n+ZA/Z(*a)-1)/(ZA/Z(*a))*(ZA/Z(*a));
+#define hf(x,t,rt,c) V x(t*restrict a,t*restrict b,rt*r,UL n)c
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
  hf(v##t##T,T,rt,xtT)hf(v##T##t,T,rt,xTt)hf(v##T##T,T,rt,xTT)\
- V v##rdc##T(T*a,T*b,L n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
- V v##scn##T(T*a,T*b,T*r,L n)_(T c=*a;F(n,r[i]=c=v##t(c,b[i])))\
- V v##eap##T(T*a,T*b,T*r,L n)_(T c=*a;F(n,T d=b[i];r[i]=v##t(b[i],c);c=d))\
- I v##amd##T(T*a,L n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
+ V v##rdc##T(T*a,T*b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
+ V v##scn##T(T*a,T*b,T*r,UL n)_(T c=*a;F(n,r[i]=c=v##t(c,b[i])))\
+ V v##eap##T(T*a,T*b,T*r,UL n)_(T c=*a;F(n,T d=b[i];r[i]=v##t(b[i],c);c=d))\
+ I v##amd##T(T*a,UL n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
 #define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
-#define htT(f) {__typeof__(*a)c=*a;F(n,r[i]=f(c,b[i]))}
-#define hTt(f) {__typeof__(*b)c=*b;F(n,r[i]=f(a[i],c))}
-#define hTT(f) {F(n,r[i]=f(a[i],b[i]))}
+#define htT(f) {ALN(b)ALN(r)__typeof__(*a)c=*a;F(n,*r++=f(c,*b++))}
+#define hTt(f) {ALN(a)ALN(r)__typeof__(*b)c=*b;F(n,r[i]=f(a[i],c))}
+#define hTT(f) {ALN(a)ALN(b)ALN(r)PAD(n,a)F(n,*r++=f(*a++,*b++))}
 #define hs(x) {x(b,a,r,n);}
 #define hn(x) {__typeof__(*b)c=-*b;x(a,&c,r,n);}
 //     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
@@ -47,6 +49,8 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 #undef ha
 #undef ht
 #undef hf
+#undef PAD
+#undef ALN
 
 #define h(v,t,T) {v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
 O V*arf[3][11][7]={{ariths(h,i,I)},{ariths(h,l,L)},{ariths(h,d,D)}};

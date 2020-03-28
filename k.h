@@ -148,7 +148,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define ZZ(x) (Z(x)/Z(*(x)))
 #define ZV Z(V*)  //ptr
 #define ZP 4096ll //page
-#define ZA 16     //hdr
+#define ZA 32     //hdr
 #define ZR 4
 S UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ(t)) with a special value ZR for ref types
 S UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
