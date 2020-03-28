@@ -21,7 +21,7 @@ S C*su(C*s,UL x)_(x<TX?sX(s,x):S0(s4(s,x/TX),x%TX))S C*sl(C*s,L x)_(Y(x<0,P(x==_
   E(UL l3=l+l,m3=m0+m0+(l3<l),h3=h+h+(m3<m0),l4=l3-*a,m4=m3-a[1]-(l4>l3),h4=h3-(m4>m3);*w=shr(m4,h4,i-64))shr(m0,h,i-65))
 #endif
 S UL I5[342][2],P5[326][2];S UL addcll(UL x,UL y,UL c,UL*p)_(UL u=x+y+c;*p=u<x||u<y;u) // or __builtin_addcll
-CD V shr3(UL*x,UL*y,I d){F(2,x[i]=y[i]>>d|y[i+1]<<(64-d))x[2]=y[2]>>d;}S V shr2(UL*a){*a>>=1;*a|=a[1]<<63;a[1]>>=1;}S V inc2(UL*a){a[1]+=!++*a;}
+S V shr3(UL*x,UL*y,I d){F(2,x[i]=y[i]>>d|y[i+1]<<(64-d))x[2]=y[2]>>d;}S V shr2(UL*a){*a>>=1;*a|=a[1]<<63;a[1]>>=1;}S V inc2(UL*a){a[1]+=!++*a;}
 S V pws5(UL(*a)[2],I n,L u,L v,L w){UL x[]={u,v,w},y[3],c;F(n,mc(a+i,x+1,16);shr3(y,x,2);c=0;F(3,x[i]=addcll(x[i],y[i],c,&c))Y(x[2]>>61,shr3(x,x,1)))}
 S V initp5(){pws5(I5,ZZ(I5),0xebd5cf2016a52921,0x4ac7ca59a424c507,0x9558b4661b6565f8);pws5(P5,ZZ(P5),0,0,1ll<<61);
  I5[0][0]=0x0958f94b348498a0;I5[0][1]=0x12ab168cc36cacbf;shr2(I5[1]);shr2(I5[1]);shr2(I5[2]);shr2(I5[3]);F(ZZ(I5),inc2(&I5[i][0]))

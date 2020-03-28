@@ -14,7 +14,7 @@
 #define B break
 #define O const
 #define S static
-#define CD __attribute__((cold))
+#define NI __attribute__((noinline))
 #define XT extern
 #define TD typedef
 #define MS(x) #x
