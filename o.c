@@ -10,7 +10,7 @@ A1(ascl,x=N(K("{x-&/x}",x));UC*a;L n=xn;A y=aC(n*Z(*a));a=(UC*)yc;A z=aL(n),u=aL
  F(n,a[i]=xli)F(n,c[a[i]+1]++)F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,ul[c[a[i]]++]=i)
  Fj(8/Z(*a)-1,F(n,a[i]=xl[uli]>>(j+1)*8*Z(*a))ms(c,0,8*nc);F(n,c[a[i]+1]++)Y(c[1+*a]-n,F((1<<8*Z(*a))-1,c[i+1]+=c[i])F(n,zl[c[a[i]]++]=uli)SWP(z,u)))
  xr;yr;zr;u)
-A1(asc,P(xtX,A*a=xa,u=till(xn);L*l=ul,n=xn,i=n/2;W(i-->0,sft(a,l,i,n-1))i=n-1;W(i>0,SWP(l[i],*l)sft(a,l,0,--i))xr;u)P(xtL,ascl(x))
+A1(asc,P(xtX,A*a=xa,u=aL(xn);till(ul,un);L*l=ul,n=xn,i=n/2;W(i-->0,sft(a,l,i,n-1))i=n-1;W(i>0,SWP(l[i],*l)sft(a,l,0,--i))xr;u)P(xtL,ascl(x))
  P(xta,A y=gkv(&x);idx(x,N(asc(y))))xtC||xtI?asc(N(gL(x))):xtS?asc(N(ea1(str,x))):xtD?asc(blw(x)):xts||xti?hop(x):et(x))
 A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))sub(al(len_(x)-1),rev(asc(rev(x)))))
 A1(grp,P(xtt,xtil?K("{(2#x)#1i,`i$&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();UC w=tz(xt);
