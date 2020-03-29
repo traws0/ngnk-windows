@@ -13,24 +13,25 @@ hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd
 #undef hh
 #undef h
 
-#define hf(x,t,rt,c) V x(t*RE a,t*RE b,rt*r,UL n)c
+#define hf(x,t,rt,c) S NI V x(t*RE a,t*RE b,rt*r,UL n)c
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
  hf(v##t##t,T,rt,{*r=v##t(*a,*b);})\
  hf(v##t##T,T,rt,xtT)\
  hf(v##T##t,T,rt,xTt)\
  hf(v##T##T,T,rt,xTT)\
- V v##rdc##T(T*a,T*b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
- V v##scn##T(T*a,T*b,T*r,UL n)_(T c=*a;F(n,r[i]=c=v##t(c,b[i])))\
- V v##eap##T(T*a,T*b,T*r,UL n)_(T c=*a;F(n,T d=b[i];r[i]=v##t(b[i],c);c=d))\
- I v##amd##T(T*a,UL n,L*p,L m,T*b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
+ S NI V v##rdc##T(T*RE a,T*RE b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
+ S NI V v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),r[i]=c=v##t(c,b[i])))\
+ S NI V v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d))\
+ S NI I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
 #define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
 #define htT(f) {ALN(b)ALN(r)__typeof__(*a)c=*a;F(PAD(n,a),*r++=f(c,*b++))}
 #define hTt(f) {ALN(a)ALN(r)__typeof__(*b)c=*b;F(PAD(n,a),*r++=f(*a++,c))}
 #define hTT(f) {ALN(a)ALN(b)ALN(r)F(PAD(n,a),*r++=f(*a++,*b++))}
 #define hs(x) {x(b,a,r,n);}
 #define hn(x) {__typeof__(*b)c=-*b;x(a,&c,r,n);}
+// dexDD
 //     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
-ha(dex,htT(dexi),hTt(dexi),hTT(dexi),htT(dexl),hTt(dexl),hTT(dexl),htT(dexd),hTt(dexd),hTT(dexd),L,D) // : 0
+ha(dex,htT(dexi),hTt(dexi),hTT(dexi),htT(dexl),hTt(dexl),hTT(dexl),;        ,;        ,;        ,L,D) // : 0
 ha(add,htT(addi),hs(addiI),hTT(addi),htT(addl),hs(addlL),hTT(addl),htT(addd),hs(adddD),hTT(addd),L,D) // + 1
 ha(sub,htT(subi),hn(addIi),hTT(subi),htT(subl),hn(addLl),hTT(subl),htT(subd),hn(addDd),hTT(subd),L,D) // - 2
 ha(mul,htT(muli),hs(muliI),hTT(muli),htT(mull),hs(mullL),hTT(mull),htT(muld),hs(muldD),hTT(muld),L,D) // * 3
@@ -50,9 +51,15 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 #undef ht
 #undef hf
 
+#define dexDd dexLl
+#define dexdD dexlL
+#define dexDD dexLL
 #define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
 O V*arf[3][11][8]={{ariths(h,i,I)},{ariths(h,l,L)},{ariths(h,d,D)}};
 #undef h
+#undef dexDD
+#undef dexdD
+#undef dexDd
 S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A_(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A_(x,y),2)) //dyadic penetrate
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;P(k==3&&xn-yn,el(x,y))
  V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];UC t=xtiI?tI:xtlL?tL:v<8?tD:tI;
