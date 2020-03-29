@@ -106,6 +106,8 @@ S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll
 S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);               xl[-1]=n;x)
 #define Ar(x) ((I*)dat(x))[-3]
 S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
+#define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)dat(r_)=(v);r_;}) //type,value
+#define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))     //type,value,arity
 
 #define ariths(h,a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
 A1 a1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,
@@ -123,9 +125,7 @@ XT A glb,cn[],ci[5][3];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
 #define syC(c) (2*(c)) //symbols: char to index
 
-#define atv(t,v) ({A r_=atn((t),1);*(typeof(v)*)dat(r_)=(v);r_;}) //type,value
-#define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))     //type,value,arity
-S A aX(L n)_(atn(tX,n))S A pck(UL t,UI v)_(t<<56|v)S A0(a0,aX(0))
+S A aX(L n)_(atn(tX,n))S A pck(UL t,UI v)_(AT(t,v))S A0(a0,aX(0))
 S A aC(L n)_(atn(tC,n))S A ac(C v)_(pck(tc,v))S UC gc (A x)_(asrt(xtc);         (UC)x)
 S A aS(L n)_(atn(tS,n))S A as(I v)_(pck(ts,v))S I  gs (A x)_(asrt(xts);          (I)x)
 S A aI(L n)_(atn(tI,n))S A ai(I v)_(pck(ti,v))S I  gi (A x)_(asrt(xti||xtc||xts);(I)x)
