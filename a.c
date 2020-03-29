@@ -14,9 +14,7 @@ hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd
 #undef hh
 #undef h
 
-#define ALN(x) x=__builtin_assume_aligned(x,ZA);
-#define PAD(n,a) n=(n+ZA/Z(*a)-1)/(ZA/Z(*a))*(ZA/Z(*a));
-#define hf(x,t,rt,c) V x(t*restrict a,t*restrict b,rt*r,UL n)c
+#define hf(x,t,rt,c) V x(t*RE a,t*RE b,rt*r,UL n)c
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
  hf(v##t##T,T,rt,xtT)hf(v##T##t,T,rt,xTt)hf(v##T##T,T,rt,xTT)\
  V v##rdc##T(T*a,T*b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
@@ -49,8 +47,6 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 #undef ha
 #undef ht
 #undef hf
-#undef PAD
-#undef ALN
 
 #define h(v,t,T) {v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
 O V*arf[3][11][7]={{ariths(h,i,I)},{ariths(h,l,L)},{ariths(h,d,D)}};

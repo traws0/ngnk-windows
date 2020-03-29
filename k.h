@@ -17,6 +17,9 @@
 #define NI __attribute__((noinline))
 #define XT extern
 #define TD typedef
+#define RE restrict
+#define ALN(x) x=__builtin_assume_aligned(x,ZA);
+#define PAD(n,a) n=(n+ZA/Z(*a)-1)/(ZA/Z(*a))*(ZA/Z(*a));
 #define MS(x) #x
 #define XS(x) MS(x)
 #define N(r)      ({A r_=(r);P(!r_,            0)r_;})
@@ -86,12 +89,12 @@ S I funt(UC t)_(t>=to)                                          S I fun(A x)_(fu
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
-// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
+// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
 // tttttttt................................................cccccccc tc
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
 // tttttttt........oooooooooooooooossssssssssssssssssssssssssssssss ts
-// tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 to,tp,tq
-// tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0000 tr
+// tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
+// tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 
 //getters                                   setters
