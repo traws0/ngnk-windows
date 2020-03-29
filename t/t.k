@@ -352,7 +352,7 @@ $`a`b!(0;1 2)                 / `a`b!(,"0";(,"1";,"2"))
  a:="abracadabra";#:'a        / "abrcd"!5 2 2 1 1
 `r`b#=`a`b`r`a`c`a`d`a`b`r`a  / `r`b!(2 9;1 8)
 >#:'="mississippi"            / "ispm"
-<"aaabc"                      / 0 1 2 3 4
+<"aaabc"                      / 0 1 2 3 4i
 <(-;+)                        / 1 0
 {x@<x}`f`a``c`de`c`b`ghi      / ``a`b`c`c`de`f`ghi
 +/<':{x@<x}100?0              / 0
