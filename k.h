@@ -19,7 +19,7 @@
 #define TD typedef
 #define RE restrict
 #define ALN(x) x=__builtin_assume_aligned(x,ZA);
-#define PAD(n,a) n=n+ZA/Z*a-1&-ZA/Z*a;
+#define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
 #define MS(x) #x
 #define XS(x) MS(x)
 #define N(r)      ({A r_=(r);P(!r_,            0)r_;})
