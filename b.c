@@ -20,18 +20,18 @@ S A2(rhs,/*0*/UH o=yo;Y(yts,P(gs(y)==So,h(bo);x)L i=fndi(fl,gs(y));P(i>=0,lu[i]=
  Y(u==cu('*')&&n==2,A z=yy;P(ztX&&zn==2&&zx==cu('|'),N(rhs(x,zy));h(bu|24);x))Y(utw&&n==2,A z=yy;P(!ztX&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):N(rhs(x,z)))P(p,N(rhs(x,yx));h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)N(rhs(x,yx));h(ba);h(n-1);x)
-A1(cpl,UC k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,-1,Z lu);F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
+A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,-1,Z lu);F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
  y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(j>=0&&ycj==bg,ycj=bd))AK(k,AT(to,x)))
 
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;S A1(psh,*--sp=x)S A0(pop,*sp++)
-S A1(vm,/*0*/W(1,UC b=*ip++;
+S A1(vm,/*0*/W(1,C b=*ip++;
  Y(b>=bm,Y(b>=bc,A y=fc;psh(mR(ya[b-bc])))
         EY(b==bm,A*p=loc-*ip++,y=pop();N(*sp=ap2(mR(*p=Ny(dm1(A_(*p,yR,av(*ip++),*sp),4))),y)))
         EY(b==bM,A x=pop()    ,y=pop();N(*sp=ap2(      Ny(dmd(A_(x ,yR,av(*ip++),*sp),4)) ,y)))
-        EY(b==bl,UC n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n;psh(x))
-        EY(b==bL,UC n=*ip++;A x=*sp;P(!xtt&&len_(x)-n,el())F(n,psh(get(x,n-1-i))))
-        EY(b==ba||b==bP,UC n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
-        EY(b==bz,ip+=1+(UC)*ip*!tru(pop()))EY(b==bj,ip+=(UC)*ip)EY(b==bo,psh(mR(loc[1])))EY(b==bp,mr(pop()))E(asrt(b==br);_(*sp)))
+        EY(b==bl,C n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n;psh(x))
+        EY(b==bL,C n=*ip++;A x=*sp;P(!xtt&&len_(x)-n,el())F(n,psh(get(x,n-1-i))))
+        EY(b==ba||b==bP,C n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
+        EY(b==bz,ip+=1+*ip*!tru(pop()))EY(b==bj,ip+=(C)*ip)EY(b==bo,psh(mR(loc[1])))EY(b==bp,mr(pop()))E(asrt(b==br);_(*sp)))
  EY(b>=bs,A*p=loc-(b&15);Y(b>=bd,psh(*p);*p=au0)EY(b>=bg,psh(mR(*p)))E(mr(*p);*p=mR(*sp)))
  EY(b>=bv,A x=pop();N(*sp=((A2*)vf[b])(x,*sp)))E(N(*sp=((A1*)vf[b])(*sp))))0)
 AX(run,asrt(xto);asrt(n==xk);P(sp<stk+16,esn(n,a))psh((A)(V*)ip);psh((A)(V*)loc);psh(x);ip=dat(fb);loc=sp-1;I m=An(fl);F(n,psh(a[i]))F(m-n,psh(au0))

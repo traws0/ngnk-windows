@@ -39,7 +39,7 @@
  #endif
 #endif
 
-TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
+TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
 TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define dat(x) ((V*)((x)<<16>>16))
 #define A_(a...) (A[]){a}
@@ -77,15 +77,15 @@ V*mmap_(V*,L,L,L,L,L);
 #define extr(x,y,c) ({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
-S L absL(L x)_(x<0?-x:x)S I c3(UC x,UC y,UC z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
+S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw
-S UC At(A);S UC t_lst(UC t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) S I sim(A x)_(ta<xt&&xt<to)
-S I reft(UC t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
-S I pkdt(UC t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
-S I funt(UC t)_(t>=to)                                          S I fun(A x)_(funt(xt))
+S C At(A);S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) S I sim(A x)_(ta<xt&&xt<to)
+S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
+S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
+S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
@@ -98,10 +98,10 @@ S I funt(UC t)_(t>=to)                                          S I fun(A x)_(fu
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 
 //getters                                   setters
-S UC At(A x)_(x>>56)                        S A AT(UL t,A x)_(asrt(t<=tn);               x<<8>>8|t<<56)
-S UC Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
-S UC Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
-S UC Ab(A x)_(UC b=xc[-16];asrt(b<48);b)    S A AB(UC b,A x)_(asrt(b<48);                  xc[-16]=b;x)
+S  C At(A x)_(x>>56)                        S A AT(UL t,A x)_(asrt(t<=tn);               x<<8>>8|t<<56)
+S  C Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
+S  C Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
+S  C Ab(A x)_(C b=xc[-16];asrt(b<48);b)     S A AB( C b,A x)_(asrt(b<48);                  xc[-16]=b;x)
 S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
 S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);               xl[-1]=n;x)
 #define Ar(x) ((I*)dat(x))[-3]
@@ -116,7 +116,7 @@ A1 a1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,ho
 A2 a2,aa,aA,ap1,ap2,apd,cat,com,cst,cut,fnd,id_,idx,mtc,rsh,v0c,v1c,xpt ariths(h,);
 #undef h
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(UC,L),atnv(UC,L,O V*),catc(A,O C*,L),ea1(A1,A),err0(O C*),err1(O C*,A),err2(O C*,A,A),
+A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),err0(O C*),err1(O C*,A),err2(O C*,A,A),
  err3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L),K0(O C*,I);
 V init(),*mc(V*,O V*,L),mrn(I,O A*),*ms(V*,I,L),revl(L*,UL),tili(I*,UI),till(L*,UL);C*syp(I);I Ci(O C*,C),epr(),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),strlen(O C*),tru(A);
@@ -126,11 +126,11 @@ XT A glb,cn[],ci[5][3];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define syC(c) (2*(c)) //symbols: char to index
 
 S A aX(L n)_(atn(tX,n))S A pck(UL t,UI v)_(AT(t,v))S A0(a0,aX(0))
-S A aC(L n)_(atn(tC,n))S A ac(C v)_(pck(tc,v))S UC gc (A x)_(asrt(xtc);         (UC)x)
-S A aS(L n)_(atn(tS,n))S A as(I v)_(pck(ts,v))S I  gs (A x)_(asrt(xts);          (I)x)
-S A aI(L n)_(atn(tI,n))S A ai(I v)_(pck(ti,v))S I  gi (A x)_(asrt(xti||xtc||xts);(I)x)
-S A aL(L n)_(atn(tL,n))S A al(L v)_(atv(tl,v))S L  gl_(A x)_(         pkd(x)?(I)x:*xl)S L gl(A x)_(L r=gl_(x);xr;r)
-S A aD(L n)_(atn(tD,n))S A ad(D v)_(atv(td,v))S D  gd_(A x)_(asrt(xtd);           *xd)S D gd(A x)_(D v=*xd;xr;v)
+S A aC(L n)_(atn(tC,n))S A ac(C v)_(pck(tc,v))S C gc (A x)_(asrt(xtc);          (C)x)
+S A aS(L n)_(atn(tS,n))S A as(I v)_(pck(ts,v))S I gs (A x)_(asrt(xts);          (I)x)
+S A aI(L n)_(atn(tI,n))S A ai(I v)_(pck(ti,v))S I gi (A x)_(asrt(xti||xtc||xts);(I)x)
+S A aL(L n)_(atn(tL,n))S A al(L v)_(atv(tl,v))S L gl_(A x)_(         pkd(x)?(I)x:*xl)S L gl(A x)_(L r=gl_(x);xr;r)
+S A aD(L n)_(atn(tD,n))S A ad(D v)_(atv(td,v))S D gd_(A x)_(asrt(xtd);           *xd)S D gd(A x)_(D v=*xd;xr;v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
@@ -153,8 +153,8 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define ZP 4096ll //page
 #define ZA 32     //hdr
 #define ZR 4
-S UC tz(UC t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ(t)) with a special value ZR for ref types
-S UC tZ(UC t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
+S C tz(C t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ(t)) with a special value ZR for ref types
+S C tZ(C t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
 
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(oo)err_(a,err3,err2,err1,err0)(a);})

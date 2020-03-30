@@ -10,10 +10,10 @@ S A2(serx,y=Nx(apc(y,xt));
 A1(ser,serx(x,aC(0)))
 
 S L des8(C**p)_(L r=*(L*)*p;*p+=8;r)
-S A desx(C**p)_(UC t=*(*p)++;
+S A desx(C**p)_(C t=*(*p)++;
  P(t==ts,O C*s=*p;*p+=strlen(s)+1;as(syP(s)))
  P(pkdt(t),des8(p))
  P(t==tX||t==tS,L n=des8(p);A x=AN(0,atn(t,n));F(n,x=apd(x,Nx(desx(p))))x)
- P(funt(t),UC vk=*(*p)++;AT(t,AK(vk&7,AV(vk>>3,N(desx(p))))))
+ P(funt(t),C vk=*(*p)++;AT(t,AK(vk&7,AV(vk>>3,N(desx(p))))))
  L n=t<ta?des8(p):1;C*v=*p;(*p)+=n*tZ(t);atnv(t,n,v))
 A1(des,P(!xtC,ed(x))C*s=xc;dex(x,desx(&s)))

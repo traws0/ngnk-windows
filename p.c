@@ -1,5 +1,5 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-S I ltr(UC c)_(c3('a',c|32,'z')||c>127)S I ldg(C c)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S D p10(I n)_(D d=1;F(n,d*=10)d)
+S I ltr(C c)_(c3('a',c|32,'z')||c>127)S I ldg(C c)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S D p10(I n)_(D d=1;F(n,d*=10)d)
 I Ci(O C*s,C c)_(O C*t=s;W(*t&&*t-c,t++)t-s)S A1(p1,xn-1?x:fir(x))S A pb(A,C);S I ph(C c)_((c&15)+9*(c>'9'))
 L pu(C**p)_(C*s=*p;L v=0;C c=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?_0n:_0w)I e=0;Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))
