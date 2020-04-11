@@ -11,7 +11,7 @@ A ea1(A1 f,A x)_(P(xtt,f(x))P(xta,x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
  I b=xtX&&Ar(x)==1;L n=len_(x);P(!n,x)A u=a0();F(n,A y=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))xr;ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
 S L cfm(O A*a/*0*/,L n)_(L m=-1;F(n,A x=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,A z,b[8];F(n,A y=a[i];Y(yta,z=yx;B))zR;F(n,A y=b[i]=a[i];Y(yta,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))A u=eac(x,b,n);(u?aa:dex)(z,u))
-AX(eac,P(xtil,n>1?ern(n,a):K("{y(!x)+/:!0|1-x-#y}",xR,*a))
+AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))
  A b[8];C t[8];L m=-1;F(n,A y=b[i]=a[i];P(yta,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytX?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))A u=m?0:a0(); //0:pkdatm,1:refatm,2:tX(r=1),3:tX(r>1),4:other
  Fj(m,F(n,A y=a[i];Y(t[i]==2,b[i]=yaj)Y(t[i]>2,b[i]=get(y,j)))
