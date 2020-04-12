@@ -1,5 +1,5 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S I lu[16];S A2 rhs;
+enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S A2 rhs;
 #define fs xx    //src          BYTECODE                                ba:apply n-adic      f[x;y;z]
 #define fb xy    //bytecode     bu,bv:apply unary|binary verb    +x*y   bP:make projection   f[x;;z]
 #define fm xz    //srcmap       bs,bg,bd:set|get|delete local     a:b   bz:branch if falsey  $[x;y;z]
@@ -7,6 +7,7 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define fc xa[4] //constants    bl,bL:make|unmake list    (a;b):(c;d)   bc:load constant     12;`a;""
 #define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
 #define hc(a) ({I b=bc+fpa(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
+#define lu ((I*)dat(xa[5])) //last usages of locals
 S A3(lhs,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))lu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztX&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,N(rhs(x,za[zn-1-i])))h(bl);h(zn-1))
@@ -20,8 +21,8 @@ S A2(rhs,/*0*/UH o=yo;Y(yts,P(gs(y)==So,h(bo);x)L i=fndi(fl,gs(y));P(i>=0,lu[i]=
  Y(u==cu('*')&&n==2,A z=yy;P(ztX&&zn==2&&zx==cu('|'),N(rhs(x,zy));h(bu|24);x))Y(utw&&n==2,A z=yy;P(!ztX&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):N(rhs(x,z)))P(p,N(rhs(x,yx));h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)N(rhs(x,yx));h(ba);h(n-1);x)
-A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);C o=0;ms(lu,-1,Z lu);F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
- y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(j>=0&&ycj==bg,ycj=bd))AK(k,AT(to,x)))
+A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(lu,-1,16*Z(I));F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
+ y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(j>=0&&ycj==bg,ycj=bd))mr(xa[5]);AK(k,AT(to,x)))
 
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;S A1(psh,*--sp=x)S A0(pop,*sp++)
 S A1(vm,/*0*/W(1,C b=*ip++;
