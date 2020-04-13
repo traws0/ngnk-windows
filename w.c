@@ -34,7 +34,7 @@ S AX(cvi,P(n>2,ern(n,a))A y,z,u;Y(n==1,y=0;z=*a)E(y=*a;z=a[1])
 AX(scn,P(xtilIL,enc(x,a,n))P(xtcC,spl(x,a,n))P(xk<2,cvi(x,a,n))
  P(n==1,A z=*a;P(ztt||!zn,z)P(zta,z=mut(z);zy=scn(x,&zy,1);z)P(x==cv(','),scn(x,A_(a0(),z),2))
   P(xtv&&xv<11&&(ztIL||ztD||ztC),Y(ztC,z=N(gL(z)))
-   I w=tZ(zt);A u=ax(z);mc(uc,zc,w);((V(*)(V*,V*,V*,L))arf[zt-tI][xv][5])(zc,zc+w,uc+w,zn-1);u)
+   I w=tZ[zt];A u=ax(z);mc(uc,zc,w);((V(*)(V*,V*,V*,L))arf[zt-tI][xv][5])(zc,zc+w,uc+w,zn-1);u)
   A y=get(z,0),u=enl(yR);L i=0,n=zn;W(++i<n,y=N(app(x,A_(y,get(z,i)),2));u=apd(u,yR))yr;zr;u)
  Y(n==2,A u=a[1];P(uta,u=mut(u);uy=scn(x,A_(*a,uy),2);u)P(!un,mr(*a),u))
  A y=*a++;n--;L m=cfm(a,n);P(m==-2,yr;eln(n,a))A u=a0(),b[8];

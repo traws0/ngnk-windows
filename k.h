@@ -38,6 +38,12 @@
   #define asrt(x)
  #endif
 #endif
+#define Z sizeof
+#define ZZ(x) (Z(x)/Z(*(x)))
+#define ZV Z(V*)  //ptr
+#define ZP 4096ll //page
+#define ZA 32     //hdr
+#define ZR 4
 
 TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
 TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
@@ -81,7 +87,10 @@ S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?'a'
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+#define TZ ZV, 1, 4, 8, 8, 4,ZV,ZV, 8, 8, 8, 8, 8,ZV,ZV,ZV,ZV, 8, 8, 8 //size in bytes
+#define Tz ZR, 0, 2, 3, 3, 2,ZR,ZR, 3, 3, 3, 3, 3,ZR,ZR,ZR,ZR, 3, 3, 3 //log(tZ[t]) with a special value ZR for ref types
 #define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw
+XT O C tz[],tZ[];
 S C At(A);S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) S I sim(A x)_(ta<xt&&xt<to)
 S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
@@ -146,15 +155,6 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define _0Wi (~_0Ni)
 #define _0n  (D)NAN
 #define _0w  (D)INFINITY
-
-#define Z sizeof
-#define ZZ(x) (Z(x)/Z(*(x)))
-#define ZV Z(V*)  //ptr
-#define ZP 4096ll //page
-#define ZA 32     //hdr
-#define ZR 4
-S C tz(C t)_(t==tC?0:t==tI||t==tS?2:reft(t)?ZR:3) //log(tZ(t)) with a special value ZR for ref types
-S C tZ(C t)_(t==tC?1:t==tI||t==tS?4:reft(t)?ZV:8) //type size in bytes
 
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(oo)err_(a,err3,err2,err1,err0)(a);})
