@@ -3,6 +3,7 @@ A1(flp,P(xtaA,Y(xta,A y=xy;P(!ytX||!yn,er(x))F(yn,A z=yai;P(!ztT,en(x)))L m=An(*
  P(!xtX||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 V till(L*a,UL n)_(ALN(a)F(PAD(n,a),a[i]=i))
 V tili(I*a,UI n)_(ALN(a)F(PAD(n,a),a[i]=i))
+V tilh(H*a,UH n)_(ALN(a)F(PAD(n,a),a[i]=i))
 A1(til,P(xti,I n=gi(x);I m=n<0;n*=1-2*m;A u=aI(n);tili(ui,n);m?sub(u,ai(n)):u)
        P(xtl,L n=gl(x);I m=n<0;n*=1-2*m;A u=aL(n);till(ul,n);m?sub(u,al(n)):u)
        xtIL?K("{x((*a)#&#)'1_a:|*\\|x,1}",x):xta?fir(AT(tX,x)):xto?val(x):xtX&&!xn?x:et(x))
