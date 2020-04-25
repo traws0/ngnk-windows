@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/203893/bl-lu-ur-rr-ry-yv-vi-is-si-io-on-blur-the-input/203899#203899
-f:{" "/2'x@&2!+/"/9@Z`z"<\:x}
+f:" "/2'(2!+/"/9@Z`z"<)#
 \l 0.k
 t["Ab";"Ab"]
 t["Abc";"Ab bc"]
