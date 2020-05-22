@@ -295,6 +295,7 @@ $`a`b!(0;1 2)                 / `a`b!(,"0";(,"1";,"2"))
 {x@<x}0N?"abracadabra"        / "aaaaabbcdrr"
 "abc"?"abracadabra"           / 0 1 0N 0 2 0 0N 0 1 0N 0
 "abc"?"b"                     / 1
+"abc"?(+)                     / 0N
 ("ab";"cd")?("cd";"efg";"h")  / 1 0N 0N
 `a`b`c?`b`z                   / 1 0N
 `a`b`c?(`b`z;,`c;0#`;())      / (1 0N;,2;!0;())
