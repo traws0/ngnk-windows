@@ -6,7 +6,7 @@ S A ma(UI b)_(dbg(asrt(!ml));asrt(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;A x=mx[b];P(
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap_(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())mt+=1ll<<i;x=(A)(p+ZA))
  W(i>b,i--;A y=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)AB(b,x))
-A1(mr0,dbg(ml++);asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)C b=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x;mu-=1ll<<b;Y(ref(x),mrn(xn,xa))x)
+A1(mr0,dbg(ml++);asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)C b=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ul<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xa))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xc-ZP,xn+ZP);0)dbg(ms(xc,0xab,xn*tZ[xt]));0)
 A1(mr,mr1(mr0(x)))V mrn(I n,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)A1(mut,P(pkd(x)||Ar(x)==1,x)A u=atnv(xt,xn,xc);xr;Y(ref(u),mRa(u))u)
 V*mc(V*x,O V*y,L n)_(C*p=x;O C*q=y;F(n,p[i]=q[i])x)V*ms(V*x,I c,L n)_(C*p=x;F(n,*p++=c);x)
