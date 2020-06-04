@@ -46,7 +46,7 @@
 #define ZR 4
 
 TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
-TD void V;TD UL A;TD A A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
+TD void V;TD UL A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define dat(x) ((V*)((x)<<16>>16))
 #define A_(a...) (A[]){a}
 #define A0(f,b...) A f()             _(b)
@@ -91,7 +91,7 @@ enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //ty
 #define Tz ZR, 0, 2, 3, 3, 2,ZR,ZR, 3, 3, 3, 3, 3,ZR,ZR,ZR,ZR, 3, 3, 3 //log(tZ[t]) with a special value ZR for ref types
 #define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw
 XT O C tz[],tZ[];
-S C At(A);S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) S I sim(A x)_(ta<xt&&xt<to)
+S C At(A);S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)   S I sim(A x)_(ta<xt&&xt<to)
 S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
 S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))
