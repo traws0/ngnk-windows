@@ -3,14 +3,15 @@
 #include<sys/syscall.h>
 #include<math.h>
 #include"g.h"
-#define    _(a...) {return({a;});}
-#define  P(x,a...) if(x)_(a)
-#define  Y(x,a...) if(x){a;}
-#define EY(x,a...) else if(x){a;}
-#define    E(a...) else{a;}
-#define  W(x,a...) while(x){a;}
-#define  F(x,a...) for(__typeof__(x)n_=(x),i=0;i<n_;i++){a;}
-#define Fj(x,a...) for(__typeof__(x)n_=(x),j=0;j<n_;j++){a;}
+#define      _(a...) {return({a;});}
+#define    W(x,a...) while(x){a;}
+#define    Y(x,a...) if(x){a;}
+#define    P(x,a...) Y(x,_(a))
+#define     EY(a...) else Y(a)
+#define      E(a...) else{a;}
+#define      F(a...) F_(i,a)
+#define     Fj(a...) F_(j,a)
+#define F_(i,n,a...) for(__typeof__(n)n_=(n),i=0;i<n_;i++){a;}
 #define B break
 #define O const
 #define S static
@@ -22,10 +23,11 @@
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
 #define MS(x) #x
 #define XS(x) MS(x)
-#define N(r)      ({A r_=(r);P(!r_,            0)r_;})
-#define N1(x,r)   ({A r_=(r);P(!r_,mr(x);      0)r_;})
-#define N2(x,y,r) ({A r_=(r);P(!r_,mr(x);mr(y);0)r_;})
-#define SWP(x,y) {__typeof__(x)tmp=x;x=y;y=tmp;}
+#define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
+#define N(r)      N_(r,)
+#define N1(x,r)   N_(r,mr(x))
+#define N2(x,y,r) N_(r,mr(x);mr(y))
+#define SWP(x,y) {__typeof__(x)t_=x;x=y;y=t_;}
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
