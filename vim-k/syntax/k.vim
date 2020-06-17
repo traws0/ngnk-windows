@@ -5,8 +5,6 @@ sy match  k_w  /[\\\/']:\=/                                        nextgroup=k_w
 sy match  k_c1 /.\+/                                                                contained               |hi link k_c1      special
 sy match  k_c0 /\\\(\w\+\|\\\|$\)/                                 nextgroup=k_c1                           |hi link k_c0      statement
 sy match  k_c0 /\\[tw]\>\(:\d\+\)\=/
-sy match  k_comment /\(\s\|^\)\/.*/                                                                         |hi link k_comment comment
-sy region k_comment matchgroup=k_comment start=/^\/$/ end=/^\\$/
 sy match  k_e  /"/                                                 nextgroup=k_es                           |hi link k_e       error
 sy match  k_es /.*/                                                nextgroup=@k_vw  contained               |hi link k_es      k_string
 sy match  k_string  /"\(\\.\|[^"\n]\)*"/                           nextgroup=@k_vw  contains=k_q            |hi link k_string  string
@@ -30,6 +28,8 @@ sy match  k_aj /;/                                                              
 sy match  k_bj /;/                                                                  contained               |hi link k_bj      k_b
 sy match  k_cj /;/                                                                                          |hi link k_cj      k_c
 sy match  k_t  / \\/                                                                                        |hi link k_t       k_u
+sy region k_comment matchgroup=k_comment start=/\(^\/\| \/\|^#!\)/ end=/$/                                  |hi link k_comment comment
+sy region k_comment matchgroup=k_comment start=/^\/$/ end=/^\\$/
 sy cluster k_vw contains=k_v,k_w
 sy cluster k_k  contains=k_e,k_s,k_u,k_w,k_c0,k_i,k_x,k_comment,k_n,k_string,k_g,k_ar,k_br,k_cr,k_t
 let b:current_syntax='k'
