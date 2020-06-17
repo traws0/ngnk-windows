@@ -21,7 +21,8 @@ S C*sy1;S C sy0[1<<16]__attribute__((aligned(ZA)));C*syp(I i)_(sy0+i)
 I syP(O C*s)_(C c=*s;P(c<128&&(!c||!s[1]),syC(c))O C*p=sy0+256;W(p<sy1,O C*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,p-sy0)p=q;W(*p,p++)p++)
  I r=sy1-sy0,n=strlen(s)+1;P(sy1+n>sy0+Z sy0,write(1,"syms ",5);oom())mc(sy1,s,n);sy1+=n;r)
 I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr();0)S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
-A1(ldf,x=N(u1c(x));P(!xn||xc[xn-1]!='\n',ed(x))xc[xn-1]=0;C*p=xc;W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
+A1(ldf,x=N(u1c(x));P(!xn||xc[xn-1]!='\n',ed(x))xc[xn-1]=0;C*p=xc;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
+ W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 asm(".globl mmap_\nmmap_:\nmovq %rcx,%r10\nmovq $"XS(SYS_mmap)",%rax\nsyscall\nret");
 V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
  cn[tX]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
