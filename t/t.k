@@ -775,3 +775,12 @@ $`:k.com:80`:/bin/ls`:1.2.3.4 / (":k.com:80";":/bin/ls";":1.2.3.4")
 `?`@(`;`a;`bc``de;0#`)        / (`;`a;`bc``de;0#`)
 `?`@{1+2*x}                   / {1+2*x}
 (`?`@{1+2*x})3                / 7
+
+/crypto
+`m""                          / 0xd41d8cd98f00b204e9800998ecf8427e
+`m@,"a"                       / 0x0cc175b9c0f1b6a831c399e269772661
+`m"abc"                       / 0x900150983cd24fb0d6963f7d28e17f72
+`m"message digest"            / 0xf96b697d7cb7938d525a2f31aaf161d0
+`m@`c$"a"+!26                 / 0xc3fcd3d76192e4007dfb496cca67e13b
+`m@,/`c$"Aa0"+!'26 26 10      / 0xd174ab98d277d9f5a5611c2c9f419d9f
+`m 80#"1234567890"            / 0x57edf4a22be3c955ac49da2e2107b67a

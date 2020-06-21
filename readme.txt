@@ -19,6 +19,7 @@ w.c  adverbs
 j.c  json parser: `j?x
 x.c  serialization
 e.c  error handling
+c.c  crypto
 t/   tests
 g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
