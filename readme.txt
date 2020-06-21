@@ -13,10 +13,9 @@ o.c  order and equivalence: <x >x x~y
 f.c  find/random: x?y
 h.c  shape-related: x#y ,x x,y
 s.c  object to string
-i.c  i/o: 0: 1: <fd >fd
+i.c  i/o and \cmds
 v.c  the rest of the verbs
 w.c  adverbs
-c.c  system commands: \w \t:n ..
 j.c  json parser: `j?x
 x.c  serialization
 e.c  error handling

@@ -5,6 +5,7 @@
 #include<fcntl.h>
 #include<arpa/inet.h>
 #include<unistd.h>
+#include<sys/time.h>
 #include"k.h"
 #ifndef MAP_NORESERVE
  #define MAP_NORESERVE 0
@@ -26,3 +27,14 @@ A u1cm(I f)_(L n=lseek_(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRIT
  V*a=mmap_(0,ZP+n,p,m|MAP_ANON,-1,0);P((L)a>>4==-1,err("mmap0"))A u=(A)(a+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
  V*b=mmap_(a+ZP,n,p,m|MAP_FIXED,f,0);b==(V*)uc?u:err("mmap1"))
 A1(u1c,P(xti,C s[1024];I r=read(gi(x),s,Z s);r<0?err("read"):aCn(s,r))P(xtl,u1c(gI(x)))I f=N(hop_(x,O_RDONLY));A u=u1cm(f);close(f);u)
+
+L now()_(struct timeval t;gtod(&t,0);1000000ll*t.tv_sec+t.tv_usec)
+S A1(cmdw,asrt(xtC);L n=mu;P(!xn,xr;al(n))A y=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
+S A1(cmdt,asrt(xtC);C*s=xc;L n=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xc),x))))));F(n,mr(Nx(app(x,0,0))))xr;al((now()-t+500)/1000))
+A1(cmd,P(!xtC,et(x))Y(!xn||xn==1&&*xc=='\\',exit(0))C c=*xc;
+ Y(c3('a',c,'z')&&(xn==1||xc[1]==32||xc[1]==':'),I i=0;W(i<xn&&xci-32&&xci-':',i++)I j=i;W(j<xn&&xcj==32,j++)x=N(cut(al(j),x));
+  S A1*t[26]={['l'-'a']=ldf,['t'-'a']=cmdt,['w'-'a']=cmdw};A1*f=t[c-'a'];P(f,f(x)))
+ K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
+S A rda(I f)_(A u=aC(256-ZA);L m=0,k;W((k=read(f,uc+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,A z=aC(2*un+ZA);mc(zc,uc,m);ur;u=z))close(f);AN(m,u))
+A1(frk,P(!xtX||xn-2,ed(x))A y=gkv(&x);P(!xtX||!ytC,ed(x,y))x=Ny(ea1(str0,x));C*a[xn+1];F(xn,a[i]=dat(xai))a[xn]=0;I p[4];pipe(p);pipe(p+2);
+ P(!fork(),dup2(*p,0);dup2(p[3],1);F(4,close(p[i]))exit(execve(*a,a,0));0)xr;close(*p);close(p[3]);N(v1c(ai(p[1]),y));rda(p[2]))
