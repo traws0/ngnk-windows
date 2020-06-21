@@ -19,7 +19,7 @@ S AX(idxX,A y=*a++;n--;P(ytX,A b[8];*b=au_plc;mc(b+1,a,n);A z=prj(x,b,n+1);dex(z
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)A u=idxX(x,a,n);xr;u)
 S A2(wrt,P(xtl,wrt(gI(x),y))P(ytc,wrt(x,enl(y)))P(!xti||!ytC,et(y))write(gi(x),yc,yn);y)
 AX(app,P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,*a))
- P(xts,I v=gs(x);A y=*a;n>1?ern(n,a):!v?ser(y):v==Sj?json(y):v==Sk?kst(y):v==Sp?prs(y):v==St?yr,al(now()):v==Sx?frk(y):v==Se?yr,epr(),au0:enn(n,a))
+ P(xts,I v=gs(x);A y=*a;n>1?ern(n,a):!v?ser(y):v==Sj?json(y):v==Sk?kst(y):v==Sp?prs(y):v==St?yr,al(now()):v==Sx?frk(y):v==Se?yr,epr(),au0:v==Sm?md5(y):enn(n,a))
  P(xta,A y=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtA,A y=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(ta,x),a,n))
  P(n<xk,prj(x,a,n))P(xtv,n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))P(xtu,((A1*)vf[xv])(*a))P(xtw,A y=*a;AK(0<xv&&xv<4&&yk==2?1:fun(y)?yk:1,AV(xv,atnv(tr,1,a))))P(xto,run(x,a,n))
