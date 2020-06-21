@@ -13,9 +13,9 @@ A1(md5,P(!xtC,et(x))
   {0xf4292244,0x432aff97,0xab9423a7,0xfc93a039,0x655b59c3,0x8f0ccc92,0xffeff47d,0x85845dd1,0x6fa87e4f,0xfe2ce6e0,0xa3014314,0x4e0811a1,0xf7537e82,0xbd3af235,0x2ad7d2bb,0xeb86d391}};
  UL n=xn,m=(n+1+8+63)&~63;x=AN(m,room(x,m-n));xc[n]=128;ms(xc+n+1,0,m-n-9);n*=8;mc(xc+m-8,&n,8);UI v[]={0x67452301,0xefcdab89,0x98badcfe,0x10325476};
  mr2(x,Fj(xn/64,UI a=v[0],b=v[1],c=v[2],d=v[3],t;
-  F(16,a+=b&c|~b&d;t=d;d=c;c=b;b=b+rol(a+k[0][i]+xi[16*j+   i      ],r[0][i]);a=t)
-  F(16,a+=d&b|~d&c;t=d;d=c;c=b;b=b+rol(a+k[1][i]+xi[16*j+(5*i+1)%16],r[1][i]);a=t)
-  F(16,a+=b^c^d   ;t=d;d=c;c=b;b=b+rol(a+k[2][i]+xi[16*j+(3*i+5)%16],r[2][i]);a=t)
-  F(16,a+=c^(b|~d);t=d;d=c;c=b;b=b+rol(a+k[3][i]+xi[16*j+(7*i  )%16],r[3][i]);a=t)
+  F(16,UI e=rol(a+(b&c|~b&d)+k[0][i]+xi[16*j+   i      ],r[0][i]);a=d;d=c;c=b;b+=e)
+  F(16,UI e=rol(a+(d&b|~d&c)+k[1][i]+xi[16*j+(5*i+1)%16],r[1][i]);a=d;d=c;c=b;b+=e)
+  F(16,UI e=rol(a+(b^c^d   )+k[2][i]+xi[16*j+(3*i+5)%16],r[2][i]);a=d;d=c;c=b;b+=e)
+  F(16,UI e=rol(a+(c^(b|~d))+k[3][i]+xi[16*j+(7*i  )%16],r[3][i]);a=d;d=c;c=b;b+=e)
   v[0]+=a;v[1]+=b;v[2]+=c;v[3]+=d)0);
  aCn((V*)v,16))
