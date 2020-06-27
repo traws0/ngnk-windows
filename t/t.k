@@ -776,11 +776,38 @@ $`:k.com:80`:/bin/ls`:1.2.3.4 / (":k.com:80";":/bin/ls";":1.2.3.4")
 `?`@{1+2*x}                   / {1+2*x}
 (`?`@{1+2*x})3                / 7
 
-/crypto
-`m""                          / 0xd41d8cd98f00b204e9800998ecf8427e
-`m@,"a"                       / 0x0cc175b9c0f1b6a831c399e269772661
-`m"abc"                       / 0x900150983cd24fb0d6963f7d28e17f72
-`m"message digest"            / 0xf96b697d7cb7938d525a2f31aaf161d0
-`m@`c$"a"+!26                 / 0xc3fcd3d76192e4007dfb496cca67e13b
-`m@,/`c$"Aa0"+!'26 26 10      / 0xd174ab98d277d9f5a5611c2c9f419d9f
-`m 80#"1234567890"            / 0x57edf4a22be3c955ac49da2e2107b67a
+/md5
+`md5""                        / 0xd41d8cd98f00b204e9800998ecf8427e
+`md5@,"a"                     / 0x0cc175b9c0f1b6a831c399e269772661
+`md5"abc"                     / 0x900150983cd24fb0d6963f7d28e17f72
+`md5"message digest"          / 0xf96b697d7cb7938d525a2f31aaf161d0
+`md5@`c$"a"+!26               / 0xc3fcd3d76192e4007dfb496cca67e13b
+`md5@,/`c$"Aa0"+!'26 26 10    / 0xd174ab98d277d9f5a5611c2c9f419d9f
+`md5 80#"1234567890"          / 0x57edf4a22be3c955ac49da2e2107b67a
+
+/sha1
+`sha1""                       / 0xda39a3ee5e6b4b0d3255bfef95601890afd80709
+`sha1@,"a"                    / 0x86f7e437faa5a7fce15d1ddcb9eaeaea377667b8
+`sha1"abc"                    / 0xa9993e364706816aba3e25717850c26c9cd0d89d
+`sha1"message digest"         / 0xc12252ceda8be8994d5fa0290a47231c1d16aae3
+`sha1@`c$"a"+!26              / 0x32d10c7b8cf96570ca04ce37f2a19d84240d3a89
+`sha1@,/`c$"Aa0"+!'26 26 10   / 0x761c457bf73b14d27e9e9265c46f4b4dda11f940
+`sha1 80#"1234567890"         / 0x50abf5706a150990a08b2c5ea40fa0e585554732
+
+/sha256
+`sha256""                     / 0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+`sha256@,"a"                  / 0xca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb
+`sha256"abc"                  / 0xba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+`sha256"message digest"       / 0xf7846f55cf23e14eebeab5b4e1550cad5b509e3348fbc4efa3a1413d393cb650
+`sha256@`c$"a"+!26            / 0x71c480df93d6ae2f1efad1447c66c9525e316218cf51fc8d9ed832f2daf18b73
+`sha256@,/`c$"Aa0"+!'26 26 10 / 0xdb4bfcbd4da0cd85a60c3c37d3fbd8805c77f15fc6b1fdfe614ee0a7c8fdb4c0
+`sha256 80#"1234567890"       / 0xf371bc4a311f2b009eef952dd83ca80e2b60026c8e935592d0f9c308453c813e
+
+/sha3_256
+`sha3""                       / 0xa7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a
+`sha3@,"a"                    / 0x80084bf2fba02475726feb2cab2d8215eab14bc6bdd8bfb2c8151257032ecd8b
+`sha3"abc"                    / 0x3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532
+`sha3"message digest"         / 0xedcdb2069366e75243860c18c3a11465eca34bce6143d30c8665cefcfd32bffd
+`sha3@`c$"a"+!26              / 0x7cab2dc765e21b241dbc1c255ce620b29f527c6d5e7f5f843e56288f0d707521
+`sha3@,/`c$"Aa0"+!'26 26 10   / 0xa79d6a9da47f04a3b9a9323ec9991f2105d4c78a7bc7beeb103855a7a11dfb9f
+`sha3 80#"1234567890"         / 0x293e5ce4ce54ee71990ab06e511b7ccd62722b1beb414f5ff65c8274e0f5be1d
