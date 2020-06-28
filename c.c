@@ -34,7 +34,7 @@ S V sha256u(UI*d,UL n,UI*a){S O UI k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5d
  0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2};
  F(n,UI w[64];be4n(w,d,16);F(48,UI p=w[i+1],q=w[i+14];w[i+16]=w[i]+(rol(p,25)^rol(p,14)^p>>3)+w[i+9]+(rol(q,15)^rol(q,13)^q>>10))
   UI x[8];mc(x,a,32);
-  F(64,UI t1=x[7]+(rol(x[4],26)^rol(x[4],21)^rol(x[4],7))+ch(x[4],x[5],x[6])+k[i]+w[i],s0=rol(*x,30)^rol(*x,19)^rol(*x,10),t2=s0+maj(*x,x[1],x[2]);
+  F(64,UI t1=x[7]+(rol(x[4],26)^rol(x[4],21)^rol(x[4],7))+ch(x[4],x[5],x[6])+k[i]+w[i],t2=(rol(*x,30)^rol(*x,19)^rol(*x,10))+maj(*x,x[1],x[2]);
        x[7]=x[6];x[6]=x[5];x[5]=x[4];x[4]=x[3]+t1;x[3]=x[2];x[2]=x[1];x[1]=*x;*x=t1+t2)
   F(8,a[i]+=x[i])d+=16)}
 A1(sha256,mdc(x,(UI[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,sha256u,1))
