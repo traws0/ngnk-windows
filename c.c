@@ -39,11 +39,14 @@ S V sha256u(UI*d,UL n,UI*a){S O UI k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5d
   F(8,a[i]+=x[i])d+=16)}
 A1(sha256,hsh(x,(UI[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,sha256u,1))
 
-S V kecp(UL*a){C l=1;F(24,{UL c[5];F(5,UL s=0;Fj(5,s^=a[i+5*j])c[i]=s)F(5,UL d=c[(i+4)%5]^roL(c[(i+1)%5],1);Fj(5,a[i+5*j]^=d))} //θ
-                          {UL c=a[1],t;UI x=1,y=0;F(24,UI z=(2*x+3*y)%5;x=y;y=z;t=a[x+5*y];a[x+5*y]=roL(c,(i+1)*(i+2)/2%64);c=t)} //ρπ
-                          {UL t[5];Fj(5,F(5,t[i]=a[i+5*j])F(5,a[i+5*j]=t[i]^(~t[(i+1)%5]&t[(i+2)%5])))} //χ
-                          F(7,I r=l&1;Y(l&128,l<<=1;l^=113)E(l<<=1)Y(r,*a^=1ll<<(1<<i)-1)))} //ι
-S V kec(UI r,UI c,O C*d,UL m,C s,C*o,UL n){UI r8=r/8,b=0,i;P(r+c-1600||r%8)
- C a[200];ms(a,0,Z a);W(m>0,b=min(m,r8);F(b,a[i]^=d[i])d+=b;m-=b;Y(b==r8,kecp((V*)a);b=0))
- a[b]^=s;if((s&128)&&b==r8-1)kecp((V*)a);a[r8-1]^=128;kecp((V*)a);W(n>0,b=min(n,r8);mc(o,a,b);o+=b;n-=b;Y(n>0,kecp((V*)a)))}
+#define Fj5(a...) {{I j=0;a;}{I j=1;a;}{I j=2;a;}{I j=3;a;}{I j=4;a;}}
+S V kecp(UL*a){C l=1;F(24,
+ {UL c[7]={};UL*p=a;F(5,Fj5(c[1+j]^=*p++))*c=c[5];c[6]=c[1];Fj5(c[j]^=roL(c[j+2],1))p=a;F(5,Fj5(*p++^=c[j]))} //θ
+ {S O C u[]={10,7,11,17,18,3,5,16,8,21,24,4,15,23,19,13,12,2,20,14,22,9,6,1},t[]={1,3,6,10,15,21,28,36,45,55,2,14,27,41,56,8,25,43,62,18,39,61,20,44};
+  UL c=a[1];F(24,UL b=a[u[i]];a[u[i]]=roL(c,t[i]);c=b)} //ρπ
+ F(5,UL*b=a+5*i,x=*b,y=b[1];Fj5(UL z=b[4-j];b[4-j]^=~x&y;y=x;x=z)) //χ
+ F(7,I r=l&1;Y(l&128,l<<=1;l^=113)E(l<<=1)Y(r,*a^=1ll<<(1<<i)-1)))} //ι
+#undef Fj5
+S V kec(UI r,UI c,O C*p,UL n,C s,C*z,UI d8){UI r8=r/8,b=0,i;C a[200];ms(a,0,Z a);W(n>0,b=min(n,r8);F(b,a[i]^=p[i])p+=b;n-=b;Y(b==r8,kecp((V*)a);b=0))
+ a[b]^=s;if((s&128)&&b==r8-1)kecp((V*)a);a[r8-1]^=128;kecp((V*)a);W(d8>0,b=min(d8,r8);mc(z,a,b);z+=b;d8-=b;Y(d8>0,kecp((V*)a)))}
 A1(sha3_256,P(!xtC,et(x))A u=aC(32);mr2(x,kec(1088,512,xc,xn,6,uc,un);u))
