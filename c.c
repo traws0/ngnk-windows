@@ -3,7 +3,7 @@
 TD UI(*U3)(UI,UI,UI);U3(ch,x&y|~x&z)U3(zch,z&x|~z&y)U3(xor,x^y^z)U3(md5f3,y^(x|~z))U3(maj,x&y^x&z^y&z)
 S UI rol(UI x,UI y)_(x<<y|x>>32-y)S UL roL(UL x,UL y)_(x<<y|x>>64-y)
 S UI be4(UI x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL be8(UL x)_(be4(x>>32)|(UL)be4(x)<<32)S UI*be4n(UI*r,O UI*a,UI n)_(F(n,r[i]=be4(a[i]))r)
-S A hsh(A x,O V*iv,I nv,V(*f)(UI*,UL,UI*),I be)_(P(!xtC,et(x))A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64;
+S A mdc(A x,O V*iv,I nv,V(*f)(UI*,UL,UI*),I be)_(P(!xtC,et(x))A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //mdc:padding and merkle-damgard construction
  mr2(x,f(xi,k,ui);C c[128];UL m=n+72&~63;mc(c,xc+n-r,r);c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=be?be8(8*n):8*n;f((V*)c,m/64-k,ui);0);
  Y(be,be4n(ui,ui,nv))u)
 
@@ -17,15 +17,15 @@ S V md5u(UI*d,UL n,UI*a){S O UI k[]={0xd76aa478,0xe8c7b756,0x242070db,0xc1bdceee
  0x655b59c3,0x8f0ccc92,0xffeff47d,0x85845dd1,0x6fa87e4f,0xfe2ce6e0,0xa3014314,0x4e0811a1,0xf7537e82,0xbd3af235,0x2ad7d2bb,0xeb86d391};
  F(n,UI i=0,x=*a,y=a[1],z=a[2],u=a[3];h(0,ch,7,12,17,22,i)h(1,zch,5,9,14,20,5*i+1&15)h(2,xor,4,11,16,23,3*i+5&15)h(3,md5f3,6,10,15,21,7*i&15)
      *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;d+=16)}
-A1(md5,hsh(x,iv,4,md5u,0))
+A1(md5,mdc(x,iv,4,md5u,0))
 #undef h
 #undef h1
 
-S V sha1u(UI*d,UL n,UI*a){S O UI k[]={0x5a827999,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6};S O U3 fs[]={ch,xor,maj,xor};
- F(n,UI x=*a,y=a[1],z=a[2],u=a[3],v=a[4],w[80];be4n(w,d,16);F(64,I j=i+16;w[i+16]=rol(w[i+13]^w[i+8]^w[i+2]^w[i],1))
-  F(80,UI t=rol(x,5)+fs[i/20](y,z,u)+v+k[i/20]+w[i];v=u;u=z;z=rol(y,30);y=x;x=t)
+S V sha1u(UI*d,UL n,UI*a){
+ F(n,UI x=*a,y=a[1],z=a[2],u=a[3],v=a[4],w[80];be4n(w,d,16);F(64,w[i+16]=rol(w[i+13]^w[i+8]^w[i+2]^w[i],1))
+  F(80,UI t=rol(x,5)+(U3[]){ch,xor,maj,xor}[i/20](y,z,u)+v+(UI[]){0x5a827999,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6}[i/20]+w[i];v=u;u=z;z=rol(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
-A1(sha1,hsh(x,iv,5,sha1u,1))
+A1(sha1,mdc(x,iv,5,sha1u,1))
 
 S V sha256u(UI*d,UL n,UI*a){S O UI k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,
  0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
@@ -37,7 +37,7 @@ S V sha256u(UI*d,UL n,UI*a){S O UI k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5d
   F(64,UI t1=x[7]+(rol(x[4],26)^rol(x[4],21)^rol(x[4],7))+ch(x[4],x[5],x[6])+k[i]+w[i],s0=rol(*x,30)^rol(*x,19)^rol(*x,10),t2=s0+maj(*x,x[1],x[2]);
        x[7]=x[6];x[6]=x[5];x[5]=x[4];x[4]=x[3]+t1;x[3]=x[2];x[2]=x[1];x[1]=*x;*x=t1+t2)
   F(8,a[i]+=x[i])d+=16)}
-A1(sha256,hsh(x,(UI[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,sha256u,1))
+A1(sha256,mdc(x,(UI[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,sha256u,1))
 
 #define Fj5(a...) {{I j=0;a;}{I j=1;a;}{I j=2;a;}{I j=3;a;}{I j=4;a;}}
 S V kecp(UL*a){C l=1;F(24,
