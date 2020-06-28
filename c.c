@@ -47,6 +47,6 @@ S V kecp(UL*a){C l=1;F(24,
  F(5,UL*b=a+5*i,x=*b,y=b[1];Fj5(UL z=b[4-j];b[4-j]^=~x&y;y=x;x=z)) //χ
  F(7,I r=l&1;Y(l&128,l<<=1;l^=113)E(l<<=1)Y(r,*a^=1ll<<(1<<i)-1)))} //ι
 #undef Fj5
-S V kec(UI r,UI c,O C*p,UL n,C s,C*z,UI d8){UI r8=r/8,b=0,i;C a[200];ms(a,0,Z a);W(n>0,b=min(n,r8);F(b,a[i]^=p[i])p+=b;n-=b;Y(b==r8,kecp((V*)a);b=0))
- a[b]^=s;if((s&128)&&b==r8-1)kecp((V*)a);a[r8-1]^=128;kecp((V*)a);W(d8>0,b=min(d8,r8);mc(z,a,b);z+=b;d8-=b;Y(d8>0,kecp((V*)a)))}
-A1(sha3_256,P(!xtC,et(x))A u=aC(32);mr2(x,kec(1088,512,xc,xn,6,uc,un);u))
+S V kec(UI r,O C*p,UL n,C s,C*z,UI d){UI b=0,i;C a[200];ms(a,0,Z a);W(n>0,b=min(n,r);F(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,kecp((V*)a);b=0))
+ a[b]^=s;if((s&128)&&b==r-1)kecp((V*)a);a[r-1]^=128;kecp((V*)a);W(d>0,b=min(d,r);mc(z,a,b);z+=b;d-=b;Y(d>0,kecp((V*)a)))}
+A1(sha3_256,P(!xtC,et(x))A u=aC(32);mr2(x,kec(1088/8,xc,xn,6,uc,un);u))
