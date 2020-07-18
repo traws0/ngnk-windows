@@ -3,7 +3,7 @@
 TD UI U,(*U3)(U,U,U);U3(ch,x&y|~x&z)U3(zch,z&x|~z&y)U3(xor,x^y^z)U3(md5f3,y^(x|~z))U3(maj,x&y^x&z^y&z)
 S U rl(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y)
 S U b4(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL b8(UL x)_(b4(x>>32)|(UL)b4(x)<<32)S U*b4n(U*r,O U*a,U n)_(F(n,r[i]=b4(a[i]))r)
-S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I be)_(P(!xtC,et(x))A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //mdc:padding and merkle-damgard construction
+S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I be)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //mdc:padding and merkle-damgard construction
  mr2(x,f(xi,k,ui);C c[128];UL m=n+72&~63;mc(c,xc+n-r,r);c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=be?b8(8*n):8*n;f((V*)c,m/64-k,ui);0);
  Y(be,b4n(ui,ui,nv))u)
 
@@ -49,4 +49,4 @@ S V kecp(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+1
 #undef Fj5
 S V kec(U r,O C*p,UL n,C s,C*z,U d){U b=0,i;C a[200];ms(a,0,Z a);W(n>0,b=min(n,r);F(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,kecp((V*)a);b=0))
  a[b]^=s;if((s&128)&&b==r-1)kecp((V*)a);a[r-1]^=128;kecp((V*)a);W(d>0,b=min(d,r);mc(z,a,b);z+=b;d-=b;Y(d>0,kecp((V*)a)))}
-A1(sha3_256,P(!xtC,et(x))A u=aC(32);mr2(x,kec(1088/8,xc,xn,6,uc,un);u))
+A1(sha3_256,Et(!xtC,x)A u=aC(32);mr2(x,kec(1088/8,xc,xn,6,uc,un);u))

@@ -10,6 +10,6 @@ S A1(asci,P(xn>_0Wi,err("lmt",x))x=N(K("{x-&/x}",x));I w=tZ[xt];UI n=xn;A y=aC(n
  mr2(x,mr2(y,Fj(w,ms(c,0,Z c);F(n,a[i]=xc[w*uii+j])F(n,c[a[i]+1]++)Y(c[1+*a]-n,F(255,c[i+1]+=c[i])F(n,zi[c[a[i]]++]=uii)SWP(z,u)))zr;u)))
 A1(asc,P(xtX,P(xn>_0Wi,err("lmt",x))A*a=xa,u=til(ai(xn));I n=xn,i=n/2;W(i-->0,sft(a,ui,i,n-1))i=n-1;W(i>0,SWP(uii,*ui)sft(a,ui,0,--i))xr;u)
  P(xta,A y=gkv(&x);idx(x,N(asc(y))))xtIL||xtC?asci(x):xtS?asc(N(ea1(str,x))):xtD?asc(blw(x)):xts||xti?hop(x):et(x))
-A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))P(!xtT,et(x))sub(ai(len_(x)-1),rev(asc(rev(x)))))
-A1(grp,P(xtt,xtil?K("{(2#x)#1i,`i$&x}",x):et(x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();C w=tz[xt];
+A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))Et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
+A1(grp,P(xtt,Et(!xtil)K("{(2#x)#1i,`i$&x}",x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();C w=tz[xt];
  F(xn,L j=w==ZR?fpa(&y,mR(xai)):!w?fpc(&y,xci):w==2?fpi(&y,xii):w==3?fpl(&y,xli):0;Y(j==un,u=apd(u,aL(0)))uaj=apv(uaj,&i))xr;aa(y,u))

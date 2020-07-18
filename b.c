@@ -30,7 +30,7 @@ S A1(vm,/*0*/W(1,C b=*ip++;
         EY(b==bm,A*p=loc-*ip++,y=pop();N(*sp=ap2(mR(*p=Ny(dm1(A_(*p,yR,av(*ip++),*sp),4))),y)))
         EY(b==bM,A x=pop()    ,y=pop();N(*sp=ap2(      Ny(dmd(A_(x ,yR,av(*ip++),*sp),4)) ,y)))
         EY(b==bl,C n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n;psh(x))
-        EY(b==bL,C n=*ip++;A x=*sp;P(!xtt&&len_(x)-n,el())F(n,psh(get(x,n-1-i))))
+        EY(b==bL,C n=*ip++;A x=*sp;El(!xtt&&len_(x)-n)F(n,psh(get(x,n-1-i))))
         EY(b==ba||b==bP,C n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
         EY(b==bz,ip+=1+*ip*!tru(pop()))EY(b==bj,ip+=(C)*ip)EY(b==bo,psh(mR(loc[1])))EY(b==bp,mr(pop()))E(asrt(b==br);_(*sp)))
  EY(b>=bs,A*p=loc-(b&15);Y(b>=bd,psh(*p);*p=au0)EY(b>=bg,psh(mR(*p)))E(mr(*p);*p=mR(*sp)))
