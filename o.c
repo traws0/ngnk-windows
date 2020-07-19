@@ -7,7 +7,7 @@ A2(mtc,I r=mtc_(x,y);xr;yr;ai(r))
 S I bef(A*a,I i,I j)_(I r=cmp_(a[i],a[j]);r?r<0:i<j)
 S V sft(A*a,I*l,I i,I j)_(W(1,L k=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),B)SWP(l[i],l[k])i=k))
 S A1(asci,P(xn>_0Wi,err("lmt",x))x=N(K("{x-&/x}",x));I w=tZ[xt];UI n=xn;A y=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];tili(ui,n);
- mr2(x,mr2(y,Fj(w,ms(c,0,Z c);F(n,a[i]=xc[w*uii+j])F(n,c[a[i]+1]++)Y(c[1+*a]-n,F(255,c[i+1]+=c[i])F(n,zi[c[a[i]]++]=uii)SWP(z,u)))zr;u)))
+ m2(x,m2(y,Fj(w,ms(c,0,Z c);F(n,a[i]=xc[w*uii+j])F(n,c[a[i]+1]++)Y(c[1+*a]-n,F(255,c[i+1]+=c[i])F(n,zi[c[a[i]]++]=uii)SWP(z,u)))zr;u)))
 A1(asc,P(xtX,P(xn>_0Wi,err("lmt",x))A*a=xa,u=til(ai(xn));I n=xn,i=n/2;W(i-->0,sft(a,ui,i,n-1))i=n-1;W(i>0,SWP(uii,*ui)sft(a,ui,0,--i))xr;u)
  P(xta,A y=gkv(&x);idx(x,N(asc(y))))xtIL||xtC?asci(x):xtS?asc(N(ea1(str,x))):xtD?asc(blw(x)):xts||xti?hop(x):et(x))
 A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))Et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))

@@ -40,7 +40,7 @@ k objs
  xtT - is x a list? (tables are not considered lists here)
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
   mr(x) - equivalent to xr
-  mr2(x,code) - execute a block of code after refcount-- but before collecting the obj
+  m2(x,code) - execute a block of code after refcount-- but before collecting the obj
  xc xl xd xa.. - ptr to content of x as a char*,long*,double*,A*..
  xci xlj.. - i-th or j-th typed element: xc[i],xl[j]..
  AT(x) AK(x) AV(x) AB(x) AN(x) AO(x) - setters for type,arity,verb,bucket,length,srcoffset
