@@ -122,7 +122,7 @@ S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 
 #define ariths(h,a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
 A1 a1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,
- sha1,sha256,sha3_256,ser,sqr,sqz,str,str0,til,typ,u0c,u1c,unq,val,whr;
+ sha1,sha256,sha3_256,sinx,cosx,ser,sqr,sqz,str,str0,til,typ,u0c,u1c,unq,val,whr;
 #define h(x,y) ,x
 A2 a2,aa,aA,ap1,ap2,apd,cat,com,cst,cut,fnd,id_,idx,mtc,rsh,v0c,v1c,xpt ariths(h,);
 #undef h

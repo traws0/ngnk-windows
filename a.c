@@ -4,6 +4,13 @@ A1(sqr,P(xtaAX,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin
 A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,A u=aC(xn);m2(x,F(un,C c=xci;uci=c+32*c3('A',c,'Z'))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);m2(x,F(un,D d=xdi;uli=d<0?(L)d-(d<(L)d):(L)d)u))
 
+//mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
+D sind(D x)_(S O D pi=3.1415927410125732;P(x<0,-sind(-x))W(x>pi,x-=pi)
+ D a[]={-0.10132118334670907,0.00662087952180793,-0.00017350505791248,2.52229235749396866e-6,-2.33177897192836082e-8,1.32913446369766718e-10};
+ D x2=x*x,p11=a[5],p9=p11*x2+a[4],p7=p9*x2+a[3],p5=p7*x2+a[2],p3=p5*x2+a[1],p1=p3*x2+*a;
+ (x-3.1415927410125732+0.00000008742277657347586)*(x+3.1415927410125732-0.00000008742277657347586)*p1*x)
+A1(sinx,P(xtaAX,ea1(sinx,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
+
 S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
 #define hh(v,f) h(v,f,f,f)
