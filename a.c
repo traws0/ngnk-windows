@@ -4,10 +4,9 @@ A1(sqr,P(xtaAX,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin
 A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,A u=aC(xn);m2(x,F(un,C c=xci;uci=c+32*c3('A',c,'Z'))u))P(xtaAX,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);m2(x,F(un,D d=xdi;uli=d<0?(L)d-(d<(L)d):(L)d)u))
 
-//mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
-D sind(D x)_(S O D pi=3.1415927410125732,d=8.742277657347586e-8;P(x<0,-sind(-x))Y(x>pi,x-=pi*(long)(x/pi))
- O D a[]={-0.10132118334670907,0.00662087952180793,-0.00017350505791248,2.52229235749396866e-6,-2.33177897192836082e-8,1.32913446369766718e-10};
- D q=x*x,v=((((a[5]*q+a[4])*q+a[3])*q+a[2])*q+a[1])*q+*a;(x-pi+d)*(x+pi-d)*v*x)
+D sind(D x)_(S O D pi=3.1415927410125732,d=8.742277657347586e-8, //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
+ a[]={1.32913446369766718e-10,-2.33177897192836082e-8,2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
+ P(x<0,-sind(-x))Y(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;F(6,v=v*q+a[i])(x-pi+d)*(x+pi-d)*v*x)
 A1(sinx,P(xtaAX,ea1(sinx,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
 
 S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
