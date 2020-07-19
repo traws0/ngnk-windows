@@ -7,7 +7,7 @@ S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?_0n:_0w)I e
 S D pd(C**p)_(I m=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S C*s0,*s,na;
 S A0(pIL,A x=aL(0);C c;I b=0;W(1,L l=pl(&s);c=*s;Y(!l&&c=='N',l=_0Nl;c=*++s)E(b|=l<_0Ni||l>_0Wi)x=apv(x,&l);Y(c-32||!num(s+1),B)c=*++s)
- P(c=='j'||c=='l',s++;x)P(c=='i',!b?s++,gI(x):ep(x))x)
+ P(c=='j'||c=='l',s++;x)P(c=='i',Ep(b,x)s++;gI(x))x)
 S A0(pD,A x=aD(0);W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),B)s++)x)
 S A0(pC,A x=aC(0);C c=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;I i=Ci("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c)c=*++s;x)
 S A0(p0x,A x=aC(0);s+=2;W(ldg(*s),x=apc(x,ph(*s)<<4|ph(s[1]));s+=2)x)
@@ -29,7 +29,7 @@ S A1(mon,P(xtv&&x-av0,au(xv))P(!xtX,x)P(xn==2&&xx==aw(0)||xn==3&&xx==av_com,x=mu
 S V pw()_(C c=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
 S A pe(A x,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;A u=pe(0,v);P(!u,Y(x,xr)0);*v=0;u=a2(au_out,u);Y(x,u=a2(mon(x),u))u)
  UH o=s-s0;C w=0;A y=pT(&w);P(!y,Y(x,xr)0)P(y==au_plc,x?x:y)P(!w,A z=pe(y,v);P(!x,z)Nx(z);*v?a3(av_com,x,z):AO(o,a2(mon(x),z)))
- A z=pe(0,v);P(!z,Y(x,xr)yr;0)P(z==au_plc,*v=1;!x?y:!ytu?AO(o,a3(y,x,z)):ep(x,y))
+ A z=pe(0,v);P(!z,Y(x,xr)yr;0)P(z==au_plc,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(av_com,x?AO(o,a3(y,x,au_plc)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
 S A pb(A x,C e)_(W(1,C v=0;A y=Nx(pe(0,&v));Y(y==au_plc&&(!e||e=='}'),y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)Ep(*s-e,x)s++;x)
 A1(prs,Et(!xtC,x)s=s0=dat(x=str0(x));A y=*s=='\\'?a1(AO(0,a2(au_cmd,aCz(s+1)))):pb(a0(),0);!y?eso(x,s-s0),0:lam(0,x,shy(y),aS(0)))
