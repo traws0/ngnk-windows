@@ -5,7 +5,7 @@ S U rl(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y) //rotations
 S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32)S U*bn(U*r,O U*a,U n)_(F(n,r[i]=bl(a[i]))r) //big-endian
 
 S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I b)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //merkle-damgard construction with padding
- m2(x,f(xi,k,ui);C c[128];UL m=n+72&~63;mc(c,xc+n-r,r);c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,ui);0);
+ UL m=n+72&~63;C c[128];m2(x,f(xi,k,ui);mc(c,xc+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,ui);
  Y(b,bn(ui,ui,nv))u)
 V md5i(U*k){D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;F(64,k[i]=(1ll<<32)*(s<0?-s:s);t=b*s+a*c;c=b*c-a*s;s=t)}
 #define h1(q,f,x,y,z,u,s,m) x=y+rl(x+f(y,z,u)+k[i]+d[m],s);i++;
