@@ -1,10 +1,10 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 #define U3(f,a) S U f(U x,U y,U z)_(a)
-TD UI U,(*U3)(U,U,U);U3(ch,x&y|~x&z)U3(zch,z&x|~z&y)U3(xor,x^y^z)U3(md5f3,y^(x|~z))U3(maj,x&y^x&z^y&z)
-S U rl(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y)
-S U b4(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL b8(UL x)_(b4(x>>32)|(UL)b4(x)<<32)S U*b4n(U*r,O U*a,U n)_(F(n,r[i]=b4(a[i]))r)
-S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I be)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //mdc:padding and merkle-damgard construction
- m2(x,f(xi,k,ui);C c[128];UL m=n+72&~63;mc(c,xc+n-r,r);c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=be?b8(8*n):8*n;f((V*)c,m/64-k,ui);0);
+TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z))U3(maj,x&y^x&z^y&z)
+S U rl(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y) //rotations
+S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32)S U*b4n(U*r,O U*a,U n)_(F(n,r[i]=bl(a[i]))r) //big-endian
+S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I be)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //merkle-damgard construction with padding
+ m2(x,f(xi,k,ui);C c[128];UL m=n+72&~63;mc(c,xc+n-r,r);c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=be?bL(8*n):8*n;f((V*)c,m/64-k,ui);0);
  Y(be,b4n(ui,ui,nv))u)
 
 #define h1(q,f,x,y,z,u,s,m) x=y+rl(x+f(y,z,u)+k[i]+d[m],s);i++;
@@ -12,7 +12,7 @@ S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I be)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,
 S O U iv[]={0x67452301,0xefcdab89,0x98badcfe,0x10325476,0xc3d2e1f0}; //md5&sha1
 V md5i(U*k){D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;F(64,k[i]=(1ll<<32)*(s<0?-s:s);t=b*s+a*c;c=b*c-a*s;s=t)}
 S V md5u(U*d,UL n,U*a){S U k[64];Y(!*k,md5i(k))
- F(n,U i=0,x=*a,y=a[1],z=a[2],u=a[3];h(0,ch,7,12,17,22,i)h(1,zch,5,9,14,20,5*i+1&15)h(2,xor,4,11,16,23,3*i+5&15)h(3,md5f3,6,10,15,21,7*i&15)
+ F(n,U i=0,x=*a,y=a[1],z=a[2],u=a[3];h(0,chx,7,12,17,22,i)h(1,chz,5,9,14,20,5*i+1&15)h(2,xor,4,11,16,23,3*i+5&15)h(3,mf3,6,10,15,21,7*i&15)
      *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;d+=16)}
 A1(md5,mdc(x,iv,4,md5u,0))
 #undef h
@@ -20,11 +20,11 @@ A1(md5,mdc(x,iv,4,md5u,0))
 
 S V sha1u(U*d,UL n,U*a){
  F(n,U x=*a,y=a[1],z=a[2],u=a[3],v=a[4],w[80];b4n(w,d,16);F(64,w[i+16]=rl(w[i+13]^w[i+8]^w[i+2]^w[i],1))
-  F(80,U t=rl(x,5)+(U3[]){ch,xor,maj,xor}[i/20](y,z,u)+v+(U[]){0x5a827999,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6}[i/20]+w[i];v=u;u=z;z=rl(y,30);y=x;x=t)
+  F(80,U t=rl(x,5)+(U3[]){chx,xor,maj,xor}[i/20](y,z,u)+v+(U[]){0x5a827999,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6}[i/20]+w[i];v=u;u=z;z=rl(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
 A1(sha1,mdc(x,iv,5,sha1u,1))
 
-#define h(a,b,c,d,e,f,g,h) {d+=h+=(rl(e,26)^rl(e,21)^rl(e,7))+ch(e,f,g)+k[r]+w[r];h+=(rl(a,30)^rl(a,19)^rl(a,10))+maj(a,b,c);r++;}
+#define h(a,b,c,d,e,f,g,h) {d+=h+=(rl(e,26)^rl(e,21)^rl(e,7))+chx(e,f,g)+k[r]+w[r];h+=(rl(a,30)^rl(a,19)^rl(a,10))+maj(a,b,c);r++;}
 S V sha256u(U*v,UL n,U*s){S O U k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,
  0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
  0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,
