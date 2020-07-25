@@ -85,7 +85,7 @@ V*mmap_(V*,L,L,L,L,L);
 #define extr(x,y,c) ({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
-S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hex(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
+S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
@@ -121,8 +121,8 @@ S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))     //type,value,arity
 
 #define ariths(h,a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
-A1 a1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hop,json,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,
- sha1,sha256,sha3_256,sinx,cosx,ser,sqr,sqz,str,str0,til,typ,u0c,u1c,unq,val,whr;
+A1 a1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hex,hop,json,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,
+ prs,rev,sha1,sha256,sha3_256,sinx,cosx,ser,sqr,sqz,str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 #define h(x,y) ,x
 A2 a2,aa,aA,ap1,ap2,apd,cat,com,cst,cut,fnd,id_,idx,mtc,rsh,v0c,v1c,xpt ariths(h,);
 #undef h
@@ -187,7 +187,7 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #define oo os("["__FILE__":"XS(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(O C*x)_(write(2,x,strlen(x)))
-S I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hex(x&15);x>>=4)write(2,s,17))
+S I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hx1(x&15);x>>=4)write(2,s,17))
 S I ol(L x)_(C b[32],*u=b+31;L m=x<0;Y(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);Y(m,*u--='-')write(2,u+1,b+31-u))
 S L ov_(C*s,L x)_(os(s);write(2,"           ",max(1,10-strlen(s)));oh((L)x);write(2,"\n",1);x)
 S A ox_(C*s,A x)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))

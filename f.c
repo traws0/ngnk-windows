@@ -9,7 +9,8 @@ S NI L fndc(A x/*0*/,C v)_(asrt(tz[xt]==0);F(xn,P(xci==v,i))_0Nl)L fpc(A*p,C v)_
   NI L fndi(A x/*0*/,I v)_(asrt(tz[xt]==2);F(xn,P(xii==v,i))_0Nl)L fpi(A*p,I v)_(A x=*p;L n=xn,i=fndi(x,v);P(i<0,*p=apv(x,&v);n)i)
   NI L fndl(A x/*0*/,L v)_(asrt(tz[xt]==3);F(xn,P(xli==v,i))_0Nl)L fpl(A*p,L v)_(A x=*p;L n=xn,i=fndl(x,v);P(i<0,*p=apv(x,&v);n)i)
 A2(fnd,
- P(xtt,P(xts,I v=gs(x);P(!v,des(y))Ed(v-=Sj,y)json(y))Et(!xtil,x,y)P(ytl,rnd(gl(gL(x)),gl(y)))Et(!ytc&&!yti&&!ytT,y)
+ P(xtt,P(xts,L i=gl(K("``j`hex?",x));En(i<0,y)(A1*[]){des,json,unh}[i](y))
+       Et(!xtil,x,y)P(ytl,rnd(gl(gL(x)),gl(y)))Et(!ytc&&!yti&&!ytT,y)
        K("{$[`c=t:@y;`c$\"aA\"[y~\"A\"]+x?26;`i=t;`i$x?`l$y;y@x?#y]}",x,y))
  P(xta,A z=gkv(&x);idx(x,fnd(z,y)))
  En(xtA,x,y)
