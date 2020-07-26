@@ -4,13 +4,9 @@ TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z
 S U rl(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y) //rotations
 S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32)S U*bn(U*r,O U*a,U n)_(F(n,r[i]=bl(a[i]))r) //big-endian
 
-S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I b)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //merkle-damgard construction with padding
- UL m=n+72&~63;C c[128];m2(x,f(xi,k,ui);mc(c,xc+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,ui);
- Y(b,bn(ui,ui,nv))u)
-V md5i(U*k){D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;F(64,k[i]=(1ll<<32)*(s<0?-s:s);t=b*s+a*c;c=b*c-a*s;s=t)}
 #define h1(q,f,x,y,z,u,s,m) x=y+rl(x+f(y,z,u)+k[i]+d[m],s);i++;
 #define h(q,f,s0,s1,s2,s3,m) W(i<16*(q+1),h1(q,f,x,y,z,u,s0,m)h1(q,f,u,x,y,z,s1,m)h1(q,f,z,u,x,y,s2,m)h1(q,f,y,z,u,x,s3,m))
-S V md5u(U*d,UL n,U*a){S U k[64];Y(!*k,md5i(k))
+S V md5u(U*d,UL n,U*a){S U k[64];Y(!*k,D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;F(64,k[i]=(1ll<<32)*(s<0?-s:s);t=b*s+a*c;c=b*c-a*s;s=t))
  F(n,U i=0,x=*a,y=a[1],z=a[2],u=a[3];h(0,chx,7,12,17,22,i)h(1,chz,5,9,14,20,5*i+1&15)h(2,xor,4,11,16,23,3*i+5&15)h(3,mf3,6,10,15,21,7*i&15)
      *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;d+=16)}
 #undef h
@@ -19,6 +15,9 @@ S V sha1u(U*d,UL n,U*a){
  F(n,U x=*a,y=a[1],z=a[2],u=a[3],v=a[4],w[80];bn(w,d,16);F(64,w[i+16]=rl(w[i+13]^w[i+8]^w[i+2]^w[i],1))
   F(80,U t=rl(x,5)+(U3[]){chx,xor,maj,xor}[i/20](y,z,u)+v+(U[]){0x5a827999,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6}[i/20]+w[i];v=u;u=z;z=rl(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
+S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I b)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64; //merkle-damgard construction with padding
+ UL m=n+72&~63;C c[128];m2(x,f(xi,k,ui);mc(c,xc+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,ui);
+ Y(b,bn(ui,ui,nv))u)
 S O U iv[]={0x67452301,0xefcdab89,0x98badcfe,0x10325476,0xc3d2e1f0};A1(md5,mdc(x,iv,4,md5u,0))A1(sha1,mdc(x,iv,5,sha1u,1))
 
 #define h(a,b,c,d,e,f,g,h) {d+=h+=(rl(e,26)^rl(e,21)^rl(e,7))+chx(e,f,g)+k[r]+w[r];h+=(rl(a,30)^rl(a,19)^rl(a,10))+maj(a,b,c);r++;}
