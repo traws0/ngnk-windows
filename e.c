@@ -1,6 +1,6 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-S C em[32];S C en;S A es;S I eo;S O C*eM[]={eMs};
-NI A err0(O C*m)_(Y((UL)m<ZZ(eM),m=eM[(L)m])en=min(strlen(m),Z(em)-1);mc(em,m,en);em[en]=0;0)
+S C em[32];S C en;S A es;S I eo;
+NI A err0(O C*m)_(Y((UL)m<256,m=(C*[]){eM}[(I)m])en=min(strlen(m),Z(em)-1);mc(em,m,en);em[en]=0;0)
 NI A err1(O C*m,A x)_(xr;err0(m))NI A err2(O C*m,A x,A y)_(yr;err1(m,x))NI A err3(O C*m,A x,A y,A z)_(zr;err2(m,x,y))
 NI A errn(O C*m,I n,O A*a)_(mrn(n,a);err0(m))NI S I ecl()_(en=0;Y(es,mr(es);es=0)eo=0)NI I eso(A x/*1*/,I o)_(Y(!es,es=x;eo=o)0)
 NI I epr()_(I h=64;C s0[3*h+Z(em)+6],*s=s0;*s++='\'';mc(s,em,en);s+=en;*s++=10;
