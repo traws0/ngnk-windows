@@ -51,12 +51,12 @@ TD void V;TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigne
 TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define dat(x) ((V*)((x)<<16>>16))
 #define A_(a...) (A[]){a}
-#define A0(f,b...) A f()             _(b)
-#define A1(f,b...) A f(A x)          _(b)
-#define A2(f,b...) A f(A x,A y)      _(b)
-#define A3(f,b...) A f(A x,A y,A z)  _(b)
-#define AA(f,b...) A f(O A*a,I n)    _(b)
+#define A0(f,b...) A f(             )_(b)
+#define A1(f,b...) A f(A x          )_(b)
+#define A2(f,b...) A f(A x,A y      )_(b)
+#define A3(f,b...) A f(A x,A y,A z  )_(b)
 #define AX(f,b...) A f(A x,O A*a,I n)_(b)
+#define AA(f,b...) A f(    O A*a,I n)_(b)
 
 #define sc(f,a...  ) ({L r;asm volatile("syscall":"=a"(r):"0"(SYS_##f)a:"cc","rcx","r11","memory");r;})
 #define sc1(f,x    ) sc(f,,"D"(x)              )
