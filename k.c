@@ -45,7 +45,7 @@ AA(am1,A x=*a,y=a[1],z=a[2];
  P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];I d=utT;u=enla(u);Ei(d&&yn-un,x,y,u)y=gL(y);
   Ei(!m2(y,m2(u,x?((I(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][7])(xc,xn,yl,yn,uc,d):1)))x)
  P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];I d=utT;u=enla(u);El(d&&yn-un,x,y,u)
-  m2(y,m2(u,F(yn,L j=yli;Y(!in(j,xn),x=ei(x);B)xcj=uc[d*i])x)))
+  x=m2(y,m2(u,F(yn,L j=yli;Y(!in(j,xn),x=0;B)xcj=uc[d*i])x));Ei(!x)x)
  rdc(cv('@'),a,n))
 AA(amd,A x=*a;xts?mend(a,n,am1):am1(a,n))
 AA(dm1,A x=*a,y=a[1],z=a[2];L m=len_(y);P(!m||y==au0,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*ZV);dex(z,app(z,b,n-2)))
