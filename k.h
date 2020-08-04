@@ -47,8 +47,8 @@
 #define ZA 32     //hdr
 #define ZR 4
 
-TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD unsigned long long UL;TD double D;
-TD void V;TD UL A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
+TD void V;TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
+TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define dat(x) ((V*)((x)<<16>>16))
 #define A_(a...) (A[]){a}
 #define A0(f,b...) A f()             _(b)
