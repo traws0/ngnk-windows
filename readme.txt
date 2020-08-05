@@ -23,8 +23,7 @@ c.c  crypto
 t/   tests
 g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
-a15/ https://adventofcode.com/2015
-a19/ https://adventofcode.com/2019
+aoc19/ https://adventofcode.com/2019
 o/   .o files (build tmp)
 
 k objs
