@@ -49,7 +49,7 @@ A1(sha3_256,Et(!xtC,x)A u=aC(32);m2(x,kec(136,xc,xn,6,uc,un);u))
 #define NK 4 //aes256=8,aes192=6,aes128=4
 #define RK (NK*16+112)
 #define NR (NK+6)
-S C s0[256],s1[256];S V aesi(){C x=1,y=1;F(256,x^=x<<1^(x>>7)*27;F(3,y^=y<<(1<<i))y^=(y>>7)*9;s0[x]=99;F(5,s0[x]^=rC(y,i)))*s0=99;F(256,s1[s0[i]]=i)}
+S C s0[256],s1[256];S V aei(){C x=1,y=1;F(256,x^=x<<1^(x>>7)*27;F(3,y^=y<<(1<<i))y^=(y>>7)*9;s0[x]=99;F(5,s0[x]^=rC(y,i)))*s0=99;F(256,s1[s0[i]]=i)}
 S V x16(C*r,O C*x){F(16,r[i]^=x[i])}S V i16(C*r,O C*x,O C*y){F(16,r[i]=x[y[i]])}S C t0(C x)_(x<<1^27*(x>>7))S C t1(C x,C y)_(C r=(y&1)*x;F(4,x=t0(x);r^=(y>>i+1&1)*x)r)
 S V kxp(U*rk,O U*k,U nk){mc(rk,k,4*nk);
  F(3*nk+28,U t=rk[i+nk-1];Y(i%nk==0,t=rI(t,24);Fj(4,((C*)(V*)&t)[j]=s0[((C*)(V*)&t)[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/nk+1])
@@ -59,6 +59,6 @@ S V mx1(C*s){F(4,C t[4]={};F(4,Fj(4,t[i]^=t1(s[j],C(14,11,13,9)[j-i&3])))mc(s,t,
 S V ae0(C*s,O C*rk){F(NR,x16(s,rk+16*i);i16(s,s0,s);C r[16];i16(r,s,C(0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11));mc(s,r,16);i<NR-1?mx0(s):x16(s,rk+16*NR))}
 S V ae1(C*s,O C*rk){x16(s,rk+16*NR);F(NR,C r[16];i16(r,s,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));mc(s,r,16);i16(s,s1,s);x16(s,rk+16*(NR-1-i));Y(i<NR-1,mx1(s)))}
 S V ecb0(O C*k,U nk,C*a){C rk[RK];kxp((V*)rk,(V*)k,nk);ae0(a,rk);}S V ecb1(O C*k,U nk,C*a){C rk[RK];kxp((V*)rk,(V*)k,nk);ae1(a,rk);}
-A1(aes,Y(!*s0,aesi())Ed(!xtX||xn-2,x)A y=gkv(&x);Ed(!xtC||!ytC||xn-16||yn-4*NK)x=mut(x);ecb0(yc,NK,xc);yr;x)
+A1(aes,Y(!*s0,aei())Ed(!xtX||xn-2,x)A y=gkv(&x);Ed(!xtC||!ytC||xn-16||yn-4*NK)x=mut(x);ecb0(yc,NK,xc);yr;x)
 
 #undef C
