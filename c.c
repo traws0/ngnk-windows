@@ -1,5 +1,6 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 #define U3(f,a) S U f(U x,U y,U z)_(a)
+#define C(a...) (C[]){a}
 TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z))U3(maj,x&y^x&z^y&z)
 S U rl(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y) //rotations
 S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32)S U*bn(U*r,O U*a,U n)_(F(n,r[i]=bl(a[i]))r) //big-endian
@@ -35,11 +36,11 @@ A1(sha256,mdc(x,(U[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9
 #define Fj5(a...) {{I j=0;a;}{I j=1;a;}{I j=2;a;}{I j=3;a;}{I j=4;a;}}
 S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139,y+1,x+y+z+129,x+z+9,138,136,y+z+9,y+10,y+z+139, //keccak sponge
                                                        x+139,x+z+137,x+z+3,x+z+2,x+128,z+10,x+y+10,x+y+z+129,x+z+128,y+1,x+y+z+8};
- F(24,UL s[7]={},b[25];F(5,Fj5(s[1+j]^=*a++))*s=s[5];s[6]=s[1];Fj5(s[j]^=rL(s[j+2],1))a-=25;F(5,Fj5(*a++^=s[j]))a-=25;    //θ
-                       F(25,b[i]=rL(a[i],(C[]){0,1,62,28,27,36,44,6,55,20,3,10,43,25,39,41,45,15,21,8,18,2,61,56,14}[i])) //ρ
-                       F(25,a[i]=b[(C[]){0,6,12,18,24,3,9,10,16,22,1,7,13,19,20,4,5,11,17,23,2,8,14,15,21}[i]])           //π
-                       F(5,UL*r=a+5*i,x=*r,y=r[1];Fj5(UL z=r[4-j];r[4-j]^=~x&y;y=x;x=z))                                  //χ
-                       *a^=t[i])}                                                                                         //ι
+ F(24,UL s[7]={},b[25];F(5,Fj5(s[1+j]^=*a++))*s=s[5];s[6]=s[1];Fj5(s[j]^=rL(s[j+2],1))a-=25;F(5,Fj5(*a++^=s[j]))a-=25; //θ
+                       F(25,b[i]=rL(a[i],C(0,1,62,28,27,36,44,6,55,20,3,10,43,25,39,41,45,15,21,8,18,2,61,56,14)[i]))  //ρ
+                       F(25,a[i]=b[C(0,6,12,18,24,3,9,10,16,22,1,7,13,19,20,4,5,11,17,23,2,8,14,15,21)[i]])            //π
+                       F(5,UL*r=a+5*i,x=*r,y=r[1];Fj5(UL z=r[4-j];r[4-j]^=~x&y;y=x;x=z))                               //χ
+                       *a^=t[i])}                                                                                      //ι
 #undef Fj5
 S V kec(U r,O C*p,UL n,C s,C*z,U d){U b=0,i;C a[200];ms(a,0,Z a);W(n>0,b=min(n,r);F(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,ks((V*)a);b=0))
  a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);mc(z,a,b);z+=b;d-=b;Y(d>0,ks((V*)a)))}
@@ -50,11 +51,14 @@ A1(sha3_256,Et(!xtC,x)A u=aC(32);m2(x,kec(136,xc,xn,6,uc,un);u))
 #define NR (NK+6)
 S C s0[256],s1[256];S V aesi(){C x=1,y=1;F(256,x^=x<<1^(x>>7)*27;F(3,y^=y<<(1<<i))y^=(y>>7)*9;s0[x]=99;F(5,s0[x]^=y<<i|y>>8-i))*s0=99;F(256,s1[s0[i]]=i)}
 S V x16(C*r,O C*x){F(16,r[i]^=x[i])}S V i16(C*r,O C*x,O C*y){F(16,r[i]=x[y[i]])}S C t0(C x)_(x<<1^27*(x>>7))S C t1(C x,C y)_(C r=(y&1)*x;F(4,x=t0(x);r^=(y>>i+1&1)*x)r)
-S V kxp(UI*rk,O UI*k,UI nk){mc(rk,k,4*nk);F(3*nk+28,UI t=rk[i+nk-1];Y(i%nk==0,t=rl(t,24);Fj(4,((C*)(V*)&t)[j]=s0[((C*)(V*)&t)[j]])
-                                                    t^=(C[]){141,1,2,4,8,16,32,64,128,27,54}[i/nk+1])Y(nk==8&&i%nk==4,i16((V*)&t,s0,(V*)&t))rk[i+nk]=rk[i]^t)}
+S V kxp(UI*rk,O UI*k,UI nk){mc(rk,k,4*nk);
+ F(3*nk+28,UI t=rk[i+nk-1];Y(i%nk==0,t=rl(t,24);Fj(4,((C*)(V*)&t)[j]=s0[((C*)(V*)&t)[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/nk+1])
+                           Y(nk==8&&i%nk==4,i16((V*)&t,s0,(V*)&t))rk[i+nk]=rk[i]^t)}
 S V mx0(C*s){F(4,C t[4];F(3,t[i]=s[i]^s[i+1])t[3]=s[3]^*s;C e=*t^t[2];F(4,s[i]^=t0(t[i])^e)s+=4)}
-S V mx1(C*s){F(4,C t[4]={};F(4,Fj(4,t[i]^=t1(s[j],(C[]){14,11,13,9}[j-i&3])))mc(s,t,4);s+=4)}
-S V aese(C*s,O C*rk){F(NR,x16(s,rk+16*i);i16(s,s0,s);C r[16];i16(r,s,(C[]){0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11});mc(s,r,16);i<NR-1?mx0(s):x16(s,rk+16*NR))}
-S V aesd(C*s,O C*rk){x16(s,rk+16*NR);F(NR,C r[16];i16(r,s,(C[]){0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3});mc(s,r,16);i16(s,s1,s);x16(s,rk+16*(NR-1-i));Y(i<NR-1,mx1(s)))}
+S V mx1(C*s){F(4,C t[4]={};F(4,Fj(4,t[i]^=t1(s[j],C(14,11,13,9)[j-i&3])))mc(s,t,4);s+=4)}
+S V aese(C*s,O C*rk){F(NR,x16(s,rk+16*i);i16(s,s0,s);C r[16];i16(r,s,C(0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11));mc(s,r,16);i<NR-1?mx0(s):x16(s,rk+16*NR))}
+S V aesd(C*s,O C*rk){x16(s,rk+16*NR);F(NR,C r[16];i16(r,s,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));mc(s,r,16);i16(s,s1,s);x16(s,rk+16*(NR-1-i));Y(i<NR-1,mx1(s)))}
 S V ecb0(O C*k,UI nk,C*a){C rk[RK];kxp((V*)rk,(V*)k,nk);aese(a,rk);}S V ecb1(O C*k,UI nk,C*a){C rk[RK];kxp((V*)rk,(V*)k,nk);aesd(a,rk);}
 A1(aes,Y(!*s0,aesi())Ed(!xtX||xn-2,x)A y=gkv(&x);Ed(!xtC||!ytC||xn-16||yn-4*NK)x=mut(x);ecb0(yc,NK,xc);yr;x)
+
+#undef C
