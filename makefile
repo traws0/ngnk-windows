@@ -1,5 +1,5 @@
 # faster builds: export MAKEFLAGS=-j8
-C=gcc -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
+C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
   -Werror -Wno-assume -Wno-pointer-sign -Wno-pointer-to-int-cast -Wfatal-errors -Wno-shift-op-parentheses -march=native
 t:k
 	@$(MAKE) -C t && g/0.sh
