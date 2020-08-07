@@ -817,3 +817,6 @@ $`:k.com:80`:/bin/ls`:1.2.3.4 / (":k.com:80";":/bin/ls";":1.2.3.4")
 `sha3@`c$"a"+!26              / 0x7cab2dc765e21b241dbc1c255ce620b29f527c6d5e7f5f843e56288f0d707521
 `sha3@,/`c$"Aa0"+!'26 26 10   / 0xa79d6a9da47f04a3b9a9323ec9991f2105d4c78a7bc7beeb103855a7a11dfb9f
 `sha3 80#"1234567890"         / 0x293e5ce4ce54ee71990ab06e511b7ccd62722b1beb414f5ff65c8274e0f5be1d
+
+/aes128
+`aes(0x6bc1bee22e409f96e93d7e117393172a;0x2b7e151628aed2a6abf7158809cf4f3c) / 0x3ad77bb40d7a3660a89ecaf32466ef97
