@@ -2,7 +2,7 @@
 #define U3(f,a) S U f(U x,U y,U z)_(a)
 #define C(a...) (C[]){a}
 TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z))U3(maj,x&y^x&z^y&z)
-S U rI(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,UL y)_(x<<y|x>>64-y) //rotations
+S C rC(C x,U y)_(x<<y|x>>8-y)S U rI(U x,U y)_(x<<y|x>>32-y)S UL rL(UL x,U y)_(x<<y|x>>64-y) //rotations
 S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32)S U*bn(U*r,O U*a,U n)_(F(n,r[i]=bl(a[i]))r) //big-endian
 
 S U md5k[64];S V md5i(){D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;F(64,md5k[i]=(1ll<<32)*(s<0?-s:s);t=b*s+a*c;c=b*c-a*s;s=t)}
@@ -49,7 +49,7 @@ A1(sha3_256,Et(!xtC,x)A u=aC(32);m2(x,kec(136,xc,xn,6,uc,un);u))
 #define NK 4 //aes256=8,aes192=6,aes128=4
 #define RK (NK*16+112)
 #define NR (NK+6)
-S C s0[256],s1[256];S V aesi(){C x=1,y=1;F(256,x^=x<<1^(x>>7)*27;F(3,y^=y<<(1<<i))y^=(y>>7)*9;s0[x]=99;F(5,s0[x]^=y<<i|y>>8-i))*s0=99;F(256,s1[s0[i]]=i)}
+S C s0[256],s1[256];S V aesi(){C x=1,y=1;F(256,x^=x<<1^(x>>7)*27;F(3,y^=y<<(1<<i))y^=(y>>7)*9;s0[x]=99;F(5,s0[x]^=rC(y,i)))*s0=99;F(256,s1[s0[i]]=i)}
 S V x16(C*r,O C*x){F(16,r[i]^=x[i])}S V i16(C*r,O C*x,O C*y){F(16,r[i]=x[y[i]])}S C t0(C x)_(x<<1^27*(x>>7))S C t1(C x,C y)_(C r=(y&1)*x;F(4,x=t0(x);r^=(y>>i+1&1)*x)r)
 S V kxp(UI*rk,O UI*k,UI nk){mc(rk,k,4*nk);
  F(3*nk+28,UI t=rk[i+nk-1];Y(i%nk==0,t=rI(t,24);Fj(4,((C*)(V*)&t)[j]=s0[((C*)(V*)&t)[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/nk+1])
