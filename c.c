@@ -48,13 +48,13 @@ A1(sha3_256,Et(!xtC,x)A u=aC(32);m2(x,kec(136,xc,xn,6,uc,un);u))
 S C s0[256],s1[256];S C t0(C x)_(x<<1^27*(x>>7))S C t1(C x,C y)_(C r=(y&1)*x;F(4,x=t0(x);r^=(y>>i+1&1)*x)r)
 S V aei(){C x=1,y=1;ms(s0,99,256);F(255,x^=t0(x);F(3,y^=y<<(1<<i))y^=(y>>7)*9;F(5,s0[x]^=rC(y,i)))F(256,s1[s0[i]]=i)}
 S V x16(C*r,O C*x){F(16,r[i]^=x[i])}S V i16(C*r,O C*x,O C*y){F(16,r[i]=x[y[i]])}
-S V kxp(V*r0,O V*k0,U l){U*r=r0;O U*k=k0;mc(r,k,4*l);U t;C*p=(V*)&t;
- F(3*l+28,t=r[i+l-1];Y(i%l==0,t=rI(t,24);Fj(4,p[j]=s0[p[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/l+1])Y(l==8&&i%l==4,i16(p,s0,p))r[i+l]=r[i]^t)}
+S V kxp(V*w0,O V*k0,U l){U*w=w0;O U*k=k0;mc(w,k,4*l);U t;C*p=(V*)&t;
+ F(3*l+28,t=w[i+l-1];Y(i%l==0,t=rI(t,24);Fj(4,p[j]=s0[p[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/l+1])Y(l==8&&i%l==4,i16(p,s0,p))w[i+l]=w[i]^t)}
 S V mx0(C*a){F(4,C t[4];F(4,t[i]=a[i]^a[i+1&3])C e=*t^t[2];F(4,a[i]^=t0(t[i])^e)a+=4)}
 S V mx1(C*a){F(4,C t[4]={};F(4,Fj(4,t[i]^=t1(a[j],C(14,11,13,9)[j-i&3])))mc(a,t,4);a+=4)}
-S V ae0(C*a,O C*r,U m){C b[16];F(m,x16(a,r+16*i);i16(b,s0,a);i16(a,b,C(0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11));i<m-1?mx0(a):x16(a,r+16*m))}
-S V ae1(C*a,O C*r,U m){C b[16];x16(a,r+16*m);F(m,i16(b,a,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));mc(a,b,16);i16(a,s1,a);x16(a,r+16*(m-1-i));Y(i<m-1,mx1(a)))}
-S V ecb(C*a,O C*k,U l,U d){C r[l+7<<4];kxp(r,k,l);(d?ae1:ae0)(a,r,l+6);}
+S V ae0(C*a,O C*w,U m){C b[16];F(m,x16(a,w+16*i);i16(b,s0,a);i16(a,b,C(0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11));i<m-1?mx0(a):x16(a,w+16*m))}
+S V ae1(C*a,O C*w,U m){C b[16];x16(a,w+16*m);F(m,i16(b,a,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));mc(a,b,16);i16(a,s1,a);x16(a,w+16*(m-1-i));Y(i<m-1,mx1(a)))}
+S V ecb(C*a,O C*k,U l,U d){C w[l+7<<4];kxp(w,k,l);(d?ae1:ae0)(a,w,l+6);}
 S A aes(A x,U d)_(Y(!*s0,aei())Ed(!xtX||xn-2,x)A y=gkv(&x);Ed(!xtC||!ytC||xn-16||(yn-16&&yn-24&&yn-32))x=mut(x);ecb(xc,yc,yn/4,d);yr;x)
 A1(aes0,aes(x,0))A1(aes1,aes(x,1))
 

@@ -1,7 +1,7 @@
 #!../../k
 /please run ./download.sh first
-t:{$[(x[2]~`aes@|2#x)&x[1]~`aes?x 2 0;;` 1:`k[`FAIL,x],"\n"];}
-f:{t'(`hex?'*|+" = "\'1_"\r\n"\)'2_"\r\n\r\n"\*"\r\n\r\n[DECRYPT]"\1:x;}
+t:{$[(x[2]~`aes@|2#x)&x[1]~`aes?x 2 0;; \`k[`FAIL,x],"\n"];}
+f:{t'(`hex?'*|+" = "\'1_"\r\n"\)'2_"\r\n\r\n"\*"\r\n\r\n[DECRYPT]"\1: \x;}
 f'("kat/ECBVarTxt128.rsp"
    "kat/ECBVarTxt192.rsp"
    "kat/ECBVarTxt256.rsp"
