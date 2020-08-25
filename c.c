@@ -1,4 +1,6 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#define F5(a...) {{I i=0;a;}{I i=1;a;}{I i=2;a;}{I i=3;a;}{I i=4;a;}}
+#define F8(a...) {F5(a){I i=5;a;}{I i=6;a;}{I i=7;a;}}
 #define U3(f,a) S U f(U x,U y,U z)_(a)
 #define C(a...) (C[]){a}
 TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z))U3(maj,x&y^x&z^y&z)
@@ -19,7 +21,6 @@ S A mdc(A x,O V*iv,I nv,V(*f)(U*,UL,U*),I b)_(Et(!xtC)A u=aCn(iv,4*nv);UL n=xn,k
  C c[128];m2(x,f(xi,k,ui);mc(c,xc+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,ui);Y(b,bn(ui,ui,nv))u)
 S O U iv[]={0x67452301,0xefcdab89,0x98badcfe,0x10325476,0xc3d2e1f0};A1(md5,Y(!*md5k,md5i())mdc(x,iv,4,md5u,0))A1(sha1,mdc(x,iv,5,sha1u,1))
 
-#define F8(a...) {{I i=0;a;}{I i=1;a;}{I i=2;a;}{I i=3;a;}{I i=4;a;}{I i=5;a;}{I i=6;a;}{I i=7;a;}}
 #define hh(a,b,c,d,e,f,g,h) {d+=h+=(rI(e,26)^rI(e,21)^rI(e,7))+chx(e,f,g)+k[r]+w[r];h+=(rI(a,30)^rI(a,19)^rI(a,10))+maj(a,b,c);r++;}
 #define h(j) hh(t[-j&7],t[1-j&7],t[2-j&7],t[3-j&7],t[4-j&7],t[5-j&7],t[6-j&7],t[7-j&7])
 S V sha256u(U*v,UL n,U*s){S O U k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,
@@ -32,9 +33,7 @@ S V sha256u(U*v,UL n,U*s){S O U k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5
 A1(sha256,mdc(x,(U[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,sha256u,1))
 #undef h
 #undef hh
-#undef F8
 
-#define F5(a...) {{I i=0;a;}{I i=1;a;}{I i=2;a;}{I i=3;a;}{I i=4;a;}}
 S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139,y+1,x+y+z+129,x+z+9,138,136,y+z+9,y+10,y+z+139, //keccak sponge
                                                        x+139,x+z+137,x+z+3,x+z+2,x+128,z+10,x+y+10,x+y+z+129,x+z+128,y+1,x+y+z+8};
  F(24,UL s[7]={},b[25];F(5,F5(s[1+i]^=*a++))*s=s[5];s[6]=s[1];F5(s[i]^=rL(s[i+2],1))a-=25;F(5,F5(*a++^=s[i]))a-=25;   //θ
@@ -42,7 +41,6 @@ S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139
                        F(25,a[i]=b[C(0,6,12,18,24,3,9,10,16,22,1,7,13,19,20,4,5,11,17,23,2,8,14,15,21)[i]])           //π
                        F(5,UL*r=a+5*i,x=*r,y=r[1];F5(UL z=r[4-i];r[4-i]^=~x&y;y=x;x=z))                               //χ
                        *a^=t[i])}                                                                                     //ι
-#undef F5
 S V kec(U r,O C*p,UL n,C s,C*z,U d){U b=0,i;C a[200];ms(a,0,Z a);W(n>0,b=min(n,r);F(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,ks((V*)a);b=0))
  a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);mc(z,a,b);z+=b;d-=b;Y(d>0,ks((V*)a)))}
 A1(sha3_256,Et(!xtC,x)A u=aC(32);m2(x,kec(136,xc,xn,6,uc,un);u))
