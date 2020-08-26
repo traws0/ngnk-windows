@@ -3,7 +3,8 @@ A rsh_(A x/*0*/,L m,L*pj,L*s,L r)_(L n=absL(*s);P(r>1,A y=aX(n);F(n,yai=rsh_(x,m
  C t=t_lst(xt);Y(t&&!xn,x=cn[t])L j=*s>=0?*pj:(m-n%m)%m,w=tZ[t],q=min(m-j,n);*pj=(j+n)%m;A y=atn(t,n);mc(yc,xc+j*w,q*w);mc(yc+q*w,xc,min(j,n-q)*w);
  W(2*m<=n,mc(yc+m*w,yc,m*w);m*=2)mc(yc+m*w,yc,(n-m)*w);Y(t==tX,y=sqz(mRa(y)))y)
 A2(flt,Er(!ytT,x,y)A u=atn(yt,0);F(yn,A z=get(y,i);z=app(x,&z,1);Y(!z,ur;u=0;B)z=gL(z);P(!z,xr;yr;ur;0)Fj(gl(z),u=apd(u,get(y,i))))xr;yr;u)
-A2(rsh,P(fun(x),flt(x,y))P(yta&&!xtl,x=enla(x);xR;aa(x,ap1(y,x)))P(ytA,y=mut(y);yy=ear(cv('#'),A_(x,yy),2);y)
+A2(rsh,P(fun(x),flt(x,y))P(yta,P(xtl,A z=gkv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));aa(y,z))x=enla(x);xR;aa(x,ap1(y,x)))
+ P(ytA,y=mut(y);yy=ear(cv('#'),A_(x,yy),2);y)
  y=!ytT?enl(y):!yn?enl(fir(y)):y;x=enla(Ny(gL(x)));P(!xn,xr;fir(y))
  F(xn,L v=xli;Y(v<0,Ed(xn>2||xn==2&&v-_0Nl||xn==1&&v==_0Nl,x,y)
                     P(xn==2,Ed(*xl<=0&&xl[1]<=0||!yn,x,y)K("{n:1+(-m:|/x)!-1+l:#y;$[^*x;m*!n;0|l+n*!-m]_y}",x,y))))
