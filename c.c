@@ -28,8 +28,8 @@ S V sha256u(U*v,UL n,U*s){S O U k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5
  0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,
  0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,
  0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2};
- F(n,U w[64];bn(w,v,16);F(48,U p=w[i+1],q=w[i+14];w[i+16]=w[i]+(rI(p,25)^rI(p,14)^p>>3)+w[i+9]+(rI(q,15)^rI(q,13)^q>>10))
-     U r=0,t[8];F8(t[i]=s[i])F(8,h(0)h(1)h(2)h(3)h(4)h(5)h(6)h(7))F8(s[i]+=t[i])v+=16)}
+ F(n,U w[64],t[8],r=0;bn(w,v,16);F(48,U p=w[i+1],q=w[i+14];w[i+16]=w[i]+(rI(p,25)^rI(p,14)^p>>3)+w[i+9]+(rI(q,15)^rI(q,13)^q>>10))
+     F8(t[i]=s[i])F(8,h(0)h(1)h(2)h(3)h(4)h(5)h(6)h(7))F8(s[i]+=t[i])v+=16)}
 A1(sha256,mdc(x,(U[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,sha256u,1))
 #undef h
 #undef hh
