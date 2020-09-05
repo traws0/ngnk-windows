@@ -12,7 +12,7 @@ S A3(lhs,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))lu
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztX&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,N(rhs(x,za[zn-1-i])))h(bl);h(zn-1))
   I k=gs(zts?z:zx);L i=fndi(fl,k);Y(i<0,hc(as(k));h(bM))E(lu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
- P(ztX&&zx==av_mkl,h(bL);h(zn-1);F(zn-1,N(lhs(x,y,za[i+1]));h(bp))1)en();eso(mR(fs),o);0)
+ P(ztX&&zx==av_mkl,h(bL);h(zn-1);F(zn-1,N(lhs(x,y,za[i+1]));h(bp))1)err("cpl");eso(mR(fs),o);0)
 S A2(rhs,/*0*/UH o=yo;Y(yts,P(gs(y)==So,h(bo);x)L i=fndi(fl,gs(y));P(i>=0,lu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
  P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytX,hc(y==au_plc?au0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)
  P((utu||u==av0)&&n==3,N(rhs(x,yz));N(lhs(x,y,yy)))

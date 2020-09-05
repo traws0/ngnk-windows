@@ -23,5 +23,5 @@ A2(fnd,
  EY(w==0,F(un,uli=fndc(x,yci)))
  EY(w==2,F(un,uli=fndi(x,yii)))
  EY(w==3,F(un,uli=fndl(x,yli)))
- E(u=en(u))
+ E(En(1,u,x,y))
  xr;yr;u)
