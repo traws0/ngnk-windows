@@ -16,7 +16,7 @@ A2(cat,P(xtaA&&ytaA,P(xta&&yta,A z=gkv(&y);amd(A_(x,y,av0,z),4))Ed(!mtc_(xx,yx),
  mc(uc+m*w,yc,n*w);Y(ytX,mRa(y))yr;u)
 A apv(A x,O V*v)_(asrt(xtT);L n=xn,w=tZ[xt];
  Y(Ar(x)==1&&ZA+w+n*w<=1L<<xb,x=AN(n+1,x))E(A y=atn(xt,n+1);Y(Ar(x)>1&&xtX,mRa(x))EY(ref(x),x=AT(tL,x);asrt(ZV==8))m2(x,mc(yc,xc,n*w));x=y)
- V*p=xc+n*w;Y(w==1,*(C*)p=*(C*)v)Y(w==2,*(H*)p=*(H*)v)Y(w==4,*(I*)p=*(I*)v)Y(w==8,*(L*)p=*(L*)v)x)
+ V*p=xc+n*w;mc(p,v,w);x)
 A2(apd,asrt(xtT||xtA);P(xtA,P(!yta||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);A z=xy=mut(xy);F(An(z),zai=apd(zai,get(yy,i)))yr;x)
  Y(!xtX&&(!ytt||xt-t_lst(yt)),x=blw(x))P(!xn,xr;enl(y))L v=xtX?(L)y:gl(y);apv(x,&v))
 A apc(A x,C c)_(asrt(xtC);x=room(x,1);xc[xn]=c;AN(xn+1,x))A catc(A x,O C*s,L l)_(asrt(xtC);x=room(x,l);mc(xc+xn,s,l);AN(xn+l,x))
