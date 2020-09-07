@@ -16,7 +16,7 @@ S L hskt(UI h,UH p)_(L f=skt(AF_INET,SOCK_STREAM,0);P(f<0,err("skt"),0)
  struct sockaddr_in sa;sa.sin_family=AF_INET;sa.sin_addr.s_addr=h;sa.sin_port=p<<8|p>>8;0>conn(f,(struct sockaddr*)&sa,Z(sa))?err("conn"),0:f)
 S L hops(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("open"),0:f)
  UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:hskt(h,p))
-S I hop_(A x/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));!*s?1:*s-':'?et(),0:hops(s+1,fl))P(xtC,x=str0(x);dex(x,hops(xc,fl)))et(x))
+S I hop_(A x/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)Et(*s-':')hops(s+1,fl))Et(!xtC,x)x=str0(x);dex(x,hops(xc,fl)))
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))
 A2(v0c,Y(ytX,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apv(y,"\n"))))
 A2(v1c,Et(!ytC,x)I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;

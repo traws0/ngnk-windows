@@ -164,8 +164,6 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(oo)err_(a,err3,err2,err1,err0)(a);})
 #define eM "nyi","len","typ","dom","rnk","idx","prs","stk"
-#define et(a...) err((C*)2,##a)
-#define ed(a...) err((C*)3,##a)
 #define En(x,a...) P(x,err((C*)0,##a))
 #define El(x,a...) P(x,err((C*)1,##a))
 #define Et(x,a...) P(x,err((C*)2,##a))
