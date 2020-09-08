@@ -2,7 +2,7 @@
 C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
   -Werror -Wno-assume -Wno-pointer-sign -Wno-pointer-to-int-cast -Wfatal-errors -Wno-shift-op-parentheses -march=native
 t:k
-	@$(MAKE) -C t && g/0.sh
+	@+$(MAKE) -C t && g/0.sh
 c: #clean
 	@rm -rfv k libk.so o t/t
 o/%.o:%.c *.h makefile
