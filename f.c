@@ -2,7 +2,9 @@
 //prng: xoshiro256+ (public domain) http://vigna.di.unimi.it/xorshift/ seeded with the central column of rule30, little-endian:
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S A rnd(L n,L m)_(S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
- Y(n==_0Nl,n=-m)A x=aL(absL(n));F(n,xli=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=d<<45|d>>19)Y(m&(m-1),F(xn,xli=(UL)xli%m))EY(m,F(xn,xli&=m-1))
+ Y(n==_0Nl,n=-m)A x=aL(absL(n));F(n,xli=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=d<<45|d>>19)
+ Y(m&m-1,Y(m<=1ll<<32,F(xn,xli=(UI)xli*(UL)m>>32))E(F(xn,xli=(UL)xli%m)))
+ EY(m,F(xn,xli&=m-1))
  Y(n<0,n=-n;El(n>m,x)F(n,L k=m-n+i;L v=((UL*)xl)[i]%=k+1;Fj(i,Y(xlj==v,xli=k;B)))A y=rnd(n,0);F(n,L j=(UL)yli%(i+1);SWP(xli,xlj))yr)x)
 S NI L fnda(A x/*0*/,A y/*1*/)_(asrt(xtX); F(xn,P(mtc_(xai,y),i))_0Nl)L fpa(A*p,A y)_(A x=*p;L n=xn,i=fnda(x,y);P(i<0,*p=apd(x,y);n)yr;i)
 S NI L fndc(A x/*0*/,C v)_(asrt(tz[xt]==0);F(xn,P(xci==v,i))_0Nl)L fpc(A*p,C v)_(A x=*p;L n=xn,i=fndc(x,v);P(i<0,*p=apv(x,&v);n)i)
