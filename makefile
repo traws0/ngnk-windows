@@ -8,7 +8,7 @@ c: #clean
 o/%.o:%.c *.h makefile
 	@echo -n '$< ' && mkdir -pv o    >/dev/null && $(C) -c $< -o $@
 o/so/%.o:%.c *.h makefile
-	@echo -n '$< ' && mkdir -pv o/so >/dev/null && $(C) -c $< -o $@ -fPIC
+	@echo -n '$< ' && mkdir -pv o/so >/dev/null && $(C) -c $< -o $@ -fPIC -Dshared
 o/%.s:%.c *.h makefile
 	@echo '$@ ' && mkdir -pv o && $(C) -c $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
