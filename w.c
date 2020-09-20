@@ -8,7 +8,7 @@ S AX(spl,asrt(xtcC);P(n>1,ern(n,a))A y=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xc;L l=len_(x
 S AX(join,asrt(xtcC);P(n>1,ern(n,a))A y=*a;Et(!ytX,y)C*s=xtc?(V*)&x:xc;L m=len_(x),k=yn,l=m*(k-!!k);F(k,A z=yai;Et(!ztcC,y)l+=len_(z))
  A u=aC(l);C*p=uc;F(k-1,A z=yai;Y(ztc,*p++=gc(z))E(mc(p,zc,zn);p+=zn)mc(p,s,m);p+=m)Y(k,A z=ya[k-1];Y(ztc,*p=gc(z))E(mc(p,zc,zn)))yr;u)
 A ea1(A1 f,A x)_(P(xtt,f(x))P(xta,x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
- I b=xtX&&Ar(x)==1;L n=len_(x);P(!n,x)A u=a0();F(n,A y=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))xr;ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
+ I b=xtX&&Ar(x)==1;L n=len_(x);P(!n,x)A u=a0();F(n,A y=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
 S L cfm(O A*a/*0*/,L n)_(L m=-1;F(n,A x=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,A z,b[8];F(n,A y=a[i];Y(yta,z=yx;B))zR;F(n,A y=b[i]=a[i];Y(yta,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))A u=eac(x,b,n);(u?aa:dex)(z,u))
 AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))
