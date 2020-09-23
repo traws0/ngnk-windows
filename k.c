@@ -4,7 +4,7 @@ O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?
 O V*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out,   0,  0, cmd,  0,  0,  0,
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y)) //                                       mkl   '   /    \  ':   /:  \:
-A2(id_/*x0y0*/,xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1]["\4\0\0\1\1\2\2\3\3\2\4"[xv]]):mkn(fir(yR)))
+A2(id_/*x0y0*/,xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1][C(4,0,0,1,1,2,2,3,3,2,4)[xv]]):mkn(fir(yR)))
 A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))C k=max(n,xk);F(n,k-=a[i]!=au_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
 S A getA(A x/*0*/,L i)_(asrt(xtA);A y=xy,u=a0();Fj(yn,u=apd(u,get(yaj,i)))aa(mR(xx),u))
 A get(A x/*0*/,L i)_(xtX?mR(xai):xtI?ai(xii):xtL?al(xli):xtS?as(xii):xtC?ac(xci):xtD?ad(xdi):xta?get(xy,i):xtA?getA(x,i):xR)
