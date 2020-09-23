@@ -14,7 +14,7 @@ S AX(eaca,A z,b[8];F(n,A y=a[i];Y(yta,z=yx;B))zR;F(n,A y=b[i]=a[i];Y(yta,P(!mtc_
 AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))
  A b[8];C t[8];L m=-1;F(n,A y=b[i]=a[i];P(yta,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytX?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))A u=m?0:a0(); //0:pkdatm,1:refatm,2:tX(r=1),3:tX(r>1),4:other
- Fj(m,F(n,A y=a[i];Y(t[i]==2,b[i]=yaj)Y(t[i]>2,b[i]=get(y,j)))
+ Fj(m,F(n,A y=a[i];Y(t[i]==2,b[i]=ya[j])Y(t[i]>2,b[i]=get(y,j)))
       A z=app(x,b,n);Y(!j,u=sim(zt)?AN(0,atn(t_lst(zt),m)):a0())
       Y(!z,ur;u=0;F(n,A y=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,ya+j+1)))B)u=apd(u,z))
  F(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)

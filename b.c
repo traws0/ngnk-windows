@@ -22,7 +22,7 @@ S A2(rhs,/*0*/UH o=yo;Y(yts,P(gs(y)==So,h(bo);x)L i=fndi(fl,gs(y));P(i>=0,lu[i]=
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):N(rhs(x,z)))P(p,N(rhs(x,yx));h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)N(rhs(x,yx));h(ba);h(n-1);x)
 A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(lu,-1,16*Z(I));F(yn,P(!rhs(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
- y=fb;asrt(Ar(y)==1);F(16,I j=lu[i];Y(j>=0&&ycj==bg,ycj=bd))mr(xa[5]);AK(k,AT(to,x)))
+ y=fb;asrt(Ar(y)==1);Fj(16,I i=lu[j];Y(i>=0&&yci==bg,yci=bd))mr(xa[5]);AK(k,AT(to,x)))
 
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;S A1(psh,*--sp=x)S A0(pop,*sp++)
 S A1(vm,/*0*/W(1,C b=*ip++;
