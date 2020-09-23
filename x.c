@@ -24,3 +24,6 @@ S A g()_(C t=h1;Ed(!in(t,tn))
  P(funt(t),C vk=h1;AT(t,AK(vk&7,AV(vk>>3,N(g())))))
  L n=t<ta?h8:1;Ed(!in(n,1ll<<45))atnv(t,n,h(n*tZ[t])))
 A1(des,Ed(!xtC,x)s=xc;p=s+xn;dex(x,g()))
+#undef h8
+#undef h1
+#undef h
