@@ -7,7 +7,7 @@ S A rnd(L n,L m)_(
  Y(n==_0Nl,n=-m)
  A x=aL(absL(n));rndl(xl,xn);
  Y(m,Y(m<=1ll<<32,F(xn,xli=(UI)xli*(UL)m>>32))E(F(xn,xli=(UL)xli%m)))
- Y(n<0,n=-n;El(n>m,x)F(n,L k=m-n+i;L v=((UL*)xl)[i]%=k+1;Fj(i,Y(xlj==v,xli=k;B)))A y=rnd(n,0);F(n,L j=(UL)yli%(i+1);SWP(xli,xlj))yr)x)
+ Y(n<0,n=-n;El(n>m,x)F(n,L k=m-n+i;L v=((UL*)xl)[i]%=k+1;L*p=&xli;F(i,Y(xli==v,*p=k;B)))A y=rnd(n,0);F(n,SWP(xli,xl[(UL)yli%(i+1)]))yr)x)
 S NI L fnda(A x/*0*/,A y/*1*/)_(asrt(xtX); F(xn,P(mtc_(xai,y),i))_0Nl)L fpa(A*p,A y)_(A x=*p;L n=xn,i=fnda(x,y);P(i<0,*p=apd(x,y);n)yr;i)
 S NI L fndc(A x/*0*/,C v)_(asrt(tz[xt]==0);F(xn,P(xci==v,i))_0Nl)L fpc(A*p,C v)_(A x=*p;L n=xn,i=fndc(x,v);P(i<0,*p=apv(x,&v);n)i)
   NI L fndi(A x/*0*/,I v)_(asrt(tz[xt]==2);F(xn,P(xii==v,i))_0Nl)L fpi(A*p,I v)_(A x=*p;L n=xn,i=fndi(x,v);P(i<0,*p=apv(x,&v);n)i)

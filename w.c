@@ -1,8 +1,8 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S AX(enc,P(n>1,ern(n,a))P(xtiI,x=gL(xR);A u=enc(x,a,n);xr;u)P(!xtlL,etn(n,a))A y=N(gL(*a));P(ytt,A z=enc(x,A(enl(y)),1);zn?fir(flp(z)):dex(z,aL(0)))
  P(xtt,UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yli;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
- P(!xn,yr;a0())A u=aX(xn);y=mut(y);for(L i=xn-1;i>0;i--){UL m=xli;m+=!m;A z=uai=aL(yn);Fj(yn,UL v=ylj,w=ylj=v/m;zlj=v-w*m)}
- UL m=*xl;ux=y;Y(m,Fj(yn,ylj%=m))u)
+ P(!xn,yr;a0())A u=aX(xn);y=mut(y);L i=xn;W(--i>0,UL m=xli;m+=!m;A z=uai=aL(yn);F(yn,UL v=yli,w=yli=v/m;zli=v-w*m))
+ UL m=*xl;ux=y;Y(m,F(yn,yli%=m))u)
 S AX(spl,asrt(xtcC);P(n>1,ern(n,a))A y=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xc;L l=len_(x);El(!l,y)A u=a0();C*p=yc,*q=yc,*q2=yc+yn,*q1=q2+1-len_(x);
  W(q<q1,C m=1;F(l,m&=s[i]==q[i])Y(m,u=apd(u,aCm(p,q));p=q+=l)E(q++))Y(x-ac(10)||p<q2,u=apd(u,aCm(p,q2)))yr;u)
 S AX(join,asrt(xtcC);P(n>1,ern(n,a))A y=*a;Et(!ytX,y)C*s=xtc?(V*)&x:xc;L m=len_(x),k=yn,l=m*(k-!!k);F(k,A z=yai;Et(!ztcC,y)l+=len_(z))
