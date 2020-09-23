@@ -19,7 +19,7 @@ A2(fnd,
  En(xtA,x,y)
  P(ytt,P(!xtX&&fun(y),xr;yr;al(_0Nl))
        fir(fnd(x,enl(y))))
- P(!xtX&&ytX,ear(cv('?'),A_(x,y),2))
+ P(!xtX&&ytX,ear(cv('?'),A(x,y),2))
  P(!xtX&&yt-xt,xr;rsh(len(y),mR(cn[tl])))
  A u=aL(yn);I w=tz[xt];
  Y(ref(x),F(un,A z=get(y,i);uli=fnda(x,z);zr))

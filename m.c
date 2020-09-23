@@ -13,7 +13,7 @@ V*memcpy(V*x,O V*y,L n)_(C*p=x;O C*q=y;F(n,p[i]=q[i])x)V*memset(V*x,I c,L n)_(C*
 I strcmp(O C*s,O C*t)_(W(*s&&*s==*t,s++;t++)*s-*t)L strlen(O C*x)_(O C*p=x;W(*p,p++)p-x)
 A atn(C t,L n)_(A x=ma(64-__builtin_clzll(ZA+7+n*tZ[t]));Ar(x)=1;AT(t,AN(n,x)))
 A atnv(C t,L n,O V*v)_(A u=atn(t,n);mc(uc,v,n*tZ[t]);u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,aa(enl(as(0)),enl(au0)))
-A1(a1,atnv(tX,1,A_(x)))A2(a2,atnv(tX,2,A_(x,y)))A3(a3,atnv(tX,3,A_(x,y,z)))A2(aA,atnv(tA,2,A_(x,y)))A2(aa,atnv(ta,2,A_(x,y)))
+A1(a1,atnv(tX,1,A(x)))A2(a2,atnv(tX,2,A(x,y)))A3(a3,atnv(tX,3,A(x,y,z)))A2(aA,atnv(tA,2,A(x,y)))A2(aa,atnv(ta,2,A(x,y)))
 A aCn(O C*s,L n)_(atnv(tC,n,s))A aCm(O C*s,O C*t)_(aCn(s,t-s))A aCz(O C*s)_(aCn(s,mn(s)))
 A gkv(A*p)_(A x=*p;asrt(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;A u=xy;mr(AN(0,x));u) //get keys and values
 A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1ll<<xb,x)A u=AN(n,atn(tC,n+l));mc(uc,xc,n);xr;u)

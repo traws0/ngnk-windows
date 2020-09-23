@@ -50,7 +50,7 @@
 TD void V;TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
 TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define dat(x) ((V*)((x)<<16>>16))
-#define A_(a...) (A[]){a}
+#define A(a...) (A[]){a}
 #define A0(f,b...) A f(             )_(b)
 #define A1(f,b...) A f(A x          )_(b)
 #define A2(f,b...) A f(A x,A y      )_(b)
@@ -137,7 +137,7 @@ XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define ms(a...) __builtin_memset(a)
 #define mn(a...) __builtin_strlen(a)
 #define m2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
-#define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
+#define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A(a),Z(A(a))/ZV);})
 #define syC(c) (2*(c)) //symbols: char to index
 
 S A aX(L n)_(atn(tX,n))S A0(a0,aX(0))

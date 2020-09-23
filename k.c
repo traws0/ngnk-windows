@@ -9,7 +9,7 @@ A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))C k=max(n,xk);F(n,k-=a[i]!=
 S A getA(A x/*0*/,L i)_(asrt(xtA);A y=xy,u=a0();Fj(yn,u=apd(u,get(yaj,i)))aa(mR(xx),u))
 A get(A x/*0*/,L i)_(xtX?mR(xai):xtI?ai(xii):xtL?al(xli):xtS?as(xii):xtC?ac(xci):xtD?ad(xdi):xta?get(xy,i):xtA?getA(x,i):xR)
 A getr(A x/*0*/,L i)_(asrt(!xtt);in(i,xn)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
-S A2(idx_/*x0y1*/,Er(xtt,y)P(y==au_plc,xR)P(ytX,ear(cv('@'),A_(xR,y),2))P(yta,y=mut(y);yy=idx_(x,yy);y)Et(fun(y),y)P(ytt,getr(x,gl(y)))
+S A2(idx_/*x0y1*/,Er(xtt,y)P(y==au_plc,xR)P(ytX,ear(cv('@'),A(xR,y),2))P(yta,y=mut(y);yy=idx_(x,yy);y)Et(fun(y),y)P(ytt,getr(x,gl(y)))
  y=N(gL(y));L w=tz[xt];A u=xtA?a0():atn(xt,yn);P(xtX||xtA,u=AN(0,u);F(yn,u=apd(u,getr(x,yli)))yr;u)
  P(w==3,  L h=gl_(cn[xt]);m2(y,F(un,L j=yli;uli=in(j,xn)?xlj:h)u))
  P(w==2,  I h=gi (cn[xt]);m2(y,F(un,L j=yli;uii=in(j,xn)?xij:h)u))

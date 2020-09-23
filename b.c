@@ -27,8 +27,8 @@ A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(l
 S A stk[65536],*sp=stk+ZZ(stk),*loc;S C*ip;S A1(psh,*--sp=x)S A0(pop,*sp++)
 S A1(vm,/*0*/W(1,C b=*ip++;
  Y(b>=bm,Y(b>=bc,A y=fc;psh(mR(ya[b-bc])))
-        EY(b==bm,A*p=loc-*ip++,y=pop();N(*sp=ap2(mR(*p=Ny(dm1(A_(*p,yR,av(*ip++),*sp),4))),y)))
-        EY(b==bM,A x=pop()    ,y=pop();N(*sp=ap2(      Ny(dmd(A_(x ,yR,av(*ip++),*sp),4)) ,y)))
+        EY(b==bm,A*p=loc-*ip++,y=pop();N(*sp=ap2(mR(*p=Ny(dm1(A(*p,yR,av(*ip++),*sp),4))),y)))
+        EY(b==bM,A x=pop()    ,y=pop();N(*sp=ap2(      Ny(dmd(A(x ,yR,av(*ip++),*sp),4)) ,y)))
         EY(b==bl,C n=*ip++;A x=sqz(atnv(tX,n,sp));sp+=n;psh(x))
         EY(b==bL,C n=*ip++;A x=*sp;El(!xtt&&len_(x)-n)F(n,psh(get(x,n-1-i))))
         EY(b==ba||b==bP,C n=*ip++;A u=sp[n]=(b==ba?app:prj)(*sp,sp+1,n);mr(*sp);sp+=n;N(u))
