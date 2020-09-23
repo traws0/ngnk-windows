@@ -5,7 +5,7 @@ S A f8(L v,A y)_(catc(y,(V*)&v,8))
 S A2(f,y=Nx(apc(y,xt));
  P(xtX||xtS,y=Nx(f8(xn,y));F(xn,y=Nx(f(get(x,i),y)))xr;y)
  P(xtaA,f(AT(tX,x),y))
- P(xts,O C*s=syp(gs(x));I n=strlen(s)+1;y=Nx(apc(y,n));catc(y,s,n))
+ P(xts,O C*s=syp(gs(x));I n=mn(s)+1;y=Nx(apc(y,n));catc(y,s,n))
  P(pkd(x),f8(x,y))
  P(fun(x),f(AT(tX,x),Nx(apc(y,xv<<3|xk))))
  I l=8*xtT;A u=catc(y,xc-l,l+xn*tZ[xt]);xr;u)

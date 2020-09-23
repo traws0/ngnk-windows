@@ -135,6 +135,7 @@ L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C
 XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define mc(a...) __builtin_memcpy(a)
 #define ms(a...) __builtin_memset(a)
+#define mn(a...) __builtin_strlen(a)
 #define m2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))app(f,A_(a),Z(A_(a))/ZV);})
 #define syC(c) (2*(c)) //symbols: char to index
@@ -180,8 +181,8 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #define ox(x) ox_(#x":",(A)(x))
 #define oo os("["__FILE__":"XS(__LINE__)"]");
 #define nop {asm volatile("fnop");}
-S I os(O C*x)_(write(2,x,strlen(x)))
+S I os(O C*x)_(write(2,x,mn(x)))
 S I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hx1(x&15);x>>=4)write(2,s,17))
 S I ol(L x)_(C b[32],*u=b+31;L m=x<0;Y(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);Y(m,*u--='-')write(2,u+1,b+31-u))
-S L ov_(C*s,L x)_(os(s);write(2,"           ",max(1,10-strlen(s)));oh((L)x);write(2,"\n",1);x)
+S L ov_(C*s,L x)_(os(s);write(2,"           ",max(1,10-mn(s)));oh((L)x);write(2,"\n",1);x)
 S A ox_(C*s,A x)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
