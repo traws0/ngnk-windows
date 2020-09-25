@@ -9,7 +9,7 @@ A2(rsh,P(fun(x),flt(x,y))P(yta,P(xtl,A z=gkv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rs
  F(xn,L v=xli;Y(v<0,Ed(xn>2||xn==2&&v-_0Nl||xn==1&&v==_0Nl,x,y)
                     P(xn==2,Ed(*xl<=0&&xl[1]<=0||!yn,x,y)K("{n:1+(-m:|/x)!-1+l:#y;$[^*x;m*!n;0|l+n*!-m]_y}",x,y))))
  L j=0;A u=rsh_(y,yn,&j,xl,xn);xr;yr;u)
-A1(enl,P(sim(x),atv(t_lst(xt),gl(x)))P(xta,A y=gkv(&x);aA(x,ea1(enl,y)))a1(x))A1(enla,xtt||xta?enl(x):x)
+A1(enl,P(sim(x),P(pkd(x),A u=atn(t_lst(xt),1);*ul=x;u)AT(t_lst(xt),x))P(xta,A y=gkv(&x);aA(x,ea1(enl,y)))a1(x))A1(enla,xtt||xta?enl(x):x)
 A2(cat,P(xtaA&&ytaA,P(xta&&yta,A z=gkv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)A u=eac(cv(','),A(mR(xy),mR(yy)),2);Y(u,u=aA(mR(xx),u))xr;yr;u)
  x=enla(x);y=enla(y);Y(!xn,SWP(x,y))P(!yn,yr;x)Y(xt-yt,x=Ny(blw(x));y=Nx(blw(y)))L w=tZ[xt],m=xn,n=yn;
  A u;Y(Ar(x)==1&&ZA+(m+n)*w<=1<<xb,u=AN(m+n,x))E(u=atn(xt,m+n);mc(uc,xc,m*w);Y(xtX,Y(Ar(x)==1,mr(AN(0,x)))E(mRa(x);xr))E(xr))
