@@ -135,7 +135,7 @@ XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define ms(a...) __builtin_memset(a)
 #define mn(a...) __builtin_strlen(a)
 #define m2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
-#define K(s,a...) ({S A f;Y(!f,f=K0(s,Z(s)))S I n_=Z(A(a))/ZV;n_?app(f,A(a),n_):f;})
+#define K(s,a...) ({S A f;Y(!f,f=K0(s,Z s))Z A(a)?app(f,A(a),ZZ(A(a))):f;})
 #define syC(c) (2*(c)) //symbols: char to index
 
 S A aX(L n)_(atn(tX,n))S A0(a0,aX(0))
