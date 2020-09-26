@@ -32,8 +32,8 @@ k objs
  xt xn xb - type, length, and bucket(as in buddy system) of x. similarly: yt,zn..
  tc tL tX.. - constants for k types
   tn - number of types
-  tZ(t) - type size in bytes
-  tz(t) - logarithm of tZ(t)
+  ZT[t] - type size in bytes
+  Zt[t] - base-2 logarithm of ZT(t)
  xtc xtL xtX.. - is x of type tc,tL,tX..? equivalent to xt==tc xt==tL xt==tX..
  xtt - is x an atom? (dicts are not considered atoms here)
  xtT - is x a list? (tables are not considered lists here)
