@@ -56,5 +56,3 @@ S V ae1(V*a,O V*w,U r){C b[16];x16(a,w+16*r);F(r,i16(b,a,C(0,13,10,7,4,1,14,11,8
 S V ecb(V*a,O V*k,U l,U d){C w[l+7<<4];kxp(w,k,l);(d?ae1:ae0)(a,w,l+6);}
 S A aes(A x,U d)_(Y(!*s0,aei())ed(!xtX||xn-2,x)A y=gkv(&x);ed(!xtC||!ytC||xn-16||(yn-16&&yn-24&&yn-32))x=mut(x);ecb(xc,yc,yn/4,d);yr;x)
 A1(aes0,aes(x,0))A1(aes1,aes(x,1))
-
-#undef C
