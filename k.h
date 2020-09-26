@@ -89,9 +89,9 @@ S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define TZ ZV, 1, 4, 8, 8, 4,ZV,ZV, 8, 8, 8, 8, 8,ZV,ZV,ZV,ZV, 8, 8, 8 //size in bytes
-#define Tz ZR, 0, 2, 3, 3, 2,ZR,ZR, 3, 3, 3, 3, 3,ZR,ZR,ZR,ZR, 3, 3, 3 //log(tZ[t]) with a special value ZR for ref types
+#define Tz ZR, 0, 2, 3, 3, 2,ZR,ZR, 3, 3, 3, 3, 3,ZR,ZR,ZR,ZR, 3, 3, 3 //log(ZT[t]) with a special value ZR for ref types
 #define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw
-XT O C tz[],tZ[];
+XT O C Zt[],ZT[];
 S C At(A);S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)   S I sim(A x)_(ta<xt&&xt<to)
 S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))

@@ -1,6 +1,6 @@
 #include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 A rsh_(A x/*0*/,L m,L*pj,L*s,L r)_(L n=absL(*s);P(r>1,A y=aX(n);F(n,yai=rsh_(x,m,pj,s+1,r-1))y)
- C t=t_lst(xt);Y(t&&!xn,x=cn[t])L j=*s>=0?*pj:(m-n%m)%m,w=tZ[t],q=min(m-j,n);*pj=(j+n)%m;A y=atn(t,n);mc(yc,xc+j*w,q*w);mc(yc+q*w,xc,min(j,n-q)*w);
+ C t=t_lst(xt);Y(t&&!xn,x=cn[t])L j=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;A y=atn(t,n);mc(yc,xc+j*w,q*w);mc(yc+q*w,xc,min(j,n-q)*w);
  W(2*m<=n,mc(yc+m*w,yc,m*w);m*=2)Y(n>m,mc(yc+m*w,yc,(n-m)*w))Y(t==tX,y=sqz(mRa(y)))y)
 A2(flt,er(!ytT,x,y)A u=atn(yt,0);F(yn,A z=get(y,i);z=app(x,&z,1);Y(!z,ur;u=0;B)z=gL(z);P(!z,xr;yr;ur;0)Fj(gl(z),u=apd(u,get(y,i))))xr;yr;u)
 A2(rsh,P(fun(x),flt(x,y))P(yta,P(xtl,A z=gkv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));aa(y,z))x=enla(x);xR;aa(x,ap1(y,x)))
@@ -11,10 +11,10 @@ A2(rsh,P(fun(x),flt(x,y))P(yta,P(xtl,A z=gkv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rs
  L j=0;A u=rsh_(y,yn,&j,xl,xn);xr;yr;u)
 A1(enl,P(sim(x),P(pkd(x),A u=atn(t_lst(xt),1);*ul=x;u)AT(t_lst(xt),x))P(xta,A y=gkv(&x);aA(x,ea1(enl,y)))a1(x))A1(enla,xtt||xta?enl(x):x)
 A2(cat,P(xtaA&&ytaA,P(xta&&yta,A z=gkv(&y);amd(A(x,y,av0,z),4))ed(!mtc_(xx,yx),x,y)A u=eac(cv(','),A(mR(xy),mR(yy)),2);Y(u,u=aA(mR(xx),u))xr;yr;u)
- x=enla(x);y=enla(y);Y(!xn,SWP(x,y))P(!yn,yr;x)Y(xt-yt,x=Ny(blw(x));y=Nx(blw(y)))L w=tZ[xt],m=xn,n=yn;
+ x=enla(x);y=enla(y);Y(!xn,SWP(x,y))P(!yn,yr;x)Y(xt-yt,x=Ny(blw(x));y=Nx(blw(y)))L w=ZT[xt],m=xn,n=yn;
  A u;Y(Ar(x)==1&&ZA+(m+n)*w<=1<<xb,u=AN(m+n,x))E(u=atn(xt,m+n);mc(uc,xc,m*w);Y(xtX,Y(Ar(x)==1,mr(AN(0,x)))E(mRa(x);xr))E(xr))
  mc(uc+m*w,yc,n*w);Y(ytX,mRa(y))yr;u)
-A apv(A x,O V*v)_(asrt(xtT);L n=xn,w=tZ[xt];
+A apv(A x,O V*v)_(asrt(xtT);L n=xn,w=ZT[xt];
  Y(Ar(x)==1&&ZA+w+n*w<=1L<<xb,x=AN(n+1,x))E(A y=atn(xt,n+1);Y(Ar(x)>1&&xtX,mRa(x))eY(ref(x),x=AT(tL,x);asrt(ZV==8))m2(x,mc(yc,xc,n*w));x=y)
  V*p=xc+n*w;mc(p,v,w);x)
 A2(apd,asrt(xtT||xtA);P(xtA,P(!yta||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);A z=xy=mut(xy);F(An(z),zai=apd(zai,get(yy,i)))yr;x)

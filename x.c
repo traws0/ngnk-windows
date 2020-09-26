@@ -8,7 +8,7 @@ S A2(f,y=Nx(apc(y,xt));
  P(xts,O C*s=syp(gs(x));I n=mn(s)+1;y=Nx(apc(y,n));catc(y,s,n))
  P(pkd(x),f8(x,y))
  P(fun(x),f(AT(tX,x),Nx(apc(y,xv<<3|xk))))
- I l=8*xtT;A u=catc(y,xc-l,l+xn*tZ[xt]);xr;u)
+ I l=8*xtT;A u=catc(y,xc-l,l+xn*ZT[xt]);xr;u)
 A1(ser,f(x,aC(0)))
 
 //deserialize
@@ -22,7 +22,7 @@ S A g()_(C t=h1;ed(!in(t,tn))
  P(t==ts,C n=h1;as(syP(h(n))))
  P(pkdt(t),h8)
  P(funt(t),C vk=h1;AT(t,AK(vk&7,AV(vk>>3,N(g())))))
- L n=t<ta?h8:1;ed(!in(n,1ll<<45))atnv(t,n,h(n*tZ[t])))
+ L n=t<ta?h8:1;ed(!in(n,1ll<<45))atnv(t,n,h(n*ZT[t])))
 A1(des,ed(!xtC,x)s=xc;p=s+xn;dex(x,g()))
 #undef h8
 #undef h1
