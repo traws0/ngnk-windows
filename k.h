@@ -7,7 +7,7 @@
 #define    W(x,a...) while(x){a;}
 #define    Y(x,a...) if(x){a;}
 #define    P(x,a...) Y(x,_(a))
-#define     EY(a...) else Y(a)
+#define     eY(a...) else Y(a)
 #define      E(a...) else{a;}
 #define      F(a...) F_(i,a)
 #define     Fj(a...) F_(j,a)
@@ -163,14 +163,14 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(oo)err_(a,err3,err2,err1,err0)(a);})
 #define eM "nyi","len","typ","dom","rnk","idx","prs","stk"
-#define En(x,a...) P(x,err((C*)0,##a))
-#define El(x,a...) P(x,err((C*)1,##a))
-#define Et(x,a...) P(x,err((C*)2,##a))
-#define Ed(x,a...) P(x,err((C*)3,##a))
-#define Er(x,a...) P(x,err((C*)4,##a))
-#define Ei(x,a...) P(x,err((C*)5,##a))
-#define Ep(x,a...) P(x,err((C*)6,##a))
-#define Es(x,a...) P(x,err((C*)7,##a))
+#define en(x,a...) P(x,err((C*)0,##a))
+#define el(x,a...) P(x,err((C*)1,##a))
+#define et(x,a...) P(x,err((C*)2,##a))
+#define ed(x,a...) P(x,err((C*)3,##a))
+#define er(x,a...) P(x,err((C*)4,##a))
+#define ei(x,a...) P(x,err((C*)5,##a))
+#define ep(x,a...) P(x,err((C*)6,##a))
+#define es(x,a...) P(x,err((C*)7,##a))
 #define h(t,i) S A e##t##n(I n,O A*a)_(errn((C*)i,n,a))
 h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #undef h

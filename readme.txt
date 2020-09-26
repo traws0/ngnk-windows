@@ -60,7 +60,7 @@ symbols
 errors
  error-reporting fns return a null ptr after consuming their args:
   err("msg",x,y,z) - generic error. x,y,z are optional
-  Et(c,x,y,z) El(c) En(c).. - if c signal type error, length error, nyi error.. x,y,z are optional
+  et(c,x,y,z) el(c) en(c).. - if c signal type error, length error, nyi error.. x,y,z are optional
   etn(a,n) eln(a,n).. - variants that consume n objs from the memory pointed by a
  error-pass-through macros:
   N(expr) - if expr evaluates to null, N() returns from the current function,
