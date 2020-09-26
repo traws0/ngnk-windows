@@ -40,13 +40,6 @@
   #define asrt(x)
  #endif
 #endif
-#define Z sizeof
-#define ZZ(x) (Z(x)/Z(*(x)))
-#define ZV Z(V*)  //ptr
-#define ZP 4096ll //page
-#define ZA 32     //hdr
-XT O C Zt[],ZT[]; //type widths
-#define ZR 4      //pseudo-width of reference types
 
 TD void V;TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
 TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
@@ -86,6 +79,14 @@ V*mmap_(V*,L,L,L,L,L);
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
 S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
+
+#define Z sizeof
+#define ZZ(x) (Z(x)/Z(*(x)))
+#define ZV Z(V*)  //ptr
+#define ZP 4096ll //page
+#define ZA 32     //hdr
+XT O C Zt[],ZT[]; //type widths
+#define ZR 4      //pseudo-width of reference types
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
