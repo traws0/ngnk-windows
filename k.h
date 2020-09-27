@@ -75,7 +75,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define fork() sc(fork)
 V*mmap_(V*,L,L,L,L,L);
 
-#define extr(x,y,c) ({__typeof__(x) x1=(x),y1=(y);x1 c y1?x1:y1;})
+#define extr(x,y,c) ({__typeof__(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
 S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
@@ -117,7 +117,7 @@ S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll
 S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);               xl[-1]=n;x)
 #define Ar(x) ((I*)dat(x))[-3]
 S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
-#define tvk(t,v,k) ((A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48))     //type,value,arity
+#define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 #define ariths(h,a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
 A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,
