@@ -7,7 +7,7 @@
 #define    W(x,a...) while(x){a;}
 #define    Y(x,a...) if(x){a;}
 #define    P(x,a...) Y(x,_(a))
-#define     eY(a...) else Y(a)
+#define     EY(a...) else Y(a)
 #define      E(a...) else{a;}
 #define      F(a...) F_(i,a)
 #define     Fj(a...) F_(j,a)

@@ -23,8 +23,8 @@ A2(fnd,
  P(!xtX&&yt-xt,xr;rsh(len(y),mR(cn[tl])))
  A u=aL(yn);I w=Zt[xt];
  Y(ref(x),F(un,A z=get(y,i);uli=fnda(x,z);zr))
- eY(w==0,F(un,uli=fndc(x,yci)))
- eY(w==2,F(un,uli=fndi(x,yii)))
- eY(w==3,F(un,uli=fndl(x,yli)))
+ EY(w==0,F(un,uli=fndc(x,yci)))
+ EY(w==2,F(un,uli=fndi(x,yii)))
+ EY(w==3,F(un,uli=fndl(x,yli)))
  E(en(1,u,x,y))
  xr;yr;u)
