@@ -1,5 +1,5 @@
 #include<sys/mman.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-#include"k.h"
+#include"a.h"
 #define nxt(x) ((A*)dat(x))[-2]
 L mu;S A mx[40];A glb,cn[tn],ci[3][5];dbg(S I ml;/*prevent allocations*/)S NI A oom()_(write(1,"oom\n",4);exit(1);0)
 S A ma(UI b)_(dbg(asrt(!ml));asrt(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))I i=b+1;W(i<ZZ(mx)&&!mx[i],i++)

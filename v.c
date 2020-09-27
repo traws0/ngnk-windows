@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(flp,P(xtaA,Y(xta,A y=xy;er(!ytX||!yn,x)F(yn,A z=yai;en(!ztT,x))L m=An(*ya);F(yn,A z=yai;el(zn-m,x)))AT(xt^ta^tA,x))P(xtt,enl(enl(x)))
  P(!xtX||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 V till(L*a,UL n)_(ALN(a)F(PAD(n,a),a[i]=i))

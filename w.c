@@ -1,4 +1,4 @@
-#include"k.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S AX(enc,P(n>1,ern(n,a))P(xtiI,x=gL(xR);A u=enc(x,a,n);xr;u)P(!xtlL,etn(n,a))A y=N(gL(*a));P(ytt,A z=enc(x,A(enl(y)),1);zn?fir(flp(z)):dex(z,aL(0)))
  P(xtt,UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yli;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
  P(!xn,yr;a0())A u=aX(xn);y=mut(y);L i=xn;W(--i>0,UL m=xli;m+=!m;A z=uai=aL(yn);F(yn,UL v=yli,w=yli=v/m;zli=v-w*m))
