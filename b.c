@@ -29,8 +29,8 @@ A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(l
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,C b=*c++;
  Y(b>=bm,Y(b>=bc,A y=fc;p(mR(ya[b-bc])))
-        EY(b==bm,A*v=l-*c++,y=q();N(*s=ap2(mR(*v=Ny(dm1(A(*v,yR,av(*c++),*s),4))),y)))
-        EY(b==bM,A x=q()   ,y=q();N(*s=ap2(      Ny(dmd(A(x ,yR,av(*c++),*s),4)) ,y)))
+        EY(b==bm,A*v=l-*c++,y=q();N(*s=apn(mR(*v=Ny(dm1(A(*v,yR,av(*c++),*s),4))),y)))
+        EY(b==bM,A x=q()   ,y=q();N(*s=apn(      Ny(dmd(A(x ,yR,av(*c++),*s),4)) ,y)))
         EY(b==bl,C n=*c++;A x=sqz(atnv(tX,n,s));s+=n;p(x))
         EY(b==bL,C n=*c++;A x=*s;el(!xtt&&len_(x)-n)F(n,p(get(x,n-1-i))))
         EY(b==ba||b==bP,C n=*c++;A u=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))

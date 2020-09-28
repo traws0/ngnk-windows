@@ -2,7 +2,7 @@
 S A1(sam,x) //                                                                                                                  plc
 O C vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5','\'','/','\\','[',  0,  0};
 O V*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out,   0,  0, cmd,  0,  0,  0,
-          dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,ap2,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
+          dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,P(xtaAX,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y)) //                                       mkl   '   /    \  ':   /:  \:
 A2(id_/*x0y0*/,xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1][C(4,0,0,1,1,2,2,3,3,2,4)[xv]]):mkn(fir(yR)))
 A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtX,app(x,a,n))C k=max(n,xk);F(n,k-=a[i]!=au_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
@@ -28,7 +28,7 @@ AX(app,P(xtT,xtX?idxX(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,
 A1(val,P(xtS,A y=glb;F(xn,et(!yta,x)A z=yx,u=yy;ed(!ztS||!utX,x)I k=xii;L j=fndi(z,k);P(j<0,xr;err(syp(k)))y=ua[j])xr;yR)
  P(xtX,P(!xn,x)P(xn==1,fir(x))P(xn>9,err("mxa",x))x=mut(x);A u=app(xx,&xy,xn-1);mr(AN(1,x));u)P(xtC,x=N(cpl(N(prs(x))));dex(x,run(x,0,0)))
  P(xtc||xts,val(enl(x)))P(xta,las(AT(tX,x)))P(xtr,cat(AT(tX,x),aw(xv)))P(c3(tu,xt,tw),al(xv))et(!(xto||xtp||xtq),x)AT(tX,x))
-A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(ap2,y=enla(y);L n=yn;P(!n,yr;x)P(n>8,err("mxa",x,y))y=mRa(Nx(blw(y)));A u=app(x,ya,n);xr;yr;u)
+A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(apn,y=enla(y);L n=yn;P(!n,yr;x)P(n>8,err("mxa",x,y))y=mRa(Nx(blw(y)));A u=app(x,ya,n);xr;yr;u)
 S A set(A x,L i,A y)_(asrt(Ar(x)==1);Y(!xtX&&(!sim(y)||xt-t_lst(yt)),x=blw(x))
  P(xtX,mr(xai);xai=y;sim(y)?sqz(x):x)xtC?xci=gc(y):xtI?xii=gi(y):xtL?xli=gl(y):xtD?xdi=gd(y):xtS?xii=gs(y):0;x)
 S I stp(L i,A x/*0*/,A**pp)_(A y=**pp;ed(!yta,x)**pp=y=mut(y);A z=yx;ed(!ztS,x)L j=fpi(&yx,xi[i+1]);A u=yy;ed(!utX,x)
