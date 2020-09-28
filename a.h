@@ -91,7 +91,7 @@ XT O C Zt[],ZT[]; //type widths
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tA,tC,tI,tL,tD,tS,tM,tm,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
-#define TS SX,SC,SI,SL,SD,SS,SM,Sm,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw //symbols for types
+#define TS SA,SC,SI,SL,SD,SS,SM,Sm,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw //symbols for types
 #define TZ ZV, 1, 4, 8, 8, 4,ZV,ZV, 8, 8, 8, 8, 8,ZV,ZV,ZV,ZV, 8, 8, 8 //size in bytes
 #define Tz  4, 0, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3 //log2(size) with a special value 4 for reference types
 S C At(A);                                                     S I sim(A x)_(tm<xt&&xt<to) //simple    types
