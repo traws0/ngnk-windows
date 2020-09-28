@@ -1,13 +1,13 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-A1(neg,sub(ai(0),x))A1(not,P(xtmMX,ea1(not,x))P(fun(x),I r=x==au0;xr;ai(r))eql(x,xtsS?as(0):ac(0)))
-A1(sqr,P(xtmMX,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)A1(nul,xtmMX?ea1(nul,x):eql(x,mR(cn[xt])))
-A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,A u=aC(xn);m2(x,F(un,C c=xci;uci=c+32*c3('A',c,'Z'))u))P(xtmMX,ea1(flr,x))
+A1(neg,sub(ai(0),x))A1(not,P(xtmMA,ea1(not,x))P(fun(x),I r=x==au0;xr;ai(r))eql(x,xtsS?as(0):ac(0)))
+A1(sqr,P(xtmMA,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)A1(nul,xtmMA?ea1(nul,x):eql(x,mR(cn[xt])))
+A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,A u=aC(xn);m2(x,F(un,C c=xci;uci=c+32*c3('A',c,'Z'))u))P(xtmMA,ea1(flr,x))
  x=N(gD(x));A u=atn(xtd?tl:tL,xn);m2(x,F(un,D d=xdi;uli=d<0?(L)d-(d<(L)d):(L)d)u))
 
 D sind(D x)_(S O D pi=3.1415927410125732,d=pi-8.742277657347586e-8, //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
  a[]={1.32913446369766718e-10,-2.33177897192836082e-8,2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
  P(x<0,-sind(-x))Y(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;F(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
-A1(sinx,P(xtmMX,ea1(sinx,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
+A1(sinx,P(xtmMA,ea1(sinx,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
 
 S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
@@ -56,7 +56,7 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 O V*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
-S A pen2(A x,A y,I v)_(P(xtm&&ytm,A u=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMX||ytmMX,eac(av(v),A(x,y),2)) //dyadic penetrate
+S A pen2(A x,A y,I v)_(P(xtm&&ytm,A u=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2)) //dyadic penetrate
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
  V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];C t=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,m2(x,f(a,b,yc,yn);y))
