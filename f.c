@@ -15,8 +15,8 @@ S NI L fndc(A x/*0*/,C v)_(asrt(Zt[xt]==0);F(xn,P(xci==v,i))_0Nl)L fpc(A*p,C v)_
 A2(fnd,
  P(xtt,P(xts,L i=gl(K("``j`hex`aes?",x));en(i<0,y)(A1*[]){des,jsr,unh,aes1}[i](y))et(!xtil,x,y)
        P(ytl,rnd(gl(gL(x)),gl(y)))P(yti,K("{`i$x?`l$y}",x,y))P(ytc,K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))K("{y@x?#y}",x,y))
- P(xta,A z=gkv(&x);idx(x,fnd(z,y)))
- en(xtA,x,y)
+ P(xtm,A z=gkv(&x);idx(x,fnd(z,y)))
+ en(xtM,x,y)
  P(ytt,P(!xtX&&fun(y),xr;yr;al(_0Nl))
        fir(fnd(x,enl(y))))
  P(!xtX&&ytX,ear(cv('?'),A(x,y),2))

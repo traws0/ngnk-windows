@@ -90,19 +90,19 @@ S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'
 XT O C Zt[],ZT[]; //type widths
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
-enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
-#define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw //symbols for types
+enum      {tX,tC,tI,tL,tD,tS,tM,tm,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+#define TS SX,SC,SI,SL,SD,SS,SM,Sm,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw //symbols for types
 #define TZ ZV, 1, 4, 8, 8, 4,ZV,ZV, 8, 8, 8, 8, 8,ZV,ZV,ZV,ZV, 8, 8, 8 //size in bytes
 #define Tz  4, 0, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3 //log2(size) with a special value 4 for reference types
-S C At(A);                                                     S I sim(A x)_(ta<xt&&xt<to) //simple    types
-S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
+S C At(A);                                                     S I sim(A x)_(tm<xt&&xt<to) //simple    types
+S I reft(C t)_(t==tX||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))     //packed    types
 S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))     //function  types
-S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) //corresponding list type
+S C t_lst(C t)_(t==tm?tM:t>=to?tX:t>=tc?t+tC-tc:t) //corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
-// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tX,tC,tI,tL,tD,tS,tA,ta,tl,td
+// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tX,tC,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt................................................cccccccc tc
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
 // tttttttt........oooooooooooooooossssssssssssssssssssssssssssssss ts
@@ -123,7 +123,7 @@ S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 
 A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,
  neg,not,nul,out,prs,rev,sha1,sha256,sha3_256,sinx,cosx,ser,sqr,sqz,str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
-A2 a2,aa,aA,add,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
+A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),e0(O C*),e1(O C*,A),e2(O C*,A,A),
  e3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);

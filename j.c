@@ -7,7 +7,7 @@ S A1(ju,I v=0;F(4,C c=*s++;v=16*v+(dgt(c)?c-'0':c3('a',c|32,'f')?(c|32)-'a'+10:9
 S A0(js,s++;A x=aC(0);W(1,C*t=s;C c=*s++;W(c-'"'&&c-'\\'&&c>31,c=*s++)P(c<32,s--;xr;0)x=catc(x,t,s-1-t);P(c=='"',x)c=*s++;
                           I i=Ci("\"\\/bfnrtu",c);P(i>8,xr;s--;0)x=i<8?apc(x,"\"\\/\b\f\n\r\t"[i]):ju(x);t=s)0)
 S A0(ja,s++;A x=a0();P(jw()==']',s++;x)W(1,x=apd(x,Nx(jv()));P(*s==']',s++;x)Nx(*s==',');s++)0)
-S A0(jo,s++;A x=aa(aS(0),a0());C c=jw();P(c=='}',s++;x)
+S A0(jo,s++;A x=am(aS(0),a0());C c=jw();P(c=='}',s++;x)
  W(1,Nx(c=='"');xx=apd(xx,gS(Nx(js())));Nx(jw()==':');s++;xy=apd(xy,Nx(jv()));P(*s=='}',s++;x)Nx(*s==',');s++;c=jw())0)
 S A jr(O C*t,L v)_(C c;W((c=*t++),P(c-*s,0)s++)al(v))
 S A0(jv,C c=jw();A x=c=='['?ja():c=='{'?jo():c=='"'?js():c=='-'||dgt(c)?jd():c=='t'?jr("true",1):c=='f'?jr("false",0):c=='n'?jr("null",_0Nl):0;jw();x)
