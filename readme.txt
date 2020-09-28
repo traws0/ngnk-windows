@@ -30,11 +30,11 @@ k objs
  A - the type of a tagged ptr to a k obj
  x y z u - var names for A objs. usually x y z are the args and u is the result from the fn.
  xt xn xb - type, length, and bucket(as in buddy system) of x. similarly: yt,zn..
- tc tL tX.. - constants for k types
+ tc tL tA.. - constants for k types
   tn - number of types
   ZT[t] - type size in bytes
   Zt[t] - base-2 logarithm of ZT(t)
- xtc xtL xtX.. - is x of type tc,tL,tX..? equivalent to xt==tc xt==tL xt==tX..
+ xtc xtL xtA.. - is x of type tc,tL,tA..? equivalent to xt==tc xt==tL xt==tA..
  xtt - is x an atom? (dicts are not considered atoms here)
  xtT - is x a list? (tables are not considered lists here)
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
