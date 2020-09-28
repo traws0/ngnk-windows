@@ -15,7 +15,6 @@ S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)
 h(dvd,y?x/y:(UI)_0Ni+(x<0)-(x>0),y?x/y:(UL)_0Nl+(x<0)-(x>0),x/y)h(mod,x>0?(y%x+x)%x:x?y/-x:_0Ni,x>0?(y%x+x)%x:x?y/-x:_0Nl,_0n)
 hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd(x)>cmpd(y))h(eql,x==y,x==y,*(L*)&x==*(L*)&y)
-#undef hh
 #undef h
 
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
@@ -46,14 +45,6 @@ ha(mxm,htT(mxmi),hs(mxmiI),hTT(mxmi),htT(mxml),hs(mxmlL),hTT(mxml),htT(mxmd),hs(
 ha(ltn,htT(ltni),hTt(ltni),hTT(ltni),htT(ltnl),hTt(ltnl),hTT(ltnl),htT(ltnd),hTt(ltnd),hTT(ltnd),L,I) // < 8
 ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),L,I) // > 9
 ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(eqldD),hTT(eqld),L,I) // = 10
-#undef hn
-#undef h2
-#undef hs
-#undef hTT
-#undef hTt
-#undef htT
-#undef ha
-#undef ht
 
 #define dexLL dexlL
 #define dexII dexiI
@@ -61,13 +52,9 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 #define dexdD dexlL
 #define dexDD dexLL
 #define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
-O V*arf[3][11][8]={{ariths(h,i,I)},{ariths(h,l,L)},{ariths(h,d,D)}};
+#define hA(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
+O V*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
-#undef dexDD
-#undef dexdD
-#undef dexDd
-#undef dexLL
-#undef dexII
 
 S A pen2(A x,A y,I v)_(P(xta&&yta,A u=gkv(&y);am1(A(x,y,av(v),u),4))P(xtaAX||ytaAX,eac(av(v),A(x,y),2)) //dyadic penetrate
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
