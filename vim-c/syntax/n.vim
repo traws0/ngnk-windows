@@ -9,7 +9,7 @@ sy keyword n_r return B continue                                                
 sy region  n_aa matchgroup=n_a start="("              end=")" contains=@n_x,n_a |sy match n_a "," contained |hi def link n_a nontext
 sy region  n_bb matchgroup=n_b start="\["             end="]" contains=@n_x,n_b |sy match n_b "," contained |hi def link n_b n_a
 sy region  n_cc matchgroup=n_c start="{"              end="}" contains=@n_x,n_c |sy match n_c "," contained |hi def link n_c n_a
-sy region  n_pp matchgroup=n_p start="\<P(\|\<E\w("   end=")" contains=@n_x,n_p |sy match n_p "," contained |hi def link n_p function
+sy region  n_pp matchgroup=n_p start="\<P(\|\<e\w("   end=")" contains=@n_x,n_p |sy match n_p "," contained |hi def link n_p function
 sy region  n_ff matchgroup=n_f start="\<\(W\|Fj\=\)(" end=")" contains=@n_x,n_f |sy match n_f "," contained |hi def link n_f special
 sy region  n_ii matchgroup=n_i start="\<\(Y\|EY\=\)(" end=")" contains=@n_x,n_i |sy match n_i "," contained |hi def link n_i type
 sy region  n_vv matchgroup=n_v start="(\(\w\| \)*,"   end=")" contains=@n_x contained                       |hi def link n_v statement
