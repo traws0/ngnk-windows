@@ -91,13 +91,14 @@ XT O C Zt[],ZT[]; //type widths
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tX,tC,tI,tL,tD,tS,tA,ta,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+#define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw //symbols for types
 #define TZ ZV, 1, 4, 8, 8, 4,ZV,ZV, 8, 8, 8, 8, 8,ZV,ZV,ZV,ZV, 8, 8, 8 //size in bytes
-#define Tz  4, 0, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3 //log(ZT[t]) with a special value 4 for ref types
-#define TS SX,SC,SI,SL,SD,SS,SA,Sa,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw
-S C At(A);S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t)   S I sim(A x)_(ta<xt&&xt<to)
-S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))
-S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))
-S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))
+#define Tz  4, 0, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3 //log2(size) with a special value 4 for reference types
+S C At(A);                                                     S I sim(A x)_(ta<xt&&xt<to) //simple    types
+S I reft(C t)_(t==tX||t==ta||t==tA||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
+S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))     //packed    types
+S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))     //function  types
+S C t_lst(C t)_(t==ta?tA:t>=to?tX:t>=tc?t+tC-tc:t) //corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
