@@ -116,7 +116,7 @@ S  C Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);       
 S  C Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
 S  C Ab(A x)_(C b=xc[-16];asrt(b<48);b)     S A AB( C b,A x)_(asrt(b<48);                  xc[-16]=b;x)
 S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
-S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1l<<48);               xl[-1]=n;x)
+S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1ll<<48);              xl[-1]=n;x)
 #define Ar(x) ((I*)dat(x))[-3]
 S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
