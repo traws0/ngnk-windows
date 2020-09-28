@@ -151,12 +151,12 @@ S A aD(L n)_(atn(tD,n))S A ad(D v)_(atnv(td,1,&v))S D gd_(A x)_(asrt(xtd);      
 #define cv(c) av(vi(c))
 S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24),av_mkl=av(25);
 
-#define _0Ni (1<<31)
-#define _0Wi (~_0Ni)
-#define _0Nl (1ll<<63)
-#define _0Wl (~_0Nl)
 #define _0n  (D)NAN
 #define _0w  (D)INFINITY
+#define _0Nl (1ll<<63)
+#define _0Wl (~_0Nl)
+#define _0Ni (1<<31)
+#define _0Wi (~_0Ni)
 
 #define err_(x,y,z,u,n,...) n
 #define err(a...) ({dbg(oo)err_(a,e3,e2,e1,e0)(a);})
