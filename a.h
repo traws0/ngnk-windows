@@ -120,16 +120,16 @@ S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 #define ariths(h,a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
-A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,
+A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gD,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,
  neg,not,nul,out,prs,rev,sha1,sha256,sha3_256,sinx,cosx,ser,sqr,sqz,str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 #define h(x,y) ,x
 A2 a2,aa,aA,ap1,ap2,apd,cat,com,cst,cut,fnd,id_,idx,mtc,rsh,v0c,v1c,xpt ariths(h,);
 #undef h
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),err0(O C*),err1(O C*,A),err2(O C*,A,A),
- err3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);
+A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),e0(O C*),e1(O C*,A),e2(O C*,A,A),
+ e3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);
 V init(),*memcpy(V*,O V*,L),mrn(I,O A*),*memset(V*,I,L),tilh(H*,UH),tili(I*,UI),till(L*,UL);C*syp(I);
-I Ci(O C*,C),epr(),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
+I Ci(O C*,C),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),strlen(O C*),tru(A);
 XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define mc(a...) __builtin_memcpy(a)
@@ -161,7 +161,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define _0w  (D)INFINITY
 
 #define err_(x,y,z,u,n,...) n
-#define err(a...) ({dbg(oo)err_(a,err3,err2,err1,err0)(a);})
+#define err(a...) ({dbg(oo)err_(a,e3,e2,e1,e0)(a);})
 #define eM "nyi","len","typ","dom","rnk","idx","prs","stk"
 #define en(x,a...) P(x,err((C*)0,##a))
 #define el(x,a...) P(x,err((C*)1,##a))
