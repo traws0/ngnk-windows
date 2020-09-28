@@ -10,6 +10,6 @@ S A1(asci,P(xn>_0Wi,err("lmt",x))x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;A y=aC(n
  m2(x,m2(y,Fj(w,ms(c,0,Z c);F(n,a[i]=xc[w*uii+j])F(n,c[a[i]+1]++)Y(c[1+*a]-n,F(255,c[i+1]+=c[i])F(n,zi[c[a[i]]++]=uii)SWP(z,u)))zr;u)))
 A1(asc,P(xtX,P(xn>_0Wi,err("lmt",x))A*a=xa,u=til(ai(xn));I n=xn,i=n/2;W(i-->0,sft(a,ui,i,n-1))i=n-1;W(i>0,SWP(uii,*ui)sft(a,ui,0,--i))xr;u)
  P(xta,A y=gkv(&x);idx(x,N(asc(y))))P(xtIL||xtC,asci(x))P(xtS,asc(N(ea1(str,x))))P(xtD,asc(blw(x)))et(!(xts||xti),x)hop(x))
-A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,N(dsc(y))))et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
+A1(dsc,P(xti,hcl(x))P(xta,A y=gkv(&x);idx(x,Nx(dsc(y))))et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
 A1(grp,P(xtt,et(!xtil)K("{(2#x)#1i,`i$&x}",x))P(xta,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();C w=Zt[xt];
  F(xn,L j=!w?fpc(&y,xci):w==2?fpi(&y,xii):w==3?fpl(&y,xli):fpa(&y,mR(xai));Y(j==un,u=apd(u,aL(0)))ua[j]=apv(ua[j],&i))xr;aa(y,u))
