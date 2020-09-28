@@ -3,11 +3,11 @@
 //serialize
 S A f8(L v,A y)_(catc(y,(V*)&v,8))
 S A2(f,y=Nx(apc(y,xt));
- P(xtX||xtS,y=Nx(f8(xn,y));F(xn,y=Nx(f(get(x,i),y)))xr;y)
- P(xtmM,f(AT(tX,x),y))
+ P(xtA||xtS,y=Nx(f8(xn,y));F(xn,y=Nx(f(get(x,i),y)))xr;y)
+ P(xtmM,f(AT(tA,x),y))
  P(xts,O C*s=syp(gs(x));I n=mn(s)+1;y=Nx(apc(y,n));catc(y,s,n))
  P(pkd(x),f8(x,y))
- P(fun(x),f(AT(tX,x),Nx(apc(y,xv<<3|xk))))
+ P(fun(x),f(AT(tA,x),Nx(apc(y,xv<<3|xk))))
  I l=8*xtT;A u=catc(y,xc-l,l+xn*ZT[xt]);xr;u)
 A1(ser,f(x,aC(0)))
 
@@ -17,8 +17,8 @@ S C*s,*p;
 #define h1 (*(C*)h(1))
 #define h8 (*(L*)h(8))
 S A g()_(C t=h1;ed(!in(t,tn))
- P(t==tX||t==tS,L n=h8;ed(!in(n,1ll<<45))A x=AN(0,atn(t,n));F(n,x=apd(x,Nx(g())))x)
- P(t==tm||t==tM,A x=N(g());ed(!xtX||xn-2||At(xx)>tM||At(xy)>tM||len_(xx)-len_(xy))AT(t,x))
+ P(t==tA||t==tS,L n=h8;ed(!in(n,1ll<<45))A x=AN(0,atn(t,n));F(n,x=apd(x,Nx(g())))x)
+ P(t==tm||t==tM,A x=N(g());ed(!xtA||xn-2||At(xx)>tM||At(xy)>tM||len_(xx)-len_(xy))AT(t,x))
  P(t==ts,C n=h1;as(syP(h(n))))
  P(pkdt(t),h8)
  P(funt(t),C vk=h1;AT(t,AK(vk&7,AV(vk>>3,N(g())))))

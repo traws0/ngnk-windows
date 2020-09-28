@@ -18,7 +18,7 @@ S L hops(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("op
  UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:hskt(h,p))
 S I hop_(A x/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)et(*s-':')hops(s+1,fl))et(!xtC,x)x=str0(x);dex(x,hops(xc,fl)))
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))
-A2(v0c,Y(ytX,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apv(y,"\n"))))
+A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apv(y,"\n"))))
 A2(v1c,et(!ytC,x)I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));L n=yn;C*s=yc;
  m2(y,A u=au0;W(n>0,L k=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
 A1(hcl,asrt(xti);close(gi(x));au0)
@@ -35,5 +35,5 @@ A1(cmd,et(!xtC,x)Y(!xn||xn==1&&*xc=='\\',exit(0))C c=*xc;
  Y(c3('a',c,'z')&&(xn==1||xc[1]==32||xc[1]==':'),I i=1;W(i<xn&&xci==32,i++)x=N(cut(al(i),x));A1*f=(A1*[]){ldf,cmdt,cmdw,0}[Ci("ltw",c)];P(f,f(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
 S A rda(I f)_(A u=aC(256-ZA);L m=0,k;W((k=read(f,uc+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,A z=aC(2*un+ZA);mc(zc,uc,m);ur;u=z))close(f);AN(m,u))
-A1(frk,et(!xtX||xn-2,x)A y=gkv(&x);ed(!xtX||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];F(xn,a[i]=dat(xai))a[xn]=0;I p[4];pipe(p);pipe(p+2);
+A1(frk,et(!xtA||xn-2,x)A y=gkv(&x);ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];F(xn,a[i]=dat(xai))a[xn]=0;I p[4];pipe(p);pipe(p+2);
  P(!fork(),dup2(*p,0);dup2(p[3],1);F(4,close(p[i]))exit(execve(*a,a,0));0)xr;close(*p);close(p[3]);N(v1c(ai(p[1]),y));rda(p[2]))

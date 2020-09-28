@@ -12,15 +12,15 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define r(a...) N(cr(a)) //right
 S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))lu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
- P(zts||(ztX&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,r(x,za[zn-1-i]))h(bl);h(zn-1))
+ P(zts||(ztA&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,r(x,za[zn-1-i]))h(bl);h(zn-1))
   I k=gs(zts?z:zx);L i=fndi(fl,k);Y(i<0,hc(as(k));h(bM))E(lu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
- P(ztX&&zx==av_mkl,h(bL);h(zn-1);F(zn-1,l(x,y,za[i+1]);h(bp))1)err("cpl");eso(mR(fs),o);0)
+ P(ztA&&zx==av_mkl,h(bL);h(zn-1);F(zn-1,l(x,y,za[i+1]);h(bp))1)err("cpl");eso(mR(fs),o);0)
 S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==So,h(bo);x)L i=fndi(fl,gs(y));P(i>=0,lu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
- P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytX,hc(y==au_plc?au0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)
+ P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA,hc(y==au_plc?au0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)
  P((utu||u==av0)&&n==3,r(x,yz);l(x,y,yy))
  P(u==cv('$')&&n>3,n--;I p[n];A*a=ya;F(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);
   A z=fb;F(n&~1,I d=(i&1?zn:p[i+1])-p[i];Y(i&1,I j=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))P(d>255,err("mxj");0)zc[p[i]]=d)1)
- Y(u==cu('*')&&n==2,A z=yy;P(ztX&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))Y(utw&&n==2,A z=yy;P(!ztX&&!ztsS,zR;hc(app(u,&z,1));x))
+ Y(u==cu('*')&&n==2,A z=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))Y(utw&&n==2,A z=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
 A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(lu,-1,64);F(yn,P(!cr(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
@@ -31,7 +31,7 @@ S A1(vm,/*0*/W(1,C b=*c++;
  Y(b>=bm,Y(b>=bc,A y=fc;p(mR(ya[b-bc])))
         EY(b==bm,A*v=l-*c++,y=q();N(*s=apn(mR(*v=Ny(dm1(A(*v,yR,av(*c++),*s),4))),y)))
         EY(b==bM,A x=q()   ,y=q();N(*s=apn(      Ny(dmd(A(x ,yR,av(*c++),*s),4)) ,y)))
-        EY(b==bl,C n=*c++;A x=sqz(atnv(tX,n,s));s+=n;p(x))
+        EY(b==bl,C n=*c++;A x=sqz(atnv(tA,n,s));s+=n;p(x))
         EY(b==bL,C n=*c++;A x=*s;el(!xtt&&len_(x)-n)F(n,p(get(x,n-1-i))))
         EY(b==ba||b==bP,C n=*c++;A u=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
         EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(mR(l[1])))EY(b==bp,mr(q()))E(asrt(b==br);_(*s)))

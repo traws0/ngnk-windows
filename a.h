@@ -90,19 +90,19 @@ S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'
 XT O C Zt[],ZT[]; //type widths
 
 //         () "" ,i ,0 ,d ,` +! ! "a" 0i 0  0. `  {} 1+ ++ +/ +: +  /
-enum      {tX,tC,tI,tL,tD,tS,tM,tm,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+enum      {tA,tC,tI,tL,tD,tS,tM,tm,tc,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define TS SX,SC,SI,SL,SD,SS,SM,Sm,Sc,Si,Sl,Sd,Ss,So,Sp,Sq,Sr,Su,Sv,Sw //symbols for types
 #define TZ ZV, 1, 4, 8, 8, 4,ZV,ZV, 8, 8, 8, 8, 8,ZV,ZV,ZV,ZV, 8, 8, 8 //size in bytes
 #define Tz  4, 0, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3 //log2(size) with a special value 4 for reference types
 S C At(A);                                                     S I sim(A x)_(tm<xt&&xt<to) //simple    types
-S I reft(C t)_(t==tX||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
+S I reft(C t)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))     //packed    types
 S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))     //function  types
-S C t_lst(C t)_(t==tm?tM:t>=to?tX:t>=tc?t+tC-tc:t) //corresponding list type
+S C t_lst(C t)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,cis=value):
-// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tX,tC,tI,tL,tD,tS,tM,tm,tl,td
+// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt................................................cccccccc tc
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti
 // tttttttt........oooooooooooooooossssssssssssssssssssssssssssssss ts
@@ -137,7 +137,7 @@ XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define syC(c) (2*(c)) //symbols: char to index
 
-S A aX(L n)_(atn(tX,n))S A0(a0,aX(0))
+S A aA(L n)_(atn(tA,n))S A0(a0,aA(0))
 S A aC(L n)_(atn(tC,n))S A ac(C v)_(AT(tc,v))     S C gc (A x)_(asrt(xtc);     (C)x)
 S A aS(L n)_(atn(tS,n))S A as(I v)_(AT(ts,v))     S I gs (A x)_(asrt(xts);     (I)x)
 S A aI(L n)_(atn(tI,n))S A ai(I v)_(AT(ti,v))     S I gi (A x)_(asrt(xti||xts);(I)x)

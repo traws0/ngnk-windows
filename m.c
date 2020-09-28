@@ -13,7 +13,7 @@ V*memcpy(V*x,O V*y,L n)_(C*p=x;O C*q=y;F(n,p[i]=q[i])x)V*memset(V*x,I c,L n)_(C*
 I strcmp(O C*s,O C*t)_(W(*s&&*s==*t,s++;t++)*s-*t)L strlen(O C*x)_(O C*p=x;W(*p,p++)p-x)
 A atn(C t,L n)_(A x=ma(64-__builtin_clzll(ZA+7+n*ZT[t]));Ar(x)=1;AT(t,AN(n,x)))
 A atnv(C t,L n,O V*v)_(A u=atn(t,n);mc(uc,v,n*ZT[t]);u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
-A1(a1,atnv(tX,1,A(x)))A2(a2,atnv(tX,2,A(x,y)))A3(a3,atnv(tX,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
+A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
 A aCn(O C*s,L n)_(atnv(tC,n,s))A aCm(O C*s,O C*t)_(aCn(s,t-s))A aCz(O C*s)_(aCn(s,mn(s)))
 A gkv(A*p)_(A x=*p;asrt(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;A u=xy;mr(AN(0,x));u) //get keys and values
 A room(A x,L l)_(asrt(xtC);L n=xn;P(Ar(x)==1&&ZA+n+l<=1ll<<xb,x)A u=AN(n,atn(tC,n+l));mc(uc,xc,n);xr;u)
@@ -25,7 +25,7 @@ A1(ldf,x=N(u1c(x));ed(!xn||xc[xn-1]-10,x)xc[xn-1]=0;C*p=xc;Y(*p=='#'&&p[1]=='!',
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 asm(".globl mmap_\nmmap_:\nmovq %rcx,%r10\nmovq $"XS(SYS_mmap)",%rax\nsyscall\nret");
 V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
- cn[tX]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
+ cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(_0Wi);ci[0][3]=ai(-_0Wi);ci[0][4]=ai(_0Ni);
  S L l[]={0,1,_0Wl,-_0Wl,_0Nl};F(5,ci[1][i]=al(l[i]))S D d[]={0,1,_0w,-_0w,_0n};F(5,ci[2][i]=ad(d[i]))}
 #ifndef shared

@@ -1,19 +1,19 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S AX(enc,P(n>1,ern(n,a))P(xtiI,x=gL(xR);A u=enc(x,a,n);xr;u)P(!xtlL,etn(n,a))A y=N(gL(*a));P(ytt,A z=enc(x,A(enl(y)),1);zn?fir(flp(z)):dex(z,aL(0)))
  P(xtt,UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yli;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
- P(!xn,yr;a0())A u=aX(xn);y=mut(y);L i=xn;W(--i>0,UL m=xli;m+=!m;A z=uai=aL(yn);F(yn,UL v=yli,w=yli=v/m;zli=v-w*m))
+ P(!xn,yr;a0())A u=aA(xn);y=mut(y);L i=xn;W(--i>0,UL m=xli;m+=!m;A z=uai=aL(yn);F(yn,UL v=yli,w=yli=v/m;zli=v-w*m))
  UL m=*xl;ux=y;Y(m,F(yn,yli%=m))u)
 S AX(spl,asrt(xtcC);P(n>1,ern(n,a))A y=*a;et(!ytC,y)C*s=xtc?(V*)&x:xc;L l=len_(x);el(!l,y)A u=a0();C*p=yc,*q=yc,*q2=yc+yn,*q1=q2+1-len_(x);
  W(q<q1,C m=1;F(l,m&=s[i]==q[i])Y(m,u=apd(u,aCm(p,q));p=q+=l)E(q++))Y(x-ac(10)||p<q2,u=apd(u,aCm(p,q2)))yr;u)
-S AX(join,asrt(xtcC);P(n>1,ern(n,a))A y=*a;et(!ytX,y)C*s=xtc?(V*)&x:xc;L m=len_(x),k=yn,l=m*(k-!!k);F(k,A z=yai;et(!ztcC,y)l+=len_(z))
+S AX(join,asrt(xtcC);P(n>1,ern(n,a))A y=*a;et(!ytA,y)C*s=xtc?(V*)&x:xc;L m=len_(x),k=yn,l=m*(k-!!k);F(k,A z=yai;et(!ztcC,y)l+=len_(z))
  A u=aC(l);C*p=uc;F(k-1,A z=yai;Y(ztc,*p++=gc(z))E(mc(p,zc,zn);p+=zn)mc(p,s,m);p+=m)Y(k,A z=ya[k-1];Y(ztc,*p=gc(z))E(mc(p,zc,zn)))yr;u)
 A ea1(A1 f,A x)_(P(xtt,f(x))P(xtm,x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
- I b=xtX&&Ar(x)==1;L n=len_(x);P(!n,x)A u=a0();F(n,A y=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
+ I b=xtA&&Ar(x)==1;L n=len_(x);P(!n,x)A u=a0();F(n,A y=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
 S L cfm(O A*a/*0*/,L n)_(L m=-1;F(n,A x=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,A z,b[8];F(n,A y=a[i];Y(ytm,z=yx;B))zR;F(n,A y=b[i]=a[i];Y(ytm,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))A u=eac(x,b,n);(u?am:dex)(z,u))
 AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))
- A b[8];C t[8];L m=-1;F(n,A y=b[i]=a[i];P(ytm,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytX?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
- P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))A u=m?0:a0(); //0:pkdatm,1:refatm,2:tX(r=1),3:tX(r>1),4:other
+ A b[8];C t[8];L m=-1;F(n,A y=b[i]=a[i];P(ytm,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
+ P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))A u=m?0:a0(); //0:pkdatm,1:refatm,2:tA(r=1),3:tA(r>1),4:other
  Fj(m,F(n,A y=a[i];Y(t[i]==2,b[i]=ya[j])Y(t[i]>2,b[i]=get(y,j)))
       A z=app(x,b,n);Y(!j,u=sim(zt)?AN(0,atn(t_lst(zt),m)):a0())
       Y(!z,ur;u=0;F(n,A y=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,ya+j+1)))B)u=apd(u,z))
