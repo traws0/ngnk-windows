@@ -12,7 +12,7 @@
 #define      E(a...) else{a;}
 #define      F(a...) F_(i,a)
 #define     Fj(a...) F_(j,a)
-#define F_(i,n,a...) for(__typeof__(n)n_=(n),i=0;i<n_;i++){a;}
+#define F_(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
 #define B break
 #define O const
 #define S static
@@ -20,6 +20,7 @@
 #define XT extern
 #define TD typedef
 #define RE restrict
+#define TY __typeof__
 #define ALN(x) {asrt(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
 #define MS(x) #x
@@ -28,7 +29,7 @@
 #define N(r)      N_(r,)
 #define N1(x,r)   N_(r,mr(x))
 #define N2(x,y,r) N_(r,mr(x);mr(y))
-#define SWP(x,y) {__typeof__(x)t_=x;x=y;y=t_;}
+#define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
@@ -76,7 +77,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define fork() sc(fork)
 V*mmap_(V*,L,L,L,L,L);
 
-#define extr(x,y,c) ({__typeof__(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
+#define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
 S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
@@ -132,7 +133,7 @@ XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define mc(a...) __builtin_memcpy(a)
 #define ms(a...) __builtin_memset(a)
 #define mn(a...) __builtin_strlen(a)
-#define m2(x,a...) ({A t_=mr0(x);__typeof__(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
+#define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define syC(c) (2*(c)) //symbols: char to index
 
 S A aX(L n)_(atn(tX,n))S A0(a0,aX(0))
