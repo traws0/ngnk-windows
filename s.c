@@ -13,7 +13,7 @@ S C*su(C*s,UL x)_(x<TX?sX(s,x):S0(s4(s,x/TX),x%TX))S C*sl(C*s,L x)_(Y(x<0,P(x==_
  S UL msha(UL m,O UL*a,I i,UL*v,UL*w,I sh)_(*v=msh(m+2,a,i);*w=msh(m-1-sh,a,i);msh(m,a,i))
 #else
  S UL shr(UL l,UL h,UI d)_(h<<(64-d)|l>>d)
- S UL mult(UL a,UL b,UL*rh)_(UI al=a,ah=a>>32,bl=b,bh=b>>32,c=(UL)al*bl;UL u=(UI)(c>>32)+(UL)ah*bl,v=(UI)u+(UL)al*bh;
+ S UL mult(UL a,UL b,UL*rh)_(UI al=a,ah=a>>32,bl=b,bh=b>>32;UL c=(UL)al*bl,u=(UI)(c>>32)+(UL)ah*bl,v=(UI)u+(UL)al*bh;
   *rh=(UI)(u>>32)+(UI)(v>>32)+(UL)ah*bh;v<<32|(UI)c)
  S UL msha(UL m,O UL*a,I i,UL*v,UL*w,I sh)_(m>>=1;UL t,l=mult(m,*a,&t),h,m0=t+mult(m,a[1],&h);h+=m0<t;
   UL l2=l+*a,m2=m0+a[1]+(l2<l),h2=h+(m2<m0);*v=shr(m2,h2,i-65);

@@ -28,19 +28,30 @@ V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
  cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(_0Wi);ci[0][3]=ai(-_0Wi);ci[0][4]=ai(_0Ni);
  S L l[]={0,1,_0Wl,-_0Wl,_0Nl};F(5,ci[1][i]=al(l[i]))S D d[]={0,1,_0w,-_0w,_0n};F(5,ci[2][i]=ad(d[i]))}
+
 #ifndef shared
  S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
  I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
  #if __FreeBSD__
   V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
  #else
-  asm(".globl _start\n_start:pop %rdi\nmov %rsp,%rsi\njmp main");
+  #if i386
+   asm(".globl _start;jmp main");
+  #else
+   asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
+  #endif
  #endif
 #endif
 
-//syscalls
-#define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
-asm(h(read)h(write)h(open)h(close)h(lseek)h(dup2)h(execve)h(munmap)h(fork)h(exit)h(gettimeofday)h(socket)h(connect)h(mmap,"movq %rcx,%r10;"));
+#if i386
+ #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%eax;int $0x80;ret;"
+ asm(".globl mmap_;mmap_:mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
+ V*mmap_(I*);V*mmap(V*x,size_t y,I z,I u,I v,off_t w)_(I a[]={(I)x,y,z,u,v,w};(V*)mmap_(a))
+#else
+ #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
+ asm(h(mmap,"movq %rcx,%r10;"));
+#endif
+asm(h(read)h(write)h(open)h(close)h(lseek)h(dup2)h(execve)h(munmap)h(fork)h(exit)h(gettimeofday)h(socket)h(connect));
 #if SYS_pipe
  asm(h(pipe));
 #else
