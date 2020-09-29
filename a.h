@@ -1,6 +1,6 @@
 // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 //#define DEBUG
-#include<sys/syscall.h>
+#include<unistd.h>
 #include<math.h>
 #include"k.h"
 #include"g.h"
@@ -53,34 +53,10 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define AX(f,b...) A f(A x,O A*a,I n)_(b)
 #define AA(f,b...) A f(    O A*a,I n)_(b)
 
-#define sc(f,a...  ) ({L r;asm volatile("syscall":"=a"(r):"0"(SYS_##f)a:"cc","rcx","r11","memory");r;})
-#define sc1(f,x    ) sc(f,,"D"(x)              )
-#define sc2(f,x,y  ) sc(f,,"D"(x),"S"(y)       )
-#define sc3(f,x,y,z) sc(f,,"D"(x),"S"(y),"d"(z))
-#define   read(a...) sc3(        read,a)
-#define  write(a...) sc3(       write,a)
-#define   open(a...) sc3(        open,a)
-#define  close(a...) sc1(       close,a)
-#define lseek_(a...) sc3(       lseek,a)
-#define   dup2(a...) sc2(        dup2,a)
-#define execve(a...) sc3(      execve,a)
-#if SYS_pipe
- #define  pipe(a...) sc1(        pipe,a)
-#else
- #define  pipe(a...) sc2(       pipe2,a,0)
-#endif
-#define munmap(a...) sc2(      munmap,a)
-#define    skt(a...) sc3(      socket,a)
-#define   conn(a...) sc3(     connect,a)
-#define   gtod(a...) sc2(gettimeofday,a)
-#define   exit(a...) sc1(        exit,a)
-#define fork() sc(fork)
-V*mmap_(V*,L,L,L,L,L);
-
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
-S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
+S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)V exit(I);
 
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
