@@ -33,7 +33,7 @@ k objs
  tc tL tA.. - constants for k types
   tn - number of types
   ZT[t] - type size in bytes
-  Zt[t] - base-2 logarithm of ZT(t)
+  Zt[t] - base-2 logarithm of ZT[t]
  xtc xtL xtA.. - is x of type tc,tL,tA..? equivalent to xt==tc xt==tL xt==tA..
  xtt - is x an atom? (dicts are not considered atoms here)
  xtT - is x a list? (tables are not considered lists here)
