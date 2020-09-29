@@ -1,6 +1,7 @@
 # faster builds: export MAKEFLAGS=-j8
-C=clang-7 -O3 -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
-  -Werror -Wno-assume -Wno-pointer-sign -Wno-pointer-to-int-cast -Wfatal-errors -Wno-shift-op-parentheses -march=native
+C=clang-7 -march=native -O3 -nostdlib \
+ -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
+ -Werror -Wno-assume -Wno-pointer-sign -Wno-pointer-to-int-cast -Wfatal-errors -Wno-shift-op-parentheses
 t:k
 	@+$(MAKE) -C t && g/0.sh
 c: #clean
@@ -12,7 +13,7 @@ o/so/%.o:%.c *.h makefile
 o/%.s:%.c *.h makefile
 	@echo '$@ ' && mkdir -pv o && $(C) -c $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(C) $^ -static -o $@
+	@echo '$@ ' && $(C) $^ -static -o $@ # -lgcc (for 32bit)
 	@strip -R .comment $@ # -R '.note*'
 libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(C) $^ -shared -Dshared -o $@
