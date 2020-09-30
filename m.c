@@ -24,7 +24,7 @@ I syP(O C*s)_(C c=*s;P(c<128&&(!c||!s[1]),syC(c))O C*p=sy0+256;W(p<sy1,O C*q=p,*
 I line(C*p,C*q)_(A x=val(aCm(p,q));P(x,mr(out(x));1)epr(0))S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=N(u1c(x));ed(!xn||xc[xn-1]-10,x)xc[xn-1]=0;C*p=xc;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
-V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
+V init(){write(1,"hello\n",6);tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
  cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(_0Nl);cn[tI]=cn[ti]=ai(_0Ni);cn[tD]=cn[td]=ad(_0n);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(_0Wi);ci[0][3]=ai(-_0Wi);ci[0][4]=ai(_0Ni);
  S L l[]={0,1,_0Wl,-_0Wl,_0Nl};F(5,ci[1][i]=al(l[i]))S D d[]={0,1,_0w,-_0w,_0n};F(5,ci[2][i]=ad(d[i]))}
@@ -36,7 +36,7 @@ V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
   V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
  #else
   #if i386
-   asm(".globl _start;jmp main");
+   asm(".globl _start;_start:push $0;push $0;jmp main");
   #else
    asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
   #endif
@@ -45,13 +45,19 @@ V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
 
 #if i386
  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%eax;int $0x80;ret;"
- asm(".globl mmap_;mmap_:mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
+ #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
+ #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
+ #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
+ asm(".globl mmap_;mmap_:mov 4(%esp),%ebx;mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
  V*mmap_(I*);V*mmap(V*x,size_t y,I z,I u,I v,off_t w)_(I a[]={(I)x,y,z,u,v,w};(V*)mmap_(a))
 #else
  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
+ #define h1 h
+ #define h2 h
+ #define h3 h
  asm(h(mmap,"movq %rcx,%r10;"));
 #endif
-asm(h(read)h(write)h(open)h(close)h(lseek)h(dup2)h(execve)h(munmap)h(fork)h(exit)h(gettimeofday)h(socket)h(connect));
+asm(h3(read)h3(write)h3(open)h1(close)h3(lseek)h2(dup2)h3(execve)h2(munmap)h(fork)h1(exit)h2(gettimeofday)h3(socket)h3(connect));
 #if SYS_pipe
  asm(h(pipe));
 #else
