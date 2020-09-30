@@ -5,7 +5,7 @@ O V*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,un
           dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,P(xtmMA,ea1(mkn,x))A y=mR(cn[xt]);xtt?dex(x,y):rsh(len(x),y)) //                                       mkl   '   /    \  ':   /:  \:
 A2(id_/*x0y0*/,xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1][C(4,0,0,1,1,2,2,3,3,2,4)[xv]]):mkn(fir(yR)))
-A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtA,app(x,a,n))C k=max(n,xk);F(n,k-=a[i]!=au_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,n*ZV);u)
+A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtA,app(x,a,n))C k=max(n,xk);F(n,k-=a[i]!=au_plc)A u=AK(k,atn(tp,n+1));ux=xR;mc(ua+1,a,8*n);u)
 S A getM(A x/*0*/,L j)_(asrt(xtM);A y=xy,u=a0();F(yn,u=apd(u,get(yai,j)))am(mR(xx),u))
 A get(A x/*0*/,L i)_(xtA?mR(xai):xtI?ai(xii):xtL?al(xli):xtS?as(xii):xtC?ac(xci):xtD?ad(xdi):xtm?get(xy,i):xtM?getM(x,i):xR)
 A getr(A x/*0*/,L i)_(asrt(!xtt);in(i,xn)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
@@ -23,7 +23,7 @@ AX(app,P(xtT,xtA?idxA(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,
  P(xtm,A y=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtM,A y=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(tm,x),a,n))
  P(n<xk,prj(x,a,n))P(xtv,n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))P(xtu,((A1*)vf[xv])(*a))P(xtw,A y=*a;AK(0<xv&&xv<4&&yk==2?1:fun(y)?yk:1,AV(xv,atnv(tr,1,a))))P(xto,run(x,a,n))
- P(xtp,P(n+xn>9,ern(n,a))I m=xn-1,j=0;A b[8];F(m,b[i]=xa[i+1]==au_plc&&j<n?a[j++]:mR(xa[i+1]))I l=max(0,n-j);mc(b+m,a+j,l*ZV);app(xx,b,m+l))
+ P(xtp,P(n+xn>9,ern(n,a))I m=xn-1,j=0;A b[8];F(m,b[i]=xa[i+1]==au_plc&&j<n?a[j++]:mR(xa[i+1]))I l=max(0,n-j);mc(b+m,a+j,8*l);app(xx,b,m+l))
  P(xtq,app(xx,&(A){N(app(xy,a,n))},1))etn(n,a))
 A1(val,P(xtS,A y=glb;F(xn,et(!ytm,x)A z=yx,u=yy;ed(!ztS||!utA,x)I k=xii;L j=fndi(z,k);P(j<0,xr;err(syp(k)))y=ua[j])xr;yR)
  P(xtA,P(!xn,x)P(xn==1,fir(x))P(xn>9,err("mxa",x))x=mut(x);A u=app(xx,&xy,xn-1);mr(AN(1,x));u)P(xtC,x=N(cpl(N(prs(x))));dex(x,run(x,0,0)))
@@ -35,21 +35,21 @@ S I stp(L i,A x/*0*/,A**pp)_(A y=**pp;ed(!ytm,x)**pp=y=mut(y);A z=yx;ed(!ztS,x)L
  yy=j==un?apd(u,aa0()):mut(u);asrt(Ar(yy)==1);*pp=(A*)dat(yy)+j;1)
 S A*pth(A x/*1*/)_(x=enla(x);A y=glb;asrt(xtS&&Ar(y)==1&&ytm&&At(yx)==tS&&At(yy)==tA);L j=fpi(&yx,*xi);Y(j==An(yy),yy=apd(yy,xn>1?aa0():au0))
  A*p=(A*)dat(yy)+j;F(xn-1,P(!stp(i,x,&p),(A*)0))xr;p)
-S A mend(O A*a,I n,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*ZV);*p=mR(N(f(b,n))))
+S A mend(O A*a,I n,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*8);*p=mR(N(f(b,n))))
 AA(am1,A x=*a,y=a[1],z=a[2];
  P(xtm,x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rsh(al(An(xx)-An(xy)),id_(z,xy)));
-  A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*ZV);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
+  A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*8);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
  P(xtt,etn(n,a))
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
-  L i=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*ZV);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
+  L i=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*8);A u=app(z,b,n-2);zr;set(x,i,Nx(u)))
  P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==t_lst(At(a[3])),x=mut(x);A u=a[3];I d=utT;u=enla(u);ei(d&&yn-un,x,y,u)y=gL(y);
   ei(!m2(y,m2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][7])(xc,xn,yl,yn,uc,d):1)))x)
  P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);A u=a[3];I d=utT;u=enla(u);el(d&&yn-un,x,y,u)
   x=m2(y,m2(u,F(yn,L j=yli;Y(!in(j,xn),x=0;B)xc[j]=uc[d*i])x));ei(!x)x)
  rdc(cv('@'),a,n))
 AA(amd,A x=*a;xts?mend(a,n,am1):am1(a,n))
-AA(dm1,A x=*a,y=a[1],z=a[2];L m=len_(y);P(!m||y==au0,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*ZV);dex(z,app(z,b,n-2)))
- P(m==1,A b[8];mc(b,a,n*ZV);b[1]=fir(y);am1(b,n))P(n-4,enn(n,a))K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))
+AA(dm1,A x=*a,y=a[1],z=a[2];L m=len_(y);P(!m||y==au0,yr;A b[8];*b=x;mc(b+1,a+3,(n-3)*8);dex(z,app(z,b,n-2)))
+ P(m==1,A b[8];mc(b,a,n*8);b[1]=fir(y);am1(b,n))P(n-4,enn(n,a))K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))
 AA(dmd,A x=*a,y=a[1],z=a[2];n==3&&fun(x)?try(x,y,z):xtsS?mend(a,n,dm1):dm1(a,n))
 A K0(O C*s,I n)_(L m=mu;A x=val(aCn(s,n+1));mu=m;x)
 O C Zt[]={Tz},ZT[]={TZ};
