@@ -109,11 +109,13 @@ XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 
 #if i386
  #define mc(a...) memcpy(a)
+ #define ms(a...) memset(a)
+ #define mn(a...) strlen(a)
 #else
  #define mc(a...) __builtin_memcpy(a)
+ #define ms(a...) __builtin_memset(a)
+ #define mn(a...) __builtin_strlen(a)
 #endif
-#define ms(a...) __builtin_memset(a)
-#define mn(a...) __builtin_strlen(a)
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define syC(c) (2*(c)) //symbols: char to index
 
