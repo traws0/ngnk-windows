@@ -106,7 +106,12 @@ V init(),*memcpy(V*,O V*,L),mrn(I,O A*),*memset(V*,I,L),tilh(H*,UH),tili(I*,UI),
 I Ci(O C*,C),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),strlen(O C*),tru(A);
 XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
-#define mc(a...) __builtin_memcpy(a)
+
+#if i386
+ #define mc(a...) memcpy(a)
+#else
+ #define mc(a...) __builtin_memcpy(a)
+#endif
 #define ms(a...) __builtin_memset(a)
 #define mn(a...) __builtin_strlen(a)
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
