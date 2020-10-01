@@ -36,7 +36,7 @@ V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
   V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
  #else
   #if i386
-   asm(".globl _start;_start:push $0;push $0;jmp main");
+   asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
   #else
    asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
   #endif
