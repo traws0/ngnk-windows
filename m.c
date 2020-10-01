@@ -48,8 +48,7 @@ V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
  #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
  #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
  #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
- asm(".globl mmap_;mmap_:mov 4(%esp),%ebx;mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
- V*mmap_(I*);V*mmap(V*x,size_t y,I z,I u,I v,off_t w)_(I a[]={(I)x,y,z,u,v,w};(V*)mmap_(a))
+ asm(".globl mmap;mmap:mov %esp,%ebx;add $4,%ebx;mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
 #else
  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
  #define h1 h
