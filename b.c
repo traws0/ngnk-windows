@@ -5,17 +5,17 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define fm xz    //srcmap        bs,bg,bd:set|get|delete local    a:b   bz:branch if falsey  $[x;y;z]
 #define fl xa[3] //local syms    bm,bM:l|glb modified assign  a[i]+:b   bj,bp,br:jmp|pop|ret $[x;:y;]
 #define fc xa[4] //constants     bl,bL:make|unmake list   (a;b):(c;d)   bc:load constant     12;`a;""
+#define fu ((I*)dat(xa[5])) //last usages of locals
 #define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
 #define hc(a) ({I b=bc+fpa(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
-#define lu ((I*)dat(xa[5])) //last usages of locals
 #define l(a...) N(cl(a)) //compile left-hand side of assignment
 #define r(a...) N(cr(a)) //right
-S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))lu[i]=An(fb);h(bs|i);x)
+S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))fu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztA&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,r(x,za[zn-1-i]))h(bl);h(zn-1))
-  I k=gs(zts?z:zx);L i=fndi(fl,k);Y(i<0,hc(as(k));h(bM))E(lu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
+  I k=gs(zts?z:zx);L i=fndi(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
  P(ztA&&zx==av_mkl,h(bL);h(zn-1);F(zn-1,l(x,y,za[i+1]);h(bp))1)err("cpl");eso(mR(fs),o);0)
-S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)L i=fndi(fl,gs(y));P(i>=0,lu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
+S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)L i=fndi(fl,gs(y));P(i>=0,fu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
  P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA,hc(y==au_plc?au0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)
  P((utu||u==av0)&&n==3,r(x,yz);l(x,y,yy))
  P(u==cv('$')&&n>3,n--;I p[n];A*a=ya;F(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);
@@ -23,8 +23,8 @@ S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)L i=fndi(fl,gs(y));P(i>=0,l
  Y(u==cu('*')&&n==2,A z=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))Y(utw&&n==2,A z=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,A z=ya[n-1-i];z==au_plc?(p=1),hc(zR):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
-A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(lu,-1,64);F(yn,P(!cr(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
- y=fb;asrt(Ar(y)==1);Fj(16,I i=lu[j];Y(i>=0&&yci==bg,yci=bd))mr(xa[5]);AK(k,AT(to,x)))
+A1(cpl,C k=xk;x=mut(x);A y=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(fu,-1,64);F(yn,P(!cr(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
+ y=fb;asrt(Ar(y)==1);Fj(16,I i=fu[j];Y(i>=0&&yci==bg,yci=bd))mr(xa[5]);AK(k,AT(to,x)))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,C b=*c++;
