@@ -101,7 +101,7 @@ A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gD,gI,gL
 A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),e0(O C*),e1(O C*,A),e2(O C*,A,A),
- e3(O C*,A,A,A),errn(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);
+ e3(O C*,A,A,A),eN(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);
 V init(),*memcpy(V*,O V*,L),mrn(I,O A*),*memset(V*,I,L),tilh(H*,UH),tili(I*,UI),till(L*,UL);C*syp(I);
 I Ci(O C*,C),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),strlen(O C*),tru(A);
@@ -141,8 +141,8 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define _0Ni (1<<31)
 #define _0Wi (~_0Ni)
 
-#define err_(x,y,z,u,n,...) n
-#define err(a...) ({dbg(oo)err_(a,e3,e2,e1,e0)(a);})
+#define eH(x,y,z,u,n,...) n
+#define err(a...) ({dbg(oo)eH(a,e3,e2,e1,e0)(a);})
 #define eM "nyi","len","typ","dom","rnk","idx","prs","stk"
 #define en(x,a...) P(x,err((C*)0,##a))
 #define el(x,a...) P(x,err((C*)1,##a))
@@ -152,7 +152,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define ei(x,a...) P(x,err((C*)5,##a))
 #define ep(x,a...) P(x,err((C*)6,##a))
 #define es(x,a...) P(x,err((C*)7,##a))
-#define h(t,i) S A e##t##n(I n,O A*a)_(errn((C*)i,n,a))
+#define h(t,i) S A e##t##n(I n,O A*a)_(eN((C*)i,n,a))
 h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #undef h
 
