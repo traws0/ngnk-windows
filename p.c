@@ -15,8 +15,9 @@ S A ps(C**p)_(C*s=*p,c=*s;Y(c&0x80,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||Ci
 S A pS(C d)_(A x=aS(0);W(1,A y=d-'`'||*s-'"'?ps(&s):pC();y=str0(y);x=apv(x,I(syP(yc)));yr;P(*s-d,x)++s)0)
 S A lam(C k,A s,A b,A l)_(AK(k,atnv(tA,5,A(s,b,au0,l,au0))))
 S A1(shy,P(!xn,x)A y=xa[xn-1];Y(ytA&&yn,A z=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x) //if last expr is assignment, make it return ::
+S A px(I n)_(asrt(in(n,4));A x=aS(n);F(n,xii=syC('x'+i))x)
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;A y;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),']')));ep(!ytS||yn>8,y))
- A z=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=atnv(tS,na,I(Sx,Sy,Sz)))E(na=yn)A x=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
+ A z=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=px(na))E(na=yn)A x=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
 S A pt(C*v)_(A x;C c=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(av_mkl),')'));xn-2?x:xy==au_plc?xr,a0():las(x))P(c=='{',po())
  P(c=='"',p1(N(pC())))P(ltr(c),C*t=s;x=pS('.');Y(s-t==1&&c3('y',c,'z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
  P(c3('0',c,'9')&&s[1]==':',I u=s[2]==':';s+=2+u;I i=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(p0x()))

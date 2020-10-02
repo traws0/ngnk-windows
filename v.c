@@ -33,7 +33,7 @@ A1(gL,P(xtlL,x)P(xtt,gt(x,gL))P(xtD,A u=aL(xn);m2(x,cDL(xd,ul,un);u))x=N(gI(x));
 A1(gD,P(xtdD,x)P(xtt,gt(x,gD))x=N(gL(x));A u=aD(xn);m2(x,cLD(xl,ud,un);u))
 A1(gS,P(xtsS,x)P(xtC,x=str0(x);dex(x,as(syP(xc))))et(!xtc,x)as(syC(gc(x))))
 A2(cst,P(ytmMA,eac(cv('$'),A(x,y),2))P(xtil&&ytC,ap1(y,Ny(til(x))))en(!xts,x,y)
- I v=gs(x);A1*f=!v||v==Ss?gS:v==Sc?gC:v==Si?gI:v==Sl||v==Sj?gL:v==Sd||v==Sf?gD:0;ed(!f,y)f(y))
+ I i=gI(K("``s`c`i`l`j`d`f?",x));ed(i<0,y)(A1*[]){gS,gS,gC,gI,gL,gL,gD,gD}[i](y))
 A1(sqz,P(!xtA||!xn,x)A y=xx;C t=yt;P(!sim(y)&&t-tm,x)L n=xn;F(n,A y=xai;P(t-yt,x))P(t==tm,A z=yx;F(n,A y=xai;P(!mtc_(yx,z),x))aM(zR,flp(ea1(val,x))))
  t=t_lst(t);A u=atn(t,n);I w=ZT[t];asrt(!reft(t));P(w==1,m2(x,cLC(xl,uc,n);u))P(w==4,m2(x,cLI(xl,ui,n);u))asrt(w==8);F(n,A y=xai;uli=*yl);xr;u)
 A1(blw,P(xtA,x)P(xtt,a1(x))et(xtm,x)L n=len_(x);A u=aA(n);F(n,uai=get(x,i))xr;u)
