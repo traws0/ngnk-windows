@@ -102,16 +102,18 @@ A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fnd,gtn,id_,idx,ltn,mnm,
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),e0(O C*),e1(O C*,A),e2(O C*,A,A),
  e3(O C*,A,A,A),eN(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);
-V init(),*memcpy(V*,O V*,L),mrn(I,O A*),*memset(V*,I,L),tilh(H*,UH),tili(I*,UI),till(L*,UL);C*syp(I);
+V init(),*memcpy(V*,O V*,L),*memmove(V*,O V*,L),mrn(I,O A*),*memset(V*,I,L),tilh(H*,UH),tili(I*,UI),till(L*,UL);C*syp(I);
 I Ci(O C*,C),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),strlen(O C*),tru(A);
 XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 
 #if i386
+ #define mv(a...) memmove(a)
  #define mc(a...) memcpy(a)
  #define ms(a...) memset(a)
  #define mn(a...) strlen(a)
 #else
+ #define mv(a...) __builtin_memmove(a)
  #define mc(a...) __builtin_memcpy(a)
  #define ms(a...) __builtin_memset(a)
  #define mn(a...) __builtin_strlen(a)
