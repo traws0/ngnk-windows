@@ -28,4 +28,4 @@ CW=$(C) --target=wasm32 -U __SIZEOF_INT128__ -Dwasm
 o/wasm/%.o:%.c *.h makefile
 	@echo -n '$< ' && mkdir -pv o/wasm >/dev/null && $(CW) -c $< -o $@
 k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CW) $^ -o $@ -Wl,--no-entry,--export=init,--export=__heap_base,--initial-memory=33554432,--allow-undefined
+	@echo '$@ ' && $(CW) $^ -o $@ -Wl,--no-entry,--export=init,--export=rep,--export=__heap_base,--initial-memory=33554432,--allow-undefined
