@@ -1,6 +1,12 @@
-#include<sys/syscall.h> // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-#include<sys/mman.h>
+// ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 #include"a.h"
+#if wasm
+ S O I PROT_READ=0,PROT_WRITE=0,MAP_PRIVATE=0,MAP_ANON=0;
+ C*mmap(V*,I,I,I,I,I);I munmap(V*,I);size_t read(I,V*,size_t);
+#else
+ #include<sys/syscall.h>
+ #include<sys/mman.h>
+#endif
 #define nxt(x) ((A*)dat(x))[-2]
 L mu;S A mx[40];A glb,cn[tn],ci[3][5];dbg(S I ml;/*prevent allocations*/)S NI A oom()_(write(1,"oom\n",4);exit(1);0)
 S A ma(UI b)_(dbg(asrt(!ml));asrt(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;A x=mx[b];P(x,mx[b]=nxt(x);AB(b,x))I i=b+1;W(i<ZZ(mx)&&!mx[i],i++)
@@ -30,36 +36,40 @@ V init(){tilh((V*)sy0,128);sy1=sy0+256;glb=aa0();
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(_0Wi);ci[0][3]=ai(-_0Wi);ci[0][4]=ai(_0Ni);
  S L l[]={0,1,_0Wl,-_0Wl,_0Nl};F(5,ci[1][i]=al(l[i]))S D d[]={0,1,_0w,-_0w,_0n};F(5,ci[2][i]=ad(d[i]))}
 
-#ifndef shared
- S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
- I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
- #if __FreeBSD__
-  V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
- #else
-  #if i386
-   asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
+#ifndef wasm
+
+ #ifndef shared
+  S V repl()_(C b[256];L m=0,k;W(0<(k=read(0,b,256)),C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p)))
+  I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
+  #if __FreeBSD__
+   V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
   #else
-   asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
+   #if i386
+    asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
+   #else
+    asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
+   #endif
   #endif
  #endif
-#endif
 
-#if i386
- #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%eax;int $0x80;ret;"
- #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
- #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
- #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
- asm(".globl mmap;mmap:mov %esp,%ebx;add $4,%ebx;mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
-#else
- #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
- #define h1 h
- #define h2 h
- #define h3 h
- asm(h(mmap,"movq %rcx,%r10;"));
-#endif
-asm(h3(read)h3(write)h3(open)h1(close)h3(lseek)h2(dup2)h3(execve)h2(munmap)h(fork)h1(exit)h2(gettimeofday)h3(socket)h3(connect));
-#if SYS_pipe
- asm(h(pipe));
-#else
- asm(h(pipe2));I pipe(I x[2])_(pipe2(x,0)); //freebsd
+ #if i386
+  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%eax;int $0x80;ret;"
+  #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
+  #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
+  #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
+  asm(".globl mmap;mmap:mov %esp,%ebx;add $4,%ebx;mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
+ #else
+  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
+  #define h1 h
+  #define h2 h
+  #define h3 h
+  asm(h(mmap,"movq %rcx,%r10;"));
+ #endif
+ asm(h3(read)h3(write)h3(open)h1(close)h3(lseek)h2(dup2)h3(execve)h2(munmap)h(fork)h1(exit)h2(gettimeofday)h3(socket)h3(connect));
+ #if SYS_pipe
+  asm(h(pipe));
+ #else
+  asm(h(pipe2));I pipe(I x[2])_(pipe2(x,0)); //freebsd
+ #endif
+
 #endif
