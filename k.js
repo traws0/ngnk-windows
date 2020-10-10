@@ -3,7 +3,6 @@ const N='\n',te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8')
 ,uTA=_=>{let n=ta.value.length;ta.setSelectionRange(n,n)}
 ,uM=_=>M=new Uint8Array(K.memory.buffer)
 ,nyi=x=>(alert('nyi: '+x),-1)
-,O=_=>0
 ,env={
   mmap:(_,n)=>{H+=n;if(H>M.length){K.memory.grow((H-M.length-1>>>16)+1);uM()}return H-n}
  ,read:(_,a,n)=>{let s=S||prompt('stdin:')+N;S='';return te.encodeInto(s,M.subarray(a,a+n)).written}
@@ -19,8 +18,7 @@ const N='\n',te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8')
  ,exit        :_=>nyi('exit'        )
  ,gettimeofday:_=>nyi('gettimeofday')
  ,socket      :_=>nyi('socket'      )
- ,connect     :_=>nyi('connect'     )
- ,hop:O,hcl:O,now:O,u0c:O,u1c:O,cmd:O,v0c:O,v1c:O,frk:O}
+ ,connect     :_=>nyi('connect'     )}
 WebAssembly.instantiateStreaming(fetch('k.wasm'),{env})
            .then(x=>{K=x.instance.exports;uM();H=K.__heap_base;K.init()})
 onload=_=>{ta.onkeydown=x=>{if(x.which===13){
