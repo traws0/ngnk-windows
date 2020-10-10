@@ -1,5 +1,4 @@
 // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-#ifndef wasm
 #include<sys/mman.h>
 #include<sys/stat.h>
 #include<sys/socket.h>
@@ -39,4 +38,3 @@ A1(cmd,et(!xtC,x)Y(!xn||xn==1&&*xc=='\\',exit(0))C c=*xc;
 S A rda(I f)_(A u=aC(256-ZA);L m=0,k;W((k=read(f,uc+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,A z=aC(2*un+ZA);mc(zc,uc,m);ur;u=z))close(f);AN(m,u))
 A1(frk,et(!xtA||xn-2,x)A y=gkv(&x);ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];F(xn,a[i]=dat(xai))a[xn]=0;I p[4];pipe(p);pipe(p+2);
  P(!fork(),dup2(*p,0);dup2(p[3],1);F(4,close(p[i]))exit(execve(*a,(char**)a,0));0)xr;close(*p);close(p[3]);N(v1c(ai(p[1]),y));rda(p[2]))
-#endif
