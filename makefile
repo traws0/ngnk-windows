@@ -28,7 +28,7 @@ libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(C) $^ -shared -Dshared -o $@
 
 #wasm
-CW=$(C) --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz
+CW=$(C) --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include
 o/wasm/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o/wasm && $(CW) -c $< -o $@
 k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c))

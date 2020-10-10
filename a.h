@@ -1,14 +1,7 @@
 // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 //#define DEBUG
-#if wasm
- #define NAN      (0./0.)
- #define INFINITY (1./0.)
- #define M_PI 3.14159265358979323846
- typedef long size_t,ssize_t;ssize_t write(int,const void*,size_t);
-#else
- #include<unistd.h>
- #include<math.h>
-#endif
+#include<unistd.h>
+#include<math.h>
 #include"k.h"
 #include"g.h"
 #define      _(a...) {return({a;});}
