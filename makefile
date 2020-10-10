@@ -9,7 +9,9 @@ t:k #test
 	@+$(MAKE) -C t && g/0.sh
 c: #clean
 	@rm -rfv k libk.so o t/t
-.PHONY: t c
+w:k.wasm #wasm web server
+	@+$(MAKE) -C web && echo 'staring web server..' && web/web
+.PHONY: t c w
 
 o/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o && $(C) -c $< -o $@
