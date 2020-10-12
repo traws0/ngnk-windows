@@ -30,5 +30,5 @@ WebAssembly.instantiateStreaming(fetch('k.wasm'),{env})
            .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;K.init();ta.disabled=0;ap(ba+pr);ta.focus()})
 onload=_=>ta.onkeydown=x=>{if(x.which===13){
  let s=ta.value+'\n',p=ta.selectionStart,q=ta.selectionEnd
- if(p===q){p=s.slice(0,p).lastIndexOf('\n')+1;q+=s.slice(q).indexOf('\n')+1}
+ if(p===q){p=s.slice(0,p).lastIndexOf('\n')+1;p+=pr.length*(s.slice(p,p+pr.length)===pr);q+=s.slice(q).indexOf('\n')+1}
  I=s.slice(p,q);ap(q===s.length?'\n':I);K.rep();ap(pr);return!1}}
