@@ -58,6 +58,12 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define max(x,y) extr(x,y,>)
 S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)V exit(I);
 
+#define mv(a...) __builtin_memmove(a)
+#define mc(a...) __builtin_memcpy(a)
+#define ms(a...) __builtin_memset(a)
+#define mn(a...) __builtin_strlen(a)
+V*memcpy(V*,O V*,size_t),*memmove(V*,O V*,size_t),*memset(V*,I,size_t);size_t strlen(O C*);I strcmp(O C*,O C*);
+
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
 #define ZP 4096ll //page
@@ -102,16 +108,10 @@ A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fnd,gtn,id_,idx,ltn,mnm,
 A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(O C*,O C*),aCn(O C*,L),aCz(O C*),apc(A,C),apv(A,O V*),atn(C,L),atnv(C,L,O V*),catc(A,O C*,L),ea1(A1,A),e0(O C*),e1(O C*,A),e2(O C*,A,A),
  e3(O C*,A,A,A),eN(O C*,I,O A*),get(A,L),getr(A,L),gkv(A*),room(A,L);
-V init(),*memcpy(V*,O V*,size_t),*memmove(V*,O V*,size_t),mrn(I,O A*),*memset(V*,I,size_t),tilh(H*,UH),tili(I*,UI),till(L*,UL);C*syp(I);
-I Ci(O C*,C),eso(A,I),mtc_(A,A),strcmp(O C*,O C*),syP(O C*);
+V init(),mrn(I,O A*),tilh(H*,UH),tili(I*,UI),till(L*,UL);C*syp(I);
+I Ci(O C*,C),eso(A,I),mtc_(A,A),syP(O C*);
 L fndi(A,I),fndl(A,L),fpa(A*,A),fpc(A*,C),fpi(A*,I),fpl(A*,L),len_(A),now(),pl(C**),pu(C**),tru(A);
-size_t strlen(O C*);
 XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
-
-#define mv(a...) __builtin_memmove(a)
-#define mc(a...) __builtin_memcpy(a)
-#define ms(a...) __builtin_memset(a)
-#define mn(a...) __builtin_strlen(a)
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define syC(c) (2*(c)) //symbols: char to index
 
