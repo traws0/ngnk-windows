@@ -39,12 +39,10 @@ I rep()_(S C b[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q
   I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
   #if __FreeBSD__
    V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
-  #else
-   #if i386
+  #elif i386
     asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
-   #else
+  #else
     asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
-   #endif
   #endif
  #endif
 
