@@ -36,7 +36,7 @@ S O C*mime(O C*x)_(F(ZZ(m),P(!strcmp(x,*m[i]),m[i][1]))(V*)0)
 S V r404(I f){O C*s="HTTP/1.1 404 Not Found\nContent-Length:4\nConnection:close\nContent-Type:text/html\n\n404\n";wrZ(f,s);}
 S O C*web(I f)_(C b[1024];I r=read(f,b,Z b-1);P(r<=0,"read failed")b[r]=0;*sc0(b,10)=0;*sc0(b,13)=0;
  wr(1,b,mn(b));wrZ(1," - ");P(strncmp(b,"GET ",4),"not GET")C*s=b+4;s=sk(s,32);s+=*s=='/';*sc0(s,32)=0;
- Y(!*s,s="k.html")O C*d=sc0(s,'.'),*m=*d?mime(d+1):0;P(!m,"bad ext")
+ Y(!*s,s="index.html")O C*d=sc0(s,'.'),*m=*d?mime(d+1):0;P(!m,"bad ext")
  I g=open(s,O_RDONLY);P(g<0,"not found")I n=lseek(g,0,SEEK_END);lseek(g,0,SEEK_SET);
  #define h0 "HTTP/1.1 200 OK\nContent-Length:"
  #define h1 "\nConnection:close\nContent-Type:"
