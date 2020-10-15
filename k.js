@@ -1,5 +1,5 @@
 const BA='ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE\n',PR=' ',
-te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),{min,max}=Math,NL='\n',
+te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),{min,max}=Math,NL='\n',PL=PR.length,
 sel=(i,j)=>i==null?[ta.selectionStart,ta.selectionEnd]:ta.setSelectionRange(i,j==null?i:j),
 ap=s=>{ta.value+=s;sel(ta.value.length)},
 upd=_=>D=new DataView(K.memory.buffer),M=(p,n)=>new Uint8Array(K.memory.buffer).subarray(p,p+n),
@@ -31,15 +31,14 @@ S('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].length):E('BADF'))
 S('exit',x=>{ta.disabled=1;alert(x='exit('+x+')');throw Error(x)})
 'dup2,pipe,execve,fork,socket,connect'.split(',').map(x=>S(x,_=>N(x)))
 
-fetch('k.wasm')
- .then(r=>r.arrayBuffer())
- .then(b=>WebAssembly.instantiate(b,{env}))
+fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}))
  .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;K.init();ta.disabled=0;ap(BA+PR);ta.focus()})
 
 let ha=[''],hi=0 //history array and index
+const skpp=(i,s)=>i+PL*(s.slice(i,i+PL)===PR) //skip prompt
 onload=_=>ta.onkeydown=x=>{if(!x.ctrlKey&&!x.shiftKey&&!x.altKey){const k=x.which
  if(k===38||k===40){let s=ta.value,i=s.lastIndexOf(NL)+1;ha[hi]=s.slice(i);hi=max(0,min(ha.length-1,hi+k-39))
-  ta.value=s.slice(0,i)+ha[hi];sel(i);return!1}
+  ta.value=s.slice(0,i)+ha[hi];sel(skpp(i,ta.value));return!1}
  if(k===13){let s=ta.value,[p,q]=sel();if(p===q){p=s.slice(0,p).lastIndexOf(NL)+1;q=(s+NL).indexOf(NL,q)}
-  ha[hi]=s.slice(p,q);I=s.slice(p+PR.length*(s.slice(p,p+PR.length)===PR),q)+NL
+  ha[hi]=s.slice(p,q);I=s.slice(skpp(p,s),q)+NL
   let l=ha.length-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.length?I+NL:NL);K.rep();ap(PR);return!1}}}
