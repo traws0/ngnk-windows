@@ -1,8 +1,8 @@
 const BA='ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE\n',
-PR=' ',NL='\n',{log}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
+PR=' ',N='\n',{log}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
 Q=(s,f)=>s.split(',').map(f),cur=i=>ta.setSelectionRange(i,i),ap=s=>{ta.value+=s;cur(ta.value.n)},
 skpp=i=>/*skipprompt*/i+PR.n*(ta.value._(i,i+PR.n)===PR),upd=_=>D=new DataView(K.memory.buffer),
-M=(p,n)=>new Uint8Array(K.memory.buffer).sa(p,p+n),s4=(p,x)=>D.setUint32(p,x,1),S4=(p,a)=>a.forEach((x,i)=>s4(p+4*i,x)),
+M=(p,n)=>new Uint8Array(K.memory.buffer).sa(p,p+n),s4=(p,x)=>D.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
 g1=p=>D.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
 rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sa(0,n):a,min(m,n));return b}
 popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},E=(s,b=1)=>{if(b)throw Error(s)}
@@ -12,13 +12,13 @@ env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:Uint8Array(content)}*/}
 let K,D,H,I='',strace=0 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
 ;[Array,Uint8Array,String].forEach(x=>{
   Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
-  Q('_:slice,sa:subarray,io:indexOf,lio:lastIndexOf',
+  Q('_:slice,sa:subarray,io:indexOf,lio:lastIndexOf,fe:forEach',
    y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
 
 X('mmap',(p,n,_,_1,f,o)=>{if(!p){H+=n;let m=K.memory,l=m.buffer.byteLength;H>l&&m.grow((H-l-1>>>16)+1);upd();p=H-n}
  if(f>=0){f=fd[f];E('BADF',!f);M(p,n).set(fs[f.p].sa(o,o+n))}return p})
 X('munmap',_=>0)
-X('read',(f,a,n)=>{if(f<3){let s=I||prompt('stdin:')+NL;I='';return te.encodeInto(s,M(a,n)).written}
+X('read',(f,a,n)=>{if(f<3){let s=I||prompt('stdin:')+N;I='';return te.encodeInto(s,M(a,n)).written}
  f=fd[f];E('BADF',!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:M(a,n).set(fs[f.p].sa(f.o,n))})
 X('write',(f,a,n)=>{if(f<3)return(ap(td.decode(M(a,n))),n);f=fd[f];E('BADF',!f)
  let{p,o}=f,l=fs[p].n;(fs[p]=rsz(fs[p],max(l,o+n))).set(M(a,n),o);f.o+=n;return n})
@@ -35,9 +35,8 @@ fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}
 
 let ha=[''],hi=0 //history array and index
 onload=_=>ta.onkeydown=x=>{if(!x.ctrlKey&&!x.shiftKey&&!x.altKey){const k=x.which
- if(k===38||k===40){let s=ta.value,i=s.lio(NL)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
+ if(k===38||k===40){let s=ta.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
   ta.value=s._(0,i)+ha[hi];cur(skpp(i));return!1}
- if(k===13){let s=ta.value,p=ta.selectionStart,q=ta.selectionEnd
-  if(p===q){p=s._(0,p).lio(NL)+1;q=(s+NL).io(NL,q)}
-  ha[hi]=s._(p,q);I=s._(skpp(p),q)+NL
-  let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?I+NL:NL);K.rep();ap(PR);return!1}}}
+ if(k===13){let s=ta.value,p=ta.selectionStart,q=ta.selectionEnd;if(p===q){p=s._(0,p).lio(N)+1;q=(s+N).io(N,q)}
+  ha[hi]=s._(p,q);I=s._(skpp(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1
+  ap(q-s.n?I+N:N);K.rep();ap(PR);return!1}}}
