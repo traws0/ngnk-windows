@@ -4,7 +4,7 @@
 #define c__(Ta,Tr,pd)      S V c##Ta##Tr(O Ta*RE a,Tr*RE r,UL n)_(F(PAD(n,pd),r[i]=a[i]))
 #define cN(Ta,Tr,pd,Na,Nr) S V c##Ta##Tr(O Ta*RE a,Tr*RE r,UL n)_(F(PAD(n,pd),r[i]=a[i]==Na?Nr:a[i]))
 til_(L)til_(I)til_(H)rev_(C)rev_(I)rev_(L)
-c__(C,I,r)c__(I,C,a)c__(L,C,a)cN(I,L,r,_0Ni,_0Nl)cN(L,I,a,_0Nl,_0Ni)cN(L,D,a,_0Nl,_0n)cN(D,L,a,_0n,_0Nl)
+c__(C,I,r)c__(I,C,a)c__(L,C,a)cN(I,L,r,NI,NL)cN(L,I,a,NL,NI)cN(L,D,a,NL,ND)cN(D,L,a,ND,NL)
 A1(flp,P(xtmM,Y(xtm,A y=xy;er(!ytA||!yn,x)F(yn,A z=yai;en(!ztT,x))L m=An(*ya);F(yn,A z=yai;el(zn-m,x)))AT(xt^tm^tM,x))P(xtt,enl(enl(x)))
  P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,P(xti,I n=gi(x);I m=n<0;n*=1-2*m;A u=aI(n);tilI(ui,n);m?sub(u,ai(n)):u)

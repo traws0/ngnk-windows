@@ -15,7 +15,7 @@ S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
 #define hh(v,f) h(v,f,f,f)
 hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)
-h(dvd,y?x/y:(UI)_0Ni+(x<0)-(x>0),y?x/y:(UL)_0Nl+(x<0)-(x>0),x/y)h(mod,x>0?(y%x+x)%x:x?y/-x:_0Ni,x>0?(y%x+x)%x:x?y/-x:_0Nl,_0n)
+h(dvd,y?x/y:(UI)NI+(x<0)-(x>0),y?x/y:(UL)NL+(x<0)-(x>0),x/y)h(mod,x>0?(y%x+x)%x:x?y/-x:NI,x>0?(y%x+x)%x:x?y/-x:NL,ND)
 hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd(x)>cmpd(y))h(eql,x==y,x==y,*(L*)&x==*(L*)&y)
 #undef h
 
@@ -64,7 +64,7 @@ S A pen2(A x,A y,I v)_(P(xtm&&ytm,A u=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytm
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,m2(x,f(a,b,yc,yn);y))
  A u=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uc,un);u)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):pen2(x,y,vi('=')))
-A2(mod,P(xtl&&gl_(x)==_0Nl,out(dex(x,y)))P(xtil,pen2(x,y,vi('!')))
+A2(mod,P(xtl&&gl_(x)==NL,out(dex(x,y)))P(xtil,pen2(x,y,vi('!')))
  Y(xtt||xtm,Y(xtm,x=enl(x))x=rsh(al(len_(y)),x))Y(ytt||ytm,Y(ytm,y=enl(y))y=rsh(al(len_(x)),y))el(len_(x)-len_(y),x,y)am(x,y))
 #define h(c,s) A2(s,pen2(x,y,vi(c)))
 h('+',add)h('-',sub)h('*',mul)h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)h('>',gtn)
