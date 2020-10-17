@@ -21,15 +21,11 @@
 #define TD typedef
 #define RE restrict
 #define TY __typeof__
+#define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #define ALN(x) {asrt(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
 #define MS(x) #x
 #define XS(x) MS(x)
-#define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
-#define N(r)      N_(r,)
-#define N1(x,r)   N_(r,mr(x))
-#define N2(x,y,r) N_(r,mr(x);mr(y))
-#define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
@@ -49,7 +45,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define A1(f,b...) A f(A x          )_(b)
 #define A2(f,b...) A f(A x,A y      )_(b)
 #define A3(f,b...) A f(A x,A y,A z  )_(b)
-#define AX(f,b...) A f(A x,O A*a,I n)_(b)
+#define AX(f,b...) A f(A x,O A*a,I n)_(b) //doesn't consume x
 #define AA(f,b...) A f(    O A*a,I n)_(b)
 
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
@@ -89,16 +85,16 @@ S C t_lst(C t)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //corresponding list type
 // tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
+#define dat(x) ((V*)((x)<<16>>16))
+#define Ar(x) ((I*)dat(x))[-3]
 
 //getters                                   setters
 S  C At(A x)_(x>>56)                        S A AT(UL t,A x)_(asrt(t<=tn);               x<<8>>8|t<<56)
 S  C Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
 S  C Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
-#define dat(x) ((V*)((x)<<16>>16))
 S  C Ab(A x)_(C b=xc[-16];asrt(b<48);b)     S A AB( C b,A x)_(asrt(b<48);                  xc[-16]=b;x)
 S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
 S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1ll<<48);              xl[-1]=n;x)
-#define Ar(x) ((I*)dat(x))[-3]
 S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
@@ -137,8 +133,8 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define _0Ni (1<<31)
 #define _0Wi (~_0Ni)
 
-#define eH(x,y,z,u,n,...) n
 #define err(a...) ({dbg(oo)eH(a,e3,e2,e1,e0)(a);})
+#define eH(x,y,z,u,n,...) n
 #define eM "nyi","len","typ","dom","rnk","idx","prs","stk"
 #define en(x,a...) P(x,err((C*)0,##a))
 #define el(x,a...) P(x,err((C*)1,##a))
@@ -151,6 +147,10 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define h(t,i) S A e##t##n(I n,O A*a)_(eN((C*)i,n,a))
 h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #undef h
+#define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
+#define N(r)      N_(r,)
+#define N1(x,r)   N_(r,mr(x))
+#define N2(x,y,r) N_(r,mr(x);mr(y))
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))
