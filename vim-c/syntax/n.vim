@@ -3,7 +3,7 @@ sy match   n_comment "//[^\r\n]*\|/\*\_.\{-}\*/"                                
 sy region  n_h start="#" skip="\\\n" end="\r\|\n" contains=n_comment                                         |hi def link n_h preproc
 sy match   n_string /'\\\=.'\|"\([^\\"]\|\\.\)*"/ contains=n_e                                               |hi def link n_string string
 sy match   n_e "\\\(x\x\x\|.\)" contained                                                                    |hi def link n_e special
-sy keyword n_k TD S XT NI O __attribute__ asm enum do struct for                                             |hi def link n_k statement
+sy keyword n_k TD S SN XT NO O __attribute__ asm enum do struct for                                          |hi def link n_k statement
 sy keyword n_t A0 A1 A2 A3 AA AX nextgroup=n_vv                                                              |hi def link n_t normal
 sy keyword n_r return B continue                                                                             |hi def link n_r n_d_rr
 sy region  n_aa matchgroup=n_a start="("               end=")" contains=@n_x,n_a |sy match n_a "," contained |hi def link n_a nontext

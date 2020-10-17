@@ -16,7 +16,8 @@
 #define B break
 #define O const
 #define S static
-#define NI __attribute__((noinline))
+#define NO __attribute__((noinline))
+#define SN S NO
 #define XT extern
 #define TD typedef
 #define RE restrict

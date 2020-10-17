@@ -20,14 +20,14 @@ hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd
 #undef h
 
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
- S NI V v##t##t(T*RE a,T*RE b,rt*r,UL n){*r=v##t(*a,*b);}\
- S NI V v##t##T(T*RE a,T*RE b,rt*r,UL n)xtT\
- S NI V v##T##t(T*RE a,T*RE b,rt*r,UL n)xTt\
- S NI V v##T##T(T*RE a,T*RE b,rt*r,UL n)xTT\
- S NI V v##rdc##T(T*RE a,T*RE b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
- S NI V v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),r[i]=c=v##t(c,b[i])))\
- S NI V v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d))\
- S NI I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
+ SN V v##t##t(T*RE a,T*RE b,rt*r,UL n){*r=v##t(*a,*b);}\
+ SN V v##t##T(T*RE a,T*RE b,rt*r,UL n)xtT\
+ SN V v##T##t(T*RE a,T*RE b,rt*r,UL n)xTt\
+ SN V v##T##T(T*RE a,T*RE b,rt*r,UL n)xTT\
+ SN V v##rdc##T(T*RE a,T*RE b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
+ SN V v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),r[i]=c=v##t(c,b[i])))\
+ SN V v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d))\
+ SN I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
 #define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
 #define htT(f) {ALN(b)ALN(r)TY(*a)c=*a;F(PAD(n,a),*r++=f(c,*b++))}
 #define hTt(f) {ALN(a)ALN(r)TY(*b)c=*b;F(PAD(n,a),*r++=f(*a++,c))}
