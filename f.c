@@ -3,10 +3,7 @@
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S V rndl(L*r,UL n){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
  F(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=d<<45|d>>19)}
-S A rnd(L n,L m)_(
- Y(n==NL,n=-m)
- A x=aL(absL(n));rndl(xl,xn);
- Y(m,Y(m<=1ll<<32,F(xn,xli=(UI)xli*(UL)m>>32))E(F(xn,xli=(UL)xli%m)))
+S A rnd(L n,L m)_(Y(n==NL,n=-m)A x=aL(absL(n));rndl(xl,xn);Y(m,Y(m<=1ll<<32,F(xn,xli=(UI)xli*(UL)m>>32))E(F(xn,xli=(UL)xli%m)))
  Y(n<0,n=-n;el(n>m,x)F(n,L k=m-n+i;L v=((UL*)xl)[i]%=k+1;L*p=&xli;F(i,Y(xli==v,*p=k;B)))A y=rnd(n,0);F(n,SWP(xli,xl[(UL)yli%(i+1)]))yr)x)
 SN L fnda(A x/*0*/,A y/*1*/)_(asrt(xtA); F(xn,P(mtc_(xai,y),i))NL)L fpa(A*p,A y)_(A x=*p;L n=xn,i=fnda(x,y);P(i<0,*p=apd(x,y);n)yr;i)
 SN L fndc(A x/*0*/,C v)_(asrt(Zt[xt]==0);F(xn,P(xci==v,i))NL)L fpc(A*p,C v)_(A x=*p;L n=xn,i=fndc(x,v);P(i<0,*p=apv(x,&v);n)i)
