@@ -16,6 +16,10 @@
 #define B break
 #define O const
 #define S static
+#define Z sizeof
+#define ZZ(x) (Z(x)/Z(*(x)))
+#define ZP 4096ll //page
+#define ZA 32     //hdr
 #define NO __attribute__((noinline))
 #define SN S NO
 #define XT extern
@@ -40,7 +44,7 @@
  #endif
 #endif
 
-TD void V;TD char unsigned C;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
+TD void V;TD char unsigned C,UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
 TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define A0(f,b...) A f(             )_(b)
 #define A1(f,b...) A f(A x          )_(b)
@@ -52,6 +56,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
+#define rot(x,y) ({TY(x) x_=(x),y_=(y);x_<<y_|x_>>Z(x)*8-y;})
 S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
 
 #define mv(a...) __builtin_memmove(a)
@@ -60,10 +65,6 @@ S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'
 #define mn(a...) __builtin_strlen(a)
 V*memcpy(V*,O V*,size_t),*memmove(V*,O V*,size_t),*memset(V*,I,size_t);size_t strlen(O C*);I strcmp(O C*,O C*);V exit(I);
 
-#define Z sizeof
-#define ZZ(x) (Z(x)/Z(*(x)))
-#define ZP 4096ll //page
-#define ZA 32     //hdr
 XT O C Zt[],ZT[]; //type widths
 
 //         ()  ""  ,0i ,0  ,0. ,` +l!l l!l "a" 0i  0   0.   `  {}  1+  ++  +/  +:   +   /

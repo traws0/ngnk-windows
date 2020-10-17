@@ -14,7 +14,7 @@
 S O I lh=0x0100007f;S C octet(C**p)_(UL r=pu(p);r>255?err("addr"),0:r)
 S UI inet_addr_(C**p)_(C*s=*p;P(!*s,lh)C r[4];F(4,Y(i,P(*s-'.',err("addr");0)s++)r[i]=octet(&s))*p=s;*(UI*)r)
 S L hskt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);P(f<0,err("skt"),0)
- struct sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=p<<8|p>>8;0>connect(f,(struct sockaddr*)&a,Z(a))?err("conn"),0:f)
+ struct sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);0>connect(f,(struct sockaddr*)&a,Z(a))?err("conn"),0:f)
 S L hops(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("open"),0:f)
  UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:hskt(h,p))
 S I hop_(A x/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)et(*s-':')hops(s+1,fl))et(!xtC,x)x=str0(x);dex(x,hops(xc,fl)))
