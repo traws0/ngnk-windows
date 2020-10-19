@@ -15,7 +15,7 @@ wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x
                      .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f(x)})
 u8e=x=>encodeURIComponent(x).replace(/%../g,y=>String.fromCharCode(+('0x'+y._(1)))),
 u8d=x=>decodeURIComponent(x.replace(/./g,y=>'%'+(y.charCodeAt(0)+256).toString(16)._(-2)))
-let K,D,H,I='',strace=0,taout=ta1,replmode=0 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
+let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
 ;[Array,Uint8Array,String].forEach(x=>{
   Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
   Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach',
@@ -36,7 +36,7 @@ X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):E('BADF'))
 X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
-if(location.hash==='#r'){wa(x=>K.init())
+if(location.hash==='#r'){wa(x=>K.init()) //repl mode
  rdy(_=>{ta0.value=BA+PR;taout=ta0;let ha=[''],hi=0 //ha,hi:history array and index
   ta0.onkeydown=x=>{const k=kc(x)
    if(k===38||k===40){let s=ta0.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
@@ -44,7 +44,7 @@ if(location.hash==='#r'){wa(x=>K.init())
    if(k===13){let s=ta0.value,p=ta0.selectionStart,q=ta0.selectionEnd;if(p===q){p=s._(0,p).lio(N)+1;q=(s+N).io(N,q)}
     ha[hi]=s._(p,q);I=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?I+N:N);
     try{K.rep()}catch(x){ta0.disabled=1;error(x)};ap(PR);return!1}}})}
-else{
+else{ //editor|output mode
  rdy(_=>{ta1.style.display='';ta0.value=u8d(atob(location.hash._(2)))
   ta0.onkeydown=x=>{const k=kc(x)
    if(k===1013){const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);ta1.value='';location.hash='#c'+btoa(u8e(s))
