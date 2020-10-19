@@ -12,7 +12,7 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:Uint8Array(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}))
-                     .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f(x)})
+                     .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()})
 u8e=x=>encodeURIComponent(x).replace(/%../g,y=>String.fromCharCode(+('0x'+y._(1)))),
 u8d=x=>decodeURIComponent(x.replace(/./g,y=>'%'+(y.charCodeAt(0)+256).toString(16)._(-2)))
 let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
@@ -36,7 +36,7 @@ X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):E('BADF'))
 X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
-if(location.hash==='#r'){wa(x=>K.init()) //repl mode
+if(location.hash==='#r'){wa(_=>K.init()) //repl mode
  rdy(_=>{ta0.value=BA+PR;taout=ta0;let ha=[''],hi=0 //ha,hi:history array and index
   ta0.onkeydown=x=>{const k=kc(x)
    if(k===38||k===40){let s=ta0.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
@@ -48,5 +48,5 @@ else{ //editor|output mode
  rdy(_=>{ta1.style.display='';ta0.value=u8d(atob(location.hash._(2)))
   ta0.onkeydown=x=>{const k=kc(x)
    if(k===1013){const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);ta1.value='';location.hash='#c'+btoa(u8e(s))
-    wa(x=>{const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
+    wa(_=>{const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
            try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}});return!1}}})}
