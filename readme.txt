@@ -9,7 +9,6 @@ p.c  parser
 b.c  bytecode compiler and virtual machine
 k.c  eval/apply/mend: . @
 a.c  arithmetic verbs
-o.c  order and equivalence: <x >x x~y
 f.c  find/random: x?y
 h.c  shape-related: x#y ,x x,y
 s.c  object to string
