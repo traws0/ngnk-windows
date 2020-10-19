@@ -32,20 +32,18 @@ V init(){tilH((V*)sy0,128);sy1=sy0+256;glb=aa0();
  S L l[]={0,1,WL,-WL,NL};F(5,ci[1][i]=al(l[i]))S D d[]={0,1,WD,-WD,ND};F(5,ci[2][i]=ad(d[i]))}
 I rep()_(S C b[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 
-#ifndef wasm
-
- #ifndef shared
-  S V repl()_(W(rep()))
-  I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)repl();exit(0);0)
-  #if __FreeBSD__
-   V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
-  #elif i386
-    asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
-  #else
-    asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
-  #endif
+#ifndef shared
+ I main(I n,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)W(rep())exit(0);0)
+ #if __FreeBSD__
+  V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
+ #elif i386
+  asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
+ #elif !wasm
+  asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
  #endif
+#endif
 
+#if !wasm
  #if i386
   #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%eax;int $0x80;ret;"
   #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
@@ -65,5 +63,4 @@ I rep()_(S C b[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q
  #else
   asm(h(pipe2));I pipe(I x[2])_(pipe2(x,0)); //freebsd
  #endif
-
 #endif

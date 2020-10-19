@@ -1,23 +1,9 @@
 <!doctype html>
 <html lang=en><head><meta charset=utf-8><title>ngn/k</title><link rel=icon href='data:;base64,iVBORw0KGgo='><style>
 *{padding:0;margin:0;border:0;outline:0}
-body{display:flex;min-height:100vh;flex-direction:column;background:#222;color:#fff;font-family:monospace}
-header{padding:4px}
-textarea{background:#000;color:#fff;margin:0 2px}
-.content,textarea{display:flex;flex:1}
-#c_edit{display:flex;flex-direction:row}
+body{display:flex;flex-direction:row;min-height:100vh;background:#222;color:#fff;font-family:monospace}
+textarea{display:flex;flex:1;background:#000;color:#fff;margin:0 2px}
 </style></head><body>
-
-<header>
- <input type=radio name=rb id=rb0 accesskey=e><u>e</u>ditor (nyi)
- <input type=radio name=rb id=rb1 checked accesskey=r><u>r</u>epl
-</header>
-<div id=div0 class=content style=display:none>
- <textarea id=code placeholder=code></textarea>
- <textarea id=outp placeholder=output readonly></textarea>
-</div>
-<div id=div1 class=content>
- <textarea id=repl disabled></textarea>
-</div>
-
+<textarea id=ta0 autofocus></textarea>
+<textarea id=ta1 placeholder=output readonly style=display:none></textarea>
 <script src=k.js></script></body></html>
