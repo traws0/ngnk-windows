@@ -63,15 +63,15 @@ S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'
 #define mc(a...) __builtin_memcpy(a)
 #define ms(a...) __builtin_memset(a)
 #define mn(a...) __builtin_strlen(a)
-V*memcpy(V*,O V*,size_t),*memmove(V*,O V*,size_t),*memset(V*,I,size_t);size_t strlen(O C*);I strcmp(O C*,O C*);V exit(I);
+V*memcpy(V*,O V*,size_t),*memmove(V*,O V*,size_t),*memset(V*,I,size_t),exit(I);size_t strlen(O C*);I strcmp(O C*,O C*);
 
 XT O C Zt[],ZT[]; //type widths
 
-//         ()  ""  ,0h ,0i ,0  ,0. ,` +l!l l!l "a" 0h  0i  0   0.   `  {}  1+  ++  +/  +:   +   /
-enum      {tA ,tC ,tH ,tI ,tL ,tD ,tS ,tM ,tm ,tc ,th ,ti ,tl ,td ,ts ,to ,tp ,tq ,tr ,tu ,tv ,tw ,tn}; //types
-#define TS 'A','C','H','I','L','D','S','M','m','c','h','i','l','d','s','o','p','q','r','u','v','w' //symbols for types
-#define TZ  8 , 1 , 2 , 4 , 8 , 8 , 4 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8  //size in bytes
-#define Tz  4 , 0 , 1 , 2 , 3 , 3 , 2 , 4 , 4 , 3 , 3 , 3 , 3 , 3 , 3 , 4 , 4 , 4 , 4 , 3 , 3 , 3  //log2(size) with a special value 4 for reference types
+//         () "" ,h ,i ,0 ,d ,` +! ! "c" 0h 0i 0  0. `  {} 1+ ++ +/ +: +  /
+enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+#define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
+#define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
+#define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
 S C At(A);                                                     S I sim(A x)_(tm<xt&&xt<to) //simple    types
 S I reft(C t)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))     //packed    types
