@@ -67,11 +67,11 @@ V*memcpy(V*,O V*,size_t),*memmove(V*,O V*,size_t),*memset(V*,I,size_t);size_t st
 
 XT O C Zt[],ZT[]; //type widths
 
-//         ()  ""  ,0i ,0  ,0. ,` +l!l l!l "a" 0i  0   0.   `  {}  1+  ++  +/  +:   +   /
-enum      {tA ,tC ,tI ,tL ,tD ,tS ,tM ,tm ,tc ,ti ,tl ,td ,ts ,to ,tp ,tq ,tr ,tu ,tv ,tw ,tn}; //types
-#define TS 'A','C','I','L','D','S','M','m','c','i','l','d','s','o','p','q','r','u','v','w' //symbols for types
-#define TZ  8 , 1 , 4 , 8 , 8 , 4 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8  //size in bytes
-#define Tz  4 , 0 , 2 , 3 , 3 , 2 , 4 , 4 , 3 , 3 , 3 , 3 , 3 , 4 , 4 , 4 , 4 , 3 , 3 , 3  //log2(size) with a special value 4 for reference types
+//         ()  ""  ,0h ,0i ,0  ,0. ,` +l!l l!l "a" 0h  0i  0   0.   `  {}  1+  ++  +/  +:   +   /
+enum      {tA ,tC ,tH ,tI ,tL ,tD ,tS ,tM ,tm ,tc ,th ,ti ,tl ,td ,ts ,to ,tp ,tq ,tr ,tu ,tv ,tw ,tn}; //types
+#define TS 'A','C','H','I','L','D','S','M','m','c','h','i','l','d','s','o','p','q','r','u','v','w' //symbols for types
+#define TZ  8 , 1 , 2 , 4 , 8 , 8 , 4 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8 , 8  //size in bytes
+#define Tz  4 , 0 , 1 , 2 , 3 , 3 , 2 , 4 , 4 , 3 , 3 , 3 , 3 , 3 , 3 , 4 , 4 , 4 , 4 , 3 , 3 , 3  //log2(size) with a special value 4 for reference types
 S C At(A);                                                     S I sim(A x)_(tm<xt&&xt<to) //simple    types
 S I reft(C t)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))     //packed    types
