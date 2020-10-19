@@ -47,8 +47,6 @@ if(location.hash==='#r'){wa(x=>K.init())
 else{
  rdy(_=>{ta1.style.display='';ta0.value=u8d(atob(location.hash._(2)))
   ta0.onkeydown=x=>{const k=kc(x)
-   if(k===1013){const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);ta1.value=''
+   if(k===1013){const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);ta1.value='';location.hash='#c'+btoa(u8e(s))
     wa(x=>{const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
-           try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}})
-    return!1}
-   if(k===1032){location.hash='#c'+btoa(u8e(ta0.value));return!1}}})}
+           try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}});return!1}}})}
