@@ -12,9 +12,10 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:Uint8Array(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}))
-                     .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()})
-u8e=x=>encodeURIComponent(x).replace(/%../g,y=>String.fromCharCode(+('0x'+y._(1)))),
-u8d=x=>decodeURIComponent(x.replace(/./g,y=>'%'+(y.charCodeAt(0)+256).toString(16)._(-2)))
+                     .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()}),
+u8e=x=>String.fromCharCode(...te.encode(x)),
+u8d=x=>td.decode(new Uint8Array([...x].map(c=>c.charCodeAt(0))))
+
 let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
 ;[Array,Uint8Array,String].forEach(x=>{
   Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
