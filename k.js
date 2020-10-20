@@ -15,12 +15,30 @@ wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x
                      .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()}),
 u8e=x=>String.fromCharCode(...te.encode(x)),
 u8d=x=>td.decode(new Uint8Array([...x].map(c=>c.charCodeAt(0))))
-
+hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
+ [[[187,[153,154]],[132,[131,133]]],[[[141,142],[144,145]],[193,146]]]],136],63],[72,[[[[[[233,160],[170,171]],[217,
+ [254,2]]],184],[[[[177,181],178],218],[[[212,213],[3,4]],8]]],[[[[190,152],[[237,149],235]],[[155,156],[[134,139],
+ 239]]],[135,[[[157,158],159],[[5,6],9]]]]]]],123]]],[[[[[[[[[249,[[220,211],[251,11]]],[168,[14,17]]],[[196,[197,
+ 240]],[229,[[221,210],[12,13]]]]],[[[[[231,172],[173,174]],[199,[243,130]]],[[248,[18,19]],[[20,21],246]]],[[236,
+ [[238,147],148]],[[[222,207],23],[[204,206],24]]]]],[[[[232,[224,242]],[164,[[247,22],[25,26]]]],[140,[223,[[201,
+ 203],[245,27]]]]],85]],[96,[[[[[28,[244,29]],[202,30]],[[[226,188],[150,151]],[195,143]]],[[[[182,183],[175,176]],
+ [[189,200],127]],[169,198]]],36]]],122],[42,102]],[105,44]]],[51,10]]],[[48,[[[[[[89,83],[128,73]],125],[100,[94,
+ 46]]],116],[91,93]]],[[35,[[[[[126,[87,74]],71],99],111],57]],[[56,55],[[[[[70,[80,75]],[95,64]],[[[77,[[163,129],
+ 90]],38],[[227,81],62]]],88],[101,124]]]]]],[[[49,[[45,54],[[[121,[[[[[[[[216,255],252],[7,15]],[165,37]],[[[138,
+ 194],[191,185]],[225,208]]],[[161,86],[[241,[16,31]],[[166,167],230]]]],60],107]],40],[[[33,[[106,61],[76,82]]],65],
+ 41]]]],[[34,50],[[[[98,43],[[117,118],[112,109]]],[[92,47],[115,[67,104]]]],[53,[[110,114],[[84,[[[[137,[234,253]],
+ [[250,219],[209,192]]],[[228,[205,162]],113]],69]],120]]]]]],32]],
+hfc=Array(256),hfi=(x,s)=>typeof x==='number'?hfc[x]=s:hfi(x[0],s+0)+hfi(x[1],s+1),
+hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.charCodeAt(i)];r+=10000000;r=r._(0,r.n-r.n%8);
+        return r.replace(/.{8}/g,x=>String.fromCharCode(+('0b'+x)))}
+hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.charCodeAt(0)).toString(2)._(1)).replace(/10*$/,'')
+        let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
 let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
 ;[Array,Uint8Array,String].forEach(x=>{
   Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
   Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach',
    y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
+hfi(hft,'')
 
 X('mmap',(p,n,_,_1,f,o)=>{if(!p){H+=n;let m=K.memory,l=m.buffer.byteLength;H>l&&m.grow((H-l-1>>>16)+1);upd();p=H-n}
  if(f>=0){f=fd[f];E('BADF',!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
@@ -46,8 +64,8 @@ if(location.hash==='#r'){wa(_=>K.init()) //repl mode
     ha[hi]=s._(p,q);I=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?I+N:N);
     try{K.rep()}catch(x){ta0.disabled=1;error(x)};ap(PR);return!1}}})}
 else{ //editor|output mode
- rdy(_=>{ta1.style.display='';ta0.value=u8d(atob(location.hash._(2)))
+ rdy(_=>{ta1.style.display='';ta0.value=u8d(hfd(atob(location.hash._(2))))
   ta0.onkeydown=x=>{const k=kc(x)
-   if(k===1013){const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);ta1.value='';location.hash='#c'+btoa(u8e(s))
+   if(k===1013){const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);ta1.value='';location.hash='#c'+btoa(hfe(u8e(s)))
     wa(_=>{const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
            try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}});return!1}}})}
