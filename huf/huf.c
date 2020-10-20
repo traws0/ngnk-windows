@@ -23,9 +23,9 @@
 #define getdents(a...) syscall(SYS_getdents,a)
 TD void V;TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD long long L;
 S struct{O C*s;I n;}a[256];S I na;
-S I f[512],p[512],c[512][2],r[256],nr,l[256]; //f:freq,p:parent,c:children,r:roots,l:bitlengths
+S I f[512],p[512],c[512][2],r[256],nr,l[512]; //f:freq,p:parent,c:children,r:roots,l:bitlengths
 S V v(I x){Y(c[x][0]<0,pr("%d",x))E(I y=c[x][0],z=c[x][1];l[y]=l[z]=l[x]+1;pr("[");v(y);pr(",");v(z);pr("]"))}
-S I mr()_(I u=0,x=*r,b=f[x];F(nr,Y(f[r[i]]<b,b=f[x=r[u=i]]))r[u]=r[--nr];x)
+S I mr()_(I u=0,x=*r,b=f[x];F(nr,Y(f[r[i]]<b,b=f[x=r[u=i]]))r[u]=r[--nr];x) //find and remove root with min freq
 I main(){
  //gather data
  I d=open("../g",0);C b[1024];
@@ -45,6 +45,4 @@ I main(){
  v(*r);pr("\n");
  //calculate improvement
  I n0=0,n1=0;F(na,n0+=a[i].n;O C*s=a[i].s;Fj(a[i].n,n1+=l[(UC)s[j]]))
- n1=(n1+7)/8;
- pr("n0:%d,n1:%d (%d%%)\n",n0,n1,(n0-n1)*100/n0);
-}
+ n1=(n1+7)/8;pr("n0:%d,n1:%d,improvement:%d%%\n",n0,n1,(n0-n1)*100/n0);}
