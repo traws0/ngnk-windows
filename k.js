@@ -1,20 +1,20 @@
 const BA='ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE\n',
 PR=' ',N='\n',{log,error}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
+C=String.fromCharCode,U8=x=>new Uint8Array(x),
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{taout.value+=s;cur(taout,taout.value.n)},
 skPR=i=>i+PR.n*(ta0.value._(i,i+PR.n)===PR),upd=_=>D=new DataView(K.memory.buffer),
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
-M=(p,n)=>new Uint8Array(K.memory.buffer).sub(p,p+n),s4=(p,x)=>D.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
+M=(p,n)=>U8(K.memory.buffer).sub(p,p+n),s4=(p,x)=>D.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
 g1=p=>D.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
 rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b}
 popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},E=(s,b=1)=>{if(b)throw Error(s)}
 X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
  try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
-env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:Uint8Array(content)}*/},
+env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}))
                      .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()}),
-u8e=x=>String.fromCharCode(...te.encode(x)),
-u8d=x=>td.decode(new Uint8Array([...x].map(c=>c.charCodeAt(0))))
+u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0))))
 hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
  [[[187,[153,154]],[132,[131,133]]],[[[141,142],[144,145]],[193,146]]]],136],63],[72,[[[[[[233,160],[170,171]],[217,
  [254,2]]],184],[[[[177,181],178],218],[[[212,213],[3,4]],8]]],[[[[190,152],[[237,149],235]],[[155,156],[[134,139],
@@ -29,15 +29,15 @@ hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[
  41]]]],[[34,50],[[[[98,43],[[117,118],[112,109]]],[[92,47],[115,[67,104]]]],[53,[[110,114],[[84,[[[[137,[234,253]],
  [[250,219],[209,192]]],[[228,[205,162]],113]],69]],120]]]]]],32]],
 hfc=Array(256),hfi=(x,s)=>typeof x==='number'?hfc[x]=s:hfi(x[0],s+0)+hfi(x[1],s+1),
-hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.charCodeAt(i)];r+=10000000;r=r._(0,r.n-r.n%8);
-        return r.replace(/.{8}/g,x=>String.fromCharCode(+('0b'+x)))}
-hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.charCodeAt(0)).toString(2)._(1)).replace(/10*$/,'')
+hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.ch(i)];r+=10000000;r=r._(0,r.n-r.n%8);
+        return r.replace(/.{8}/g,x=>C('0b'+x))}
+hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.ch(0)).toString(2)._(1)).replace(/10*$/,'')
         let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
 let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
 ;[Array,Uint8Array,String].forEach(x=>{
-  Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
-  Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach',
-   y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
+ Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
+ Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach,ch:charCodeAt',
+  y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
 hfi(hft,'')
 
 X('mmap',(p,n,_,_1,f,o)=>{if(!p){H+=n;let m=K.memory,l=m.buffer.byteLength;H>l&&m.grow((H-l-1>>>16)+1);upd();p=H-n}

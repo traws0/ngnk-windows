@@ -10,20 +10,16 @@
 #define    _(a...) {return({a;});}
 #define  W(x,a...) while(x){a;}
 #define  Y(x,a...) if(x){a;}
-#define    E(a...) else{a;}
 #define  F(x,a...) for(I i=0,n_=(x);i<n_;i++){a;}
-#define Fj(x,a...)for(I j=0,n_=(x);j<n_;j++){a;}
-#define pr printf
 #define TD typedef
 #define Z sizeof
 #define S static
-#define O const
-#define ms memset
+#define o printf
 #define getdents(a...) syscall(SYS_getdents,a)
 TD void V;TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD long long L;
-S struct{O C*s;I n;}a[256];S I na,f[512],p[512],c[512][2],r[256],nr; //f:freq,p:parent,c:children,r:roots
-S V v(I x){Y(c[x][0]<0,pr("%d",x))E(I y=c[x][0],z=c[x][1];pr("[");v(y);pr(",");v(z);pr("]"))}
-S I g()_(I u=0,x=*r,b=f[x];F(nr,Y(f[r[i]]<b,b=f[x=r[u=i]]))r[u]=r[--nr];x) //find and remove root with min freq
+S struct{C*s;I n;}a[256];S I na,f[512],p[512],c[512][2],r[256],nr; //f:freq,p:parent,c:children,r:roots
+S V v(I x){c[x][0]>=0?o("["),v(c[x][0]),o(","),v(c[x][1]),o("]"):o("%d",x);}
+S I g()_(I u=0,x=*r,b=f[x];F(nr,Y(f[r[i]]<b,b=f[x=r[u=i]]))r[u]=r[--nr];x) //rm and return root with least freq
 I main(){I d=open("../g",0);C b[1024];
  W(1,I k=getdents(d,b,Z b),i=0;Y(k<=0,break)
   W(i<k,struct{long _;I _1;UH l;C s[];}*e=(V*)(b+i);C*s=e->s;
@@ -32,5 +28,5 @@ I main(){I d=open("../g",0);C b[1024];
     Y(*s=='/'&&s[1]=='h',W(*s&&*s-10,s++))a[na].s=s;a[na].n=n+s0-s;na++)
    i+=e->l))
  close(d);
- F(256,f[i]=1)F(na,O C*s=a[i].s;Fj(a[i].n,f[(UC)s[j]]++))ms(p,-1,Z p);ms(c,-1,Z c);F(nr=256,r[i]=i)
- F(255,I x=g(),y=g(),z=r[nr++]=256+i;c[z][0]=x;c[z][1]=y;p[x]=z;p[y]=z;f[z]=f[x]+f[y])v(*r);pr("\n");}
+ F(256,f[i]=1)F(na,C*s=a[i].s;F(a[i].n,f[(UC)s[i]]++))memset(p,-1,Z p);memset(c,-1,Z c);F(nr=256,r[i]=i)
+ F(255,I x=g(),y=g(),z=r[nr++]=256+i;c[z][0]=x;c[z][1]=y;p[x]=z;p[y]=z;f[z]=f[x]+f[y])v(*r);o("\n");}
