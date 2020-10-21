@@ -43,4 +43,4 @@ A1(asc,P(xtA,P(xn>WI,err("lmt",x))A*a=xa,u=til(ai(xn));I n=xn,i=n/2;W(i-->0,sft(
  P(xtm,A y=gkv(&x);idx(x,N(asc(y))))P(xtIL||xtC,asci(x))P(xtS,asc(N(ea1(str,x))))P(xtD,asc(blw(x)))et(!(xts||xti),x)hop(x))
 A1(dsc,P(xti,hcl(x))P(xtm,A y=gkv(&x);idx(x,Nx(dsc(y))))et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
 A1(grp,P(xtt,et(!xtil)K("{(2#x)#1i,`i$&x}",x))P(xtm,A u=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)A y=atn(xt,0),u=a0();C w=Zt[xt];
- F(xn,L j=!w?fpc(&y,xci):w==2?fpi(&y,xii):w==3?fpl(&y,xli):fpa(&y,mR(xai));Y(j==un,u=apd(u,aL(0)))ua[j]=apv(ua[j],&i))xr;am(y,u))
+ F(xn,L j=!w?fpC(&y,xci):w==2?fpI(&y,xii):w==3?fpL(&y,xli):fpA(&y,mR(xai));Y(j==un,u=apd(u,aL(0)))ua[j]=apv(ua[j],&i))xr;am(y,u))

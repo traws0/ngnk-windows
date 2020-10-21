@@ -7,15 +7,15 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define fc xa[4] //constants     bl,bL:make|unmake list   (a;b):(c;d)   bc:load constant     12;`a;""
 #define fu ((I*)dat(xa[5])) //last usages of locals
 #define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
-#define hc(a) ({I b=bc+fpa(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
+#define hc(a) ({I b=bc+fpA(&fc,a);P(b>bC,err("mxc"))h(b);}) //add a "load constant" instruction
 #define l(a...) N(cl(a)) //compile left-hand side of assignment
 #define r(a...) N(cr(a)) //right
-S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpi(&fl,gs(z));P(i>15,err("mxl"))fu[i]=An(fb);h(bs|i);x)
+S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,L i=fpI(&fl,gs(z));P(i>15,err("mxl"))fu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztA&&At(zx)==ts),Y(zts,hc(a0()))E(F(zn-1,r(x,za[zn-1-i]))h(bl);h(zn-1))
-  I k=gs(zts?z:zx);L i=fndi(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
+  I k=gs(zts?z:zx);L i=fndI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
  P(ztA&&zx==av_mkl,h(bL);h(zn-1);F(zn-1,l(x,y,za[i+1]);h(bp))1)err("cpl");eso(mR(fs),o);0)
-S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)L i=fndi(fl,gs(y));P(i>=0,fu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
+S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)L i=fndI(fl,gs(y));P(i>=0,fu[i]=An(fb);h(bg|i);x))P(ytS&&yn==1,hc(as(*yl));x)
  P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA,hc(y==au_plc?au0:yR);x)L n=yn;P(!n,hc(yR);x)A u=yx;P(utS&&n==1,hc(uR);x)
  P((utu||u==av0)&&n==3,r(x,yz);l(x,y,yy))
  P(u==cv('$')&&n>3,n--;I p[n];A*a=ya;F(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);
