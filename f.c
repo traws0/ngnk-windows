@@ -6,9 +6,9 @@ S V rndl(L*r,UL n){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260e
 S A rnd(L n,L m)_(Y(n==NL,n=-m)A x=aL(absL(n));rndl(xl,xn);Y(m,Y(m<=1ll<<32,F(xn,xli=(UI)xli*(UL)m>>32))E(F(xn,xli=(UL)xli%m)))
  Y(n<0,n=-n;el(n>m,x)F(n,L k=m-n+i;L v=((UL*)xl)[i]%=k+1;L*p=&xli;F(i,Y(xli==v,*p=k;B)))A y=rnd(n,0);F(n,SWP(xli,xl[(UL)yli%(i+1)]))yr)x)
 SN L fndA(A x/*0*/,A y/*1*/)_(asrt(xtA);F(xn,P(mtc_(xai,y),i))NL)L fpA(A*p,A y)_(A x=*p;L n=xn,i=fndA(x,y);P(i<0,*p=apd(x,y);n)yr;i)
-#define fnd_(T) NO L fnd##T(A x/*0*/,T v)_(F(xn,P(((T*)dat(x))[i]==v,i))NL)
-#define fp_(T) L fp##T(A*p,T v)_(A x=*p;L n=xn,i=fnd##T(x,v);P(i<0,*p=apv(x,&v);n)i)
-fnd_(C)fnd_(I)fnd_(L)fp_(C)fp_(I)fp_(L)
+#define f_(T) NO L fnd##T(A x/*0*/,T v)_(F(xn,P(((T*)dat(x))[i]==v,i))NL)\
+              L fp##T(A*p,T v)_(A x=*p;L n=xn,i=fnd##T(x,v);P(i<0,*p=apv(x,&v);n)i)
+f_(C)f_(I)f_(L)
 A2(fnd,
  P(xtt,P(xts,L i=gl(K("``j`hex`aes?",x));en(i<0,y)(A1*[]){des,jsr,unh,aes1}[i](y))et(!xtil,x,y)
        P(ytl,rnd(gl(gL(x)),gl(y)))P(yti,K("{`i$x?`l$y}",x,y))P(ytc,K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))K("{y@x?#y}",x,y))
