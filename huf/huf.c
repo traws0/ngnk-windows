@@ -16,7 +16,7 @@
 #define o printf
 #define getdents(a...) syscall(SYS_getdents,a)
 TD void V;TD char C;TD unsigned char UC;TD short H;TD unsigned short UH;TD int I;TD long long L;
-S struct{C*s;I n;}a[256];S I na,f[512],p[512],c[512][2],r[256],nr; //f:freq,p:parent,c:children,r:roots
+S struct{C*s;I n;}a[256];S I na,f[512],c[512][2],r[256],nr; //f:freq,c:children,r:roots
 S V v(I x){c[x][0]>=0?o("["),v(c[x][0]),o(","),v(c[x][1]),o("]"):o("%d",x);}
 S I g()_(I u=0,x=*r,b=f[x];F(nr,Y(f[r[i]]<b,b=f[x=r[u=i]]))r[u]=r[--nr];x) //rm and return root with least freq
 I main(){I d=open("../g",0);C b[1024];
@@ -27,5 +27,5 @@ I main(){I d=open("../g",0);C b[1024];
     Y(*s=='/'&&s[1]=='h',W(*s&&*s-10,s++))a[na].s=s;a[na].n=n+s0-s;na++)
    i+=e->l))
  close(d);
- F(256,f[i]=1)F(na,C*s=a[i].s;F(a[i].n,f[(UC)s[i]]++))memset(p,-1,Z p);memset(c,-1,Z c);F(nr=256,r[i]=i)
- F(255,I x=g(),y=g(),z=r[nr++]=256+i;c[z][0]=x;c[z][1]=y;p[x]=z;p[y]=z;f[z]=f[x]+f[y])v(*r);o("\n");}
+ F(256,f[i]=1)F(na,C*s=a[i].s;F(a[i].n,f[(UC)s[i]]++))memset(c,-1,Z c);F(nr=256,r[i]=i)
+ F(255,I x=g(),y=g(),z=r[nr++]=256+i;c[z][0]=x;c[z][1]=y;f[z]=f[x]+f[y])v(*r);o("\n");}
