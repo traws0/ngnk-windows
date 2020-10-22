@@ -7,10 +7,10 @@
 #include<string.h>
 #include<sys/syscall.h>
 #include<sys/mman.h>
-#define    _(a...) {return({a;});}
-#define  W(x,a...) while(x){a;}
-#define  Y(x,a...) if(x){a;}
-#define  F(x,a...) for(I i=0,n_=(x);i<n_;i++){a;}
+#define   _(a...) {return({a;});}
+#define W(x,a...) while(x){a;}
+#define Y(x,a...) if(x){a;}
+#define F(x,a...) for(I i=0,n_=(x);i<n_;i++){a;}
 #define TD typedef
 #define Z sizeof
 #define S static
