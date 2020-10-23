@@ -1,9 +1,10 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-S I ltr(C c)_(c3('a',c|32,'z')||c>127)S I ldg(C c)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S D p10(I n)_(D d=1;F(n,d*=10)d)
-I Ci(O C*s,C c)_(O C*t=s;W(*t&&*t-c,t++)t-s)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
+S I ltr(C c)_(c3('a',c|32,'z')||c>127)S I ldg(C c)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))
+O C*sc0(O C*s,I c)_(W(*s&&*s-c,s++)s)I Ci(O C*s,I c)_(sc0(s,c)-s)
+S A1(p1,xn-1?x:fir(x))S A pb(A,C);S D p10(I n)_(D d=1;F(n,d*=10)d)
 L pu(C**p)_(C*s=*p;L v=0;C c=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
-S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))
- Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
+S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
+ Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
 S D pd(C**p)_(I m=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S C*s0,*s,na;
 S A0(pIL,A x=aL(0);C c;I b=0;W(1,L l=pl(&s);c=*s;Y(!l&&c=='N',l=NL;c=*++s)E(b|=l<NI||l>WI)x=apv(x,&l);Y(c-32||!num(s+1),B)c=*++s)
@@ -21,7 +22,7 @@ S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;A y;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),
  A z=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=px(na))E(na=yn)A x=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
 S A pt(C*v)_(A x;C c=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(av_mkl),')'));xn-2?x:xy==au_plc?xr,a0():las(x))P(c=='{',po())
  P(c=='"',p1(N(pC())))P(ltr(c),C*t=s;x=pS('.');Y(s-t==1&&c3('y',c,'z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
- P(c3('0',c,'9')&&s[1]==':',I u=s[2]==':';s+=2+u;I i=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
+ P(dgt(c)&&s[1]==':',I u=s[2]==':';s+=2+u;I i=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!ldg(s[-1])&&Ci(")]}\"",s[-1])==4)),
   L d=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;Y(!ldg(c),B)W(ldg(c)||c=='.'||c==':',d|=Ci(".nwe",c)<4;c=*++p))p1(N(d?pD():pIL())))
  I i=Ci(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,au_plc)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
