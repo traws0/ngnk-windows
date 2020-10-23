@@ -33,7 +33,7 @@ L now()_(struct timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A1(cmdw,asrt(xtC);L n=mu;P(!xn,xr;al(n))A y=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
 S A1(cmdt,asrt(xtC);C*s=xc;L n=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xc),x))))));F(n,mr(Nx(app(x,0,0))))xr;al((now()-t+500)/1000))
 A1(cmd,et(!xtC,x)Y(!xn||xn==1&&*xc=='\\',exit(0))C c=*xc;
- Y(c3('a',c,'z')&&(xn==1||xc[1]==32||xc[1]==':'),I i=1;W(i<xn&&xci==32,i++)x=N(cut(al(i),x));A1*f=(A1*[]){ldf,cmdt,cmdw,0}[Ci("ltw",c)];P(f,f(x)))
+ Y(c3('a',c,'z')&&(xn==1||xc[1]==32||xc[1]==':'),I i=1;W(i<xn&&xci==32,i++)x=N(cut(al(i),x));A1*f=(A1*[]){ldf,cmdt,cmdw,0}[si("ltw",c)];P(f,f(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
 S A rda(I f)_(A u=aC(256-ZA);L m=0,k;W((k=read(f,uc+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,A z=aC(2*un+ZA);mc(zc,uc,m);ur;u=z))close(f);AN(m,u))
 A1(frk,et(!xtA||xn-2,x)A y=gkv(&x);ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];F(xn,a[i]=dat(xai))a[xn]=0;I p[4];pipe(p);pipe(p+2);

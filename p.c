@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S I ltr(C c)_(c3('a',c|32,'z')||c>127)S I ldg(C c)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))
-O C*sc0(O C*s,I c)_(W(*s&&*s-c,s++)s)I Ci(O C*s,I c)_(sc0(s,c)-s)
+O C*sc0(O C*s,I c)_(W(*s&&*s-c,s++)s)I si(O C*s,I c)_(sc0(s,c)-s)
 S A1(p1,xn-1?x:fir(x))S A pb(A,C);S D p10(I n)_(D d=1;F(n,d*=10)d)
 L pu(C**p)_(C*s=*p;L v=0;C c=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
@@ -10,10 +10,10 @@ S C*s0,*s,na;
 S A0(pIL,A x=aL(0);C c;I b=0;W(1,L l=pl(&s);c=*s;Y(!l&&c=='N',l=NL;c=*++s)E(b|=l<NI||l>WI)x=apv(x,&l);Y(c-32||!num(s+1),B)c=*++s)
  P(c=='j'||c=='l',s++;x)P(c=='i',ep(b,x)s++;gI(x))x)
 S A0(pD,A x=aD(0);W(1,x=apv(x,D(pd(&s)));Y(*s-32||!num(s+1),B)s++)x)
-S A0(pC,A x=aC(0);C c=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;I i=Ci("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)ep(!c)c=*++s;x)
+S A0(pC,A x=aC(0);C c=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;I i=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)ep(!c)c=*++s;x)
 S C ph()_(C c=*s;dgt(c)?c-'0':c3('a',c,'f')?c+10-'a':16)
 S A0(p0x,A x=aC(0);s+=2;W(1,C c=ph();P(c>15,x)s++;C d=ph();ep(d>15,x)s++;x=apc(x,c<<4|d))x)
-S A ps()_(C*t=s,c=*s;Y(c&0x80,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||Ci("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))
+S A ps()_(C*t=s,c=*s;Y(c&0x80,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||si("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))
 S A pS(C d)_(A x=aS(0);W(1,A y=d-'`'||*s-'"'?ps():pC();y=str0(y);x=apv(x,I(syP(yc)));yr;P(*s-d,x)++s)0)
 S A lam(C k,A s,A b,A l)_(AK(k,atnv(tA,5,A(s,b,au0,l,au0))))
 S A1(shy,P(!xn,x)A y=xa[xn-1];Y(ytA&&yn,A z=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x) //if last expr is assignment, make it return ::
@@ -23,10 +23,10 @@ S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;A y;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),
 S A pt(C*v)_(A x;C c=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl(av_mkl),')'));xn-2?x:xy==au_plc?xr,a0():las(x))P(c=='{',po())
  P(c=='"',p1(N(pC())))P(ltr(c),C*t=s;x=pS('.');Y(s-t==1&&c3('y',c,'z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
  P(dgt(c)&&s[1]==':',I u=s[2]==':';s+=2+u;I i=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
- P(num(s)&&(c-'-'||(!ldg(s[-1])&&Ci(")]}\"",s[-1])==4)),
-  L d=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;Y(!ldg(c),B)W(ldg(c)||c=='.'||c==':',d|=Ci(".nwe",c)<4;c=*++p))p1(N(d?pD():pIL())))
- I i=Ci(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,au_plc)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
-S A pT(C*v)_(A x=N(pt(v));W(1,C c=*s;I i=Ci(vc+26,c);P(i>3,x)s++;Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2&&xy==au_plc,xy=au0)*v=0)
+ P(num(s)&&(c-'-'||(!ldg(s[-1])&&si(")]}\"",s[-1])==4)),
+  L d=0;C*p=s;c=*p;W(1,p+=*p==32;p+=*p=='-';c=*p;Y(!ldg(c),B)W(ldg(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pIL())))
+ I i=si(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,au_plc)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
+S A pT(C*v)_(A x=N(pt(v));W(1,C c=*s;I i=si(vc+26,c);P(i>3,x)s++;Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2&&xy==au_plc,xy=au0)*v=0)
                                                                  E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
 S A1(mon,P(xtv&&x-av0,au(xv))P(!xtA,x)P(xn==2&&xx==aw(0)||xn==3&&xx==av_com,x=mut(x);xa[xn-1]=mon(xa[xn-1]);x)x)
 S V pw()_(C c=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
