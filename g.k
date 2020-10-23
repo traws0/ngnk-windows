@@ -17,4 +17,7 @@ f({x,"tIL (",x,"tI||",x,"tL)"};v)
 f({x,"tt (",x,"t>tm)"};v)
 f({x,"tT (",x,"t<tM)"};v)
 f({"N",x,"(r) N1(",x,",r)"};v)
+f({x,y," ",x," ",y};,"A";"xyzu")
+f({x,y," ",x," ",y};"IL";"ijn")
+f({x,y," ",x," ",y};,"C";"ct")
 "g.h"0:r

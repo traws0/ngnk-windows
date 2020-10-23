@@ -1,15 +1,15 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(neg,sub(ai(0),x))
 A1(not,P(xtmMA,ea1(not,x))P(fun(x),I r=x==au0;xr;ai(r))eql(x,xtsS?as(0):ac(0)))
-A1(sqr,P(xtmMA,ea1(sqr,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)
+A1(sqr,P(xtmMA,ea1(sqr,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)
 A1(nul,xtmMA?ea1(nul,x):eql(x,mR(cn[xt])))
-A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,A u=aC(xn);m2(x,F(un,C c=xci;uci=c+32*c3('A',c,'Z'))u))P(xtmMA,ea1(flr,x))
- x=N(gD(x));A u=atn(xtd?tl:tL,xn);m2(x,F(un,D d=xdi;uli=d<0?(L)d-(d<(L)d):(L)d)u))
+A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,Au=aC(xn);m2(x,F(un,Cc=xci;uci=c+32*c3('A',c,'Z'))u))P(xtmMA,ea1(flr,x))
+ x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,F(un,D d=xdi;uli=d<0?(L)d-(d<(L)d):(L)d)u))
 
 S D sind(D x)_(S O D d=M_PI-8.742277657347586e-8, //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
  a[]={1.32913446369766718e-10,-2.33177897192836082e-8,2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
  P(x<0,-sind(-x))Y(x>M_PI,x-=M_PI*(L)(x/M_PI))D q=x*x,v=0;F(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
-A1(sinx,P(xtmMA,ea1(sinx,x))x=N(gD(x));A u=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
+A1(sinx,P(xtmMA,ea1(sinx,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
 
 S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
@@ -27,7 +27,7 @@ hh(mnm,min(x,y))hh(mxm,max(x,y))h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd
  SN V v##rdc##T(T*RE a,T*RE b,UL n){T c=*a;F(n,c=v##t(c,b[i]))*a=c;}\
  SN V v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),r[i]=c=v##t(c,b[i])))\
  SN V v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;F(PAD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d))\
- SN I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(F(m,L j=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
+ SN I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(F(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
 #define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
 #define htT(f) {ALN(b)ALN(r)TY(*a)c=*a;F(PAD(n,a),*r++=f(c,*b++))}
 #define hTt(f) {ALN(a)ALN(r)TY(*b)c=*b;F(PAD(n,a),*r++=f(*a++,c))}
@@ -58,11 +58,11 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 O V*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
-S A pen2(A x,A y,I v)_(P(xtm&&ytm,A u=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2)) //dyadic penetrate
+S A pen2(Ax,Ay,I v)_(P(xtm&&ytm,Au=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2)) //dyadic penetrate
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
- V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];C t=xtiI?tI:xtlL?tL:v<8?tD:tI;
+ V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,m2(x,f(a,b,yc,yn);y))
- A u=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uc,un);u)))
+ Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uc,un);u)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):pen2(x,y,vi('=')))
 A2(mod,P(xtl&&gl_(x)==NL,out(dex(x,y)))P(xtil,pen2(x,y,vi('!')))
  Y(xtt||xtm,Y(xtm,x=enl(x))x=rsh(al(len_(y)),x))Y(ytt||ytm,Y(ytm,y=enl(y))y=rsh(al(len_(x)),y))el(len_(x)-len_(y),x,y)am(x,y))

@@ -46,18 +46,18 @@
 
 TD void V;TD char unsigned C,UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
 TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
-#define A0(f,b...) A f(             )_(b)
-#define A1(f,b...) A f(A x          )_(b)
-#define A2(f,b...) A f(A x,A y      )_(b)
-#define A3(f,b...) A f(A x,A y,A z  )_(b)
-#define AX(f,b...) A f(A x,O A*a,I n)_(b) //doesn't consume x
-#define AA(f,b...) A f(    O A*a,I n)_(b)
+#define A0(f,b...) A f(           )_(b)
+#define A1(f,b...) A f(Ax         )_(b)
+#define A2(f,b...) A f(Ax,Ay      )_(b)
+#define A3(f,b...) A f(Ax,Ay,Az   )_(b)
+#define AX(f,b...) A f(Ax,O A*a,In)_(b) //doesn't consume x
+#define AA(f,b...) A f(   O A*a,In)_(b)
 
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
 #define rot(x,y) ({TY(x) x_=(x),y_=(y);x_<<y_|x_>>Z(x)*8-y;})
-S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(L i,L n)_(0<=i&&i<n)
+S L absL(L x)_(x<0?-x:x)S I c3(C x,C y,C z)_(x<=y&&y<=z)S C hx1(I x)_(x+(x>9?'a'-10:'0'))S I dgt(C c)_(c3('0',c,'9'))S I in(Li,Ln)_(0<=i&&i<n)
 
 #define mv(a...) __builtin_memmove(a)
 #define mc(a...) __builtin_memcpy(a)
@@ -72,10 +72,10 @@ enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-S C At(A);                                                     S I sim(A x)_(tm<xt&&xt<to) //simple    types
-S I reft(C t)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(A x)_(reft(xt))     //reference types
-S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(A x)_(pkdt(xt))     //packed    types
-S I funt(C t)_(t>=to)                                          S I fun(A x)_(funt(xt))     //function  types
+S C At(A);                                                     S I sim(Ax)_(tm<xt&&xt<to) //simple    types
+S I reft(C t)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(Ax)_(reft(xt))     //reference types
+S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(Ax)_(pkdt(xt))     //packed    types
+S I funt(C t)_(t>=to)                                          S I fun(Ax)_(funt(xt))     //function  types
 S C t_lst(C t)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
@@ -91,13 +91,13 @@ S C t_lst(C t)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //corresponding list type
 #define dat(x) ((V*)((x)<<16>>16))
 #define Ar(x) ((I*)dat(x))[-3]
 
-//getters                                   setters
-S  C At(A x)_(x>>56)                        S A AT(UL t,A x)_(asrt(t<=tn);               x<<8>>8|t<<56)
-S  C Av(A x)_(x>>51&31)                     S A AV(UL v,A x)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
-S  C Ak(A x)_(x>>48&7)                      S A AK(UL k,A x)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
-S  C Ab(A x)_(C b=xc[-16];asrt(b<48);b)     S A AB( C b,A x)_(asrt(b<48);                  xc[-16]=b;x)
-S UH Ao(A x)_(xts?x>>32:pkd(x)?0:xh[-7])    S A AO(UL o,A x)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
-S UL An(A x)_(UL n=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,A x)_(asrt(n<1ll<<48);              xl[-1]=n;x)
+//getters                                setters
+S  C At(Ax)_(x>>56)                      S A AT(UL t,Ax)_(asrt(t<=tn);               x<<8>>8|t<<56)
+S  C Av(Ax)_(x>>51&31)                   S A AV(UL v,Ax)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
+S  C Ak(Ax)_(x>>48&7)                    S A AK(UL k,Ax)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
+S  C Ab(Ax)_(C b=xc[-16];asrt(b<48);b)   S A AB( C b,Ax)_(asrt(b<48);                  xc[-16]=b;x)
+S UH Ao(Ax)_(xts?x>>32:pkd(x)?0:xh[-7])  S A AO(UL o,Ax)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
+S UL An(Ax)_(Ln=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,Ax)_(asrt(n<1ll<<48);              xl[-1]=n;x)
 S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
@@ -114,12 +114,12 @@ XT A glb,cn[],ci[3][5];XT O C vc[];XT O V*vf[],*arf[3][11][8];XT L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 #define syC(c) (2*(c)) //symbols: char to index
 
-S A aA(L n)_(atn(tA,n))S A0(a0,aA(0))
-S A aC(L n)_(atn(tC,n))S A ac(C v)_(AT(tc,v))     S C gc (A x)_(asrt(xtc);     (C)x)
-S A aS(L n)_(atn(tS,n))S A as(I v)_(AT(ts,v))     S I gs (A x)_(asrt(xts);     (I)x)
-S A aI(L n)_(atn(tI,n))S A ai(I v)_(AT(ti,v))     S I gi (A x)_(asrt(xti||xts);(I)x)
-S A aL(L n)_(atn(tL,n))S A al(L v)_(atnv(tl,1,&v))S L gl_(A x)_(    pkd(x)?(I)x:*xl)S L gl(A x)_(L r=gl_(x);xr;r)
-S A aD(L n)_(atn(tD,n))S A ad(D v)_(atnv(td,1,&v))S D gd_(A x)_(asrt(xtd);      *xd)S D gd(A x)_(D v=*xd;xr;v)
+S A aA(Ln)_(atn(tA,n))S A0(a0,aA(0))
+S A aC(Ln)_(atn(tC,n))S A ac(C v)_(AT(tc,v))     S C gc (Ax)_(asrt(xtc);     (C)x)
+S A aS(Ln)_(atn(tS,n))S A as(I v)_(AT(ts,v))     S I gs (Ax)_(asrt(xts);     (I)x)
+S A aI(Ln)_(atn(tI,n))S A ai(I v)_(AT(ti,v))     S I gi (Ax)_(asrt(xti||xts);(I)x)
+S A aL(Ln)_(atn(tL,n))S A al(L v)_(atnv(tl,1,&v))S L gl_(Ax)_(    pkd(x)?(I)x:*xl)S L gl(Ax)_(L r=gl_(x);xr;r)
+S A aD(Ln)_(atn(tD,n))S A ad(D v)_(atnv(td,1,&v))S D gd_(Ax)_(asrt(xtd);      *xd)S D gd(Ax)_(D v=*xd;xr;v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
@@ -147,7 +147,7 @@ S O A au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24
 #define ei(x,a...) P(x,err((C*)5,##a))
 #define ep(x,a...) P(x,err((C*)6,##a))
 #define es(x,a...) P(x,err((C*)7,##a))
-#define h(t,i) S A e##t##n(I n,O A*a)_(eN((C*)i,n,a))
+#define h(t,i) S A e##t##n(In,O A*a)_(eN((C*)i,n,a))
 h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #undef h
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
@@ -160,7 +160,7 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #define oo os("["__FILE__":"XS(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(O C*x)_(write(2,x,mn(x)))
-S I oh(L x)_(C s[17];s[16]=0;F(16,s[15-i]=hx1(x&15);x>>=4)write(2,s,17))
-S I ol(L x)_(C b[32],*u=b+31;L m=x<0;Y(m,x=-x)do{*u--='0'+x%10;x/=10;}while(x);Y(m,*u--='-')write(2,u+1,b+31-u))
-S L ov_(C*s,L x)_(os(s);write(2,"           ",max(1,10-mn(s)));oh((L)x);write(2,"\n",1);x)
-S A ox_(C*s,A x)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
+S I oh(Ln)_(C s[17];s[16]=0;F(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
+S I ol(Ln)_(C b[32],*u=b+31;L m=n<0;Y(m,n=-n)do{*u--='0'+n%10;n/=10;}while(n);Y(m,*u--='-')write(2,u+1,b+31-u))
+S L ov_(C*s,Ln)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
+S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(xb);os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))

@@ -230,3 +230,15 @@
 #define Ny(r) N1(y,r)
 #define Nz(r) N1(z,r)
 #define Nu(r) N1(u,r)
+#define Ax A x
+#define Ay A y
+#define Az A z
+#define Au A u
+#define Ii I i
+#define Ij I j
+#define In I n
+#define Li L i
+#define Lj L j
+#define Ln L n
+#define Cc C c
+#define Ct C t
