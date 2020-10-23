@@ -19,7 +19,7 @@ S L hops(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("op
  UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:hskt(h,p))
 S I hop_(Ax/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)et(*s-':')hops(s+1,fl))et(!xtC,x)x=str0(x);dex(x,hops(xc,fl)))
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))
-A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apc(y,'\n'))))
+A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apc(y,10))))
 A2(v1c,et(!ytC,x)I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yc;
  m2(y,Au=au0;W(n>0,L k=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
 A1(hcl,asrt(xti);close(gi(x));au0)
