@@ -57,7 +57,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(O A*,I),AX(A,O A*,I);
 #define min(x,y) extr(x,y,<)
 #define max(x,y) extr(x,y,>)
 #define rot(x,y) ({TY(x) x_=(x),y_=(y);x_<<y_|x_>>Z(x)*8-y;})
-S L absL(Lv)_(v<0?-v:v)S I c3(Cc,Cv,Ct)_(c<=v&&v<=t)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I dgt(Cc)_(c3('0',c,'9'))
+S L absL(Lv)_(v<0?-v:v)S I c3(Cc,Cv,Cd)_(c<=v&&v<=d)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I dgt(Cc)_(c3('0',c,'9'))
 S I in(Li,Ln)_(0<=i&&i<n)
 
 #define mv(a...) __builtin_memmove(a)

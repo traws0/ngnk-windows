@@ -242,10 +242,11 @@
 #define Ny(r) N1(y,r)
 #define Nz(r) N1(z,r)
 #define Nu(r) N1(u,r)
-#define Ax A x
-#define Ay A y
-#define Az A z
-#define Au A u
+#define Cc C c
+#define Cd C d
+#define Ct C t
+#define Cv C v
+#define Hv H v
 #define Ii I i
 #define Ij I j
 #define In I n
@@ -254,9 +255,9 @@
 #define Lj L j
 #define Ln L n
 #define Lv L v
-#define Hv H v
-#define Cc C c
-#define Ct C t
-#define Cv C v
 #define Dd D d
 #define Dv D v
+#define Ax A x
+#define Ay A y
+#define Az A z
+#define Au A u
