@@ -100,6 +100,7 @@
 #define uz ua[2]
 #define xtA (xt==tA)
 #define xtC (xt==tC)
+#define xtH (xt==tH)
 #define xtI (xt==tI)
 #define xtL (xt==tL)
 #define xtD (xt==tD)
@@ -107,6 +108,7 @@
 #define xtM (xt==tM)
 #define xtm (xt==tm)
 #define xtc (xt==tc)
+#define xth (xt==th)
 #define xti (xt==ti)
 #define xtl (xt==tl)
 #define xtd (xt==td)
@@ -120,6 +122,7 @@
 #define xtw (xt==tw)
 #define ytA (yt==tA)
 #define ytC (yt==tC)
+#define ytH (yt==tH)
 #define ytI (yt==tI)
 #define ytL (yt==tL)
 #define ytD (yt==tD)
@@ -127,6 +130,7 @@
 #define ytM (yt==tM)
 #define ytm (yt==tm)
 #define ytc (yt==tc)
+#define yth (yt==th)
 #define yti (yt==ti)
 #define ytl (yt==tl)
 #define ytd (yt==td)
@@ -140,6 +144,7 @@
 #define ytw (yt==tw)
 #define ztA (zt==tA)
 #define ztC (zt==tC)
+#define ztH (zt==tH)
 #define ztI (zt==tI)
 #define ztL (zt==tL)
 #define ztD (zt==tD)
@@ -147,6 +152,7 @@
 #define ztM (zt==tM)
 #define ztm (zt==tm)
 #define ztc (zt==tc)
+#define zth (zt==th)
 #define zti (zt==ti)
 #define ztl (zt==tl)
 #define ztd (zt==td)
@@ -160,6 +166,7 @@
 #define ztw (zt==tw)
 #define utA (ut==tA)
 #define utC (ut==tC)
+#define utH (ut==tH)
 #define utI (ut==tI)
 #define utL (ut==tL)
 #define utD (ut==tD)
@@ -167,6 +174,7 @@
 #define utM (ut==tM)
 #define utm (ut==tm)
 #define utc (ut==tc)
+#define uth (ut==th)
 #define uti (ut==ti)
 #define utl (ut==tl)
 #define utd (ut==td)
@@ -179,6 +187,7 @@
 #define utv (ut==tv)
 #define utw (ut==tw)
 #define xtcC (xtc||xtC)
+#define xthH (xth||xtH)
 #define xtiI (xti||xtI)
 #define xtlL (xtl||xtL)
 #define xtdD (xtd||xtD)
@@ -186,6 +195,7 @@
 #define xtmM (xtm||xtM)
 #define xtilIL (xtil||xtIL)
 #define ytcC (ytc||ytC)
+#define ythH (yth||ytH)
 #define ytiI (yti||ytI)
 #define ytlL (ytl||ytL)
 #define ytdD (ytd||ytD)
@@ -193,6 +203,7 @@
 #define ytmM (ytm||ytM)
 #define ytilIL (ytil||ytIL)
 #define ztcC (ztc||ztC)
+#define zthH (zth||ztH)
 #define ztiI (zti||ztI)
 #define ztlL (ztl||ztL)
 #define ztdD (ztd||ztD)
@@ -200,6 +211,7 @@
 #define ztmM (ztm||ztM)
 #define ztilIL (ztil||ztIL)
 #define utcC (utc||utC)
+#define uthH (uth||utH)
 #define utiI (uti||utI)
 #define utlL (utl||utL)
 #define utdD (utd||utD)
@@ -242,6 +254,7 @@
 #define Lj L j
 #define Ln L n
 #define Lv L v
+#define Hv H v
 #define Cc C c
 #define Ct C t
 #define Cv C v
