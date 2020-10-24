@@ -23,17 +23,17 @@ S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)Li=fndI(fl,gs(y));P(i>=0,fu
  Y(u==cu('*')&&n==2,Az=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))Y(utw&&n==2,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,Az=ya[n-1-i];z==au_plc?(p=1),hc(zR):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
-A1(cpl,C k=xk;x=mut(x);Ay=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);C o=0;ms(fu,-1,64);F(yn,P(!cr(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
+A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC(0));fc=a1(au0);xa[5]=aI(16);Co=0;ms(fu,-1,64);F(yn,P(!cr(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
  y=fb;asrt(Ar(y)==1);Fj(16,Ii=fu[j];Y(i>=0&&yci==bg,yci=bd))mr(xa[5]);AK(k,AT(to,x)))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
-S A1(vm,/*0*/W(1,C b=*c++;
+S A1(vm,/*0*/W(1,Cb=*c++;
  Y(b>=bm,Y(b>=bc,Ay=fc;p(mR(ya[b-bc])))
         EY(b==bm,A*v=l-*c++,y=q();N(*s=apn(mR(*v=Ny(dm1(A(*v,yR,av(*c++),*s),4))),y)))
         EY(b==bM,Ax=q()    ,y=q();N(*s=apn(      Ny(dmd(A(x ,yR,av(*c++),*s),4)) ,y)))
-        EY(b==bl,C n=*c++;Ax=sqz(atnv(tA,n,s));s+=n;p(x))
-        EY(b==bL,C n=*c++;Ax=*s;el(!xtt&&len_(x)-n)F(n,p(get(x,n-1-i))))
-        EY(b==ba||b==bP,C n=*c++;Au=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
+        EY(b==bl,Cn=*c++;Ax=sqz(atnv(tA,n,s));s+=n;p(x))
+        EY(b==bL,Cn=*c++;Ax=*s;el(!xtt&&len_(x)-n)F(n,p(get(x,n-1-i))))
+        EY(b==ba||b==bP,Cn=*c++;Au=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
         EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(mR(l[1])))EY(b==bp,mr(q()))E(asrt(b==br);_(*s)))
  EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(xr;*v=mR(*s)))
  EY(b>=bv,Ax=q();N(*s=((A2*)vf[b])(x,*s)))E(N(*s=((A1*)vf[b])(*s))))0)

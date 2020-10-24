@@ -8,7 +8,7 @@ S A ma(UI b)_(dbg(asrt(!ml));asrt(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())x=(A)(p+ZA))
  W(i>b,i--;Ay=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)AB(b,x))
-A1(mr0,dbg(ml++);asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)C b=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xa))x)
+A1(mr0,dbg(ml++);asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)Cb=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xa))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xc-ZP,xn+ZP);0)dbg(ms(xc,0xab,xn*ZT[xt]));0)
 A1(mr,mr1(mr0(x)))V mrn(In,O A*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xc);xr;Y(ref(u),mRa(u))u)
 V*memcpy(V*x,O V*y,size_t n)_(Y(n<0,exit(5))C*p=x;O C*q=y;F(n,p[i]=q[i])x)V*memmove(V*x,O V*y,size_t n)_(memcpy(x,y,n))
@@ -30,7 +30,7 @@ V init(){tilH((V*)sy0,128);sy1=sy0+256;glb=aa0();
  cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(NL);cn[tI]=cn[ti]=ai(NI);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(WI);ci[0][3]=ai(-WI);ci[0][4]=ai(NI);
  S L l[]={0,1,WL,-WL,NL};F(5,ci[1][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};F(5,ci[2][i]=ad(d[i]))}
-I rep()_(S C b[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
+I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 
 #ifndef shared
  I main(In,C**a)_(init();P(n>1,exit(!ldf(aCz(a[1])));0)W(rep())exit(0);0)

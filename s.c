@@ -32,8 +32,8 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  m|=(UL)!!e<<52;e+=!e-1077;I t,ev=!(m&1),h=m<<12||e<-1075,u0=0,w0=0;UL u,v,w;m<<=2;Y(!**I5,initp5())
  Y(e>1,t=l10p2(e)-(e>7);u=msha(m,I5[ZZ(I5)-1-t],t-e+p5b( t)+125,&v,&w,h);Y(t<22,!(m%5)?u0=mp5(m,t):ev?w0=mp5(m-1-h,t):(v-=mp5(m+2,t))))
  E( t=e+l10p5(-e)-(e<3);u=msha(m,P5[        -t],t-e-p5b(-t)+124,&v,&w,h);Y(t<e+2,u0=1;ev?w0=h:--v)EY(t<e+63,u0=mp2(m,t-e)))
- Y(w0||u0,C d=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)Y(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))Y(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
- E(C d=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
+ Y(w0||u0,Cd=0;W((v/=10)>w/10,w0&=!dm(&w);u0&=!d;d=dm(&u);t++)Y(w0,W(!dm(&w),u0&=!d;d=dm(&u);t++))Y(u0&&d==5&&!(u&1),d=4)u+=d>=5||(u==w&&!(ev||w0)))
+ E(Cd=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
  s++;I l=su(s,u)-s-1;s[-1]=*s;t+=l;
  P(in(t,16),I k=l<t?l:t;mv(s,s+1,k);ms(s+l,'0',max(0,t-l));s+=t;*s++='.';s+=l-k;Y(t>=l,*s++='0')s)
  P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,'0',-t-1)+l-t)

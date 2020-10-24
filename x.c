@@ -19,7 +19,7 @@ S C*s,*p;
 S A g()_(Ct=h1;ed(!in(t,tn))
  P(t==tA||t==tS,Ln=h8;ed(!in(n,1ll<<45))Ax=AN(0,atn(t,n));F(n,x=apd(x,Nx(g())))x)
  P(t==tm||t==tM,Ax=N(g());ed(!xtA||xn-2||At(xx)>tM||At(xy)>tM||len_(xx)-len_(xy))AT(t,x))
- P(t==ts,C n=h1;as(syP(h(n))))
+ P(t==ts,Cn=h1;as(syP(h(n))))
  P(pkdt(t),h8)
  P(funt(t),Cc=h1;AT(t,AK(c&7,AV(c>>3,N(g())))))
  Ln=t<tm?h8:1;ed(!in(n,1ll<<45))atnv(t,n,h(n*ZT[t])))

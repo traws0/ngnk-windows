@@ -242,8 +242,12 @@
 #define Ny(r) N1(y,r)
 #define Nz(r) N1(z,r)
 #define Nu(r) N1(u,r)
+#define Cb C b
 #define Cc C c
 #define Cd C d
+#define Ck C k
+#define Cn C n
+#define Co C o
 #define Ct C t
 #define Cv C v
 #define Hv H v
