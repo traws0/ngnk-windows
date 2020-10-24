@@ -76,7 +76,7 @@ S C At(A);                                                     S I sim(Ax)_(tm<x
 S I reft(C t)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(Ax)_(reft(xt))     //reference types
 S I pkdt(C t)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(Ax)_(pkdt(xt))     //packed    types
 S I funt(C t)_(t>=to)                                          S I fun(Ax)_(funt(xt))     //function  types
-S C t_lst(C t)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //corresponding list type
+S C tT(C t)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,i=value):

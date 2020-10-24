@@ -29,7 +29,7 @@ A1(val,P(xtS,Ay=glb;F(xn,et(!ytm,x)Az=yx,u=yy;ed(!ztS||!utA,x)I k=xii;Lj=fndI(z,
  P(xtA,P(!xn,x)P(xn==1,fir(x))P(xn>9,err("mxa",x))x=mut(x);Au=app(xx,&xy,xn-1);mr(AN(1,x));u)P(xtC,x=N(cpl(N(prs(x))));dex(x,run(x,0,0)))
  P(xtc||xts,val(enl(x)))P(xtm,las(AT(tA,x)))P(xtr,cat(AT(tA,x),aw(xv)))P(c3(tu,xt,tw),al(xv))et(!(xto||xtp||xtq),x)AT(tA,x))
 A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(apn,y=enla(y);Ln=yn;P(!n,yr;x)P(n>8,err("mxa",x,y))y=mRa(Nx(blw(y)));Au=app(x,ya,n);xr;yr;u)
-S A set(Ax,Li,Ay)_(asrt(Ar(x)==1);Y(!xtA&&(!sim(y)||xt-t_lst(yt)),x=blw(x))
+S A set(Ax,Li,Ay)_(asrt(Ar(x)==1);Y(!xtA&&(!sim(y)||xt-tT(yt)),x=blw(x))
  P(xtA,mr(xai);xai=y;sim(y)?sqz(x):x)xtC?xci=gc(y):xtI?xii=gi(y):xtL?xli=gl(y):xtD?xdi=gd(y):xtS?xii=gs(y):0;x)
 S I stp(Li,Ax/*0*/,A**pp)_(Ay=**pp;ed(!ytm,x)**pp=y=mut(y);Az=yx;ed(!ztS,x)Lj=fpI(&yx,xi[i+1]);Au=yy;ed(!utA,x)
  yy=j==un?apd(u,aa0()):mut(u);asrt(Ar(yy)==1);*pp=(A*)dat(yy)+j;1)
@@ -42,9 +42,9 @@ AA(am1,Ax=*a,y=a[1],z=a[2];
  P(xtt,etn(n,a))
  P(ytt,x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   Li=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*8);Au=app(z,b,n-2);zr;set(x,i,Nx(u)))
- P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==t_lst(At(a[3])),x=mut(x);Au=a[3];I d=utT;u=enla(u);ei(d&&yn-un,x,y,u)y=gL(y);
+ P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==tT(At(a[3])),x=mut(x);Au=a[3];I d=utT;u=enla(u);ei(d&&yn-un,x,y,u)y=gL(y);
   ei(!m2(y,m2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][7])(xc,xn,yl,yn,uc,d):1)))x)
- P(n==4&&xtC&&ytL&&z==av0&&t_lst(At(a[3]))==tC,x=mut(x);Au=a[3];I d=utT;u=enla(u);el(d&&yn-un,x,y,u)
+ P(n==4&&xtC&&ytL&&z==av0&&tT(At(a[3]))==tC,x=mut(x);Au=a[3];I d=utT;u=enla(u);el(d&&yn-un,x,y,u)
   x=m2(y,m2(u,F(yn,Lj=yli;Y(!in(j,xn),x=0;B)xc[j]=uc[d*i])x));ei(!x)x)
  rdc(cv('@'),a,n))
 AA(amd,Ax=*a;xts?mend(a,n,am1):am1(a,n))

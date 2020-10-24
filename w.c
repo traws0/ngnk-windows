@@ -15,7 +15,7 @@ AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR
  A b[8];Ct[8];L m=-1;F(n,Ay=b[i]=a[i];P(ytm,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))Au=m?0:a0(); //0:pkdatm,1:refatm,2:tA(r=1),3:tA(r>1),4:other
  Fj(m,F(n,Ay=a[i];Y(t[i]==2,b[i]=ya[j])Y(t[i]>2,b[i]=get(y,j)))
-      Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(t_lst(zt),m)):a0())
+      Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(tT(zt),m)):a0())
       Y(!z,ur;u=0;F(n,Ay=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,ya+j+1)))B)u=apd(u,z))
  F(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 S AX(cvg,P(n==2,Ay=*a,u=a[1];P(ytil,F(gl(y),u=N(app(x,&u,1)))u)W(1,uR;Az=N2(y,u,app(y,&u,1));Y(!tru(z),B)u=Ny(app(x,&u,1)))yr;u)
