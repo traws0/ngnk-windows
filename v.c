@@ -39,7 +39,7 @@ S I cmp_(Ax,Ay/*x0y0*/)_(P(x==y,0)I d=xt-yt;P(d,d)P(xti,gi(x)-gi(y))P(xtc,gc(x)-
  P(xts,strcmp(syp(gs(x)),syp(gs(y))))Y(!pkd(x),I r=cmpL(xn,yn);P(xtT,F(min(xn,yn),Az=get(x,i),u=get(y,i);I d=cmp_(z,u);zr;ur;P(d,d))r))cmpL(x,y))
 A2(mtc,I r=mtc_(x,y);xr;yr;ai(r))
 S I bef(A*a,Ii,Ij)_(I r=cmp_(a[i],a[j]);r?r<0:i<j)
-S V sft(A*a,I*l,Ii,Ij)_(W(1,L k=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),B)SWP(l[i],l[k])i=k))
+S V sft(A*a,I*l,Ii,Ij)_(W(1,Lk=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),B)SWP(l[i],l[k])i=k))
 S A1(asci,P(xn>WI,err("lmt",x))x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];tilI(ui,n);
  m2(x,m2(y,Fj(w,ms(c,0,Z c);F(n,a[i]=xc[w*uii+j])F(n,c[a[i]+1]++)Y(c[1+*a]-n,F(255,c[i+1]+=c[i])F(n,zi[c[a[i]]++]=uii)SWP(z,u)))zr;u)))
 A1(asc,P(xtA,P(xn>WI,err("lmt",x))A*a=xa,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,ui,i,n-1))i=n-1;W(i>0,SWP(uii,*ui)sft(a,ui,0,--i))xr;u)

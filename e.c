@@ -1,10 +1,10 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S struct{C m[32];In,o;A s;}e; //message,length,offset,source
-NO A e0(O C*m)_(Y((UL)m<256,m=(C*[]){eM}[(I)m])e.n=min(mn(m),Z(e.m)-1);mc(e.m,m,e.n);e.m[e.n]=0;0)
-NO A e1(O C*m,Ax      )_(dex(x,e0(m    )))
-NO A e2(O C*m,Ax,Ay   )_(dex(y,e1(m,x  )))
-NO A e3(O C*m,Ax,Ay,Az)_(dex(z,e2(m,x,y)))
-NO A eN(O C*m,In,O A*a)_(mrn(n,a);e0(m))
+NO A e0(OC*m)_(Y((UL)m<256,m=(C*[]){eM}[(I)m])e.n=min(mn(m),Z(e.m)-1);mc(e.m,m,e.n);e.m[e.n]=0;0)
+NO A e1(OC*m,Ax      )_(dex(x,e0(m    )))
+NO A e2(OC*m,Ax,Ay   )_(dex(y,e1(m,x  )))
+NO A e3(OC*m,Ax,Ay,Az)_(dex(z,e2(m,x,y)))
+NO A eN(OC*m,In,OA*a )_(mrn(n,a);e0(m))
 SN I ecl()_(e.n=0;Y(e.s,mr(e.s);e.s=0)e.o=0)
 NO I eso(Ax/*1*/,I o)_(Y(!e.s,e.s=x;e.o=o)0)
 A3(try,x=apn(x,y);P(x,zr;x)Y(fun(z),Ck=zk;z=k==1?ap1(z,aCn(e.m,e.n)):k==2?apn(z,a2(aCn(e.m,e.n),a2(e.s?mR(e.s):ac(0),al(e.o)))):z)ecl();z)

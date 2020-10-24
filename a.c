@@ -55,11 +55,11 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 #define dexDD dexLL
 #define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
 #define hA(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
-O V*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
+OV*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
 S A pen2(Ax,Ay,Iv)_(P(xtm&&ytm,Au=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2)) //dyadic penetrate
- A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));I k=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
+ A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
  V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xc,xn);x))P(yt==t&&Ar(y)==1,m2(x,f(a,b,yc,yn);y))
  Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uc,un);u)))

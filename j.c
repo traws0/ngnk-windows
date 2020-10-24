@@ -9,7 +9,7 @@ S A0(js,s++;Ax=aC(0);W(1,C*t=s;Cc=*s++;W(c-'"'&&c-'\\'&&c>31,c=*s++)P(c<32,s--;x
 S A0(ja,s++;Ax=a0();P(jw()==']',s++;x)W(1,x=apd(x,Nx(jv()));P(*s==']',s++;x)Nx(*s==',');s++)0)
 S A0(jo,s++;Ax=am(aS(0),a0());Cc=jw();P(c=='}',s++;x)
  W(1,Nx(c=='"');xx=apd(xx,gS(Nx(js())));Nx(jw()==':');s++;xy=apd(xy,Nx(jv()));P(*s=='}',s++;x)Nx(*s==',');s++;c=jw())0)
-S A jr(O C*t,Lv)_(Cc;W((c=*t++),P(c-*s,0)s++)al(v))
+S A jr(OC*t,Lv)_(Cc;W((c=*t++),P(c-*s,0)s++)al(v))
 S A0(jv,Cc=jw();Ax=c=='['?ja():c=='{'?jo():c=='"'?js():c=='-'||dgt(c)?jd():c=='t'?jr("true",1):c=='f'?jr("false",0):c=='n'?jr("null",NL):0;jw();x)
 A1(jsr,et(!xtcC,x)x=str0(enla(x));s=xc;Au=jv();Y(u&&*s,ur;u=0)P(!u,eso(x,s-xc);err("json"))xr;u)
 A1(jsw,en(1);0)

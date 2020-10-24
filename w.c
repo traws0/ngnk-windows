@@ -9,7 +9,7 @@ S AX(join,asrt(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytA,y)C*s=xtc?(V*)&x:xc;L m=len_(x
  Au=aC(l);C*p=uc;F(k-1,Az=yai;Y(ztc,*p++=gc(z))E(mc(p,zc,zn);p+=zn)mc(p,s,m);p+=m)Y(k,Az=ya[k-1];Y(ztc,*p=gc(z))E(mc(p,zc,zn)))yr;u)
 A ea1(A1 f,Ax)_(P(xtt,f(x))P(xtm,x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
  I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=a0();F(n,Ay=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
-S L cfm(O A*a/*0*/,Ln)_(L m=-1;F(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
+S L cfm(OA*a/*0*/,Ln)_(L m=-1;F(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,Az,b[8];F(n,Ay=a[i];Y(ytm,z=yx;B))zR;F(n,Ay=b[i]=a[i];Y(ytm,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))Au=eac(x,b,n);(u?am:dex)(z,u))
 AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))
  A b[8];Ct[8];L m=-1;F(n,Ay=b[i]=a[i];P(ytm,eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))

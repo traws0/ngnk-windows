@@ -21,7 +21,7 @@ S I hop_(Ax/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)et(*s-':')hops
 A1(hop,ai(N(hop_(x,O_RDWR|O_CREAT))))
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apc(y,10))))
 A2(v1c,et(!ytC,x)I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yc;
- m2(y,Au=au0;W(n>0,L k=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
+ m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
 A1(hcl,asrt(xti);close(gi(x));au0)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;

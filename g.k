@@ -19,7 +19,7 @@ f({x,"tT (",x,"t<tM)"};v)
 f({"N",x,"(r) N1(",x,",r)"};v)
 f({x,y," ",x," ",y};,"C";"bcdknotv")
 f({x,y," ",x," ",y};,"H";,"v")
-f({x,y," ",x," ",y};"IL";"ijnv")
+f({x,y," ",x," ",y};"IL";"ijknv")
 f({x,y," ",x," ",y};,"D";"dv")
 f({x,y," ",x," ",y};,"A";"xyzu")
 "g.h"0:r
