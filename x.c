@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 
 //serialize
-S A f8(L v,Ay)_(catc(y,(V*)&v,8))
+S A f8(Lv,Ay)_(catc(y,(V*)&v,8))
 S A2(f,y=Nx(apc(y,xt));
  P(xtA||xtS,y=Nx(f8(xn,y));F(xn,y=Nx(f(get(x,i),y)))xr;y)
  P(xtmM,f(AT(tA,x),y))
@@ -21,7 +21,7 @@ S A g()_(Ct=h1;ed(!in(t,tn))
  P(t==tm||t==tM,Ax=N(g());ed(!xtA||xn-2||At(xx)>tM||At(xy)>tM||len_(xx)-len_(xy))AT(t,x))
  P(t==ts,C n=h1;as(syP(h(n))))
  P(pkdt(t),h8)
- P(funt(t),C vk=h1;AT(t,AK(vk&7,AV(vk>>3,N(g())))))
+ P(funt(t),Cc=h1;AT(t,AK(c&7,AV(c>>3,N(g())))))
  Ln=t<tm?h8:1;ed(!in(n,1ll<<45))atnv(t,n,h(n*ZT[t])))
 A1(des,ed(!xtC,x)s=xc;p=s+xn;dex(x,g()))
 #undef h8

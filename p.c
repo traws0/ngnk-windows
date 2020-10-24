@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S I ltr(Cc)_(c3('a',c|32,'z')||c>127)S I ldg(Cc)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S A pb(A,C);
-O C*sc0(O C*s,I c)_(W(*s&&*s-c,s++)s)I si(O C*s,I c)_(sc0(s,c)-s)S A1(p1,xn-1?x:fir(x))S D p10(In)_(D d=1;F(n,d*=10)d)
-L pu(C**p)_(C*s=*p;L v=0;Cc=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
+O C*sc0(O C*s,I c)_(W(*s&&*s-c,s++)s)I si(O C*s,I c)_(sc0(s,c)-s)S A1(p1,xn-1?x:fir(x))S D p10(In)_(Dd=1;F(n,d*=10)d)
+L pu(C**p)_(C*s=*p;Lv=0;Cc=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
 S D pd(C**p)_(I m=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
@@ -33,5 +33,5 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,Y(x,xr)0);*
  UH o=s-s0;C w=0;Ay=pT(&w);P(!y,Y(x,xr)0)P(y==au_plc,x?x:y)P(!w,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(av_com,x,z):AO(o,a2(mon(x),z)))
  Az=pe(0,v);P(!z,Y(x,xr)yr;0)P(z==au_plc,*v=1;P(!x,y)ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(av_com,x?AO(o,a3(y,x,au_plc)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
-S A pb(Ax,Cc)_(W(1,C v=0;Ay=Nx(pe(0,&v));Y(y==au_plc&&(!c||c=='}'),y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)ep(*s-c,x)s++;x)
+S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==au_plc&&(!c||c=='}'),y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)ep(*s-c,x)s++;x)
 A1(prs,et(!xtC,x)s=s0=dat(x=str0(x));Ay=*s=='\\'?a1(AO(0,a2(au_cmd,aCz(s+1)))):pb(a0(),0);!y?eso(x,s-s0),0:lam(0,x,shy(y),aS(0)))
