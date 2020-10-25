@@ -250,6 +250,7 @@
 #define Co C o
 #define Ct C t
 #define Cv C v
+#define Hn H n
 #define Hv H v
 #define Ii I i
 #define Ij I j

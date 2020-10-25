@@ -14,12 +14,12 @@ w:k.wasm #wasm web server
 .PHONY: t c w
 
 o/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o && $(C) -c -O3 $< -o $@
+	@echo -n '$< ' && $(MD) o && $(C) -c -g $< -o $@
 o/%.s:%.c *.h makefile
 	@echo '$@ ' && $(MD) o && $(C) -c -O3 $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(C) $^ -static -o $@
-	@strip -R .comment $@ # -R '.note*'
+# 	@strip -R .comment $@ # -R '.note*'
 
 #lib
 o/so/%.o:%.c *.h makefile

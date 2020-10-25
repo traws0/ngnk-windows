@@ -74,9 +74,9 @@ enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-XT OC Zt[],ZT[];S C At(A);                                   S I sim(Ax)_(tm<xt&&xt<to) //simple    types
+XT OC Zt[],ZT[];S C At(A);                                    S I sim(Ax)_(tm<xt&&xt<to) //simple    types
 S I reft(Ct)_(t==tA||t==tm||t==tM||t==to||t==tp||t==tq||t==tr)S I ref(Ax)_(reft(xt))     //reference types
-S I pkdt(Ct)_(t==tc||t==ti||t==ts||t==tu||t==tv||t==tw)       S I pkd(Ax)_(pkdt(xt))     //packed    types
+S I pkdt(Ct)_(t==tc||t==th||t==ti||t==ts||t==tu||t==tv||t==tw)S I pkd(Ax)_(pkdt(xt))     //packed    types
 S I funt(Ct)_(t>=to)                                          S I fun(Ax)_(funt(xt))     //function  types
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 

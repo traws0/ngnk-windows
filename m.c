@@ -26,8 +26,8 @@ I syP(OC*s)_(Cc=*s;P(c<128&&(!c||!s[1]),syC(c))OC*p=sy0+256;W(p<sy1,OC*q=p,*t=s;
 I line(C*p,C*q)_(Ax=val(aCm(p,q));P(x,mr(out(x));1)epr(0))S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=N(u1c(x));ed(!xn||xc[xn-1]-10,x)xc[xn-1]=0;C*p=xc;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
-V init(){tilH((V*)sy0,128);sy1=sy0+256;glb=aa0();
- cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tL]=cn[tl]=al(NL);cn[tI]=cn[ti]=ai(NI);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
+V init(){tilH((V*)sy0,128);sy1=sy0+256;glb=aa0();cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tH]=cn[th]=ah(NH);
+ cn[tI]=cn[ti]=ai(NI);cn[tL]=cn[tl]=al(NL);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(WI);ci[0][3]=ai(-WI);ci[0][4]=ai(NI);
  S L l[]={0,1,WL,-WL,NL};F(5,ci[1][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};F(5,ci[2][i]=ad(d[i]))}
 I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
