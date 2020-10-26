@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 #define til_(T)     V til##T(T*a,U##T n)_(ALN(a)F(PAD(n,a),a[i]=i))
-#define rev_(T)   S V rev##T(T*a,UL n)_(T*b=a+n-1;W(a<b,SWP(*a,*b);a++;b--))
+#define rev_(T)   S V rev##T(V*p,UL n)_(T*a=p,*b=a+n-1;W(a<b,SWP(*a,*b);a++;b--))
 #define c_(T,R,p) S V c##T##R(O T*RE a,R*RE r,UL n)_(F(PAD(n,p),r[i]=a[i]))
 #define cN(T,R,p) S V c##T##R(O T*RE a,R*RE r,UL n)_(F(PAD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
 til_(H)til_(I)til_(L)rev_(C)rev_(H)rev_(I)rev_(L)
@@ -11,7 +11,7 @@ A1(til,P(xth||xti||xtl,Ln=gl_(x);I m=n<0;n*=1-2*m;Au=atn(tT(xt),n);xth?tilH(uh,n
  P(xtIL,K("{x((*a)#&#)'1_a:|*\\|x,1}",x))P(xtm,fir(AT(tA,x)))P(xto,val(x))et(!xtA||xn,x)x)
 A1(whr,et(xtM||xtA,x)P(xtm,Ay=gkv(&x);idx(x,Nx(whr(y))))x=N(gL(enla(x)));Ln=0;F(xn,ed(xli<0,x)n+=xli)Au=aL(n);m2(x,n=0;F(xn,Fj(xli,ul[n++]=i))u))
 A1(rev,P(xtt,x)P(xtm,AT(tm,N(ea1(rev,AT(tA,x)))))P(xtM,Ay=gkv(&x);aM(x,Nx(ea1(rev,y))))
- x=mut(x);I w=ZT[xt];w==1?revC(xc,xn):w==4?revI(xi,xn):revL(xl,xn);x)
+ x=mut(x);(V(*[])(V*,UL)){revC,revH,revI,revL,revL}[Zt[xt]](xc,xn);x)
 A1(typ,Ct=xt;xr;as(syC(TS[t])))A1(len,dex(x,al(len_(x))))L len_(Ax/*0*/)_(xtT?xn:xtm?len_(xy):!xtM?1:An(xy)?len_(*(A*)dat(xy)):1)
 A1(unq,et(!xtT,x)xn<2?x:K("{x@&@[&#x;i;:;]@[;0;:;a=a:*a]@a:~$[`A=@x;~;=]':x@i:<x}",x))
 S A2(fil,ytmMA?eac(cv('^'),A(x,y),2):ytt?fir(xpt(x,enl(y))):K("{@[y;&^y;:;x]}",x,y))
