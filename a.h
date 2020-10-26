@@ -15,9 +15,6 @@
 #define F_(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
 #define B break
 #define O const
-#define OA O A
-#define OC O C
-#define OV O V
 #define S static
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))

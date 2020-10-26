@@ -21,4 +21,5 @@ f({x,y," ",x," ",y};,"C";"bcdknotv")
 f({x,y," ",x," ",y};"HIL";"ijkmnv")
 f({x,y," ",x," ",y};,"D";"dv")
 f({x,y," ",x," ",y};,"A";"xyzu")
+f({x,y," ",x," ",y};,"O";"ACV")
 "g.h"0:r
