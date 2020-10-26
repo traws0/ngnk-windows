@@ -19,8 +19,8 @@ S AX(idxA,Ay=*a++;n--;P(ytA,A b[8];*b=au_plc;mc(b+1,a,n);Az=prj(x,b,n+1);dex(z,e
  P(ytT||y==au_plc,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)Au=idxA(x,a,n);xr;u)
 S A2(wrt,P(xtl,wrt(gI(x),y))P(ytc,wrt(x,enl(y)))et(!xti||!ytC,y)write(gi(x),yc,yn);y)S A1(fnow,xr;al(now()))
 AX(app,P(xtT,xtA?idxA(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,*a))
- P(xts,P(n>1,ern(n,a))Li=gl(K("``j`k`p`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin?",x));en(i<0,*a)
-  (A1*[]){ser,jsw,kst,prs,fnow,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sinx}[i](*a))
+ P(xts,P(n>1,ern(n,a))SF(x,*a,"``j`k`p`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin",
+                              ser,jsw,kst,prs,fnow,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sinx))
  P(xtm,Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)P(xtM,Ay=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(tm,x),a,n))
  P(n<xk,prj(x,a,n))P(xtv,n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))P(xtr,((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))P(xtu,((A1*)vf[xv])(*a))P(xtw,Ay=*a;AK(0<xv&&xv<4&&yk==2?1:fun(y)?yk:1,AV(xv,atnv(tr,1,a))))P(xto,run(x,a,n))

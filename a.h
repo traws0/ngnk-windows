@@ -159,6 +159,7 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 #define N(r)      N_(r,)
 #define N1(x,r)   N_(r,mr(x))
 #define N2(x,y,r) N_(r,mr(x);mr(y))
+#define SF(x,y,s,f...) ({Li=gl(K(s"?",x));ed(i<0,y);(A1*[]){f}[i](y);})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))

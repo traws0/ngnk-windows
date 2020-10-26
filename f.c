@@ -10,8 +10,8 @@ SN L fndA(Ax/*0*/,Ay/*1*/)_(asrt(xtA);F(xn,P(mtc_(xai,y),i))NL)L fpA(A*p,Ay)_(Ax
               L fp##T(A*p,T v)_(Ax=*p;Ln=xn,i=fnd##T(x,v);P(i<0,*p=apv(x,&v);n)i)
 f_(C)f_(H)f_(I)f_(L)
 A2(fnd,
- P(xtt,P(xts,Li=gl(K("``j`hex`aes?",x));en(i<0,y)(A1*[]){des,jsr,unh,aes1}[i](y))et(!xtil,x,y)
-       P(ytl,rnd(gl(gL(x)),gl(y)))P(yti,K("{`i$x?`l$y}",x,y))P(ytc,K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))K("{y@x?#y}",x,y))
+ P(xtt,P(xts,SF(x,y,"``j`hex`aes",des,jsr,unh,aes1))et(!xtil,x,y)P(ytl,rnd(gl(gL(x)),gl(y)))
+       P(yti,K("{`i$x?`l$y}",x,y))P(ytc,K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))K("{y@x?#y}",x,y))
  P(xtm,Az=gkv(&x);idx(x,fnd(z,y)))
  en(xtM,x,y)
  P(ytt,P(!xtA&&fun(y),xr;yr;al(NL))

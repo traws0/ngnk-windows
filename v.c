@@ -26,7 +26,7 @@ A1(gL,P(xtlL,x)P(xtt,gt(x,gL))P(xtD,Au=aL(xn);m2(x,cDL(xd,ul,un);u))x=N(gI(x));A
 A1(gD,P(xtdD,x)P(xtt,gt(x,gD))x=N(gL(x));Au=aD(xn);m2(x,cLD(xl,ud,un);u))
 A1(gS,P(xtsS,x)P(xtC,x=str0(x);dex(x,as(syP(xc))))et(!xtc,x)as(syC(gc(x))))
 A2(cst,P(ytmMA,eac(cv('$'),A(x,y),2))P(xtil&&ytC,ap1(y,Ny(til(x))))en(!xts,x,y)
- Ii=gI(K("``s`c`h`i`l`d`j`f?",x));ed(i<0,y)(A1*[]){gS,gS,gC,gH,gI,gL,gD,gL,gD}[i](y))
+ SF(x,y,"``s`c`h`i`l`d`j`f",gS,gS,gC,gH,gI,gL,gD,gL,gD))
 A1(sqz,P(!xtA||!xn,x)Ay=xx;Ct=yt;P(!sim(y)&&t-tm,x)Ln=xn;F(n,Ay=xai;P(t-yt,x))
  P(t==tm,Az=yx;F(n,Ay=xai;P(!mtc_(yx,z),x))aM(zR,flp(ea1(val,x))))en(t==tM,x)
  t=tT(t);Au=atn(t,n);P(Zt[t]<3,m2(x,(V(*[])(OV*RE,V*RE,UL)){cLC,cLH,cLI}[Zt[t]](xl,uc,n);u))F(n,Ay=xai;uli=*yl);xr;u)
