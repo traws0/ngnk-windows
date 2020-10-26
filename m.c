@@ -45,13 +45,13 @@ I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q=
 
 #if !wasm
  #if i386
-  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%eax;int $0x80;ret;"
+  #define h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;"
   #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
   #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
   #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
-  asm(".globl mmap;mmap:mov %esp,%ebx;add $4,%ebx;mov $"XS(SYS_mmap)",%eax;int $0x80;ret;");
+  asm(".globl mmap;mmap:mov %esp,%ebx;add $4,%ebx;mov $"M2(SYS_mmap)",%eax;int $0x80;ret;");
  #else
-  #define h(x,a...) ".globl "#x";"#x":"a"mov $"XS(SYS_##x)",%rax;syscall;ret;"
+  #define h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;"
   #define h1 h
   #define h2 h
   #define h3 h

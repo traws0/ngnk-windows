@@ -29,12 +29,12 @@
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #define ALN(x) {asrt(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
-#define MS(x) #x
-#define XS(x) MS(x)
+#define M1(x) #x
+#define M2(x) M1(x)
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
- #define asrt(x) Y(!(x),die(__FILE__":"XS(__LINE__)": "XS(x)))
+ #define asrt(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)))
 #else
  #define dbg(x)
  #ifdef __clang__
@@ -160,7 +160,7 @@ h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))
-#define oo os("["__FILE__":"XS(__LINE__)"]");
+#define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(OC*x)_(write(2,x,mn(x)))
 S I oh(Ln)_(C s[17];s[16]=0;F(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
