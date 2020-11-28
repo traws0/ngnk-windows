@@ -1,4 +1,4 @@
 t:
 	$(MAKE) -C ..
-	@time ./e.k
+	@./e.k
 .PHONY: t
