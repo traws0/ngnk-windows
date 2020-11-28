@@ -31,7 +31,7 @@ libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 CW=$(C) -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include
 o/wasm/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o/wasm && $(CW) -c $< -o $@
-k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c))
+k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c)) # /usr/lib/llvm-10/bin/wasm-ld should be on $PATH
 	@echo '$@ ' && $(CW) $^ -o $@ -Wl,--no-entry,--export=main,--export=init,--export=rep,--export=__heap_base,--initial-memory=33554432,--allow-undefined
 
 #32bit
