@@ -1,6 +1,5 @@
 // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 #include<sys/mman.h>
-#include<sys/stat.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
 #include<fcntl.h>
@@ -11,6 +10,7 @@
 #ifndef MAP_NORESERVE
  #define MAP_NORESERVE 0
 #endif
+I fstat(I,struct stat*),getdents(UI,V*,UI);
 S O I lh=0x0100007f;S C octet(C**p)_(UL r=pu(p);r>255?err("addr"),0:r)
 S UI inet_addr_(C**p)_(C*s=*p;P(!*s,lh)C r[4];F(4,Y(i,P(*s-'.',err("addr");0)s++)r[i]=octet(&s))*p=s;*(UI*)r)
 S L hskt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);P(f<0,err("skt"),0)
@@ -23,7 +23,11 @@ A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apc(y,10))))
 A2(v1c,et(!ytC,x)I f=N(hop_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yc;
  m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
 A1(hcl,asrt(xti);close(gi(x));au0)
-A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
+S A ls(I f)_(Cb[1024];Ik;Au=a0();
+ W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,struct{long a,b;UH l;C s[];}*e=(V*)(b+i);u=apd(u,aCz(e->s));i+=e->l))u)
+A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))
+ I f=N(hop_(x,O_RDONLY));struct stat s;I r=fstat(f,&s);P(r<0,err("fstat"))P(s.st_mode&S_IFDIR,ls(f))close(f);
+ x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);P((L)a>>4==-1,err("mmap0"))Au=(A)(a+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
  V*b=mmap(a+ZP,n,p,m|MAP_FIXED,f,0);b==(V*)uc?u:err("mmap1"))
