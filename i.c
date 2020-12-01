@@ -24,8 +24,8 @@ A2(v1c,et(!ytC,x)I f=N(op_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yc;
  m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
 S A ls(I f)_(Cb[1024];Ik;Au=a0();
  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,struct{long a,b;UH l;C s[];}*e=(V*)(b+i);u=apd(u,aCz(e->s));i+=e->l))u)
-A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))
- I f=N(op_(xR,O_RDONLY));struct stat s;I r=fstat(f,&s);P(r<0,err("fstat"))P(s.st_mode&S_IFDIR,ls(f))close(f);
+S I dir(A x)_(I f=op_(xR,O_RDONLY);struct stat s;Iv=fstat(f,&s);v=v>=0&&!!(s.st_mode&S_IFDIR);close(f);v)
+A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))P(dir(xR),ls(op_(x,O_RDONLY)))
  x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);P((L)a>>4==-1,err("mmap0"))Au=(A)(a+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
