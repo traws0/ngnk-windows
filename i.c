@@ -26,7 +26,7 @@ A1(hcl,asrt(xti);close(gi(x));au0)
 S A ls(I f)_(Cb[1024];Ik;Au=a0();
  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,struct{long a,b;UH l;C s[];}*e=(V*)(b+i);u=apd(u,aCz(e->s));i+=e->l))u)
 A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))
- I f=N(hop_(x,O_RDONLY));struct stat s;I r=fstat(f,&s);P(r<0,err("fstat"))P(s.st_mode&S_IFDIR,ls(f))close(f);
+ I f=N(hop_(xR,O_RDONLY));struct stat s;I r=fstat(f,&s);P(r<0,err("fstat"))P(s.st_mode&S_IFDIR,ls(f))close(f);
  x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xa[xn-1])?cut(al(-1),x):x)
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);P((L)a>>4==-1,err("mmap0"))Au=(A)(a+ZP);ul[-2]=0;u=AT(tC,AN(n,u));uR;
