@@ -114,12 +114,12 @@ XT A glb,cn[],ci[3][5];XT OC vc[];XT OV*vf[],*arf[3][11][8];XT L mu;
 #define syC(c) (2*(c)) //symbols: char to index
 
 S A aA(Ln)_(atn(tA,n))S A0(a0,aA(0))
-S A aC(Ln)_(atn(tC,n))S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(asrt(xtc);     (C)x)
-S A aH(Ln)_(atn(tH,n))S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(asrt(xth);     (H)x)
-S A aS(Ln)_(atn(tS,n))S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(asrt(xts);     (I)x)
-S A aI(Ln)_(atn(tI,n))S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(asrt(xti||xts);(I)x)
-S A aL(Ln)_(atn(tL,n))S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(    pkd(x)?(I)x:*xl)S L gl(Ax)_(L r=gl_(x);xr;r)
-S A aD(Ln)_(atn(tD,n))S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(asrt(xtd);      *xd)S D gd(Ax)_(Dv=*xd;xr;v)
+S A aC(Ln)_(atn(tC,n))S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(asrt(xtc);(C)x)
+S A aH(Ln)_(atn(tH,n))S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(asrt(xth);(H)x)
+S A aS(Ln)_(atn(tS,n))S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(asrt(xts);(I)x)
+S A aI(Ln)_(atn(tI,n))S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(asrt(xti||xts||xtc);(I)x)
+S A aL(Ln)_(atn(tL,n))S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(pkd(x)?(I)x:*xl)S L gl(Ax)_(L r=gl_(x);xr;r)
+S A aD(Ln)_(atn(tD,n))S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(asrt(xtd);*xd)S D gd(Ax)_(Dv=*xd;xr;v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
