@@ -3,9 +3,9 @@ S AX(enc,P(n>1,ern(n,a))P(xtiI,x=gL(xR);Au=enc(x,a,n);xr;u)P(!xtlL,etn(n,a))Ay=N
  P(xtt,UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yli;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
  P(!xn,yr;a0())Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xli;m+=!m;Az=uai=aL(yn);F(yn,UL v=yli,w=yli=v/m;zli=v-w*m))
  UL m=*xl;ux=y;Y(m,F(yn,yli%=m))u)
-S AX(spl,asrt(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytC,y)C*s=xtc?(V*)&x:xc;L l=len_(x);el(!l,y)Au=a0();C*p=yc,*q=yc,*q2=yc+yn,*q1=q2+1-len_(x);
+S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytC,y)C*s=xtc?(V*)&x:xc;L l=len_(x);el(!l,y)Au=a0();C*p=yc,*q=yc,*q2=yc+yn,*q1=q2+1-len_(x);
  W(q<q1,C m=1;F(l,m&=s[i]==q[i])Y(m,u=apd(u,aCm(p,q));p=q+=l)E(q++))Y(x-ac(10)||p<q2,u=apd(u,aCm(p,q2)))yr;u)
-S AX(join,asrt(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytA,y)C*s=xtc?(V*)&x:xc;L m=len_(x),k=yn,l=m*(k-!!k);F(k,Az=yai;et(!ztcC,y)l+=len_(z))
+S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytA,y)C*s=xtc?(V*)&x:xc;L m=len_(x),k=yn,l=m*(k-!!k);F(k,Az=yai;et(!ztcC,y)l+=len_(z))
  Au=aC(l);C*p=uc;F(k-1,Az=yai;Y(ztc,*p++=gc(z))E(mc(p,zc,zn);p+=zn)mc(p,s,m);p+=m)Y(k,Az=ya[k-1];Y(ztc,*p=gc(z))E(mc(p,zc,zn)))yr;u)
 A ea1(A1 f,Ax)_(P(xtt,f(x))P(xtm,x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
  I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=a0();F(n,Ay=f(b?xai:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xa+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)

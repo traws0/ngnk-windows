@@ -43,5 +43,5 @@ S A1(asci,P(xn>WI,err("lmt",x))x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z
 A1(asc,P(xtA,P(xn>WI,err("lmt",x))A*a=xa,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,ui,i,n-1))i=n-1;W(i>0,SWP(uii,*ui)sft(a,ui,0,--i))xr;u)
  P(xtm,Ay=gkv(&x);idx(x,N(asc(y))))P(xtIL||xtC,asci(x))P(xtS,asc(N(ea1(str,x))))P(xtD,asc(blw(x)))et(!(xts||xti),x)hop(x))
 A1(dsc,P(xti,hcl(x))P(xtm,Ay=gkv(&x);idx(x,Nx(dsc(y))))et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
-A1(grp,P(xtt,et(!xtil)K("{(2#x)#1i,`i$&x}",x))P(xtm,Au=grp(gkv(&x));asrt(Ar(u)==1);uy=idx(x,uy);u)Ay=atn(xt,0),u=a0();C w=Zt[xt];
+A1(grp,P(xtt,et(!xtil)K("{(2#x)#1i,`i$&x}",x))P(xtm,Au=grp(gkv(&x));Q(Ar(u)==1);uy=idx(x,uy);u)Ay=atn(xt,0),u=a0();C w=Zt[xt];
  F(xn,Lj=!w?fpC(&y,xci):w==2?fpI(&y,xii):w==3?fpL(&y,xli):fpA(&y,mR(xai));Y(j==un,u=apd(u,aL(0)))ua[j]=apv(ua[j],&i))xr;am(y,u))

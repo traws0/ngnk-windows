@@ -18,7 +18,7 @@ S L skt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);P(f<0,err("skt"),0)
 S L opn(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("open"),0:f)
  UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:skt(h,p))
 S I op_(Ax/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)et(*s-':')opn(s+1,fl))et(!xtC,x)x=str0(x);dex(x,opn(xc,fl)))
-A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,asrt(xti);close(gi(x));au0)
+A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xti);close(gi(x));au0)
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apc(y,10))))
 A2(v1c,et(!ytC,x)I f=N(op_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yc;
  m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,u=err("write");B)s+=k;n-=k)Y(f>2,close(f))u))
@@ -33,8 +33,8 @@ A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);P(n<0,err("lseek"))I p=PROT_READ|PROT_WRITE,
 A1(u1c,P(xti,C s[1024];I r=read(gi(x),s,Z s);r<0?err("read"):aCn(s,r))P(xtl,u1c(gI(x)))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
 
 L now()_(struct timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
-S A1(cmdw,asrt(xtC);Ln=mu;P(!xn,xr;al(n))Ay=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
-S A1(cmdt,asrt(xtC);C*s=xc;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xc),x))))));F(n,mr(Nx(app(x,0,0))))xr;al((now()-t+500)/1000))
+S A1(cmdw,Q(xtC);Ln=mu;P(!xn,xr;al(n))Ay=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
+S A1(cmdt,Q(xtC);C*s=xc;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xc),x))))));F(n,mr(Nx(app(x,0,0))))xr;al((now()-t+500)/1000))
 A1(cmd,et(!xtC,x)Y(!xn||xn==1&&*xc=='\\',exit(0))Cc=*xc;
  Y(c3('a',c,'z')&&(xn==1||xc[1]==32||xc[1]==':'),Ii=1;W(i<xn&&xci==32,i++)x=N(cut(al(i),x));A1*f=(A1*[]){ldf,cmdt,cmdw,0}[si("ltw",c)];P(f,f(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))

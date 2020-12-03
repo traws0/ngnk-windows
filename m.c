@@ -4,11 +4,11 @@
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-2]
 L mu;S A mx[40];A glb,cn[tn],ci[3][5];dbg(S I ml;/*prevent allocations*/)SN A oom()_(write(1,"oom\n",4);exit(1);0)
-S A ma(UI b)_(dbg(asrt(!ml));asrt(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);AB(b,x))Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
+S A ma(UI b)_(dbg(Q(!ml));Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);AB(b,x))Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())x=(A)(p+ZA))
  W(i>b,i--;Ay=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)AB(b,x))
-A1(mr0,dbg(ml++);asrt(x);P(pkd(x),0)asrt(Ar(x)>0);P(--Ar(x),0)Cb=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xa))x)
+A1(mr0,dbg(ml++);Q(x);P(pkd(x),0)Q(Ar(x)>0);P(--Ar(x),0)Cb=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xa))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xc-ZP,xn+ZP);0)dbg(ms(xc,0xab,xn*ZT[xt]));0)
 A1(mr,mr1(mr0(x)))V mrn(In,OA*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xc);xr;Y(ref(u),mRa(u))u)
 V*memcpy(V*x,OV*y,size_t n)_(Y(n<0,exit(5))C*p=x;OC*q=y;F(n,p[i]=q[i])x)V*memmove(V*x,OV*y,size_t n)_(memcpy(x,y,n))
@@ -18,8 +18,8 @@ A atn(Ct,Ln)_(Ax=ma(64-__builtin_clzll(ZA+7+n*ZT[t]));Ar(x)=1;AT(t,AN(n,x)))
 A atnv(Ct,Ln,OV*v)_(Au=atn(t,n);mc(uc,v,n*ZT[t]);u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
 A aCn(OC*s,Ln)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(s)))
-A gkv(A*p)_(Ax=*p;asrt(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;Au=xy;mr(AN(0,x));u) //get keys and values
-A room(Ax,Lk)_(asrt(xtC);Ln=xn;P(Ar(x)==1&&ZA+n+k<=1ll<<xb,x)Au=AN(n,atn(tC,n+k));mc(uc,xc,n);xr;u)
+A gkv(A*p)_(Ax=*p;Q(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;Au=xy;mr(AN(0,x));u) //get keys and values
+A room(Ax,Lk)_(Q(xtC);Ln=xn;P(Ar(x)==1&&ZA+n+k<=1ll<<xb,x)Au=AN(n,atn(tC,n+k));mc(uc,xc,n);xr;u)
 S C*sy1;S C sy0[1<<16]__attribute__((aligned(ZA)));C*syp(Ii)_(sy0+i)
 I syP(OC*s)_(Cc=*s;P(c<128&&(!c||!s[1]),syC(c))OC*p=sy0+256;W(p<sy1,OC*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,p-sy0)p=q;W(*p,p++)p++)
  I r=sy1-sy0,n=mn(s)+1;P(sy1+n>sy0+Z sy0,write(1,"syms ",5);oom())mc(sy1,s,n);sy1+=n;r)

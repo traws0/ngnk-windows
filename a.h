@@ -27,20 +27,20 @@
 #define RE restrict
 #define TY __typeof__
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
-#define ALN(x) {asrt(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
+#define ALN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
 #define M1(x) #x
 #define M2(x) M1(x)
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,sizeof(x));exit(1);}
- #define asrt(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)))
+ #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)))
 #else
  #define dbg(x)
  #ifdef __clang__
-  #define asrt(x) __builtin_assume(x)
+  #define Q(x) __builtin_assume(x)
  #else
-  #define asrt(x)
+  #define Q(x)
  #endif
 #endif
 
@@ -90,14 +90,14 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 #define dat(x) ((V*)((x)<<16>>16))
 #define Ar(x) ((I*)dat(x))[-3]
 
-//getters                                setters
-S  C At(Ax)_(x>>56)                      S A AT(UL t,Ax)_(asrt(t<=tn);               x<<8>>8|t<<56)
-S  C Av(Ax)_(x>>51&31)                   S A AV(UL v,Ax)_(asrt(v<32);          x&~(31ll<<51)|v<<51)
-S  C Ak(Ax)_(x>>48&7)                    S A AK(UL k,Ax)_(asrt(k<9);           x&~( 7ll<<48)|k<<48)
-S  C Ab(Ax)_(C b=xc[-16];asrt(b<48);b)   S A AB( C b,Ax)_(asrt(b<48);                  xc[-16]=b;x)
-S UH Ao(Ax)_(xts?x>>32:pkd(x)?0:xh[-7])  S A AO(UL o,Ax)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
-S UL An(Ax)_(Ln=xl[-1];asrt(n<1ll<<48);n)S A AN(UL n,Ax)_(asrt(n<1ll<<48);              xl[-1]=n;x)
-S A1(mR,asrt(x);P(pkd(x),x)asrt(Ar(x)>=0);Ar(x)++;x)
+//getters                              setters
+S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
+S  C Av(Ax)_(x>>51&31)                 S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
+S  C Ak(Ax)_(x>>48&7)                  S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
+S  C Ab(Ax)_(C b=xc[-16];Q(b<48);b)    S A AB( C b,Ax)_(Q(b<48);                  xc[-16]=b;x)
+S UH Ao(Ax)_(xts?x>>32:pkd(x)?0:xh[-7])S A AO(UL o,Ax)_(P(xts,x&~(0xffffll<<32)|o<<32)xh[-7]=o;x)
+S UL An(Ax)_(Ln=xl[-1];Q(n<1ll<<48);n) S A AN(UL n,Ax)_(Q(n<1ll<<48);              xl[-1]=n;x)
+S A1(mR,Q(x);P(pkd(x),x)Q(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gD,gH,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,kst,las,
@@ -114,12 +114,12 @@ XT A glb,cn[],ci[3][5];XT OC vc[];XT OV*vf[],*arf[3][11][8];XT L mu;
 #define syC(c) (2*(c)) //symbols: char to index
 
 S A aA(Ln)_(atn(tA,n))S A0(a0,aA(0))
-S A aC(Ln)_(atn(tC,n))S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(asrt(xtc);(C)x)
-S A aH(Ln)_(atn(tH,n))S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(asrt(xth);(H)x)
-S A aS(Ln)_(atn(tS,n))S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(asrt(xts);(I)x)
-S A aI(Ln)_(atn(tI,n))S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(asrt(xti||xts||xtc);(I)x)
+S A aC(Ln)_(atn(tC,n))S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
+S A aH(Ln)_(atn(tH,n))S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);(H)x)
+S A aS(Ln)_(atn(tS,n))S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
+S A aI(Ln)_(atn(tI,n))S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xtc);(I)x)
 S A aL(Ln)_(atn(tL,n))S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(pkd(x)?(I)x:*xl)S L gl(Ax)_(L r=gl_(x);xr;r)
-S A aD(Ln)_(atn(tD,n))S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(asrt(xtd);*xd)S D gd(Ax)_(Dv=*xd;xr;v)
+S A aD(Ln)_(atn(tD,n))S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xd)S D gd(Ax)_(Dv=*xd;xr;v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)

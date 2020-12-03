@@ -5,7 +5,7 @@ S V rndl(L*r,UL n){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260e
  F(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=rot(d,45))}
 S A rnd(Ln,L m)_(Y(n==NL,n=-m)Ax=aL(absL(n));rndl(xl,xn);Y(m,Y(m<=1ll<<32,F(xn,xli=(UI)xli*(UL)m>>32))E(F(xn,xli=(UL)xli%m)))
  Y(n<0,n=-n;el(n>m,x)F(n,Lk=m-n+i;Lv=((UL*)xl)[i]%=k+1;L*p=&xli;F(i,Y(xli==v,*p=k;B)))Ay=rnd(n,0);F(n,SWP(xli,xl[(UL)yli%(i+1)]))yr)x)
-SN L fndA(Ax/*0*/,Ay/*1*/)_(asrt(xtA);F(xn,P(mtc_(xai,y),i))NL)L fpA(A*p,Ay)_(Ax=*p;Ln=xn,i=fndA(x,y);P(i<0,*p=apd(x,y);n)yr;i)
+SN L fndA(Ax/*0*/,Ay/*1*/)_(Q(xtA);F(xn,P(mtc_(xai,y),i))NL)L fpA(A*p,Ay)_(Ax=*p;Ln=xn,i=fndA(x,y);P(i<0,*p=apd(x,y);n)yr;i)
 #define f_(T) NO L fnd##T(Ax/*0*/,T v)_(F(xn,P(((T*)dat(x))[i]==v,i))NL)\
               L fp##T(A*p,T v)_(Ax=*p;Ln=xn,i=fnd##T(x,v);P(i<0,*p=apv(x,&v);n)i)
 f_(C)f_(H)f_(I)f_(L)
