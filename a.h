@@ -140,17 +140,19 @@ S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24)
 
 #define err(a...) ({dbg(oo)eH(a,e3,e2,e1,e0)(a);})
 #define eH(x,y,z,u,n,...) n
-#define eM "nyi","len","typ","dom","rnk","idx","prs","stk"
-#define en(x,a...) P(x,err((C*)0,##a))
-#define el(x,a...) P(x,err((C*)1,##a))
-#define et(x,a...) P(x,err((C*)2,##a))
-#define ed(x,a...) P(x,err((C*)3,##a))
-#define er(x,a...) P(x,err((C*)4,##a))
-#define ei(x,a...) P(x,err((C*)5,##a))
-#define ep(x,a...) P(x,err((C*)6,##a))
-#define es(x,a...) P(x,err((C*)7,##a))
-#define h(t,i) S A e##t##n(In,OA*a)_(eN((C*)i,n,a))
-h(n,0)h(l,1)h(t,2)h(d,3)h(r,4)h(i,5)h(p,6)h(s,7)
+#define eF(f,x,a...) P(x,f(a))
+#define e_(t,a...) eF(eH(a,e##t##3,e##t##2,e##t##1,e##t##0),a)
+#define en(a...) e_(n,a)
+#define el(a...) e_(l,a)
+#define et(a...) e_(t,a)
+#define ed(a...) e_(d,a)
+#define er(a...) e_(r,a)
+#define ei(a...) e_(i,a)
+#define ep(a...) e_(p,a)
+#define es(a...) e_(s,a)
+#define eA h(n,"nyi")h(l,"len")h(t,"typ")h(d,"dom")h(r,"rnk")h(i,"idx")h(p,"prs")h(s,"stk")
+#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;A3 e##t##3;S A e##t##n(In,OA*a)_(eN(m,n,a))
+ eA
 #undef h
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
 #define N(r)      N_(r,)
