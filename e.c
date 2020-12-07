@@ -13,5 +13,8 @@ A1(epr,I h=64;C s0[3*h+Z(e.m)+6],*s=s0;*s++='\'';mc(s,e.m,e.n);s+=e.n;*s++=10;
        mc(s,p,q-p);Y(p<=t-h,*s=s[1]='.')Y(q>t+h,s[q-p-2]=s[q-p-1]='.')s+=q-p;*s++=10;F(t-p,*s++=32)*s++='^';*s++=10)
  eC();write(1,s0,s-s0);x)
 
-#define h(t,m) NO A0(e##t##0,e0(#m))NO A1(e##t##1,e1(#m,x))NO A2(e##t##2,e2(#m,x,y))NO A3(e##t##3,e3(#m,x,y,z))
+#define h(t,m) NO A0(e##t##0,e0(#m))\
+               NO A1(e##t##1,e1(#m,x))\
+               NO A2(e##t##2,e2(#m,x,y))\
+               NO A3(e##t##3,e3(#m,x,y,z))
 eA
