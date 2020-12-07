@@ -36,4 +36,4 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,Y(x,xr)0);*
  Az=pe(0,v);P(!z,Y(x,xr)yr;0)P(z==au_plc,*v=1;P(!x,y)ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(av_com,x?AO(o,a3(y,x,au_plc)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
 S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==au_plc&&(!c||c=='}'),y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)ep(*s-c,x)s++;x)
-A1(prs,et(!xtC,x)s=s0=dat(x=str0(x));Ay=*s=='\\'?a1(AO(0,a2(au_cmd,aCz(s+1)))):pb(a0(),0);!y?eso(x,s-s0),0:lam(0,x,shy(y),aS(0)))
+A1(prs,et(!xtC,x)s=s0=dat(x=str0(x));Ay=*s=='\\'?a1(AO(0,a2(au_cmd,aCz(s+1)))):pb(a0(),0);!y?eS(x,s-s0),0:lam(0,x,shy(y),aS(0)))
