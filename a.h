@@ -153,8 +153,8 @@ S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24)
 #define es(a...) e_(s,a)
 #define ez(a...) e_(z,a)
 #define eo(a...) e_(o,a)
-#define eA h(n,"nyi")h(l,"len")h(t,"typ")h(d,"dom")h(r,"rnk")h(i,"idx")h(p,"prs")h(s,"stk")h(z,"lmt")h(o,"io")
-#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;A3 e##t##3;S A e##t##n(In,OA*a)_(eN(m,n,a))
+#define eA h(n,nyi)h(l,len)h(t,typ)h(d,dom)h(r,rnk)h(i,idx)h(p,prs)h(s,stk)h(z,lmt)h(o,io)
+#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;A3 e##t##3;S A e##t##n(In,OA*a)_(eN(#m,n,a))
  eA
 #undef h
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
