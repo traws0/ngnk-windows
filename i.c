@@ -11,12 +11,12 @@
  #define MAP_NORESERVE 0
 #endif
 I fstat(I,struct stat*),getdents(UI,V*,UI);
-S O I lh=0x0100007f;S C octet(C**p)_(UL r=pu(p);r>255?err("addr"),0:r)
-S UI inet_addr_(C**p)_(C*s=*p;P(!*s,lh)C r[4];F(4,Y(i,P(*s-'.',err("addr");0)s++)r[i]=octet(&s))*p=s;*(UI*)r)
+S O I lh=0x0100007f;S C octet(C**p)_(UL r=pu(p);ed(r>255)r)
+S UI inet_addr_(C**p)_(C*s=*p;P(!*s,lh)C r[4];F(4,Y(i,ed(*s-'.')s++)r[i]=octet(&s))*p=s;*(UI*)r)
 S L skt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);P(f<0,err("skt"),0)
  struct sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);0>connect(f,(struct sockaddr*)&a,Z(a))?err("conn"),0:f)
 S L opn(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);f<0?err("open"),0:f)
- UI h=inet_addr_(&s);P(*s-':',err("addr"),0)s++;UL p=pu(&s);*s?err("addr"),0:skt(h,p))
+ UI h=inet_addr_(&s);ed(*s-':')s++;UL p=pu(&s);ed(*s)skt(h,p))
 S I op_(Ax/*1*/,I fl)_(P(xtil,gi(x))P(xts,C*s=syp(gs(x));P(!*s,1)et(*s-':')opn(s+1,fl))et(!xtC,x)x=str0(x);dex(x,opn(xc,fl)))
 A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xti);close(gi(x));au0)
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))et(!ytC,x,y)v1c(x,N(apc(y,10))))
