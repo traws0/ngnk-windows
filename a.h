@@ -26,6 +26,7 @@
 #define TD typedef
 #define RE restrict
 #define TY __typeof__
+#define ST struct
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #define ALN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
