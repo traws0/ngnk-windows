@@ -139,7 +139,6 @@ S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24)
 #define NH (H)(1<<15)
 #define WH (~NH)
 
-#define err(a...) ({dbg(oo)eH(a,e3,e2,e1,e0)(a);})
 #define eH(x,y,z,u,n,...) n
 #define eF(f,x,a...) P(x,f(a))
 #define e_(t,a...) eF(eH(a,e##t##3,e##t##2,e##t##1,e##t##0),a)
