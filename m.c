@@ -10,7 +10,7 @@ S A ma(UI b)_(dbg(Q(!ml));Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]
  W(i>b,i--;Ay=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)AB(b,x))
 A1(mr0,dbg(ml++);Q(x);P(pkd(x),0)Q(Ar(x)>0);P(--Ar(x),0)Cb=xb;P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xA))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]));0)
-A1(mr,mr1(mr0(x)))V mrn(In,OA*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xai))x)A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xC);xr;Y(ref(u),mRa(u))u)
+A1(mr,mr1(mr0(x)))V mrn(In,OA*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xa))x)A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xC);xr;Y(ref(u),mRa(u))u)
 V*memcpy(V*x,OV*y,size_t n)_(Y(n<0,exit(5))C*p=x;OC*q=y;F(n,p[i]=q[i])x)V*memmove(V*x,OV*y,size_t n)_(memcpy(x,y,n))
 V*memset(V*x,I c,size_t n)_(C*p=x;F(n,*p++=c);x)
 I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)size_t strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)

@@ -23,8 +23,8 @@ S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)==syC('o'),h(bo);x)Li=fndI(fl,gs(y));P(i>=0,fu
  Y(u==cu('*')&&n==2,Az=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))Y(utw&&n==2,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;F(n-1,Az=yA[n-1-i];z==au_plc?(p=1),hc(zR):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==av_mkl,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
-A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC(0));fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);F(yn,P(!cr(x,yai),xr;yr;0)h(i==yn-1?br:bp))yr;
- y=fb;Q(Ar(y)==1);Fj(16,Ii=fu[j];Y(i>=0&&yci==bg,yci=bd))mr(xA[5]);AK(k,AT(to,x)))
+A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC(0));fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);F(yn,P(!cr(x,ya),xr;yr;0)h(i==yn-1?br:bp))yr;
+ y=fb;Q(Ar(y)==1);Fj(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))mr(xA[5]);AK(k,AT(to,x)))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;
