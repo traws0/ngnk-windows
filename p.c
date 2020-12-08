@@ -15,9 +15,9 @@ S A0(pC,Ax=aC(0);Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t
 S C ph()_(Cc=*s;dgt(c)?c-'0':c3('a',c,'f')?c+10-'a':16)
 S A0(p0x,Ax=aC(0);s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();ep(d>15,x)s++;x=apc(x,c<<4|d))x)
 S A ps()_(C*t=s,c=*s;Y(c&128,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||si("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))
-S A pS(Cc)_(Ax=aS(0);W(1,Ay=c-'`'||*s-'"'?ps():pC();y=str0(y);x=apv(x,I(syP(yc)));yr;P(*s-c,x)++s)0)
+S A pS(Cc)_(Ax=aS(0);W(1,Ay=c-'`'||*s-'"'?ps():pC();y=str0(y);x=apv(x,I(syP(yC)));yr;P(*s-c,x)++s)0)
 S A lam(Ck,Ax,Ay,Az)_(AK(k,atnv(tA,5,A(x,y,au0,z,au0)))) //x:src,y:bytecode,z:locals
-S A1(shy,P(!xn,x)Ay=xa[xn-1];Y(ytA&&yn,Az=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x) //if last expr is assignment, make it return ::
+S A1(shy,P(!xn,x)Ay=xA[xn-1];Y(ytA&&yn,Az=yx;P(z==av0||ztu&&yn>2,apd(x,au0)))x) //if last expr is assignment, make it return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);F(n,xii=syC('x'+i))x)
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),']')));ep(!ytS||yn>8,y))
  Az=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
@@ -29,7 +29,7 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='(',s++;x=N(pb(enl
  Ii=si(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,au_plc)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
 S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si(vc+26,c);P(i>3,x)s++;Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2&&xy==au_plc,xy=au0)*v=0)
                                                               E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
-S A1(mon,P(xtv&&x-av0,au(xv))P(!xtA,x)P(xn==2&&xx==aw(0)||xn==3&&xx==av_com,x=mut(x);xa[xn-1]=mon(xa[xn-1]);x)x)
+S A1(mon,P(xtv&&x-av0,au(xv))P(!xtA,x)P(xn==2&&xx==aw(0)||xn==3&&xx==av_com,x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)x)
 S V pw()_(Cc=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
 S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,Y(x,xr)0);*v=0;u=a2(au_out,u);Y(x,u=a2(mon(x),u))u)
  UH o=s-s0;Cb=0;Ay=pT(&b);P(!y,Y(x,xr)0)P(y==au_plc,x?x:y)P(!b,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(av_com,x,z):AO(o,a2(mon(x),z)))

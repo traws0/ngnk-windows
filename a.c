@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 A1(neg,sub(ai(0),x))
 A1(not,P(xtmMA,ea1(not,x))P(fun(x),I r=x==au0;xr;ai(r))eql(x,xtsS?as(0):ac(0)))
-A1(sqr,P(xtmMA,ea1(sqr,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xc-uc,xr)u)
+A1(sqr,P(xtmMA,ea1(sqr,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,udi=__builtin_sqrt(xdi))Y(xC-uC,xr)u)
 A1(nul,xtmMA?ea1(nul,x):eql(x,mR(cn[xt])))
 A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,Au=aC(xn);m2(x,F(un,Cc=xci;uci=c+32*c3('A',c,'Z'))u))
  P(xtmMA,ea1(flr,x))x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,F(un,Dd=xdi;uli=d<0?(L)d-(d<(L)d):(L)d)u))
@@ -10,7 +10,7 @@ S D sind(D x)_(S O Dd=M_PI-8.742277657347586e-8, //mooooo.ooo/chebyshev-sine-app
  a[]={1.32913446369766718e-10,-2.33177897192836082e-8,2.52229235749396866e-6,
       -1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
  P(x<0,-sind(-x))Y(x>M_PI,x-=M_PI*(L)(x/M_PI))D q=x*x,v=0;F(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
-A1(sinx,P(xtmMA,ea1(sinx,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xc-uc,xr)u)
+A1(sinx,P(xtmMA,ea1(sinx,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,udi=sind(xdi))Y(xC-uC,xr)u)
 
 S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
@@ -61,9 +61,9 @@ OV*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 
 S A v2(Ax,Ay,Iv)_(P(xtm&&ytm,Au=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
- V*a=xti?(V*)&x:xc,*b=yti?(V*)&y:yc;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
- Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xc,xn);x))
- P(yt==t&&Ar(y)==1,m2(x,f(a,b,yc,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uc,un);u)))
+ V*a=xti?(V*)&x:xC,*b=yti?(V*)&y:yC;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
+ Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
+ P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
 A2(mod,P(xtl&&gl_(x)==NL,out(dex(x,y)))P(xtil,v2(x,y,vi('!')))
  Y(xtt||xtm,Y(xtm,x=enl(x))x=rsh(al(len_(y)),x))

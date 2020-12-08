@@ -40,7 +40,7 @@ k objs
  xR xr - refcount++ and --. if it drops to 0, free the obj (recursively if necessary)
   mr(x) - equivalent to xr
   m2(x,code) - execute a block of code after refcount-- but before collecting the obj
- xc xl xd xa.. - ptr to content of x as a char*,long*,double*,A*..
+ xC xL xD xA.. - ptr to content of x as a char*,long*,double*,A*..
  xci xli.. - i-th typed element: xc[i],xl[i]..
  AT(x) AK(x) AV(x) AB(x) AN(x) AO(x) - setters for type,arity,verb,bucket,length,srcoffset
  At(x) Ak(x) Av(x) Ab(x) An(x) Ao(x) - getters, the actual fns behind the xt,xn.. macros
