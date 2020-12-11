@@ -34,7 +34,7 @@
 #define M2(x) M1(x)
 #ifdef DEBUG
  #define dbg(x) x
- #define die(x) {write(1,x,sizeof(x));exit(1);}
+ #define die(x) {write(1,x,Z(x));exit(1);}
  #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)))
 #else
  #define dbg(x)
