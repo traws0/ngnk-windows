@@ -12,10 +12,10 @@ A2(rsh,P(fun(x),flt(x,y))P(ytm,P(xtl,Az=gkv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh
 A1(enl,P(sim(x),P(pkd(x),Au=atn(tT(xt),1);*uL=x;u)AT(tT(xt),x))P(xtm,Ay=gkv(&x);aM(x,ea1(enl,y)))a1(x))A1(enla,xtt||xtm?enl(x):x)
 A2(cat,P(xtmM&&ytmM,P(xtm&&ytm,Az=gkv(&y);amd(A(x,y,av0,z),4))ed(!mtc_(xx,yx),x,y)Au=eac(cv(','),A(mR(xy),mR(yy)),2);Y(u,u=aM(mR(xx),u))xr;yr;u)
  x=enla(x);y=enla(y);Y(!xn,SWP(x,y))P(!yn,yr;x)Y(xt-yt,x=Ny(blw(x));y=Nx(blw(y)))L w=ZT[xt],m=xn,n=yn;
- Au;Y(Ar(x)==1&&ZA+(m+n)*w<=1<<xb,u=AN(m+n,x))E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(Ar(x)==1,mr(AN(0,x)))E(mRa(x);xr))E(xr))
+ Au;Y(Ar(x)==1&&ZA+(m+n)*w<=1<<Ab(x),u=AN(m+n,x))E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(Ar(x)==1,mr(AN(0,x)))E(mRa(x);xr))E(xr))
  mc(uC+m*w,yC,n*w);Y(ytA,mRa(y))yr;u)
 A apv(Ax,OV*v)_(Q(xtT);Ln=xn,w=ZT[xt];
- Y(Ar(x)==1&&ZA+w+n*w<=1ll<<xb,x=AN(n+1,x))E(Ay=atn(xt,n+1);Y(Ar(x)>1&&xtA,mRa(x))EY(ref(x),x=AT(tL,x))m2(x,mc(yC,xC,n*w));x=y)
+ Y(Ar(x)==1&&ZA+w+n*w<=1ll<<Ab(x),x=AN(n+1,x))E(Ay=atn(xt,n+1);Y(Ar(x)>1&&xtA,mRa(x))EY(ref(x),x=AT(tL,x))m2(x,mc(yC,xC,n*w));x=y)
  V*p=xC+n*w;mc(p,v,w);x)
 A2(apd,Q(xtT||xtM);P(xtM,P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);F(An(z),za=apd(za,get(yy,i)))yr;x)
  Y(!xtA&&(!ytt||xt-tT(yt)),x=blw(x))P(!xn,xr;enl(y))Lv=xtA?(L)y:gl(y);apv(x,&v))
