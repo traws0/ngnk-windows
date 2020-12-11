@@ -32,6 +32,7 @@
 #define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
 #define M1(x) #x
 #define M2(x) M1(x)
+#define CH(x,y,a...) (TY(y)[]){y,a}[x]
 #ifdef DEBUG
  #define dbg(x) x
  #define die(x) {write(1,x,Z(x));exit(1);}
