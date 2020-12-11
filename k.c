@@ -9,8 +9,8 @@ A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtA,app(x,a,n))Ck=max(n,xk);F(n,k-=a[i]!=a
 S A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=a0();F(yn,u=apd(u,get(ya,j)))am(mR(xx),u))
 A get(Ax/*0*/,Li)_(xtA?mR(xa):xtH?ah(xh):xtI?ai(xi):xtL?al(xl):xtS?as(xi):xtC?ac(xc):xtD?ad(xd):xtm?get(xy,i):xtM?getM(x,i):xR)
 A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xn)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
-#define i_L(T) S V i##T##L(O T*p,L m,O L*q,T*r,L n,T e){F(n,Lj=q[i];r[i]=in(j,m)?p[j]:e)}
-i_L(C)i_L(H)i_L(I)i_L(L)
+#define i__(T,U) SN V i##T##U(O T*p,L m,O U*q,T*r,L n,T e){F(n,U j=q[i];r[i]=in(j,m)?p[j]:e)}
+i__(C,L)i__(H,L)i__(I,L)i__(L,L)
 S A2(idx_/*x0y1*/,er(xtt,y)P(y==au_plc,xR)P(ytA,ear(cv('@'),A(xR,y),2))P(ytm,y=mut(y);yy=idx_(x,yy);y)et(fun(y),y)P(ytt,getr(x,gl(y)))
  y=N(gL(y));L w=Zt[xt];Au=xtM?a0():atn(xt,yn);P(xtA||xtM,u=AN(0,u);F(yn,u=apd(u,getr(x,yl)))yr;u)
  P(w==3,m2(y,iLL((V*)xC,xn,yL,(V*)uC,un,gl_(cn[xt]));0);u)
