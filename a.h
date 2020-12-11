@@ -38,11 +38,7 @@
  #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)))
 #else
  #define dbg(x)
- #ifdef __clang__
-  #define Q(x) __builtin_assume(x)
- #else
-  #define Q(x)
- #endif
+ #define Q(x)
 #endif
 
 TD void V;TD char unsigned C,UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
