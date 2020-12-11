@@ -9,14 +9,11 @@ A2(com,AK(yk,AT(tq,a2(x,y))))AX(prj,P(xtA,app(x,a,n))Ck=max(n,xk);F(n,k-=a[i]!=a
 S A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=a0();F(yn,u=apd(u,get(ya,j)))am(mR(xx),u))
 A get(Ax/*0*/,Li)_(xtA?mR(xa):xtH?ah(xh):xtI?ai(xi):xtL?al(xl):xtS?as(xi):xtC?ac(xc):xtD?ad(xd):xtm?get(xy,i):xtM?getM(x,i):xR)
 A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xn)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
-#define i__(T,U) SN V i##T##U(O T*p,L m,O U*q,T*r,L n,T e){F(n,U j=q[i];r[i]=in(j,m)?p[j]:e)}
-i__(C,L)i__(H,L)i__(I,L)i__(L,L)
+#define i_(T,U) SN V i##T##U(OV*RE p0,L m,OV*RE q0,V*RE r0,L n,L e0){O T*p=p0;O U*q=q0;T*r=r0;T e=(T)e0;F(n,U j=q[i];r[i]=in(j,m)?p[j]:e)}
+i_(C,L)i_(H,L)i_(I,L)i_(L,L)
 S A2(idx_/*x0y1*/,er(xtt,y)P(y==au_plc,xR)P(ytA,ear(cv('@'),A(xR,y),2))P(ytm,y=mut(y);yy=idx_(x,yy);y)et(fun(y),y)P(ytt,getr(x,gl(y)))
  y=N(gL(y));L w=Zt[xt];Au=xtM?a0():atn(xt,yn);P(xtA||xtM,u=AN(0,u);F(yn,u=apd(u,getr(x,yl)))yr;u)
- P(w==3,m2(y,iLL((V*)xC,xn,yL,(V*)uC,un,gl_(cn[xt]));0);u)
- P(w==2,m2(y,iIL((V*)xC,xn,yL,(V*)uC,un,gi (cn[xt]));0);u)
- P(w==1,m2(y,iHL((V*)xC,xn,yL,(V*)uC,un,gh (cn[xt]));0);u)
- Q(!w); m2(y,iCL((V*)xC,xn,yL,(V*)uC,un,gc (cn[xt]));0);u)
+ A z=cn[xt];m2(y,(V(*[])(OV*RE,L,OV*RE,V*RE,L,L)){iCL,iHL,iIL,iLL}[w]((V*)xC,xn,yL,(V*)uC,un,w==3?*zL:(I)z);0);u)
 S AX(idxA,Ay=*a++;n--;P(ytA,A b[8];*b=au_plc;mc(b+1,a,n);Az=prj(x,b,n+1);dex(z,eac(z,a-1,1)))
  P(ytT||y==au_plc,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)Au=idxA(x,a,n);xr;u)
 S A2(wrt,P(xtl,wrt(gI(x),y))P(ytc,wrt(x,enl(y)))et(!xti||!ytC,y)write(gi(x),yC,yn);y)S A1(fnow,xr;al(now()))
