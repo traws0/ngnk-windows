@@ -12,12 +12,12 @@ S D sind(D x)_(S O Dd=M_PI-8.742277657347586e-8, //mooooo.ooo/chebyshev-sine-app
  P(x<0,-sind(-x))Y(x>M_PI,x-=M_PI*(L)(x/M_PI))D q=x*x,v=0;F(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
 A1(sinx,P(xtmMA,ea1(sinx,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,ud=sind(xd))Y(xC-uC,xr)u)
 
-S L cmpd(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
+S L cD(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
 #define hh(v,f) h(v,f,f,f)
 hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)h(dvd,y?x/y:(UI)NI+(x<0)-(x>0),y?x/y:(UL)NL+(x<0)-(x>0),x/y)
 h(mod,x>0?(y%x+x)%x:x?y/-x:NI,x>0?(y%x+x)%x:x?y/-x:NL,ND)hh(mnm,min(x,y))hh(mxm,max(x,y))
-h(ltn,x<y,x<y,cmpd(x)<cmpd(y))h(gtn,x>y,x>y,cmpd(x)>cmpd(y))h(eql,x==y,x==y,*(L*)&x==*(L*)&y)
+h(ltn,x<y,x<y,cD(x)<cD(y))h(gtn,x>y,x>y,cD(x)>cD(y))h(eql,x==y,x==y,*(L*)&x==*(L*)&y)
 #undef h
 
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
