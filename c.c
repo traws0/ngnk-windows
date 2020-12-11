@@ -13,7 +13,7 @@ S V md5u(U*d,UL n,U*a){
 #undef h
 S V sha1u(U*d,UL n,U*a){
  F(n,U x=*a,y=a[1],z=a[2],u=a[3],v=a[4],w[80];bn(w,d,16);F(64,w[i+16]=rot(w[i+13]^w[i+8]^w[i+2]^w[i],1))
-  F(80,U t=rot(x,5)+(U3[]){chx,xor,maj,xor}[i/20](y,z,u)+v+(U[]){0x5a827999,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6}[i/20]+w[i];v=u;u=z;z=rot(y,30);y=x;x=t)
+  F(80,U t=rot(x,5)+CH(i/20,&chx,xor,maj,xor)(y,z,u)+v+CH(i/20,0x5a827999u,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6)+w[i];v=u;u=z;z=rot(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
 S A mdc(Ax,OV*iv,I nv,V(*f)(U*,UL,U*),I b)_(et(!xtC)Au=aCn(iv,4*nv);UL n=xn,k=n/64,r=n%64,m=n+72&~63; //merkle-damgard construction with padding
  Cc[128];m2(x,f(xI,k,uI);mc(c,xC+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);*(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,uI);Y(b,bn(uI,uI,nv))u)

@@ -157,7 +157,7 @@ S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24)
 #define N(r)      N_(r,)
 #define N1(x,r)   N_(r,mr(x))
 #define N2(x,y,r) N_(r,mr(x);mr(y))
-#define SF(x,y,s,f...) ({Li=gl(K(s"?",x));ed(i<0,y);(A1*[]){f}[i](y);})
+#define SF(x,y,s,f...) ({Li=gl(K(s"?",x));ed(i<0,y);CH(i,&f)(y);})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define ox(x) ox_(#x":",(A)(x))
