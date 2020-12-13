@@ -11,6 +11,7 @@ SN L fndA(Ax/*0*/,Ay/*1*/)_(Q(xtA);F(xn,P(mtc_(xa,y),i))NL)L fpA(A*p,Ay)_(Ax=*p;
 fnd_(C)fnd_(H)fnd_(I)fnd_(L)
 #define f_(T) NO I f##T(OV*a0,I n,OV*b0)_(O T*a=a0,v=*(T*)b0;F(n,P(a[i]==v,i))NI)
 f_(C)f_(H)f_(I)f_(L)
+I fAI(Ax,Iv)_(fI(xI,xn,&v))
 A2(fnd,
  P(xtt,P(xts,SF(x,y,"``j`hex`aes",des,jsr,unh,aes1))et(!xtil,x,y)P(ytl,rnd(gl(gL(x)),gl(y)))
        P(yti,K("{`i$x?`l$y}",x,y))P(ytc,K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))K("{y@x?#y}",x,y))

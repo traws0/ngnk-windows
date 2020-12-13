@@ -25,7 +25,7 @@ AX(app,P(xtT,xtA?idxA(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,
  P(n>xk,ern(n,a))P(xtu,((A1*)vf[xv])(*a))P(xtw,Ay=*a;AK(0<xv&&xv<4&&yk==2?1:fun(y)?yk:1,AV(xv,atnv(tr,1,a))))P(xto,run(x,a,n))
  P(xtp,P(n+xn>9,ern(n,a))I m=xn-1,j=0;A b[8];F(m,b[i]=xA[i+1]==au_plc&&j<n?a[j++]:mR(xA[i+1]))I l=max(0,n-j);mc(b+m,a+j,8*l);app(xx,b,m+l))
  P(xtq,app(xx,&(A){N(app(xy,a,n))},1))etn(n,a))
-A1(val,P(xtS,Ay=glb;F(xn,et(!ytm,x)Az=yx,u=yy;ed(!ztS||!utA,x)Ik=xi;Lj=fndI(z,k);ev(j<0,x)y=uA[j])xr;yR)
+A1(val,P(xtS,Ay=glb;F(xn,et(!ytm,x)Az=yx,u=yy;ed(!ztS||!utA,x)Ik=xi;Ij=fAI(z,k);ev(j<0,x)y=uA[j])xr;yR)
  P(xtA,P(!xn,x)P(xn==1,fir(x))ez(xn>9,x)x=mut(x);Au=app(xx,&xy,xn-1);mr(AN(1,x));u)P(xtC,x=N(cpl(N(prs(x))));dex(x,run(x,0,0)))
  P(xtc||xts,val(enl(x)))P(xtm,las(AT(tA,x)))P(xtr,cat(AT(tA,x),aw(xv)))P(c3(tu,xt,tw),al(xv))et(!(xto||xtp||xtq),x)AT(tA,x))
 A2(idx,dex(x,idx_(x,y)))A2(ap1,dex(x,app(x,&y,1)))A2(apn,y=enla(y);Ln=yn;P(!n,yr;x)ez(n>8,x,y)y=mRa(Nx(blw(y)));Au=app(x,yA,n);xr;yr;u)
