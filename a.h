@@ -96,14 +96,19 @@ S UL An(Ax)_(Ln=xL[-1];Q(n<1ll<<48);n) S A AN(UL n,Ax)_(Q(n<1ll<<48);           
 S A1(mR,Q(x);P(pkd(x),x)Q(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
+A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gD,gH,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,kst,las,
  ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,sha1,sha256,sha3_256,sinx,cosx,ser,sqr,sqz,str,str0,til,typ,
  u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
-A3 a3,try;A0 aa0;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run;
+A3 a3,try;
+AA amd,am1,dmd,dm1;
+AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(OC*,OC*),aCn(OC*,L),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,L),atnv(C,L,OV*),catc(A,OC*,L),ea1(A1,A),
  e0(OC*),e1(OC*,A),e2(OC*,A,A),e3(OC*,A,A,A),eN(OC*,I,OA*),get(A,L),getr(A,L),gkv(A*),room(A,L);
-V init(),mrn(I,OA*),tilH(V*,L),tilI(V*,L),tilL(V*,L);C*syp(I);I si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
+V init(),mrn(I,OA*),tilH(V*,L),tilI(V*,L),tilL(V*,L);
+C*syp(I);
+I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
 L fndI(A,I),fndL(A,L),fpA(A*,A),fpC(A*,C),fpI(A*,I),fpL(A*,L),len_(A),now(),pl(C**),pu(C**),tru(A);
 XT A glb,cn[],ci[3][5];XT OC vc[];XT OV*vf[],*arf[3][11][8];XT L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
