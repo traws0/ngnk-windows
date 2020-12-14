@@ -11,6 +11,6 @@ S A0(ja,s++;Ax=a0();P(jw()==']',s++;x)W(1,x=apd(x,Nx(jv()));P(*s==']',s++;x)Nx(*
 S A0(jo,s++;Ax=am(aS(0),a0());Cc=jw();P(c=='}',s++;x)
  W(1,Nx(c=='"');xx=apd(xx,gS(Nx(js())));Nx(jw()==':');s++;xy=apd(xy,Nx(jv()));P(*s=='}',s++;x)Nx(*s==',');s++;c=jw())0)
 S A jr(OC*t,Lv)_(Cc;W((c=*t++),P(c-*s,0)s++)al(v))S A0(jt,jr("true",1))S A0(jf,jr("false",0))S A0(jN,jr("null",NL))
-S A0(jv,Cc=jw();Ii=si("-ftn[{\"",c)*!c3('0',c,'9');Ax=CH(i,&jd,jf,jt,jN,ja,jo,js,je)();jw();x)
+S A0(jv,Cc=jw();Ii=si("-ftn[{\"",c)*!dgt(c);Ax=CH(i,&jd,jf,jt,jN,ja,jo,js,je)();jw();x)
 A1(jsr,et(!xtcC,x)x=str0(enla(x));s=xC;Au=jv();Y(u&&*s,ur;u=0)P(!u,eS(x,s-xC);ep(1);0)xr;u)
 A1(jsw,en(1);0)
