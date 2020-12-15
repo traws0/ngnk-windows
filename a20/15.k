@@ -5,4 +5,4 @@ f 2020i
 
 c:"#include<stdio.h>\n#define N 30000000\ntypedef int I;I h[N],a[]={",(","/$a),"},n=",$#a
 c,:";int main(){for(I i=0;i<n;i++)h[a[i]]=i+1;I i=n,l=a[n-1];while(i<N){I p=h[l];h[l]=i;l=p?i-p:0;i++;}printf(\"%d\",l);}"
-` 0:`x(" "\"/bin/tcc -run -";c)
+.*."\\echo '",c,"'|tcc -run -"
