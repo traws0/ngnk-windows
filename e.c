@@ -15,4 +15,4 @@ A1(epr,I h=64;C s0[3*h+Z(e.m)+6],*s=s0;*s++='\'';mc(s,e.m,e.n);s+=e.n;*s++=10;
 
 #define g(t,m,n,a...) NO A##n(e##t##n,e##n(#m,##a))
 #define h(a...) g(a,0)g(a,1,x)g(a,2,x,y)g(a,3,x,y,z)
-eA
+EA
