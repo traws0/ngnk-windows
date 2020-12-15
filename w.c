@@ -3,9 +3,9 @@ S AX(enc,P(n>1,ern(n,a))P(xtiI,x=gL(xR);Au=enc(x,a,n);xr;u)P(!xtlL,etn(n,a))Ay=N
  P(xtt,UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yl;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
  P(!xn,yr;a0())Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);F(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=*xL;ux=y;Y(m,F(yn,yl%=m))u)
-S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytC,y)C*s=xtc?(V*)&x:xC;L l=len_(x);el(!l,y)Au=a0();C*p=yC,*q=yC,*q2=yC+yn,*q1=q2+1-len_(x);
+S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xC;L l=len_(x);El(!l,y)Au=a0();C*p=yC,*q=yC,*q2=yC+yn,*q1=q2+1-len_(x);
  W(q<q1,C m=1;F(l,m&=s[i]==q[i])Y(m,u=apd(u,aCm(p,q));p=q+=l)E(q++))Y(x-ac(10)||p<q2,u=apd(u,aCm(p,q2)))yr;u)
-S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;et(!ytA,y)C*s=xtc?(V*)&x:xC;L m=len_(x),k=yn,l=m*(k-!!k);F(k,Az=ya;et(!ztcC,y)l+=len_(z))
+S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytA,y)C*s=xtc?(V*)&x:xC;L m=len_(x),k=yn,l=m*(k-!!k);F(k,Az=ya;Et(!ztcC,y)l+=len_(z))
  Au=aC(l);C*p=uC;F(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)Y(k,Az=yA[k-1];Y(ztc,*p=gc(z))E(mc(p,zC,zn)))yr;u)
 A ea1(A1 f,Ax)_(P(xtt,f(x))P(xtm,x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
  I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=a0();F(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
@@ -39,7 +39,7 @@ AX(scn,P(xtilIL,enc(x,a,n))P(xtcC,spl(x,a,n))P(xk<2,cvi(x,a,n))
  Y(n==2,Au=a[1];P(utm,u=mut(u);uy=scn(x,A(*a,uy),2);u)P(utt,ern(n,a))P(!un,mr(*a),u))
  Ay=*a++;n--;L m=cfm(a,n);P(m==-2,yr;eln(n,a))Au=a0(),b[8];
  F(m,*b=y;Fj(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);P(!y,mrn(n,a);ur;0)u=apd(u,yR))mrn(n,a);yr;u)
-AX(eap,P(n==1&&xtilIL,eac(x,a,n))P(n>2,ern(n,a))Az=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);et(!ztT,y,z)P(!zn,yr;z)
+AX(eap,P(n==1&&xtilIL,eac(x,a,n))P(n>2,ern(n,a))Az=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);Et(!ztT,y,z)P(!zn,yr;z)
  Y(xtv&&xv<11,
   P(yti&&(ztI||ztC) ,I a=gi(gI(y));z=N(gI(z));Au=ax(z);((V(*)(V*,V*,V*,L))arf[zt-tI][xv][6])(&a,zC,uC,zn);u)
   P(ytil&&(ztL||ztC),L a=gl(gL(y));z=N(gL(z));Au=ax(z);((V(*)(V*,V*,V*,L))arf[zt-tI][xv][6])(&a,zC,uC,zn);u)

@@ -18,7 +18,7 @@ K n_r return B continue                                                         
 R n_aa g=n_a s="("                        e=")" c=@n_x,n_a |M n_a "," contained |H n_a nontext
 R n_bb g=n_b s="\["                       e="]" c=@n_x,n_b |M n_b "," contained |H n_b n_a
 R n_cc g=n_c s="{"                        e="}" c=@n_x,n_c |M n_c "," contained |H n_c n_a
-R n_pp g=n_p s="\v<(P|e[a-z]|[XY]t\w+)\(" e=")" c=@n_x,n_p |M n_p "," contained |H n_p function
+R n_pp g=n_p s="\v<(P|E[a-z]|[XY]t\w+)\(" e=")" c=@n_x,n_p |M n_p "," contained |H n_p function
 R n_ff g=n_f s="\<\([WF]\|F[j_]\)("       e=")" c=@n_x,n_f |M n_f "," contained |H n_f special
 R n_ii g=n_i s="\<\(Y\|EY\=\)("           e=")" c=@n_x,n_i |M n_i "," contained |H n_i type
 R n_vv g=n_v s="(\(\w\| \)*,"             e=")" c=@n_x contained                |H n_v statement

@@ -60,7 +60,7 @@ OV*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
 S A v2(Ax,Ay,Iv)_(P(xtm&&ytm,Au=gkv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
- A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;el(k==3&&xn-yn,x,y)
+ A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xti?(V*)&x:xC,*b=yti?(V*)&y:yC;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
  P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
@@ -68,7 +68,7 @@ A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
 A2(mod,P(xtl&&gl_(x)==NL,out(dex(x,y)))P(xtil,v2(x,y,vi('!')))
  Y(xtt||xtm,Y(xtm,x=enl(x))x=rsh(al(len_(y)),x))
  Y(ytt||ytm,Y(ytm,y=enl(y))y=rsh(al(len_(x)),y))
- el(len_(x)-len_(y),x,y)am(x,y))
+ El(len_(x)-len_(y),x,y)am(x,y))
 #define h(c,s) A2(s,v2(x,y,vi(c)))
 h('+',add)h('-',sub)h('*',mul)h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)h('>',gtn)
 #undef h
