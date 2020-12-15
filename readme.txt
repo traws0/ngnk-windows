@@ -27,7 +27,7 @@ a20/ https://adventofcode.com/2020
 o/   .o files (build tmp)
 
 k objs
- A - the type of a tagged ptr to a k obj
+ A - the type of a tagged k value or pointer
  x y z u - var names for A objs. usually x y z are the args and u is the result from the fn.
  xt xn xb - type, length, and bucket(as in buddy system) of x. similarly: yt,zn..
  tc tL tA.. - constants for k types
