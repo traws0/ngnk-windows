@@ -1,6 +1,6 @@
 0:
-	@if [ -e kat1/OFBVarTxt256.rsp ]; then \
-		echo 'skipping aes tests.  to test aes, please run t/aes/download.sh first.'; \
-	else \
+	@if [ -e kat/OFBVarTxt256.rsp ]; then \
 		./t.k; \
+	else \
+		echo 'skipping aes tests (please run ./download.sh in t/aes/ to get test data)'; \
 	fi
