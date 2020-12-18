@@ -8,7 +8,7 @@ c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a
 A1(flp,XtM(AT(tm,x))Xtm(Ay=xy;Er(!ytA||!yn,x)F(yn,Az=ya;En(!ztT,x))L m=An(yx);F(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xtt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,P(xth||xtil,Ln=gl_(x);Im=n<0;n*=1-2*m;Au=atn(tT(xt),n);CH(xt-th,&tilH,tilI,tilL)(uC,n);(m?add:dex)(x,u))
- P(xtIL,K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xtm(fir(AT(tA,x)))Xto(val(x))Et(!xtA||xn,x)x)
+ P(xtH||xtIL,K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xtm(fir(AT(tA,x)))Xto(val(x))Et(!xtA||xn,x)x)
 A1(whr,Et(xtM||xtA,x)Xtm(Ay=gkv(&x);idx(x,Nx(whr(y))))x=N(gL(enla(x)));Ln=0;F(xn,Ed(xl<0,x)n+=xl)
  Au=aL(n);m2(x,n=0;F(xn,Fj(xl,uL[n++]=i))u))
 A1(rev,Xtt(x)Xtm(AT(tm,N(ea1(rev,AT(tA,x)))))XtM(Ay=gkv(&x);aM(x,Nx(ea1(rev,y))))
