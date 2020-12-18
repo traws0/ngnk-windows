@@ -5,7 +5,7 @@
 #define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;F(PAD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
 til_(H)til_(I)til_(L)r_(C)r_(H)r_(I)r_(L)
 c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
-A1(flp,P(xtmM,Y(xtm,Ay=xy;Er(!ytA||!yn,x)F(yn,Az=ya;En(!ztT,x))L m=An(*yA);F(yn,Az=ya;El(zn-m,x)))AT(xt^tm^tM,x))
+A1(flp,XtM(AT(tm,x))Xtm(Ay=xy;Er(!ytA||!yn,x)F(yn,Az=ya;En(!ztT,x))L m=An(yx);F(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xtt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,P(xth||xtil,Ln=gl_(x);Im=n<0;n*=1-2*m;Au=atn(tT(xt),n);CH(xt-th,&tilH,tilI,tilL)(uC,n);(m?add:dex)(x,u))
  P(xtIL,K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xtm(fir(AT(tA,x)))Xto(val(x))Et(!xtA||xn,x)x)
