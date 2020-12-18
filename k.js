@@ -7,7 +7,7 @@ kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 M=(p,n)=>U8(K.memory.buffer).sub(p,p+n),s4=(p,x)=>D.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
 g1=p=>D.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
 rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b}
-popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},E=(s,b=1)=>{if(b)throw Error(s)}
+popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},
 X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
  try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
@@ -40,19 +40,20 @@ let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I
   y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
 hfi(hft,'')
 
+const E=(s,b=1)=>{if(b)throw Error(s)},BADF=(b=1)=>E('BADF',b)
 X('mmap',(p,n,_,_1,f,o)=>{if(!p){H+=n;let m=K.memory,l=m.buffer.byteLength;H>l&&m.grow((H-l-1>>>16)+1);upd();p=H-n}
- if(f>=0){f=fd[f];E('BADF',!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
+ if(f>=0){f=fd[f];BADF(!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
 X('munmap',_=>0)
 X('read',(f,a,n)=>{if(f<3){let s=I||prompt('stdin:')+N;I='';return te.encodeInto(s,M(a,n)).written}
- f=fd[f];E('BADF',!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:M(a,n).set(fs[f.p].sub(f.o,n))})
-X('write',(f,a,n)=>{if(f<3)return(ap(td.decode(M(a,n))),n);f=fd[f];E('BADF',!f)
+ f=fd[f];BADF(!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:M(a,n).set(fs[f.p].sub(f.o,n))})
+X('write',(f,a,n)=>{if(f<3)return(ap(td.decode(M(a,n))),n);f=fd[f];BADF(!f)
  let{p,o}=f,l=fs[p].n;(fs[p]=rsz(fs[p],max(l,o+n))).set(M(a,n),o);f.o+=n;return n})
 X('gettimeofday',x=>S4(x,[(x=Date.now())/1000|0,x%1000*1000])&0)
 X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.n);E('NOENT',!fs[p]&&~u&64/*O_CREAT*/)
  if(!fs[p]||u&512/*O_TRUNC*/)fs[p]=new Uint8Array(0);fd[f]={p,o:0};return f})
-X('close',f=>fd[f]?fd[f]=0:E('BADF'))
-X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):E('BADF'))
-X('fstat',(f,b)=>{f=fd[f]||E('BADF');let{n}=fs[f.p];
+X('close',f=>fd[f]?fd[f]=0:BADF())
+X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):BADF())
+X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];
  S4(b,[0,0,0,0x100000,1,0,0,0,0,n,512,n+511>>9]);return 0}) //dev(8B),ino,mode(S_IFREG),nlink,uid,gid,rdev(8B),size,blksize,blocks
 X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
