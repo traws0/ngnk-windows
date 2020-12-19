@@ -107,13 +107,13 @@ AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(OC*,OC*),aCn(OC*,L),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,L),atnv(C,L,OV*),catc(A,OC*,L),ea1(A1,A),
  e0(OC*),e1(OC*,A),e2(OC*,A,A),e3(OC*,A,A,A),eN(OC*,I,OA*),get(A,L),getr(A,L),gkv(A*),room(A,L);
 V init(),mrn(I,OA*),tilH(V*,L),tilI(V*,L),tilL(V*,L);
-C*syp(I);
+C*syp(I*);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
 L len_(A),now(),pl(C**),pu(C**),tru(A);
 XT A glb,cn[],ci[3][5];XT OC vc[];XT OV*vf[],*arf[3][11][8];XT L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
-#define syC(c) (2*(c)) //symbols: char to index
+#define syC(c) (c) //char->symbol
 
 S A aA(Ln)_(atn(tA,n))S A0(a0,aA(0))
 S A aC(Ln)_(atn(tC,n))S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)

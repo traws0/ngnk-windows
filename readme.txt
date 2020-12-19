@@ -56,7 +56,7 @@ symbols
  symbols are represented similarly to ints and int lists. the following fns handle I <-> C* conversions:
  syC(c)    - macro for making a single-char symbol
  I syP(C*) - make a symbol from a '\0'-terminated string
- C*syp(I)  - get a ptr to the '\0'-terminated string
+ C*syp(I*) - get a ptr to the '\0'-terminated string
 errors
  error-reporting fns return a null ptr after consuming their args:
   err("msg",x,y,z) - generic error. x,y,z are optional

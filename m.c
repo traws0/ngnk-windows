@@ -20,13 +20,14 @@ A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,at
 A aCn(OC*s,Ln)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(s)))
 A gkv(A*p)_(Ax=*p;Q(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;Au=xy;mr(AN(0,x));u) //get keys and values
 A room(Ax,Lk)_(Q(xtC);Ln=xn;P(Ar(x)==1&&ZA+n+k<=1ll<<Ab(x),x)Au=AN(n,atn(tC,n+k));mc(uC,xC,n);xr;u)
-S C*sy1;S C sy0[1<<16]__attribute__((aligned(ZA)));C*syp(Ii)_(sy0+i)
-I syP(OC*s)_(Cc=*s;P(c<128&&(!c||!s[1]),syC(c))OC*p=sy0+256;W(p<sy1,OC*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,p-sy0)p=q;W(*p,p++)p++)
- I r=sy1-sy0,n=mn(s)+1;P(sy1+n>sy0+Z sy0,write(1,"syms ",5);oom())mc(sy1,s,n);sy1+=n;r)
+S C sy0[1<<16]__attribute__((aligned(ZA))),*sy1=sy0+1;C*syp(I*p)_(*p<0?sy0-*p:(V*)p)
+I syP(OC*s)_(In=mn(s)+1;P(n<5,Iv=0;mc(&v,s,n);v)
+ OC*p=sy0+1;W(p<sy1,OC*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,sy0-p)p=q;W(*p,p++)p++)
+ P(sy1+n>sy0+Z sy0,write(1,"syms ",5);oom())mc(sy1,s,n);Iv=sy0-sy1;sy1+=n;v)
 I line(C*p,C*q)_(Ax=val(aCm(p,q));P(x,mr(out(x));1)epr(0))S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
-V init(){tilH((V*)sy0,128);sy1=sy0+256;glb=aa0();cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tH]=cn[th]=ah(NH);
+V init(){glb=aa0();cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tH]=cn[th]=ah(NH);
  cn[tI]=cn[ti]=ai(NI);cn[tL]=cn[tl]=al(NL);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(WI);ci[0][3]=ai(-WI);ci[0][4]=ai(NI);
  S L l[]={0,1,WL,-WL,NL};F(5,ci[1][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};F(5,ci[2][i]=ad(d[i]))}

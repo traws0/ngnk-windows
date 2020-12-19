@@ -38,7 +38,7 @@ L tru(Ax/*1*/)_(Lv=sim(x)?gl_(x):fun(x)?!xtu||xv:xn;xr;v)A2(dex,xr;y)A1(fir,xtt?
 I mtc_(Ax,Ay/*x0y0*/)_(P(x==y,1)P(xt-yt||pkd(x)||xn-yn||(xtr&&xv-yv),0)P(!ref(x),F(xn*ZT[xt],P(xc-yc,0))1)F(xn,P(!mtc_(xa,ya),0))1)
 S I cij(Li,Lj)_(i<j?-1:i>j)
 S I c(Ax,Ay/*x0y0*/)_(P(x==y,0)Iv=xt-yt;P(v,v)P(xtc||xth||xti,gi(x)-gi(y))Xtl(cij(gl_(x),gl_(y)))
- Xtd(D u=gd_(x),v=gd_(y);u<v?-1:u>v?1:0)Xts(strcmp(syp(gs(x)),syp(gs(y))))
+ Xtd(D u=gd_(x),v=gd_(y);u<v?-1:u>v?1:0)Xts(Iv=gs(x),w=gs(y);strcmp(syp(&v),syp(&w)))
  Y(!pkd(x),Iv=cij(xn,yn);XtT(F(min(xn,yn),Az=get(x,i),u=get(y,i);I d=c(z,u);zr;ur;P(d,d))v))cij(x,y))
 A2(mtc,Iv=mtc_(x,y);xr;yr;ai(v))
 S I bef(A*a,Ii,Ij)_(Iv=c(a[i],a[j]);v?v<0:i<j)
