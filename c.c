@@ -2,6 +2,7 @@
 #define F5(a...) {{Ii=0;a;}{Ii=1;a;}{Ii=2;a;}{Ii=3;a;}{Ii=4;a;}}
 #define F8(a...) {F5(a){Ii=5;a;}{Ii=6;a;}{Ii=7;a;}}
 #define U3(f,a) S U f(U x,U y,U z)_(a)
+#define C(a...) (C[]){a}
 TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z))U3(maj,x&y^x&z^y&z)
 S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32)S U*bn(U*r,O U*a,U n)_(F(n,r[i]=bl(a[i]))r) //big-endian
 
