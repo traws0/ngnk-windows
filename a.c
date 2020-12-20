@@ -2,9 +2,9 @@
 A1(neg,sub(ai(0),x))
 A1(not,P(xtmMA,ea1(not,x))P(fun(x),I r=x==au0;xr;ai(r))eql(x,xtsS?as(0):ac(0)))
 A1(sqr,P(xtmMA,ea1(sqr,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;F(un,ud=__builtin_sqrt(xd))Y(xC-uC,xr)u)
-A1(nul,xtmMA?ea1(nul,x):eql(x,mR(cn[xt])))
-A1(flr,P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,Au=aC(xn);m2(x,F(un,Cc=xc;uc=c+32*c3('A',c,'Z'))u))
- P(xtmMA,ea1(flr,x))x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,F(un,Dd=xd;ul=d<0?(L)d-(d<(L)d):(L)d)u))
+A1(nul,P(xtmMA,ea1(nul,x))eql(x,mR(cn[xt])))
+A1(flr,P(xtmMA,ea1(flr,x))P(xtilIL,x)P(xtc,fir(flr(enl(x))))P(xtC,Au=aC(xn);m2(x,F(un,Cc=xc;uc=c+32*c3('A',c,'Z'))u))
+ x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,F(un,Dd=xd;ul=d<0?(L)d-(d<(L)d):(L)d)u))
 
 S D sind(D x)_(S O Dd=M_PI-8.742277657347586e-8, //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
  a[]={1.32913446369766718e-10,-2.33177897192836082e-8,2.52229235749396866e-6,
