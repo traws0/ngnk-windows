@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S AX(enc,P(n>1,ern(n,a))P(xtiI,x=gL(xR);Au=enc(x,a,n);xr;u)P(!xtlL,etn(n,a))
- Ay=N(gL(*a));Ytt(Az=enc(x,A(enl(y)),1);zn?fir(flp(z)):dex(z,aL(0)))
- Xtt(UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yl;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
+ Ay=N(gL(*a));Yt(Az=enc(x,A(enl(y)),1);zn?fir(flp(z)):dex(z,aL(0)))
+ Xt(UL v=gl_(x),r=0,m=0,b=1;F(yn,UL w=yl;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));dex(x,enc(x,&y,1)))
  P(!xn,yr;a0())Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);F(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=*xL;ux=y;Y(m,F(yn,yl%=m))u)
 S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xC;L l=len_(x);El(!l,y)
@@ -11,14 +11,14 @@ S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytA,y)C*s=xtc?(V*)&x:xC;L m=len_(x),k
  F(k,Az=ya;Et(!ztcC,y)l+=len_(z))
  Au=aC(l);C*p=uC;F(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
  Y(k,Az=yA[k-1];Y(ztc,*p=gc(z))E(mc(p,zC,zn)))yr;u)
-A ea1(A1 f,Ax)_(Xtt(f(x))Xtm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
+A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
  I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=a0();F(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))ur;u=0;B)u=apd(u,y))
  Y(b,x=AN(0,x))xr;u)
 S L cfm(OA*a/*0*/,Ln)_(L m=-1;F(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,Az,b[8];F(n,Ay=a[i];Y(ytm,z=yx;B))zR;F(n,Ay=b[i]=a[i];Y(ytm,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))
  Au=eac(x,b,n);(u?am:dex)(z,u))
 AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))A b[8];Ct[8];L m=-1;
- F(n,Ay=b[i]=a[i];Ytm(eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
+ F(n,Ay=b[i]=a[i];Ym(eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))Au=m?0:a0(); //0:pkdatm,1:refatm,2:tA(r=1),3:tA(r>1),4:other
  Fj(m,F(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))
       Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(tT(zt),m)):a0())

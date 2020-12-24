@@ -87,12 +87,12 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 #define Ar(x) ((I*)dat(x))[-3]
 
 //getters                              setters
-S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);                x<<8>>8|t<<56)
-S  C Av(Ax)_(x>>51&31)                 S A AV(UL v,Ax)_(Q(v<32);           x&~(31ll<<51)|v<<51)
-S  C Ak(Ax)_(x>>48&7)                  S A AK(UL k,Ax)_(Q(k<9);            x&~( 7ll<<48)|k<<48)
-S  C Ab(Ax)_(C b=xC[-16];Q(b<48);b)    S A AB( C b,Ax)_(Q(b<48);                   xC[-16]=b;x)
-S UH Ao(Ax)_(xts?x>>32:pkd(x)?0:xH[-7])S A AO(UL o,Ax)_(Xts(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
-S UL An(Ax)_(Ln=xL[-1];Q(n<1ll<<48);n) S A AN(UL n,Ax)_(Q(n<1ll<<48);               xL[-1]=n;x)
+S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
+S  C Av(Ax)_(x>>51&31)                 S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
+S  C Ak(Ax)_(x>>48&7)                  S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
+S  C Ab(Ax)_(C b=xC[-16];Q(b<48);b)    S A AB( C b,Ax)_(Q(b<48);                  xC[-16]=b;x)
+S UH Ao(Ax)_(xts?x>>32:pkd(x)?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
+S UL An(Ax)_(Ln=xL[-1];Q(n<1ll<<48);n) S A AN(UL n,Ax)_(Q(n<1ll<<48);              xL[-1]=n;x)
 S A1(mR,Q(x);P(pkd(x),x)Q(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
