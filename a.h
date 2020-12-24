@@ -22,7 +22,6 @@
 #define ZA 32     //hdr
 #define NO __attribute__((noinline))
 #define SN S NO
-#define XT extern
 #define TD typedef
 #define RE restrict
 #define TY __typeof__
@@ -70,7 +69,7 @@ enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-XT OC Zt[],ZT[];S C At(A);                    S I sim(Ax)_(c3(tc,xt,ts)) //simple    types
+extern OC Zt[],ZT[];S C At(A);                S I sim(Ax)_(c3(tc,xt,ts)) //simple    types
 S I reft(Ct)_(Zt[t]==4)                       S I ref(Ax)_(reft(xt))     //reference types
 S I pkdt(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I pkd(Ax)_(pkdt(xt))     //packed    types
 S I funt(Ct)_(t>=to)                          S I fun(Ax)_(funt(xt))     //function  types
@@ -112,7 +111,7 @@ C*syp(I*);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
 L len_(A),now(),pl(C**),pu(C**),tru(A);
-XT A glb,cn[],ci[3][5];XT OC vc[];XT OV*vf[],*arf[3][11][8];XT L mu;
+extern A glb,cn[],ci[3][5];extern OC vc[];extern OV*vf[],*arf[3][11][8];extern L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 S A aA(Ln)_(atn(tA,n))S A0(a0,aA(0))
