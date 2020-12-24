@@ -26,7 +26,7 @@ AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR
  F(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 S AX(cvg,
  P(n==2,Ay=*a,u=a[1];P(ytil,F(gl(y),u=N(app(x,&u,1)))u)W(1,uR;Az=N2(y,u,app(y,&u,1));Y(!tru(z),B)u=Ny(app(x,&u,1)))yr;u)
- P(n==1,Ay=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));Y(mtc_(u,y)||mtc_(u,z),B)zr;z=u)yr;zr;u)ern(n,a))
+ P(n==1,Ay=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));P(mtc_(u,y)||mtc_(u,z),yr;ur;z)zr;z=u)yr;zr;u)ern(n,a))
 AX(rdc,P(xtilIL,n>1?ern(n,a):K("{z+x*y}/[0;;]",xR,*a))P(xtcC,join(x,a,n))P(xk<2,cvg(x,a,n))
  Ay=n>1?n--,*a++:0,z=*a;L m=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):*a)P(m<0,Y(y,yr)eln(n,a))P(!m&&!y,Au=id_(x,z);mrn(n,a);u)
  Y(xtv&&xv<11&&(!y||ytt)&&n==1&&(ztC||ztIL||ztD),Y(ztC,z=gL(z);P(!z,Y(y,yr);0))Y(y&&ytdD||ztdD,Y(y,y=gD(y))z=gD(z))
