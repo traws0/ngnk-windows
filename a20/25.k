@@ -1,6 +1,8 @@
 #!../k
 (a;b):.'0:"i/25"
-p:20201227
-l:{*|(~x=*:){(p!7**x;1+*|x)}/1 0} /discrete logarithm
-P:{(z!*)/y#x} /powmod
-P[b;l a;p]
+n:20201227 /modulus
+g:7 /generator
+G:(n>#:){x,n!(*|x)*(m&n-m:#x)#x}/,g /multiplicative group
+l:1+G?a /discrete log
+P:{(n!*)/((-1+#y)((n!*)/2#,:)\x)@&y:|2\y} /powmod
+P[b;l]
