@@ -114,13 +114,16 @@ L len_(A),now(),pl(C**),pu(C**),tru(A);
 extern A glb,cn[],ci[3][5];extern OC vc[];extern OV*vf[],*arf[3][11][8];extern L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
-S A aA(Ln)_(atn(tA,n))S A0(a0,aA(0))
-S A aC(Ln)_(atn(tC,n))S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
-S A aH(Ln)_(atn(tH,n))S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);(H)x)
-S A aS(Ln)_(atn(tS,n))S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
-S A aI(Ln)_(atn(tI,n))S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xtc);(I)x)
-S A aL(Ln)_(atn(tL,n))S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(pkd(x)?(I)x:*xL)S L gl(Ax)_(L r=gl_(x);xr;r)
-S A aD(Ln)_(atn(tD,n))S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;xr;v)
+#define h(T) S A a##T(Ln)_(atn(t##T,n))
+ h(A)h(C)h(H)h(S)h(I)h(L)h(D)
+#undef h
+S A0(a0,aA(0))
+S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
+S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);(H)x)
+S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
+S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xtc);(I)x)
+S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(pkd(x)?(I)x:*xL)S L gl(Ax)_(L r=gl_(x);xr;r)
+S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;xr;v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
