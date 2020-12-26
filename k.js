@@ -53,8 +53,8 @@ X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.n);E('NOENT',!
  if(!fs[p]||u&512/*O_TRUNC*/)fs[p]=new Uint8Array(0);fd[f]={p,o:0};return f})
 X('close',f=>fd[f]?fd[f]=0:BADF())
 X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):BADF())
-X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];
- S4(b,[0,0,0,0x100000,1,0,0,0,0,n,512,n+511>>9]);return 0}) //dev(8B),ino,mode(S_IFREG),nlink,uid,gid,rdev(8B),size,blksize,blocks
+//fstat:dev(8B),ino,mode(S_IFREG=0x100000),nlink,uid,gid,rdev(8B),size,blksize,blocks
+X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];S4(b,[0,0,0,0x100000,1,0,0,0,0,n,512,n+511>>9]);return 0})
 X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
