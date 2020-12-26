@@ -18,7 +18,7 @@ A atn(Ct,Ln)_(Ax=ma(64-__builtin_clzll(ZA+7+n*ZT[t]));Ar(x)=1;AT(t,AN(n,x)))
 A atnv(Ct,Ln,OV*v)_(Au=atn(t,n);mc(uC,v,n*ZT[t]);u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
 A aCn(OC*s,Ln)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(s)))
-A gkv(A*p)_(Ax=*p;Q(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;Au=xy;mr(AN(0,x));u) //get keys and values
+A kv(A*p)_(Ax=*p;Q(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;Au=xy;mr(AN(0,x));u) //get keys and values
 A room(Ax,Lk)_(Q(xtC);Ln=xn;P(Ar(x)==1&&ZA+n+k<=1ll<<Ab(x),x)Au=AN(n,atn(tC,n+k));mc(uC,xC,n);xr;u)
 S C sy0[1<<16]__attribute__((aligned(ZA))),*sy1=sy0+1;C*syp(I*p)_(*p<0?sy0-*p:(V*)p)
 I syP(OC*s)_(In=mn(s)+1;P(n<5,Iv=0;mc(&v,s,n);v)

@@ -15,7 +15,7 @@ S L NINL(Iv)_(v==NI?NL:v)
 A2(fnd,
  Xt(Xs(SF(x,y,"``j`hex`aes",des,jsr,unh,aes1))Et(!xtil,x,y)Yl(rnd(gl(gL(x)),gl(y)))
     Yi(K("{`i$x?`l$y}",x,y))Yc(K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))K("{y@x?#y}",x,y))
- Xm(Az=gkv(&x);idx(x,fnd(z,y)))
+ Xm(Az=kv(&x);idx(x,fnd(z,y)))
  XM(En(1,x,y);0)
  Yt(P(!xtA&&fun(y),xr;yr;al(NL))
      fir(fnd(x,enl(y))))

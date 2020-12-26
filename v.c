@@ -9,9 +9,9 @@ A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)F(yn,Az=ya;En(!ztT,x))L m=An(yx);F(yn
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,P(xth||xtil,Ln=gl_(x);Im=n<0;n*=1-2*m;Au=atn(tT(xt),n);CH(xt-th,&tilH,tilI,tilL)(uC,n);(m?add:dex)(x,u))
  P(xtH||xtIL,K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xm(fir(AT(tA,x)))Xo(val(x))Et(!xtA||xn,x)x)
-A1(whr,Et(xtM||xtA,x)Xm(Ay=gkv(&x);idx(x,Nx(whr(y))))x=N(gL(enla(x)));Ln=0;F(xn,Ed(xl<0,x)n+=xl)
+A1(whr,Et(xtM||xtA,x)Xm(Ay=kv(&x);idx(x,Nx(whr(y))))x=N(gL(enla(x)));Ln=0;F(xn,Ed(xl<0,x)n+=xl)
  Au=aL(n);m2(x,n=0;F(xn,Fj(xl,uL[n++]=i))u))
-A1(rev,XT(x=mut(x);CH(Zt[xt],&rC,rH,rI,rL,rL)(xC,xn);x)Xm(AT(tm,N(ea1(rev,AT(tA,x)))))XM(Ay=gkv(&x);aM(x,Nx(ea1(rev,y))))x)
+A1(rev,XT(x=mut(x);CH(Zt[xt],&rC,rH,rI,rL,rL)(xC,xn);x)Xm(AT(tm,N(ea1(rev,AT(tA,x)))))XM(Ay=kv(&x);aM(x,Nx(ea1(rev,y))))x)
 A1(typ,Ct=xt;xr;as(TS[t]))
 A1(len,dex(x,al(len_(x))))L len_(Ax/*0*/)_(xtT?xn:xtm?len_(xy):!xtM?1:An(xy)?len_(*(A*)dat(xy)):1)
 A1(unq,Et(!xtT,x)xn<2?x:K("{x@&@[&#x;i;:;]@[;0;:;a=a:*a]@a:~$[`A=@x;~;=]':x@i:<x}",x))
@@ -46,7 +46,7 @@ S V sft(A*a,I*l,Ii,Ij)_(W(1,Lk=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(
 S A1(asci,Ez(xn>WI,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];tilI(uI,n);
  m2(x,m2(y,Fj(w,ms(c,0,Z c);F(n,a[i]=xC[w*ui+j])F(n,c[a[i]+1]++)Y(c[1+*a]-n,F(255,c[i+1]+=c[i])F(n,zI[c[a[i]]++]=ui)SWP(z,u)))zr;u)))
 A1(asc,XA(Ez(xn>WI,x)A*a=xA,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=n-1;W(i>0,SWP(ui,*uI)sft(a,uI,0,--i))xr;u)
- Xm(Ay=gkv(&x);idx(x,N(asc(y))))P(xtIL||xtC,asci(x))XS(asc(N(ea1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)hop(x))
-A1(dsc,Xi(hcl(x))Xm(Ay=gkv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
-A1(grp,Xt(Et(!xtil)K("{(2#x)#1i,`i$&x}",x))Xm(Au=grp(gkv(&x));Q(Ar(u)==1);uy=idx(x,uy);u)Ay=atn(xt,0),u=a0();C w=Zt[xt];
+ Xm(Ay=kv(&x);idx(x,N(asc(y))))P(xtIL||xtC,asci(x))XS(asc(N(ea1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)hop(x))
+A1(dsc,Xi(hcl(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
+A1(grp,Xt(Et(!xtil)K("{(2#x)#1i,`i$&x}",x))Xm(Au=grp(kv(&x));Q(Ar(u)==1);uy=idx(x,uy);u)Ay=atn(xt,0),u=a0();C w=Zt[xt];
  F(xn,Lj=!w?fpC(&y,xc):w==2?fpI(&y,xi):w==3?fpL(&y,xl):fpA(&y,mR(xa));Y(j==un,u=apd(u,aL(0)))uA[j]=apv(uA[j],&i))xr;am(y,u))
