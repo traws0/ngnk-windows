@@ -58,8 +58,8 @@ I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q=
   #define h3 h
   asm(h(mmap,"movq %rcx,%r10;"));
  #endif
- asm(h3(read)h3(write)h3(open)h1(close)h3(lseek)h2(dup2)h3(execve)h2(munmap)h(fork)h1(exit)h2(gettimeofday)
-     h3(socket)h3(connect)h2(fstat)h3(getdents));
+ asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h3(connect)h(fork)h3(execve)
+     h1(exit)h3(getdents)h2(gettimeofday));
  #if SYS_pipe
   asm(h(pipe));
  #else
