@@ -10,7 +10,7 @@ AX(prj,XA(app(x,a,n))Ck=max(n,xk);F(n,k-=a[i]!=au_plc)Au=AK(k,atn(tp,n+1));ux=xR
 S A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=a0();F(yn,u=apd(u,get(ya,j)))am(mR(xx),u))
 A get(Ax/*0*/,Li)_(XL(al(xl))XI(ai(xi))XA(mR(xa))XH(ah(xh))XS(as(xi))XC(ac(xc))XD(ad(xd))Xm(get(xy,i))XM(getM(x,i))xR)
 A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xn)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
-#define i_(T,U) SN V i##T##U(OV*RE p0,L m,OV*RE q0,V*RE r0,L n,L e0){O T*p=p0;O U*q=q0;T*r=r0;T e=(T)e0;F(n,U j=q[i];r[i]=in(j,m)?p[j]:e)}
+#define i_(T,U) SN V i##T##U(OV*RE a,L m,OV*RE b,V*RE c,Ln,Lv){O T*p=a;O U*q=b;T*r=c;F(n,U j=q[i];r[i]=in(j,m)?p[j]:v)}
 i_(C,L)i_(H,L)i_(I,L)i_(L,L)i_(C,I)i_(H,I)i_(I,I)i_(L,I)
 S A2(idx_/*x0y1*/,Er(xtt,y)P(y==au_plc,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)Et(fun(y),y)Yt(getr(x,gl(y)))
  y=ytlL?y:N(gI(y));y=N(gL(y));L w=Zt[xt];Au=xtM?a0():atn(xt,yn);P(xtA||xtM,u=AN(0,u);F(yn,u=apd(u,getr(x,yl)))yr;u)
