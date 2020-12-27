@@ -7,7 +7,7 @@ A2(flt,Er(!ytT,x,y)Au=atn(yt,0);
 A2(rsh,P(fun(x),flt(x,y))Ym(Xl(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y,z))x=enla(x);xR;am(x,ap1(y,x)))
  YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)
  y=!ytT?enl(y):!yn?enl(fir(y)):y;x=enla(Ny(gL(x)));P(!xn,xr;fir(y))
- F(xn,Lv=xl;Y(v<0,Ed(xn>2||xn==2&&v-NL||xn==1&&v==NL,x,y)
+ F(xn,Lv=xl;Y(v<0,Ed(xn>2||xn==2&&v-NL,x,y)P(xn==1&&v==NL,dex(x,y))
   P(xn==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
  Lj=0;Au=rsh_(y,yn,&j,xL,xn);xr;yr;u)
 A1(enl,P(sim(x),P(pkd(x),Au=atn(tT(xt),1);*uL=x;u)AT(tT(xt),x))Xm(Ay=kv(&x);aM(x,ea1(enl,y)))a1(x))
