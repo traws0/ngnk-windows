@@ -17,9 +17,9 @@ S AX(eaca,Az,b[8];F(n,Ay=a[i];Y(ytm,z=yx;B))zR;F(n,Ay=b[i]=a[i];Y(ytm,P(!mtc_(z,
  Au=eac(x,b,n);(u?am:dex)(z,u))
 AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))A b[8];Ct[8];Lm=-1;
  F(n,Ay=b[i]=a[i];Ym(eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
- P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m))Au=m?0:a0(); //0:pkdatm,1:refatm,2:tA(r=1),3:tA(r>1),4:other
- Fj(m,F(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))
-      Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(tT(zt),m)):a0())
+ P(m<0,app(x,a,n))F(n,Y(t[i]==1,Ar(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
+ Au=0;Y(!m,Y(x==cu('#'),u=aL(0))EY(n==2&&xtv&&xv<11,u=a[!len_(a[1])];uR)E(u=a0()))
+ Fj(m,F(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(tT(zt),m)):a0())
       Y(!z,ur;u=0;F(n,Ay=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1)))B)u=apd(u,z))
  F(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 S AX(cvg,
