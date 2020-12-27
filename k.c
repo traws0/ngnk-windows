@@ -41,10 +41,9 @@ S I stp(Li,Ax/*0*/,A**pp)_(Ay=**pp;Ed(!ytm,x)**pp=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fp
 S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&Ar(y)==1&&ytm&&At(yx)==tS&&At(yy)==tA);Lj=fpI(&yx,*xI);
  Y(j==An(yy),yy=apd(yy,xn>1?aa0():au0))A*p=(A*)dat(yy)+j;F(xn-1,P(!stp(i,x,&p),(A*)0))xr;p)
 S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*8);*p=mR(N(f(b,n))))
-AA(am1,Ax=*a,y=a[1],z=a[2];
+AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
  Xm(x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rsh(al(An(xx)-An(xy)),id_(z,xy)));
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*8);xy=am1(b,n);P(!xy,xy=au0;xr;0)x)
- Xt(etn(n,a))
  Yt(x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   Li=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*8);Au=app(z,b,n-2);zr;set(x,i,Nx(u)))
  P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==tT(At(a[3])),x=mut(x);Au=a[3];I d=utT;u=enla(u);Ei(d&&yn-un,x,y,u)y=gL(y);
