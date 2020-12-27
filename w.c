@@ -8,12 +8,10 @@ S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xC;L l=len_(x);El
  Au=a0();C*p=yC,*q=yC,*q2=yC+yn,*q1=q2+1-len_(x);W(q<q1,C m=1;F(l,m&=s[i]==q[i])Y(m,u=apd(u,aCm(p,q));p=q+=l)E(q++))
  Y(x-ac(10)||p<q2,u=apd(u,aCm(p,q2)))yr;u)
 S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytA,y)C*s=xtc?(V*)&x:xC;Lm=len_(x),k=yn,l=m*(k-!!k);
- F(k,Az=ya;Et(!ztcC,y)l+=len_(z))
- Au=aC(l);C*p=uC;F(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
+ F(k,Az=ya;Et(!ztcC,y)l+=len_(z))Au=aC(l);C*p=uC;F(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
  Y(k,Az=yA[k-1];Y(ztc,*p=gc(z))E(mc(p,zC,zn)))yr;u)
-A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)
- I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=a0();F(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))ur;u=0;B)u=apd(u,y))
- Y(b,x=AN(0,x))xr;u)
+A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=a0();
+ F(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))ur;u=0;B)u=apd(u,y))Y(b,x=AN(0,x))xr;u)
 S L cfm(OA*a/*0*/,Ln)_(Lm=-1;F(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,Az,b[8];F(n,Ay=a[i];Y(ytm,z=yx;B))zR;F(n,Ay=b[i]=a[i];Y(ytm,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))
  Au=eac(x,b,n);(u?am:dex)(z,u))
