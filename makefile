@@ -1,17 +1,16 @@
 #faster builds: export MAKEFLAGS=-j8
 CC=clang-10
-C=$(CC) -nostdlib \
- -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
+C=$(CC) -nostdlib -ffreestanding -fno-unroll-loops -fno-math-errno -fno-stack-protector \
  -Werror -Wno-assume -Wno-pointer-sign -Wno-pointer-to-int-cast -Wfatal-errors -Wno-shift-op-parentheses -Wno-int-to-pointer-cast
 O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 
 t:k #test
-	@+$(MAKE) -C t && g/0.sh
+	@+$(MAKE) -sC t && g/0.sh
 c: #clean
 	@rm -rfv k libk.so k.wasm k32 o t/t
 w:k.wasm #wasm web server
-	@+$(MAKE) -C web && echo 'staring web server..' && web/web
+	@+$(MAKE) -sC web && echo 'starting web server..' && web/web
 .PHONY: t c w
 
 o/%.o:%.c *.h makefile

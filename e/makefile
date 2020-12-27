@@ -1,4 +1,5 @@
-t:
-	$(MAKE) -C ..
+0:
+	@+$(MAKE) -sC ..
+	@echo 'project euler tests'
 	@./e.k
-.PHONY: t
+.PHONY: 0

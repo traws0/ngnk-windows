@@ -1,7 +1,8 @@
 #!../../k
 /please run ./download.sh first
+1"aes tests\n";
 t:{$[(x[2]~`aes@|2#x)&x[1]~`aes?x 2 0;; \`k[`FAIL,x],"\n"];}
-f:{t'(`hex?'*|+" = "\'1_"\r\n"\)'2_"\r\n\r\n"\*"\r\n\r\n[DECRYPT]"\1:x;}
+f:{1@,".";t'(`hex?'*|+" = "\'1_"\r\n"\)'2_"\r\n\r\n"\*"\r\n\r\n[DECRYPT]"\1:x;}
 f'("kat/ECBVarTxt128.rsp"
    "kat/ECBVarTxt192.rsp"
    "kat/ECBVarTxt256.rsp"
@@ -14,3 +15,4 @@ f'("kat/ECBVarTxt128.rsp"
    "kat/ECBGFSbox128.rsp"
    "kat/ECBGFSbox192.rsp"
    "kat/ECBGFSbox256.rsp");
+1@,"\n";
