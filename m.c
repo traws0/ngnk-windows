@@ -3,17 +3,18 @@
 #include<sys/syscall.h>
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-2]
-L mu;S A mx[40];A glb,cn[tn],ci[3][5];dbg(S I ml;/*prevent allocations*/)SN A oom()_(write(1,"oom\n",4);exit(1);0)
-S A ma(UI b)_(dbg(Q(!ml));Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);AB(b,x))Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
+S A mx[40];A glb,cn[tn],ci[3][5];L mu;S I ml;SN A oom()_(write(1,"oom\n",4);exit(1);0)
+S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);AB(b,x))Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())x=(A)(p+ZA))
  W(i>b,i--;Ay=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)AB(b,x))
-A1(mr0,dbg(ml++);Q(x);P(pkd(x),0)Q(Ar(x)>0);P(--Ar(x),0)Cb=Ab(x);P(!b,AT(tn,x))nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xA))x)
+A1(mr0,dbg(ml++);Q(x);P(pkd(x),0)Q(Ar(x)>0);P(--Ar(x),0)Cb=Ab(x);P(!b,AT(tn,x))
+ nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xA))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]));0)
-A1(mr,mr1(mr0(x)))V mrn(In,OA*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xa))x)A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xC);xr;Y(ref(u),mRa(u))u)
+A1(mr,mr1(mr0(x)))V mrn(In,OA*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xa))x)
+A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xC);xr;Y(ref(u),mRa(u))u)size_t strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
 V*memcpy(V*x,OV*y,size_t n)_(Y(n<0,exit(5))C*p=x;OC*q=y;F(n,p[i]=q[i])x)V*memmove(V*x,OV*y,size_t n)_(memcpy(x,y,n))
-V*memset(V*x,I c,size_t n)_(C*p=x;F(n,*p++=c);x)
-I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)size_t strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
+V*memset(V*x,I c,size_t n)_(C*p=x;F(n,*p++=c);x)I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)
 A atn(Ct,Ln)_(Ax=ma(64-__builtin_clzll(ZA+7+n*ZT[t]));Ar(x)=1;AT(t,AN(n,x)))
 A atnv(Ct,Ln,OV*v)_(Au=atn(t,n);mc(uC,v,n*ZT[t]);u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
@@ -21,10 +22,11 @@ A aCn(OC*s,Ln)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(
 A kv(A*p)_(Ax=*p;Q(xn==2);P(Ar(x)>1,--Ar(x);*p=mR(xx);mR(xy))*p=xx;Au=xy;mr(AN(0,x));u) //get keys and values
 A room(Ax,Lk)_(Q(xtC);Ln=xn;P(Ar(x)==1&&ZA+n+k<=1ll<<Ab(x),x)Au=AN(n,atn(tC,n+k));mc(uC,xC,n);xr;u)
 S C sy0[1<<16]__attribute__((aligned(ZA))),*sy1=sy0+1;C*syp(I*p)_(*p<0?sy0-*p:(V*)p)
-I syP(OC*s)_(In=mn(s)+1;P(n<5,Iv=0;mc(&v,s,n);v)
+I syP(OC*s)_(In=mn(s)+1;P(n<5,mc(&n,s,n);n)
  OC*p=sy0+1;W(p<sy1,OC*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,sy0-p)p=q;W(*p,p++)p++)
  P(sy1+n>sy0+Z sy0,write(1,"syms ",5);oom())mc(sy1,s,n);Iv=sy0-sy1;sy1+=n;v)
-I line(C*p,C*q)_(Ax=val(aCm(p,q));P(x,mr(out(x));1)epr(0))S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
+I line(C*p,C*q)_(Ax=val(aCm(p,q));P(x,mr(out(x));1)epr(0))
+S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 V init(){glb=aa0();cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tH]=cn[th]=ah(NH);
