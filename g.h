@@ -327,3 +327,7 @@
 #define Et(a...) E_(t,a)
 #define Ev(a...) E_(v,a)
 #define Ez(a...) E_(z,a)
+#define xq(a) (x=apd(x,(a)))
+#define yq(a) (y=apd(y,(a)))
+#define zq(a) (z=apd(z,(a)))
+#define uq(a) (u=apd(u,(a)))

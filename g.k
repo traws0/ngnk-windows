@@ -19,4 +19,5 @@ f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACHILDSMmchildsopqruvwTt")
 f({"N",x,"(r) N1(",x,",r)"};v)
 f'{x,y," ",x," ",y},/:":"\'" "\"C:bcdknotv HIL:ijkmnv D:dv A:xyzu O:ACV";
 f({"E",x,"(a...) E_(",x,",a)"};"cdilnoprstvz") /errors
+f({x,"q(a) _q(",x,",a)"};v)
 "g.h"0:r

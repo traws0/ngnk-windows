@@ -3,7 +3,7 @@ A rsh_(Ax/*0*/,L m,L*pj,L*s,L r)_(Ln=absL(*s);P(r>1,Ay=aA(n);F(n,ya=rsh_(x,m,pj,
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);mc(yC,xC+j*w,q*w);
  mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,mc(yC+m*w,yC,m*w);m*=2)Y(n>m,mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
 A2(flt,Er(!ytT,x,y)Au=atn(yt,0);
- F(yn,Az=get(y,i);z=app(x,&z,1);Y(!z,ur;u=0;B)z=gL(z);P(!z,xr;yr;ur;0)Fj(gl(z),u=apd(u,get(y,i))))xr;yr;u)
+ F(yn,Az=get(y,i);z=app(x,&z,1);Y(!z,ur;u=0;B)z=gL(z);P(!z,xr;yr;ur;0)Fj(gl(z),uq(get(y,i))))xr;yr;u)
 A2(rsh,P(fun(x),flt(x,y))Ym(Xl(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y,z))x=enla(x);xR;am(x,ap1(y,x)))
  YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)
  y=!ytT?enl(y):!yn?enl(fir(y)):y;x=enla(Ny(gL(x)));P(!xn,xr;fir(y))
@@ -22,6 +22,6 @@ A apv(Ax,OV*v)_(Q(xtT);Ln=xn,w=ZT[xt];
  Y(Ar(x)==1&&ZA+w+n*w<=1ll<<Ab(x),x=AN(n+1,x))
  E(Ay=atn(xt,n+1);Y(Ar(x)>1&&xtA,mRa(x))EY(ref(x),x=AT(tL,x))m2(x,mc(yC,xC,n*w));x=y)
  V*p=xC+n*w;mc(p,v,w);x)
-A2(apd,Q(xtT||xtM);XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);F(An(z),za=apd(za,get(yy,i)))yr;x)
+A2(apd,Q(xtT||xtM);XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);F(An(z),_q(za,get(yy,i)))yr;x)
  Y(!xtA&&(!ytt||xt-tT(yt)),x=blw(x))P(!xn,xr;enl(y))Lv=xtA?(L)y:gl(y);apv(x,&v))
 A apc(Ax,Cc)_(Q(xtC);x=room(x,1);xC[xn]=c;AN(xn+1,x))A catc(Ax,OC*s,Ln)_(Q(xtC);x=room(x,n);mc(xC+xn,s,n);AN(xn+n,x))

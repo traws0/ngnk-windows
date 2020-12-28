@@ -85,6 +85,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 #define dat(x) ((V*)((x)<<16>>16))
 #define Ar(x) ((I*)dat(x))[-3]
+#define _q(x,y) (x=apd(x,y))
 
 //getters                              setters
 S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
