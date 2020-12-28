@@ -37,7 +37,7 @@ A2(apn,y=enla(y);Ln=yn;P(!n,yr;x)Ez(n>8,x,y)y=mRa(Nx(blw(y)));Au=app(x,yA,n);xr;
 S A set(Ax,Li,Ay)_(Q(Ar(x)==1);Y(!xtA&&(!sim(y)||xt-tT(yt)),x=blw(x))
  XA(mr(xa);xa=y;sim(y)?sqz(x):x)xtC?xc=gc(y):xtI?xi=gi(y):xtL?xl=gl(y):xtD?xd=gd(y):xtS?xi=gs(y):0;x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&yx,xI[i+1]);Au=yy;Ed(!utA,x)
- yy=j==un?apd(u,aa0()):mut(u);Q(Ar(yy)==1);*p=(A*)dat(yy)+j;1)
+ yy=j==un?uq(aa0()):mut(u);Q(Ar(yy)==1);*p=(A*)dat(yy)+j;1)
 S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&Ar(y)==1&&ytm&&At(yx)==tS&&At(yy)==tA);Lj=fpI(&yx,*xI);
  Y(j==An(yy),_q(yy,xn>1?aa0():au0))A*p=(A*)dat(yy)+j;F(xn-1,P(!stp(i,x,&p),(A*)0))xr;p)
 S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*8);*p=mR(N(f(b,n))))
