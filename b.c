@@ -32,8 +32,8 @@ A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC(0));fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;
  Y(b>=bm,Y(b>=bc,Ay=fc;p(mR(yA[b-bc])))
-        EY(b==bm,A*v=l-*c++,y=q();N(*s=apn(mR(*v=Ny(dm1(A(*v,yR,av(*c++),*s),4))),y)))
-        EY(b==bM,Ax=q()    ,y=q();N(*s=apn(      Ny(dmd(A(x ,yR,av(*c++),*s),4)) ,y)))
+        EY(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(mR(*v=Ny(dm1(A(x,yR,av(*c++),z),4))),y)))
+        EY(b==bM,Ax=q()         ,y=q(),z=*s;       *s=au0;N(*s=apn(      Ny(dmd(A(x,yR,av(*c++),z),4)) ,y)))
         EY(b==bl,Cn=*c++;Ax=sqz(atnv(tA,n,s));s+=n;p(x))
         EY(b==bL,Cn=*c++;Ax=*s;El(!xtt&&len_(x)-n)i(n,p(get(x,n-1-i))))
         EY(b==ba||b==bP,Cn=*c++;Au=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
