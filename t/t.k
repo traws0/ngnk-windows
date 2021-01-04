@@ -301,6 +301,7 @@ $`a`b!(0;1 2)                 / `a`b!(,"0";(,"1";,"2"))
 ~|/{(x<"A")&"Z"<x}100?"A"     / 1i
 +/-5?5                        / 10
 {x@<x}0N?"abracadabra"        / "aaaaabbcdrr"
+0N?0N                         / !0
 "abc"?"abracadabra"           / 0 1 0N 0 2 0 0N 0 1 0N 0
 "abc"?"b"                     / 1
 "abc"?(+)                     / 0N
