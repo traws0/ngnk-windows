@@ -11,10 +11,10 @@ S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(
 A1(mr0,dbg(ml++);Q(x);P(pkd(x),0)Q(Ar(x)>0);P(--Ar(x),0)Cb=Ab(x);P(!b,AT(tn,x))
  nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(ref(x),mrn(xn,xA))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]));0)
-A1(mr,mr1(mr0(x)))V mrn(In,OA*a){F(n,mr(a[i]))}A1(mRa,F(xn,mR(xa))x)
+A1(mr,mr1(mr0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 A1(mut,P(pkd(x)||Ar(x)==1,x)Au=atnv(xt,xn,xC);xr;Y(ref(u),mRa(u))u)size_t strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
-V*memcpy(V*x,OV*y,size_t n)_(Y(n<0,exit(5))C*p=x;OC*q=y;F(n,p[i]=q[i])x)V*memmove(V*x,OV*y,size_t n)_(memcpy(x,y,n))
-V*memset(V*x,I c,size_t n)_(C*p=x;F(n,*p++=c);x)I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)
+V*memcpy(V*x,OV*y,size_t n)_(Y(n<0,exit(5))C*p=x;OC*q=y;i(n,p[i]=q[i])x)V*memmove(V*x,OV*y,size_t n)_(memcpy(x,y,n))
+V*memset(V*x,I c,size_t n)_(C*p=x;i(n,*p++=c);x)I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)
 A atn(Ct,Ln)_(Ax=ma(64-__builtin_clzll(ZA+7+n*ZT[t]));Ar(x)=1;AT(t,AN(n,x)))
 A atnv(Ct,Ln,OV*v)_(Au=atn(t,n);mc(uC,v,n*ZT[t]);u)A1(ax,Ar(x)>1?Ar(x)--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
@@ -30,9 +30,9 @@ S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p+
 A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)xr;au0)
 V init(){glb=aa0();cn[tA]=a0();cn[tC]=cn[tc]=ac(32);cn[tH]=cn[th]=ah(NH);
- cn[tI]=cn[ti]=ai(NI);cn[tL]=cn[tl]=al(NL);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);F(tn-to,cn[to+i]=au0)
+ cn[tI]=cn[ti]=ai(NI);cn[tL]=cn[tl]=al(NL);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);i(tn-to,cn[to+i]=au0)
  ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(WI);ci[0][3]=ai(-WI);ci[0][4]=ai(NI);
- S L l[]={0,1,WL,-WL,NL};F(5,ci[1][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};F(5,ci[2][i]=ad(d[i]))}
+ S L l[]={0,1,WL,-WL,NL};i(5,ci[1][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};i(5,ci[2][i]=ad(d[i]))}
 I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 
 #ifndef shared

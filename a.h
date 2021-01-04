@@ -10,8 +10,8 @@
 #define    P(x,a...) Y(x,_(a))
 #define     EY(a...) else Y(a)
 #define      E(a...) else{a;}
-#define      F(a...) F_(i,a)
-#define     Fj(a...) F_(j,a)
+#define      i(a...) F_(i,a)
+#define      j(a...) F_(j,a)
 #define F_(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
 #define B break
 #define O const
@@ -161,7 +161,7 @@ S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24)
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(OC*x)_(write(2,x,mn(x)))
-S I oh(Ln)_(C s[17];s[16]=0;F(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
+S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
 S I ol(Ln)_(C b[32],*u=b+31;L m=n<0;Y(m,n=-n)do{*u--='0'+n%10;n/=10;}while(n);Y(m,*u--='-')write(2,u+1,b+31-u))
 S L ov_(C*s,Ln)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
 S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(Ab(x));os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))

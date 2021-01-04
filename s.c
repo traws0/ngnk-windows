@@ -21,13 +21,13 @@ S C*su(C*s,UL x)_(x<TX?sX(s,x):S0(s4(s,x/TX),x%TX))S C*sl(C*s,L x)_(Y(x<0,P(x==N
   E(UL l3=l+l,m3=m0+m0+(l3<l),h3=h+h+(m3<m0),l4=l3-*a,m4=m3-a[1]-(l4>l3),h4=h3-(m4>m3);*w=shr(m4,h4,i-64))shr(m0,h,i-65))
 #endif
 S UL I5[342][2],P5[326][2];S UL addcll(UL x,UL y,UL c,UL*p)_(UL u=x+y+c;*p=u<x||u<y;u) // or __builtin_addcll
-S V shr3(UL*x,UL*y,I d){F(2,x[i]=y[i]>>d|y[i+1]<<(64-d))x[2]=y[2]>>d;}S V shr2(UL*a){*a>>=1;*a|=a[1]<<63;a[1]>>=1;}S V inc2(UL*a){a[1]+=!++*a;}
-S V pws5(UL(*a)[2],In,L u,Lv,L w){UL x[]={u,v,w},y[3],c;F(n,mc(a+i,x+1,16);shr3(y,x,2);c=0;F(3,x[i]=addcll(x[i],y[i],c,&c))Y(x[2]>>61,shr3(x,x,1)))}
+S V shr3(UL*x,UL*y,I d){i(2,x[i]=y[i]>>d|y[i+1]<<(64-d))x[2]=y[2]>>d;}S V shr2(UL*a){*a>>=1;*a|=a[1]<<63;a[1]>>=1;}S V inc2(UL*a){a[1]+=!++*a;}
+S V pws5(UL(*a)[2],In,L u,Lv,L w){UL x[]={u,v,w},y[3],c;i(n,mc(a+i,x+1,16);shr3(y,x,2);c=0;i(3,x[i]=addcll(x[i],y[i],c,&c))Y(x[2]>>61,shr3(x,x,1)))}
 S V initp5(){pws5(I5,ZZ(I5),0xebd5cf2016a52921,0x4ac7ca59a424c507,0x9558b4661b6565f8);pws5(P5,ZZ(P5),0,0,1ll<<61);
- I5[0][0]=0x0958f94b348498a0;I5[0][1]=0x12ab168cc36cacbf;shr2(I5[1]);shr2(I5[1]);shr2(I5[2]);shr2(I5[3]);F(ZZ(I5),inc2(&I5[i][0]))
+ I5[0][0]=0x0958f94b348498a0;I5[0][1]=0x12ab168cc36cacbf;shr2(I5[1]);shr2(I5[1]);shr2(I5[2]);shr2(I5[3]);i(ZZ(I5),inc2(&I5[i][0]))
  inc2(I5[ZZ(I5)-1]);shr2(P5[0]);}
 S UI dm(UL*p)_(UL x=*p,q=x/10;*p=q;(UI)x-10*(UI)q)S I l10p2(I x)_(x*78913>>18)S I l10p5(I x)_(x*732923>>20)S I p5b(I x)_(x*1217359>>19)
-S I mp5(UL x,UI p)_(F(p,UL q=x/5;P((UI)x-5*(UI)q,0)x=q)1)S I mp2(UL x,UI p)_(!(x&((1ll<<p)-1)))
+S I mp5(UL x,UI p)_(i(p,UL q=x/5;P((UI)x-5*(UI)q,0)x=q)1)S I mp2(UL x,UI p)_(!(x&((1ll<<p)-1)))
 S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63,*s++='-')P(e==2047,MC(s,"0w"))P(!m&&!e,MC(s,"0.0"))
  m|=(UL)!!e<<52;e+=!e-1077;I t,ev=!(m&1),h=m<<12||e<-1075,u0=0,w0=0;UL u,v,w;m<<=2;Y(!**I5,initp5())
  Y(e>1,t=l10p2(e)-(e>7);u=msha(m,I5[ZZ(I5)-1-t],t-e+p5b( t)+125,&v,&w,h);Y(t<22,!(m%5)?u0=mp5(m,t):ev?w0=mp5(m-1-h,t):(v-=mp5(m+2,t))))
@@ -36,7 +36,7 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  E(Cd=0;W((v/=10)>(w/=10),d=dm(&u);t++)u+=u==w||d>=5)
  s++;I l=su(s,u)-s-1;s[-1]=*s;t+=l;
  P(in(t,16),Ik=l<t?l:t;mv(s,s+1,k);ms(s+l,'0',max(0,t-l));s+=t;*s++='.';s+=l-k;Y(t>=l,*s++='0')s)
- P(-4<t&&t<0,F(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,'0',-t-1)+l-t)
+ P(-4<t&&t<0,i(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,'0',-t-1)+l-t)
  Y(l>0,*s++='.';s+=l)*s++='e';Y(t<0,t=-t;*s++='-')s4(s,t))
 A1(str0,Q(xtC);x=room(x,1);xC[xn]=0;x)
 A1(str,P(xtl||xtd,I l=xtl;Lv=gl(x);Au=aC(24);AN((l?sl:sd)(uC,v)-uC,u))P(xts,Iv=gs(x);aCz(syp(&v)))

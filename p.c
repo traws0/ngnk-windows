@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 S I ltr(Cc)_(c3('a',c|32,'z'))S I ldg(Cc)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S A pb(A,C);
-I si(OC*s,I c)_(OC*t=s;W(*t&&*t-c,t++)t-s)S A1(p1,xn-1?x:fir(x))S D p10(In)_(Dd=1;F(n,d*=10)d)
+I si(OC*s,I c)_(OC*t=s;W(*t&&*t-c,t++)t-s)S A1(p1,xn-1?x:fir(x))S D p10(In)_(Dd=1;i(n,d*=10)d)
 L pu(C**p)_(C*s=*p;Lv=0;Cc=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
@@ -18,7 +18,7 @@ S A ps()_(C*t=s,c=*s;Y(c&128,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||si("./:"
 S A pS(Cc)_(Ax=aS(0);W(1,Ay=c-'`'||*s-'"'?ps():pC();y=str0(y);x=apv(x,(I[]){syP(yC)});yr;P(*s-c,x)++s)0)
 S A lam(Ck,Ax,Ay,Az)_(AK(k,atnv(tA,5,A(x,y,au0,z,au0)))) //x:src,y:bytecode,z:locals
 S A1(shy,P(!xn,x)Ay=xA[xn-1];Y(ytA&&yn,Az=yx;P(z==av0||ztu&&yn>2,_q(x,au0)))x) //if last expr is assignment, make it return ::
-S A px(In)_(Q(in(n,4));Ax=aS(n);F(n,xi='x'+i)x)
+S A px(In)_(Q(in(n,4));Ax=aS(n);i(n,xi='x'+i)x)
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),']')));Ep(!ytS||yn>8,y))
  Az=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
 S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
