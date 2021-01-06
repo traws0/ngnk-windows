@@ -37,7 +37,7 @@ h(ltn,x<y,x<y,cD(x)<cD(y))h(gtn,x>y,x>y,cD(x)>cD(y))h(eql,x==y,x==y,*(L*)&x==*(L
 #define h2(x) {x((V*)a,(V*)b,(V*)r,2*n);}
 #define hn(x) {TY(*b)c=-*b;x(a,&c,r,n);}
 //     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
-ha(dex,htT(dexi),hTt(dexi),;        ,h2(dexiI),hTt(dexl),;        ,;        ,;        ,;        ,L,D) // : 0
+ha(dex,;        ,;        ,;        ,;        ,;        ,;        ,;        ,;        ,;        ,L,D) // : 0
 ha(add,htT(addi),hs(addiI),hTT(addi),htT(addl),hs(addlL),hTT(addl),htT(addd),hs(adddD),hTT(addd),L,D) // + 1
 ha(sub,htT(subi),hn(addIi),hTT(subi),htT(subl),hn(addLl),hTT(subl),htT(subd),hn(addDd),hTT(subd),L,D) // - 2
 ha(mul,htT(muli),hs(muliI),hTT(muli),htT(mull),hs(mullL),hTT(mull),htT(muld),hs(muldD),hTT(muld),L,D) // * 3
@@ -49,13 +49,9 @@ ha(ltn,htT(ltni),hTt(ltni),hTT(ltni),htT(ltnl),hTt(ltnl),hTT(ltnl),htT(ltnd),hTt
 ha(gtn,hs(ltnIi),hs(ltniI),hs(ltnII),hs(ltnLl),hs(ltnlL),hs(ltnLL),hs(ltnDd),hs(ltndD),hs(ltnDD),L,I) // > 9
 ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(eqldD),hTT(eqld),L,I) // = 10
 
-#define dexLL dexlL
-#define dexII dexiI
-#define dexDd dexLl
-#define dexdD dexlL
-#define dexDD dexLL
-#define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
-#define hA(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
+#define  h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
+#define h0(v,t,T) {0      ,0      ,0      ,0      ,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
+#define hA(a...)  h0(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
 OV*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
@@ -64,6 +60,7 @@ S A v2(Ax,Ay,Iv)_(P(xtm&&ytm,Au=kv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(
  V*a=xti?(V*)&x:xC,*b=yti?(V*)&y:yC;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
  P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
+A2(dex,xr;y)
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
 A2(mod,P(xtl&&gl_(x)==NL,out(dex(x,y)))P(xtil,v2(x,y,vi('!')))
  Y(xtt||xtm,Y(xtm,x=enl(x))x=rsh(al(len_(y)),x))
