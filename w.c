@@ -15,7 +15,8 @@ A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;xr;0)x)I b=xtA&&Ar
 S L cfm(OA*a/*0*/,Ln)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S AX(eaca,Az,b[8];i(n,Ay=a[i];Y(ytm,z=yx;B))zR;i(n,Ay=b[i]=a[i];Y(ytm,P(!mtc_(z,yx),zr,edn(n,b))b[i]=val(y)))
  Au=eac(x,b,n);(u?am:dex)(z,u))
-AX(eac,P(xtilIL,n>1?ern(n,a):K("{$[|/`i`l=@x;y(!x)+/:!0|1-x-#y;-1+/~x>\\:y]}",xR,*a))A b[8];Ct[8];Lm=-1;
+S A2(bin,K("{-1i+/~x>\\:y}",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
+AX(eac,P(xtil,n>1?ern(n,a):win(xR,*a))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8];Ct[8];Lm=-1;
  i(n,Ay=b[i]=a[i];Ym(eaca(x,a,n))t[i]=pkd(y)?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))i(n,Y(t[i]==1,Ar(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
  Au=0;Y(!m,Y(x==cu('#'),u=aL(0))EY(n==2&&xtv&&xv<11,u=a[!len_(a[1])];uR)E(u=a0()))
