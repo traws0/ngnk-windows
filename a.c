@@ -11,7 +11,7 @@ S D sinD(D x)_(S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.
  P(x<0,-sinD(-x))Y(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
 A1(sin,P(xtmMA,ea1(sin,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;i(un,ud=sinD(xd))Y(xC-uC,xr)u)
 
-S L cD(D x)_(L a=*(L*)&x;a^(UL)(a>>63)>>1) //comparable double
+S L cD(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
 #define hh(v,f) h(v,f,f,f)
 hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)h(dvd,y?x/y:(UI)NI+(x<0)-(x>0),y?x/y:(UL)NL+(x<0)-(x>0),x/y)
