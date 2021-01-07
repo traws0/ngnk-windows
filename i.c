@@ -10,7 +10,7 @@
 #ifndef MAP_NORESERVE
  #define MAP_NORESERVE 0
 #endif
-I fstat(I,ST stat*),getdents(UI,V*,UI);
+ST stat;I fstat(I,ST stat*),getdents(UI,V*,UI);
 S O I lh=0x0100007f;S C octet(C**p)_(UL r=pu(p);Ed(r>255)r)
 S UI inet_addr_(C**p)_(C*s=*p;P(!*s,lh)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=octet(&s))*p=s;*(UI*)r)
 S L skt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)
