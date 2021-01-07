@@ -20,7 +20,7 @@ S AX(idxA,Ay=*a++;n--;YA(A b[8];*b=au_plc;mc(b+1,a,n);Az=prj(x,b,n+1);dex(z,eac(
 S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xti||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,xr;al(now()))
 AX(app,XT(xtA?idxA(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,*a))
  Xs(P(n>1,ern(n,a))SF(x,*a,"``j`k`p`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin",
-                      ser,jsw,kst,prs,tme,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sinx))
+                      ser,jsw,kst,prs,tme,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sin))
  Xm(Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?dex(y,app(y,a+1,n-1)):y)
  XM(Ay=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(tm,x),a,n))
  P(n<xk,prj(x,a,n))Xv(n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))Xr(((AX*)vf[58+xv])(xx,a,n))
