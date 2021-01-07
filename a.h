@@ -134,7 +134,7 @@ S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;xr;v)
 S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24),av_mkl=av(25);
 
 #define ND (D)(0./0.)
-#define WD __builtin_inff()
+#define WD __builtin_inf()
 #define NL (1ll<<63)
 #define WL (~NL)
 #define NI (1<<31)
