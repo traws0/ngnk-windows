@@ -1,7 +1,6 @@
 // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
 //#define DEBUG
 #include<unistd.h>
-#include<math.h>
 #include"k.h"
 #include"g.h"
 #define      _(a...) {return({a;});}
@@ -134,8 +133,8 @@ S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;xr;v)
 #define cv(c) av(vi(c))
 S OA au0=au(0),av0=av(0),au_out=au(25),au_cmd=au(28),au_plc=au(29),av_com=av(24),av_mkl=av(25);
 
-#define ND (D)NAN
-#define WD (D)INFINITY
+#define ND (D)(0./0.)
+#define WD __builtin_inff()
 #define NL (1ll<<63)
 #define WL (~NL)
 #define NI (1<<31)
