@@ -28,7 +28,7 @@ h(ltn,x<y,x<y,cD(x)<cD(y))h(gtn,x>y,x>y,cD(x)>cD(y))h(eql,x==y,x==y,*(L*)&x==*(L
  SN V v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;i(PAD(n,b),r[i]=c=v##t(c,b[i])))\
  SN V v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;i(PAD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d))\
  SN I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
-#define v(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
+#define v(v,iI,Ii,II,lL,Ll,LL,dD,Dd,DD,rl,rd) ht(v,i,I,iI,Ii,II,I)ht(v,l,L,lL,Ll,LL,rl)ht(v,d,D,dD,Dd,DD,rd)
 #define hH(f) {ALN(b)ALN(r)TY(*a)c=*a;i(PAD(n,a),*r++=f(c,*b++))}
 #define Hh(f) {ALN(a)ALN(r)TY(*b)c=*b;i(PAD(n,a),*r++=f(*a++,c))}
 #define HH(f) {ALN(a)ALN(b)ALN(r)     i(PAD(n,a),*r++=f(*a++,*b++))}
