@@ -54,7 +54,7 @@ ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(
 OV*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
-S A v2(Ax,Ay,Iv)_(P(xtm&&ytm,Au=kv(&y);am1(A(x,y,av(v),u),4))P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
+S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xti?(V*)&x:xC,*b=yti?(V*)&y:yC;V(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
