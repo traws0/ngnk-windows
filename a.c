@@ -28,25 +28,24 @@ h(ltn,x<y,x<y,cD(x)<cD(y))h(gtn,x>y,x>y,cD(x)>cD(y))h(eql,x==y,x==y,*(L*)&x==*(L
  SN V v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;i(PAD(n,b),r[i]=c=v##t(c,b[i])))\
  SN V v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;i(PAD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d))\
  SN I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))1)
-#define ha(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
-#define htT(f) {ALN(b)ALN(r)TY(*a)c=*a;i(PAD(n,a),*r++=f(c,*b++))}
-#define hTt(f) {ALN(a)ALN(r)TY(*b)c=*b;i(PAD(n,a),*r++=f(*a++,c))}
-#define hTT(f) {ALN(a)ALN(b)ALN(r)     i(PAD(n,a),*r++=f(*a++,*b++))}
-#define hs(x) {x(b,a,r,n);}
-#define h2(x) {x((V*)a,(V*)b,(V*)r,2*n);}
-#define hn(x) {TY(*b)c=-*b;x(a,&c,r,n);}
-//     iI        Ii        II        lL        Ll        LL        dD        Dd        DD
-ha(dex,;        ,;        ,;        ,;        ,;        ,;        ,;        ,;        ,;        ,L,D) // : 0
-ha(add,htT(addi),hs(addiI),hTT(addi),htT(addl),hs(addlL),hTT(addl),htT(addd),hs(adddD),hTT(addd),L,D) // + 1
-ha(sub,htT(subi),hn(addIi),hTT(subi),htT(subl),hn(addLl),hTT(subl),htT(subd),hn(addDd),hTT(subd),L,D) // - 2
-ha(mul,htT(muli),hs(muliI),hTT(muli),htT(mull),hs(mullL),hTT(mull),htT(muld),hs(muldD),hTT(muld),L,D) // * 3
-ha(dvd,htT(dvdi),hTt(dvdi),hTT(dvdi),htT(dvdl),hTt(dvdl),hTT(dvdl),htT(dvdd),hTt(dvdd),hTT(dvdd),L,D) // % 4
-ha(mod,htT(modi),hTt(modi),hTT(modi),htT(modl),hTt(modl),hTT(modl),htT(modd),hTt(modd),hTT(modd),L,D) // ! 5
-ha(mnm,htT(mnmi),hs(mnmiI),hTT(mnmi),htT(mnml),hs(mnmlL),hTT(mnml),htT(mnmd),hs(mnmdD),hTT(mnmd),L,D) // & 6
-ha(mxm,htT(mxmi),hs(mxmiI),hTT(mxmi),htT(mxml),hs(mxmlL),hTT(mxml),htT(mxmd),hs(mxmdD),hTT(mxmd),L,D) // | 7
-ha(ltn,htT(ltni),hTt(ltni),hTT(ltni),htT(ltnl),hTt(ltnl),hTT(ltnl),htT(ltnd),hTt(ltnd),hTT(ltnd),L,I) // < 8
-ha(gtn,;        ,;        ,;        ,;        ,;        ,;        ,;        ,;        ,;        ,L,I) // > 9
-ha(eql,htT(eqli),hs(eqliI),hTT(eqli),htT(eqll),hs(eqllL),hTT(eqll),htT(eqld),hs(eqldD),hTT(eqld),L,I) // = 10
+#define v(v,xiI,xIi,xII,xlL,xLl,xLL,xdD,xDd,xDD,rl,rd) ht(v,i,I,xiI,xIi,xII,I)ht(v,l,L,xlL,xLl,xLL,rl)ht(v,d,D,xdD,xDd,xDD,rd)
+#define hH(f) {ALN(b)ALN(r)TY(*a)c=*a;i(PAD(n,a),*r++=f(c,*b++))}
+#define Hh(f) {ALN(a)ALN(r)TY(*b)c=*b;i(PAD(n,a),*r++=f(*a++,c))}
+#define HH(f) {ALN(a)ALN(b)ALN(r)     i(PAD(n,a),*r++=f(*a++,*b++))}
+#define s(x) {x(b,a,r,n);}
+#define n(x) {TY(*b)c=-*b;x(a,&c,r,n);}
+//    iI       Ii       II       lL       Ll       LL       dD       Dd       DD
+v(dex,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,D) // : 0
+v(add,hH(addi),s(addiI),HH(addi),hH(addl),s(addlL),HH(addl),hH(addd),s(adddD),HH(addd),L,D) // + 1
+v(sub,hH(subi),n(addIi),HH(subi),hH(subl),n(addLl),HH(subl),hH(subd),n(addDd),HH(subd),L,D) // - 2
+v(mul,hH(muli),s(muliI),HH(muli),hH(mull),s(mullL),HH(mull),hH(muld),s(muldD),HH(muld),L,D) // * 3
+v(dvd,hH(dvdi),Hh(dvdi),HH(dvdi),hH(dvdl),Hh(dvdl),HH(dvdl),hH(dvdd),Hh(dvdd),HH(dvdd),L,D) // % 4
+v(mod,hH(modi),Hh(modi),HH(modi),hH(modl),Hh(modl),HH(modl),hH(modd),Hh(modd),HH(modd),L,D) // ! 5
+v(mnm,hH(mnmi),s(mnmiI),HH(mnmi),hH(mnml),s(mnmlL),HH(mnml),hH(mnmd),s(mnmdD),HH(mnmd),L,D) // & 6
+v(mxm,hH(mxmi),s(mxmiI),HH(mxmi),hH(mxml),s(mxmlL),HH(mxml),hH(mxmd),s(mxmdD),HH(mxmd),L,D) // | 7
+v(ltn,hH(ltni),Hh(ltni),HH(ltni),hH(ltnl),Hh(ltnl),HH(ltnl),hH(ltnd),Hh(ltnd),HH(ltnd),L,I) // < 8
+v(gtn,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,I) // > 9
+v(eql,hH(eqli),s(eqliI),HH(eqli),hH(eqll),s(eqllL),HH(eqll),hH(eqld),s(eqldD),HH(eqld),L,I) // = 10
 
 #define  h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
 #define h0(v,t,T) {0      ,0      ,0      ,0      ,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
