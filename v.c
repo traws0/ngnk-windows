@@ -1,8 +1,8 @@
 #include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
-#define til_(T)   V til##T(V*p,L n)_(T*a=p;ALN(a)i(PAD(n,a),a[i]=i))
+#define til_(T)   V til##T(V*p,L n)_(T*a=p;LN(a)i(PD(n,a),a[i]=i))
 #define r_(T)     S V r##T(V*p,L n)_(T*a=p,*b=a+n-1;W(a<b,SWP(*a,*b);a++;b--))
-#define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;i(PAD(n,p),r[i]=a[i]))
-#define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;i(PAD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
+#define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
+#define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
 til_(H)til_(I)til_(L)r_(C)r_(H)r_(I)r_(L)
 c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
 A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))L m=An(yx);i(yn,Az=ya;El(zn-m,x))AT(tM,x))

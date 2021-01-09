@@ -26,8 +26,8 @@
 #define TY __typeof__
 #define ST struct
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
-#define ALN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
-#define PAD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p))
+#define LN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);} //align
+#define PD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p)) //pad
 #define M1(x) #x
 #define M2(x) M1(x)
 #define A(a...) (A[]){a}
