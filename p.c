@@ -22,7 +22,7 @@ S A px(In)_(Q(in(n,4));Ax=aS(n);i(n,xi='x'+i)x)
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(a0(),']')));Ep(!ytS||yn>8,y))
  Az=pb(a0(),'}');P(!z,yr;s0=s1;0)Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
 S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
- P(c=='(',s++;x=N(pb(enl(MKL),')'));xn-2?x:xy==PLH?xr,a0():las(x))
+ P(c=='(',s++;P(*s==')',s++;a0())x=N(pb(enl(MKL),')'));xn-2?x:las(x))
  P(dgt(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!ldg(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;C*p=s;c=*p;
   W(1,p+=*p==32;p+=*p=='-';c=*p;Y(!ldg(c),B)W(ldg(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pHIL())))
@@ -38,6 +38,6 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,Y(x,xr)0);*
  P(!b,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(COM,x,z):AO(o,a2(mon(x),z)))
  Az=pe(0,v);P(!z,Y(x,xr)yr;0)P(z==PLH,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
-S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&(!c||c=='}'),y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)Ep(*s-c,x)s++;x)
+S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)Ep(*s-c,x)s++;x)
 A1(prs,Et(!xtC,x)s=s0=dat(x=str0(x));Ay=*s=='\\'?a1(AO(0,a2(CMD,aCz(s+1)))):pb(a0(),0);
  !y?eS(x,s-s0),0:lam(0,x,shy(y),aS(0)))
