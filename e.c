@@ -3,7 +3,6 @@ S ST{C m[32];In,o;A s;}e; //message,length,offset,source
 NO A e0(OC*m)_(e.n=min(mn(m),Z(e.m)-1);mc(e.m,m,e.n);e.m[e.n]=0;0)
 NO A e1(OC*m,Ax      )_(dex(x,e0(m    )))
 NO A e2(OC*m,Ax,Ay   )_(dex(y,e1(m,x  )))
-NO A e3(OC*m,Ax,Ay,Az)_(dex(z,e2(m,x,y)))
 NO A eN(OC*m,In,OA*a )_(mrn(n,a);e0(m))
 SN I eC()_(e.n=0;Y(e.s,mr(e.s);e.s=0)e.o=0)
 NO I eS(Ax/*1*/,I o)_(Y(!e.s,e.s=x;e.o=o)0)
@@ -15,5 +14,5 @@ A1(epr,I h=64;C s0[3*h+Z(e.m)+6],*s=s0;*s++='\'';mc(s,e.m,e.n);s+=e.n;*s++=10;
  eC();write(1,s0,s-s0);x)
 
 #define g(t,m,n,a...) NO A##n(e##t##n,e##n(#m,##a))
-#define h(a...) g(a,0)g(a,1,x)g(a,2,x,y)g(a,3,x,y,z)
+#define h(a...) g(a,0)g(a,1,x)g(a,2,x,y)
 EA

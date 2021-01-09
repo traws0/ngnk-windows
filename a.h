@@ -105,7 +105,7 @@ A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(OC*,OC*),aCn(OC*,L),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,L),atnv(C,L,OV*),catc(A,OC*,L),ea1(A1,A),
- e0(OC*),e1(OC*,A),e2(OC*,A,A),e3(OC*,A,A,A),eN(OC*,I,OA*),get(A,L),getr(A,L),kv(A*),room(A,L);
+ e0(OC*),e1(OC*,A),e2(OC*,A,A),eN(OC*,I,OA*),get(A,L),getr(A,L),kv(A*),room(A,L);
 V init(),mrn(I,OA*),tilH(V*,L),tilI(V*,L),tilL(V*,L);
 C*syp(I*);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpI(A*,I),fpL(A*,L),
@@ -146,7 +146,7 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),COM=av(24),MKL=av(25);
 #define EF(f,x,a...) P(x,f(a))
 #define E_(t,a...) EF(EN(a,e##t##3,e##t##2,e##t##1,e##t##0),a)
 #define EA h(c,cpl)h(d,dom)h(i,idx)h(l,len)h(n,nyi)h(o,io)h(p,prs)h(r,rnk)h(s,stk)h(t,typ)h(v,val)h(z,lmt)
-#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;A3 e##t##3;S A e##t##n(In,OA*a)_(eN(#m,n,a))
+#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;S A e##t##n(In,OA*a)_(eN(#m,n,a))
  EA
 #undef h
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
