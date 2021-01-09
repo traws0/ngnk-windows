@@ -22,19 +22,19 @@
 #define NO __attribute__((noinline))
 #define SN S NO
 #define TD typedef
-#define RE restrict
 #define TY __typeof__
 #define ST struct
+#define RE restrict
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #define LN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);} //align
 #define PD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p)) //pad
 #define M1(x) #x
 #define M2(x) M1(x)
 #define A(a...) (A[]){a}
-#define CH(x,y,a...) (TY(y)[]){y,a}[x]
+#define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #ifdef DEBUG
  #define dbg(x) x
- #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)))
+ #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x))) //assert
  #define die(x) {write(1,x,Z(x));exit(1);}
 #else
  #define dbg(x)
@@ -84,7 +84,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 #define dat(x) ((V*)((x)<<16>>16))
 #define Ar(x) ((I*)dat(x))[-3]
-#define _q(x,y) (x=apd(x,y))
+#define _q(x,y) (x=apd(x,y)) //append
 
 //getters                              setters
 S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
