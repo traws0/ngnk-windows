@@ -38,6 +38,6 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,Y(x,xr)0);*
  P(!b,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(COM,x,z):AO(o,a2(mon(x),z)))
  Az=pe(0,v);P(!z,Y(x,xr)yr;0)P(z==PLH,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
-S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)Ep(*s-c,x)s++;x)
+S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',Ep(c==')',x,y)y=au0)x=apv(x,&y);Y(*s-';'&&*s-10,B)s++)Ep(*s-c,x)s++;x)
 A1(prs,Et(!xtC,x)s=s0=dat(x=str0(x));Ay=*s=='\\'?a1(AO(0,a2(CMD,aCz(s+1)))):pb(a0(),0);
  !y?eS(x,s-s0),0:lam(0,x,shy(y),aS(0)))
