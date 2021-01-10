@@ -53,9 +53,10 @@ v(eql,tT(eqli),s(eqliI),TT(eqli),tT(eqll),s(eqllL),TT(eqll),tT(eqld),s(eqldD),TT
 OV*arf[3][11][8]={{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
+C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:gI;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- V*a=xti?(V*)&x:xC,*b=yti?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=xtiI?tI:xtlL?tL:v<8?tD:tI;
+ V*a=xti?(V*)&x:xC,*b=yti?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?ti:tI)][v][k];Ct=art(v,xt);
  Y(!k,t+=ti-tI;P(t==ti,I r;f(a,b,&r,1);xr;yr;ai(r)))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
  P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
 A2(dex,xr;y)
