@@ -147,9 +147,9 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),COM=av(24),MKL=av(25);
 #define NH (H)(1<<15)
 #define WH (~NH)
 
-#define EN(x,y,z,u,n,...) n
+#define EN(x,y,z,n,...) n
 #define EF(f,x,a...) P(x,f(a))
-#define E_(t,a...) EF(EN(a,e##t##3,e##t##2,e##t##1,e##t##0),a)
+#define E_(t,a...) EF(EN(a,e##t##2,e##t##1,e##t##0),a)
 #define EA h(c,cpl)h(d,dom)h(i,idx)h(l,len)h(n,nyi)h(o,io)h(p,prs)h(r,rnk)h(s,stk)h(t,typ)h(v,val)h(z,lmt)
 #define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;S A e##t##n(In,OA*a)_(eN(#m,n,a))
  EA
