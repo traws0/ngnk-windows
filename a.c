@@ -12,11 +12,11 @@ S D sinD(D x)_(S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.
 A1(sin,P(xtmMA,ea1(sin,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;i(un,ud=sinD(xd))Y(xC-uC,xr)u)
 
 S L cD(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
-#define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
-#define hd(v,f_,fd) h(v,f_,f_,fd)
-#define hh(v,f) hd(v,f,f)
-hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?y/-x:y,ND)
-hh(mnm,min(x,y))hh(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
+#define hh(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
+#define hd(v,f_,fd) hh(v,f_,f_,fd)
+#define h(v,f) hd(v,f,f)
+h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?y/-x:y,ND)
+h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
