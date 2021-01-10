@@ -47,7 +47,7 @@ AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
  Yt(x=mut(x);y=gL(y);P(!y,xr;mrn(n-2,a+2);0)
   Li=gl(y);P(!in(i,xn),xr;ein(n-2,a+2))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*8);Au=app(z,b,n-2);zr;set(x,i,Nx(u)))
  P(n==4&&(xtIL||xtD)&&ytIL&&ztv&&zv<8&&xt==tT(At(a[3])),x=mut(x);Au=a[3];I d=utT;u=enla(u);Ei(d&&yn-un,(xr,y),u)y=gL(y);
-  Ei(!m2(y,m2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][7])(xC,xn,yL,yn,uC,d):1)))x)
+  Ei(m2(y,m2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tI][zv][7])(xC,xn,yL,yn,uC,d):0)))x)
  P(n==4&&xtC&&ytL&&z==av0&&tT(At(a[3]))==tC,x=mut(x);Au=a[3];I d=utT;u=enla(u);El(d&&yn-un,(xr,y),u)
   x=m2(y,m2(u,i(yn,Lj=yl;Y(!in(j,xn),x=0;B)xC[j]=uC[d*i])x));Ei(!x)x)
  rdc(cv('@'),a,n))
