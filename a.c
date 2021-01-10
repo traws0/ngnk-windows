@@ -13,10 +13,10 @@ A1(sin,P(xtmMA,ea1(sin,x))x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;i(un,ud=sinD(xd))Y(
 
 S L cD(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define h(v,fi,fl,fd) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
-#define hh(v,f) h(v,f,f,f)
-hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)h(dvd,y?x/y:(UI)NI+(x<0)-(x>0),y?x/y:(UL)NL+(x<0)-(x>0),x/y)
-h(mod,x>0?(y%x+x)%x:x?y/-x:NI,x>0?(y%x+x)%x:x?y/-x:NL,ND)hh(mnm,min(x,y))hh(mxm,max(x,y))
-h(ltn,x<y,x<y,cD(x)<cD(y))h(gtn,x>y,x>y,cD(x)>cD(y))h(eql,x==y,x==y,*(L*)&x==*(L*)&y)
+#define hd(v,f_,fd) h(v,f_,f_,fd)
+#define hh(v,f) hd(v,f,f)
+hh(dex,y)hh(add,x+y)hh(sub,x-y)hh(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?y/-x:y,ND)
+hh(mnm,min(x,y))hh(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 
 #define ht(v,t,T,xtT,xTt,xTT,rt)\
