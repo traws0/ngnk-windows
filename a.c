@@ -19,11 +19,11 @@ h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?
 h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 
-#define ht(v,t,T,xtT,xTt,xTT,rt)\
- SN I v##t##t(T*RE a,T*RE b,rt*r,UL n)_(*r=v##t(*a,*b);0)\
- SN I v##t##T(T*RE a,T*RE b,rt*r,UL n)xtT\
- SN I v##T##t(T*RE a,T*RE b,rt*r,UL n)xTt\
- SN I v##T##T(T*RE a,T*RE b,rt*r,UL n)xTT\
+#define ht(v,t,T,tT,Tt,TT,R)\
+ SN I v##t##t(T*RE a,T*RE b,R*r,UL n)_(*r=v##t(*a,*b);0)\
+ SN I v##t##T(T*RE a,T*RE b,R*r,UL n)tT\
+ SN I v##T##t(T*RE a,T*RE b,R*r,UL n)Tt\
+ SN I v##T##T(T*RE a,T*RE b,R*r,UL n)TT\
  SN I v##rdc##T(T*RE a,T*RE b,UL n)_(T c=*a;i(n,c=v##t(c,b[i]))*a=c;0)\
  SN I v##scn##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]));0)\
  SN I v##eap##T(T*RE a,T*RE b,T*RE r,UL n)_(T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)\
