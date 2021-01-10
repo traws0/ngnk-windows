@@ -9,7 +9,7 @@ S A2(f,y=Nx(apc(y,xt));
  P(pkd(x),f8(x,y))
  P(fun(x),f(AT(tA,x),Nx(apc(y,xv<<3|xk))))
  In=8*xtT;Au=catc(y,xC-n,n+xn*ZT[xt]);xr;u)
-A1(ser,f(x,aC(0)))
+A1(ser,f(x,aC0))
 
 //deserialize
 S C*s,*p;

@@ -12,7 +12,7 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define r(a...) N(cr(a)) //right
 S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gs(z));Ez(i>15)fu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
- P(zts||(ztA&&At(zx)==ts),Y(zts,hc(a0()))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
+ P(zts||(ztA&&At(zx)==ts),Y(zts,hc(aA0))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
   Ik=gs(zts?z:zx);Ii=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)eS(mR(fs),o);Ec(1);0)
 S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)=='o',h(bo);x)Ii=fAI(fl,gs(y));P(i>=0,fu[i]=An(fb);h(bg|i);x))
@@ -25,7 +25,7 @@ S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)=='o',h(bo);x)Ii=fAI(fl,gs(y));P(i>=0,fu[i]=An
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(zR):r(x,z))
  P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==MKL,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
-A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC(0));fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);
+A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC0);fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);
  i(yn,P(!cr(x,ya),xr;yr;0)h(i==yn-1?br:bp))yr;y=fb;Q(Ar(y)==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))
  mr(xA[5]);AK(k,AT(to,x)))
 
