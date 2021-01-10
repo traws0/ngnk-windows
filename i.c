@@ -23,15 +23,15 @@ A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xti);close(gi(x));au0)
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
 S V cls(I f){Y(f>2,close(f))}
 A2(v1c,Et(!ytC,x)I f=N(op_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,cls(f);Eo(1))s+=k;n-=k)cls(f);u))
-S A ls(I f)_(Cb[1024];Ik;Au=aA0;
+S A ls(I f)_(Cb[2048];Ik;Au=aA0;
  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST{long a,b;UH l;C s[];}*e=(V*)(b+i);uq(aCz(e->s));i+=e->l))u)
 S I dir(A x)_(I f=op_(xR,O_RDONLY);ST stat s;Iv=fstat(f,&s);v=v>=0&&!!(s.st_mode&S_IFDIR);close(f);v)
-A1(u0c,P(x==as(0)||(xtC&&!xn),xr;C b[1024];aCn(b,max(0,read(0,b,Z(b)))))P(dir(xR),ls(op_(x,O_RDONLY)))
+A1(u0c,P(x==as(0)||(xtC&&!xn),xr;Cb[2048];aCn(b,max(0,read(0,b,Z(b)))))P(dir(xR),ls(op_(x,O_RDONLY)))
  x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(al(-1),x):x)
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);Eo((L)a>>4==-1)Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
  V*b=mmap(a+ZP,n,p,m|MAP_FIXED,f,0);Eo(b-(V*)uC)u)
-A1(u1c,P(xti,C s[1024];I r=read(gi(x),s,Z s);Eo(r<0)aCn(s,r))P(xtl,u1c(gI(x)))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
+A1(u1c,P(xti,Cb[2048];I r=read(gi(x),b,Z b);Eo(r<0)aCn(b,r))P(xtl,u1c(gI(x)))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A1(cmdw,Q(xtC);Ln=mu;P(!xn,xr;al(n))Ay=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
