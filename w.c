@@ -29,7 +29,7 @@ S AX(cvg,
 AX(rdc,P(xtilIL,n>1?ern(n,a):K("{z+x*y}/[0;;]",xR,*a))P(xtcC,join(x,a,n))P(xk<2,cvg(x,a,n))
  Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):*a)P(m<0,Y(y,yr)eln(n,a))P(!m&&!y,Au=id_(x,z);mrn(n,a);u)
  Y(xtv&&xv<11&&(!y||ytt)&&n==1&&(ztC||ztIL||ztD),Y(ztC,z=gL(z);P(!z,Y(y,yr);0))Y(y&&ytdD||ztdD,Y(y,y=gD(y))z=gD(z))
-  TD V(*T)(V*,V*,L);
+  TD int(*T)(V*,V*,L);
   P(ztI,I*p=zI,a=!y?m--,*p++:gi(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);ai(a))
   P(ztL,L*p=zL,a=!y?m--,*p++:gl(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);al(a))
   P(ztD,D*p=zD,a=!y?m--,*p++:gd(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);ad(a)))
