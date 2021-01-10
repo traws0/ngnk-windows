@@ -111,18 +111,18 @@ C*syp(I*);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
 L len_(A),now(),pl(C**),pu(C**),tru(A);
-extern A glb,cn[],ci[3][5];extern OC vc[];extern OV*vf[],*arf[3][11][8];extern L mu;
+extern A glb,ce[],cn[],ci[3][5];extern OC vc[];extern OV*vf[],*arf[3][11][8];extern L mu;
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Ln)_(atn(t##T,n))
  h(A)h(C)h(H)h(S)h(I)h(L)h(D)
 #undef h
-#define aA0 aA(0)
-#define aC0 aC(0)
-#define aL0 aL(0)
-#define aD0 aD(0)
-#define aS0 aS(0)
-#define am0 am(aS0,aA0)
+#define aA0 mR(ce[tA])
+#define aC0 mR(ce[tC])
+#define aL0 mR(ce[tL])
+#define aD0 mR(ce[tD])
+#define aS0 mR(ce[tS])
+#define am0 mR(ce[tm])
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
 S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);(H)x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
