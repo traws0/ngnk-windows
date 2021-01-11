@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 S ST{C m[32];In,o;A s;}e; //message,length,offset,source
 NO A e0(OC*m)_(e.n=min(mn(m),Z(e.m)-1);mc(e.m,m,e.n);e.m[e.n]=0;0)
 NO A e1(OC*m,Ax      )_(dex(x,e0(m    )))

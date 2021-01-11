@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 A rsh_(Ax/*0*/,L m,L*pj,L*s,L r)_(Ln=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rsh_(x,m,pj,s+1,r-1))y)
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);mc(yC,xC+j*w,q*w);
  mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,mc(yC+m*w,yC,m*w);m*=2)Y(n>m,mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)

@@ -1,5 +1,5 @@
 ngn/k is a simple, small, fast vector programming language for x86_64 GNU/linux
-license: GNU AGPLv3 (v3 only) - https://bitbucket.org/ngn/k/src/master/LICENSE
+license: GNU AGPLv3 (v3 only) - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 usage: rlwrap ./k repl.k
 
 a.h  common header

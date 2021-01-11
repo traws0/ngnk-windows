@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 S C*s;S A0 jv;S C jw()_(W(si(" \n\t\r",*s)<4,++s)*s)S A0(je,0)
 S A0(jd,Im=*s=='-';s+=m;Cc=*s++;P(!dgt(c),0)Dv=c-'0';W(dgt(*s),v*=10;v+=*s++-'0')
  Y(*s=='.',s++;D t=1;W(dgt(*s),t/=10;v+=(*s++-'0')*t))

@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2020 ngn, GNU AGPLv3 - https://bitbucket.org/ngn/k/raw/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 #define F5(a...) {{Ii=0;a;}{Ii=1;a;}{Ii=2;a;}{Ii=3;a;}{Ii=4;a;}}
 #define F8(a...) {F5(a){Ii=5;a;}{Ii=6;a;}{Ii=7;a;}}
 #define U3(f,a) S U f(U x,U y,U z)_(a)
