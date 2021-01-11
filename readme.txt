@@ -20,9 +20,11 @@ j.c  json parser: `j?x
 x.c  serialization
 e.c  error handling
 c.c  crypto
-t/   tests
+t/   unit tests
 g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
 a19/ https://adventofcode.com/2019
 a20/ https://adventofcode.com/2020
 o/   .o files (build tmp)
+web/ ad-hoc web server for testing wasm builds
+huf/ huffman coding for permalinks
