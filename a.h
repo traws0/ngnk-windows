@@ -3,14 +3,14 @@
 #include<unistd.h>
 #include"k.h"
 #include"g.h"
-#define      _(a...) {return({a;});}
-#define    W(x,a...) while(x){a;}
-#define    Y(x,a...) if(x){a;}
-#define    P(x,a...) Y(x,_(a))
-#define     EY(a...) else Y(a)
-#define      E(a...) else{a;}
-#define      i(a...) F_(i,a)
-#define      j(a...) F_(j,a)
+#define   _(a...) {return({a;});}
+#define W(x,a...) while(x){a;}
+#define Y(x,a...) if(x){a;}
+#define P(x,a...) Y(x,_(a))
+#define  EY(a...) else Y(a)
+#define   E(a...) else{a;}
+#define   i(a...) F_(i,a)
+#define   j(a...) F_(j,a)
 #define F_(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
 #define B break
 #define O const
