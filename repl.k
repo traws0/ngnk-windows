@@ -1,6 +1,6 @@
 #!k
 1"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n";
-h:(": assign   RETURN     ' each|slide|bin"
+h:(": SET|dex  RETURN     ' each|slide|bin"
    "+ add      transpose  / fold|join |dec  /      comment"
    "- subtract negate     \\ scan|split|enc  \\      exit"
    "* multiply first     ': eachprior       \\t:n x time"
