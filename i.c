@@ -26,7 +26,7 @@ A2(v1c,Et(!ytC,x)I f=N(op_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yC;m2(y,Au=au0;W
 S A ls(I f)_(Cb[2048];Ik;Au=aA0;
  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST{long a,b;UH l;C s[];}*e=(V*)(b+i);uq(aCz(e->s));i+=e->l))u)
 S I dir(A x)_(I f=op_(xR,O_RDONLY);ST stat s;Iv=fstat(f,&s);v=v>=0&&!!(s.st_mode&S_IFDIR);close(f);v)
-A1(u0c,P(x==as(0)||(xtC&&!xn),xr;Cb[2048];aCn(b,max(0,read(0,b,Z(b)))))P(dir(xR),ls(op_(x,O_RDONLY)))
+A1(u0c,P(x==as(0)||(xtC&&!xn),Cb[2048];x(aCn(b,max(0,read(0,b,Z(b))))))P(dir(x),ls(op_(x,O_RDONLY)))
  x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(al(-1),x):x)
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);Eo((L)a>>4==-1)Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
