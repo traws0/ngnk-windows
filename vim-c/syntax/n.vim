@@ -1,4 +1,5 @@
-sy clear |sy case match
+sy clear |sy sync fromstart |sy case match
+
 fu!s:R(x)
  let x=a:x|let r=[['\<g=','matchgroup='],['\<s=','start='],['\<e=','end='],['\<c=','contains='],['\<sk=','skip=']]
  for[u,v]in r|let x=substitute(x,u,v,'g')|endfo
