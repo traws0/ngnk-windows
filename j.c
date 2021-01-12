@@ -8,7 +8,7 @@ S A1(ju,Iv=0;i(4,Cc=*s++;v=16*v+(dgt(c)?c-'0':c3('a',c|32,'f')?(c|32)-'a'+10:999
 S A0(js,s++;Ax=aC0;W(1,C*t=s;Cc=*s++;W(c-'"'&&c-'\\'&&c>31,c=*s++)P(c<32,s--;x(0))x=catc(x,t,s-1-t);P(c=='"',x)c=*s++;
                        Ii=si("\"\\/bfnrtu",c);P(i>8,s--;x(0))x=i<8?apc(x,"\"\\/\b\f\n\r\t"[i]):ju(x);t=s)0)
 S A0(ja,s++;Ax=aA0;P(jw()==']',s++;x)W(1,xq(Nx(jv()));P(*s==']',s++;x)Nx(*s==',');s++)0)
-S A0(jo,s++;Ax=am0;Cc=jw();P(c=='}',s++;x)
+S A0(jo,s++;Ax=am(aS0,aA0);Cc=jw();P(c=='}',s++;x)
  W(1,Nx(c=='"');_q(xx,gS(Nx(js())));Nx(jw()==':');s++;_q(xy,Nx(jv()));P(*s=='}',s++;x)Nx(*s==',');s++;c=jw())0)
 S A jr(OC*t,Lv)_(Cc;W((c=*t++),P(c-*s,0)s++)al(v))S A0(jt,jr("true",1))S A0(jf,jr("false",0))S A0(jN,jr("null",NL))
 S A0(jv,Cc=jw();Ii=si("-ftn[{\"",c)*!dgt(c);Ax=CH(i,&jd,jf,jt,jN,ja,jo,js,je)();jw();x)
