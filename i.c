@@ -34,7 +34,7 @@ A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESE
 A1(u1c,P(xti,Cb[2048];I r=read(gi(x),b,Z b);Eo(r<0)aCn(b,r))P(xtl,u1c(gI(x)))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
-S A1(cmdw,Q(xtC);Ln=mu;P(!xn,x(al(n)))Ay=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
+S A1(cmdw,Q(xtC);Ln=mu;P(!xn,x(al(n)))Ay=Nx(val(xR));mr(out(y));n=mu-n;x(n?enl(cat(as(0),al(n))):au0))
 S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))x(al((now()-t+500)/1000)))
 A1(cmd,Et(!xtC,x)Y(!xn||xn==1&&*xC=='\\',exit(0))Cc=*xC;
  Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(al(i),x));A1*f=CH(si("ltw",c),&ldf,cmdt,cmdw,0);P(f,f(x)))
