@@ -14,7 +14,9 @@ A1(enl,P(sim(x),P(pkd(x),Au=atn(tT(xt),1);*uL=x;u)AT(tT(xt),x))Xm(Ay=kv(&x);aM(x
 A1(enla,xtt||xtm?enl(x):x)
 A2(cat,P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
                     Au=eac(cv(','),A(mR(xy),mR(yy)),2);Y(u,u=aM(mR(xx),u))x(y(u)))
- x=enla(x);y=enla(y);Y(!xn,SWP(x,y))P(!yn,y(x))Y(xt-yt,x=Ny(blw(x));y=Nx(blw(y)))L w=ZT[xt],m=xn,n=yn;Au;
+ x=enla(x);y=enla(y);Y(!xn,SWP(x,y))P(!yn,y(x))
+ Y(xt-yt,Ct=max(xt,yt);A1*f=ct[t*(tC<xt+yt-t&&t<tD)];x=Ny(f(x));y=Nx(f(y)))
+ L w=ZT[xt],m=xn,n=yn;Au;
  Y(Ar(x)==1&&ZA+(m+n)*w<=1<<Ab(x),u=AN(m+n,x))
  E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(Ar(x)==1,mr(AN(0,x)))E(mRa(x);mr(x)))E(mr(x)))
  mc(uC+m*w,yC,n*w);Y(ytA,mRa(y))y(u))
