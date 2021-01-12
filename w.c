@@ -11,7 +11,7 @@ S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytA,y)C*s=xtc?(V*)&x:xC;Lm=len_(x),k=
  i(k,Az=ya;Et(!ztcC,y)l+=len_(z))Au=aC(l);C*p=uC;i(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
  Y(k,Az=yA[k-1];Y(ztc,*p=gc(z))E(mc(p,zC,zn)))y(u))
 A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;x(0))x)I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=aA0;
- i(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))ur;u=0;B)uq(y))Y(b,x=AN(0,x))x(u))
+ i(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))u=u(0);B)uq(y))Y(b,x=AN(0,x))x(u))
 S L cfm(OA*a/*0*/,Ln)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
 S A2(bin,K("{-1i+/~x>\\:y}",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
 S AX(eacm,Az=aS0,b[8];i(n,Ay=a[i];Y(ytm,z=cat(z,mR(yx))))z=unq(z);
@@ -21,21 +21,21 @@ AX(eac,P(xtil,n>1?ern(n,a):win(xR,*a))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8]
  P(m<0,app(x,a,n))i(n,Y(t[i]==1,Ar(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
  Au=0;Y(!m,Y(x==cu('#'),u=aL0)EY(n==2&&xtv&&xv<11,u=a[!len_(a[1])];uR)E(u=aA0))
  j(m,i(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(tT(zt),m)):aA0)
-      Y(!z,ur;u=0;i(n,Ay=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1)))B)uq(z))
+      Y(!z,u=u(0);i(n,Ay=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1)))B)uq(z))
  i(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 S AX(cvg,
  P(n==2,Ay=*a,u=a[1];P(ytil,i(gl(y),u=N(app(x,&u,1)))u)W(1,uR;Az=N2(y,u,app(y,&u,1));Y(!tru(z),B)u=Ny(app(x,&u,1)))y(u))
  P(n==1,Ay=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));P(mtc_(u,y)||mtc_(u,z),y(u(z)))z=z(u))y(z(u)))ern(n,a))
 AX(rdc,P(xtilIL,n>1?ern(n,a):K("{z+x*y}/[0;;]",xR,*a))P(xtcC,join(x,a,n))P(xk<2,cvg(x,a,n))
  Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):*a)P(m<0,Y(y,yr)eln(n,a))P(!m&&!y,Au=id_(x,z);mrn(n,a);u)
- Y(xtv&&xv<11&&(!y||ytt)&&n==1&&c3(tC,zt,tD),Y(zt<tI,z=gI(z);P(!z,Y(y,yr);0))Y(y&&ytdD||ztdD,Y(y,y=gD(y))z=gD(z))
+ Y(xtv&&xv<11&&(!y||ytt)&&n==1&&c3(tC,zt,tD),Y(zt<tI,z=gI(z);P(!z,y?y(0):0))Y(y&&ytdD||ztdD,Y(y,y=gD(y))z=gD(z))
   TD int(*T)(V*,V*,L);
   P(ztI,I*p=zI,a=!y?m--,*p++:gi(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);ai(a))
   P(ztL,L*p=zL,a=!y?m--,*p++:gl(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);al(a))
   P(ztD,D*p=zD,a=!y?m--,*p++:gd(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);ad(a)))
  Li=!y;Y(i,y=get(z,0))A b[8];W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);Y(!y,B)i++)mrn(n,a);y)
 S AX(cvi,P(n>2,ern(n,a))Ay,z,u;Y(n==1,y=0;z=*a)E(y=*a;z=a[1])
- P(!y,A y0=y=zR;u=enl(yR);W(1,z=yR;y=app(x,&y,1);P(!y,z(u(dex(y0,0))))I m=mtc_(y,z)||mtc_(y,y0);zr;Y(m,B)uq(yR))mr(y0);y(u))
+ P(!y,A y0=y=zR;u=enl(yR);W(1,z=yR;y=app(x,&y,1);P(!y,z(u(dex(y0,0))))I m=mtc_(y,z)||mtc_(y,y0);Y(m,B)uq(yR))mr(y0);y(z(u)))
  P(ytil,u=enl(zR);i(gl(y),z=Nu(app(x,&z,1));uq(zR))z(u))
  u=enl(zR);W(1,zR;A w=app(y,&z,1);P(!w,y(z(u(0))))Y(!tru(w),B)z=app(x,&z,1);P(!z,y(u(0)))uq(zR))y(z(u)))
 AX(scn,P(xtilIL,enc(x,a,n))P(xtcC,spl(x,a,n))P(xk<2,cvi(x,a,n))
