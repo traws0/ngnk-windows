@@ -111,7 +111,7 @@ C*syp(I*),art(I,C);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
 L len_(A),now(),pl(C**),pu(C**),tru(A);
-extern A glb,ce[],cn[],ci[3][5];extern OC vc[];extern OV*vf[],*arf[3][11][8];extern L mu;
+extern A glb,ce[],cn[],ci[3][5];extern OC vc[];extern OV*vf[],*arf[3][11][8];extern L mu;extern A1*ct[];
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Ln)_(atn(t##T,n))
