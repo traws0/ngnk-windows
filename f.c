@@ -7,7 +7,7 @@ S A rnd(Ln,Lm)_(Y(n==NL,Ed(m<0)n=-m)Ax=aL(absL(n));rndL(xL,xn);Y(m,Y(m<=1ll<<32,
  Y(n<0,n=-n;El(n>m,x)i(n,Lk=m-n+i;Lv=((UL*)xL)[i]%=k+1;L*p=&xl;j(i,Y(xl==v,*p=k;B)))Ay=rnd(n,0);i(n,SWP(xl,xL[(UL)yl%(i+1)]))yr)x)
 S A rndD(Ln)_(A x=AT(tD,rnd(n,0));i(n,xl=xl&-1ull>>12|1023ll<<52)x)
 SN I fAA(Ax/*0*/,Ay/*0*/)_(Q(xtA);i(xn,P(mtc_(xa,y),i))NI)
-I fpA(A*p,Ay)_(Ax=*p;In=xn,i=fAA(x,y);P(i<0,_q(*p,y);n)yr;i)
+I fpA(A*p,Ay/*1*/)_(Ax=*p;In=xn,i=fAA(x,y);P(i<0,_q(*p,y);n)yr;i)
 #define f_(T)  NO I  f##T(OV*p,I n,OV*q)_(O T*a=p,v=*(T*)q;i(n,P(a[i]==v,i))NI)
 #define fp_(T) NO I fp##T(A*p,T v)_(Ax=*p;In=xn,i=f##T(xC,n,&v);P(i<0,*p=apv(x,&v);n)i)
 f_(C)f_(H)f_(I)f_(L) fp_(C)fp_(H)fp_(I)fp_(L)
