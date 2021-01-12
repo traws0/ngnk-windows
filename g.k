@@ -5,6 +5,7 @@ v:"xyzu";t:"ACHILD";f:{r,:"#define ",/:(x[0]'). a@'!#'a:1_x;}
 f({x,y," A",y,"(",x,")"};v;"knotv")
 f({x,"r ({mr(",x,");dbg(",x,"=0;)})"};v)
 f({x,"R mR(",x,")"};v)
+f({x,"(a) dex(",x,",a)"};v)
 f({x,(_y)," ",x,y,"[i]"};v;t)
 f({x,y," ((",y,"*)dat(",x,"))"};v;t)
 f({x,v[y]," ",x,"A[",($y),"]"};v;!3)

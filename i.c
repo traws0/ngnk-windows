@@ -18,7 +18,7 @@ S L skt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)
 S L opn(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);Eo(f<0)f)
  UI h=inet_addr_(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
 S I op_(Ax/*1*/,I fl)_(P(xtil,gi(x))P(xts,Iv=gs(x);C*s=syp(&v);P(!*s,1)Et(*s-':')
- opn(s+1,fl))Et(!xtC,x)x=str0(x);dex(x,opn(xC,fl)))
+ opn(s+1,fl))Et(!xtC,x)x=str0(x);x(opn(xC,fl)))
 A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xti);close(gi(x));au0)
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
 S V cls(I f){Y(f>2,close(f))}
@@ -34,11 +34,11 @@ A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESE
 A1(u1c,P(xti,Cb[2048];I r=read(gi(x),b,Z b);Eo(r<0)aCn(b,r))P(xtl,u1c(gI(x)))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
-S A1(cmdw,Q(xtC);Ln=mu;P(!xn,xr;al(n))Ay=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
-S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))xr;al((now()-t+500)/1000))
+S A1(cmdw,Q(xtC);Ln=mu;P(!xn,x(al(n)))Ay=Nx(val(xR));mr(out(y));n=mu-n;xr;n?enl(cat(as(0),al(n))):au0)
+S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(al(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))x(al((now()-t+500)/1000)))
 A1(cmd,Et(!xtC,x)Y(!xn||xn==1&&*xC=='\\',exit(0))Cc=*xC;
  Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(al(i),x));A1*f=CH(si("ltw",c),&ldf,cmdt,cmdw,0);P(f,f(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
 S A rda(I f)_(Au=aC(256-ZA);L m=0,k;W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);ur;u=z))close(f);AN(m,u))
 A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];i(xn,a[i]=dat(xa))a[xn]=0;I p[4];pipe(p);pipe(p+2);
- P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,0));0)xr;close(*p);close(p[3]);N(v1c(ai(p[1]),y));rda(p[2]))
+ P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,0));0)close(*p);close(p[3]);N(v1c(ai(p[1]),x(y)));rda(p[2]))

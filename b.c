@@ -26,7 +26,7 @@ S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)=='o',h(bo);x)Ii=fAI(fl,gs(y));P(i>=0,fu[i]=An
  P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==MKL,h(bl);h(n-1);x)
  P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
 A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC0);fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);
- i(yn,P(!cr(x,ya),xr;yr;0)h(i==yn-1?br:bp))yr;y=fb;Q(Ar(y)==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))
+ i(yn,P(!cr(x,ya),x(y(0)))h(i==yn-1?br:bp))y=y(fb);Q(Ar(y)==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))
  mr(xA[5]);AK(k,AT(to,x)))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
@@ -38,7 +38,7 @@ S A1(vm,/*0*/W(1,Cb=*c++;
         EY(b==bL,Cn=*c++;Ax=*s;El(!xtt&&len_(x)-n)i(n,p(get(x,n-1-i))))
         EY(b==ba||b==bP,Cn=*c++;Au=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
         EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(mR(l[1])))EY(b==bp,mr(q()))E(Q(b==br);_(*s)))
- EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(xr;*v=mR(*s)))
+ EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(x=x(*v=mR(*s))))
  EY(b>=bv,Ax=q();N(*s=((A2*)vf[b])(x,*s)))E(N(*s=((A1*)vf[b])(*s))))0)
 AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=dat(fb);l=s-1;I m=An(fl);i(n,p(a[i]))i(m-n,p(au0))
  Au=vm(x);Y(!u,Ay=fb,z=fm;eS(mR(fs),zC[c-1-yC]);W(s<l-m,Ax=q();Y(x,mr(x))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)

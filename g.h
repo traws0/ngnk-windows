@@ -28,6 +28,10 @@
 #define yR mR(y)
 #define zR mR(z)
 #define uR mR(u)
+#define x(a) dex(x,a)
+#define y(a) dex(y,a)
+#define z(a) dex(z,a)
+#define u(a) dex(u,a)
 #define xa xA[i]
 #define xc xC[i]
 #define xh xH[i]
