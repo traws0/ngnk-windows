@@ -14,17 +14,17 @@ S A3(cl,/*0*/UH o=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gs(z));Ez(i>15)fu[i]=An(fb);h
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztA&&At(zx)==ts),Y(zts,hc(aA0))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
   Ik=gs(zts?z:zx);Ii=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
- P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)eS(mR(fs),o);Ec(1);0)
-S A2(cr,/*0*/UH o=yo;Y(yts,P(gs(y)=='o',h(bo);x)Ii=fAI(fl,gs(y));P(i>=0,fu[i]=An(fb);h(bg|i);x))
- P(ytS&&yn==1,hc(as(*yL));x)P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA,hc(y==PLH?au0:yR);x)Ln=yn;P(!n,hc(yR);x)
- Au=yx;P(utS&&n==1,hc(uR);x)P((utu||u==av0)&&n==3,r(x,yz);l(x,y,yy))
- P(u==cv('$')&&n>3,n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);
-  Az=fb;i(n&~1,I d=(i&1?zn:p[i+1])-p[i];Y(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)1)
- Y(u==cu('*')&&n==2,Az=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))
- Y(utw&&n==2,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
- I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(zR):r(x,z))
- P(p,r(x,yx);h(bP);h(n-1);x)P(u==av0&&n==2,h(br);x)P(u==MKL,h(bl);h(n-1);x)
- P(utu&&n==2,h(bu|uv);x)P(utv&&n==3,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
+ P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
+ eS(mR(fs),o);Ec(1);0)
+S A2(cr,/*0*/UH o=yo;Ii;P(yts&&(i=fAI(fl,gs(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts&&gs(y)=='o',h(bo);x)
+ P(ytS&&yn==1,hc(get(y,0));x)P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Ln=yn;Au=yx;
+ P(n<2,hc(uR);x)P(n==3&&(utu||u==av0),r(x,yz);l(x,y,yy))
+ P(n>3&&u==cv('$'),n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);Az=fb;
+  i(n&~1,I d=(i&1?zn:p[i+1])-p[i];Y(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
+ Y(n==2&&u==cu('*'),Az=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))
+ Y(n==2&&utw,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
+ I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)
+ P(n==2&&u==av0,h(br);x)P(u==MKL,h(bl);h(n-1);x)P(n==2&&utu,h(bu|uv);x)P(n==3&&utv,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
 A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC0);fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);
  i(yn,P(!cr(x,ya),x(y(0)))h(i==yn-1?br:bp))y=y(fb);Q(Ar(y)==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))
  mr(xA[5]);AK(k,AT(to,x)))
