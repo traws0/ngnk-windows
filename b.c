@@ -26,7 +26,7 @@ S A2(cr,/*0*/UH o=yo;Ii;P(yts&&(i=fAI(fl,gs(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)
  P(n==2&&u==av0,h(br);x)P(u==MKL,h(bl);h(n-1);x)P(n==2&&utu,h(bu|uv);x)P(n==3&&utv,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
 A1(cf,/*1*/
- P(xtA,Ln=xn;
+ XA(Ln=xn;
   Y(n==2,Ay=xx,z=xy;P(ytw&&!ztA&&!ztsS,val(x)))
   Y(n==3,Ay=xx,z=xy,u=xz;P(y==cv('+')&&ztL&&utL&&zn==un,val(x)))
   x=mut(x);i(xn,xa=cf(xa))x)
