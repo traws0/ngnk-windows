@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/188979/move-arrows-along-a-contour/188981#188981
 f:{A:"^>v<";D,:-D:(-1 0;!2);s:(#x;#*x);c:~^x;r:" -+|"c*+/'3'0,c,0;$[#p:+s\&~^t:A?,/x;;:r];q:q@'*'&'~^x ./:/:q:+p+/:D@4!(t^0N)+/:0 1 3;s#@[,/r;s/+q;:;A@D?q-p]}/
 \l 0.k

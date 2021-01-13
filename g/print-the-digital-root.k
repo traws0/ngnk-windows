@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/97713/print-the-digital-root/167251#167251
 f:(+/10\)/
 \l 0.k

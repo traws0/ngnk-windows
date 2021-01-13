@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/168427/count-consecutive-characters/168428#168428
 f:#1_{x^x^x+1}\0-
 \l 0.k

@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/162337/seats-in-a-finnish-cinema/162680#162680
 f:{(~&/,/){a[*>A*&/+/''b*b:i[&~A:~a]-/:\:i:+!n:(#x;#*x)]:#?a:,/x;n#a}/x}
 \l 0.k

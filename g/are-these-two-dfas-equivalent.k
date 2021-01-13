@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/203772/are-these-two-dfas-equivalent/203927#203927
 f:{a:&,/~=\:/+/'x[2]=\:'!'#'*'*x:+@[;0;0,']'x;n:#**|*x;~#a^a^{?y@<y:y,/x@\:y}[,/'+\:'/(n;1)**x]/,n/x 1}
 \l 0.k

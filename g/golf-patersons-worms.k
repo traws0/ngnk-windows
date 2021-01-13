@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/177277/golf-patersons-worms/177417#177417
 D,:-D:2\6 3;f:{d::0;m::2/=6;X::(!6),x;{m::?m,p:2/^(+':x)?(2*h:*|x)+/:D 6!d+!6;$[(~p)|^c:X m?p;x;x,,h+D 6!d+:c]}/,1 0}
 \l 0.k

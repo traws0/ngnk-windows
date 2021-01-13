@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/168039/addition-subtraction-of-numbers-within-string/168063#168063
 f:{+/(1_x,*x)*2*2!x:-48+x^x^,/$!10}
 \l 0.k

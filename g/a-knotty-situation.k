@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/170567/a-knotty-situation/171410#171410
 f:{!N::2*n:#x;{+/d,'x,'d:&:'-2!(|/n)-n:#:'x}(+/1-2*s){j::+,/y;,/(&0|2*x;(-1+#?{x[j]&:x@|j;x}/!N){-(d,x)+x,d:&4}/,1;&0|-2*x)}'(N!{(x,'|1+x;x+/:!2)}'((2*!n),'-1+x|-x)@'0 1=/:x>0)@'/:+~(y<0)=s:!n#2}
 

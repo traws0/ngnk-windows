@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/158239/transitive-equality/167104#167104
 f:{&a[z]=a:{y[x]&:|y x;y}[+y,,&2]/!x}
 \l 0.k

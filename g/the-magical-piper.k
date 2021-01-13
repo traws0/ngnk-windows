@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/199026/the-magical-piper/199028#199028
 f:{+/2!0N 2#0,x^"_"}
 \l 0.k

@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/178184/most-contributing-rows/178264#178264
 f:{&a=|/a:+//'x@=x}
 \l 0.k

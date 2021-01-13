@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/178809/dig-a-border-trench/178814#178814
 f:{x+x&2{++/'3'0,x,0}/~x}
 \l 0.k

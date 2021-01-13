@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/182212/lay-out-the-carpet/182300#182298
 f:{1_',/'y,''2{+x,1_|x}/(#x)'1_,/+y,'|x}
 \l 0.k

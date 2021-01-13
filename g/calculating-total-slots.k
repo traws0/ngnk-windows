@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/182010/calculating-total-slots/182394#182394
 f:{#2_``{y,#[0|2-x?y;`],x}/x}
 \l 0.k

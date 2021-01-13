@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/161632/two-lasers-between-two-mirrors/161781#161781
 f:{" \\/X|"4,'(+/3!1 2*(x#'e+2*|e:=2*x)(2*x)!z+(!y;-!y)),'4}
 \l 0.k

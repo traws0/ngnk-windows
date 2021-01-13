@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/70779/consolidate-an-array/160506#160506
 f:{x@<~x}
 \l 0.k

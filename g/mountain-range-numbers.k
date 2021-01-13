@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/199055/mountain-range-numbers/199087#199087
 f:&/0>2_*':-':$:
 \l 0.k

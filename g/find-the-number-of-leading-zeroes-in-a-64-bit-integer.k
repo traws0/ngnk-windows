@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/177271/find-the-number-of-leading-zeroes-in-a-64-bit-integer/177538#177538
 f:64-#2\
 \l 0.k

@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/166838/embiggen-your-input/166911#166911
 f:{{x,'"  ",/:y}/(#s;5;5)#@[(#c)#"";i;:;(#i:&c:,/(36 25#4_,/+2\"N¹wBÁt?àœ>2¾!~ŸEßˆ‡EÑs¢ðùÑücèú>|!Š1¿Cÿ‡!Âq|cøÇä!?ò˜Œ¹(Â‡ãºÆ1ÍgF1w£èA’´›èúQ||„!#ÅÑŠ”HÆ»ŒTEF*!	ñ")s)#`c$b s:((b:(48+!10),65+!26)?x-32*(96<x)&x<123)^0N]}
 \l 0.k

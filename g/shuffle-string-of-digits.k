@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/204768/shuffle-string-of-digits/204770#204770
 f:{$[|/x=r:x[,/|2 0N#<x]@<<x;0;r]}
 \l 0.k

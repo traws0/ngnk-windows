@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/194846/backwards-alphabet-triangle/194918#194918
 f:{1_|^\(," "/+,a),a:`c$90-!26}
 \l 0.k

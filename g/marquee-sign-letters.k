@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/183544/marquee-sign-letters/184760#184760
 f:*+(){(a;x,a:&0|-/#''='(y;x@:1))}\
 \l 0.k

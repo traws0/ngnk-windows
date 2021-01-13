@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/209860/expected-number-of-trailing-zeros/209872#209872
 f:{1+x,x-+/2\x}
 \l 0.k

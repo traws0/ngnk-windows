@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/167924/in-for-a-bumpy-ride/167933#167933
 f:. s:"{*/ 0 >1_ *':1_ -': x }"
 

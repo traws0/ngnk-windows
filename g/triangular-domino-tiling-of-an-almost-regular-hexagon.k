@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/196070/triangular-domino-tiling-of-an-almost-regular-hexagon/196076#196076
 f:%/*/'2 1+\:+/!:
 \l 0.k

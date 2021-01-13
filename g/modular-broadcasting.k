@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/164056/modular-broadcasting/164060#164060
 f:{+/2{+:'(|/#:'x)#'x}/x}
 \l 0.k

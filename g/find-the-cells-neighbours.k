@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/168807/find-the-cells-neighbours/168839#168839
 f:{x/x!''(x\y)-1-3\(!9)^4}
 \l 0.k

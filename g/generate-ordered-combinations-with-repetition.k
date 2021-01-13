@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/10966/generate-ordered-combinations-with-repetition/168593#168593
 f:{,/(,/,'/:)\x#,y}
 \l 0.k

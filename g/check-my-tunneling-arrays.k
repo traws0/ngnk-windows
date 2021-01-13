@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/171681/check-my-tunneling-arrays/171719#171719
 f:{*/(x<0)|(x<#x)&(~x=!#x)&x=x?x?x}
 \l 0.k

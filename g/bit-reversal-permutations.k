@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/83373/bit-reversal-permutations/164642#164642
 f:2/|!2|&:
 \l 0.k

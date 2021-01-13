@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/185857/gravitational-force-between-numbers/185980#185980
 f:{+/'x@.={x@x}/(!#x)+{-/2=+/x<\:x 2 0}'3'0,x,0}
 \l 0.k

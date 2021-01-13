@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/141372/fit-a-word-into-an-alphabet-grid/160597#160597
 f:{{x@x?`c$65+!26}'(&~>':x)_x}
 \l 0.k

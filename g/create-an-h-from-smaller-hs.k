@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/157664/create-an-h-from-smaller-hs/160610#160610
 f:{~|/a<\:'a:1=!x#3}
 \l 0.k

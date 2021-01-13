@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/188874/to-find-islands-of-1-and-0-in-matrix/188881#188881
 f:{#?{|/'x*\:x}/2>+/x*x:x-\:'x:(0,#*x)\&,/x}'~:\
 \l 0.k

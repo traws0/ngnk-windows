@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/21326/sort-numbers-by-binary-1s-count/164966#164966
 f:{x@>+/2\x}
 \l 0.k

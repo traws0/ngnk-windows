@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/161673/sort-spelled-out-serial-numbers/161735#161735
 f:{x@<"tfsen"?x}
 \l 0.k

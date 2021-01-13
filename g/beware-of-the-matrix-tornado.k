@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/169677/beware-of-the-matrix-tornado#169695
 f:{s#(+,/'4{+|x}\x)@'4!1+i&|i:&/!s:2##x}
 \l 0.k

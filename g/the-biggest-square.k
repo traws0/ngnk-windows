@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/163382/the-biggest-square/163447#163447
 f:{*/2#+/|/',/'{0&':'0&':x}\x}
 \l 0.k

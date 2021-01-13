@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/167138/find-the-number-with-the-highest-sum-of-neighbors/167173#167173
 f:{(,/x)@*>,/(+g@+x)+(g:{(+':x)-|-':|x})x}
 \l 0.k

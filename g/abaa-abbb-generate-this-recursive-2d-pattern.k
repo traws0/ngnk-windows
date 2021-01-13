@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/155305/abaa-abbb-generate-this-recursive-2d-pattern/191122#191122
 f:{"|-"x{x,'|+|~x,:x}/,!2}
 \l 0.k

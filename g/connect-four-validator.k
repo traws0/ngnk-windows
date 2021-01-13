@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/117180/connect-four-validator/182456#182456
 f:{"XY"@|/&/'88<x ./:/:,/{x+/:/:+3+[4#1-+!3 3;]\&4}'+!6 7}
 \l 0.k

@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/191016/create-a-list-of-snaking-numbers-under-50-000/191020#191020
 f:{(x;#x:{*/1=3!5&+/x*x:+1_-':(+0 1,'2*!3 3)@10\x}#1+!50000)}
 \l 0.k

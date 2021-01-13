@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/162254/generate-a-walsh-matrix/162298#162298
 f:{x{(x,x),'x,-x}/1}
 \l 0.k

@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/32871/give-me-the-gray-code-list-of-bit-width-n/163759#163759
 f:{+~0=':!x#2}
 \l 0.k

@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/170695/construct-a-line-graph-conjugate-graph/170698#170698
 f:(*<:)#(3=#?,/)#,/{x,/:\:x}@,:'
 \l 0.k

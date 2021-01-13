@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/160512/reverse-range-successors/160586#160586
 f:{{x[y]-:1;x}\(,x#x),,/(|!x)#'!x}
 \l 0.k

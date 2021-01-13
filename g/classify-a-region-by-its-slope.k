@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/165937/classify-a-region-by-its-slope/165942#165942
 f:{$[1=#?,/a:(,/x)@.=i&|i:&/!2##x;;(&/m>1_M,0)-&/(m:&/'a)>-1_0,M:|/'a]}
 \l 0.k

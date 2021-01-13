@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/166623/generate-a-deck-of-cards/166652#166652
 f:{"JJ",/("AKQJ",$2+!9),'/:"SHDC"}
 \l 0.k

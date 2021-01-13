@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/40104/sierpinski-carpets/164993#164993
 f:{"\n"/("# "1_,/1,'+/')'a*/:\:a:+2!!1_(. x)#3}
 \l 0.k

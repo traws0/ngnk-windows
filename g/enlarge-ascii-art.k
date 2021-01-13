@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/19450/enlarge-ascii-art/166094#166094
 f:{,/+x#,+,/+x#,+y}
 \l 0.k

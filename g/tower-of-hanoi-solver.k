@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/5790/tower-of-hanoi-solver/164968#164968
 f:{3!x{-x,(,0 2),1+x}/()}
 \l 0.k

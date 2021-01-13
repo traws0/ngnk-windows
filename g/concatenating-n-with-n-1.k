@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/167818/concatenating-n-with-n-1/167819#167819
 f:{.,/$x+!2}'!:
 \l 0.k

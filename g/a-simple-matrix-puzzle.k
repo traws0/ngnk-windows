@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/171747/a-simple-matrix-puzzle/171748#171748
 f:{a@&y=x{+//x*(&/'b)&\:&/b:~x=y}/:a:,/x}
 \l 0.k

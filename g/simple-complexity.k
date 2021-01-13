@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/143220/simple-complexity/162790#162790
 f:{6{,[|x;""x],'(+|+x),+x}/"#"}
 \l 0.k

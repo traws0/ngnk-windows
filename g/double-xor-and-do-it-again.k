@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/166270/double-xor-and-do-it-again/166282#166282
 f:{$[*|a:2!+\2\x;x;2/-1_a]}/
 \l 0.k

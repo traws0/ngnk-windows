@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/181128/is-it-a-cyclops-number-nobody-knows/183049#183049
 f:{1=(~x)+/~a&|a:2\x}
 \l 0.k

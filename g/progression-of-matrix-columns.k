@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/164900/progression-of-matrix-columns/164910#164910
 f:{(a>i)*(+\i)-i-a:(2*1+i:!y)!'x}
 \l 0.k

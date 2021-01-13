@@ -1,3 +1,4 @@
+#!../k
 /https://codegolf.stackexchange.com/questions/198790/pletriwapt-sgpin-triplet-swapping/198853#198853
 f:,//|'0N 2#0N 3#
 \l 0.k
