@@ -25,7 +25,16 @@ S A2(cr,/*0*/UH o=yo;Ii;P(yts&&(i=fAI(fl,gs(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts
  Y(n==2&&utw,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)
  P(n==2&&u==av0,h(br);x)P(u==MKL,h(bl);h(n-1);x)P(n==2&&utu,h(bu|uv);x)P(n==3&&utv,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
-A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC0);fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);
+A1(cf,/*1*/
+ Y(xtA,Ln=xn;
+  Y(n==2,Ay=xx,z=xy;
+   Y(ytw&&!ztA&&!ztsS,
+    zR;x(enl(app(y,&z,1)))))
+  Y(n==3,Ay=xx,z=xy,u=xz;
+   Y(y==cv('+')&&ztL&&utL,
+    x(enl(app(x,(A[]){yR,zR},2))))))
+ x)
+A1(cpl,Ck=xk;x=mut(x);Ay=fb;fb=fm=mR(aC0);fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);y=cf(y);
  i(yn,P(!cr(x,ya),x(y(0)))h(i==yn-1?br:bp))y=y(fb);Q(Ar(y)==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))
  mr(xA[5]);AK(k,AT(to,x)))
 
