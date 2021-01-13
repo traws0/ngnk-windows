@@ -29,9 +29,9 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='{',po())P(c=='"',
  P(ltr(c),C*t=s;x=pS('.');Y(s-t==1&&c3('y',c,'z'),na=max(na,c-'w'))AO(t-s0,p1(x)))
  P(c>127,C*t=s;x=pS('.');*v=1;AO(t-s0,p1(x)))
  Ii=si(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,PLH)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
-S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si(vc+26,c);P(i>3,x)s++;
- Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2&&xy==PLH,xy=au0)*v=0)E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
 S A1(mon,P(xtv&&x-av0,au(xv))P(!xtA,x)P(xn==2&&xx==aw(0)||xn==3&&xx==COM,x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)x)
+S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si(vc+26,c);P(i>3,x)s++;
+ Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2,Y(xy==PLH,xy=au0)E(xx=mon(xx)))*v=0)E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
 S V pw()_(Cc=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
 S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,x?x(0):0);*v=0;u=a2(OUT,u);Y(x,u=a2(mon(x),u))u)
  UH o=s-s0;Cb=0;Ay=pT(&b);P(!y,x?x(0):0)P(y==PLH,x?x:y)

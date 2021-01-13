@@ -1,5 +1,5 @@
 /https://codegolf.stackexchange.com/questions/165762/is-this-a-weyr-matrix/165852#165852
-f:{x~e|(-n)#'(0*x),'(!n)=\:,/(-1_b)+1_0{x#!y}':|-n-':|b:|\@[-1++/|\|+x|e:=n:#x]\0}
+f:{x~e|(-n)#'(0*x),'(!n)=\:,/(-1_b)+1_0{x#!y}':|-n-':|b:|\@[-1++/|\|+x|e:=n:#x;]\0}
 \l 0.k
 t[,,1;1i]
 t[(1 1;0 1);1i]
