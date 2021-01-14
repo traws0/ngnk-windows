@@ -57,11 +57,13 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I);
 S L absL(Lv)_(v<0?-v:v)S I c3(Cc,Cv,Cd)_(c<=v&&v<=d)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I dgt(Cc)_(c3('0',c,'9'))
 S I in(Li,Ln)_(0<=i&&i<n)
 
+#define ms(a...) __builtin_memset(a)
 #define mv(a...) __builtin_memmove(a)
 #define mc(a...) __builtin_memcpy(a)
-#define ms(a...) __builtin_memset(a)
+#define mC(a...) __builtin_memcmp(a)
 #define mn(a...) __builtin_strlen(a)
-V*memcpy(V*,OV*,size_t),*memmove(V*,OV*,size_t),*memset(V*,I,size_t),exit(I);size_t strlen(OC*);I strcmp(OC*,OC*);
+V*memcpy(V*,OV*,size_t),*memmove(V*,OV*,size_t),*memset(V*,I,size_t),exit(I);size_t strlen(OC*);
+I strcmp(OC*,OC*),memcmp(OV*,OV*,size_t);
 
 //         () "" ,h ,i ,0 ,d ,` +! ! "c" 0h 0i 0  0. `  {} 1+ ++ +/ +: +  /
 enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
