@@ -1,6 +1,6 @@
 image: debian/buster
 repositories:
-  sr.ht: http://apt.llvm.org/buster llvm-toolchain-buster-10 main
+  sr.ht: http://apt.llvm.org/buster llvm-toolchain-buster-10 main 15CF4D18AF4F7421
 packages:
   - clang-10
 tasks:
