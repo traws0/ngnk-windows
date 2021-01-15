@@ -4,25 +4,24 @@ OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?'
 OV*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out,   0,  0, cmd,  0,  0,  0,
          dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,P(xtmMA,ea1(mkn,x))Ay=mR(cn[xt]);xtt?x(y):rsh(len(x),y)) //                                       mkl   '   /    \  ':   /:  \:
-A2(id_/*x0y0*/,xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
+A2(id_,/*00*/xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 A2(com,AK(yk,AT(tq,a2(x,y))))
 AX(prj,XA(app(x,a,n))Ck=max(n,xk);i(n,k-=a[i]!=PLH)Au=AK(k,atn(tp,n+1));ux=xR;mc(uA+1,a,8*n);u)
 S A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=aA0;i(yn,uq(get(ya,j)))am(mR(xx),u))
-A get(Ax/*0*/,Li)_(XL(al(xl))XI(ai(xi))XA(mR(xa))XH(ah(xh))XS(as(xi))XC(ac(xc))XD(ad(xd))Xm(get(xy,i))XM(getM(x,i))xR)
-A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xn)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
+A get(Ax/*0*/,Li)_(XA(mR(xa))XC(ac(xc))XH(ah(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))XM(getM(x,i))Xm(get(xy,i))xR)
+A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,len_(x))?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 #define i_(T,U) SN V i##T##U(OV*RE a,L m,OV*RE b,V*RE c,Ln,Lv){O T*p=a;O U*q=b;T*r=c;i(n,U j=q[i];r[i]=in(j,m)?p[j]:v)}
 i_(C,L)i_(H,L)i_(I,L)i_(L,L)i_(C,I)i_(H,I)i_(I,I)i_(L,I)
-S A2(idx_/*x0y1*/,Er(xtt,y)P(y==PLH,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)Et(fun(y),y)Yt(getr(x,gl(y)))
+S A2(idx_,/*01*/Er(xtt,y)P(y==PLH,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)Et(fun(y),y)Yt(getr(x,gl(y)))
  y=ytlL?y:N(gI(y));y=N(gL(y));L w=Zt[xt];Au=xtM?aA0:atn(xt,yn);P(xtA||xtM,u=AN(0,u);i(yn,uq(getr(x,yl)))y(u))
  A z=cn[xt];m2(y,CH(w+4*ytlL,&iCI,iHI,iII,iLI,iCL,iHL,iIL,iLL)(xC,xn,yC,uC,un,w==3?*zL:(I)z);0);u)
-S AX(idxA,Ay=*a++;n--;YA(A b[8];*b=PLH;mc(b+1,a,n);Az=prj(x,b,n+1);z(eac(z,a-1,1)))
- P(ytT||y==PLH,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))
+S AX(idxA,Ay=*a++;n--;P(ytT||y==PLH,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))
+ x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))
 S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xti||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,x(al(now())))
-AX(app,XT(xtA?idxA(x,a,n):n-1?ein(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,*a))
+AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))P(xtil,n-1?ern(n,a):wrt(xR,*a))
  Xs(P(n>1,ern(n,a))SF(x,*a,"``j`k`p`cf`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin",
                       ser,jsw,kst,prs,cf,tme,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sin))
- Xm(Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?y(app(y,a+1,n-1)):y)
- XM(Ay=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(tm,x),a,n))
+ Xm(Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?y(app(y,a+1,n-1)):y)XM(Ay=*a;n>1?ern(n,a):ytilIL?idx_(x,y):app(AT(tm,x),a,n))
  P(n<xk,prj(x,a,n))Xv(n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))Xr(((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))Xu(((A1*)vf[xv])(*a))Xw(Ay=*a;AK(0<xv&&xv<4&&yk==2?1:fun(y)?yk:1,AV(xv,atnv(tr,1,a))))Xo(run(x,a,n))
  Xp(P(n+xn>9,ern(n,a))I m=xn-1,j=0;A b[8];i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:mR(xA[i+1]))I l=max(0,n-j);mc(b+m,a+j,8*l);app(xx,b,m+l))
