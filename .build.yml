@@ -1,4 +1,5 @@
 image: debian/buster
 tasks:
   - build: |
+      cd k
       make
