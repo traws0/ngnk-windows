@@ -1,0 +1,4 @@
+image: debian/buster
+tasks:
+  - build: |
+      make
