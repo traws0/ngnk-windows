@@ -1,4 +1,8 @@
 image: debian/buster
+repositories: |
+    deb http://apt.llvm.org/buster llvm-toolchain-buster-10 main
+packages:
+    clang-10
 tasks:
   - build: |
       cd k
