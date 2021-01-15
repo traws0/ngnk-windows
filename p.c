@@ -17,7 +17,7 @@ S A0(p0x,Ax=aC0;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4
 S A ps()_(C*t=s,c=*s;Y(c&128,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||si("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))
 S A pS(Cc)_(Ax=aS0;W(1,Ay=c-'`'||*s-'"'?ps():pC();y=str0(y);x=y(apv(x,(I[]){syP(yC)}));P(*s-c,x)++s)0)
 S A lam(Ck,Ax,Ay,Az)_(AK(k,atnv(tA,5,A(x,y,au0,z,au0)))) //x:src,y:bytecode,z:locals
-S A1(shy,P(xn<2,x)Ay=xA[xn-1];Y(ytA&&yn,Az=yx;P(z==av0||ztu&&yn>2,xq(au0)))x) //if last expr is assignment, make it return ::
+S A1(shy,P(xn<2,x)Ay=xA[xn-1];Y(ytA&&yn>2,Az=yx;Y(z==av0||ztu,xq(au0)))x) //if last expr is assignment, make it return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);i(n,xi='x'+i)x)
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(aA0,']')));Ep(!ytS||yn>8,y))
  Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
@@ -39,5 +39,5 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,x?x(0):0);*
  Az=pe(0,v);P(!z,y(x?x(0):0))P(z==PLH,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
 S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',Ep(c==')',x,y)y=au0)xq(y);Y(*s-';'&&*s-10,B)s++)Ep(*s-c,x)s++;x)
-A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=*s=='\\'?a1(AO(0,a2(CMD,aCz(s+1)))):pb(a1(PRG),0);
+A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=*s=='\\'?a2(PRG,AO(0,a2(CMD,aCz(s+1)))):pb(a1(PRG),0);
  !y?eS(x,s-s0),0:lam(0,x,shy(y),aS0))
