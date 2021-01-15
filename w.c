@@ -35,7 +35,7 @@ AX(rdc,P(xtilIL,n>1?ern(n,a):K("{z+x*y}/[0;;]",xR,*a))P(xtcC,join(x,a,n))P(xk<2,
   P(ztD,D*p=zD,a=!y?m--,*p++:gd(y);m2(z,((T)arf[zt-tI][xv][4])(&a,p,m);0);ad(a)))
  Li=!y;Y(i,y=get(z,0))A b[8];W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);Y(!y,B)i++)mrn(n,a);y)
 S AX(cvi,P(n>2,ern(n,a))Ay,z,u;Y(n==1,y=0;z=*a)E(y=*a;z=a[1])
- P(!y,A y0=y=zR;u=enl(yR);W(1,z=yR;y=app(x,&y,1);P(!y,z(u(dex(y0,0))))I m=mtc_(y,z)||mtc_(y,y0);Y(m,B)uq(yR))mr(y0);y(z(u)))
+ P(!y,A v=y=zR;u=enl(yR);W(1,z=yR;y=app(x,&y,1);P(!y,z(u(dex(v,0))))Im=mtc_(y,z)||mtc_(y,v);mr(z);Y(m,B)uq(yR))y(dex(v,u)))
  P(ytil,u=enl(zR);i(gl(y),z=Nu(app(x,&z,1));uq(zR))z(u))
  u=enl(zR);W(1,zR;A w=app(y,&z,1);P(!w,y(z(u(0))))Y(!tru(w),B)z=app(x,&z,1);P(!z,y(u(0)))uq(zR))y(z(u)))
 AX(scn,P(xtilIL,enc(x,a,n))P(xtcC,spl(x,a,n))P(xk<2,cvi(x,a,n))
