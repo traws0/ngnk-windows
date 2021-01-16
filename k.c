@@ -7,7 +7,7 @@ A1(mkn,P(xtmMA,ea1(mkn,x))Ay=mR(cn[xt]);xtt?x(y):rsh(len(x),y)) //              
 A2(id_,/*00*/xtv&&xv<11?mR(ci[ytiI?0:ytdD?2:1][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 A2(com,AK(yk,AT(tq,a2(x,y))))
 AX(prj,XA(app(x,a,n))Ck=max(n,xk);i(n,k-=a[i]!=PLH)Au=AK(k,atn(tp,n+1));ux=xR;mc(uA+1,a,8*n);u)
-S A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=aA0;i(yn,uq(get(ya,j)))am(mR(xx),u))
+SN A getM(Ax/*0*/,Li)_(Q(xtM);K("{x!y@\\:z}",mR(xx),mR(xy),al(i)))
 A get(Ax/*0*/,Li)_(XA(mR(xa))XC(ac(xc))XH(ah(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))XM(getM(x,i))Xm(get(xy,i))xR)
 A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,len_(x))?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 #define i_(T,U) SN V i##T##U(OV*RE a,L m,OV*RE b,V*RE c,Ln,Lv){O T*p=a;O U*q=b;T*r=c;i(n,U j=q[i];r[i]=in(j,m)?p[j]:v)}
