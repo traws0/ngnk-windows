@@ -6,4 +6,6 @@ packages:
 tasks:
   - build: |
       cd k
-      make
+      make c; CC=clang-10 make -e
+      make c; CC=clang-7  make -e
+      make c; CC=gcc-8    make -e
