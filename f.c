@@ -20,7 +20,7 @@ A2(fnd,
     K("{y@x?#y}",x,y))
  Xm(Az=kv(&x);idx(x,fnd(z,y)))
  XM(En(1,x,y);0)
- Yt(P(!xtA&&fun(y),x(y(al(NL))))
+ Yt(P(!xtA&&ytF,x(y(al(NL))))
     fir(fnd(x,enl(y))))
  XA(Au=aL(yn);i(un,Az=get(y,i);ul=NINL(fAA(x,z));mr(z))x(y(u)))
  YA(ear(cv('?'),A(x,y),2))

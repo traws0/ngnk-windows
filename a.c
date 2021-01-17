@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 A1(neg,sub(ah(0),x))
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
-R1(not,P(fun(x),I r=x==au0;x(ah(r)))eql(x,xtsS?as(0):ac(0)))
+R1(not,XF(I r=x==au0;x(ah(r)))eql(x,xtsS?as(0):ac(0)))
 R1(sqr,x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;i(un,ud=__builtin_sqrt(xd))xC==uC?u:x(u))
 R1(nul,eql(x,mR(cn[xt])))
 R1(flr,Xc(fir(flr(enl(x))))XC(Au=aC(xn);m2(x,i(un,uc=xc+32*c3('A',xc,'Z'))u))XzZ(x)
@@ -58,8 +58,8 @@ OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
  A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:xtiI||ytiI?gI:gH;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- V*a=pkd(x)?(V*)&x:xC,*b=pkd(y)?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
- Y(!k,t+=th-tH;P(pkdt(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
+ V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
+ Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
  P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
 A2(dex,mr(x);y)
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))

@@ -70,10 +70,11 @@ enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-extern OC Zt[],ZT[];S C At(A);                S I sim(Ax)_(c3(tc,xt,ts)) //simple    types
-S I reft(Ct)_(Zt[t]==4)                       S I ref(Ax)_(reft(xt))     //reference types
-S I pkdt(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I pkd(Ax)_(pkdt(xt))     //packed    types
-S I funt(Ct)_(t>=to)                          S I fun(Ax)_(funt(xt))     //function  types
+extern OC Zt[],ZT[];S C At(A);
+S I sim(Ax)_(c3(tc,xt,ts))                   //simple    types
+S I _R(Ct)_(Zt[t]==4)                        //reference types
+S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw)) //packed    types
+S I _F(Ct)_(t>=to)                           //function  types
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
@@ -93,9 +94,9 @@ S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               
 S  C Av(Ax)_(x>>51&31)                 S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C Ak(Ax)_(x>>48&7)                  S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
 S  C Ab(Ax)_(C b=xC[-16];Q(b<48);b)    S A AB( C b,Ax)_(Q(b<48);                  xC[-16]=b;x)
-S UH Ao(Ax)_(xts?x>>32:pkd(x)?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
+S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])   S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
 S UL An(Ax)_(Ln=xL[-1];Q(n<1ll<<48);n) S A AN(UL n,Ax)_(Q(n<1ll<<48);              xL[-1]=n;x)
-S A1(mR,Q(x);P(pkd(x),x)Q(Ar(x)>=0);Ar(x)++;x)
+S A1(mR,Q(x);XP(x)Q(Ar(x)>=0);Ar(x)++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 A0 aa0;
@@ -129,7 +130,7 @@ S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
 S A ah(Hv)_(AT(th,(UH)v)) S H gh (Ax)_(Q(xth);(UH)x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
 S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xth||xtc);(I)x)
-S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(pkd(x)?(I)x:*xL)S L gl(Ax)_(L r=gl_(x);mr(x);r)
+S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(XP((I)x)*xL)S L gl(Ax)_(L r=gl_(x);mr(x);r)
 S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;mr(x);v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
@@ -170,4 +171,4 @@ S I os(OC*x)_(write(2,x,mn(x)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
 S I ol(Ln)_(C b[32],*u=b+31;L m=n<0;Y(m,n=-n)do{*u--='0'+n%10;n/=10;}while(n);Y(m,*u--='-')write(2,u+1,b+31-u))
 S L ov_(C*s,Ln)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
-S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!pkd(x),os(" b");ol(Ab(x));os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
+S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!xtP,os(" b");ol(Ab(x));os("t");ol(xt);os("r");ol(Ar(x));os("n");ol(xn))os(" ");out(x))
