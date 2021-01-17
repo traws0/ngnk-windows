@@ -50,5 +50,7 @@ S A1(asci,Ez(xn>WI,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=a
 A1(asc,XA(Ez(xn>WI,x)A*a=xA,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=n-1;W(i>0,SWP(ui,*uI)sft(a,uI,0,--i))x(u))
  Xm(Ay=kv(&x);idx(x,N(asc(y))))P(xtC||xtZ,asci(x))XS(asc(N(ea1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)hop(x))
 A1(dsc,Xi(hcl(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)sub(ai(len_(x)-1),rev(asc(rev(x)))))
-A1(grp,Xt(Et(!xtz)K("{(2#x)#1i,`i$&x}",x))Xm(Au=grp(kv(&x));Q(Ar(u)==1);uy=idx(x,uy);u)Ay=atn(xt,0),u=aA0;C w=Zt[xt];
- i(xn,Lj=!w?fpC(&y,xc):w==2?fpI(&y,xi):w==3?fpL(&y,xl):fpA(&y,mR(xa));Y(j==un,uq(aL0))uA[j]=apv(uA[j],&i))am(x(y),u))
+A1(grp,Xt(Et(!xtz)K("{(2#x)#1i,`i$&x}",x))Xm(Au=grp(kv(&x));Q(Ar(u)==1);uy=idx(x,uy);u)
+ Ay=atn(xt,0),u=aA0;C w=Zt[xt];
+ i(xn,Lj=!w?fpC(&y,xc):w==1?fpH(&y,xh):w==2?fpI(&y,xi):w==3?fpL(&y,xl):fpA(&y,mR(xa));Y(j==un,uq(aL0))uA[j]=apv(uA[j],&i))
+ am(x(y),u))
