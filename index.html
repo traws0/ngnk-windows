@@ -1,9 +1,17 @@
 <!doctype html>
 <html lang=en><head><meta charset=utf-8><title>ngn/k</title><link rel=icon href='data:;base64,iVBORw0KGgo='><style>
 *{padding:0;margin:0;border:0;outline:0}
-body{display:flex;flex-direction:row;min-height:100vh;background:#222;color:#fff;font-family:monospace}
+button{background:#484;color:#000;width:75px;cursor:pointer}button:hover{background:#6a6}button:active{background:#8f8}
+body{display:flex;flex-direction:column;min-height:100vh;background:#222;color:#fff;font-family:monospace}
+#hd{display:flex;flex:0;padding:4px}
+#ts{display:flex;flex:1;flex-direction:row}
 textarea{display:flex;flex:1;background:#000;color:#fff;margin:0 2px;resize:none}
 </style></head><body>
-<textarea id=ta0 autofocus spellcheck=false></textarea>
-<textarea id=ta1 placeholder='output (ctrl-enter to run)' readonly style=display:none spellcheck=false></textarea>
+<div id=hd>
+ <button id=b0 title='ctrl-enter'>eval</button>
+</div>
+<div id=ts>
+ <textarea id=t0 autofocus spellcheck=false></textarea>
+ <textarea id=t1 placeholder='output (ctrl-enter to eval)' readonly style=display:none spellcheck=false></textarea>
+</div>
 <script src=k.js></script></body></html>

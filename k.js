@@ -2,7 +2,7 @@ const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/m
 PR=' ',N='\n',{log,error}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
 C=String.fromCharCode,U8=x=>new Uint8Array(x),
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{taout.value+=s;cur(taout,taout.value.n)},
-skPR=i=>i+PR.n*(ta0.value._(i,i+PR.n)===PR),upd=_=>D=new DataView(K.memory.buffer),
+skPR=i=>i+PR.n*(t0.value._(i,i+PR.n)===PR),upd=_=>D=new DataView(K.memory.buffer),
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 M=(p,n)=>U8(K.memory.buffer).sub(p,p+n),s4=(p,x)=>D.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
 g1=p=>D.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
@@ -33,7 +33,7 @@ hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.ch(i)];r+=10000000;r=r._(0,r.n-r
         return r.replace(/.{8}/g,x=>C('0b'+x))}
 hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.ch(0)).toString(2)._(1)).replace(/10*$/,'')
         let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
-let K,D,H,I='',strace=0,taout=ta1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
+let K,D,H,I='',strace=0,taout=t1 //K:wasmapp,D:dataview(memory),H:heappointer,I:pendinginput
 ;[Array,Uint8Array,String].forEach(x=>{
  Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
  Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach,ch:charCodeAt',
@@ -59,17 +59,17 @@ X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
 if(location.hash==='#r'){wa(_=>K.init()) //repl mode
- rdy(_=>{ta0.value=BA+PR;taout=ta0;let ha=[''],hi=0 //ha,hi:history array and index
-  ta0.onkeydown=x=>{const k=kc(x)
-   if(k===38||k===40){let s=ta0.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
-    ta0.value=s._(0,i)+ha[hi];cur(ta0,skPR(i));return!1}
-   if(k===13){let s=ta0.value,p=ta0.selectionStart,q=ta0.selectionEnd;if(p===q){p=s._(0,p).lio(N)+1;q=(s+N).io(N,q)}
+ rdy(_=>{t0.value=BA+PR;taout=t0;let ha=[''],hi=0 //ha,hi:history array and index
+  t0.onkeydown=x=>{const k=kc(x)
+   if(k===38||k===40){let s=t0.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
+    t0.value=s._(0,i)+ha[hi];cur(t0,skPR(i));return!1}
+   if(k===13){let s=t0.value,p=t0.selectionStart,q=t0.selectionEnd;if(p===q){p=s._(0,p).lio(N)+1;q=(s+N).io(N,q)}
     ha[hi]=s._(p,q);I=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?I+N:N);
-    try{K.rep()}catch(x){ta0.disabled=1;error(x)};ap(PR);return!1}}})}
+    try{K.rep()}catch(x){t0.disabled=1;error(x)};ap(PR);return!1}}})}
 else{ //editor|output mode
- const run=_=>{wa(_=>{const s=ta0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);
+ const run=_=>{wa(_=>{const s=t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);t1.value=''
                       const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
                       try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}})}
- rdy(_=>{ta1.style.display='';ta0.value=u8d(hfd(atob(location.hash._(2))));run()
-  ta0.onkeydown=x=>{const k=kc(x)
-   if(k===1013){ta1.value='';location.hash='#c'+btoa(hfe(u8e(ta0.value)));run();return!1}}})}
+ rdy(_=>{t1.style.display='';t0.value=u8d(hfd(atob(location.hash._(2))));b0.onclick=run;run()
+  t0.onkeydown=x=>{const k=kc(x)
+   if(k===1013){location.hash='#c'+btoa(hfe(u8e(t0.value)));run();return!1}}})}
