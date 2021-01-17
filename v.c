@@ -19,7 +19,7 @@ A2(fil,ytmMA?eac(cv('^'),A(x,y),2):ytt?fir(xpt(x,enl(y))):K("{@[y;&^y;:;x]}",x,y
 A2(xpt,Xt(fil(x,y))En(xtmM||ytmM,x,y)y=enla(y);Y(xtA,y=blw(y))K("{x@&^y?x}",x,y))
 A2(cut,Ym(K("{((!y)^x)#y}",x,y))
  YT(x=Ny(gL(x));K("{n:#y;y$[x~*x;$[n<x|-x;!0;x<0;!n+0^x;x+!n-x];$[|/0<':x,#y;!`dom;x+!'1_-':x,#y]]}",x,y))
- P(ytil,Et(!xtT,x,y)Li=gl(y);P(!in(i,xn),x)
+ Yz(Et(!xtT,x,y)Li=gl(y);P(!in(i,xn),x)
   Au=atn(xt,xn-1);L w=ZT[xt];mc(uC,xC,i*w);mc(uC+i*w,xC+i*w+w,(xn-i-1)*w);Y(xtA,u=sqz(mRa(u)))x(u))
  Et(1,x,y);0)
 S A gt(Ax,A1*f)_(fir(N(f(enl(x)))))
