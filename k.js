@@ -12,6 +12,7 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
  try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
+thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
 wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}))
                      .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()}),
 u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0))))
@@ -75,4 +76,4 @@ else{ //editor|output mode
  rdy(_=>{
   t1.style.display='';t0.value=u8d(hfd(atob(location.hash._(2))));ev.onclick=run;run()
   t0.onkeydown=x=>{const k=kc(x);if(k===1013){location.hash='#c'+btoa(hfe(u8e(t0.value)));run();return!1}}
-  t0.onkeyup=ubc})}
+  t0.onkeyup=thr(ubc,1000)})}
