@@ -7,9 +7,12 @@ body{display:flex;flex-direction:column;min-height:100vh;background:#222;color:#
 #hd{display:flex;padding:4px}
 #ts{display:flex;flex:1;flex-direction:row}
 textarea{display:flex;flex:1;background:#000;color:#fff;margin:0 2px;resize:none}
+#bc,#tm{margin-left:16px}
 </style></head><body>
 <div id=hd>
- <button id=b0 title='ctrl-enter'>eval</button>
+ <button id=ev title='ctrl-enter'>eval</button>
+ <span id=bc>0</span>bytes
+ <span id=tm>0</span>ms
 </div>
 <div id=ts>
  <textarea id=t0 autofocus spellcheck=false></textarea>
