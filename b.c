@@ -17,7 +17,7 @@ S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gs(z));Ez(i>15)fu[i]=An(fb);h(b
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(mR(fs),o);Ec(1);0)
 S A2(cr,/*0*/Co=yo;Ii;P(yts&&(i=fAI(fl,gs(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts&&gs(y)=='o',h(bo);x)
- P(ytS&&yn==1,hc(get(y,0));x)P(ytsS,hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Ln=yn;Au=yx;
+ P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Ln=yn;Au=yx;
  P(u==PRG,i(n-1,r(x,yA[i+1]);h(i==n-2?br:bp))x)
  P(n<2,hc(uR);x)P(n==3&&(utu||u==av0),r(x,yz);l(x,y,yy))
  P(n>3&&u==cv('$'),n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);Az=fb;

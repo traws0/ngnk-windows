@@ -15,7 +15,7 @@ f({x,"t",(_y),y," (",x,"t",(_y),"||",x,"t",y,")"};v;"CHILDSMZ")
 f({x,"tmMA (",x,"tmM||",x,"tA)"};v)
 f({x,"tt (",x,"t>tm)"};v)
 f({x,"tT (",x,"t<tM)"};v)
-f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACHILDSMmchildsopqruvwTtZz")
+f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACHILDSMmchildsopqruvwTtZz",("zZ";"cC";"iI";"hH";"lL";"dD";"sS";"mMA"))
 f({"N",x,"(r) N1(",x,",r)"};v)
 f'{x,y," ",x," ",y},/:":"\'" "\"C:bcdknotv HIL:ijkmnv D:dv A:xyzu O:ACV";
 f({"E",x,"(a...) E_(",x,",a)"};"cdilnoprstvz") /errors
