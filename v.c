@@ -31,7 +31,7 @@ A1(gL,P(xtlL,x)Xt(gt(x,gL))XD(Au=aL(xn);m2(x,cDL(xC,uC,un);u))x=N(gI(x));Au=aL(x
 A1(gD,P(xtdD,x)Xt(gt(x,gD))x=N(gL(x));Au=aD(xn);m2(x,cLD(xC,uC,un);u))
 A1(gS,P(xtsS,x)XC(x=str0(x);x(as(syP(xC))))Et(!xtc,x)as(gc(x)))
 TY(ct)ct={[tA]=blw,[tC]=gC,[tH]=gH,[tI]=gI,[tL]=gL,[tD]=gD};
-A2(cst,P(ytmMA,eac(cv('$'),A(x,y),2))P(xtil&&ytC,K("{y@(!x)+(x<0)*#y}",x,y))
+A2(cst,P(xtS||ytmMA,eac(cv('$'),A(x,y),2))P(xtil&&ytC,K("{y@(!x)+(x<0)*#y}",x,y))
  Xs(SF(x,y,"``s`c`h`i`l`d",gS,gS,gC,gH,gI,gL,gD))En(1,x,y);0)
 A1(sqz,P(!xtA||!xn,x)Au=aA0;i(xn,uq(mR(xa)))x(u))
 A1(blw,XA(x)Xt(a1(x))Et(xtm,x)Ln=len_(x);Au=aA(n);i(n,ua=get(x,i))x(u))
