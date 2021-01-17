@@ -14,7 +14,7 @@ S A0(pD,Ax=aD0;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),B)s++)x)
 S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c)c=*++s;x)
 S C ph()_(Cc=*s;dgt(c)?c-'0':c3('a',c,'f')?c+10-'a':16)
 S A0(p0x,Ax=aC0;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
-S A ps()_(C*t=s,c=*s;Y(c&128,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||si("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))
+S A0(ps,C*t=s,c=*s;Y(c&128,W((c=*++s)>>6==2))EY(c==':',W(ldg(c=*++s)||si("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))
 S A pS(Cc)_(Ax=aS0;W(1,Ay=c-'`'||*s-'"'?ps():pC();y=str0(y);x=y(apv(x,(I[]){syP(yC)}));P(*s-c,x)++s)0)
 S A lam(Ck,Ax,Ay,Az)_(AK(k,atnv(tA,5,A(x,y,au0,z,au0)))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];Y(ytA&&yn>2,Az=yx;Y(z==av0||ztu,xq(au0)))x) //if last expr is assignment, make it return ::
