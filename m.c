@@ -3,7 +3,7 @@
 #include<sys/syscall.h>
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-2]
-S A mx[40];A glb,ce[tn],cn[tn],ci[3][5];L mu;S I ml;SN A oom()_(write(1,"oom\n",4);exit(1);0)
+S A mx[40];A glb,ce[tn],cn[tn],ci[4][5];L mu;S I ml;SN A oom()_(write(1,"oom\n",4);exit(1);0)
 S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);AB(b,x))Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())x=(A)(p+ZA))
@@ -33,8 +33,9 @@ A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',
 V init(){ce[tA]=aA(0);ce[tC]=aC(0);ce[tL]=aL(0);ce[tD]=aD(0);ce[tS]=aS(0);ce[tm]=am(aS0,aA0);
  glb=aa0();cn[tA]=ce[tA];cn[tC]=cn[tc]=ac(32);cn[tH]=cn[th]=ah(NH);
  cn[tI]=cn[ti]=ai(NI);cn[tL]=cn[tl]=al(NL);cn[tD]=cn[td]=ad(ND);cn[tS]=cn[ts]=as(0);i(tn-to,cn[to+i]=au0)
- ci[0][0]=ai(0);ci[0][1]=ai(1);ci[0][2]=ai(WI);ci[0][3]=ai(-WI);ci[0][4]=ai(NI);
- S L l[]={0,1,WL,-WL,NL};i(5,ci[1][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};i(5,ci[2][i]=ad(d[i]))}
+ ci[0][0]=ah(0);ci[0][1]=ah(1);ci[0][2]=ah(WH);ci[0][3]=ah(-WH);ci[0][4]=ah(NH);
+ ci[1][0]=ai(0);ci[1][1]=ai(1);ci[1][2]=ai(WI);ci[1][3]=ai(-WI);ci[1][4]=ai(NI);
+ S L l[]={0,1,WL,-WL,NL};i(5,ci[2][i]=al(l[i]))S Dd[]={0,1,WD,-WD,ND};i(5,ci[3][i]=ad(d[i]))}
 I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 
 #ifndef shared
