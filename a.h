@@ -124,8 +124,8 @@ S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
 S A ah(Hv)_(AT(th,(UH)v)) S H gh (Ax)_(Q(xth);(UH)x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
 S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xth||xtc);(I)x)
-S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(XP((I)x)*xL)S L gl(Ax)_(L r=gl_(x);mr(x);r)
-S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;mr(x);v)
+S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(XP((I)x)*xL)S L gl(Ax)_(L r=gl_(x);x(0);r)
+S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
@@ -153,8 +153,8 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #undef h
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
 #define N(r)      N_(r,)
-#define N1(x,r)   N_(r,mr(x))
-#define N2(x,y,r) N_(r,mr(x);mr(y))
+#define N1(x,r)   N_(r,x(0))
+#define N2(x,y,r) N_(r,x(y(0)))
 #define SF(x,y,s,f...) ({Li=gl(K(s"?",x));Ed(i<0,y);CH(i,&f)(y);})
 
 #define ov(x) ov_(#x":",(L)(x))

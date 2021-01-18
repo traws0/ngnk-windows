@@ -18,7 +18,7 @@ A2(cat,P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y
  Y(xt-yt,Ct=max(xt,yt);A1*f=ct[t*(tC<xt+yt-t&&t<tD)];x=Ny(f(x));y=Nx(f(y)))
  L w=ZT[xt],m=xn,n=yn;Au;
  Y(Ar(x)==1&&ZA+(m+n)*w<=1<<Ab(x),u=AN(m+n,x))
- E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(Ar(x)==1,mr(AN(0,x)))E(mRa(x);mr(x)))E(mr(x)))
+ E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(Ar(x)==1,AN(0,x))E(mRa(x)))x(0))
  mc(uC+m*w,yC,n*w);Y(ytA,mRa(y))y(u))
 A apv(Ax,OV*v)_(Q(xtT);Ln=xn,w=ZT[xt];
  Y(Ar(x)==1&&ZA+w+n*w<=1ll<<Ab(x),x=AN(n+1,x))
