@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/161673/sort-spelled-out-serial-numbers/161735#161735
-f:{x@<"tfsen"?x}
+f:{x@<"tfsen"?/:/:x}
 \l 0.k
 t[(("three";"one";"four");("one";"five";"nine");("two";"six";"five");("three";"five";"eight"))
   (("one";"five";"nine");("two";"six";"five");("three";"one";"four");("three";"five";"eight"))]
