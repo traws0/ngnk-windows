@@ -120,12 +120,6 @@ extern A glb,ce[],cn[],ci[4][5];extern OC vc[];extern OV*vf[],*arf[4][11][8];ext
 #define h(T) S A a##T(Ln)_(atn(t##T,n))
  h(A)h(C)h(H)h(S)h(I)h(L)h(D)
 #undef h
-#define aA0 mR(ce[tA])
-#define aC0 mR(ce[tC])
-#define aL0 mR(ce[tL])
-#define aD0 mR(ce[tD])
-#define aS0 mR(ce[tS])
-#define am0 mR(ce[tm])
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);(C)x)
 S A ah(Hv)_(AT(th,(UH)v)) S H gh (Ax)_(Q(xth);(UH)x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);(I)x)
