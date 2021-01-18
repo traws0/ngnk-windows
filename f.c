@@ -22,4 +22,4 @@ A2(fnd,
  XA(Au=aL(yn);i(un,Az=get(y,i);ul=NINL(fAA(x,z));z(0))x(y(u)))
  YA(ear(cv('?'),A(x,y),2))
  P(xtZ&&ytZ,N(sup(&x,&y));Au=aL(yn);TY(fC)*f=CH(Zt[xt],&fC,fH,fI,fL);i(un,ul=NINL(f(xC,xn,yC+i*ZT[xt])))x(y(u)))
- K("{$[#y;(*&x~\\:)'y;!0]}",x,y))
+ K("{$[#x:(*&x~\\:)'y;x;!0]}",x,y))
