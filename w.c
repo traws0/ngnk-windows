@@ -4,22 +4,22 @@ S AX(enc,P(n>1,ern(n,a))XiI(x=gL(xR);x(enc(x,a,n)))P(!xtlL,etn(n,a))
  Xt(UL v=gl_(x),r=0,m=0,b=1;i(yn,UL w=yl;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));x(enc(x,&y,1)))
  P(!xn,y(aA0))Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);i(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=*xL;ux=y;Y(m,i(yn,yl%=m))u)
-S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xC;L l=len_(x);El(!l,y)
- Au=aA0;C*p=yC,*q=yC,*q2=yC+yn,*q1=q2+1-len_(x);W(q<q1,C m=1;i(l,m&=s[i]==q[i])Y(m,uq(aCm(p,q));p=q+=l)E(q++))
+S AX(spl,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytC,y)C*s=xtc?(V*)&x:xC;L l=xN;El(!l,y)
+ Au=aA0;C*p=yC,*q=yC,*q2=yC+yn,*q1=q2+1-xN;W(q<q1,C m=1;i(l,m&=s[i]==q[i])Y(m,uq(aCm(p,q));p=q+=l)E(q++))
  Y(x-ac(10)||p<q2,uq(aCm(p,q2)))y(u))
-S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytA,y)C*s=xtc?(V*)&x:xC;Lm=len_(x),k=yn,l=m*(k-!!k);
- i(k,Az=ya;Et(!ztcC,y)l+=len_(z))Au=aC(l);C*p=uC;i(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
+S AX(join,Q(xtcC);P(n>1,ern(n,a))Ay=*a;Et(!ytA,y)C*s=xtc?(V*)&x:xC;Lm=xN,k=yn,l=m*(k-!!k);
+ i(k,Az=ya;Et(!ztcC,y)l+=zN)Au=aC(l);C*p=uC;i(k-1,Az=ya;Y(ztc,*p++=gc(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
  Y(k,Az=yA[k-1];Y(ztc,*p=gc(z))E(mc(p,zC,zn)))y(u))
-A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;x(0))x)I b=xtA&&Ar(x)==1;Ln=len_(x);P(!n,x)Au=aA0;
+A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;x(0))x)I b=xtA&&Ar(x)==1;Ln=xN;P(!n,x)Au=aA0;
  i(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))u=u(0);B)uq(y))Y(b,x=AN(0,x))x(u))
-S L cfm(OA*a/*0*/,Ln)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,L l=len_(x);P(m>=0&&m-l,-2)m=l))m)
+S L cfm(OA*a/*0*/,Ln)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,L l=xN;P(m>=0&&m-l,-2)m=l))m)
 S A2(bin,K("{-1i+/~x>\\:y}",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
 S AX(eacm,Az=aS0,b[8];i(n,Ay=a[i];Y(ytm,z=cat(z,mR(yx))))z=unq(z);
  i(n,Ay=b[i]=a[i];Y(ytm,A u=kv(&y);uq(id_(x,u));b[i]=ap1(u,fil(ai(An(y)),fnd(y,zR)))))Au=eac(x,b,n);u?am(z,u):z(u))
 AX(eac,P(xtz,n>1?ern(n,a):win(xR,*a))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8];Ct[8];Lm=-1;
- i(n,Ay=b[i]=a[i];Ym(eacm(x,a,n))t[i]=ytP?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=len_(y);P(m>=0&&m-l,eln(n,a))m=l))
+ i(n,Ay=b[i]=a[i];Ym(eacm(x,a,n))t[i]=ytP?0:ytt?1:ytA?2+(Ar(y)>1):4;Y(t[i]>1,L l=yN;P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))i(n,Y(t[i]==1,Ar(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
- Au=0;Y(!m,Y(x==cu('#'),u=aL0)EY(n==2&&xtv&&xv<11,u=a[!len_(a[1])];uR)E(u=aA0))
+ Au=0;Y(!m,Y(x==cu('#'),u=aL0)EY(n==2&&xtv&&xv<11,u=a[!_N(a[1])];uR)E(u=aA0))
  j(m,i(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))Az=app(x,b,n);Y(!j,u=sim(z)?AN(0,atn(tT(zt),m)):aA0)
       Y(!z,u=u(0);i(n,Ay=a[i];Y(t[i]==1,Ar(y)-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1)))B)uq(z))
  i(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)

@@ -39,7 +39,7 @@ S A1(vm,/*0*/W(1,Cb=*c++;
         EY(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(mR(*v=Ny(dm1(A(x,yR,av(*c++),z),4))),y)))
         EY(b==bM,Ax=q()         ,y=q(),z=*s;       *s=au0;N(*s=apn(      Ny(dmd(A(x,yR,av(*c++),z),4)) ,y)))
         EY(b==bl,Cn=*c++;s+=n;p(sqz(atnv(tA,n,s-n))))
-        EY(b==bL,Cn=*c++;Ax=*s;El(!xtt&&len_(x)-n)i(n,p(get(x,n-1-i))))
+        EY(b==bL,Cn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
         EY(b==ba||b==bP,Cn=*c++;Au=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
         EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(mR(l[1])))EY(b==bp,mr(q()))E(Q(b==br);_(*s)))
  EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(x=x(*v=mR(*s))))
