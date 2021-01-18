@@ -59,7 +59,7 @@ X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];S4(b,[0,0,0,0x100000,1,0,0,0,0,
 X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
-if(location.hash==='#r'){wa(_=>K.init()) //repl mode
+if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>K.init()) //repl mode
  rdy(_=>{t0.value=BA+PR;taout=t0;let ha=[''],hi=0 //ha,hi:history array and index
   t0.onkeydown=x=>{const k=kc(x)
    if(k===38||k===40){let s=t0.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
@@ -74,6 +74,6 @@ else{ //editor|output mode
   const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
   const t=Date.now();try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
  rdy(_=>{
-  t1.style.display='';t0.value=u8d(hfd(atob(location.hash._(2))));ev.onclick=run;run()
+  t0.value=u8d(hfd(atob(location.hash._(2))));ev.onclick=run;run()
   t0.onkeydown=x=>{const k=kc(x);if(k===1013){location.hash='#c'+btoa(hfe(u8e(t0.value)));run();return!1}}
   t0.onkeyup=thr(ubc,1000)})}
