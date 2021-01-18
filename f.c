@@ -17,6 +17,7 @@ S I sup(A*p,A*q)_(Q(xtzZ&&ytzZ);Ax=*p,y=*q;A1*f=CH(max(tT(xt),tT(yt))-tH,&gH,gI,
 S I fnd1(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i))NI)
 A2(fnd,Xs(SF(x,y,"``j`hex`aes",des,jsr,unh,aes1))Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Xz(Yz(rnd(gl(gL(x)),gl(y)))Yc(K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))Yd(mul(sub(rndD(gl(gL(x))),ad(1)),y))K("{y@x?#y}",x,y))
- Ymt(al(NNL(fnd1(x,y))))
+ Ymt(fir(N(fnd(x,enl(y)))))
+ P(xtS&&ytS,fnd(AT(tI,x),AT(tI,y)))
  P(xtZ&&ytZ,N(sup(&x,&y));Au=aL(yn);TY(fC)*f=CH(Zt[xt],&fC,fH,fI,fL);i(un,ul=NNL(f(xC,xn,yC+i*ZT[xt])))x(y(u)))
  Au=aL(yN);i(un,Az=get(y,i);ul=NNL(fnd1(x,z));z(0))x(y(u)))
