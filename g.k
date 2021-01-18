@@ -15,9 +15,11 @@ f({x,"t",y," (",x,"t==t",y,")"};v;"ACHILDSMmchildsopqruvw") /of type?
 f({x,"t",y," _",y,"(",x,"t)"};v;"PFR") /of pseudotype?
 f({x,"tz c3(th,",x,"t,tl)"};v)         /integral atom?
 f({x,"tZ c3(tH,",x,"t,tL)"};v)         /integral list?
-f({x,"t",(_y),y," (",x,"t",(_y),"||",x,"t",y,")"};v;"CHILDSMZ") /atom|list of type?
+f({x,"t",(_y),y," (",x,"t",(_y),"||",x,"t",y,")"};v;"CHILDSMZ") /atom, list of type?
+f({x,"tmt (",x,"tt||",x,"tm)"};v)      /atom|dict of type?
+f({x,"tMT (",x,"tT||",x,"tM)"};v)      /list|tbl  of type?
 f({x,"tmMA (",x,"tmM||",x,"tA)"};v)    /container?
-f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACHILDSMmchildsopqruvwTtZzPFR",("zZ";"cC";"iI";"hH";"lL";"dD";"sS";"mMA"))
+f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACHILDSMmchildsopqruvwTtZzPFR"," "\"zZ cC iI hH lL dD sS mt MT mMA")
 f'{x,y," ",x," ",y},/:":"\'" "\"C:bcdknotv HIL:ijkmnv D:dv A:xyzu O:ACV"; /c type+var
 f({"E",x,"(a...) E_(",x,",a)"};"cdilnoprstvz") /errors
 f({"N",x,"(r) N1(",x,",r)"};v)         /error pass-through
