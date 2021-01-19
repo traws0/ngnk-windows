@@ -28,7 +28,7 @@ typedef void V;typedef char C;typedef int I;typedef unsigned short UH;typedef un
 
 S C*sk(C*s,C c)_(W(*s==c,s++)s)S C*su(C*s,UL x)_(Y(x>9,s=su(s,x/10))*s++='0'+x%10;s)
 S I die(O C*s)_(I e=errno;wrZ(1,"ERR: ");wr(1,s,mn(s));wrZ(1," -> ");s=strerror(e);wr(1,s,mn(s));wrZ(1,"\n");exit(e);0)
-S O C*m[][2]={{"html","text/html"},{"js","application/javascript"},{"png","image/png"},{"wasm","application/wasm"}};
+S O C*m[][2]={{"html","text/html"},{"js","application/javascript"},{"k","text/plain"},{"wasm","application/wasm"}};
 S O C*mime(O C*x)_(i(ZZ(m),P(!strcmp(x,*m[i]),m[i][1]))(V*)0)
 S V r404(I f){wrZ(f,"HTTP/1.1 404 Not Found\nContent-Length:4\nConnection:close\nContent-Type:text/html\n\n404\n");}
 S V ap(C**p,O C*s){I n=mn(s);mc(*p,s,n);*p+=n;}

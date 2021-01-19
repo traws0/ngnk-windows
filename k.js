@@ -68,9 +68,11 @@ if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>K.init()) //r
     ha[hi]=s._(p,q);I=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?I+N:N);
     try{K.rep()}catch(x){t0.disabled=1;error(x)};ap(PR);return!1}}})}
 else{ //editor|output mode
+ let gk
  const ubc=_=>{bc.textContent=t0.value.n} //update byte count
- const run=_=>{wa(_=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
-  const s=t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);t1.value=''
+ const run=async _=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
+  if(!gk)gk=await(await fetch('golf.k')).text()
+  const s=gk+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);t1.value=''
   const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
   const t=Date.now();try{K.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
  rdy(_=>{t0.value=u8d(hfd(atob(location.hash._(2))));ev.onclick=run;run()
