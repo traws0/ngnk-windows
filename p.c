@@ -1,10 +1,10 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 S I ltr(Cc)_(c3('a',c|32,'z'))S I ldg(Cc)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S A pb(A,C);
 I si(OC*s,I c)_(OC*t=s;W(*t&&*t-c,t++)t-s)S A1(p1,xn-1?x:fir(x))S D p10(In)_(Dd=1;i(n,d*=10)d)
-L pu(C**p)_(C*s=*p;Lv=0;Cc=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(I m=**p=='-';*p+=m;(1-2*m)*pu(p))
+L pu(C**p)_(C*s=*p;Lv=0;Cc=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(Im=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(dgt(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
-S D pd(C**p)_(I m=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
+S D pd(C**p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S C*s0,*s,na;
 S A pLm(L*m)_(Ax=aL0;Cc;
  W(1,Lv=pl(&s);c=*s;Y(!v&&c=='N',v=NL;c=*++s)E(*m=min(*m,v);m[1]=max(m[1],v))x=apv(x,&v);Y(c-32||!num(s+1),B)c=*++s)x)
