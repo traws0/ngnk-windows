@@ -4,7 +4,7 @@ k:_%#t;n:#*t                 /k:matrix size(in tiles),n:tile size(in pixels)
 o4:3(+|:)\;o8:{,/+o4'(x;+x)} /orientations
 b:{2/+*'o8 x}'t              /tile borders as ints
 e:1=#'=,/b                   /dict: tile border -> is edge
-*/i@&4=+/e@+b                /part1
+*/i@&4=+/e@/:+b                /part1
 
 row:+(k-1){(j;O):x;j:*^[;j]@&|/u:+b[j;8!4+O]=b;O:*&u@'j;(j;O)}\
 c:row j,*&e b@j:*&4=+/e@/:+b                 /first column: tile borders and orientations
