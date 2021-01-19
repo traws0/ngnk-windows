@@ -21,10 +21,10 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(e
 #undef h
 
 #define ht(v,t,T,tT,Tt,TT,R)\
- SN I v##t##t(T*RE a,T*RE b,R*r,UL n)_(*r=v##t(*a,*b);0)\
- SN I v##t##T(T*RE a,T*RE b,R*r,UL n)tT\
- SN I v##T##t(T*RE a,T*RE b,R*r,UL n)Tt\
- SN I v##T##T(T*RE a,T*RE b,R*r,UL n)TT\
+ SN I v##t##t(  T*RE a,T*RE b,R*RE r,UL n)_(*r=v##t(*a,*b);0)\
+ SN I v##t##T(  T*RE a,T*RE b,R*RE r,UL n)tT\
+ SN I v##T##t(  T*RE a,T*RE b,R*RE r,UL n)Tt\
+ SN I v##T##T(  T*RE a,T*RE b,R*RE r,UL n)TT\
  SN I v##rdc##T(R*RE a,T*RE b,       UL n)_(R c=*a;i(n      ,     c=v##t(c,b[i]))       *a=c;0)\
  SN I v##scn##T(R*RE a,T*RE b,R*RE r,UL n)_(R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))            0)\
  SN I v##eap##T(T*RE a,T*RE b,R*RE r,UL n)_(T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)\
