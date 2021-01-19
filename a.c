@@ -48,6 +48,8 @@ v(mxm,tT(mxmh),s(mxmhH),TT(mxmh),tT(mxmi),s(mxmiI),TT(mxmi),tT(mxml),s(mxmlL),TT
 v(ltn,tT(ltnh),Tt(ltnh),TT(ltnh),tT(ltni),Tt(ltni),TT(ltni),tT(ltnl),Tt(ltnl),TT(ltnl),tT(ltnd),Tt(ltnd),TT(ltnd),L,I) // < 8
 v(gtn,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,I) // > 9
 v(eql,tT(eqlh),s(eqlhH),TT(eqlh),tT(eqli),s(eqliI),TT(eqli),tT(eqll),s(eqllL),TT(eqll),tT(eqld),s(eqldD),TT(eqld),L,I) // = 10
+#undef Tt
+#undef tT
 
 #define  h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
 #define h0(v,t,T) {0      ,0      ,0      ,0      ,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
@@ -56,8 +58,8 @@ OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
-S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))
- A1*g=xtdD||ytdD?gD:xtlL||ytlL?gL:xtiI||ytiI?gI:gH;x=Ny(g(x));y=Nx(g(y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
+I sup(A*p,A*q)_(Ax=*p,y=*q;A1*f=CH(max(tH,min(tD,max(tT(xt),tT(yt))))-tH,&gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));1)
+S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
  Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
  P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))

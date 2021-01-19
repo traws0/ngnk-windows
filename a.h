@@ -112,7 +112,7 @@ A aCm(OC*,OC*),aCn(OC*,L),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,L),atnv(C,L,OV*),ca
 V init(),mrn(I,OA*),tilH(V*,L),tilI(V*,L),tilL(V*,L);
 C*syp(I*),art(I,C);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpH(A*,H),fpI(A*,I),fpL(A*,L),
- si(OC*,I),eS(A,I),mtc_(A,A),syP(OC*);
+ si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A);
 extern A glb,ce[],cn[],ci[4][5];extern OC vc[];extern OV*vf[],*arf[4][11][8];extern L mu;extern A1*ct[];
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
