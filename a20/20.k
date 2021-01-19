@@ -7,7 +7,7 @@ e:1=#'=,/b                   /dict: tile border -> is edge
 */i@&4=+/e@+b                /part1
 
 row:+(k-1){(j;O):x;j:*^[;j]@&|/u:+b[j;8!4+O]=b;O:*&u@'j;(j;O)}\
-c:row j,*&e b@j:*&4=+/e@+b                   /first column: tile borders and orientations
+c:row j,*&e b@j:*&4=+/e@/:+b                 /first column: tile borders and orientations
 r:+row'{$[e b[x][8!y+2];x,8!y+2;x,8!y-2]}'/c /whole matrix: tile borders and orientations
 r:((|+:;+:)@(2#k)#2!+/!2#k)@''{o8[t x]y}''/r /".#"@,/,'/' 9,''' 9,''r /orient tiles
 r:,/,'/'(1_-1_1_'-1_')''r                    /trim tile borders, glue tiles together

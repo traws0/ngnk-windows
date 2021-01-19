@@ -1,7 +1,7 @@
 #!../k
 a:0:"i/14"
 i:`i$&b:"a"=a@'1
-m:`i$("01X"?-36#+a i)@\:&-1i+1_-':i,`i$#a /masks
+m:`i$("01X"?/:-36#+a i)@\:&-1i+1_-':i,`i$#a /masks
 (M;v):.'" "/'+4 3_'/:"]"\'a@&~b /mem addresses and values
 p:`i$&((2*)\1)k:+/X:2=m
 O:`i${!x#2}'!1+|/k /odometers
