@@ -13,8 +13,10 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
-wa=f=>fetch('k.wasm').then(x=>x.arrayBuffer()).then(x=>WebAssembly.instantiate(x,{env}))
-                     .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()}),
+wa=f=>fetch('k.wasm')
+ .then(x=>x.arrayBuffer())
+ .then(x=>WebAssembly.instantiate(x,{env}))
+ .then(x=>{K=x.instance.exports;upd();H=K.__heap_base;f()}),
 u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0))))
 hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
  [[[187,[153,154]],[132,[131,133]]],[[[141,142],[144,145]],[193,146]]]],136],63],[72,[[[[[[233,160],[170,171]],[217,
@@ -70,7 +72,7 @@ if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>K.init()) //r
 else{ //editor|output mode
  let gk
  const ubc=_=>{bc.textContent=t0.value.n} //update byte count
- const run=async _=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
+ const run=_=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
   if(!gk)gk=await(await fetch('golf.k')).text()
   const s=gk+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);t1.value=''
   const h=H;H+=te.encodeInto('k\0a.k\0',M(H,8)).written;const a=H;S4(H,[h,h+2,0,0]);H+=16;
