@@ -7,9 +7,9 @@ MD= >/dev/null mkdir -pv
 t:k #test
 	@+$(MAKE) -sC t && g/0.sh
 c: #clean
-	@rm -rfv k libk.so k.wasm k32 o t/t web/web
-w:k.wasm #wasm web server
-	@+$(MAKE) -sC web && echo 'starting web server..' && web/web
+	@rm -rfv k libk.so web/k.wasm k32 o t/t web/web
+w:web/k.wasm #wasm web server
+	@+$(MAKE) -sC web && echo 'starting web server..' && cd web && ./web
 .PHONY: t c w
 
 o/%.o:%.c *.h makefile
@@ -30,7 +30,7 @@ libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 CW=clang-10 $(F) -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include
 o/wasm/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o/wasm && $(CW) -c $< -o $@
-k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c)) # /usr/lib/llvm-10/bin/wasm-ld should be on $PATH
+web/k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c)) # /usr/lib/llvm-10/bin/wasm-ld should be on $PATH
 	@echo '$@ ' && $(CW) $^ -o $@ -Wl,--no-entry,--export=main,--export=init,--export=rep,--export=__heap_base,--initial-memory=33554432,--allow-undefined
 
 #32bit
