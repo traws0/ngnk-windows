@@ -8,8 +8,6 @@ M=(p,n)=>U8(app.memory.buffer).sub(p,p+n),s4=(p,x)=>mem.setUint32(p,x,1),S4=(p,a
 g1=p=>mem.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
 rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b},
 popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},
-X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
- try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r},
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
@@ -43,7 +41,9 @@ let app,mem,heap,inp='',strace=0,out=t1,kwasm
   y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
 hfi(hft,'')
 
-const E=(s,b=1)=>{if(b)throw Error(s)},BADF=(b=1)=>E('BADF',b)
+const E=(s,b=1)=>{if(b)throw Error(s)},BADF=(b=1)=>E('BADF',b),
+X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
+ try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
 X('mmap',(p,n,_,_1,f,o)=>{
  if(!p){heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>>16)+1);upd();p=heap-n}
  if(f>=0){f=fd[f];BADF(!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
