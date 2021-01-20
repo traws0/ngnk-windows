@@ -1,5 +1,4 @@
-'use strict'
-const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n',
+'use strict';const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n',
 PR=' ',N='\n',{log,error}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
 C=String.fromCharCode,U8=x=>new Uint8Array(x),
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{out.value+=s;cur(out,out.value.n)},
@@ -72,19 +71,17 @@ if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>app.init()) /
     ha[hi]=s._(p,q);inp=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?inp+N:N);
     try{app.rep()}catch(x){t0.disabled=1;error(x)};ap(PR);return!1}}})}
 else{ //editor|output mode
- let gk
  const ubc=_=>{bc.textContent=t0.value.n} //update byte count
  rdy(_=>{
   t0.value=u8d(hfd(atob(location.hash._(2))))
-  ev.onclick=_=>{
-   wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
-   if(!gk)gk=await(await fetch('golf.k')).text()
-   const s=gk+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);out.value=''
+  ev.onclick=_=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
+   fs['golf.k']=fs['golf.k']||te.encode(await(await fetch('golf.k')).text())
+   const s='\\l golf.k\n'+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);out.value=''
    const h=heap;heap+=te.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
    const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
-  cgcc.onclick=_=>{const s=t0.value,h='ngn-'+hex8(hash(s))
+  cg.onclick=_=>{const s=t0.value,h='ngn-'+hex8(hash(s))
    out.value=`# [K (ngn/k)], ${s.length} bytes\n    ${s.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
     `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${btoa(hfe(u8e(t0.value)))}\n`}
-  t0.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cgcc.onclick();return!1}}
+  t0.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
   t0.onkeyup=thr(ubc,1000)
   ev.onclick()})}
