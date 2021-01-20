@@ -1,3 +1,4 @@
+'use strict'
 const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n',
 PR=' ',N='\n',{log,error}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
 C=String.fromCharCode,U8=x=>new Uint8Array(x),
@@ -6,16 +7,18 @@ skPR=i=>i+PR.n*(t0.value._(i,i+PR.n)===PR),upd=_=>mem=new DataView(app.memory.bu
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 M=(p,n)=>U8(app.memory.buffer).sub(p,p+n),s4=(p,x)=>mem.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
 g1=p=>mem.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
-rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b}
+rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b},
 popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},
 X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
- try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
+ try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r},
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
 wa=async f=>{if(!kwasm)kwasm=await(await fetch('k.wasm')).arrayBuffer()
  app=(await WebAssembly.instantiate(kwasm,{env})).instance.exports;upd();heap=app.__heap_base;f()},
-u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0))))
+u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0)))),
+hash=x=>x.split('').reduce((x,y)=>0|(x<<5)-x+y.ch(0),0),
+hex8=x=>('0000000'+x.toString(16))._(-8),
 hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
  [[[187,[153,154]],[132,[131,133]]],[[[141,142],[144,145]],[193,146]]]],136],63],[72,[[[[[[233,160],[170,171]],[217,
  [254,2]]],184],[[[[177,181],178],218],[[[212,213],[3,4]],8]]],[[[[190,152],[[237,149],235]],[[155,156],[[134,139],
@@ -31,7 +34,7 @@ hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[
  [[250,219],[209,192]]],[[228,[205,162]],113]],69]],120]]]]]],32]],
 hfc=Array(256),hfi=(x,s)=>typeof x==='number'?hfc[x]=s:hfi(x[0],s+0)+hfi(x[1],s+1),
 hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.ch(i)];r+=10000000;r=r._(0,r.n-r.n%8);
-        return r.replace(/.{8}/g,x=>C('0b'+x))}
+        return r.replace(/.{8}/g,x=>C('0b'+x))},
 hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.ch(0)).toString(2)._(1)).replace(/10*$/,'')
         let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
 let app,mem,heap,inp='',strace=0,out=t1,kwasm
@@ -71,11 +74,17 @@ if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>app.init()) /
 else{ //editor|output mode
  let gk
  const ubc=_=>{bc.textContent=t0.value.n} //update byte count
- const run=_=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
-  if(!gk)gk=await(await fetch('golf.k')).text()
-  const s=gk+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);t1.value=''
-  const h=heap;heap+=te.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
-  const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
- rdy(_=>{t0.value=u8d(hfd(atob(location.hash._(2))));ev.onclick=run;run()
-         t0.onkeydown=x=>{const k=kc(x);if(k===1013){run();return!1}}
-         t0.onkeyup=thr(ubc,1000)})}
+ rdy(_=>{
+  t0.value=u8d(hfd(atob(location.hash._(2))))
+  ev.onclick=_=>{
+   wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
+   if(!gk)gk=await(await fetch('golf.k')).text()
+   const s=gk+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);out.value=''
+   const h=heap;heap+=te.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
+   const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
+  cgcc.onclick=_=>{const s=t0.value,h='ngn-'+hex8(hash(s))
+   out.value=`# [K (ngn/k)], ${s.length} bytes\n    ${s.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
+    `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${btoa(hfe(u8e(t0.value)))}\n`}
+  t0.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cgcc.onclick();return!1}}
+  t0.onkeyup=thr(ubc,1000)
+  ev.onclick()})}
