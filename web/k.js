@@ -1,6 +1,6 @@
 'use strict';const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n',
 PR=' ',N='\n',{log,error}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
-C=String.fromCharCode,U8=x=>new Uint8Array(x),
+chr=String.fromCharCode,U8=x=>new Uint8Array(x),
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{out.value+=s;cur(out,out.value.n)},
 skPR=i=>i+PR.n*(t0.value._(i,i+PR.n)===PR),upd=_=>mem=new DataView(app.memory.buffer),
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
@@ -15,7 +15,7 @@ rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventLis
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
 wa=async f=>{if(!kwasm)kwasm=await(await fetch('k.wasm')).arrayBuffer()
  app=(await WebAssembly.instantiate(kwasm,{env})).instance.exports;upd();heap=app.__heap_base;f()},
-u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0)))),
+u8e=x=>chr(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0)))),
 hash=x=>x.split('').reduce((x,y)=>0|(x<<5)-x+y.ch(0),0),
 hex8=x=>('0000000'+x.toString(16))._(-8),
 hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
@@ -33,7 +33,7 @@ hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[
  [[250,219],[209,192]]],[[228,[205,162]],113]],69]],120]]]]]],32]],
 hfc=Array(256),hfi=(x,s)=>typeof x==='number'?hfc[x]=s:hfi(x[0],s+0)+hfi(x[1],s+1),
 hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.ch(i)];r+=10000000;r=r._(0,r.n-r.n%8);
-        return r.replace(/.{8}/g,x=>C('0b'+x))},
+        return r.replace(/.{8}/g,x=>chr('0b'+x))},
 hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.ch(0)).toString(2)._(1)).replace(/10*$/,'')
         let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
 let app,mem,heap,inp='',strace=0,out=t1,kwasm
