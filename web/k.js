@@ -6,7 +6,7 @@ skPR=i=>i+PR.n*(t0.value._(i,i+PR.n)===PR),upd=_=>mem=new DataView(app.memory.bu
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 M=(p,n)=>U8(app.memory.buffer).sub(p,p+n),s4=(p,x)=>mem.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
 g1=p=>mem.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
-rsz=(a,n)=>{let m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b},
+rsz=(a,n)=>{const m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b},
 popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
@@ -71,7 +71,10 @@ if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>app.init()) /
     ha[hi]=s._(p,q);inp=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?inp+N:N);
     try{app.rep()}catch(x){t0.disabled=1;error(x)};ap(PR);return!1}}})}
 else{ //editor|output mode
- const ubc=_=>{bc.textContent=t0.value.n} //update byte count
+ const ubc=_=>{let s=t0.value,i=s.io('\n\n'),r=[] //update and return byte count
+  if(i>=0){s=s._(0,i);r.push('till empty line')}
+  if(s._(0,2)==='f:'){s=s._(2);r.push('not counting initial "f:"')}
+  bc.textContent=s.n+'bytes'+(r.n?`(${r.join(', ')})`:'');return s.n}
  rdy(_=>{
   t0.value=u8d(hfd(atob(location.hash._(2))))
   ev.onclick=_=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
@@ -80,7 +83,7 @@ else{ //editor|output mode
    const h=heap;heap+=te.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
    const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
   cg.onclick=_=>{const s=t0.value,h='ngn-'+hex8(hash(s))
-   out.value=`# [K (ngn/k)], ${s.length} bytes\n    ${s.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
+   out.value=`# [K (ngn/k)], ${ubc()} bytes\n\n    ${s.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
     `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${btoa(hfe(u8e(s)))}\n`}
   t0.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
   t0.onkeyup=thr(ubc,1000)
