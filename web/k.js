@@ -13,10 +13,8 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
 rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
-wa=f=>fetch('k.wasm')
- .then(x=>x.arrayBuffer())
- .then(x=>WebAssembly.instantiate(x,{env}))
- .then(x=>{app=x.instance.exports;upd();heap=app.__heap_base;f()}),
+wa=async f=>{if(!kwasm)kwasm=await(await fetch('k.wasm')).arrayBuffer()
+ app=(await WebAssembly.instantiate(kwasm,{env})).instance.exports;upd();heap=app.__heap_base;f()},
 u8e=x=>C(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0))))
 hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
  [[[187,[153,154]],[132,[131,133]]],[[[141,142],[144,145]],[193,146]]]],136],63],[72,[[[[[[233,160],[170,171]],[217,
@@ -36,7 +34,7 @@ hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.ch(i)];r+=10000000;r=r._(0,r.n-r
         return r.replace(/.{8}/g,x=>C('0b'+x))}
 hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.ch(0)).toString(2)._(1)).replace(/10*$/,'')
         let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
-let app,mem,heap,inp='',strace=0,out=t1
+let app,mem,heap,inp='',strace=0,out=t1,kwasm
 ;[Array,Uint8Array,String].forEach(x=>{
  Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
  Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach,ch:charCodeAt',
