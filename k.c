@@ -34,8 +34,8 @@ A1(val,XS(Ay=glb;i(xn,Et(!ytm,x)Az=yx,u=yy;Ed(!ztS||!utA,x)Ik=xi;Ij=fAI(z,k);Ev(
 A2(idx,x(idx_(x,y)))
 A2(ap1,x(app(x,&y,1)))
 A2(apn,y=enla(y);Ln=yn;P(!n,y(x))Ez(n>8,x,y)y=mRa(Nx(blw(y)));x(y(app(x,yA,n))))
-S A set(Ax,Li,Ay)_(Q(Ar(x)==1);Y(!xtA&&(!sim(y)||xt-tT(yt)),x=blw(x))
- XA(mr(xa);xa=y;sim(y)?sqz(x):x)xtC?xc=gc(y):xtI?xi=gi(y):xtL?xl=gl(y):xtD?xd=gd(y):xtS?xi=gs(y):0;x)
+S A set(Ax,Li,Ay)_(Q(Ar(x)==1);Y(!xtA&&(!ytQ||xt-tT(yt)),x=blw(x))
+ XA(mr(xa);xa=y;ytQ?sqz(x):x)xtC?xc=gc(y):xtI?xi=gi(y):xtL?xl=gl(y):xtD?xd=gd(y):xtS?xi=gs(y):0;x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&yx,xI[i+1]);Au=yy;Ed(!utA,x)
  yy=j==un?uq(aa0()):mut(u);Q(Ar(yy)==1);*p=(A*)dat(yy)+j;1)
 S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&Ar(y)==1&&ytm&&At(yx)==tS&&At(yy)==tA);Lj=fpI(&yx,*xI);
