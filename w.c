@@ -1,6 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-S AX(enc,P(n>1,ern(n,a))XiI(x=gL(xR);x(enc(x,a,n)))P(!xtlL,etn(n,a))
- Ay=N(gL(*a));Yt(Az=enc(x,A(enl(y)),1);zn?fir(flp(z)):z(aL0))
+S AX(enc,P(n>1,ern(n,a))x=gL(xR);P(!x,mrn(n,a);0)Ay=N(gL(*a));Yt(Az=enc(x,A(enl(y)),1);zn?fir(flp(z)):z(aL0))
  Xt(UL v=gl_(x),r=0,m=0,b=1;i(yn,UL w=yl;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)x=rsh(al(m),al(v));x(enc(x,&y,1)))
  P(!xn,y(aA0))Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);i(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=*xL;ux=y;Y(m,i(yn,yl%=m))u)
