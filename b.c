@@ -31,7 +31,7 @@ S A3(f3,/*0*/P(xtv&&c3(vi('+'),xv,vi('*'))&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(Co=xo;Ln=xn;P(n==2?f2(xx,xy):n==3?f3(xx,xy,xz):0,wrp(val(x)))x=mut(x);i(xn,xa=cf(xa))AO(o,x))x)
 A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=aC0;fm=aC0;fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);y=cf(y);Q(*yA==PRG);
- P(!cr(x,y),mr(xA[5]);x(y(0)))y=y(fb);Q(Ar(y)==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))mr(xA[5]);x)
+ P(!cr(x,y),mr(xA[5]);x(y(0)))y=y(fb);Q(yr==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))mr(xA[5]);x)
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;

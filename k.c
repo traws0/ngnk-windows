@@ -34,11 +34,11 @@ A1(val,XS(Ay=glb;i(xn,Et(!ytm,x)Az=yx,u=yy;Ed(!ztS||!utA,x)Ik=xi;Ij=fAI(z,k);Ev(
 A2(idx,x(idx_(x,y)))
 A2(ap1,x(app(x,&y,1)))
 A2(apn,y=enla(y);Ln=yn;P(!n,y(x))Ez(n>8,x,y)y=mRa(Nx(blw(y)));x(y(app(x,yA,n))))
-S A set(Ax,Li,Ay)_(Q(Ar(x)==1);Y(!xtA&&(!ytQ||xt-tT(yt)),x=blw(x))
+S A set(Ax,Li,Ay)_(Q(xr==1);Y(!xtA&&(!ytQ||xt-tT(yt)),x=blw(x))
  XA(mr(xa);xa=y;ytQ?sqz(x):x)xtC?xc=gc(y):xtI?xi=gi(y):xtL?xl=gl(y):xtD?xd=gd(y):xtS?xi=gs(y):0;x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&yx,xI[i+1]);Au=yy;Ed(!utA,x)
  yy=j==un?uq(aa0()):mut(u);Q(Ar(yy)==1);*p=(A*)dat(yy)+j;1)
-S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&Ar(y)==1&&ytm&&At(yx)==tS&&At(yy)==tA);Lj=fpI(&yx,*xI);
+S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&At(yx)==tS&&At(yy)==tA);Lj=fpI(&yx,*xI);
  Y(j==An(yy),_q(yy,xn>1?aa0():au0))A*p=(A*)dat(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*8);*p=mR(N(f(b,n))))
 AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))

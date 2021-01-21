@@ -2,7 +2,7 @@
 A1(neg,sub(ah(0),x))
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
 R1(not,XF(I r=x==au0;x(ah(r)))eql(x,xtsS?as(0):ac(0)))
-R1(sqr,x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;i(un,ud=__builtin_sqrt(xd))xC==uC?u:x(u))
+R1(sqr,x=N(gD(x));Au=xr-1?atn(xt,xn):x;i(un,ud=__builtin_sqrt(xd))xC==uC?u:x(u))
 R1(nul,eql(x,mR(cn[xt])))
 R1(flr,Xc(fir(flr(enl(x))))XC(Au=aC(xn);m2(x,i(un,uc=xc+32*c3('A',xc,'Z'))u))XzZ(x)
  x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,i(un,ul=xd<0?(L)xd-(xd<(L)xd):(L)xd)u))
@@ -10,7 +10,7 @@ R1(flr,Xc(fir(flr(enl(x))))XC(Au=aC(xn);m2(x,i(un,uc=xc+32*c3('A',xc,'Z'))u))XzZ
 S D sinD(D x)_(S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.32913446369766718e-10,
   -2.33177897192836082e-8,2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
  P(x<0,-sinD(-x))Y(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
-R1(sin,x=N(gD(x));Au=Ar(x)-1?atn(xt,xn):x;i(un,ud=sinD(xd))xC==uC?u:x(u))
+R1(sin,x=N(gD(x));Au=xr-1?atn(xt,xn):x;i(un,ud=sinD(xd))xC==uC?u:x(u))
 
 S L cD(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define hh(v,fh,fi,fl,fd) S H v##h(H x,H y)_(fh) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
@@ -61,8 +61,8 @@ C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD
 I sup(A*p,A*q)_(Ax=*p,y=*q;A1*f=CH(max(tH,min(tD,max(tT(xt),tT(yt))))-tH,&gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));1)
 S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
- Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&Ar(x)==1,m2(y,f(a,b,xC,xn);x))
- P(yt==t&&Ar(y)==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
+ Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&xr==1,m2(y,f(a,b,xC,xn);x))
+ P(yt==t&&yr==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
 A2(dex,mr(x);y)
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
 S A ext(Ax,Ln)_(xtm?enl(x):xtt?rsh(al(n),x):x)
