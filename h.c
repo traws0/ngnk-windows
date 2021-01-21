@@ -11,7 +11,7 @@ A2(rsh,XF(flt(x,y))Ym(Xl(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y,z
   P(xn==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
  Lj=0;x(y(rsh_(y,yn,&j,xL,xn))))
 A1(enl,P(xtQ,XP(Au=atn(tT(xt),1);*uL=x;u)AT(tT(xt),x))Xm(Ay=kv(&x);aM(x,ea1(enl,y)))a1(x))
-A1(enla,xtt||xtm?enl(x):x)
+A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
               Au=eac(cv(','),A(mR(xy),mR(yy)),2);Y(u,u=aM(mR(xx),u))x(y(u)))
