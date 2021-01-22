@@ -1,11 +1,12 @@
 'use strict';const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n',
-PR=' ',N='\n',{log,error}=console,{min,max}=Math,te=new TextEncoder('utf-8'),td=new TextDecoder('utf-8'),
-chr=String.fromCharCode,U8=x=>new Uint8Array(x),
+{log,error}=console,{min,max}=Math,PR=' ',N='\n',
+TE=new TextEncoder,TD=new TextDecoder,te=TE.encode.bind(TE),td=TD.decode.bind(TD),
+U8=x=>new Uint8Array(x),chr=String.fromCharCode,
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{out.value+=s;cur(out,out.value.n)},
 skPR=i=>i+PR.n*(t0.value._(i,i+PR.n)===PR),upd=_=>mem=new DataView(app.memory.buffer),
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 M=(p,n)=>U8(app.memory.buffer).sub(p,p+n),s4=(p,x)=>mem.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
-g1=p=>mem.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td.decode(gb(p)),
+g1=p=>mem.getUint8(p),gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>td(gb(p)),
 rsz=(a,n)=>{const m=a.n,b=new a.constructor(n);b.set(m>n?a.sub(0,n):a,min(m,n));return b},
 popn=a=>{while(a.n&&a[a.n-1]==null)a.pop();return a},
 env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
@@ -13,34 +14,18 @@ rdy=f=>['complete','interactive'].io(document.readyState)<0?document.addEventLis
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}}, //throttle
 wa=async f=>{if(!kwasm)kwasm=await(await fetch('k.wasm')).arrayBuffer()
  app=(await WebAssembly.instantiate(kwasm,{env})).instance.exports;upd();heap=app.__heap_base;f()},
-u8e=x=>chr(...te.encode(x)),u8d=x=>td.decode(U8([...x].map(c=>c.ch(0)))),
-hash=x=>x.split('').reduce((x,y)=>0|(x<<5)-x+y.ch(0),0),
-hex8=x=>('0000000'+x.toString(16))._(-8),
-hft=[[[[[59,52],[[[[66,103],108],97],79]],[[[58,[[[68,[119,78]],39],[[[[[[186,[[179,180],[[214,215],[0,1]]]],
- [[[187,[153,154]],[132,[131,133]]],[[[141,142],[144,145]],[193,146]]]],136],63],[72,[[[[[[233,160],[170,171]],[217,
- [254,2]]],184],[[[[177,181],178],218],[[[212,213],[3,4]],8]]],[[[[190,152],[[237,149],235]],[[155,156],[[134,139],
- 239]]],[135,[[[157,158],159],[[5,6],9]]]]]]],123]]],[[[[[[[[[249,[[220,211],[251,11]]],[168,[14,17]]],[[196,[197,
- 240]],[229,[[221,210],[12,13]]]]],[[[[[231,172],[173,174]],[199,[243,130]]],[[248,[18,19]],[[20,21],246]]],[[236,
- [[238,147],148]],[[[222,207],23],[[204,206],24]]]]],[[[[232,[224,242]],[164,[[247,22],[25,26]]]],[140,[223,[[201,
- 203],[245,27]]]]],85]],[96,[[[[[28,[244,29]],[202,30]],[[[226,188],[150,151]],[195,143]]],[[[[182,183],[175,176]],
- [[189,200],127]],[169,198]]],36]]],122],[42,102]],[105,44]]],[51,10]]],[[48,[[[[[[89,83],[128,73]],125],[100,[94,
- 46]]],116],[91,93]]],[[35,[[[[[126,[87,74]],71],99],111],57]],[[56,55],[[[[[70,[80,75]],[95,64]],[[[77,[[163,129],
- 90]],38],[[227,81],62]]],88],[101,124]]]]]],[[[49,[[45,54],[[[121,[[[[[[[[216,255],252],[7,15]],[165,37]],[[[138,
- 194],[191,185]],[225,208]]],[[161,86],[[241,[16,31]],[[166,167],230]]]],60],107]],40],[[[33,[[106,61],[76,82]]],65],
- 41]]]],[[34,50],[[[[98,43],[[117,118],[112,109]]],[[92,47],[115,[67,104]]]],[53,[[110,114],[[84,[[[[137,[234,253]],
- [[250,219],[209,192]]],[[228,[205,162]],113]],69]],120]]]]]],32]],
-hfc=Array(256),hfi=(x,s)=>typeof x==='number'?hfc[x]=s:hfi(x[0],s+0)+hfi(x[1],s+1),
-hfe=x=>{let r='';for(let i=0;i<x.n;i++)r+=hfc[x.ch(i)];r+=10000000;r=r._(0,r.n-r.n%8);
-        return r.replace(/.{8}/g,x=>chr('0b'+x))},
-hfd=x=>{x=x.replace(/[^]/g,x=>(256+x.ch(0)).toString(2)._(1)).replace(/10*$/,'')
-        let r='',t=hft;for(let i=0;i<x.n;i++){t=t[+x[i]];if(typeof t==='number'){r+=String.fromCharCode(t);t=hft}}return r}
-let app,mem,heap,inp='',strace=0,out=t1,kwasm
+u8e=x=>chr(...te(x)),u8d=x=>td(U8([...x].map(c=>c.ch(0)))),
+c8e=x=>{let r='';for(let i=0;i<x.n;i++)r+=chr(x[i]);return r},
+c8d=x=>{const r=U8(x.n);for(let i=0;i<x.n;i++)r[i]=x.ch(i);return r},
+pe=x=>btoa(c8e(pako.deflate(te(x)))), //permalinks
+pd=x=>{try{return td(pako.inflate(c8d(atob(x))))}catch(x){return''}},
+hash=x=>x.split('').reduce((x,y)=>0|(x<<5)-x+y.ch(0),0),hex8=x=>('0000000'+x.toString(16))._(-8)
 ;[Array,Uint8Array,String].forEach(x=>{
  Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
  Q('_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach,ch:charCodeAt',
   y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
-hfi(hft,'')
 
+let app,mem,heap,inp='',strace=0,out=t1,kwasm
 const E=(s,b=1)=>{if(b)throw Error(s)},BADF=(b=1)=>E('BADF',b),
 X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
  try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
@@ -48,9 +33,9 @@ X('mmap',(p,n,_,_1,f,o)=>{
  if(!p){heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>>16)+1);upd();p=heap-n}
  if(f>=0){f=fd[f];BADF(!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
 X('munmap',_=>0)
-X('read',(f,a,n)=>{if(f<3){let s=inp||prompt('stdin:')+N;inp='';return te.encodeInto(s,M(a,n)).written}
+X('read',(f,a,n)=>{if(f<3){let s=inp||prompt('stdin:')+N;inp='';return TE.encodeInto(s,M(a,n)).written}
  f=fd[f];BADF(!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:M(a,n).set(fs[f.p].sub(f.o,n))})
-X('write',(f,a,n)=>{if(f<3)return(ap(td.decode(M(a,n))),n);f=fd[f];BADF(!f)
+X('write',(f,a,n)=>{if(f<3)return(ap(td(M(a,n))),n);f=fd[f];BADF(!f)
  let{p,o}=f,l=fs[p].n;(fs[p]=rsz(fs[p],max(l,o+n))).set(M(a,n),o);f.o+=n;return n})
 X('gettimeofday',x=>S4(x,[(x=Date.now())/1000|0,x%1000*1000])&0)
 X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.n);E('NOENT',!fs[p]&&~u&64/*O_CREAT*/)
@@ -75,16 +60,15 @@ else{ //editor|output mode
   if(i>=0){s=s._(0,i);r.push('till empty line')}
   if(s._(0,2)==='f:'){s=s._(2);r.push('not counting initial "f:"')}
   bc.textContent=s.n+'bytes'+(r.n?`(${r.join(', ')})`:'');return s.n}
- rdy(_=>{
-  t0.value=u8d(hfd(atob(location.hash._(2))))
-  ev.onclick=_=>{wa(async _=>{ubc();location.hash='#c'+btoa(hfe(u8e(t0.value)))
-   fs['golf.k']=fs['golf.k']||te.encode(await(await fetch('golf.k')).text())
-   const s='\\l golf.k\n'+t0.value;fs['a.k']=te.encode(s._(-1)===N?s:s+N);out.value=''
-   const h=heap;heap+=te.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
+ rdy(_=>{const h=(location.hash||'')._(1);if(h)t0.value=pd(h)
+  ev.onclick=_=>{wa(async _=>{ubc();location.hash=pe(t0.value)
+   fs['golf.k']=fs['golf.k']||te(await(await fetch('golf.k')).text())
+   const s='\\l golf.k\n'+t0.value;fs['a.k']=te(s._(-1)===N?s:s+N);out.value=''
+   const h=heap;heap+=TE.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
    const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
   cg.onclick=_=>{const s=t0.value,h='ngn-'+hex8(hash(s))
    out.value=`# [K (ngn/k)], ${ubc()} bytes\n\n    ${s.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
-    `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${btoa(hfe(u8e(s)))}\n`}
+    `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${pe(s)}\n`}
   t0.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
   t0.onkeyup=thr(ubc,1000)
   ev.onclick()})}

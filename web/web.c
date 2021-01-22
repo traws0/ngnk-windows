@@ -22,6 +22,7 @@
 #define wrZ(x,y) wr(x,y,Z y)
 #define mn strlen
 #define sc0 strchrnul
+#define sr strrchr
 #define M1(x) #x
 #define M2(x) M1(x)
 typedef void V;typedef char C;typedef int I;typedef unsigned short UH;typedef unsigned UI;typedef unsigned long long UL;
@@ -34,7 +35,7 @@ S V r404(I f){wrZ(f,"HTTP/1.1 404 Not Found\nContent-Length:4\nConnection:close\
 S V ap(C**p,O C*s){I n=mn(s);mc(*p,s,n);*p+=n;}
 S O C*web(I f)_(C b[1024];I r=read(f,b,Z b-1);P(r<=0,"read failed")b[r]=0;*sc0(b,10)=0;*sc0(b,13)=0;
  wr(1,b,mn(b));wrZ(1," - ");P(strncmp(b,"GET ",4),"not GET")C*s=b+4;s=sk(s,32);s+=*s=='/';*sc0(s,32)=0;
- Y(!*s,s="index.html")O C*d=sc0(s,'.'),*m=*d?mime(d+1):0;P(!m,"bad ext")
+ Y(!*s,s="index.html")O C*d=sr(s,'.'),*m=*d?mime(d+1):0;P(!m,"bad ext")
  I g=open(s,O_RDONLY);P(g<0,"not found")I n=lseek(g,0,SEEK_END);lseek(g,0,SEEK_SET);s=b;
  ap(&s,"HTTP/1.1 200 OK\nContent-Length:");s=su(s,n);ap(&s,"\nConnection:close\nContent-Type:");ap(&s,m);ap(&s,"\n\n");r=s-b;
  W(r>0,wr(f,b,r);r=read(g,b,Z b))close(g);wrZ(1,"ok\n");(V*)0)
