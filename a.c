@@ -4,7 +4,7 @@ A1(neg,sub(ah(0),x))
 R1(not,XF(I r=x==au0;x(ah(r)))eql(x,xtsS?as(0):ac(0)))
 R1(sqr,x=N(gD(x));Au=xr-1?atn(xt,xn):x;i(un,ud=__builtin_sqrt(xd))xC==uC?u:x(u))
 R1(nul,eql(x,mR(cn[xt])))
-R1(flr,Xc(fir(flr(enl(x))))XC(Au=aC(xn);m2(x,i(un,uc=xc+32*c3('A',xc,'Z'))u))XzZ(x)
+R1(flr,Xc(fir(flr(enl(x))))XC(Au=aC(xn);m2(x,i(un,uc=xc+32*c3('A',xc,'Z'))u))XzZ(x)XsS(K("`$_$:",x))
  x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,i(un,ul=xd<0?(L)xd-(xd<(L)xd):(L)xd)u))
 //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
 S D sinD(D x)_(S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.32913446369766718e-10,
