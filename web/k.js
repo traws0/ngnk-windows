@@ -1,11 +1,11 @@
 'use strict';const BA='ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE\n',
 T1=new TextEncoder,T0=new TextDecoder,t1=T1.encode.bind(T1),t0=T0.decode.bind(T0),
-z1=pako.inflate,z0=pako.deflate, //zlib
+z1=pako.deflate,z0=pako.inflate, //zlib
 u1=x=>chr(...t1(x)),u0=x=>t0(U8([...x].map(c=>c.ch(0)))), //utf8
 c1=x=>{let r='';for(let i=0;i<x.n;i++)r+=chr(x[i]);return r}, //8bit chars
 c0=x=>{const r=U8(x.n);for(let i=0;i<x.n;i++)r[i]=x.ch(i);return r},
-p1=x=>x?btoa(c1(pako.deflate(t1(x)))):'', //permalinks
-p0=x=>{try{return x?t0(pako.inflate(c0(atob(x)))):''}catch(x){return''}},
+p1=x=>x?btoa(c1(z1(t1(x)))):'', //permalinks
+p0=x=>{try{return x?t0(z0(c0(atob(x)))):''}catch(x){return''}},
 {log,error}=console,{min,max}=Math,PR=' ',N='\n',U8=x=>new Uint8Array(x),chr=String.fromCharCode,
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{out.value+=s;cur(out,out.value.n)},
 skPR=i=>i+PR.n*(ed.value._(i,i+PR.n)===PR),upd=_=>mem=new DataView(app.memory.buffer),
