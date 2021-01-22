@@ -69,7 +69,7 @@ else{ //editor|output mode
   cg.onclick=_=>{const s=ed.value,h='ngn-'+hex8(hash(s)),g=ubc()
    out.value=`# [K (ngn/k)], ${g.n} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
     `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${p1(s)}\n`
-   navigator.clipboard.writeText(out.value);out.value='COPIED TO CLIPBOARD:\n\n'+out.value}
+   navigator.clipboard.writeText(out.value)}
   ed.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)
   ev.onclick()})}
