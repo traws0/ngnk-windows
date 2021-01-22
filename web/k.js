@@ -5,7 +5,7 @@ u1=x=>chr(...t1(x)),u0=x=>t0(U8([...x].map(c=>c.ch(0)))), //utf8
 c1=x=>{let r='';for(let i=0;i<x.n;i++)r+=chr(x[i]);return r}, //8bit chars
 c0=x=>{const r=U8(x.n);for(let i=0;i<x.n;i++)r[i]=x.ch(i);return r},
 p1=x=>x?btoa(c1(z1(t1(x)))):'', //permalinks
-p0=x=>{try{return x?t0(z0(c0(atob(x)))):''}catch(x){return''}},
+p0=x=>{try{return x?t0(z0(c0(atob(x)))):''}catch(x){error(x);return''}},
 {log,error}=console,{min,max}=Math,PR=' ',N='\n',U8=x=>new Uint8Array(x),chr=String.fromCharCode,
 Q=(s,f)=>s.split(',').map(f),cur=(ta,i)=>ta.setSelectionRange(i,i),ap=s=>{out.value+=s;cur(out,out.value.n)},
 skPR=i=>i+PR.n*(ed.value._(i,i+PR.n)===PR),upd=_=>mem=new DataView(app.memory.buffer),
@@ -68,7 +68,7 @@ else{ //editor|output mode
    const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
   cg.onclick=_=>{const s=ed.value,h='ngn-'+hex8(hash(s)),g=ubc()
    out.value=`# [K (ngn/k)], ${g.n} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
-    `\n[ngn/k]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${p1(s)}\n`
+    `\n[K (ngn/k)]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${p1(s)}\n`
    navigator.clipboard.writeText(out.value)}
   ed.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)
