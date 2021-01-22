@@ -27,5 +27,4 @@ e/   https://projecteuler.net/
 a19/ https://adventofcode.com/2019
 a20/ https://adventofcode.com/2020
 o/   build tmp
-web/ ad-hoc web server for testing wasm builds
-huf/ huffman coding for permalinks
+web/ browser ui
