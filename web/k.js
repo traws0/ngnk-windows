@@ -68,7 +68,7 @@ else{ //editor|output mode
    const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
   cg.onclick=_=>{const s=ed.value,h='ngn-'+hex8(hash(s)),g=ubc()
    out.value=`# [K (ngn/k)], ${g.n} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
-    `\n[K (ngn/k)]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#c${p1(s)}\n`
+    `\n[K (ngn/k)]: https://git.sr.ht/~ngn/k\n[${h}]: https://ngn.bitbucket.io/k#${p1(s)}\n`
    navigator.clipboard.writeText(out.value)}
   ed.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)
