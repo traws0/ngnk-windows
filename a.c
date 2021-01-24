@@ -21,14 +21,14 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(e
 #undef h
 
 #define ht(v,t,T,tT,Tt,TT,R)\
- SN I v##t##t(  T*RE a,T*RE b,R*RE r,UL n)_(*r=v##t(*a,*b);0)\
- SN I v##t##T(  T*RE a,T*RE b,R*RE r,UL n)tT\
- SN I v##T##t(  T*RE a,T*RE b,R*RE r,UL n)Tt\
- SN I v##T##T(  T*RE a,T*RE b,R*RE r,UL n)TT\
- SN I v##rdc##T(R*RE a,T*RE b,       UL n)_(R c=*a;i(n      ,     c=v##t(c,b[i]))       *a=c;0)\
- SN I v##scn##T(R*RE a,T*RE b,R*RE r,UL n)_(R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))            0)\
- SN I v##eap##T(T*RE a,T*RE b,R*RE r,UL n)_(T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)\
- SN I v##amd##T(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)
+ SN I v##t##t(T*RE a,T*RE b,R*RE r,UL n)_(*r=v##t(*a,*b);0)\
+ SN I v##t##T(T*RE a,T*RE b,R*RE r,UL n)tT\
+ SN I v##T##t(T*RE a,T*RE b,R*RE r,UL n)Tt\
+ SN I v##T##T(T*RE a,T*RE b,R*RE r,UL n)TT\
+ SN I v##T##r(R*RE a,T*RE b,       UL n)_(R c=*a;i(n      ,     c=v##t(c,b[i]))       *a=c;0)\
+ SN I v##T##s(R*RE a,T*RE b,R*RE r,UL n)_(R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))            0)\
+ SN I v##T##p(T*RE a,T*RE b,R*RE r,UL n)_(T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)\
+ SN I v##T##a(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)
 #define v(v,hH,Hh,HH,iI,Ii,II,lL,Ll,LL,dD,Dd,DD,rl,rd) \
  ht(v,h,H,hH,Hh,HH,H)ht(v,i,I,iI,Ii,II,I)ht(v,l,L,lL,Ll,LL,rl)ht(v,d,D,dD,Dd,DD,rd)
 #define tT(f) _(LN(b)LN(r)TY(*a)c=*a;i(PD(n,a),*r++=f(c,*b++))0)
@@ -51,8 +51,8 @@ v(eql,tT(eqlh),s(eqlhH),TT(eqlh),tT(eqli),s(eqliI),TT(eqli),tT(eqll),s(eqllL),TT
 #undef Tt
 #undef tT
 
-#define  h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
-#define h0(v,t,T) {0      ,0      ,0      ,0      ,v##rdc##T,v##scn##T,v##eap##T,v##amd##T},
+#define  h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##T##r,v##T##s,v##T##p,v##T##a}, // / \ ': @
+#define h0(v,t,T) {0      ,0      ,0      ,0      ,v##T##r,v##T##s,v##T##p,v##T##a},
 #define hA(a...)  h0(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h0(gtn,a)h(eql,a)
 OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
