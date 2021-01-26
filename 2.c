@@ -46,10 +46,10 @@ OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 I sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tH,min(tD,max(tT(xt),tT(yt))));A1*f=CH(t-tH,&gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));t)
-S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
- Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&xr==1,m2(y,f(a,b,xC,xn);x))
- P(yt==t&&yr==1,m2(x,f(a,b,yC,yn);y))Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
+S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;
+ int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
+ El(k==3&&xn-yn,x,y)P(xt==t&&xr==1,m2(y,f(a,b,xC,xn);x))P(yt==t&&yr==1,m2(x,f(a,b,yC,yn);y))
+ Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
 A2(dex,mr(x);y)
 A2(sub,add(x,Nx(neg(y))))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
