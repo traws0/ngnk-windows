@@ -104,7 +104,7 @@ A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCm(OC*,OC*),aCn(OC*,L),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,L),atnv(C,L,OV*),catc(A,OC*,L),ea1(A1,A),
+A aCm(OC*,OC*),aCn(OC*,L),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,L),atnv(C,L,OV*),az(L),catc(A,OC*,L),ea1(A1,A),
  e0(OC*),e1(OC*,A),e2(OC*,A,A),eN(OC*,I,OA*),get(A,L),getr(A,L),kv(A*),room(A,L);
 V init(),mrn(I,OA*),tilH(V*,L),tilI(V*,L),tilL(V*,L);
 C*syp(I*),art(I,C);
@@ -115,7 +115,7 @@ extern A glb,ce[],cn[],ci[4][5];extern OC vc[];extern OV*vf[],*arf[4][11][8];ext
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Ln)_(atn(t##T,n))
- h(A)h(C)h(H)h(S)h(I)h(L)h(D)
+ h(A)h(C)h(H)h(I)h(L)h(D)h(S)
 #undef h
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);x)
 S A ah(Hv)_(AT(th,(UH)v)) S H gh (Ax)_(Q(xth);x)

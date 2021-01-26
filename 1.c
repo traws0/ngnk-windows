@@ -1,6 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
-S A az(Lv)_(-1ul<<15<=v&&v<1l<<15?ah(v):-1ul<<31<=v&&v<1l<<31?ai(v):al(v))
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))Xt(Et(1,x);0)
  Au=atn(xt,xn);XH(i(un,P(xh==NH,neg(gI(u(x))))uh=-xh)u)XI(i(un,P(xi==NI,neg(gL(u(x))))ui=-xi)u)
  XL(i(un,ul=-xl)u)XD(i(un,ud=-xd)u)Et(1,x,u);0)
