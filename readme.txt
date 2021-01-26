@@ -13,7 +13,8 @@ k.c  eval, apply, amend, drill: . @
 h.c  shape-related: x#y ,x x,y
 s.c  object to string
 f.c  find, random: x?y
-a.c  arithmetic verbs
+1.c  monadic arithmetic verbs
+2.c  dyadic  arithmetic verbs
 i.c  i/o and \cmds
 v.c  the rest of the verbs
 w.c  adverbs
