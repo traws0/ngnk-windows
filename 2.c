@@ -45,7 +45,7 @@ OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
-I sup(A*p,A*q)_(Ax=*p,y=*q;A1*f=CH(max(tH,min(tD,max(tT(xt),tT(yt))))-tH,&gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));1)
+I sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tH,min(tD,max(tT(xt),tT(yt))));A1*f=CH(t-tH,&gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));t)
 S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
  Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))P(xt==t&&xr==1,m2(y,f(a,b,xC,xn);x))
