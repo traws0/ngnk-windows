@@ -9,10 +9,8 @@ f({x,"(a) dex(",x,",a)"};v)             /free and return other
 f({x,y," ((",y,"*)dat(",x,"))"};v;t)    /items
 f({x,(_y)," ",x,y,"[i]"};v;t)           /i-th item
 f({x,v[y]," ",x,"A[",($y),"]"};v;!3)    /nested
-f({x,"tt (",x,"t>tm)"};v)               /atom?
-f({x,"tT (",x,"t<tM)"};v)               /list?
 f({x,"t",y," (",x,"t==t",y,")"};v;"ACHILDSMmchildsopqruvw") /of type?
-f({x,"t",y," _",y,"(",x,"t)"};v;"FPQR") /of pseudotype?
+f({x,"t",y," _",y,"(",x,"t)"};v;"FPQRtT") /of pseudotype?
 f({x,"tz c3(th,",x,"t,tl)"};v)          /integral atom?
 f({x,"tZ c3(tH,",x,"t,tL)"};v)          /integral list?
 f({x,"t",(_y),y," (",x,"t",(_y),"||",x,"t",y,")"};v;"CHILDSMZ") /atom, list of type?

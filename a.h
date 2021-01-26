@@ -70,9 +70,9 @@ enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-extern OC Zt[],ZT[];S C At(A);                      //type classes F:function,P:packed,Q:simple,R:reference
+extern OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM) //t:atom,T:list,F:function,P:packed,Q:simple,R:ref
 S I _F(Ct)_(t>=to)S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I _Q(Ct)_(c3(tc,t,ts))S I _R(Ct)_(Zt[t]==4)
-S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //get corresponding list type
+S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,i=value):
