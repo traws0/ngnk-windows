@@ -8,7 +8,7 @@ S A2(f,y=Nx(apc(y,xt));
  Xs(Iv=gs(x);OC*s=syp(&v);In=mn(s)+1;y=Nx(apc(y,n));catc(y,s,n))
  XP(f8(x,y))
  XF(f(AT(tA,x),Nx(apc(y,xv<<3|xk))))
- In=8*xtT;Au=catc(y,xC-n,n+xn*ZT[xt]);x(u))
+ In=8*xtT;x(catc(y,xC-n,n+xn*ZT[xt])))
 A1(ser,f(x,aC0))
 
 //deserialize
