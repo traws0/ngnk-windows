@@ -141,6 +141,13 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #define NH (H)(1<<15)
 #define WH (~NH)
 
+#define iut(t,a...) ({i(un,u##t=({a;}))u;})
+#define iuc(a...) iut(c,a)
+#define iuh(a...) iut(h,a)
+#define iui(a...) iut(i,a)
+#define iul(a...) iut(l,a)
+#define iud(a...) iut(d,a)
+
 #define EN(x,y,z,n,...) n
 #define EF(f,x,a...) P(x,f(a))
 #define E_(t,a...) EF(EN(a,e##t##2,e##t##1,e##t##0),a)
