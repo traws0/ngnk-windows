@@ -4,7 +4,7 @@
 ngT(H,b|=a[i]==NH)ngT(I,b|=a[i]==NI)ngT(L)ngT(D)
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!c3(tH,xt,tD),et1(x))
  Au=xr>1?atn(xt,xn):x;CH(xt-tH,(int(*)(OV*,V*,L))(V*)&ngH,(V*)ngI,(V*)ngL,(V*)ngD)(xC,uC,xn);x==u?u:x(u))
-R1(not,XF(Iv=x==au0;x(ah(v)))eql(x,xtsS?as(0):ac(0)))
+R1(not,XF(x(ah(x==au0)))eql(x,xtsS?as(0):ac(0)))
 R1(sqr,x=N(gD(x));Au=xr-1?atn(xt,xn):x;iud(__builtin_sqrt(xd));x==u?u:x(u))
 R1(nul,eql(x,mR(cn[xt])))
 R1(flr,Xc(fir(flr(enl(x))))XC(Au=aC(xn);m2(x,iuc(xc+32*c3('A',xc,'Z'))))XzZ(x)XsS(K("`$_$:",x))
