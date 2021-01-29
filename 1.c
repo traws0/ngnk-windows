@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
-#define ngT(T,bb...) SN I ng##T(OV*a0,V*r0,Ln)_(O T*a=a0;T*r=r0;LN(a)LN(r)Cb=0;i(PD(n,a),bb;r[i]=-a[i])b)
-ngT(H,b|=a[i]==NH)ngT(I,b|=a[i]==NI)ngT(L)ngT(D)
+#define ng_(T,bb...) SN I ng##T(OV*a0,V*r0,Ln)_(O T*a=a0;T*r=r0;LN(a)LN(r)Cb=0;i(PD(n,a),bb;r[i]=-a[i])b)
+ng_(H,b|=a[i]==NH)ng_(I,b|=a[i]==NI)ng_(L)ng_(D)
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!c3(tH,xt,tD),et1(x))
  Au=xr>1?atn(xt,xn):x;CH(xt-tH,(int(*)(OV*,V*,L))(V*)&ngH,(V*)ngI,(V*)ngL,(V*)ngD)(xC,uC,xn);x==u?u:x(u))
 R1(not,XF(x(ah(x==au0)))eql(x,xtsS?as(0):ac(0)))
