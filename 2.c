@@ -25,9 +25,9 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(e
 #define n(x) _(TY(*b)c=-*b;x(a,&c,r,n))
 //    hH       Hh       HH       iI       Ii       II       lL       Ll       LL       dD       Dd       DD
 v(dex,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,D) // : 0
-v(add,tT(addh),s(addhH),TT(addh),tT(addi),s(addiI),TT(addi),tT(addl),s(addlL),TT(addl),tT(addd),s(adddD),TT(addd),L,D) // + 1
+v(add,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,D) // + 1
 v(sub,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,D) // - 2
-v(mul,tT(mulh),s(mulhH),TT(mulh),tT(muli),s(muliI),TT(muli),tT(mull),s(mullL),TT(mull),tT(muld),s(muldD),TT(muld),L,D) // * 3
+v(mul,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,;       ,L,D) // * 3
 v(dvd,tT(dvdh),Tt(dvdh),TT(dvdh),tT(dvdi),Tt(dvdi),TT(dvdi),tT(dvdl),Tt(dvdl),TT(dvdl),tT(dvdd),Tt(dvdd),TT(dvdd),L,D) // % 4
 v(mod,tT(modh),Tt(modh),TT(modh),tT(modi),Tt(modi),TT(modi),tT(modl),Tt(modl),TT(modl),tT(modd),Tt(modd),TT(modd),L,D) // ! 5
 v(mnm,tT(mnmh),s(mnmhH),TT(mnmh),tT(mnmi),s(mnmiI),TT(mnmi),tT(mnml),s(mnmlL),TT(mnml),tT(mnmd),s(mnmdD),TT(mnmd),L,D) // & 6
@@ -38,18 +38,18 @@ v(eql,tT(eqlh),s(eqlhH),TT(eqlh),tT(eqli),s(eqliI),TT(eqli),tT(eqll),s(eqllL),TT
 #undef Tt
 #undef tT
 
-#define  h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T,v##T##r,v##T##s,v##T##p,v##T##a}, // / \ ': @
-#define h0(v,t,T) {0      ,0      ,0      ,0      ,v##T##r,v##T##s,v##T##p,v##T##a},
-#define hA(a...)  h0(dex,a)h(add,a)h0(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h0(gtn,a)h(eql,a)
+#define  h(v,t,T) {v##t##t ,v##t##T ,v##T##t ,v##T##T,v##T##r,v##T##s,v##T##p,v##T##a}, // / \ ': @
+#define h0(v,t,T) {0       ,0       ,0       ,0      ,v##T##r,v##T##s,v##T##p,v##T##a},
+#define hA(a...)  h0(dex,a)h0(add,a)h0(sub,a)h0(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h0(gtn,a)h(eql,a)
 OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 I sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tH,min(tD,max(tT(xt),tT(yt))));A1*f=CH(t-tH,&gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));t)
-S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;
- int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
- El(k==3&&xn-yn,x,y)P(xt==t&&xr==1,m2(y,f(a,b,xC,xn);x))P(yt==t&&yr==1,m2(x,f(a,b,yC,yn);y))
- Au=atn(t,k-1?xn:yn);m2(x,m2(y,f(a,b,uC,un);u)))
+S A v2(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
+ V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,L)=arf[xt-(xtt?th:tH)][v][k];Ct=art(v,xt);
+ Y(!k,t+=th-tH;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
+ Au=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,uC,un);x==u?y(u):y==u?x(u):x(y(u)))
 A2(dex,mr(x);y)
 A2(sub,add(x,Nx(neg(y))))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
@@ -58,5 +58,31 @@ S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
 A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xz(v2(x,y,vi('!')))dct(x,y))
 A2(gtn,ltn(y,x))
 #define h(c,s) A2(s,v2(x,y,vi(c)))
-h('+',add)h('*',mul)h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)
+h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)
 #undef h
+
+#define V2(f,T,e...) S I f(OV*RE a0,OV*RE b0,V*RE r0,UL n)_(O T*a=a0,*b=b0;T*r=r0;LN(b)LN(r)n=PD(n,a);e)
+
+V2(ahH,H,Hv=*a;i(n,r[i]=   v+b[i])0)
+V2(aiI,I,Iv=*a;i(n,r[i]=   v+b[i])0)
+V2(alL,L,Lv=*a;i(n,r[i]=   v+b[i])0)
+V2(adD,D,Dv=*a;i(n,r[i]=   v+b[i])0)
+V2(aHH,H,LN(b);i(n,r[i]=a[i]+b[i])0)
+V2(aII,I,LN(b);i(n,r[i]=a[i]+b[i])0)
+V2(aLL,L,LN(b);i(n,r[i]=a[i]+b[i])0)
+V2(aDD,D,LN(b);i(n,r[i]=a[i]+b[i])0)
+A2(add,P(xtmMA||ytmMA,eac(av(1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;P(!k,Xd(ad(gd(x)+gd(y)))az(gl(x)+gl(y)))
+ Y(k==2||(k==3&&xr==1),SWP(x,y))El(k==3&&xn-yn,x,y)
+ Au=yr-1?atn(yt,yn):y;CH(yt-tH+4*(k==3),&ahH,aiI,alL,adD,aHH,aII,aLL,aDD)(xtP?(V*)&x:xC,yC,uC,un);x(y-u?y(u):u))
+
+V2(mhH,H,Hv=*a;i(n,r[i]=   v*b[i])0)
+V2(miI,I,Iv=*a;i(n,r[i]=   v*b[i])0)
+V2(mlL,L,Lv=*a;i(n,r[i]=   v*b[i])0)
+V2(mdD,D,Dv=*a;i(n,r[i]=   v*b[i])0)
+V2(mHH,H,LN(b);i(n,r[i]=a[i]*b[i])0)
+V2(mII,I,LN(b);i(n,r[i]=a[i]*b[i])0)
+V2(mLL,L,LN(b);i(n,r[i]=a[i]*b[i])0)
+V2(mDD,D,LN(b);i(n,r[i]=a[i]*b[i])0)
+A2(mul,P(xtmMA||ytmMA,eac(av(3),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;P(!k,Xd(ad(gd(x)*gd(y)))az(gl(x)*gl(y)))
+ Y(k==2||(k==3&&xr==1),SWP(x,y))El(k==3&&xn-yn,x,y)
+ Au=yr-1?atn(yt,yn):y;CH(yt-tH+4*(k==3),&mhH,miI,mlL,mdD,mHH,mII,mLL,mDD)(xtP?(V*)&x:xC,yC,uC,un);x(y-u?y(u):u))

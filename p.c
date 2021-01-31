@@ -11,7 +11,7 @@ S A pLm(L*m)_(Ax=aL0;Cc;
 S A0(pZ,L m[2]={};Ax=pLm(m);Cc=*s;
  P(c=='j'||c=='l',s++;x)P(c=='i',Ep(*m<=NI||WI<=m[1],x)s++;gI(x))P(c=='h',Ep(*m<=NH||WH<=m[1],x)s++;gH(x))x)
 S A0(pD,Ax=aD0;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),B)s++)x)
-S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c)c=*++s;x)
+S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
 S C ph()_(Cc=*s;dgt(c)?c-'0':c3('a',c,'f')?c+10-'a':16)
 S A0(p0x,Ax=aC0;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
 S A0(ps,C*t=s,c=*s;Y(c&128,W((c=*++s)>>6==2)s+=c==':')EY(c==':',W(ldg(c=*++s)||si("./:",c)<3))E(W(ldg(c),c=*++s))aCm(t,s))

@@ -118,7 +118,7 @@ extern A glb,ce[],cn[],ci[4][5];extern OC vc[];extern OV*vf[],*arf[4][11][8];ext
  h(A)h(C)h(H)h(I)h(L)h(D)h(S)
 #undef h
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);x)
-S A ah(Hv)_(AT(th,(UH)v)) S H gh (Ax)_(Q(xth);x)
+S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);x)
 S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xth||xtc);x)
 S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(XP((I)x)*xL)S L gl(Ax)_(L r=gl_(x);x(0);r)

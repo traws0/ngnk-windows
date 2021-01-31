@@ -1,6 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 
-S D flrd(Dv)_(v<0?(L)v-(v<(L)v):(L)v)
 S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
  S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.32913446369766718e-10,-2.33177897192836082e-8,
   2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
@@ -14,7 +13,6 @@ F1(neg,L,-a[i])
 F1(neg,D,-a[i])
 F1(sqr,D,__builtin_sqrt(a[i]))
 F1(sin,D,sind(a[i]))
-F1(flr,D,flrd(a[i]))
 F1(flr,C,a[i]+32*c3('A',a[i],'Z'))
 
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
@@ -26,4 +24,4 @@ R1(sqr,fx(N(gD(x)),sqrD))
 R1(sin,fx(N(gD(x)),sinD))
 R1(nul,eql(x,mR(cn[xt])))
 R1(flr,XC(fx(x,flrC))Xc(fir(flr(enl(x))))XzZ(x)XsS(K("`$_$:",x))
- x=N(gD(x));Au=atn(xtd?tl:tL,xn);m2(x,iul(xd<0?(L)xd-(xd<(L)xd):(L)xd)))
+ x=N(gD(x));Au=atn(xt+tl-td,xn);m2(x,iul(xd<0?(L)xd-(xd<(L)xd):(L)xd)))
