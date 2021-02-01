@@ -28,8 +28,7 @@ S AX(cvg,P(n==1,Ay=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));P(mtc_(u,y)||mtc_(u,z)
  ern(n,a))
 AX(rdc,XzZ(AXA2(x,a,n,dec))XcC(AXA2(x,a,n,join))P(xk<2,cvg(x,a,n))
  Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):*a)P(m<0,Y(y,y(0))eln(n,a))P(!m&&!y,Au=id_(x,z);mrn(n,a);u)
- Y(n==1&&xtv&&xv<8&&(!y||ytt)&&c3(tC,zt,tD),Y(zt<tH,z=gH(z);P(!z,y?y(0):0))Y(y&&ytdD||ztdD,Y(y,y=gD(y))z=gD(z))
-  TD int(*T)(V*,V*,L);
+ Y(n==1&&xtv&&xv<8&&(!y||ytt)&&c3(tC,zt,tD),Y(zt<tH,z=gH(z))Y(y,N(sup(&y,&z)))TD int(*T)(V*,V*,L);
   P(ztH,H*p=zH,a=!y?m--,*p++:gh(y);m2(z,((T)arf[zt-tH][xv][4])(&a,p,m);0);ah(a))
   P(ztI,I*p=zI,a=!y?m--,*p++:gi(y);m2(z,((T)arf[zt-tH][xv][4])(&a,p,m);0);ai(a))
   P(ztL,L*p=zL,a=!y?m--,*p++:gl(y);m2(z,((T)arf[zt-tH][xv][4])(&a,p,m);0);al(a))
