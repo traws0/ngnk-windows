@@ -15,7 +15,7 @@ A1(rev,XT(x=mut(x);CH(Zt[xt],&rC,rH,rI,rL,rL)(xC,xn);x)Xm(AT(tm,N(ea1(rev,AT(tA,
 A1(typ,x(as(TS[xt])))
 A1(len,x(al(xN)))L _N(Ax/*0*/)_(xtT?xn:xtm?_N(xy):!xtM?1:An(xy)?_N(*(A*)dat(xy)):1)
 A1(unq,Et(!xtT,x)xn<2?x:K("{x@&@[&#x;i;:;]@[;0;:;a=a:*a]@a:~$[`A=@x;~;=]':x@i:<x}",x))
-A2(fil,YmMA(eac(cv('^'),A(x,y),2))YF(mtc(y,au0))Yt(fir(fil(x,enl(y))))K("{@[y;&^y;:;x]}",x,y))
+A2(fil,YmMA(eac(cv('^'),A(x,y),2))YF(y==au0?x:x(y))Yt(fir(fil(x,enl(y))))K("{@[y;&^y;:;x]}",x,y))
 A2(xpt,Xt(fil(x,y))En(xtmM||ytmM,x,y)y=enla(y);Y(xtA,y=blw(y))K("{x@&^y?x}",x,y))
 A2(cut,Ym(K("{((!y)^x)#y}",x,y))
  YT(x=Ny(gL(x));K("{n:#y;y$[x~*x;$[n<x|-x;!0;x<0;!n+0^x;x+!n-x];$[|/0<':x,#y;!`dom;x+!'1_-':x,#y]]}",x,y))
