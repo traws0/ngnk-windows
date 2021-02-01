@@ -6,18 +6,20 @@
 #define h1(f,T,op) f1(f,T,i(PD(n,a),r[i]=a[i] op b[i])n) //list-list, no overflows
 h0(alL,L,+)h1(aLL,L,+)h0(mlL,L,*)h1(mLL,L,*)h0(adD,D,+)h1(aDD,D,+)h0(mdD,D,*)h1(mDD,D,*)
 
-#define g (32/Z(H))
+#define ZG 32
+
+#define g (ZG/Z(H))
 f0(ahH,H,Li=0;W(i<n,j(g,r[i+j]=*a    +b[i+j])i+=g)i)
 f0(mhH,H,Li=0;W(i<n,j(g,r[i+j]=*a    *b[i+j])i+=g)i)
-f1(aHH,H,Li=0;W(i<n,j(g,r[i+j]=a[i+j]+b[i+j])i+=g)n)
-f1(mHH,H,Li=0;W(i<n,j(g,r[i+j]=a[i+j]*b[i+j])i+=g)n)
+f1(aHH,H,Li=0;W(i<n,j(g,r[i+j]=a[i+j]+b[i+j])i+=g)i)
+f1(mHH,H,Li=0;W(i<n,j(g,r[i+j]=a[i+j]*b[i+j])i+=g)i)
 #undef g
 
-#define g (32/Z(I))
+#define g (ZG/Z(I))
 f0(aiI,I,Li=0;W(i<n,j(g,r[i+j]=*a    +b[i+j])i+=g)i)
 f0(miI,I,Li=0;W(i<n,j(g,r[i+j]=*a    *b[i+j])i+=g)i)
-f1(aII,I,Li=0;W(i<n,j(g,r[i+j]=a[i+j]+b[i+j])i+=g)n)
-f1(mII,I,Li=0;W(i<n,j(g,r[i+j]=a[i+j]*b[i+j])i+=g)n)
+f1(aII,I,Li=0;W(i<n,j(g,r[i+j]=a[i+j]+b[i+j])i+=g)i)
+f1(mII,I,Li=0;W(i<n,j(g,r[i+j]=a[i+j]*b[i+j])i+=g)i)
 #undef g
 
 A2(add,P(xtmMA||ytmMA,eac(av(1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;P(!k,Xd(ad(gd(x)+gd(y)))az(gl(x)+gl(y)))
