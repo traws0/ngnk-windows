@@ -9,10 +9,11 @@ h0(alL,L,+)h1(aLL,L,+)h0(mlL,L,*)h1(mLL,L,*)h0(adD,D,+)h1(aDD,D,+)h0(mdD,D,*)h1(
 #define g1(f,T,T1,op) f1(f,T,Li=0;W(i<n,T1 v[G(T)];j(G(T),v[j]=a[j]op b[j])j(G(T),P(v[j]<N##T||W##T<v[j],i))j(G(T),r[j]=v[j])i+=G(T);a+=G(T);b+=G(T);r+=G(T))i)
 g0(ahH,H,I,+)g0(aiI,I,L,+)g0(mhH,H,I,*)g0(miI,I,L,*)g1(aHH,H,I,+)g1(aII,I,L,+)g1(mHH,H,I,*)g1(mII,I,L,*)
 
-SN A adm(Ax,Ay,Im)_(P(xtmMA||ytmMA,eac(av(m?3:1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;
- P(!k,Xd(ad(m?gd(x)*gd(y):gd(x)+gd(y)))az(m?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))El(k==3&&xn-yn,x,y)
+SN A adm(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v?3:1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;
+ P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))El(k==3&&xn-yn,x,y)
  Au=yr-1?atn(yt,yn):y;
- CH(yt-tH+4*(k==3)+8*m,&ahH,aiI,alL,adD,aHH,aII,aLL,aDD,mhH,miI,mlL,mdD,mHH,mII,mLL,mDD)(xtP?(V*)&x:xC,yC,uC,un);
+ Lm=CH(yt-tH+4*(k==3)+8*v,&ahH,aiI,alL,adD,aHH,aII,aLL,aDD,mhH,miI,mlL,mdD,mHH,mII,mLL,mDD)(xtP?(V*)&x:xC,yC,uC,un);
+ Y(m<yn,write(1,"OVERFLOW\n",9);exit(1))
  x(y-u?y(u):u))
 A2(add,adm(x,y,0))
 A2(mul,adm(x,y,1))
