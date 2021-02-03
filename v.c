@@ -1,10 +1,11 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-#define til_(T)   V til##T(V*p,L n)_(T*a=p;LN(a)i(PD(n,a),a[i]=i))
-#define r_(T)     S V r##T(V*p,L n)_(T*a=p,*b=a+n-1;W(a<b,SWP(*a,*b);a++;b--))
-#define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
-#define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,UL n)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
+#define til_(T)   V til##T(V*p,Ln)_(T*a=p;LN(a)i(PD(n,a),a[i]=i))
+#define r_(T)     S V r##T(V*p,Ln)_(T*a=p,*b=a+n-1;W(a<b,SWP(*a,*b);a++;b--))
+#define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
+#define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
 til_(H)til_(I)til_(L)r_(C)r_(H)r_(I)r_(L)
-c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
+c_(C,H,r)c_(H,C,a)c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
+Fc wdn[]={cCH,cHI,cIL,cLD};
 A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))L m=An(yx);i(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,Xz(Ln=gl_(x);Im=n<0;n*=1-2*m;Ez(n>1<<30,x)Au=atn(tT(xt),n);CH(xt-th,&tilH,tilI,tilL)(uC,n);m?add(x,u):x(u))
