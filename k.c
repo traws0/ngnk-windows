@@ -46,6 +46,8 @@ AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*8);xy=am1(b,n);P(!xy,xy=au0;x(0))x)
  Yt(x=mut(x);y=gL(y);P(!y,mrn(n-2,a+2);x(0))
   Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))A b[8];*b=get(x,i);mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
+ P(n==4&&xtZ&&ytZ&&ztv&&zv<8&&(_z(a[3])||_Z(a[3])),Au=a[3];Ei(utT&&yn-un,x(y),u)x=mut(x);u=enla(u);
+  y=gL(y);Ny(sup(&x,&u));Ei(m2(y,m2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tH][zv][7])(xC,xn,yL,yn,uC,utT):0)))x)
  P(n==4&&(xtI||xtL||xtD)&&(ytI||ytL)&&ztv&&zv<8&&xt==tT(At(a[3])),x=mut(x);Au=a[3];I d=utT;u=enla(u);Ei(d&&yn-un,x(y),u)
   y=gL(y);Ei(m2(y,m2(u,x?((int(*)(V*,L,L*,L,V*,I))arf[xt-tH][zv][7])(xC,xn,yL,yn,uC,d):0)))x)
  P(n==4&&xtC&&ytL&&z==av0&&tT(At(a[3]))==tC,x=mut(x);Au=a[3];I d=utT;u=enla(u);El(d&&yn-un,x(y),u)
