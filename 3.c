@@ -13,11 +13,11 @@ S A wdn(Ax,Li,Lj,Ln)_(Ct=xt;Q(c3(tC,t,tI));Au=atn(t+1,n);wf[t-tC](xC+ZT[t]*i,uC,
 SN A adm(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v?3:1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;
  P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))
  S TY(&ahH)f[]={ahH,aiI,alL,adD,aHH,aII,aLL,aDD,mhH,miI,mlL,mdD,mHH,mII,mLL,mDD};
- Ln=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[yt-tH+4*(k==3)+8*v](xtP?(V*)&x:xC,yC,uC,un);
- Y(m<yn,
-  Y(xtt,x=CH(xt-tc,&gH,gI,gL)(x))E(x=wdn(x,m,xn,xn-m))
-  Y(y-u,y=wdn(y,m,yn,yn-m);u=wdn(u,0,m,un))E(y=u=wdn(u,0,un,un))
-  L mw=m*ZT[ut];f[yt-tH+4*(k==3)+8*v](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,un))
+ Ln=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[yt-tH+4*(k==3)+8*v](xtP?(V*)&x:xC,yC,uC,n);
+ Y(m<n,
+  Y(k-3,x=CH(xt-tc,&gH,gI,gL)(x))E(x=wdn(x,m,n,n-m))
+  Y(y-u,y=wdn(y,m,n,n-m);u=wdn(u,0,m,n))E(y=u=wdn(u,0,n,n))
+  L mw=m*ZT[ut];f[yt-tH+4*(k==3)+8*v](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,n-m))
  x(y-u?y(u):u))
 A2(add,adm(x,y,0))
 A2(mul,adm(x,y,1))
