@@ -1,22 +1,21 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-#define h(f,T,e...) S L f(OV*RE a0,OV*RE b0,V*RE r0,Ln)_(O T*a=a0,*b=b0;T*r=r0;LN(b)LN(r)e)
-#define h0(f,T,o) h(f,T,      i(PD(n,a),r[i]=a[0]o b[i])n) //atom-list, no overflows
-#define h1(f,T,o) h(f,T,LN(a);i(PD(n,a),r[i]=a[i]o b[i])n) //list-list, no overflows
-h0(alL,L,+)h1(aLL,L,+)h0(mlL,L,*)h1(mLL,L,*)h0(adD,D,+)h1(aDD,D,+)h0(mdD,D,*)h1(mDD,D,*)
 #define IF(x,y...) IF##x(y)
 #define IF0(x)
 #define IF1(x) x
+
+#define h(f,T,e...) S L f(OV*RE a0,OV*RE b0,V*RE r0,Ln)_(O T*a=a0,*b=b0;T*r=r0;LN(b)LN(r)e)
+#define hn(l,f,T,o) h(f,T,IF(l,LN(a));i(PD(n,a),r[i]=a[IF(l,i+)0]o b[i])n)
+hn(0,alL,L,+)hn(1,aLL,L,+)hn(0,mlL,L,*)hn(1,mLL,L,*)hn(0,adD,D,+)hn(1,aDD,D,+)hn(0,mdD,D,*)hn(1,mDD,D,*)
+
 #define G(T) (32/Z(T))
-#define ha(l,f,T,R)\
- h(f,T,IF(l,LN(a));T v[G(T)];Li=0;\
+#define ha(l,f,T,R) h(f,T,IF(l,LN(a));T v[G(T)];Li=0;\
   W(i<n,\
    j(G(T),v[j]=a[IF(l,j+)0]+b[j])\
    T o=0;j(G(T),o|=(a[IF(l,j+)0]^v[j])&(b[j]^v[j]))P(o>>Z(T)*8-1,i)\
    j(G(T),r[j]=v[j])\
    i+=G(T);IF(l,a+=G(T));b+=G(T);r+=G(T))\
   i)
-#define hm(l,f,T,R)\
- h(f,T,IF(l,LN(a));R v[G(T)];Li=0;\
+#define hm(l,f,T,R) h(f,T,IF(l,LN(a));R v[G(T)];Li=0;\
   W(i<n,\
    j(G(T),v[j]=a[IF(l,j+)0]*(R)b[j])\
    j(G(T),P(v[j]<N##T||W##T<v[j],i))\
