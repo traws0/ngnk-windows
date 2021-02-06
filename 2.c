@@ -38,10 +38,16 @@ v(eql,tT(eqlh),s(eqlhH),TT(eqlh),tT(eqli),s(eqliI),TT(eqli),tT(eqll),s(eqllL),TT
 #undef Tt
 #undef tT
 
-#define  h(v,t,T) {v##t##t ,v##t##T ,v##T##t ,v##T##T,v##T##r,v##T##s,v##T##p,v##T##a}, // / \ ': @
-#define h0(v,t,T) {0       ,0       ,0       ,0      ,v##T##r,v##T##s,v##T##p,v##T##a},
-#define hA(a...)  h0(dex,a)h0(add,a)h0(sub,a)h0(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h0(gtn,a)h(eql,a)
-OV*arf[4][11][8]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
+#define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T},
+#define hA(a...) {0},{0},{0},{0},h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a){0},h(eql,a)
+OV*arf[4][11][4]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
+#undef hA
+#undef h
+
+#define h(v,t,T) {v##T##r,v##T##s,v##T##p,v##T##a}, // / \ ': @
+#define hA(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
+OV*arw[4][11][4]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
+#undef hA
 #undef h
 
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
