@@ -32,7 +32,7 @@ S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p+
 A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)x(au0))
 V init(){Ax=ce[tS]=aS(0);i(tS,ce[i]=AT(i,x))ce[tm]=am(aS0,aA0);glb=aa0();
- cn[tA]=ce[tA];cn[tC]=ac(32);cn[tH]=ah(NH);cn[tI]=ai(NI);cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
+ cn[tA]=ce[tA];cn[tC]=ac(32);cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
  ci[0][0]=ah(0);ci[0][1]=ah(1);ci[0][2]=ah(WH);ci[0][3]=ah(-WH);ci[0][4]=ah(NH);
  ci[1][0]=ai(0);ci[1][1]=ai(1);ci[1][2]=ai(WI);ci[1][3]=ai(-WI);ci[1][4]=ai(NI);
