@@ -1,6 +1,6 @@
 #!../k
-a:`i$.*0:"i/15"
-f:{h::x#x;h[a]:1i+!n:`i$#a;0+(*|a){y-(h[x]:y)&h x}/n_!x}
+a:.*0:"i/15"
+f:{h::x#x;h[a]:1i+!n:#a;0+(*|a){y-(h[x]:y)&h x}/n_!x}
 f 2020i
 
 c:"#include<stdio.h>\n#define N 30000000\ntypedef int I;I h[N],a[]={",(","/$a),"},n=",$#a
