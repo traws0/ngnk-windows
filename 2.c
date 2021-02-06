@@ -44,10 +44,9 @@ OV*arf[4][11][4]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef h
 
 #define h(v,T,R,r0) SN V v##T##r(R*RE a,T*RE b,UL n){R c=*a;i(n,c=v##r0(c,b[i]))*a=c;}
-h(dex,H,L,l)h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(dvd,H,L,l)h(mod,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)h(ltn,H,L,l)h(gtn,H,L,l)h(eql,H,L,l)
-h(dex,I,L,l)h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(dvd,I,L,l)h(mod,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)h(ltn,I,L,l)h(gtn,I,L,l)h(eql,I,L,l)
-h(dex,L,L,l)h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(dvd,L,L,l)h(mod,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)h(ltn,L,L,l)h(gtn,L,L,l)h(eql,L,L,l)
-h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(dvd,D,D,d)h(mod,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)h(ltn,D,D,d)h(gtn,D,D,d)h(eql,D,D,d)
+#define ha(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
+ha(H,L,l)ha(I,L,l)ha(L,L,l)ha(D,D,d)
+#undef ha
 #undef h
 #define ha(x) {dex##x,add##x,sub##x,mul##x,dvd##x,mod##x,mnm##x,mxm##x,ltn##x,gtn##x,eql##x},
 #define h(x) OV*ar##x[4][11]={ha(H##x)ha(I##x)ha(L##x)ha(D##x)};
