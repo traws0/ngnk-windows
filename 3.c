@@ -28,11 +28,11 @@ hm(0,mhH,H,I)hm(0,miI,I,L)hm(1,mHH,H,I)hm(1,mII,I,L) //*
 S A w(Ax,Li,Lj,Ln)_(Ct=xt;Q(c3(tC,t,tI));Au=atn(t+1,n);wf[t-tC](xC+ZT[t]*i,uC,j-i);x(u)) //widen
 SN A f(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v?3:1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;
  P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))
- S TY(&ahH)f[]={ahH,aiI,alL,adD,aHH,aII,aLL,aDD,mhH,miI,mlL,mdD,mHH,mII,mLL,mDD};
- Ln=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[yt-tH+4*(k==3)+8*v](xtP?(V*)&x:xC,yC,uC,n);
+ S TY(&ahH)f[2][2][4]={{{ahH,aiI,alL,adD},{aHH,aII,aLL,aDD}},{{mhH,miI,mlL,mdD},{mHH,mII,mLL,mDD}}};
+ Ln=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tH](xtP?(V*)&x:xC,yC,uC,n);
  Y(m<n,
   Y(k-3,x=CH(xt-tc,&gH,gI,gL)(x))E(x=w(x,m,n,n-m))
   Y(y-u,y=w(y,m,n,n-m);u=w(u,0,m,n))E(y=u=w(u,0,n,n))
-  L mw=m*ZT[ut];f[yt-tH+4*(k==3)+8*v](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,n-m))
+  L mw=m*ZT[ut];f[v][k==3][yt-tH](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,n-m))
  x(y-u?y(u):u))
 A2(add,f(x,y,0))A2(mul,f(x,y,1))
