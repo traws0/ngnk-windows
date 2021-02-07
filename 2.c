@@ -17,9 +17,9 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(e
  SN I v##T##a(T*RE a,UL n,L*RE p,L m,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)
 #define v(v,hH,Hh,HH,iI,Ii,II,lL,Ll,LL,dD,Dd,DD,rl,rd) \
  ht(v,h,H,hH,Hh,HH,H)ht(v,i,I,iI,Ii,II,I)ht(v,l,L,lL,Ll,LL,rl)ht(v,d,D,dD,Dd,DD,rd)
-#define tT(f) _(LN(b)LN(r)TY(*a)c=*a;i(PD(n,a),*r++=f(c,*b++))0)
-#define Tt(f) _(LN(a)LN(r)TY(*b)c=*b;i(PD(n,a),*r++=f(*a++,c))0)
-#define TT(f) _(LN(a)LN(b)LN(r)      i(PD(n,a),*r++=f(*a++,*b++))0)
+#define tT(f) _(AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=f(c,*b++))0)
+#define Tt(f) _(AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=f(*a++,c))0)
+#define TT(f) _(AL(a)AL(b)AL(r)      i(PD(n,a),*r++=f(*a++,*b++))0)
 #define s(x) _(x(b,a,r,n))
 #define n(x) _(TY(*b)c=-*b;x(a,&c,r,n))
 //    hH       Hh       HH       iI       Ii       II       lL       Ll       LL       dD       Dd       DD
