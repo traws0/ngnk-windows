@@ -14,8 +14,10 @@ A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xN)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 #define i_(T,U) SN V i##T##U(OV*RE a,Lm,OV*RE b,V*RE c,Ln,Lv){O T*p=a;O U*q=b;T*r=c;i(n,U j=q[i];r[i]=in(j,m)?p[j]:v)}
 i_(C,L)i_(H,L)i_(I,L)i_(L,L)i_(C,I)i_(H,I)i_(I,I)i_(L,I)
 S A2(idx_,/*01*/Er(xtt,y)P(y==PLH,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)Et(ytF,y)Yt(getr(x,gl(y)))
- y=ytlL?y:N(gI(y));y=N(gL(y));L w=Zt[xt];Au=xtM?aA0:atn(xt,yn);P(xtA||xtM,u=AN(0,u);i(yn,uq(getr(x,yl)))y(u))
- A z=cn[xt];m2(y,CH(w+4*ytlL,&iCI,iHI,iII,iLI,iCL,iHL,iIL,iLL)(xC,xn,yC,uC,un,w==3?*zL:(I)z);0);u)
+ Y(!ytlL&&!ytiI,y=N(gI(y)))L w=Zt[xt];Au=xtM?aA0:atn(xt,yn);
+ P(xtA||xtM,u=AN(0,u);Y(ytlL,i(yn,uq(getr(x,yl))))E(i(yn,uq(getr(x,yi))))y(u))
+ Lv=xtL?NL:xtI?NI:xtH?NH:xtC?32:xtD?*(L*)(V*)(D[]){ND}:0;
+ m2(y,CH(w+4*ytlL,&iCI,iHI,iII,iLI,iCL,iHL,iIL,iLL)(xC,xn,yC,uC,un,v);u))
 S AX(idxA,Ay=*a++;n--;P(ytT||y==PLH,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))
 S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xti||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,x(al(now())))
