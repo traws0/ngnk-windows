@@ -34,8 +34,8 @@ A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',
 V init(){Ax=ce[tS]=aS(0);i(tS,ce[i]=AT(i,x))ce[tm]=am(aS0,aA0);glb=aa0();
  cn[tA]=ce[tA];cn[tC]=ac(32);cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
- ci[0][0]=ah(0);ci[0][1]=ah(1);ci[0][2]=ah(WH);ci[0][3]=ah(-WH);ci[0][4]=ah(NH);
- ci[1][0]=ai(0);ci[1][1]=ai(1);ci[1][2]=ai(WI);ci[1][3]=ai(-WI);ci[1][4]=ai(NI);
+ ci[0][0]=ah(0);ci[0][1]=ah(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
+ ci[1][0]=ai(0);ci[1][1]=ai(1);ci[1][2]=al(WL);ci[1][3]=al(-WL);ci[1][4]=cn[tL];
  i(5,ci[2][i]=al(CH(i,0ll,1,WL,-WL,NL)))i(5,ci[3][i]=ad(CH(i,0.,1,WD,-WD,ND)))}
 I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 
