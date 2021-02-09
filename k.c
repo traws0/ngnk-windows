@@ -15,17 +15,16 @@ A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xN)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 #define iF(f,T,U,R,e...) SN L f(OV*RE a,Lm,OV*RE b,V*RE c,UL n)_(O T*p=a;O U*q=b;R*r=c;AL(p)AL(q)AL(r)e;n)
 #define iC_(U) iF(iC##U,C,U,C,i(n,r[i]=in(q[i],m)?p[q[i]]:32))
 #define iS_(U) iF(iS##U,I,U,I,i(n,r[i]=in(q[i],m)?p[q[i]]: 0))
-#define i_(T,U)iF(j##T##U,T,U,L,i(n,r[i]=in(q[i],m)?p[q[i]]:NL))\
-               iF(i##T##U,T,U,T,UL i=0,l=n/G(T,U)*G(T,U);\
+#define j_(T,U)iF(j##T##U,T,U,L,i(n,r[i]=in(q[i],m)?p[q[i]]:NL))
+#define i_(T,U)iF(i##T##U,T,U,T,UL i=0,l=n/G(T,U)*G(T,U);\
                 W(i<l,j(G(T,U),P(!in(q[j],m),i))j(G(T,U),r[j]=p[q[j]])i+=G(T,U);q+=G(T,U);r+=G(T,U))\
                 j(n-l,P(!in(q[j],m),l))j(n-l,r[j]=p[q[j]]))
-iC_(I)iC_(L)i_(H,I)i_(H,L)i_(I,I)i_(I,L)i_(L,I)i_(L,L)iS_(I)iS_(L) //iII
+iC_(I)iC_(L)i_(H,I)j_(H,I)i_(H,L)j_(H,L)i_(I,I)j_(I,I)i_(I,L)j_(I,L)j_(L,I)j_(L,L)iS_(I)iS_(L) //iII
 S A2(idx_,/*01*/Er(xtt,y)P(y==PLH,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)Et(ytF,y)Yt(getr(x,gl(y)))
  Y(!ytL&&!ytI,y=N(gI(y)))Ln=yn;Au=xtM?aA0:atn(xt,n);
  P(xtA||xtM,u=AN(0,u);Y(ytL,i(n,uq(getr(x,yl))))E(i(n,uq(getr(x,yi))))y(u))
- Lm=CH(xt-tC+6*ytL,&iCI,iHI,iII,iLI,iLI,iSI,iCL,iHL,iIL,iLL,iLL,iSL)(xC,xn,yC,uC,n);
- Y(m<n,u=u(aL(n));CH(xt-tH+4*ytL,  &jHI,jII,jLI,jLI,jHL,jIL,jLL,jLL)(xC,xn,yC,uC,n))
- y(u))
+ Lm=CH(xt-tC+6*ytL,&iCI,iHI,iII,jLI,jLI,iSI,iCL,iHL,iIL,jLL,jLL,iSL)(xC,xn,yC,uC,n);
+ Y(m<n,u=u(aL(n));CH(xt-tH+2*ytL,&jHI,jII,jHL,jIL)(xC,xn,yC,uC,n))y(u))
 S AX(idxA,Ay=*a++;n--;P(ytT||y==PLH,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))
 S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xti||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,x(al(now())))
