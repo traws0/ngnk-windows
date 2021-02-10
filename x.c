@@ -16,7 +16,7 @@ S C*s,*p;
 #define h(n) ({Ed(p-s<n);C*r=s;s+=n;r;})
 #define h1 (*(C*)h(1))
 #define h8 (*(L*)h(8))
-S A g()_(Ct=h1;Ed(!in(t,tn))
+S A0(g,Ct=h1;Ed(!in(t,tn))
  P(t==tA||t==tS,Ln=h8;Ed(!in(n,1ll<<45))Ax=AN(0,atn(t,n));i(n,xq(Nx(g())))x)
  P(t==tm||t==tM,Ax=N(g());Ed(!xtA||xn-2||At(xx)>tM||At(xy)>tM||_N(xx)-_N(xy))AT(t,x))
  P(t==ts,Cn=h1;as(syP(h(n))))
