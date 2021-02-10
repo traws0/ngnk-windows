@@ -21,7 +21,7 @@ S A1(shy,P(xn<2,x)Ay=xA[xn-1];Y(ytA&&yn>2,Az=yx;Y(z==av0||ztu,xq(au0)))x) //if l
 S A px(In)_(Q(in(n,4));Au=aS(n);iui('x'+i))
 S A0(po,C nb=na;na=1;C*s1=s0,*t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(aA0,']')));Ep(!ytS||yn>8,y))
  Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
-S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=pS(c);xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
+S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
  P(c=='(',s++;P(*s==')',s++;aA0)x=N(pb(enl(MKL),')'));xn-2?x:las(x))
  P(dgt(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!ldg(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;C*p=s;c=*p;
