@@ -7,9 +7,10 @@ S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0
 S D pd(C**p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S C*s0,*s,na;
 S A pLm(L*m)_(Ax=aL0;Cc;
- W(1,Lv=pl(&s);c=*s;Y(!v&&c=='N',v=NL;c=*++s)E(*m=min(*m,v);m[1]=max(m[1],v))x=apv(x,&v);Y(c-32||!num(s+1),B)c=*++s)x)
+ W(1,Lv=pl(&s);c=*s;Y(!v&&c=='N',v=NL;c=*++s)*m=min(*m,v);m[1]=max(m[1],v);x=apv(x,&v);Y(c-32||!num(s+1),B)c=*++s)x)
 S A0(pZ,L m[2]={};Ax=pLm(m);Cc=*s;
- P(c=='j'||c=='l',s++;x)P(c=='i',Ep(*m<NI||WI<m[1],x)s++;gI(x))P(c=='h',Ep(*m<NH||WH<m[1],x)s++;gH(x))x)
+ P(c=='j'||c=='l',s++;x)P(c=='i',Ep(*m<NI||WI<m[1],x)s++;gI(x))P(c=='h',Ep(*m<NH||WH<m[1],x)s++;gH(x))
+ P(NI<*m&&m[1]<WI,gI(x))x)
 S A0(pD,Ax=aD0;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),B)s++)x)
 S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
 S C ph()_(Cc=*s;dgt(c)?c-'0':c3('a',c,'f')?c+10-'a':16)
