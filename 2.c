@@ -43,7 +43,7 @@ OV*arf[4][11][4]={{hA(h,H)},{hA(i,I)},{hA(l,L)},{hA(d,D)}};
 #undef hA
 #undef h
 
-#define h(v,T,R,r0) SN V v##T##r(R*RE a,T*RE b,UL n){R c=*a;i(n,c=v##r0(c,b[i]))*a=c;}
+#define h(v,T,R,r0) SN I v##T##r(R*RE a,T*RE b,UL n)_(R c=*a;i(n,c=v##r0(c,b[i]))*a=c;n)
 #define ha(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
 ha(H,L,l)ha(I,L,l)ha(L,L,l)ha(D,D,d)
 #undef ha
