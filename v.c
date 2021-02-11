@@ -1,18 +1,19 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-#define til_(T)   V til##T(V*p,Ln)_(T*a=p;AL(a)i(PD(n,a),a[i]=i))
-#define r_(T)     S V r##T(V*p,Ln)_(T*a=p,*b=a+n-1;W(a<b,SWP(*a,*b);a++;b--))
+#define i_(T)     S V i##T(V*p,Ln)_(T*a=p;AL(a)i(PD(n,a),a[i]=i))
+#define r_(T)     S V r##T(V*p,V*q)_(T*a=p,*b=q;AL(a)W(a<b,SWP(*a,*b);a++;b--))
 #define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
 #define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
-til_(H)til_(I)til_(L)r_(C)r_(H)r_(I)r_(L)
+i_(H)i_(I)i_(L)r_(C)r_(H)r_(I)r_(L)
 c_(C,H,r)c_(H,C,a)c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
 TY(&cCH)wf[]={cCH,cHI,cIL,cLD};
 A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))L m=An(yx);i(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
-A1(til,Xz(Ln=gl_(x);Im=n<0;n*=1-2*m;Ez(n>1<<30,x)Au=atn(tT(xt),n);CH(xt-th,&tilH,tilI,tilL)(uC,n);m?add(x,u):x(u))
+A1(til,Xz(Ln=gl_(x);Im=n<0;n*=1-2*m;Ez(n>1<<30,x)Au=atn(tT(xt),n);CH(xt-th,&iH,iI,iL)(uC,n);m?add(x,u):x(u))
  XZ(K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xm(fir(AT(tA,x)))Xo(val(x))Xs(Iv=gs(x);e0(syp(&v)))Et(!xtA||xn,x)x)
 A1(whr,XA(K("{$[`A~@x;(,&#'*'x),,'/x@\\:!0|/#'x:o'x;,&x]}",x))Xm(Ay=kv(&x);idx(x,Nx(whr(y))))Et(xtM,x)
  x=N(gL(enla(x)));Ln=0;i(xn,Ed(xl<0,x)n+=xl)Au=aL(n);m2(x,n=0;i(xn,j(xl,uL[n++]=i))u))
-A1(rev,XT(x=mut(x);CH(Zt[xt],&rC,rH,rI,rL,rL)(xC,xn);x)Xm(AT(tm,N(ea1(rev,AT(tA,x)))))XM(Ay=kv(&x);aM(x,Nx(ea1(rev,y))))x)
+A1(rev,XT(x=mut(x);CH(Zt[xt],&rC,rH,rI,rL,rL)(xC,xC+ZT[xt]*(xn-1));x)
+ Xm(AT(tm,N(ea1(rev,AT(tA,x)))))XM(Ay=kv(&x);aM(x,Nx(ea1(rev,y))))x)
 A1(typ,x(as(TS[xt])))
 A1(len,x(az(xN)))L _N(Ax/*0*/)_(xtT?xn:xtm?_N(xy):!xtM?1:An(xy)?_N(*(A*)dat(xy)):1)
 A1(unq,Et(!xtT,x)xn<2?x:K("{x@&@[&#x;i;:;]@[;0;:;a=a:*a]@a:~$[`A=@x;~;=]':x@i:<x}",x))
@@ -48,7 +49,7 @@ S I c(Ax,Ay/*00*/)_(P(mtc_(x,y),0)Iv=cT(x)-cT(y);P(v,v)P(xtc||xtz,cL(gl_(x),gl_(
  Y(!xtP,Iv=cL(xn,yn);XT(i(min(xn,yn),Az=get(x,i),u=get(y,i);I d=c(z,u);mr(z(u));P(d,d))v))cL(x,y))
 S I bef(A*a,Ii,Ij)_(Iv=c(a[i],a[j]);v?v<0:i<j)
 S V sft(A*a,I*l,Ii,Ij)_(W(1,Lk=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),B)SWP(l[i],l[k])i=k))
-S A1(asci,Ez(xn>WI,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];tilI(uI,n);
+S A1(asci,Ez(xn>WI,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];iI(uI,n);
  m2(x,m2(y,j(w,ms(c,0,Z c);i(n,a[i]=xC[w*ui+j])i(n,c[a[i]+1]++)Y(c[1+*a]-n,i(255,c[i+1]+=c[i])i(n,zI[c[a[i]]++]=ui)SWP(z,u)))z(u))))
 A1(asc,XA(Ez(xn>WI,x)A*a=xA,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=n-1;W(i>0,SWP(ui,*uI)sft(a,uI,0,--i))x(u))
  Xm(Ay=kv(&x);idx(x,N(asc(y))))P(xtC||xtZ,asci(x))XS(asc(N(ea1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)hop(x))
