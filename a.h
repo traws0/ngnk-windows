@@ -41,8 +41,8 @@
  #define Q(x)
 #endif
 
-TD void V;TD char unsigned C,UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;TD double D;
-TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I);
+TD void V;TD char B;TD char unsigned C,UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;
+TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I);
 #define A0(f,b...) A f(          )_(b)
 #define A1(f,b...) A f(Ax        )_(b)
 #define A2(f,b...) A f(Ax,Ay     )_(b)

@@ -38,48 +38,56 @@
 #define u(a) dex(u,a)
 #define xA ((A*)dat(x))
 #define xC ((C*)dat(x))
+#define xB ((B*)dat(x))
 #define xH ((H*)dat(x))
 #define xI ((I*)dat(x))
 #define xL ((L*)dat(x))
 #define xD ((D*)dat(x))
 #define yA ((A*)dat(y))
 #define yC ((C*)dat(y))
+#define yB ((B*)dat(y))
 #define yH ((H*)dat(y))
 #define yI ((I*)dat(y))
 #define yL ((L*)dat(y))
 #define yD ((D*)dat(y))
 #define zA ((A*)dat(z))
 #define zC ((C*)dat(z))
+#define zB ((B*)dat(z))
 #define zH ((H*)dat(z))
 #define zI ((I*)dat(z))
 #define zL ((L*)dat(z))
 #define zD ((D*)dat(z))
 #define uA ((A*)dat(u))
 #define uC ((C*)dat(u))
+#define uB ((B*)dat(u))
 #define uH ((H*)dat(u))
 #define uI ((I*)dat(u))
 #define uL ((L*)dat(u))
 #define uD ((D*)dat(u))
 #define xa xA[i]
 #define xc xC[i]
+#define xb xB[i]
 #define xh xH[i]
 #define xi xI[i]
 #define xl xL[i]
 #define xd xD[i]
 #define ya yA[i]
 #define yc yC[i]
+#define yb yB[i]
 #define yh yH[i]
 #define yi yI[i]
 #define yl yL[i]
 #define yd yD[i]
 #define za zA[i]
 #define zc zC[i]
+#define zb zB[i]
 #define zh zH[i]
 #define zi zI[i]
 #define zl zL[i]
 #define zd zD[i]
 #define ua uA[i]
 #define uc uC[i]
+#define ub uB[i]
 #define uh uH[i]
 #define ui uI[i]
 #define ul uL[i]
@@ -98,6 +106,7 @@
 #define uz uA[2]
 #define xtA (xt==tA)
 #define xtC (xt==tC)
+#define xtB (xt==tB)
 #define xtH (xt==tH)
 #define xtI (xt==tI)
 #define xtL (xt==tL)
@@ -106,6 +115,7 @@
 #define xtM (xt==tM)
 #define xtm (xt==tm)
 #define xtc (xt==tc)
+#define xtb (xt==tb)
 #define xth (xt==th)
 #define xti (xt==ti)
 #define xtl (xt==tl)
@@ -120,6 +130,7 @@
 #define xtw (xt==tw)
 #define ytA (yt==tA)
 #define ytC (yt==tC)
+#define ytB (yt==tB)
 #define ytH (yt==tH)
 #define ytI (yt==tI)
 #define ytL (yt==tL)
@@ -128,6 +139,7 @@
 #define ytM (yt==tM)
 #define ytm (yt==tm)
 #define ytc (yt==tc)
+#define ytb (yt==tb)
 #define yth (yt==th)
 #define yti (yt==ti)
 #define ytl (yt==tl)
@@ -142,6 +154,7 @@
 #define ytw (yt==tw)
 #define ztA (zt==tA)
 #define ztC (zt==tC)
+#define ztB (zt==tB)
 #define ztH (zt==tH)
 #define ztI (zt==tI)
 #define ztL (zt==tL)
@@ -150,6 +163,7 @@
 #define ztM (zt==tM)
 #define ztm (zt==tm)
 #define ztc (zt==tc)
+#define ztb (zt==tb)
 #define zth (zt==th)
 #define zti (zt==ti)
 #define ztl (zt==tl)
@@ -164,6 +178,7 @@
 #define ztw (zt==tw)
 #define utA (ut==tA)
 #define utC (ut==tC)
+#define utB (ut==tB)
 #define utH (ut==tH)
 #define utI (ut==tI)
 #define utL (ut==tL)
@@ -172,6 +187,7 @@
 #define utM (ut==tM)
 #define utm (ut==tm)
 #define utc (ut==tc)
+#define utb (ut==tb)
 #define uth (ut==th)
 #define uti (ut==ti)
 #define utl (ut==tl)
@@ -190,33 +206,34 @@
 #define xtR _R(xt)
 #define xtt _t(xt)
 #define xtT _T(xt)
+#define xtz _z(xt)
+#define xtZ _Z(xt)
 #define ytF _F(yt)
 #define ytP _P(yt)
 #define ytQ _Q(yt)
 #define ytR _R(yt)
 #define ytt _t(yt)
 #define ytT _T(yt)
+#define ytz _z(yt)
+#define ytZ _Z(yt)
 #define ztF _F(zt)
 #define ztP _P(zt)
 #define ztQ _Q(zt)
 #define ztR _R(zt)
 #define ztt _t(zt)
 #define ztT _T(zt)
+#define ztz _z(zt)
+#define ztZ _Z(zt)
 #define utF _F(ut)
 #define utP _P(ut)
 #define utQ _Q(ut)
 #define utR _R(ut)
 #define utt _t(ut)
 #define utT _T(ut)
-#define xtz c3(th,xt,tl)
-#define ytz c3(th,yt,tl)
-#define ztz c3(th,zt,tl)
-#define utz c3(th,ut,tl)
-#define xtZ c3(tH,xt,tL)
-#define ytZ c3(tH,yt,tL)
-#define ztZ c3(tH,zt,tL)
-#define utZ c3(tH,ut,tL)
+#define utz _z(ut)
+#define utZ _Z(ut)
 #define xtcC (xtc||xtC)
+#define xtbB (xtb||xtB)
 #define xthH (xth||xtH)
 #define xtiI (xti||xtI)
 #define xtlL (xtl||xtL)
@@ -225,6 +242,7 @@
 #define xtmM (xtm||xtM)
 #define xtzZ (xtz||xtZ)
 #define ytcC (ytc||ytC)
+#define ytbB (ytb||ytB)
 #define ythH (yth||ytH)
 #define ytiI (yti||ytI)
 #define ytlL (ytl||ytL)
@@ -233,6 +251,7 @@
 #define ytmM (ytm||ytM)
 #define ytzZ (ytz||ytZ)
 #define ztcC (ztc||ztC)
+#define ztbB (ztb||ztB)
 #define zthH (zth||ztH)
 #define ztiI (zti||ztI)
 #define ztlL (ztl||ztL)
@@ -241,6 +260,7 @@
 #define ztmM (ztm||ztM)
 #define ztzZ (ztz||ztZ)
 #define utcC (utc||utC)
+#define utbB (utb||utB)
 #define uthH (uth||utH)
 #define utiI (uti||utI)
 #define utlL (utl||utL)
@@ -262,6 +282,7 @@
 #define utmMA (utmM||utA)
 #define XA(a...) P(xtA,a)
 #define XC(a...) P(xtC,a)
+#define XB(a...) P(xtB,a)
 #define XH(a...) P(xtH,a)
 #define XI(a...) P(xtI,a)
 #define XL(a...) P(xtL,a)
@@ -302,6 +323,7 @@
 #define XmMA(a...) P(xtmMA,a)
 #define YA(a...) P(ytA,a)
 #define YC(a...) P(ytC,a)
+#define YB(a...) P(ytB,a)
 #define YH(a...) P(ytH,a)
 #define YI(a...) P(ytI,a)
 #define YL(a...) P(ytL,a)
@@ -348,6 +370,12 @@
 #define Co C o
 #define Ct C t
 #define Cv C v
+#define Bi B i
+#define Bj B j
+#define Bk B k
+#define Bm B m
+#define Bn B n
+#define Bv B v
 #define Hi H i
 #define Hj H j
 #define Hk H k
