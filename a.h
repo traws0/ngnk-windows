@@ -65,7 +65,7 @@ S I in(UL i,UL n)_(i<n)
 V*memcpy(V*,OV*,size_t),*memmove(V*,OV*,size_t),*memset(V*,I,size_t),exit(I);size_t strlen(OC*);
 I strcmp(OC*,OC*),memcmp(OV*,OV*,size_t);
 
-//         () "" ,h ,i ,0 ,d ,` +! ! "c" 0h 0i 0  0. `  {} 1+ ++ +/ +: +  /
+//         () "" ,1 ,2 ,3 ,d ,` +!  ! "c" 1  2  3 .3  ` {} 1+ ++ +/ +: +  /
 enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
