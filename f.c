@@ -5,7 +5,7 @@ S V rndL(L*r,UL n){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260e
  i(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=rot(d,45))}
 S A rnd(Ln,Lm)_(Y(n==NL,Ed(m<0)n=-m)
  Au=aL(absL(n));rndL(uL,un);Y(m,Y(m<=1ll<<32,iul((UI)ul*(UL)m>>32))E(iul((UL)ul%m)))
- Y(n<0,n=-n;El(n>m,u)i(n,Lk=m-n+i;Lv=((UL*)uL)[i]%=k+1;L*p=&ul;j(i,Y(ul==v,*p=k;B)))Ay=rnd(n,0);m2(y,i(n,SWP(ul,uL[(UL)yl%(i+1)]))0))u)
+ Y(n<0,n=-n;El(n>m,u)i(n,Lk=m-n+i;Lv=((UL*)uL)[i]%=k+1;L*p=&ul;j(i,Y(ul==v,*p=k;BR)))Ay=rnd(n,0);m2(y,i(n,SWP(ul,uL[(UL)yl%(i+1)]))0))u)
 S A rndD(Ln)_(A x=AT(tD,rnd(n,0));i(n,xl=xl&-1ull>>12|1023ll<<52)x)
 SN I fAA(Ax,Ay/*00*/)_(Q(xtA);i(xn,P(mtc_(xa,y),i))NI)
 I fpA(A*p,Ay/*1*/)_(Ax=*p;In=xn,i=fAA(x,y);P(i<0,_q(*p,y);n)y(0);i)

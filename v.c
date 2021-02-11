@@ -48,7 +48,7 @@ S I c(Ax,Ay/*00*/)_(P(mtc_(x,y),0)Iv=cT(x)-cT(y);P(v,v)P(xtc||xtz,cL(gl_(x),gl_(
  Xd(Dv=gd_(x),w=gd_(y);v<w?-1:v>w?1:0)Xs(Iv=gs(x),w=gs(y);strcmp(syp(&v),syp(&w)))
  Y(!xtP,Iv=cL(xn,yn);XT(i(min(xn,yn),Az=get(x,i),u=get(y,i);I d=c(z,u);mr(z(u));P(d,d))v))cL(x,y))
 S I bef(A*a,Ii,Ij)_(Iv=c(a[i],a[j]);v?v<0:i<j)
-S V sft(A*a,I*l,Ii,Ij)_(W(1,Lk=1+2*i;Y(k>j,B)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),B)SWP(l[i],l[k])i=k))
+S V sft(A*a,I*l,Ii,Ij)_(W(1,Lk=1+2*i;Y(k>j,BR)Y(k+1<=j&&bef(a,l[k],l[k+1]),k++)Y(!bef(a,l[i],l[k]),BR)SWP(l[i],l[k])i=k))
 S A1(asci,Ez(xn>WI,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];iI(uI,n);
  m2(x,m2(y,j(w,ms(c,0,Z c);i(n,a[i]=xC[w*ui+j])i(n,c[a[i]+1]++)Y(c[1+*a]-n,i(255,c[i+1]+=c[i])i(n,zI[c[a[i]]++]=ui)SWP(z,u)))z(u))))
 A1(asc,XA(Ez(xn>WI,x)A*a=xA,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=n-1;W(i>0,SWP(ui,*uI)sft(a,uI,0,--i))x(u))

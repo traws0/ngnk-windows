@@ -15,7 +15,7 @@ M n_string /'\\\=.'\|"\([^\\"]\|\\.\)*"/ contains=n_e                          |
 M n_e "\\\(x\x\x\|.\)" contained                                               |H n_e special
 K n_k TD S SN NO O ST __attribute__ asm enum do struct for extern              |H n_k statement
 K n_t A0 A1 A2 A3 AA AX nextgroup=n_vv                                         |H n_t normal
-K n_r return B continue                                                        |H n_r n_d_rr
+K n_r return BR continue                                                       |H n_r n_d_rr
 R n_aa g=n_a s="("                       e=")" c=@n_x,n_a |M n_a "," contained |H n_a nontext
 R n_bb g=n_b s="\["                      e="]" c=@n_x,n_b |M n_b "," contained |H n_b n_a
 R n_cc g=n_c s="{"                       e="}" c=@n_x,n_c |M n_c "," contained |H n_c n_a
