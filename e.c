@@ -7,7 +7,7 @@ NO A eN(OC*m,In,OA*a)_(mrn(n,a);e0(m))
 SN I eC()_(e.n=0;Y(e.s,mr(e.s);e.s=0)e.o=0)
 NO I eS(Ax/*1*/,I o)_(Y(!e.s,e.s=x;e.o=o)0)
 A3(try,x=apn(x,y);P(x,z(x))
- Y(ztF,Ck=zk;z=k==1?ap1(z,aCn(e.m,e.n)):k==2?apn(z,a2(aCn(e.m,e.n),a2(e.s?mR(e.s):ac(0),al(e.o)))):z)eC();z)
+ Y(ztF,Ck=zk;z=k==1?ap1(z,aCn(e.m,e.n)):k==2?apn(z,a2(aCn(e.m,e.n),a2(e.s?mR(e.s):ac(0),az(e.o)))):z)eC();z)
 A1(epr,I h=64;C s0[3*h+Z(e.m)+6],*s=s0;*s++='\'';mc(s,e.m,e.n);s+=e.n;*s++=10;
  Y(e.s,Ax=e.s;C*t=xC+e.o,*p=t,*q=t+1;W(p>xC&&p>t-h&&p[-1]&&p[-1]-10,p--)W(q<xC+xn&&q<=t+h&&*q&&*q-10,q++)
        mc(s,p,q-p);Y(p<=t-h,*s=s[1]='.')Y(q>t+h,s[q-p-2]=s[q-p-1]='.')s+=q-p;*s++=10;i(t-p,*s++=32)*s++='^';*s++=10)
