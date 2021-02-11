@@ -7,6 +7,7 @@ S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about
 
 TD int(*F1)(OV*,V*,L);
 #define F1(f,T,c...) S I f##T(OV*a0,V*r0,Ln)_(O T*a=a0;T*r=r0;I b=0;i(PD(n,a),r[i]=({c;}))b)
+F1(neg,B,b|=a[i]==NB;-a[i])
 F1(neg,H,b|=a[i]==NH;-a[i])
 F1(neg,I,b|=a[i]==NI;-a[i])
 F1(neg,L,-a[i])
@@ -17,8 +18,8 @@ F1(flr,C,a[i]+32*c3('A',a[i],'Z'))
 
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
 SN A fx(Ax,F1 f)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);m2(x,f(xC,uC,un);u))
-R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!c3(tH,xt,tD),et1(x))
- Au=xr>1?atn(xt,xn):x;CH(xt-tH,&negH,negI,negL,negD)(xC,uC,xn);x==u?u:x(u))
+R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZ&&!xtD,et1(x))
+ Au=xr>1?atn(xt,xn):x;CH(xt-tH+1,&negB,negH,negI,negL,negD)(xC,uC,xn);x==u?u:x(u))
 R1(not,XF(x(ah(x==au0)))eql(x,xtsS?as(0):ac(0)))
 R1(sqr,fx(N(gD(x)),sqrD))
 R1(sin,fx(N(gD(x)),sinD))

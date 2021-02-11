@@ -70,14 +70,16 @@ enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}
 #define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-extern OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(th,t,tl))S I _Z(Ct)_(c3(tH,t,tL))
+#define tB tH
+#define tb th
+extern OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(tb,t,tl))S I _Z(Ct)_(c3(tB,t,tL))
 S I _F(Ct)_(t>=to)S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I _Q(Ct)_(c3(tc,t,ts))S I _R(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,i=value):
 // tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tI,tL,tD,tS,tM,tm,tl,td
-// tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ti,th,tc
+// tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii tc,tb,th,ti
 // tttttttt........ooooooooooooooooiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ts
 // tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
@@ -97,7 +99,7 @@ S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 A0 aa0;
-A1 a1,aes0,aes1,asc,ax,blw,cf,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gD,gH,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,
+A1 a1,aes0,aes1,asc,ax,blw,cf,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gD,gH,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,
  kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,sha1,sha256,sha3_256,sin,ser,sqr,sqz,str,str0,til,typ,
  u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
@@ -111,15 +113,15 @@ C*syp(I*),art(I,C);
 I fC(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpC(A*,C),fpH(A*,H),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A);
-TD V(*Fc)(OV*RE,V*RE,L);extern Fc wf[];
-extern A glb,ce[],cn[],ci[4][5];extern OC vc[];extern L mu;extern A1*ct[];
-extern OV*vf[],*arf[4][11][4],*arr[4][11],*ars[4][11],*arp[4][11],*ara[4][11];
+TD V(*Fc)(OV*RE,V*RE,L);extern Fc wf[];extern A glb,ce[],cn[],ci[4][5];extern OC vc[];extern L mu;extern A1*ct[];
+extern OV*vf[],*arf[][11][4],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Ln)_(atn(t##T,n))
  h(A)h(C)h(H)h(I)h(L)h(D)h(S)
 #undef h
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);x)
+S A ab(Bv)_(AT(tb,v))     S B gb (Ax)_(Q(xtb);x)
 S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);x)
 S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xth||xtc);x)
@@ -142,6 +144,8 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #define WI (~NI)
 #define NH (H)(1<<15)
 #define WH (~NH)
+#define NB -128
+#define WB 127
 
 #define iut(t,v...) ({i(un,u##t=({v;}))u;})
 #define iua(v...) iut(a,v)
