@@ -4,11 +4,11 @@
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-2]
 S A mx[40];A glb,ce[tn],cn[tn],ci[4][5];L mu;S I ml;SN A oom()_(write(1,"oom\n",4);exit(1);0)
-S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);AB(b,x))Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
+S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);bkt(x)=b;x)Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())x=(A)(p+ZA))
- W(i>b,i--;Ay=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)AB(b,x))
-A1(mr0,dbg(ml++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=Ab(x);P(!b,AT(tn,x))
+ W(i>b,i--;Ay=mx[i]=(A)(x+(1ll<<i));nxt(y)=0)bkt(x)=b;x)
+A1(mr0,dbg(ml++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))
  nxt(x)=mx[b];mx[b]=x&~(-1ull<<48);mu-=1ll<<b;Y(xtR,mrn(xn,xA))x)
 A1(mr1,dbg(ml--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]));0)
 A1(mr,mr1(mr0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
@@ -22,7 +22,7 @@ A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,at
 A aCn(OC*s,Ln)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(s)))
 A az(Lv)_(NH<v&&v<=WH?ah(v):(L)NI<v&&v<=(L)WI?ai(v):al(v))
 A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=mR(xx);mR(xy))*p=xx;Au=xy;AN(0,x);x(u)) //get keys and values
-A room(Ax,Lk)_(Q(xtC);Ln=xn;P(xr==1&&ZA+n+k<=1ll<<Ab(x),x)Au=AN(n,aC(n+k));mc(uC,xC,n);x(u))
+A room(Ax,Lk)_(Q(xtC);Ln=xn;P(xr==1&&ZA+n+k<=1ll<<bkt(x),x)Au=AN(n,aC(n+k));mc(uC,xC,n);x(u))
 S C sy0[1<<16]__attribute__((aligned(ZA))),*sy1=sy0+1;C*syp(I*p)_(*p<0?sy0-*p:(V*)p)
 I syP(OC*s)_(In=mn(s)+1;P(n<5,mc(&n,s,n);n)
  OC*p=sy0+1;W(p<sy1,OC*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,sy0-p)p=q;W(*p,p++)p++)

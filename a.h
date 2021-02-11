@@ -83,14 +83,14 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 #define dat(x) ((V*)((x)<<16>>16))
-#define Ar(x) ((I*)dat(x))[-3]
+#define bkt(x) ((C*)dat(x))[-16]
+#define Ar(x)  ((I*)dat(x))[-3]
 #define _q(x,y) (x=apd(x,y)) //append
 
 //getters                              setters
 S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
 S  C Av(Ax)_(x>>51&31)                 S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C Ak(Ax)_(x>>48&7)                  S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
-S  C Ab(Ax)_(C b=xC[-16];Q(b<48);b)    S A AB( C b,Ax)_(Q(b<48);                  xC[-16]=b;x)
 S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])   S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
 S UL An(Ax)_(Ln=xL[-1];Q(n<1ll<<48);n) S A AN(UL n,Ax)_(Q(n<1ll<<48);              xL[-1]=n;x)
 S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
@@ -172,4 +172,4 @@ S I os(OC*x)_(write(2,x,mn(x)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
 S I ol(Ln)_(C b[32],*u=b+31;L m=n<0;Y(m,n=-n)do{*u--='0'+n%10;n/=10;}while(n);Y(m,*u--='-')write(2,u+1,b+31-u))
 S L ov_(C*s,Ln)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
-S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!xtP,os(" b");ol(Ab(x));os("t");ol(xt);os("r");ol(xr);os("n");ol(xn))os(" ");out(x))
+S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!xtP,os("t");ol(xt);os("r");ol(xr);os("n");ol(xn))os(" ");out(x))
