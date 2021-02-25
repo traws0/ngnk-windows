@@ -78,7 +78,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 
 //header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,i=value):
-// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tI,tL,tD,tS,tM,tm,tl,td
+// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii tc,tb,th,ti
 // tttttttt........ooooooooooooooooiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ts
 // tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
@@ -118,7 +118,7 @@ extern OV*vf[],*arf[][11][4],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Ln)_(atn(t##T,n))
- h(A)h(C)h(H)h(I)h(L)h(D)h(S)
+ h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S)
 #undef h
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);x)
 S A ab(Bv)_(AT(tb,v))     S B gb (Ax)_(Q(xtb);x)
