@@ -36,7 +36,7 @@ A1(gD,XdD(x)Xt(gt(x,gD))x=N(gL(x));Au=aD(xn);m2(x,cLD(xC,uC,un);u))
 A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Et(!xtc,x)as(gc(x)))
 TY(ct)ct={[tA]=blw,[tC]=gC,[tH]=gH,[tI]=gI,[tL]=gL,[tD]=gD};
 A2(cst,P(xtS||ytmMA,eac(cv('$'),A(x,y),2))P(xtz&&ytC,K("{y@(!x)+(x<0)*#y}",x,y))
- Xs(SF(x,y,"`c`b`h`i`l`d``s",gC,0,gH,gI,gL,gD,gS,gS))en2(x,y))
+ Xs(SF(x,y,"`c`b`h`i`l`d``s",gC,gB,gH,gI,gL,gD,gS,gS))en2(x,y))
 A1(sqz,P(!xtA||!xn,x)Au=aA0;i(xn,uq(mR(xa)))x(u))
 A1(blw,XA(x)Xt(a1(x))Et(xtm,x)Ln=xN;Au=aA(n);x(iua(get(x,i))))
 L tru(Ax/*1*/)_(Lv=xtQ?gl_(x):xtF?!xtu||xv:xn;x(0);v)A1(fir,xtt?x:x(getr(x,0)))A1(las,xtt?x:x(getr(x,xn-1)))
@@ -57,5 +57,5 @@ A1(asc,XA(Ez(xn>WI,x)A*a=xA,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=
 A1(dsc,Xi(hcl(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)sub(ai(xN-1),rev(asc(rev(x)))))
 A1(grp,Xt(Et(!xtz)K("{(2#x)#1,&x}",x))Xm(Au=grp(kv(&x));Q(ur==1);uy=idx(x,uy);u)
  Ay=atn(xt,0),u=aA0;C w=Zt[xt];
- i(xn,Lj=!w?fpC(&y,xc):w==1?fpH(&y,xh):w==2?fpI(&y,xi):w==3?fpL(&y,xl):fpA(&y,mR(xa));Y(j==un,uq(aL0))uA[j]=apv(uA[j],&i))
+ i(xn,Lj=!w?fpB(&y,xb):w==1?fpH(&y,xh):w==2?fpI(&y,xi):w==3?fpL(&y,xl):fpA(&y,mR(xa));Y(j==un,uq(aL0))uA[j]=apv(uA[j],&i))
  am(x(y),u))
