@@ -32,13 +32,10 @@ S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p+
 A1(ldf,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)x(au0))
 V init(){Ax=ce[tS]=aS(0);i(tS,ce[i]=AT(i,x))ce[tm]=am(aS0,aA0);glb=aa0();
- cn[tA]=ce[tA];cn[tC]=ac(32);cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
+ cn[tA]=ce[tA];cn[tC]=ac(32);/*cn[tB]=*/cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0); //todo
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
- ci[0][0]=al(0);  ci[1][0]=AT(td,ci[0][0]);
- ci[0][1]=al(1);  ci[1][1]=ad(1);
- ci[0][2]=al(WL); ci[1][2]=ad(WD);
- ci[0][3]=al(-WL);ci[1][3]=ad(-WD);
- ci[0][4]=cn[tL]; ci[1][4]=cn[tD];}
+ ci[0][0]=al(0);          ci[0][1]=al(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
+ ci[1][0]=AT(td,ci[0][0]);ci[1][1]=ad(1);ci[1][2]=ad(WD);ci[1][3]=ad(-WD);ci[1][4]=cn[tD];}
 I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 
 #ifndef shared

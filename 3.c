@@ -6,14 +6,14 @@
 #define hM(f,l,T,R,g)    ho(f,l,T,g,R v[g];j(g,v[j]=a[l*j]*(R)b[j])j(g,P(v[j]<=N##T||W##T<=v[j],i)))
 #define ha(f,l,T)        hA(f,l,T,  (32/Z(T)))
 #define hm(f,l,T,R)      hM(f,l,T,R,(32/Z(T)))
-ha(ahH,0,H  )ha(aiI,0,I  )ha(aHH,1,H  )ha(aII,1,I  )hn(alL,0,L,+)hn(aLL,1,L,+)hn(adD,0,D,+)hn(aDD,1,D,+)
-hm(mhH,0,H,I)hm(miI,0,I,L)hm(mHH,1,H,I)hm(mII,1,I,L)hn(mlL,0,L,*)hn(mLL,1,L,*)hn(mdD,0,D,*)hn(mDD,1,D,*)
+ha(abB,0,B  )ha(aBB,1,B  )ha(ahH,0,H  )ha(aHH,1,H  )ha(aiI,0,I  )ha(aII,1,I  )hn(alL,0,L,+)hn(aLL,1,L,+)hn(adD,0,D,+)hn(aDD,1,D,+)
+hm(mbB,0,B,H)hm(mBB,1,B,H)hm(mhH,0,H,I)hm(mHH,1,H,I)hm(miI,0,I,L)hm(mII,1,I,L)hn(mlL,0,L,*)hn(mLL,1,L,*)hn(mdD,0,D,*)hn(mDD,1,D,*)
 S A f(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v?3:1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;
  P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))
- S TY(&ahH)f[][2][4]={{{ahH,aiI,alL,adD},{aHH,aII,aLL,aDD}},{{mhH,miI,mlL,mdD},{mHH,mII,mLL,mDD}}};
- Ln=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tH](xtP?(V*)&x:xC,yC,uC,n);
+ S TY(&ahH)f[][2][5]={{{abB,ahH,aiI,alL,adD},{aBB,aHH,aII,aLL,aDD}},{{mbB,mhH,miI,mlL,mdD},{mBB,mHH,mII,mLL,mDD}}};
+ Ln=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC,uC,n);
  Y(m<n,Y(k-3,x=CH(xt-tc,&gH,gI,gL)(x))E(x=wdn(x,m,n,n-m))
        Y(y-u,y=wdn(y,m,n,n-m);u=wdn(u,0,m,n))E(y=u=wdn(u,0,n,n))
-       L mw=m*ZT[ut];f[v][k==3][yt-tH](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,n-m))
+       L mw=m*ZT[ut];f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,n-m))
  x(y-u?y(u):u))
 A2(add,f(x,y,0))A2(mul,f(x,y,1))

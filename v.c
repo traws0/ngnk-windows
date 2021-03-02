@@ -5,7 +5,7 @@
 #define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
 i_(B)i_(H)i_(I)i_(L)r_(B)r_(H)r_(I)r_(L)
 c_(C,H,r)c_(H,C,a)c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
-TY(&cCH)wf[]={[tC-tC]=cCH,[tH-tC]=cHI,[tI-tC]=cIL,[tL-tC]=cLD};
+TY(&cCH)wf[]={[tC-tC]=cCH,/*[tB-tC]=cCH,*/[tH-tC]=cHI,[tI-tC]=cIL,[tL-tC]=cLD}; //todo
 A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))Lm=An(yx);i(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,Xz(Ln=gl_(x);Im=n<0;n*=1-2*m;Ez(n>1<<30,x)Au=atn(tT(xt),n);CH(xt-th,&iH,iI,iL)(uC,n);m?add(x,u):x(u))
