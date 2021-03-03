@@ -34,7 +34,7 @@ S A2(idx_,/*01*/Er(xtt,y)P(y==PLH,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=id
  Y(m<n,u=u(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xC,xn,yC,uC,n))y-u?y(u):u)
 S AX(idxA,Ay=*a++;n--;P(ytT||y==PLH,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))
-S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xti||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,x(al(now())))
+S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xtz||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,x(al(now())))
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
  Xs(P(n>1,ern(n,a))SF(x,*a,"``j`k`p`cf`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin",
                       ser,jsw,kst,prs,cf,tme,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sin))
