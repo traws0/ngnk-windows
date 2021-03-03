@@ -84,7 +84,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 #define dat(x) ((V*)((x)<<16>>16))
 #define bkt(x) ((C*)dat(x))[-16]
-#define Ar(x)  ((I*)dat(x))[-3]
+#define rfc(x) ((I*)dat(x))[-3]
 #define _q(x,y) (x=apd(x,y)) //append
 
 //getters                              setters
