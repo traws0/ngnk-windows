@@ -65,14 +65,12 @@ S I in(UL i,UL n)_(i<n)
 V*memcpy(V*,OV*,size_t),*memmove(V*,OV*,size_t),*memset(V*,I,size_t),exit(I);size_t strlen(OC*);
 I strcmp(OC*,OC*),memcmp(OV*,OV*,size_t);
 
-//         () "" ,1 ,2 ,3 ,d ,` +!  ! "c" 1  2  3 .3  ` {} 1+ ++ +/ +: +  /
-enum      {tA,tC,tH,tI,tL,tD,tS,tM,tm,tc,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
-#define TS "A""C""H""I""L""D""S""M""m""c""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
-#define TZ  8, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
-#define Tz  4, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-#define tB tC
-#define tb tc
-extern OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(th,t,tl))S I _Z(Ct)_(c3(tH,t,tL))
+//         () "" ,0 ,1 ,2 ,3 ,d ,` +!  ! "c" 0  1  2  3 .3  ` {} 1+ ++ +/ +: +  /
+enum      {tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+#define TS "A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
+#define TZ  8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
+#define Tz  4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
+extern OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(tb,t,tl))S I _Z(Ct)_(c3(tB,t,tL))
 S I _F(Ct)_(t>=to)S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I _Q(Ct)_(c3(tc,t,ts))S I _R(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
@@ -125,7 +123,7 @@ S A ab(Bv)_(AT(tb,v))     S B gb (Ax)_(Q(xtb);x)
 S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);x)
 S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xth||xtc);x)
-S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(L r=gl_(x);x(0);r)
+S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(L r=gl_(x);x(0);r)
 S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)

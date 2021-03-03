@@ -15,7 +15,7 @@ f({x,"t",(_y),y," (",x,"t",(_y),"||",x,"t",y,")"};v;"CBHILDSMZ") /atom, list of 
 f({x,"tmt (",x,"tt||",x,"tm)"};v)       /atom|dict of type?
 f({x,"tMT (",x,"tT||",x,"tM)"};v)       /list|tbl  of type?
 f({x,"tmMA (",x,"tmM||",x,"tA)"};v)     /container?
-f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACBHILDSMmchildsopqruvwTtZzFPQR"," "\"zZ cC iI hH lL dD sS mt MT mMA")
+f({x,y,"(a...) P(",(_x),"t",y,",a)"};"XY";"ACBHILDSMmcbhildsopqruvwTtZzFPQR"," "\"zZ cC bB iI hH lL dD sS mt MT mMA")
 f'{x,y," ",x," ",y},/:":"\'" "\"C:bcdknotv BHIL:ijkmnv D:dv A:xyzu O:ACV"; /c type+var
 f({"E",x,"(a...) E_(",x,",a)"};"cdilnoprstvz") /errors
 f({"N",x,"(r) N1(",x,",r)"};v)          /error pass-through

@@ -40,13 +40,13 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  Y(l>0,*s++='.';s+=l)*s++='e';Y(t<0,t=-t;*s++='-')s4(s,t))
 A1(str0,Q(xtC);x=room(x,1);xC[xn]=0;x)
 A1(str,P(xtl||xtd,I l=xtl;Lv=gl(x);Au=aC(24);AN((l?sl:sd)(uC,v)-uC,u))Xs(Iv=gs(x);aCz(syp(&v)))
- K("{$[`c=t:@x;,x;|/`h`i=t;$`l$x;|/`o`p`q`r`u`v`w=t;`k@x;$'x]}",x))
+ K("{$[`c=t:@x;,x;|/`b`h`i=t;$`l$x;|/`o`p`q`r`u`v`w=t;`k@x;$'x]}",x))
 A1(kst,K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //p:parenthesize
- "l:p[`A`C;`H`I`L`D`S]`M`m`q`r`u`v`w;r:p[`;`]`q`r`u`v`w;w:p[`A`C;`H`I`L`D`S]`M`m`p`q`w;" //l:as left arg, r:as right arg, w:under an adverb
- "$[(|/`A`C`H`I`L`D`S=t:@x)&1=n:#x;0x2c,r@*x;`A=t;(0x28,0x3b/o'x),0x29;"
+ "l:p[`A`C;`B`H`I`L`D`S]`M`m`q`r`u`v`w;r:p[`;`]`q`r`u`v`w;w:p[`A`C;`B`H`I`L`D`S]`M`m`p`q`w;" //l:as left arg, r:as right arg, w:under an adverb
+ "$[(|/`A`C`B`H`I`L`D`S=t:@x)&1=n:#x;0x2c,r@*x;`A=t;(0x28,0x3b/o'x),0x29;"
    "|/`C`c=t;$[&/</[x</:32 127]|~^(a:0x00090a0d225c)?x;(0x22,/((0x5c,'0x30746e72225c),x)(a,x)?x),0x22;\"0x\",`hex x];"
-   "|/`H`I=t;$[n;(0x20/$`l$x);\"!0\"];`L=t;$[n;0x20/$x;\"!0\"];`D=t;$[n;0x20/$x;\"0#0n\"];`S=t;$[n;,/o'x;\"0#`\"];"
-   "`M=t;0x2b,o@+x;`m=t;l[!x],0x21,r@.:x;|/`h`i`l`d=t;$x;"
+   "|/`B`H`I=t;$[n;(0x20/$`l$x);\"!0\"];`L=t;$[n;0x20/$x;\"!0\"];`D=t;$[n;0x20/$x;\"0#0n\"];`S=t;$[n;,/o'x;\"0#`\"];"
+   "`M=t;0x2b,o@+x;`m=t;l[!x],0x21,r@.:x;|/`b`h`i`l`d=t;$x;"
    "`s=t;0x60,$[*/-1/0x303a415b617b>\\:a:$x;a;(0x3a=*a)**/-1/0x2e3a415b617b>\\:1_a;a;(1=#a)_`k a];"
    "`o=t;*.:x;`p=t;$[$[~3=#a:.:x;0;~|/`v`r=@*a;0;</~[*|.(1+);]'1_a];l[a@1],$*a;@[0x3b/b;#*b:o'a;:;0x5b],0x5d];"
    "`q=t;,/o'.:x;`r=t;,/(w;$:)@'.:x;"

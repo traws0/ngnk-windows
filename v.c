@@ -4,8 +4,8 @@
 #define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
 #define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,Ln)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
 i_(B)i_(H)i_(I)i_(L)r_(B)r_(H)r_(I)r_(L)
-c_(C,H,r)c_(H,C,a)c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
-TY(&cCH)wf[]={[tC-tC]=cCH,/*[tB-tC]=cCH,*/[tH-tC]=cHI,[tI-tC]=cIL,[tL-tC]=cLD}; //todo
+c_(C,H,r)c_(B,H,r)c_(H,C,a)c_(C,I,r)c_(I,C,a)c_(L,C,a)cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
+TY(&cCH)wf[]={[tC-tC]=cCH,[tB-tC]=cBH,[tH-tC]=cHI,[tI-tC]=cIL,[tL-tC]=cLD};
 A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))Lm=An(yx);i(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
 A1(til,Xz(Ln=gl_(x);Im=n<0;n*=1-2*m;Ez(n>1<<30,x)Au=atn(tT(xt),n);CH(xt-th,&iH,iI,iL)(uC,n);m?add(x,u):x(u))
@@ -34,7 +34,7 @@ A1(gI,XiI(x)XdD(gI(N(gL(x))))Xl(gt(x,gI))XL(Au=aI(xn);m2(x,cLI(xC,uC,un);u))Xc(a
 A1(gL,XlL(x)Xt(gt(x,gL))XD(Au=aL(xn);m2(x,cDL(xC,uC,un);u))x=N(gI(x));Au=aL(xn);m2(x,cIL(xC,uC,un);u))
 A1(gD,XdD(x)Xt(gt(x,gD))x=N(gL(x));Au=aD(xn);m2(x,cLD(xC,uC,un);u))
 A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Et(!xtc,x)as(gc(x)))
-TY(ct)ct={[tA]=blw,[tC]=gC,[tH]=gH,[tI]=gI,[tL]=gL,[tD]=gD};
+TY(ct)ct={[tA]=blw,[tC]=gC,[tB]=gB,[tH]=gH,[tI]=gI,[tL]=gL,[tD]=gD};
 A2(cst,P(xtS||ytmMA,eac(cv('$'),A(x,y),2))P(xtz&&ytC,K("{y@(!x)+(x<0)*#y}",x,y))
  Xs(SF(x,y,"`c`b`h`i`l`d``s",gC,gB,gH,gI,gL,gD,gS,gS))en2(x,y))
 A1(sqz,P(!xtA||!xn,x)Au=aA0;i(xn,uq(mR(xa)))x(u))
