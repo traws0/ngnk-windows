@@ -19,7 +19,7 @@ S L opn(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);Eo(f<0)f)
  UI h=inet_addr_(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
 S I op_(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Iv=gs(x);C*s=syp(&v);P(!*s,1)Et(*s-':')
  opn(s+1,fl))Et(!xtC,x)x=str0(x);x(opn(xC,fl)))
-A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xti);close(gi(x));au0)
+A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xtz);close(gi(x));au0)
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
 S V cls(I f){Y(f>2,close(f))}
 A2(v1c,Et(!ytC,x)I f=N(op_(x,O_RDWR|O_CREAT|O_TRUNC));Ln=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,cls(f);eo0())s+=k;n-=k)cls(f);u))
@@ -31,7 +31,7 @@ A1(u0c,P(x==as(0)||(xtC&&!xn),Cb[2048];x(aCn(b,max(0,read(0,b,Z(b))))))P(dir(x),
 A u1cm(I f)_(Ln=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);Eo((L)a>>4==-1)Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
  V*b=mmap(a+ZP,n,p,m|MAP_FIXED,f,0);Eo(b-(V*)uC)u)
-A1(u1c,Xi(Cb[2048];I r=read(gi(x),b,Z b);Eo(r<0)aCn(b,r))Xl(u1c(gI(x)))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
+A1(u1c,Xz(Cb[2048];In=read(gl(x),b,Z b);Eo(n<0)aCn(b,n))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A1(cmdw,Q(xtC);Ln=mu;P(!xn,x(az(n)))mr(out(Nx(val(xR))));n=mu-n;x(n?enl(cat(as(0),az(n))):au0))
