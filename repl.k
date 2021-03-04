@@ -20,5 +20,6 @@ h:(": SET|dex  RETURN     ' each|slide|bin"
    "? find|rnd uniq                          `t[] time"
    "@ apply(1) type      @[x;i;[f;]y] amend  `e[] printerror"
    ". apply(n) eval      .[x;i;[f;]y] drill  `x@(argv;in) fork")
-{x}{1@," ";s:0:"";$[~#s;1@,"\r";s~"\\h\n";` 0:h;.[{0N!.-1_x};,s;`e@]];#s}/1;
+fmt:`k@
+{x}{` 1:," ";$[~#s:0:"";` 1:,"\r";s~"\\h\n";` 0:h;.[{` 0:fmt@.-1_x};,s;`e@]];#s}/1;
 \\
