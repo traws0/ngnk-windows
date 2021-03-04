@@ -98,8 +98,8 @@ S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
 
 A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gD,gH,gI,gL,gS,grp,hcl,hex,hop,jsr,jsw,
- kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,sha1,sha256,sha3_256,sin,ser,sqr,sqz,str,str0,til,typ,
- u0c,u1c,unh,unq,val,whr;
+ kst,las,ldf,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,str,str0,til,
+ typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
 A3 a3,try;
 AA amd,am1,dmd,dm1;
