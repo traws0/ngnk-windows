@@ -3,7 +3,7 @@ S L cD(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define hh(v,fb,fh,fi,fl,fd) S B v##b(B x,B y)_(fb) S H v##h(H x,H y)_(fh) S I v##i(I x,I y)_(fi) S L v##l(L x,L y)_(fl) S D v##d(D x,D y)_(fd)
 #define hd(v,f_,fd) hh(v,f_,f_,f_,f_,fd)
 #define h(v,f) hd(v,f,f)
-h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?y/-x:y,ND)
+h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?y/-x:y,y-(L)(y/x)*x)
 h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x)<cD(y))hd(gtn,x>y,cD(x)>cD(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 
@@ -63,7 +63,7 @@ A2(sub,add(x,Nx(neg(y))))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):v2(x,y,vi('=')))
 S A ext(Ax,Ln)_(xtm?enl(x):xtt?rsh(az(n),x):x)
 S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
-A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xz(v2(x,y,vi('!')))dct(x,y))
+A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))P(xtz||xtd,v2(x,y,vi('!')))dct(x,y))
 A2(gtn,ltn(y,x))
 #define h(c,s) A2(s,v2(x,y,vi(c)))
 h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)
