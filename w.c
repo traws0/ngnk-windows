@@ -46,6 +46,6 @@ AX(scn,XzZ(AXA2(x,a,n,enc))XcC(AXA2(x,a,n,spl))P(xk<2,cvi(x,a,n))
  Ay=*a++;n--;Lm=cfm(a,n);P(m==-2,y(eln(n,a)))Au=aA0,b[8];
  i(m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);P(!y,mrn(n,a);u(0))uq(yR))mrn(n,a);y(u))
 AX(eap,XzZ(eac(x,a,n))P(n>2,ern(n,a))Az=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);Et(!ztT,y,z)P(!zn,y(z))
- P(xtv&&xv<11&&c3(tc,yt,td)&&c3(tC,zt,tD),TD int(*T)(V*,V*,V*,L);
-  N(sup(&y,&z));L a=gl(y);Au=ax(z);((T)arp[zt-tB][xv])(&a,zC,uC,zn);u)
+ P(xtv&&xv<11&&c3(tc,yt,td)&&c3(tC,zt,tD),
+  Y(ytz,y=az(gl(y)))N(sup(&y,&z));Lv=gl(y);Au=ax(z);((int(*)(V*,V*,V*,L))arp[zt-tB][xv])(&v,zC,uC,zn);u)
  Au=aA0;i(zn,y=app(x,A(get(z,i),y),2);P(!y,z(u(0)))uq(y);y=get(z,i))y(z(u)))
