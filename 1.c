@@ -5,8 +5,8 @@ S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about
   2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
  P(x<0,-sind(-x))Y(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
 
-TD int(*F1)(OV*,V*,L);
-#define F1(f,T,c...) S I f##T(OV*a0,V*r0,Ln)_(O T*a=a0;T*r=r0;I b=0;i(PD(n,a),r[i]=({c;}))b)
+TD int(*F1)(OV*,V*,N);
+#define F1(f,T,c...) S I f##T(OV*a0,V*r0,Nn)_(O T*a=a0;T*r=r0;I b=0;i(PD(n,a),r[i]=({c;}))b)
 F1(neg,B,b|=a[i]==NB;-a[i])
 F1(neg,H,b|=a[i]==NH;-a[i])
 F1(neg,I,b|=a[i]==NI;-a[i])

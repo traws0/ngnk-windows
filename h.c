@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-A rsh_(Ax/*0*/,L m,L*pj,L*s,L r)_(Ln=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rsh_(x,m,pj,s+1,r-1))y)
+A rsh_(Ax/*0*/,L m,L*pj,L*s,L r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rsh_(x,m,pj,s+1,r-1))y)
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);mc(yC,xC+j*w,q*w);
  mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,mc(yC+m*w,yC,m*w);m*=2)Y(n>m,mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
 A2(flt,Er(!ytT,x,y)Au=atn(yt,0);
@@ -20,11 +20,11 @@ A2(cat,
  Y(xr==1&&ZA+(m+n)*w<=1<<bkt(x),u=AN(m+n,x))
  E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(xr==1,AN(0,x))E(mRa(x)))x(0))
  mc(uC+m*w,yC,n*w);Y(ytA,mRa(y))y(u))
-A apv(Ax,OV*v)_(Q(xtT);Ln=xn,w=ZT[xt];
+A apv(Ax,OV*v)_(Q(xtT);Nn=xn,w=ZT[xt];
  Y(xr==1&&ZA+w+n*w<=1ll<<bkt(x),x=AN(n+1,x))
  E(Ay=atn(xt,n+1);Y(xr>1&&xtA,mRa(x))EY(xtR,x=AT(tL,x))m2(x,mc(yC,xC,n*w));x=y)
  V*p=xC+n*w;mc(p,v,w);x)
 A2(apd,Q(xtT||xtM);XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,get(yy,i)))y(x))
  Y(xtZ&&ytz,A1*f=ct[max(xt,yt-tl+tL)];x=Ny(f(x));y=Nx(f(y)))
  P(!xtA&&(!ytt||xt-tT(yt)),cat(x,enl(y)))P(!xn,enl(x(y)))Lv=xtA?(L)y:gl(y);apv(x,&v))
-A apc(Ax,Cc)_(Q(xtC);x=room(x,1);xC[xn]=c;AN(xn+1,x))A catc(Ax,OC*s,Ln)_(Q(xtC);x=room(x,n);mc(xC+xn,s,n);AN(xn+n,x))
+A apc(Ax,Cc)_(Q(xtC);x=room(x,1);xC[xn]=c;AN(xn+1,x))A catc(Ax,OC*s,Nn)_(Q(xtC);x=room(x,n);mc(xC+xn,s,n);AN(xn+n,x))

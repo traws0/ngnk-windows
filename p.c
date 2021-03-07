@@ -29,7 +29,7 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='
  P(c>127,C*t=s;x=pS('.');*v=1;AO(t-s0,p1(x)))
  Ii=si(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,PLH)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
 S A1(mon,P(xtv&&x-av0,au(xv))
- Y(xts,C*s=syp((V*)&x);Ln=mn(s);P((*s&128)&&s[n-1]-':',Cb[8];mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b))))
+ Y(xts,C*s=syp((V*)&x);Nn=mn(s);P((*s&128)&&s[n-1]-':',Cb[8];mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b))))
  P(!xtA,x)P(xn==2&&xx==aw(0)||xn==3&&xx==COM,x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)x)
 S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si(vc+26,c);P(i>3,x)s++;
  Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2,Y(xy==PLH,xy=au0)E(xx=mon(xx)))*v=0)E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
