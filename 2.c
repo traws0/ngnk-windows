@@ -10,15 +10,17 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,c(x)<c(y))hd(gtn,x>y,c(x)>c(y))hd(eql,x
 #undef hf
 
 #define hF(f,T,R,e...) SN I f(T*RE a,T*RE b,R*RE r,Nn)_(e)
-#define h0(v,t,T,R) SN I v##T##a(T*RE a,Nn,L*RE p,L m,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
- hF(v##T##s,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0) hF(v##T##p,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
-#define ht(v,t,T,R) h0(v,t,T,R) hF(v##T##T,T,R,AL(a)AL(b)AL(r)i(PD(n,a),*r++=v##t(*a++,*b++))0)\
- hF(v##t##t,T,R,*r=v##t(*a,*b);0) hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(c,*b++))0)
-#define h1(v,t,T,R) ht(v,t,T,R)hF(v##T##t,T,R,AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,c))0)
-#define h2(v,t,T,R) ht(v,t,T,R)hF(v##T##t,T,R,v##t##T(b,a,r,n))
-#define v0(v)    h0(v,b,B,B)h0(v,h,H,H)h0(v,i,I,I)h0(v,l,L,L)h0(v,d,D,D)
-#define v1(v,RD) h1(v,b,B,B)h1(v,h,H,H)h1(v,i,I,I)h1(v,l,L,L)h1(v,d,D,RD)
-#define v2(v,RD) h2(v,b,B,B)h2(v,h,H,H)h2(v,i,I,I)h2(v,l,L,L)h2(v,d,D,RD)
+#define h0(v,t,T,R) SN I v##T##a(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
+                                hF(v##T##s,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)\
+                                hF(v##T##p,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
+#define ht(v,t,T,R) h0(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)\
+                                hF(v##T##T,T,R,AL(a)AL(b)AL(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)\
+                                hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
+#define h1(v,t,T,R) ht(v,t,T,R) hF(v##T##t,T,R,AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
+#define h2(v,t,T,R) ht(v,t,T,R) hF(v##T##t,T,R,v##t##T(b,a,r,n))
+#define v0(v)    h0(v,b,B,B)h0(v,h,H,H)h0(v,i,I,I)h0(v,l,L,L)h0(v,d,D,D)  //impl provided elsewhere
+#define v1(v,RD) h1(v,b,B,B)h1(v,h,H,H)h1(v,i,I,I)h1(v,l,L,L)h1(v,d,D,RD) //standard Tt
+#define v2(v,RD) h2(v,b,B,B)h2(v,h,H,H)h2(v,i,I,I)h2(v,l,L,L)h2(v,d,D,RD) //Tt swaps args and delegates to tT
 v0(dex)v0(add)v0(sub)v0(mul)v1(dvd,D)v1(mod,D)v2(mnm,D)v2(mxm,D)v1(ltn,I)v0(gtn)v2(eql,I)
 
 #define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T},
