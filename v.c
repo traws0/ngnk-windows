@@ -9,7 +9,7 @@ cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
 TY(&cCH)wf[]={cCH,cBH,cHI,cIL,cLD};
 A1(flp,XM(AT(tm,x))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))Lm=An(yx);i(yn,Az=ya;El(zn-m,x))AT(tM,x))
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))K("{(,/n#'x)(n*!#x)+/:!n:|/#'x}",x))
-A1(til,Xz(Ln=gl_(x);Im=n<0;n*=1-2*m;Ez(n>1<<30,x)Au=atn(tT(xt),n);CH(xt-tb,&iB,iH,iI,iL)(uC,n);m?add(x,u):x(u))
+A1(til,Xz(Ln=gl(x);P(n<0,x=az(n);add(x,til(neg(xR))))Ez(n>1<<30)Au=atn(tT(xt),n);CH(xt-tb,&iB,iH,iI,iL)(uC,n);u)
  XZ(K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xm(fir(AT(tA,x)))Xo(val(x))Xs(Iv=gs(x);e0(syp(&v)))Et(!xtA||xn,x)x)
 A1(whr,XA(K("{$[`A~@x;(,&#'*'x),,'/x@\\:!0|/#'x:o'x;,&x]}",x))Xm(Ay=kv(&x);idx(x,Nx(whr(y))))Et(xtM,x)
  x=N(gL(enla(x)));Nn=0;i(xn,Ed(xl<0,x)n+=xl)Au=aL(n);m2(x,n=0;i(xn,j(xl,uL[n++]=i))u))
