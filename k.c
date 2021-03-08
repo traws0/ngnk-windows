@@ -9,7 +9,7 @@ A2(id_,/*00*/x==cv(',')?emp(yt):xtv&&xv<11?mR(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,
 A2(com,AK(yk,AT(tq,a2(x,y))))
 AX(prj,XA(app(x,a,n))Ck=max(n,xk);i(n,k-=a[i]!=PLH)Au=AK(k,atn(tp,n+1));ux=xR;mc(uA+1,a,8*n);u)
 SN A getM(Ax/*0*/,Ni)_(Q(xtM);K("{x!y@\\:z}",mR(xx),mR(xy),az(i)))
-A get(Ax/*0*/,Ni)_(XA(mR(xa))XC(ac(xc))XH(ah(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))XM(getM(x,i))Xm(get(xy,i))xR)
+A get(Ax/*0*/,Ni)_(XA(mR(xa))XB(ab(xb))XC(ac(xc))XH(ah(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))XM(getM(x,i))Xm(get(xy,i))xR)
 A getr(Ax/*0*/,Ni)_(Q(!xtt);in(i,xN)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 #define G(T,U) (32/(Z(T)>Z(U)?Z(T):Z(U)))
 #define iF(f,T,U,R,e...) S L f(OV*RE a,Lm,OV*RE b,V*RE c,Nn)_(O T*p=a;O U*q=b;R*r=c;AL(p)AL(q)AL(r)e;n)
