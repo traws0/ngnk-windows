@@ -53,7 +53,7 @@ TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX
 #define extr(c,x,y) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define min(a...) extr(<,a)
 #define max(a...) extr(>,a)
-#define rot(x,y) ({TY(x) x_=(x),y_=(y);x_<<y_|x_>>Z(x)*8-y;})
+#define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>Z(x)*8-y_:x;})
 S L absL(Lv)_(v<0?-v:v)S I c3(Cc,Cv,Cd)_(c<=v&&v<=d)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I dgt(Cc)_(c3('0',c,'9'))
 S I in(UL i,UL n)_(i<n)
 
