@@ -39,7 +39,7 @@ S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(az
 S A1(cmdw,Q(xtC);Nn=mu;P(!xn,x(az(n)))mr(out(Nx(val(xR))));n=mu-n;x(n?enl(cat(as(0),az(n))):au0))
 A1(cmd,Et(!xtC,x)Cc=*xC;P(c=='\\',exit(0);x)
  Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(az(i),x));
-  A1*f=CH(si("ltw",c),&ldf,cmdt,cmdw,0);P(f,f(x)))
+  A1*f=CH(si("ltw",c),&cmdl,cmdt,cmdw,0);P(f,f(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
 S A rda(I f)_(Au=aC(256-ZA);L m=0,k;
  W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
