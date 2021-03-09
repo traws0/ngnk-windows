@@ -9,7 +9,7 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,c(x)<c(y))hd(gtn,x>y,c(x)>c(y))hd(eql,x
 #undef hd
 #undef hf
 
-#define hF(f,T,R,e...) SN I f(T*RE a,T*RE b,R*RE r,Nn)_(e)
+#define hF(f,T,R,e...) SN I f(O T*RE a,O T*RE b,R*RE r,Nn)_(e)
 #define h0(v,t,T,R) SN I v##T##a(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
                                 hF(v##T##s,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)\
                                 hF(v##T##p,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
