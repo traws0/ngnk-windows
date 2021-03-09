@@ -14,7 +14,7 @@ t["a3 B'2"
    "3B2A3    2A3  3B2A    A3B "
    "B   2      B  3   B  2    "
    "A   3  2A3B   2A3B   A3B2A")]
-\
+\\
 
 /to generate the string literal:
 a:(0 1 1 1 0 1 0 0 1 1 1 0 1 0 1 1 1 0 0 1 0 1 1 1 0

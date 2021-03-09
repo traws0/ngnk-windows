@@ -5,7 +5,7 @@ f:{x^x^,/1_'(,/|0 1_)\'x}
 a:" "\'-4#0:"produce-a-list-of-rotonyms-2.k"
 t[a 0;a 1]
 t[a 2;a 3]
-\
+\\
 
 ablest abort green irk stable tables tabor tata terra vex you
 ablest abort stable tables tabor

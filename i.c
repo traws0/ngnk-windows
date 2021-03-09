@@ -34,11 +34,15 @@ A u1cm(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESE
 A1(u1c,Xz(Cb[2048];In=read(gl(x),b,Z b);Eo(n<0)aCn(b,n))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
+S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(az(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))
+ x(az((now()-t+500)/1000)))
 S A1(cmdw,Q(xtC);Nn=mu;P(!xn,x(az(n)))mr(out(Nx(val(xR))));n=mu-n;x(n?enl(cat(as(0),az(n))):au0))
-S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(az(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
-A1(cmd,Et(!xtC,x)Y(!xn||xn==1&&*xC=='\\',exit(0))Cc=*xC;
- Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(az(i),x));A1*f=CH(si("ltw",c),&ldf,cmdt,cmdw,0);P(f,f(x)))
+A1(cmd,Et(!xtC,x)Cc=*xC;P(c=='\\',exit(0);x)
+ Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(az(i),x));
+  A1*f=CH(si("ltw",c),&ldf,cmdt,cmdw,0);P(f,f(x)))
  K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
-S A rda(I f)_(Au=aC(256-ZA);L m=0,k;W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
-A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];i(xn,a[i]=dat(xa))a[xn]=0;I p[4];pipe(p);pipe(p+2);
- P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,0));0)close(*p);close(p[3]);N(v1c(ai(p[1]),x(y)));rda(p[2]))
+S A rda(I f)_(Au=aC(256-ZA);L m=0,k;
+ W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
+A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];i(xn,a[i]=dat(xa))a[xn]=0;
+ I p[4];pipe(p);pipe(p+2);P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,0));0)
+ close(*p);close(p[3]);N(v1c(ai(p[1]),x(y)));rda(p[2]))
