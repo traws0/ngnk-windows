@@ -3,7 +3,7 @@
 repl.h:1_(""
  " :x RETURN    {:x+1;2}[3] -> 4"
  "x:y SET       a:1; a -> 1   (b;(c;d)):(2 3;4 5); c -> 4"
- "x:y dex       f:(:);f[1;2] -> 2"
+ "x:y right     f:(:);f[1;2] -> 2"
  "x+y add       1 2+3 -> 4 5"
  " +x transpose +(\"ab\";\"cd\") -> (\"ac\";\"bd\")"
  "x-y subtract  1-2 3 -> -1 -2"
