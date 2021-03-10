@@ -11,27 +11,25 @@
  #define MAP_NORESERVE 0
 #endif
 ST stat;I fstat(I,ST stat*),getdents(UI,V*,UI);
-S O I lh=0x0100007f;S C octet(C**p)_(UL r=pu(p);Ed(r>255)r)
-S UI inet_addr_(C**p)_(C*s=*p;P(!*s,lh)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=octet(&s))*p=s;*(UI*)r)
+S UI addr(C**p)_(C*s=*p;P(!*s,0x0100007f)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=pu(p);Ed(r[i]>255))*p=s;*(UI*)r)
 S L skt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,Z(a))<0)f)
-S L opn(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);Eo(f<0)f)
- UI h=inet_addr_(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
-S I op_(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Iv=gs(x);C*s=syp(&v);P(!*s,1)Et(*s-':')
- opn(s+1,fl))Et(!xtC,x)x=str0(x);x(opn(xC,fl)))
-A1(hop,ai(N(op_(x,O_RDWR|O_CREAT))))A1(hcl,Q(xtz);close(gi(x));au0)
-A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
-S V cls(I f){Y(f>2,close(f))}
-A2(v1c,Et(!ytC,x)I f=N(op_(x,O_RDWR|O_CREAT|O_TRUNC));Nn=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,cls(f);eo0())s+=k;n-=k)cls(f);u))
-S A ls(I f)_(Cb[2048];Ik;Au=aA0;
- W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST{long a,b;UH l;C s[];}*e=(V*)(b+i);uq(aCz(e->s));i+=e->l))u)
-S I dir(A x)_(I f=op_(xR,O_RDONLY);ST stat s;Iv=fstat(f,&s);v=v>=0&&!!(s.st_mode&S_IFDIR);close(f);v)
-A1(u0c,P(x==as(0)||(xtC&&!xn),Cb[2048];x(aCn(b,max(0,read(0,b,Z(b))))))P(dir(x),ls(op_(x,O_RDONLY)))
- x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
-A u1cm(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
+S L o1(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);Eo(f<0)f)
+ UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
+S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Iv=gs(x);P(!v,1)C*s=syp(&v);Et(*s-':')o1(s+1,fl))Et(!xtC,x)x=str0(x);m2(x,o1(xC,fl)))
+S A ls(I f)_(Cb[2048];Ik;Au=aC0;TD ST{long a,b;UH l;C s[];}T;
+ W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,T*e=(V*)(b+i);u=catc(u,e->s,mn(e->s));u=apc(u,10);i+=e->l))u)
+S I dir(I f)_(ST stat s;Iv=fstat(f,&s);v=v>=0&&!!(s.st_mode&S_IFDIR);v)
+S A fr(I f)_(Cb[2048];In=read(f,b,Z b);Eo(n<0)aCn(b,n))
+S A fm(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
  V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);Eo((L)a>>4==-1)Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
  V*b=mmap(a+ZP,n,p,m|MAP_FIXED,f,0);Eo(b-(V*)uC)u)
-A1(u1c,Xz(Cb[2048];In=read(gl(x),b,Z b);Eo(n<0)aCn(b,n))I f=N(op_(x,O_RDONLY));Au=u1cm(f);close(f);u)
+A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
+A1(u0c,x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
+A1(u1c,Xz(fr(gl(x)))I f=N(o(x,O_RDONLY));P(f<3,fr(f))P(dir(f),ls(N(o(x,O_RDONLY))))Au=fm(f);close(f);u)
+A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
+A2(v1c,Et(!ytC,x)I f=N(o(x,O_RDWR|O_CREAT|O_TRUNC));Nn=yn;C*s=yC;
+ m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<=0,f>2&&close(f);eo0())s+=k;n-=k)f>2&&close(f);u))
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(az(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))

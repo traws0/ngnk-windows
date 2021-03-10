@@ -89,6 +89,6 @@ repl.h:1_(""
  "\\w         workspace"
  "expr0 \\expr1  trace")
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
-repl.rep:{` 1:," ";x:0:"";$[~#x;:0;];x:-1_x;$[(x~,"\\")|x~"\\h";:#` 0:repl.h;];.[{` 1:repl.fmt[. x]};,x;`e@];1}
+repl.rep:{` 1:," ";x:1:`;$[~#x;:0;];x:-1_x;$[(x~,"\\")|x~"\\h";:#` 0:repl.h;];.[{` 1:repl.fmt[. x]};,x;`e@];1}
 {x}repl.rep/1;
 \\
