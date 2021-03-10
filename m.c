@@ -55,16 +55,16 @@ I rep()_(S Cb[256];L m=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q=
   #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
   #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
   #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
-  asm(".globl mmap;mmap:mov %esp,%ebx;add $4,%ebx;mov $"M2(SYS_mmap)",%eax;int $0x80;ret;");
+  #define h6(x,a...) asm(".globl "#x";"#x":mov %esp,%ebx;add $4,%ebx;mov $"M2(SYS_##x)",%eax;int $0x80;ret;");
  #else
   #define h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;"
   #define h1 h
   #define h2 h
   #define h3 h
-  asm(h(mmap,"movq %rcx,%r10;"));
+  #define h6(x) h(x,"movq %rcx,%r10;")
  #endif
  asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h3(connect)h(fork)h3(execve)
-     h1(exit)h3(getdents)h2(gettimeofday));
+     h1(exit)h3(getdents)h2(gettimeofday)h6(mmap));
  #if SYS_pipe
   asm(h(pipe));
  #else
