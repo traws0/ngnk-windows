@@ -1,6 +1,8 @@
 #!k
 ` 0:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE";
-repl.h:("c char   i int   n number(int|float)   s symbol   a atom   d dict   L list"
+help:""!()
+help["+"]:("verbs   :+-*%!&|"
+ "c char   i int   n number(int|float)   s symbol   a atom   d dict   L list"
  "x y z any   f monadic function   F dyadic function   v variable name"
  ""
  " :x RETURN    {:x+1;2}[3] -> 4"
@@ -31,6 +33,7 @@ repl.h:("c char   i int   n number(int|float)   s symbol   a atom   d dict   L l
  " <X asc       <\"abacus\" -> 0 2 1 3 5 4"
  " <x open      fd:<`:/path/to/file.txt"
  "N>N more      0 1>0 2 -> 0 0"
+ " >i close     >fd"
  "N=N equal     0 1 2=0 1 3 -> 1 1 0"
  " =X group     =\"abracadabra\" -> \"abrcd\"!(0 3 5 7 10;1 8;2 9;,4;,6)"
  " =i unitmat   =3 -> (1 0 0;0 1 0;0 0 1)"
@@ -66,8 +69,13 @@ repl.h:("c char   i int   n number(int|float)   s symbol   a atom   d dict   L l
  ".[x;y;z;u] drill .[(\"ab\";\"cd\");1 0;:;\"x\"] -> (\"ab\";\"xd\")"
  ".[x;y;z]   try   .[+;1 2;{x}] -> 3   .[+;1,`;{x}] -> \"typ\""
  ""
- "$[x;y;z] COND /if x then y else z"
+ "  0:x read  lines"
+ "x 0:y write lines"
+ "  1:x read  bytes"
+ "x 1:y write bytes"
  ""
+ "$[x;y;z] COND /if x then y else z")
+help["'"]:("adverbs   ' / \\ ': /: \\:"
  "  f'x  each1     #'(\"abc\";3 4 5 6) -> 3 4"
  "x F'y  each2     #'(\"abc\";3 4 5 6) -> 3 4"
  "  i'x  slide     3'\"abcdef\" -> (\"abc\";\"bcd\";\"cde\";\"def\")"
@@ -83,13 +91,8 @@ repl.h:("c char   i int   n number(int|float)   s symbol   a atom   d dict   L l
  "  F':x eachprior -':12 13 11 17 14 -> 12 1 -2 6 -3"
  "x F':y seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3"
  "x F/:y eachright 1 2*/:3 4 -> (3 6;4 8)"
- "x F\\:y eachleft  1 2*\\:3 4 -> (3 4;6 8)"
- ""
- "  0:x read  lines"
- "x 0:y write lines"
- "  1:x read  bytes"
- "x 1:y write bytes"
- ""
+ "x F\\:y eachleft  1 2*\\:3 4 -> (3 4;6 8)")
+help["`"]:("`symbol? and `symbol@"
  "   `@x serialize     ` 7 8 9 -> 0x020300000000000000070809"
  "   `?C deserialize   `?0x020300000000000000070809 -> 7 8 9"
  "  `k@x pretty-print  `k 7 8 9 -> \"7 8 9\""
@@ -101,16 +104,24 @@ repl.h:("c char   i int   n number(int|float)   s symbol   a atom   d dict   L l
  "  `j?C parse json    `j?\"{\\\"a\\\":1,\\\"b\\\":[true,\\\"c\\\"]}\" -> `a`b!(1.0;(1;,\"c\"))"
  "`sin@N trigonometry  `sin 12.34 -> 0.22444212919135995"
  "`md5@C `sha1@x `sha256@x `sha3@x `aes  crypto"
- "  `e[] print error"
+ "  `e[] print error")
+help[" "]:("ngn/k"
+ "\\            help"
+ "\\+            verbs"
+ "\\'            adverbs"
+ "\\`            `symbol? and `symbol@"
  ""
- "/comment"
  "\\command"
- "\\\\ exit"
- "\\t:n expr  time"
- "\\l file.k  load"
- "\\w         workspace"
- "expr0 \\expr1  trace")
+ "/comment"
+ ""
+ "\\\\          exit"
+ "\\t:n expr    time"
+ "\\l file.k    load"
+ "\\w           workspace"
+ "expr \\expr   log")
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
-repl.rep:{` 1:," ";x:1:`;$[~#x;:0;];x:-1_x;$[(x~,"\\")|x~"\\h";:#` 0:repl.h;];.[{` 1:repl.fmt[. x]};,x;`e@];1}
+repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x
+          $[(3>#x)&("\\"=*x)&~^(!help)?x 1;:#` 0:help x 1;]
+          .[{` 1:repl.fmt[. x]};,x;`e@];1}
 {x}repl.rep/1;
 \\
