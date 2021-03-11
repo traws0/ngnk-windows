@@ -12,13 +12,13 @@
 #endif
 ST stat;I fstat(I,ST stat*),getdents(UI,V*,UI);
 S UI addr(C**p)_(C*s=*p;P(!*s,0x0100007f)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=pu(&s);Ed(r[i]>255))*p=s;*(UI*)r)
-S L skt(UI h,UH p)_(L f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)
+S I skt(UI h,UH p)_(I f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,Z(a))<0)f)
-S L o1(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,L f=open(s,fl,0666);Eo(f<0)f)
+S I o1(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,I f=open(s,fl,0666);Eo(f<0)f)
  UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
 S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Iv=gs(x);P(!v,1)C*s=syp(&v);Et(*s-':')o1(s+1,fl))Et(!xtC,x)x=str0(x);m2(x,o1(xC,fl)))
-S C ft(I f)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)L m=s.st_mode&S_IFMT;
- m==S_IFCHR?'c':m==S_IFDIR?'d':m==S_IFIFO?'f':m==S_IFLNK?'l':m==S_IFREG?'r':m==S_IFSOCK?'s':'?')
+S C ft(I f)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
+ S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),&m))])
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
 A1(u0c,x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
 A1(u1c,Xz(I f=gl(x);Cb[4096];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))I f=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
@@ -44,4 +44,4 @@ S A rda(I f)_(Au=aC(256-ZA);L m=0,k;
  W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
 A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];i(xn,a[i]=dat(xa))a[xn]=0;
  I p[4];pipe(p);pipe(p+2);P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,0));0)
- close(*p);close(p[3]);N(v1c(ai(p[1]),x(y)));rda(p[2]))
+ close(*p);close(p[3]);N(v0c(ai(p[1]),x(y)));close(p[1]);rda(p[2]))
