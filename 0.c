@@ -32,13 +32,15 @@ N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
   #define h1 h
   #define h2 h
   #define h3 h
+  #define h4 h
   #define h6(x) h(x,"movq %rcx,%r10;")
  #endif
  asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h3(connect)h(fork)h3(execve)
-     h1(exit)h3(getdents)h2(gettimeofday)h6(mmap));
+     h1(exit)h2(gettimeofday)h6(mmap));
  #if SYS_pipe
-  asm(h(pipe));
- #else
-  asm(h(pipe2));I pipe(I x[2])_(pipe2(x,0)); //freebsd
+  asm(h(pipe)h3(getdents));
+ #else //freebsd
+  I pipe(I x[2])_(pipe2(x,0));I getdents(UI x,V*y,UI z)_(getdirentries(x,y,z,0));I getdirentries(UI,V*,UI,V*);
+  asm(h(pipe2),h4(getdirentries));
  #endif
 #endif
