@@ -40,7 +40,7 @@ N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
  #if SYS_pipe
   asm(h(pipe)h3(getdents));
  #else //freebsd
-  I pipe(I x[2])_(pipe2(x,0));I getdents(UI x,V*y,UI z)_(getdirentries(x,y,z,0));I getdirentries(UI,V*,UI,V*);
+  I pipe(I x[2])_(pipe2(x,0));I getdirentries(UI,V*,UI,V*);I getdents(UI x,V*y,UI z)_(getdirentries(x,y,z,0));
   asm(h(pipe2),h4(getdirentries));
  #endif
 #endif
