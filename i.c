@@ -6,11 +6,13 @@
 #include<arpa/inet.h>
 #include<unistd.h>
 #include<sys/time.h>
+#undef __USE_EXTERN_INLINES
+#include<sys/stat.h>
 #include"a.h"
 #ifndef MAP_NORESERVE
  #define MAP_NORESERVE 0
 #endif
-ST stat;I fstat(I,ST stat*),getdents(UI,V*,UI);
+I getdents(UI,V*,UI);
 S UI addr(C**p)_(C*s=*p;P(!*s,0x0100007f)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=pu(&s);Ed(r[i]>255))*p=s;*(UI*)r)
 S I skt(UI h,UH p)_(I f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,Z(a))<0)f)
