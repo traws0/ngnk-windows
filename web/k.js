@@ -45,8 +45,9 @@ X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):BADF())
 //fstat:dev(8B),ino,mode(S_IFREG=0o100000),nlink,uid,gid,rdev(8B),size,blksize,blocks
 X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];S4(b,[0,0,0,1<<16,1,0,0,0,0,n,512,n+511>>9]);return 0})
 X('exit',x=>{throw Error('exit('+x+')')})
-Q('dup2,pipe,execve,fork,socket,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
+Q('dup2,pipe,execve,fork,socket,setsockopt,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
+const file=async f=>{fs[f]=fs[f]||t1(await(await fetch(f)).text())}
 if(location.hash==='#r'){document.body.classList.add('repl');wa(_=>app.init()) //repl mode
  rdy(_=>{ed.value=BA+PR;out=ed;let ha=[''],hi=0 //ha,hi:history array and index
   ed.onkeydown=x=>{const k=kc(x)
@@ -61,8 +62,7 @@ else{ //editor|output mode
   if(s._(0,2)==='f:'){s=s._(2);r.push('not counting initial "f:"')}
   bc.textContent=s.n+'bytes'+(r.n?`(${r.join(', ')})`:'');return s}
  rdy(_=>{ed.value=p0(location.hash._(1))
-  ev.onclick=_=>{wa(async _=>{ubc();location.hash=p1(ed.value)
-   const g='golf.k';fs[g]=fs[g]||t1(await(await fetch(g)).text())
+  ev.onclick=_=>{wa(async _=>{ubc();location.hash=p1(ed.value);await file('golf.k');await file('repl.k')
    const s='\\l golf.k\n'+ed.value;fs['a.k']=t1(s._(-1)===N?s:s+N);out.value=''
    const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
    const t=Date.now();try{app.main(2,a)}catch(e){if(e.message!=='exit(0)')throw e}tm.textContent=Date.now()-t})}
