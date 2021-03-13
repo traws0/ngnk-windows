@@ -1,7 +1,7 @@
 #!k
 repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE"
-help:""!()
-help["+"]:("Verbs:    : + - * % ! & | < > = ~ , ^ # _ $ ? @ . 0: 1:"
+cmds:""!()
+cmds["+"]:{` 0:("Verbs:    : + - * % ! & | < > = ~ , ^ # _ $ ? @ . 0: 1:"
  "notation: [c]har [i]nt [n]umber(int|float) [s]ymbol [a]tom [d]ict"
  "          [f]unc(monad) [F]unc(dyad) [xyz]any"
  "special:  var:y     set    a:1;a -> 1"
@@ -77,8 +77,8 @@ help["+"]:("Verbs:    : + - * % ! & | < > = ~ , ^ # _ $ ? @ . 0: 1:"
  "  0:x read  lines"
  "x 0:y write lines"
  "  1:x read  bytes"
- "x 1:y write bytes")
-help["'"]:("Adverbs:   ' / \\ ': /: \\:"
+ "x 1:y write bytes")}
+cmds["'"]:{` 0:("Adverbs:   ' / \\ ': /: \\:"
  "  f'x  each1     #'(\"abc\";3 4 5 6) -> 3 4"
  "x F'y  each2     2 3#'\"ab\" -> (\"aa\";\"bbb\")"
  "  i'x  window    3'\"abcdef\" -> (\"abc\";\"bcd\";\"cde\";\"def\")"
@@ -100,8 +100,8 @@ help["'"]:("Adverbs:   ' / \\ ': /: \\:"
  "  F':x eachprior -':12 13 11 17 14 -> 12 1 -2 6 -3"
  "x F':y seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3"
  "x F/:y eachright 1 2*/:3 4 -> (3 6;4 8)"
- "x F\\:y eachleft  1 2*\\:3 4 -> (3 4;6 8)")
-help["`"]:("Special symbols:"
+ "x F\\:y eachleft  1 2*\\:3 4 -> (3 4;6 8)")}
+cmds["`"]:{` 0:("Special symbols:"
  "   `@x serialize    ` 7 8 9 -> 0x020300000000000000070809"
  "   `?C deserialize  `?0x020300000000000000070809 -> 7 8 9"
  "  `k@x pretty-print `k(\"ab\";2 3) -> \"(\\\"ab\\\";2 3)\""
@@ -114,9 +114,9 @@ help["`"]:("Special symbols:"
  "  `t[] current time (milliseconds)"
  "  `e[] print error"
  " `md5@C `sha1@C `sha256@C `sha3@C             hash"
- " `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)")
-help[" "]:("Commands:"
- "\\           help"
+ " `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)")}
+cmds[" "]:{` 0:("Commands:"
+ "\\           cmds"
  "\\+          verbs"
  "\\'          adverbs"
  "\\`          special symbols"
@@ -125,10 +125,12 @@ help[" "]:("Commands:"
  "\\w          workspace bytes"
  "\\w expr     workspace delta"
  "\\command    shell command (through /bin/sh)"
- "\\\\          exit")
+ "\\\\          exit")}
+cmds["v"]:cmds["f"]:repl.vf:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
 repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x
-          $[(3>#x)&("\\"=*x)&~^(!help)?x 1;:#` 0:help x 1;]
-          .[{` 1:repl.fmt[. x]};,x;`e@];1}
+          $[(3>#x)&("\\"=*x)&~^(!cmds)?x 1
+            cmds[x 1]x 1
+            .[{` 1:repl.fmt[. x]};,x;`e@]];1}
 ` 0:repl.banner;{x}repl.rep/1;
 \\
