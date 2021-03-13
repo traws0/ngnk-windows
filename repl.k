@@ -117,8 +117,7 @@ cmds["0"]:{` 0:("Types: ACBHILDSMmcbhildsopqruvw"
  "   `r derived verb            "
  "   `u monadic verb            "
  "   `v dyadic  verb            "
- "   `w adverb                  "
- )}
+ "   `w adverb                  ")}
 cmds["'"]:{` 0:("Adverbs:   ' / \\ ': /: \\:"
  "  f'x  each1     #'(\"abc\";3 4 5 6) -> 3 4"
  "x F'y  each2     2 3#'\"ab\" -> (\"aa\";\"bbb\")"
