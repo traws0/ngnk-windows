@@ -24,8 +24,8 @@ h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,c(x)<c(y))hd(gtn,x>y,c(x)>c(y))hd(eql,x
 v0(dex)v0(add)v0(sub)v0(mul)v1(dvd,D)v1(mod,D)v2(mnm,D)v2(mxm,D)v1(ltn,I)v0(gtn)v2(eql,I)
 
 #define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T},
-#define g(a...) h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a){0},h(eql,a)
-S OV*arf[][7][4]={{g(b,B)},{g(h,H)},{g(i,I)},{g(l,L)},{g(d,D)}};
+#define g(a...) {h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a){0},h(eql,a)},
+S OV*arf[][7][5]={g(b,B)g(h,H)g(i,I)g(l,L)g(d,D)};
 #undef g
 #undef h
 
