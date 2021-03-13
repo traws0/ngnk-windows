@@ -1,6 +1,28 @@
 #!k
 repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE"
 cmds:""!()
+cmds["h"]:{` 0:1_(0
+ ": SET|rght RET|self   ' each|slide|bin"
+ "+ add      flip       / fold|join |dec"
+ "- subtract negate     \\ scan|split|enc"
+ "* multiply first     ': eachprior"
+ "% divide   sqrt      /: eachright"
+ "! mod|dict enum|key  \\: eachleft"
+ "& min|and  where"
+ "| max|or   reverse"
+ "< less     ascend    0: lines i/o"
+ "> more     descend   1: bytes i/o"
+ "= equal    group"
+ "~ match    not"
+ ", concat   enlist"
+ "^ without  null"
+ "# reshape  length"
+ "_ drop|cut floor"
+ "$ cast     string    $[c;t;f] COND"
+ "? find|rnd uniq"
+ "@ apply(1) type      @[x;i;[f;]y] amend"
+ ". apply(n) eval      .[x;i;[f;]y] drill"
+ "grammar:  E:E;e|e e:nve|te| t:n|v v:tA|V n:t[E]|(E)|{E}|N")}
 cmds["+"]:{` 0:("Verbs:    : + - * % ! & | < > = ~ , ^ # _ $ ? @ . 0: 1:"
  "notation: [c]har [i]nt [n]umber(int|float) [s]ymbol [a]tom [d]ict"
  "          [f]unc(monad) [F]unc(dyad) [xyz]any"
@@ -117,6 +139,7 @@ cmds["`"]:{` 0:("Special symbols:"
  " `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)")}
 cmds[" "]:{` 0:("Commands:"
  "\\           cmds"
+ "\\h          summary"
  "\\+          verbs"
  "\\'          adverbs"
  "\\`          special symbols"
@@ -128,6 +151,6 @@ cmds[" "]:{` 0:("Commands:"
  "\\\\          exit")}
 cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
-repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x;$[(2=#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`e@]];1}
+repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`e@]];1}
 ` 0:repl.banner;{x}repl.rep/1;
 \\
