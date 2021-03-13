@@ -18,7 +18,7 @@ A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,at
 A aCn(OC*s,Nn)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(s)))
 A az(Lv)_(NH<v&&v<=WH?ah(v):(L)NI<v&&v<=(L)WI?ai(v):al(v))
 A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=mR(xx);mR(xy))*p=xx;Au=xy;AN(0,x);x(u)) //get keys and values
-A room(Ax,N k)_(Q(xtC);Nn=xn;P(xr==1&&ZA+n+k<=1ll<<bkt(x),x)Au=AN(n,aC(n+k));mc(uC,xC,n);x(u))
+A room(Ax,Nm)_(Q(xtC);Nn=xn;P(xr==1&&ZA+n+m<=1ll<<bkt(x),x)Au=AN(n,aC(n+m));mc(uC,xC,n);x(u))
 S C sy0[1<<16],*sy1=sy0+1;C*syp(I*p)_(*p<0?sy0-*p:(V*)p)
 I syP(OC*s)_(In=mn(s)+1;P(n<5,mc(&n,s,n);n)
  OC*p=sy0+1;W(p<sy1,OC*q=p,*t=s;W(*q&&*q==*t,q++;t++)P(!*q&&!*t,sy0-p)p=q;W(*p,p++)p++)
