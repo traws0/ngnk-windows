@@ -7,6 +7,7 @@
 #include<sys/types.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
+#include<netinet/tcp.h>
 #define   _(a...) {return({a;});}
 #define Y(x,a...) if(x){a;}
 #define P(x,a...) if(x)_(a)
@@ -41,5 +42,8 @@ S O C*web(I f)_(C b[4096];I r=read(f,b,Z b-1);P(r<=0,"read failed")b[r]=0;*sc0(b
  W(r>0,wr(f,b,r);r=read(g,b,Z b))close(g);wrZ(1,"ok\n");(V*)0)
 #define port 8080
 I main(){struct sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=0;a.sin_port=htons(port);
- I l=Q(socket(AF_INET,SOCK_STREAM,0));Q(bind(l,(V*)&a,Z a));Q(listen(l,64));wrZ(1,"http://127.0.0.1:"M2(port)"/\n");
+ I l=Q(socket(AF_INET,SOCK_STREAM,0));
+ Q(setsockopt(l,SOL_SOCKET,SO_REUSEADDR,(I[]){1},4));
+ Q(setsockopt(l,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4));
+ Q(bind(l,(V*)&a,Z a));Q(listen(l,64));wrZ(1,"http://127.0.0.1:"M2(port)"/\n");
  W(1,UI n=Z a;I f=Q(accept(l,&a,&n));O C*r=web(f);Y(r,wr(1,r,mn(r));wrZ(1,"\n");r404(f))close(f))}
