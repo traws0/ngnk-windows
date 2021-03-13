@@ -35,7 +35,6 @@
 #ifdef DEBUG
  #define dbg(x) x
  #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x))) //assert
- #define die(x) {write(1,x,Z(x));exit(1);}
 #else
  #define dbg(x)
  #define Q(x)
@@ -87,6 +86,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 #define bkt(x) ((C*)dat(x))[-16]
 #define rfc(x) ((I*)dat(x))[-3]
 #define _q(x,y) (x=apd(x,y)) //append
+A die(OC*);
 
 //getters                              setters
 S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
@@ -123,7 +123,7 @@ S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);x)
 S A ab(Bv)_(AT(tb,v))     S B gb (Ax)_(Q(xtb);x)
 S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);x)
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);x)
-S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(xti||xts||xth||xtc);x)
+S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(c3(tc,xt,ti)||xts);x)
 S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)
 S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
 #define au(i) tvk(tu,i,1)

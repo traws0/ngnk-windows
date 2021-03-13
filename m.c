@@ -3,7 +3,7 @@
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-2]
 S A mx[40];A glb,ce[tn],cn[tn],ci[2][5];L mu;S I ml;
-SN A die(OC*s)_(write(1,s,mn(s));write(1,"\n",1);exit(1);0)SN A oom()_(die("oom\n"))
+A die(OC*s)_(write(1,s,mn(s));write(1,"\n",1);exit(1);0)SN A oom()_(die("oom\n"))
 S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);bkt(x)=b;x)Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
  E(i=max(b,24);V*p=mmap(0,1ll<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())x=(A)(p+ZA))
