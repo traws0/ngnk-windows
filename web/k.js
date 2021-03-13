@@ -34,7 +34,7 @@ X('mmap',(p,n,_,_1,f,o)=>{
  if(f>=0){f=fd[f];BADF(!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
 X('munmap',_=>0)
 X('read',(f,a,n)=>{if(f<3){let s=inp||prompt('stdin:')+N;inp='';return T1.encodeInto(s,M(a,n)).written}
- f=fd[f];BADF(!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:M(a,n).set(fs[f.p].sub(f.o,n))})
+ f=fd[f];BADF(!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:(M(a,n).set(fs[f.p].sub(f.o,n)),n)})
 X('write',(f,a,n)=>{if(f<3)return(ap(t0(M(a,n))),n);f=fd[f];BADF(!f)
  let{p,o}=f,l=fs[p].n;(fs[p]=rsz(fs[p],max(l,o+n))).set(M(a,n),o);f.o+=n;return n})
 X('gettimeofday',x=>S4(x,[(x=Date.now())/1000|0,x%1000*1000])&0)
@@ -42,8 +42,8 @@ X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.n);E('NOENT',!
  if(!fs[p]||u&512/*O_TRUNC*/)fs[p]=new Uint8Array(0);fd[f]={p,o:0};return f})
 X('close',f=>fd[f]?fd[f]=0:BADF())
 X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):BADF())
-//fstat:dev(8B),ino,mode(S_IFREG=0x100000),nlink,uid,gid,rdev(8B),size,blksize,blocks
-X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];S4(b,[0,0,0,0x100000,1,0,0,0,0,n,512,n+511>>9]);return 0})
+//fstat:dev(8B),ino,mode(S_IFREG=0o100000),nlink,uid,gid,rdev(8B),size,blksize,blocks
+X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];S4(b,[0,0,0,1<<16,1,0,0,0,0,n,512,n+511>>9]);return 0})
 X('exit',x=>{throw Error('exit('+x+')')})
 Q('dup2,pipe,execve,fork,socket,connect,getdents',s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
