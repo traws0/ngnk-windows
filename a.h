@@ -121,8 +121,8 @@ EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
  h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S)
 #undef h
 S A ac(Cv)_(AT(tc,v))     S C gc (Ax)_(Q(xtc);x)
-S A ab(Bv)_(AT(tb,v))     S B gb (Ax)_(Q(xtb);x)
-S A ah(Hv)_(AT(th,v))     S H gh (Ax)_(Q(xth);x)
+S A ab(Bv)_(AT(tb,v))
+S A ah(Hv)_(AT(th,v))
 S A as(Iv)_(AT(ts,v))     S I gs (Ax)_(Q(xts);x)
 S A ai(Iv)_(AT(ti,v))     S I gi (Ax)_(Q(c3(tc,xt,ti)||xts);x)
 S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)
