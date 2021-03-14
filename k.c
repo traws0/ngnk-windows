@@ -29,10 +29,12 @@ S A2(idx_,/*01*/Er(xtt,y)P(y==PLH||y==au0,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(
  Y(m<n,u=u(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xC,xn,yC,uC,n))y-u?y(u):u)
 S AX(idxA,Ay=*a++;n--;P(ytT||y==PLH||y==au0,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))
-S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xtz||!ytC,y)write(gi(x),yC,yn);y)S A1(tme,x(al(now())))
+S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xtz||!ytC,y)write(gi(x),yC,yn);y)
+S A1(tme,x(al(now())))
+S A1(err,e1(xtC?xC:(C*)"err",x))
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
- Xs(P(n>1,ern(n,a))SF(x,*a,"``j`k`p`cf`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin",
-                      ser,jsw,kst,prs,cf,tme,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sin))
+ Xs(P(n>1,ern(n,a))SF(x,*a,"``j`k`p`cf`t`x`e`hex`md5`sha1`sha256`sha3`aes`sin`err",
+                      ser,jsw,kst,prs,cf,tme,frk,epr,hex,md5,sha1,sha256,sha3_256,aes0,sin,err))
  Xm(Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?y(app(y,a+1,n-1)):y)XM(Ay=*a;n>1?ern(n,a):ytzZ?idx_(x,y):app(AT(tm,x),a,n))
  P(n<xk,prj(x,a,n))Xv(n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))Xr(((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))Xu(((A1*)vf[xv])(*a))Xw(Ay=*a;AK(0<xv&&xv<4&&yk==2?1:ytF?yk:1,AV(xv,atnv(tr,1,a))))Xo(run(x,a,n))
