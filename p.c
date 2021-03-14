@@ -8,7 +8,6 @@ S D pd(C**p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S C*s0,*s,na;
 S A pLm(L*m)_(Ax=aL0;Cc;
  W(1,Lv=pl(&s);c=*s;Y(!v&&c=='N',v=NL;c=*++s)*m=min(*m,v);m[1]=max(m[1],v);x=apv(x,&v);Y(c-32||!num(s+1),BR)c=*++s)x)
-S C tZ(Lv)_(NB<=v&&v<=WB?tB:NH<=v&&v<=WH?tH:NI<=v&&v<=WI?tI:tL)
 S A0(pZ,Lm[2]={};Ax=pLm(m);CH(max(tZ(*m),tZ(m[1]))-tB,&gB,gH,gI,gL)(x))
 S A0(pD,Ax=aD0;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),BR)s++)x)
 S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
