@@ -2,7 +2,7 @@
 #include"a.h"
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-2]
-S A mx[40];A glb,ce[tn],cn[tn],ci[2][5];L mu;S I ml;
+S A mx[40];A glb,ce[tn],cn[tn],ci[2][5];L mu;S I ml;C**env;
 A die(OC*s)_(write(1,s,mn(s));write(1,"\n",1);exit(1);0)SN A oom()_(die("oom\n"))
 S A ma(UI b)_(Q(!ml);Q(4<b);P(b>=ZZ(mx),oom())mu+=1ll<<b;Ax=mx[b];P(x,mx[b]=nxt(x);bkt(x)=b;x)Ii=b+1;W(i<ZZ(mx)&&!mx[i],i++)
  Y(i<ZZ(mx),x=mx[i];mx[i]=nxt(x))
@@ -27,7 +27,7 @@ I line(C*p,C*q)_(Ax=val(aCm(p,q));Y(x,x=out(x))P(x,mr(x);1)epr(0))
 S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(cmdl,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)x(au0))
-V init(){Ax=ce[tS]=aS(0);i(tS,ce[i]=AT(i,x))ce[tm]=am(aS0,aA0);glb=aa0();
+V init(In,C**a){env=a+n+1;Ax=ce[tS]=aS(0);i(tS,ce[i]=AT(i,x))ce[tm]=am(aS0,aA0);glb=aa0();
  cn[tA]=ce[tA];cn[tC]=ac(32);cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
  ci[0][0]=al(0);          ci[0][1]=al(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
