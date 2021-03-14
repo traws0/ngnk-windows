@@ -8,6 +8,7 @@ V*memset(V*x,I c,Nn)_(C*p=x;i(n,*p++=c);x)
 I memcmp(OV*x,OV*y,Nn)_(OC*s=x,*t=y;i(n,Iv=*s++-*t++;P(v,v))0)
 I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)
 N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
+char*O*env;
 
 #ifndef shared
  I main(In,C**a)_(init();P(n>1,exit(!cmdl(aCz(a[1])));0)repl();exit(0);0)
