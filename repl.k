@@ -168,11 +168,11 @@ cmds["`"]:{` 0:("Special symbols:"
  "  `x@x fork-exec    `x((\"/bin/wc\";\"-l\");\"a\\nbc\\nd\\n\") -> \"3\\n\""
  "  `t[] current time (milliseconds)"
  "`err@C throw error"
- "  `e[] print error"
+ "`epr[] print error"
  " `md5@C `sha1@C `sha256@C `sha3@C             hash"
  " `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)")}
 cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
-repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`e@]];1}
+repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`epr@]];1}
 ` 0:repl.banner;{x}repl.rep/1;
 \\
