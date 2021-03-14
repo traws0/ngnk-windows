@@ -33,8 +33,8 @@ S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xtz||!ytC,y)write(gi(x),yC,yn);y)
 S A1(tme,x(al(now())))
 S A1(err,e1(xtC?xC:(C*)"err",x))
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
- Xs(P(n>1,ern(n,a))SF(x,*a,"``j`k`p`cf`t`x`hex`md5`sha1`sha256`sha3`aes`sin`err`epr",
-                      ser,jsw,kst,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr))
+ Xs(P(n>1,ern(n,a))SF(x,*a,"``k`j`p`cf`t`x`hex`md5`sha1`sha256`sha3`aes`sin`err`epr",
+                      ser,kst,jsw,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr))
  Xm(Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?y(app(y,a+1,n-1)):y)XM(Ay=*a;n>1?ern(n,a):ytzZ?idx_(x,y):app(AT(tm,x),a,n))
  P(n<xk,prj(x,a,n))Xv(n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))Xr(((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))Xu(((A1*)vf[xv])(*a))Xw(Ay=*a;AK(0<xv&&xv<4&&yk==2?1:ytF?yk:1,AV(xv,atnv(tr,1,a))))Xo(run(x,a,n))
