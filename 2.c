@@ -41,8 +41,9 @@ g(r)g(s)g(p)g(a)
 #undef h
 
 C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
-I sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tB,min(tD,max(tT(xt),tT(yt))));t+=t==tB&&(xtcC||ytcC);
-                A1*f=CH(t-tB,&gB,gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));t)
+I sup(A*p,A*q)_(Ax=*p,y=*q;Q(c3(tc,t,td)||c3(tC,t,tD));Ct=max(tB+(xtcC||ytcC),min(tD,max(xtd?tD:xtt?tZ(gl_(x)):xt,
+                                                                                         ytd?tD:ytt?tZ(gl_(y)):yt)));
+ A1*f=CH(t-tB,&gB,gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));t)
 S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[xt-(xtt?tb:tB)][v-4][k];Ct=art(v,xt);
  Y(!k,t+=tb-tB;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
