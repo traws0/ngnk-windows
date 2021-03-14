@@ -32,6 +32,7 @@
 #define M2(x) M1(x)
 #define A(a...) (A[]){a}
 #define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
+#define EX extern
 #ifdef DEBUG
  #define dbg(x) x
  #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x))) //assert
@@ -70,7 +71,7 @@ enum      {tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,
 #define TS "A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
-extern OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(tb,t,tl))S I _Z(Ct)_(c3(tB,t,tL))
+EX OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(tb,t,tl))S I _Z(Ct)_(c3(tB,t,tL))
 S I _F(Ct)_(t>=to)S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I _Q(Ct)_(c3(tc,t,ts))S I _R(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
@@ -112,8 +113,8 @@ C*syp(I*),art(I,C);
 I fB(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A);
-TD V(*Fc)(OV*RE,V*RE,N);extern Fc wf[];extern A glb,ce[],cn[],ci[2][5];extern OC vc[];extern L mu;extern A1*ct[];
-extern OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];extern char*O*env;
+TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,ce[],cn[],ci[2][5];EX OC vc[];EX L mu;EX A1*ct[];EX char*O*env;
+EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Nn)_(atn(t##T,n))
