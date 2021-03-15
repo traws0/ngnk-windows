@@ -118,15 +118,13 @@ EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Nn)_(atn(t##T,n))
- h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S)
+ h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S) //aA aC aB aH aI aL aD aS
 #undef h
-S A ac(Cv)_(AT(tc,(I)v))
-S A ab(Bv)_(AT(tb,(I)v))
-S A ah(Hv)_(AT(th,(I)v))
-S A as(Iv)_(AT(ts,(I)v))  S I gs (Ax)_(Q(xts);x)
-S A ai(Iv)_(AT(ti,(I)v))  S I gi (Ax)_(Q(c3(tc,xt,ti)||xts);x)
-S A al(Lv)_(atnv(tl,1,&v))S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)
-S A ad(Dv)_(atnv(td,1,&v))S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
+#define h(T,tt) S A a##tt(T v)_(AT(t##tt,(I)v))
+ h(C,c)h(B,b)h(H,h)h(I,i)h(I,s) //ac ab ah ai as
+#undef h
+S A al(Lv)_(atnv(tl,1,&v))S A ad(Dv)_(atnv(td,1,&v))S I gi (Ax)_(Q(c3(tc,xt,ti)||xts);x)
+S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)

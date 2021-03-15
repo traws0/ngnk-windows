@@ -10,13 +10,13 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define hc(a) ({Iv=bc+fpA(&fc,a);Ez(v>bC)h(v);}) //add a "load constant" instruction
 #define l(a...) N(cl(a)) //compile left-hand side of assignment
 #define r(a...) N(cr(a)) //right
-S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gs(z));Ez(i>15)fu[i]=An(fb);h(bs|i);x)
+S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gi(z));Ez(i>15)fu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
  P(zts||(ztA&&At(zx)==ts),Y(zts,hc(aA0))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
-  Ik=gs(zts?z:zx);Ii=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
+  Ik=gi(zts?z:zx);Ii=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(mR(fs),o);ec0())
-S A2(cr,/*0*/Co=yo;Ii;P(yts&&(i=fAI(fl,gs(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts&&gs(y)=='o',h(bo);x)
+S A2(cr,/*0*/Co=yo;Ii;P(yts&&(i=fAI(fl,gi(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts&&gi(y)=='o',h(bo);x)
  P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Nn=yn;Au=yx;
  P(u==PRG,i(n-1,r(x,yA[i+1]);h(i==n-2?br:bp))x)
  P(n<2,hc(uR);x)P(n==3&&(utu||u==av0),r(x,yz);l(x,y,yy))
