@@ -120,7 +120,7 @@ EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define h(T) S A a##T(Nn)_(atn(t##T,n))
  h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S)
 #undef h
-S A ac(Cv)_(AT(tc,(I)v))  S C gc (Ax)_(Q(xtc);x)
+S A ac(Cv)_(AT(tc,(I)v))
 S A ab(Bv)_(AT(tb,(I)v))
 S A ah(Hv)_(AT(th,(I)v))
 S A as(Iv)_(AT(ts,(I)v))  S I gs (Ax)_(Q(xts);x)
