@@ -109,7 +109,7 @@ AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(OC*,OC*),aCn(OC*,N),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,OC*,N),ea1(A1,A),
  e0(OC*),e1(OC*,A),e2(OC*,A,A),eN(OC*,I,OA*),get(A,N),getr(A,N),kv(A*),room(A,N),wdn(A,N,N,N);
 V init(I,C**),mrn(I,OA*),repl();
-C*syp(I*),art(I,C),tZ(L);
+C*syp(I*),tZ(L);
 I fB(OV*,I,OV*),fH(OV*,I,OV*),fI(OV*,I,OV*),fL(OV*,I,OV*),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L),
  si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A);
