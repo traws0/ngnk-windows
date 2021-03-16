@@ -42,7 +42,7 @@ g(r)g(s)g(p)g(a)
 
 S C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 S C tZx(Ax)_(xtdD?tD:xtlL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gi(x)):tB)
-I sup(A*p,A*q)_(Ax=*p,y=*q;A1*f=CH(max(tZx(x),tZx(y))-tB,&gB,gH,gI,gL,gD);*p=x=Ny(f(x));*q=y=Nx(f(y));1)
+I sup(A*p,A*q)_(Ax=*p,y=*q;A1*f=ct[max(tZx(x),tZx(y))];*p=x=Ny(f(x));*q=y=Nx(f(y));1)
 S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[xt-(xtt?tb:tB)][v-4][k];Ct=art(v,xt);
  Y(!k,t+=tb-tB;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))

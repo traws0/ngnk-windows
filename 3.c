@@ -14,7 +14,7 @@ S A f(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v?3:1),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|
  P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))
  S TY(&abB)f[][2][5]={{{abB,ahH,aiI,alL,adD},{aBB,aHH,aII,aLL,aDD}},{{mbB,mhH,miI,mlL,mdD},{mBB,mHH,mII,mLL,mDD}}};
  Nn=yn;El(k==3&&xn-n,x,y)Au=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC,uC,n);
- Y(m<n,Y(k-3,x=CH(xt-tc,&gB,gH,gI,gL)(x))E(x=wdn(x,m,n,n-m))
+ Y(m<n,Y(k-3,x=ct[xt+1+tC-tc](x))E(x=wdn(x,m,n,n-m))
        Y(y-u,y=wdn(y,m,n,n-m);u=wdn(u,0,m,n))E(y=u=wdn(u,0,n,n))
        L mw=m*ZT[ut];f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC+(y-u?0:mw),uC+mw,n-m))
  x(y-u?y(u):u))
