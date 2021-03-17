@@ -16,10 +16,11 @@ S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gi(z));Ez(i>15)fu[i]=An(fb);h(b
   Ik=gi(zts?z:zx);Ii=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(mR(fs),o);ec0())
+I asg(Ax)_(xtA||xts||(xtS&&xn>1)) //is lhs of assignment?
 S A2(cr,/*0*/Co=yo;Ii;P(yts&&(i=fAI(fl,gi(y)))>=0,fu[i]=An(fb);h(bg|i);x)P(yts&&gi(y)=='o',h(bo);x)
  P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Nn=yn;Au=yx;
  P(u==PRG,i(n-1,r(x,yA[i+1]);h(i==n-2?br:bp))x)
- P(n<2,hc(uR);x)P(n==3&&(utu||u==av0),r(x,yz);l(x,y,yy))
+ P(n<2,hc(uR);x)P(n==3&&(utu||u==av0)&&asg(yy),r(x,yz);l(x,y,yy))
  P(n>3&&u==cv('$'),n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=An(fb);h(0))r(x,n&1?*++a:au0);Az=fb;
   i(n&~1,I d=(i&1?zn:p[i+1])-p[i];Y(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
  Y(n==2&&u==cu('*'),Az=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))
