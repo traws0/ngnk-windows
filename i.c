@@ -21,7 +21,7 @@ S I o1(C*s,L fl)_(C*t=s;W(*t&&*t-':',t++)P(!*t,I f=open(s,fl,0666);Eo(f<0)f)
  UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
 S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Iv=gi(x);P(!v,1)C*s=syp(&v);o1(s,fl))Et(!xtC,x)x=str0(x);m2(x,o1(xC,fl)))
 S C ft(I f)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
- S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),&m))])
+ S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),m))])
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
 A1(u0c,x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
 A1(u1c,Xz(I f=gl(x);Cb[4096];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))I f=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
