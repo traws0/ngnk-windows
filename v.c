@@ -53,6 +53,4 @@ A1(asc,XA(Ez(xn>WI,x)A*a=xA,u=til(ai(xn));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=
  Xm(Ay=kv(&x);idx(x,N(asc(y))))P(xtC||xtZ,asci(x))XS(asc(N(ea1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)opn(x))
 A1(dsc,Xz(cls(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)sub(ai(xN-1),rev(asc(rev(x)))))
 A1(grp,Xz(K("{(2#x)#1,&x}",x))Xt(et1(x))Xm(Au=grp(kv(&x));Q(ur==1);uy=idx(x,uy);u)
- Ay=atn(xt,0),u=aA0;C w=Zt[xt];
- i(xn,Lj=!w?fpB(&y,xb):w==1?fpH(&y,xh):w==2?fpI(&y,xi):w==3?fpL(&y,xl):fpA(&y,mR(xa));Y(j==un,uq(aL0))uA[j]=apv(uA[j],&i))
- am(x(y),u))
+ K("{x[*'g]!g@:<g:(&(~x~':x i),!0)_i:<x}",x))
