@@ -4,9 +4,9 @@
 
 V*memcpy(V*x,OV*y,Nn)_(C*p=x;OC*q=y;i(n,p[i]=q[i])x)
 V*memmove(V*x,OV*y,Nn)_(memcpy(x,y,n))
-V*memset(V*x,I c,Nn)_(C*p=x;i(n,*p++=c);x)
+V*memset(V*x,Iv,Nn)_(C*p=x;i(n,*p++=v);x)
 I memcmp(OV*x,OV*y,Nn)_(OC*s=x,*t=y;i(n,Iv=*s++-*t++;P(v,v))0)
-I strcmp(OC*s,OC*t)_(W(*s&&*s==*t,s++;t++)*s-*t)
+I strcmp(OC*x,OC*y)_(W(*x&&*x==*y,x++;y++)*x-*y)
 N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
 
 #ifndef shared
@@ -42,7 +42,7 @@ N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
  #if SYS_pipe
   asm(h(pipe)h3(getdents));
  #else //freebsd
-  I pipe(I x[2])_(pipe2(x,0));I getdirentries(UI,V*,UI,V*);I getdents(UI x,V*y,UI z)_(getdirentries(x,y,z,0));
+  I pipe(Iv[2])_(pipe2(v,0));I getdirentries(UI,V*,UI,V*);I getdents(UI x,V*y,UI z)_(getdirentries(x,y,z,0));
   asm(h(pipe2)h4(getdirentries));
  #endif
 #endif
