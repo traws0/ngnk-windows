@@ -11,7 +11,7 @@ A1(m0,dbg(l++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))nxt(x)=m[b];m[
 A1(m1,dbg(l--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]));0)
 A1(mr,m1(m0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 S L h8(C*s,Lv)_(i(16,Cc=v>>4*i&15;s[15-i]="0W"[9<c]+c)v)
-A1(cmdm,i(ZZ(w),Y(w[i][0],Cb[]="0000000000000000..0000000000000000\n";h8(b,w[i][0]);h8(b+18,w[i][1]);write(1,b,Z b)))x(au0))
+A1(cmdm,i(ZZ(w),Y(w[i][0],Cb[35];b[16]=b[17]='.';b[34]=10;h8(b,w[i][0]);h8(b+18,w[i][1]);write(1,b,Z b)))x(au0))
 A1(mut,XP(x)P(xr==1,x)Au=x(atnv(xt,xn,xC));Y(utR,mRa(u))u)
 A atn(Ct,Nn)_(Ax=ma(59-__builtin_clzll(ZA+7+n*ZT[t]));xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Au=atn(t,n);mc(uC,v,n*ZT[t]);u)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
