@@ -2,8 +2,9 @@
 #include"a.h"
 #include<sys/syscall.h>
 
-V*memcpy(V*x,OV*y,Nn)_(C*p=x;OC*q=y;i(n,p[i]=q[i])x)
-V*memmove(V*x,OV*y,Nn)_(memcpy(x,y,n))
+V*memcpy(V*x,OV*y,Nn)_(C*p=x  ;OC*q=y  ;i(n,*p++=*q++)x)
+V*memCPY(V*x,OV*y,Nn)_(C*p=x+n;OC*q=y+n;i(n,*--p=*--q)x)
+V*memmove(V*x,OV*y,Nn)_((y<x&&x<y+n?memCPY:memcpy)(x,y,n))
 V*memset(V*x,Iv,Nn)_(C*p=x;i(n,*p++=v);x)
 I memcmp(OV*x,OV*y,Nn)_(OC*s=x,*t=y;i(n,Iv=*s++-*t++;P(v,v))0)
 I strcmp(OC*x,OC*y)_(W(*x&&*x==*y,x++;y++)*x-*y)
