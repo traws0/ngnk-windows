@@ -2,13 +2,16 @@
 #include"a.h"
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-3]
-S A m[35],w[8];A glb,ce[tn],cn[tn],ci[2][5];L mu;S I l;C**env;SN A0(oom,die("oom\n"))
-S A mm(Ii)_(V*p=mmap(0,ZA<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())Ax=(A)(p+ZA);bkt(x)=i;x)
+A w[8][2],m[35],glb,ce[tn],cn[tn],ci[2][5];L mu;S I l;C**env;SN A0(oom,die("oom\n"))
+S A mm(Ii)_(V*p=mmap(0,ZA<<i,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())
+ Ax=(A)(p+ZA);bkt(x)=i;i(ZZ(w),P(!w[i][0],w[i][0]=x;w[i][1]=x+(ZA<<i)))x)
 S A ma(Cb)_(Q(!l);P(b>ZZ(m),oom())mu+=ZA<<b;Ax=m[b];Ii=b;W(!m[i],i++)
  Y(i<ZZ(m)-1,m[i]=nxt(x=m[i]))E(x=mm(i=max(b,24)))Y(b<i,bkt(x)=b;W(b<i,i--;Ay=m[i]=(A)(x+(ZA<<i));bkt(y)=i;nxt(y)=0))x)
 A1(m0,dbg(l++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))nxt(x)=m[b];m[b]=(A)xC;mu-=ZA<<b;Y(xtR,mrn(xn,xA))x)
 A1(m1,dbg(l--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]));0)
 A1(mr,m1(m0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
+S L h8(C*s,Lv)_(i(16,Cc=v>>4*i&15;s[15-i]="0W"[9<c]+c)v)
+A1(cmdm,i(ZZ(w),Y(w[i][0],Cb[]="0000000000000000..0000000000000000\n";h8(b,w[i][0]);h8(b+18,w[i][1]);write(1,b,Z b)))x(au0))
 A1(mut,XP(x)P(xr==1,x)Au=x(atnv(xt,xn,xC));Y(utR,mRa(u))u)
 A atn(Ct,Nn)_(Ax=ma(59-__builtin_clzll(ZA+7+n*ZT[t]));xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Au=atn(t,n);mc(uC,v,n*ZT[t]);u)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
