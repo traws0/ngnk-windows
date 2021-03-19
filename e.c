@@ -12,6 +12,7 @@ A1(epr,I h=64;C s0[3*h+Z(e.m)+6],*s=s0;*s++='\'';mc(s,e.m,e.n);s+=e.n;*s++=10;
  Y(e.s,Ax=e.s;C*t=xC+e.o,*p=t,*q=t+1;W(p>xC&&p>t-h&&p[-1]&&p[-1]-10,p--)W(q<xC+xn&&q<=t+h&&*q&&*q-10,q++)
        mc(s,p,q-p);Y(p<=t-h,*s=s[1]='.')Y(q>t+h,s[q-p-2]=s[q-p-1]='.')s+=q-p;*s++=10;i(t-p,*s++=32)*s++='^';*s++=10)
  eC();write(1,s0,s-s0);x)
+A die(OC*s)_(write(1,s,mn(s));exit(1);0)
 
 #define g(t,m,n,a...) NO A##n(e##t##n,e##n(#m,##a))
 #define h(a...) g(a,0)g(a,1,x)g(a,2,x,y)
