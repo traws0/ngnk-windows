@@ -18,7 +18,7 @@
 #define Z sizeof
 #define ZZ(x) (Z(x)/Z(*(x)))
 #define ZP 4096ll //page
-#define ZA 32     //hdr
+#define ZA 32ll   //hdr
 #define NO __attribute__((noinline))
 #define SN S NO
 #define TD typedef
@@ -35,7 +35,7 @@
 #define EX extern
 #ifdef DEBUG
  #define dbg(x) x
- #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x))) //assert
+ #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n")) //assert
 #else
  #define dbg(x)
  #define Q(x)
@@ -84,23 +84,24 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 #define dat(x) ((V*)((x)<<16>>16))
-#define bkt(x) ((C*)dat(x))[-16]
 #define rfc(x) ((I*)dat(x))[-3]
+#define bkt(x) ((C*)dat(x))[-16]
+#define cap(x) ((ZA<<bkt(x))-ZA)
 #define _q(x,y) (x=apd(x,y)) //append
 A die(OC*);
 
-//getters                              setters
-S  C At(Ax)_(x>>56)                    S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
-S  C Av(Ax)_(x>>51&31)                 S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
-S  C Ak(Ax)_(x>>48&7)                  S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
-S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])   S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
-S  N An(Ax)_(Nn=xL[-1];Q(n<1ll<<48);n) S A AN(  Nn,Ax)_(Q(n<1ll<<48);              xL[-1]=n;x)
+//getters                           setters
+S  C At(Ax)_(x>>56)                 S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
+S  C Av(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
+S  C Ak(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
+S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
+S  N An(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48);              xL[-1]=n;x)
 S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cmd,cmdl,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gD,gH,gI,gL,gS,grp,hex,jsr,jsw,
- kst,las,len,md5,mr,mr0,mr1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,str,str0,
+ kst,las,len,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,str,str0,
  til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
 A3 a3,try;
@@ -114,7 +115,7 @@ I asg(Ax),si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,ce[],cn[],ci[2][5];EX OC vc[];EX L mu;EX A1*ct[];EX C**env;
 EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
-#define m2(x,a...) ({A t_=mr0(x);TY(({a;}))r_=({a;});dbg(x=0);mr1(t_);r_;}) //two-phase free()
+#define m2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
 #define h(T) S A a##T(Nn)_(atn(t##T,n))
  h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S) //aA aC aB aH aI aL aD aS
