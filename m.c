@@ -2,11 +2,10 @@
 #include"a.h"
 #include<sys/mman.h>
 #define xX ((A*)dat(x))[-3] //ptr to next
-S O L PRW=PROT_READ|PROT_WRITE,MN=MAP_NORESERVE,MP=MAP_PRIVATE,MA=MAP_ANON,MF=MAP_FIXED;
 I nw;V*w[8][2];A m[35],ce[tn],cn[tn],ci[2][5],glb;L mu;S I lck;C**env;SN A0(oom,die("oom\n"))
 S V mw(V*p,V*q){P(nw==ZZ(w))w[nw][0]=p;w[nw++][1]=q;}S V mW(V*p){i(nw,Y(w[i][0]==p,mc(w+i,w+--nw,Z w[0])))}
 S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)
-S V*MM(V*p,Nn,I f)_(mmap(p,n,PRW,MN|MP|(f<0?MA:MF),f,0))
+S V*MM(V*p,Nn,I f)_(mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0))
 S A mm(Cb)_(  V*a=MM(0,ZA<<b,-1);P((L)a>>4==-1,oom())mw(a,a+(ZA<<b));mb(b,(A)(a+ZA)))
 A mf(I f,Nn)_(V*a=MM(0,ZP+n ,-1);P((L)a>>4==-1,eo0())Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
               V*b=MM(a+ZP,n , f);P((L)a>>4==-1,eo0())mw(a,a+ZP+(n+ZP-1)/ZP*ZP);u)
