@@ -27,7 +27,7 @@ A1(u0c,x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
 A1(u1c,Xz(I f=gl(x);Cb[4096];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))I f=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
  P(t=='d',Cb[4096];Ik;Au=aC0;TD ST{long a,b;UH l;C s[];}T;
   W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,T*e=(V*)(b+i);u=catc(u,e->s,mn(e->s));u=apc(u,10);i+=e->l))close(f);u)
- P(t=='r',Ax=mf(f);close(f);x)
+ P(t=='r',Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
  Au=u1c(ai(f));close(f);u)
 A2(v0c,Y(ytA,y=N(rdc(ac(10),&y,1)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
 A2(v1c,Et(!ytC,x)Xz(I f=gl(x);Nn=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<0,u=eo0())Y(k<=0,BR)s+=k;n-=k)u))

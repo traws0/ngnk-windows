@@ -2,16 +2,18 @@
 #include"a.h"
 #include<sys/mman.h>
 #define xX ((A*)dat(x))[-3] //ptr to next
-S O L PRW=PROT_READ|PROT_WRITE,MNP=MAP_NORESERVE|MAP_PRIVATE;
-I nw;ST{Ax;Ln;}w[8];A m[35],ce[tn],cn[tn],ci[2][5],glb;L mu;S I lck;C**env;SN A0(oom,die("oom\n"))
-S A1(mw,P(nw==ZZ(w),x)w[nw].n=cap(x);w[nw++].x=x)S A mb(Ax,Cb)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)
-S A mm(Cb)_(V*p=mmap(0,ZA<<b,PRW,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())mw(mb((A)(p+ZA),b)))
-A mf(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)  V*a=mmap(0,ZP+n,PRW,MNP|MAP_ANON,-1,0);Eo((L)a>>4==-1)
- Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;V*b=mmap(a+ZP,n,PRW,MNP|MAP_FIXED,f,0);Eo(b-(V*)uC)mw(u))
+S O L PRW=PROT_READ|PROT_WRITE,MN=MAP_NORESERVE,MP=MAP_PRIVATE,MA=MAP_ANON,MF=MAP_FIXED;
+I nw;V*w[8][2];A m[35],ce[tn],cn[tn],ci[2][5],glb;L mu;S I lck;C**env;SN A0(oom,die("oom\n"))
+S V mw(V*p,V*q){P(nw==ZZ(w))w[nw][0]=p;w[nw++][1]=q;}S V mW(V*p){i(nw,Y(w[i][0]==p,mc(w+i,w+--nw,Z w[0])))}
+S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)
+S V*MM(V*p,Nn,I f)_(mmap(p,n,PRW,MN|MP|(f<0?MA:MF),f,0))
+S A mm(Cb)_(  V*a=MM(0,ZA<<b,-1);P((L)a>>4==-1,oom())mw(a,a+(ZA<<b));mb(b,(A)(a+ZA)))
+A mf(I f,Nn)_(V*a=MM(0,ZP+n ,-1);P((L)a>>4==-1,eo0())Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
+              V*b=MM(a+ZP,n , f);P((L)a>>4==-1,eo0())mw(a,a+ZP+(n+ZP-1)/ZP*ZP);u)
 S A ma(Cb)_(Q(!lck);P(b>ZZ(m),oom())mu+=ZA<<b;Ax=m[b];Ii=b;W(!m[i],i++)Y(i<ZZ(m)-1,x=m[i];m[i]=xX)E(x=mm(i=max(b,24)))
- Y(b<i,bkt(x)=b;W(b<i--,m[i]=mb((A)(x+(ZA<<i)),i)))x)
+ Y(b<i,bkt(x)=b;W(b<i--,m[i]=mb(i,(A)(x+(ZA<<i)))))x)
 A1(m0,dbg(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))xX=m[b];m[b]=(A)xC;mu-=ZA<<b;Y(xtR,mrn(xn,xA))x)
-A1(m1,dbg(lck--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]);dbg(AN(-1,x)));0)
+A1(m1,dbg(lck--);P(!x,0)P(xt==tn,mW(xC-ZP);munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]);dbg(AN(-1,x)));0)
 A1(mr,m1(m0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 A1(mut,XP(x)P(xr==1,x)Au=x(atnv(xt,xn,xC));Y(utR,mRa(u))u)
 A atn(Ct,Nn)_(Ax=ma(59-__builtin_clzll(ZA+7+n*ZT[t]));xr=1;AT(t,AN(n,x)))
@@ -40,6 +42,7 @@ V repl(){W(rep())}
 #define hs(x) {mc(s,x,Z(x)-1);s+=Z(x)-1;}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;hs("\n\0");a;write(1,b,s-b);}
-C*h8(C*s,Lv)_(i(16,Cc=v>>4*i&15;s[15-i]="0W"[9<c]+c)s+16)
-A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));hS(" r",rfc(x));hS(" n",xn))x)
-A1(cmdm,i(nw,Ax=w[i].x;In=0;Ay=x+w[i].n;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n")))x(au0))
+C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
+A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));hS(" r",xr);hS(" n",xn))x)
+A1(cmdm,i(nw,V*p=w[i][0],*q=w[i][1];hb(s=h8(s,(L)p);hs("..");s=h8(s,(L)q);hS(" N=",q-p));
+ Ax=(A)p+ZA,y=(A)q+ZA;In=0;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n")))x(au0))
