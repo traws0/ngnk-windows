@@ -1,5 +1,5 @@
 #!k
-repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE"
+repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for help."
 cmds:" "!{` 0:("Commands:"
  "help             other"
  "\\   commands     \\l file.k  load"
@@ -8,7 +8,8 @@ cmds:" "!{` 0:("Commands:"
  "\\:  I/O verbs    \\v         variables"
  "\\'  adverbs      \\f         functions"
  "\\`  symbols      \\command   shell command (through /bin/sh)"
- "\\h  summary      \\\\         exit")}
+ "\\h  summary      \\\\         exit"
+ "\\l  license")}
 cmds["h"]:{` 0:1_(0
  ": SET      RETURN     ' each|slide|bin"
  "+ add      flip       / fold|join |dec"
@@ -172,6 +173,8 @@ cmds["`"]:{` 0:("Special symbols:"
  " `md5@C `sha1@C `sha256@C `sha3@C             hash"
  " `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)")}
 cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
+cmds["l"]:{` 1:1:repl.basename[`argv 0],"/LICENSE";}
+repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
 repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`epr@]];1}
 ` 0:repl.banner;{x}repl.rep/1;
