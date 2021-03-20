@@ -64,10 +64,10 @@ S I in(UL i,UL n)_(i<n)
 #define mn(a...) __builtin_strlen(a)
 V*memcpy(V*,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),exit(I);N strlen(OC*);I strcmp(OC*,OC*),memcmp(OV*,OV*,N);
 
-//          0  1  2  3  4  5  6  7  8  9 10 11 13 14 15 16 17 18 19 20 21 22 23 24 25
-//         00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18
+//             1  2  3  4  5  6  7  8  9 10 11 13 14 15 16 17 18 19 20 21 22 23 24 25
+//            01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18
 //            () "" ,0 ,1 ,2 ,3 ,d ,` +!  ! "c" 0  1  2  3 .3  ` {} 1+ ++ +/ +: +  /
-enum      {tO,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
+enum      {t_,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
 #define TS "0""A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
 #define TZ  0, 8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  0, 4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
@@ -87,7 +87,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 #define rfc(x) ((I*)dat(x))[-3]
 #define bkt(x) ((C*)dat(x))[-16]
 #define cap(x) ((ZA<<bkt(x))-ZA)
-#define _q(x,y) (x=apd(x,y)) //append
+#define _q(x,y) (x=apd(x,y))
 A die(OC*);
 
 //getters                           setters
