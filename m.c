@@ -3,8 +3,12 @@
 #include<sys/mman.h>
 #define nxt(x) ((A*)dat(x))[-3]
 A w[8][2],m[35],glb,ce[tn],cn[tn],ci[2][5];L mu;S I l;C**env;SN A0(oom,die("oom\n"))
+S A mw(Ax)_(i(ZZ(w),P(!w[i][0],w[i][1]=x+cap(x);w[i][0]=x))x)
 S A mm(Cb)_(V*p=mmap(0,ZA<<b,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())
- Ax=(A)(p+ZA);bkt(x)=b;dbg(AN(-1,x));i(ZZ(w),P(!w[i][0],w[i][1]=x+cap(x);w[i][0]=x))x)
+ Ax=(A)(p+ZA);bkt(x)=b;dbg(AN(-1,x));mw(x))
+A mf(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
+ V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);Eo((L)a>>4==-1)Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
+ V*b=mmap(a+ZP,n,p,m|MAP_FIXED,f,0);Eo(b-(V*)uC)mw(u))
 S A ma(Cb)_(Q(!l);P(b>ZZ(m),oom())mu+=ZA<<b;Ax=m[b];Ii=b;W(!m[i],i++)Y(i<ZZ(m)-1,m[i]=nxt(x=m[i]))E(x=mm(i=max(b,24)))
  Y(b<i,bkt(x)=b;W(b<i,i--;Ay=m[i]=(A)(x+(ZA<<i));nxt(y)=0;bkt(y)=i;dbg(AN(-1,y))))x)
 A1(m0,dbg(l++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))nxt(x)=m[b];m[b]=(A)xC;mu-=ZA<<b;Y(xtR,mrn(xn,xA))x)
