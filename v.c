@@ -1,9 +1,9 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-#define i_(T)     S V i##T(V*p,Nn)_(T*a=p;AL(a)i(PD(n,a),a[i]=i))
-#define r_(T)     S V r##T(V*p,V*q)_(T*a=p,*b=q;AL(a)W(a<b,SWP(*a,*b);a++;b--))
+#define h(T) S V i##T(V*p,Nn)_(T*a=p;AL(a)i(PD(n,a),a[i]=i))\
+             S V r##T(V*p,V*q)_(T*a=p,*b=q;AL(a)W(a<b,SWP(*a,*b);a++;b--))
+h(B)h(H)h(I)h(L)
 #define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,Nn)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
 #define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,Nn)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
-i_(B)i_(H)i_(I)i_(L)r_(B)r_(H)r_(I)r_(L)
 c_(C,H,r)c_(B,H,r)c_(H,C,a)c_(C,I,r)c_(B,I,r)c_(I,C,a)c_(I,B,a)c_(L,C,a)
 cN(H,I,r)cN(I,H,a)cN(H,L,r)cN(L,H,a)cN(I,L,r)cN(L,I,a)cN(L,D,a)cN(D,L,a)
 TY(&cCH)wf[]={cCH,cBH,cHI,cIL,cLD};
