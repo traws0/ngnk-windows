@@ -1,18 +1,17 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 #include"a.h"
 #include<sys/mman.h>
-#define nxt(x) ((A*)dat(x))[-3]
-A w[8][2],m[35],glb,ce[tn],cn[tn],ci[2][5];L mu;S I l;C**env;SN A0(oom,die("oom\n"))
-S A mw(Ax)_(i(ZZ(w),P(!w[i][0],w[i][1]=x+cap(x);w[i][0]=x))x)
-S A mm(Cb)_(V*p=mmap(0,ZA<<b,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())
- Ax=(A)(p+ZA);bkt(x)=b;dbg(AN(-1,x));mw(x))
-A mf(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)I p=PROT_READ|PROT_WRITE,m=MAP_NORESERVE|MAP_PRIVATE;
- V*a=mmap(0,ZP+n,p,m|MAP_ANON,-1,0);Eo((L)a>>4==-1)Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;
- V*b=mmap(a+ZP,n,p,m|MAP_FIXED,f,0);Eo(b-(V*)uC)mw(u))
-S A ma(Cb)_(Q(!l);P(b>ZZ(m),oom())mu+=ZA<<b;Ax=m[b];Ii=b;W(!m[i],i++)Y(i<ZZ(m)-1,m[i]=nxt(x=m[i]))E(x=mm(i=max(b,24)))
- Y(b<i,bkt(x)=b;W(b<i,i--;Ay=m[i]=(A)(x+(ZA<<i));nxt(y)=0;bkt(y)=i;dbg(AN(-1,y))))x)
-A1(m0,dbg(l++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))nxt(x)=m[b];m[b]=(A)xC;mu-=ZA<<b;Y(xtR,mrn(xn,xA))x)
-A1(m1,dbg(l--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]);dbg(AN(-1,x)));0)
+#define xX ((A*)dat(x))[-3] //ptr to next
+S O L PRW=PROT_READ|PROT_WRITE,MNP=MAP_NORESERVE|MAP_PRIVATE;
+I nw;ST{Ax;Ln;}w[8];A m[35],ce[tn],cn[tn],ci[2][5],glb;L mu;S I lck;C**env;SN A0(oom,die("oom\n"))
+S A1(mw,P(nw==ZZ(w),x)w[nw].n=cap(x);w[nw++].x=x)S A mb(Ax,Cb)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)
+S A mm(Cb)_(V*p=mmap(0,ZA<<b,PRW,MAP_PRIVATE|MAP_ANON,-1,0);P(((L)p>>4)==-1,oom())mw(mb((A)(p+ZA),b)))
+A mf(I f)_(Nn=lseek(f,0,SEEK_END);Eo(n<0)  V*a=mmap(0,ZP+n,PRW,MNP|MAP_ANON,-1,0);Eo((L)a>>4==-1)
+ Au=(A)(a+ZP);uL[-2]=0;u=AT(tC,AN(n,u));uR;V*b=mmap(a+ZP,n,PRW,MNP|MAP_FIXED,f,0);Eo(b-(V*)uC)mw(u))
+S A ma(Cb)_(Q(!lck);P(b>ZZ(m),oom())mu+=ZA<<b;Ax=m[b];Ii=b;W(!m[i],i++)Y(i<ZZ(m)-1,x=m[i];m[i]=xX)E(x=mm(i=max(b,24)))
+ Y(b<i,bkt(x)=b;W(b<i--,m[i]=mb((A)(x+(ZA<<i)),i)))x)
+A1(m0,dbg(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,AT(tn,x))xX=m[b];m[b]=(A)xC;mu-=ZA<<b;Y(xtR,mrn(xn,xA))x)
+A1(m1,dbg(lck--);P(!x,0)P(xt==tn,munmap(xC-ZP,xn+ZP);0)dbg(ms(xC,0xab,xn*ZT[xt]);dbg(AN(-1,x)));0)
 A1(mr,m1(m0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 A1(mut,XP(x)P(xr==1,x)Au=x(atnv(xt,xn,xC));Y(utR,mRa(u))u)
 A atn(Ct,Nn)_(Ax=ma(59-__builtin_clzll(ZA+7+n*ZT[t]));xr=1;AT(t,AN(n,x)))
@@ -40,8 +39,7 @@ V repl(){W(rep())}
 
 #define hs(x) {mc(s,x,Z(x)-1);s+=Z(x)-1;}
 #define hS(x,y) {hs(x);s=sl(s,y);}
-#define hb(x) {Cb[128],*s=b;hs("\n\0");x;write(1,b,s-b);}
+#define hb(a...) {Cb[128],*s=b;hs("\n\0");a;write(1,b,s-b);}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*i&15;s[15-i]="0W"[9<c]+c)s+16)
 A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));hS(" r",rfc(x));hS(" n",xn))x)
-A2(hw,x+=ZA;In=0;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n"))x)
-A1(cmdm,i(ZZ(w),Y(w[i][0],hw(w[i][0],w[i][1])))x(au0))
+A1(cmdm,i(nw,Ax=w[i].x;In=0;Ay=x+w[i].n;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n")))x(au0))
