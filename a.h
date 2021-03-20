@@ -1,5 +1,5 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-//#define DEBUG
+#define DEBUG
 #include<unistd.h>
 #include"k.h"
 #include"g.h"
@@ -16,7 +16,7 @@
 #define O const
 #define S static
 #define Z sizeof
-#define ZZ(x) (Z(x)/Z(*(x)))
+#define ZZ(x) (Z(x)/Z((x)[0]))
 #define ZP 4096ll //page
 #define ZA 32ll   //hdr
 #define NO __attribute__((noinline))
@@ -95,7 +95,7 @@ S  C At(Ax)_(x>>56)                 S A AT(UL t,Ax)_(Q(t<=tn);               x<<
 S  C Av(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C Ak(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
 S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
-S  N An(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48);              xL[-1]=n;x)
+S  N An(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);       xL[-1]=n;x)
 S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
@@ -110,7 +110,7 @@ AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCm(OC*,OC*),aCn(OC*,N),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,OC*,N),ea1(A1,A),
  e0(OC*),e1(OC*,A),e2(OC*,A,A),eN(OC*,I,OA*),get(A,N),getr(A,N),kv(A*),room(A,N),wdn(A,N,N,N);
 V init(I,C**),mrn(I,OA*),repl();
-C*syp(I*),tZ(L);
+C*sl(C*,L),*syp(I*),tZ(L);
 I asg(Ax),si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,ce[],cn[],ci[2][5];EX OC vc[];EX L mu;EX A1*ct[];EX C**env;
@@ -167,11 +167,8 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #define SF(x,y,s,f...) ({Li=gl(K(s"?",x));Ed(i<0,y);CH(i,&f)(y);})
 
 #define ov(x) ov_(#x":",(L)(x))
-#define ox(x) ox_(#x":",(A)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(OC*x)_(write(2,x,mn(x)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
-S I ol(Ln)_(C b[32],*u=b+31;Lm=n<0;Y(m,n=-n)do{*u--='0'+n%10;n/=10;}while(n);Y(m,*u--='-')write(2,u+1,b+31-u))
 S L ov_(C*s,Nn)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
-S A ox_(C*s,Ax)_(os(s);oh((L)x);P(!x,0)Y(!xtP,os("t");ol(xt);os("r");ol(xr);os("n");ol(xn))os(" ");out(x))
