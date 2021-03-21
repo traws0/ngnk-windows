@@ -1,28 +1,26 @@
 #!k
-repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for help."
+repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for more info"
 cmds:()!()
 cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
 cmds["l"]:{` 1:1:repl.basename[`argv 0],"/LICENSE";}
 repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
 repl.rep:{` 1:," ";$[#x:1:0;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`epr@]];1}
-{cmds[. x[1]]:{y;` 0:x}2_x}'{(&x~\:80#"-")_x:(1+*&"\\\\"~/:x)_x}@0:`argv 1;
+{cmds[x[1]1]:{y;` 0:x}2_x}'{(&x~\:80#"-")_x:(1+*&"\\\\"~/:x)_x}@0:`argv 1;
 ` 0:repl.banner;{x}repl.rep/1;
 \\
 --------------------------------------------------------------------------------
-" "
-Commands:
-help             other
-\   commands     \l file.k  load
-\0  datatypes    \t:n expr  time (elapsed milliseconds after n runs)
-\+  verbs        \w         workspace bytes
-\:  I/O verbs    \v         variables
-\'  adverbs      \f         functions
-\`  symbols      \command   shell command (through /bin/sh)
-\h  summary      \\         exit
-\l  license
+\
+Help:             Commands:
+\0  datatypes     \l file.k  load
+\+  primitives    \t:n expr  time (elapsed milliseconds after n runs)
+\:  I/O           \w         workspace bytes
+\'  adverbs       \v         variables
+\`  symbols       \f         functions
+\h  summary       \other     shell command (through /bin/sh)
+\l  license       \\         exit
 --------------------------------------------------------------------------------
-"0"
+\0
 Types: ACBHILDSMmcbhildsopqruvw
 list atom
  `A        generic list   ()   ,"ab"   (0;`1;"2";{3};%)
@@ -32,7 +30,7 @@ list atom
  `I   `i   int    32bit   -2147483648 2147483647
  `L   `l   long   64bit   0N 9223372036854775807
  `D   `d   double 64bit   -0w -0.0 0.0 0w 1.2e308 0n
- `S   `s   symbol         `   `a   `b`cd`"ef"
+ `S   `s   symbol         `   `a   `"file.txt"   `b`cd`"ef"
  `M   `m   table&dict     +`a`b!(0 1;"23")   (0#`)!()
       `o   lambda         {1+x*y#z}  {[a;b]+/*/2#,a,b}
       `p   projection     1+   {z}[0;1]   @[;i;;]
@@ -42,14 +40,14 @@ list atom
       `v   dyadic  verb   +   0:
       `w   adverb         '   /:
 --------------------------------------------------------------------------------
-":"
+\:
 I/O verbs
   0:x read  lines
 x 0:y write lines
   1:x read  bytes
 x 1:y write bytes
-fd:>x open
-  <fd close
+   <s open          fd:<`"file.txt"
+   >i close         >fd
 
 x can be a file descriptor (int) or symbol or string such as
  "file.txt"
@@ -57,7 +55,7 @@ x can be a file descriptor (int) or symbol or string such as
  "host:port"
  ":port"         /host defaults to 127.0.0.1
 --------------------------------------------------------------------------------
-"+"
+\+
 Verbs:    : + - * % ! & | < > = ~ , ^ # _ $ ? @ . 0: 1:
 notation: [c]har [i]nt [n]umber(int|float) [s]ymbol [a]tom [d]ict
           [f]unc(monad) [F]unc(dyad) [xyz]any
@@ -132,7 +130,7 @@ x.y apply(n)  {x*y+1}. 2 3 -> 8   (`a`b`c;`d`e`f). 1 0 -> `d
 .[x;y;F;z] drill .[("ab";"cd");1 0;:;"x"] -> ("ab";"xd")
 .[f;y;f]   try   .[+;1 2;"E:",] -> 3   .[+;1,`2;"E:",] -> "E:typ"
 --------------------------------------------------------------------------------
-"`"
+\`
 Special symbols:
    `@x serialize    ` 7 8 9 -> 0x020300000000000000070809
    `?C deserialize  `?0x020300000000000000070809 -> 7 8 9
@@ -147,7 +145,7 @@ Special symbols:
  `md5@C `sha1@C `sha256@C `sha3@C             hash
  `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)
 --------------------------------------------------------------------------------
-"'"
+\'
 Adverbs:   ' / \ ': /: \:
   f'x  each1     #'("abc";3 4 5 6) -> 3 4
 x F'y  each2     2 3#'"ab" -> ("aa";"bbb")
@@ -172,7 +170,7 @@ x F':y seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3
 x F/:y eachright 1 2*/:3 4 -> (3 6;4 8)
 x F\:y eachleft  1 2*\:3 4 -> (3 4;6 8)
 --------------------------------------------------------------------------------
-"h"
+\h
 : SET      RETURN    '  each|slide|bin
 + add      flip      /  fold|join |dec
 - subtract negate    \  scan|split|enc
