@@ -1,6 +1,9 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 #include"a.h"
 #include<sys/mman.h>
+#ifndef MAP_NORESERVE
+ #define MAP_NORESERVE 0 //freebsd
+#endif
 #define xX ((A*)dat(x))[-3] //ptr to next
 I nw;V*w[8][2];A m[35],ce[tn],cn[tn],ci[2][5],glb;L mu;S I lck;C**argv,**env;SN A0(oom,die("oom\n"))
 S V mw(V*p,V*q){P(nw==ZZ(w))w[nw][0]=p;w[nw++][1]=q;}S V mW(V*p){i(nw,Y(w[i][0]==p,mc(w+i,w+--nw,Z w[0])))}

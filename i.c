@@ -1,5 +1,4 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-#include<sys/mman.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
 #include<netinet/tcp.h>
@@ -10,9 +9,6 @@
 #undef __USE_EXTERN_INLINES
 #include<sys/stat.h>
 #include"a.h"
-#ifndef MAP_NORESERVE
- #define MAP_NORESERVE 0
-#endif
 I getdents(UI,V*,UI);
 S UI addr(C**p)_(C*s=*p;P(!*s,0x0100007f)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=pu(&s);Ed(r[i]>255))*p=s;*(UI*)r)
 S I skt(UI h,UH p)_(I f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)Iv=setsockopt(f,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4);Eo(v<0)
