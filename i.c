@@ -32,7 +32,7 @@ A2(v1c,Et(!ytC,x)Xz(I f=gl(x);Nn=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(az(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))
  x(az((now()-t+500)/1000)))
-S A1(cmdw,Q(xtC);Nn=mu;P(!xn,x(az(n)))mr(out(Nx(val(xR))));n=mu-n;x(n?enl(cat(as(0),az(n))):au0))
+S A1(cmdw,Q(xtC);Nn=mU;P(!xn,x(az(n)))mr(out(Nx(val(xR))));n=mU-n;x(n?enl(cat(as(0),az(n))):au0))
 A1(cmd,Et(!xtC,x)Cc=*xC;P(c=='\\',exit(0);x)
  Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(az(i),x));
   A1*f=CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,0);P(f,f(x)))
