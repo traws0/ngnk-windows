@@ -75,7 +75,7 @@ EX OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(tb,t,
 S I _F(Ct)_(t>=to)S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I _R(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
-//header bytes: b.oorrrrnnnnnnnn (b=bucket,o=srcoffset,r=refcount,n=length)
+//header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,i=value):
 // tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii tc,tb,th,ti
@@ -91,7 +91,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 A die(OC*);
 
 //getters                           setters
-S  C At(Ax)_(x>>56)                 S A AT(UL t,Ax)_(Q(t<=tn);               x<<8>>8|t<<56)
+S  C At(Ax)_(x>>56)                 S A AT(UL t,Ax)_(Q(t<=tn);x=x<<8>>8|t<<56;Y(!_P(t),xC[-15]=t)x)
 S  C Av(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C Ak(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
 S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)

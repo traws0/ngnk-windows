@@ -51,6 +51,6 @@ V repl(){W(rep())}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;a;hs("\n\0");write(1,b,s-b);}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
-A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));hS(" r",xr);hS(" n",xn))x)
+A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS(" n",xn))x)
 A1(cmdm,i(nm,V*p=m[i].p,*q=p+m[i].n;I f=!!*(C*)p;hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p));
              Ax=(A)p+ZA+ZP*f,y=(A)q;In=0;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n")))x(au0))
