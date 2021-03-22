@@ -1,4 +1,4 @@
-ngn/k is a simple fast vector programming language for x86_64 GNU/linux
+ngn/k is a simple fast vector programming language
 license: GNU AGPLv3 (v3 only) - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 build: CC=clang-10 make -e  # or CC=clang-7 or CC=gcc-8
 usage: rlwrap ./k repl.k
@@ -12,17 +12,17 @@ p.c  parser
 b.c  bytecode compiler and virtual machine
 k.c  eval, apply, amend, drill: . @
 h.c  shape-related: x#y ,x x,y
-s.c  object to string
+s.c  object to string: $x `k@x
 f.c  find, random: x?y
 1.c  monadic arithmetic
-2.c  dyadic  arithmetic (except + and *)
-3.c  + and *
+2.c  dyadic  arithmetic except + and *
+3.c  dyadic  arithmetci + and *
 i.c  i/o and \cmds
 v.c  the rest of the verbs
 w.c  adverbs
 j.c  json parser: `j?x
-x.c  serialization
-c.c  crypto
+x.c  serialization: `@x `?x
+c.c  cryptography
 e.c  error handling
 t/   unit tests
 g/   https://codegolf.stackexchange.com/
