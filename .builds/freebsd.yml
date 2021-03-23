@@ -1,9 +1,7 @@
 image: freebsd/12.x
 packages:
   - llvm10
-  - lang/gcc8
 tasks:
   - build: |
       cd k
       make c; CC=clang-10 make -e
-      make c; CC=gcc-8    make -e
