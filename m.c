@@ -39,11 +39,11 @@ S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p+
 A1(cmdl,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(line(p,q));p=q+!!*q)x(au0))
 A glb,ce[tn],cn[tn],ci[2][5];C**argv,**env;
-V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=ce[tS]=aS(0);i(tS,ce[i]=AT(i,x))ce[tm]=am(aS0,aA0);glb=aa0();
+V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;i(tS+1,ce[i]=atn(i,0))ce[tm]=am(aS0,aA0);glb=aa0();
  cn[tA]=ce[tA];cn[tC]=ac(32);cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
- ci[0][0]=al(0);          ci[0][1]=al(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
- ci[1][0]=AT(td,ci[0][0]);ci[1][1]=ad(1);ci[1][2]=ad(WD);ci[1][3]=ad(-WD);ci[1][4]=cn[tD];}
+ ci[0][0]=al(0);ci[0][1]=al(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
+ ci[1][0]=ad(0);ci[1][1]=ad(1);ci[1][2]=ad(WD);ci[1][3]=ad(-WD);ci[1][4]=cn[tD];}
 I rep()_(S Cb[256];Lm=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 V repl(){W(rep())}
 
@@ -51,6 +51,7 @@ V repl(){W(rep())}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;a;hs("\n\0");write(1,b,s-b);}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
-A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS(" n",xn))x)
+A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS(" n",xn)
+         i(2,hs(" ");s=h8(s,xl)))x)
 A1(cmdm,i(nm,V*p=m[i].p,*q=p+m[i].n;I f=!!*(C*)p;hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p));
              Ax=(A)p+ZA+ZP*f,y=(A)q;In=0;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n")))x(au0))

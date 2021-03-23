@@ -15,7 +15,7 @@ A2(cut,XF(flt(x,y,0))Ym(K("{((!y)^x)#y}",x,y))
  Yz(Et(!xtT,x,y)Li=gl(y);P(!in(i,xn),x)
   Au=atn(xt,xn-1);L w=ZT[xt];mc(uC,xC,i*w);mc(uC+i*w,xC+i*w+w,(xn-i-1)*w);Y(xtA,u=sqz(mRa(u)))x(u))
  et2(x,y))
-A1(enl,P(xtl||xtd,AT(tT(xt),x))P(xtc||xtz||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,ea1(enl,y)))a1(x))
+A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtc||xtz||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,ea1(enl,y)))a1(x))
 A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
@@ -26,7 +26,7 @@ A2(cat,
  mc(uC+m*w,yC,n*w);Y(ytA,mRa(y))y(u))
 A apv(Ax,OV*v)_(Q(xtT);Nn=xn,w=ZT[xt];
  Y(xr==1&&w+n*w<=cap(x),x=AN(n+1,x))
- E(Ay=atn(xt,n+1);Y(xr>1&&xtA,mRa(x))EY(xtR,x=AT(tL,x))m2(x,mc(yC,xC,n*w));x=y)
+ E(Ay=atn(xt,n+1);Y(xr>1&&xtA,mRa(x))EY(xtR,x=AT(tL,mut(x)))m2(x,mc(yC,xC,n*w));x=y)
  V*p=xC+n*w;mc(p,v,w);x)
 A2(apd,Q(xtT||xtM);XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,get(yy,i)))y(x))
  Y(xtZ&&ytz,A1*f=ct[max(xt,yt-tl+tL)];x=Ny(f(x));y=Nx(f(y)))

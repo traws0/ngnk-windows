@@ -47,7 +47,7 @@ S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT
  V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[xt-(xtt?tb:tB)][v-4][k];Ct=art(v,xt);
  Y(!k,t+=tb-tB;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
  Au=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,uC,un);x==u?y(u):y==u?x(u):x(y(u)))
-A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,x),AT(yt+ti-ts,y)):vv(x,y,vi('=')))
+A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
 S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
 A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))P(xtz||xtd,vv(x,y,vi('!')))dct(x,y))
 #define h(c,s) A2(s,vv(x,y,vi(c)))

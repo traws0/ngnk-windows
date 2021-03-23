@@ -91,7 +91,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 A die(OC*);
 
 //getters                           setters
-S  C At(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(t<=tn);x=x<<8>>8|t<<56;Y(!_P(t),xC[-15]=t)x)
+S  C At(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(t<=tn);x=x<<8>>8;P(_P(t),x|t<<56)xC[-15]=t;x)
 S  C Av(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C Ak(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
 S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
