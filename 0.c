@@ -1,6 +1,9 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
 #include"a.h"
 #include<sys/syscall.h>
+#ifndef SYS_getdents
+ #define SYS_getdents SYS_freebsd11_getdents
+#endif
 
 V*memcpy(V*x,OV*y,Nn)_(C*p=x  ;OC*q=y  ;i(n,*p++=*q++)x)
 V*memCPY(V*x,OV*y,Nn)_(C*p=x+n;OC*q=y+n;i(n,*--p=*--q)x)
@@ -38,12 +41,12 @@ N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
   #define h5(x) h(x,"movq %rcx,%r10;")
   #define h6(x) h(x,"movq %rcx,%r10;")
  #endif
+
  asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h5(setsockopt)h3(connect)
-     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap));
+     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents));
  #if SYS_pipe
-  asm(h(pipe)h3(getdents));
+  asm(h(pipe));
  #else //freebsd
-  I pipe(Iv[2])_(pipe2(v,0));I getdirentries(UI,V*,UI,V*);I getdents(UI x,V*y,UI z)_(getdirentries(x,y,z,0));
-  asm(h(pipe2)h4(getdirentries));
+  I pipe(Iv[2])_(pipe2(v,0));asm(h(pipe2));
  #endif
 #endif
