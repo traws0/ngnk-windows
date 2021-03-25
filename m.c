@@ -16,7 +16,8 @@ A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;
 S Au[35];L mU;S I lck;S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,AT(0,x)));bkt(x)=b;x)V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 A1(m0,dbg(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,x=AT(tn,x))xX=u[b];u[b]=(A)xC;Y(xtR,mrn(xn,xA))x)
 A1(m1,dbg(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))dbg(ms(xC,0xab,cap(x));dbg(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
-A atn(Ct,Nn)_(Q(!lck);Q(!_P(t));Cb=59-__builtin_clzll(ZA|ZA+7+n*ZT[t]);P(b>ZZ(u),oom())Ax=u[b];Ii=b;W(!u[i],i++)
+A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_P(t));
+ Cb=59-__builtin_clzll(ZA|ZA-1+n*ZT[t]);P(b>ZZ(u),oom())Ax=u[b];Ii=b;W(!u[i],i++)
  Y(i<ZZ(u)-1,x=u[i];u[i]=xX)E(x=mb(b,mx(ZA<<(i=max(b,24)))))Y(b<i,bkt(x)=b;W(b<i--,u[i]=mb(i,(A)x+(ZA<<i))))
  xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Ax=atn(t,n);mc(xC,v,n*ZT[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
@@ -35,12 +36,13 @@ S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p+
 A1(cmdl,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A glb,cns,ce[tn],cn[tn],ci[2][5];C**argv,**env;
-V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ay=cns=AN(0,aA(10));glb=aa0();
- i(tS+1,yq(ce[i]=atn(i,0)))yq(ce[tm]=am(aS0,aA0));
- cn[tA]=ce[tA];cn[tC]=ac(32);yq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));yq(cn[tD]=ad(ND));cn[tS]=as(0);
+V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(28));glb=aa0();
+ i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(aS0,aA0));
+ cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
-    ci[0][0]=ab(0);    ci[0][1]=ab(1); yq(ci[0][2]=al(WL));yq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
- yq(ci[1][0]=ad(0));yq(ci[1][1]=ad(1));yq(ci[1][2]=ad(WD));yq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];}
+    ci[0][0]=ab(0);    ci[0][1]=ab(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
+ xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];
+ cns=x;}
 I rep()_(S Cb[256];Lm=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,ln(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 V repl(){W(rep())}
 
@@ -48,15 +50,18 @@ V repl(){W(rep())}
 #define xm _m(x)
 #define mms(a...) i(nm,V*p=m[i].p,*q=p+m[i].n;If=!!*(C*)p;a)
 #define obs(a...) mms(Ax=(A)p+ZA+ZP*f,y=(A)q;W(x<y,a;x+=cap(x)+ZA))
+#define xys(a...) obs(Y(xtR&&xr,i(xn,Ay=xa;a)))
 #define hs(x) {mc(s,x,Z(x)-1);s+=Z(x)-1;}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;a;hs("\n\0");write(1,b,s-b);}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
-A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS(":",xm);hS(" n",xn)
+A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS("=",xm);hS(" n",xn)
  i(min(5,cap(x)/8),hs(" ");s=h8(s,xl)))x)
-A1(cmdm,os("zeroing..\n");obs(xm=0);os("counting..\n");_m(glb)++;_m(cns)++;obs(Y(xtR,i(xn,Ay=xa;Y(!ytP,_m(y)++))));
+A1(cmdm,x(0);obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
  In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
- obs(Y(xr-xm,hb(hs("mismatched refcount:"));hx(x)));
- obs(Y(xtR,i(xn,Ay=xa;Y(!yt,hb(hs("dangling pointer:"));hx(x);hx(y)))));
  hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
- hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))x(au0))
+ hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
+ obs(Y(!c3(tA,xt,tn-1)&&(xr||xt),hb(hs("bad type:"));hx(x)));
+ obs(Y(xr-xm,hb(hs("mismatched refcount:"));hx(x)));
+ xys(Y(!yt,hb(hs("dangling pointer:"));hx(x);hx(y)));
+ au0)
