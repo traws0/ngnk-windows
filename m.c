@@ -28,7 +28,7 @@ A1(mut,XP(x)P(xr==1,x)x=x(atnv(xt,xn,xC));Y(xtR,mRa(x))x)
 A room(Ax,Nm)_(Q(xtC);Nn=xn;P(xr==1&&n+m<=cap(x),x)Ay=AN(n,aC(n+m));mc(yC,xC,n);x(y))
 
 S C s0[1<<16],*s1=s0+1;C*syp(I*p)_(*p<0?s0-*p:(V*)p)
-I syP(OC*s)_(In=mn(s)+1;P(n<5,mc(&n,s,n);n)OC*p=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
+I syP(OC*s)_(In=mn(s)+1;P(n<6,mc(&n,s,n);n)OC*p=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
  P(s1+n>s0+Z s0,die("syms oom\n"))mc(s1,s,n);s1+=n;s0-s1+n)
 
 S I ln(C*p,C*q)_(Ax=val(aCm(p,q));Y(x,x=out(x))P(x,mr(x);1)epr(0))
@@ -36,7 +36,7 @@ S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p+
 A1(cmdl,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A glb,cns,ce[tn],cn[tn],ci[2][5];C**argv,**env;
-V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(28));glb=aa0();
+V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(20));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(aS0,aA0));
  cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
@@ -59,9 +59,9 @@ A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E
  i(min(5,cap(x)/8),hs(" ");s=h8(s,xl)))x)
 A1(cmdm,x(0);obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
 // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
-// hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
+ hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
 // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
  obs(Y(!c3(tA,xt,tn-1)&&(xr||xt),hb(hs("bad type:"));hx(x)));
- obs(Y(xr-xm,hb(hs("mismatched refcount:"));hx(x)));
- xys(Y(!yt,hb(hs("dangling pointer:"));hx(x);hx(y)));
+ obs(Y(xr-xm,hb(hs("bad refc:"));hx(x)));
+ xys(Y(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));
  hb(hs("-----------"));au0)

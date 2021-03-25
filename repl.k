@@ -144,7 +144,7 @@ Special symbols:
   `x@x fork-exec    `x(("/bin/wc";"-l");"a\nbc\nd\n") -> "3\n"
   `t[] current time (milliseconds)
 `err@C throw error
- `md5@C `sha1@C `sha256@C `sha3@C             hash
+ `md5@C `sha1@C `sha2@C `sha3@C             hash
  `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)
 --------------------------------------------------------------------------------
 \'
