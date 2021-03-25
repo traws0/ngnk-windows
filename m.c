@@ -17,7 +17,7 @@ S Au[35];L mU;S I lck;S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,AT(0,x)));bkt(x)=b;x)V mrn(I
 A1(m0,dbg(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,x=AT(tn,x))xX=u[b];u[b]=(A)xC;Y(xtR,mrn(xn,xA))x)
 A1(m1,dbg(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))dbg(ms(xC,0xab,cap(x));dbg(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
 A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_P(t));
- Cb=59-__builtin_clzll(ZA|ZA-1+n*ZT[t]);P(b>ZZ(u),oom())Ax=u[b];Ii=b;W(!u[i],i++)
+ Cb=59-__builtin_clzll(ZA|ZA+n*ZT[t]);P(b>ZZ(u)-2,oom())Ax=u[b];Ii=b;W(!u[i],i++)
  Y(i<ZZ(u)-1,x=u[i];u[i]=xX)E(x=mb(b,mx(ZA<<(i=max(b,24)))))Y(b<i,bkt(x)=b;W(b<i--,u[i]=mb(i,(A)x+(ZA<<i))))
  xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Ax=atn(t,n);mc(xC,v,n*ZT[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
@@ -28,7 +28,7 @@ A1(mut,XP(x)P(xr==1,x)x=x(atnv(xt,xn,xC));Y(xtR,mRa(x))x)
 A room(Ax,Nm)_(Q(xtC);Nn=xn;P(xr==1&&n+m<=cap(x),x)Ay=AN(n,aC(n+m));mc(yC,xC,n);x(y))
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
-I syP(OC*s)_(In=mn(s)+1;P(n<6,mc(&n,s,n);n)OC*p=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
+I syP(OC*s)_(In=mn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)OC*p=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
  P(s1+n>s0+Z s0,die("syms oom\n"))mc(s1,s,n);s1+=n;s0-s1+n)
 
 S I ln(C*p,C*q)_(Ax=val(aCm(p,q));Y(x,x=out(x))P(x,mr(x);1)epr(0))
