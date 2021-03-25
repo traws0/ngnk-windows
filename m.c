@@ -58,10 +58,10 @@ C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
 A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS("=",xm);hS(" n",xn)
  i(min(5,cap(x)/8),hs(" ");s=h8(s,xl)))x)
 A1(cmdm,x(0);obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
- In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
- hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
- hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
+// In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
+// hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
+// hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
  obs(Y(!c3(tA,xt,tn-1)&&(xr||xt),hb(hs("bad type:"));hx(x)));
  obs(Y(xr-xm,hb(hs("mismatched refcount:"));hx(x)));
  xys(Y(!yt,hb(hs("dangling pointer:"));hx(x);hx(y)));
- au0)
+ hb(hs("-----------"));au0)
