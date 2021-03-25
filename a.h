@@ -1,5 +1,5 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-//#define DEBUG
+#define DEBUG
 #include<unistd.h>
 #include"k.h"
 #include"g.h"
@@ -113,7 +113,7 @@ V init(I,C**),mrn(I,OA*),repl();
 C*sl(C*,L),*syp(I*),tZ(L);
 I asg(Ax),si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
 L _N(A),now(),pl(C**),pu(C**),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
-TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,ce[],cn[],ci[2][5];EX OC vc[];EX L mU;EX A1*ct[];EX C**argv,**env;
+TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX L mU;EX A1*ct[];EX C**argv,**env;
 EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
