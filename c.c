@@ -6,11 +6,11 @@
 #define R rot
 TD UI U,(*U3)(U,U,U);U3(chx,x&y|~x&z)U3(chz,z&x|~z&y)U3(xor,x^y^z)U3(mf3,y^(x|~z))U3(maj,x&y^x&z^y&z)
 S U bl(U x)_(x<<24|x<<8&0xff0000|x>>8&0xff00|x>>24)S UL bL(UL x)_(bl(x>>32)|(UL)bl(x)<<32) //big-endian
-S U*bn(U*r,O U*a,U n)_(i(n,r[i]=bl(a[i]))r)
+S U*bn(U*r,O U*a,Nn)_(i(n,r[i]=bl(a[i]))r)
 
 S U m5k[64];S O U iv[]={0x67452301,0xefcdab89,0x98badcfe,0x10325476,0xc3d2e1f0};
 S V m5i(){D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;i(64,m5k[i]=(1ll<<32)*(s<0?-s:s);t=b*s+a*c;c=b*c-a*s;s=t)}
-S V m5h(U i,U3 f,U s,U m,U*b,O U*d){b[4-i&3]=b[5-i&3]+R(b[4-i&3]+f(b[5-i&3],b[6-i&3],b[7-i&3])+m5k[i]+d[m],s);}
+S V m5h(Ni,U3 f,U s,Nm,U*b,O U*d){b[4-i&3]=b[5-i&3]+R(b[4-i&3]+f(b[5-i&3],b[6-i&3],b[7-i&3])+m5k[i]+d[m],s);}
 #define h(q,f,s0,s1,s2,s3,m)\
  W(i<16*(q+1),m5h(i,f,s0,m,b,d);i++;m5h(i,f,s1,m,b,d);i++;m5h(i,f,s2,m,b,d);i++;m5h(i,f,s3,m,b,d);i++)
 S V m5u(U*d,Nn,U*a){
@@ -23,7 +23,7 @@ S V s1u(U*d,Nn,U*a){
   i(80,U t=R(x,5)+CH(i/20,&chx,xor,maj,xor)(y,z,u)+v+CH(i/20,0x5a827999u,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6)+w[i];
        v=u;u=z;z=R(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
-S A md(Ax/*1*/,OV*iv,I nv,V(*f)(U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
+S A md(Ax/*1*/,OV*iv,N nv,V(*f)(U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
  I a[nv];mc(a,iv,Z a);Nn=xn,k=n>>6,r=n&63,m=n+72&~63;Cc[128];m2(x,f(xI,k,a);mc(c,xC+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);
  *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);Y(b,bn(a,a,nv))aCn((V*)a,Z a))
 A1(md5,Y(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))
