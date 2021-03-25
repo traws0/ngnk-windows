@@ -158,7 +158,7 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #define N(r)      N_(r,)
 #define N1(x,r)   N_(r,x(0))
 #define N2(x,y,r) N_(r,x(y(0)))
-#define SF(x,y,s,f...) ({Li=gl(K(s"?",x));Ed(i<0,y);CH(i,&f)(y);})
+#define SF(x,y,s,f...) ({Iv=gi(x);i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
