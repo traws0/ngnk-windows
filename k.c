@@ -34,7 +34,7 @@ S A1(tme,x(al(now())))
 S A1(err,e1(xtC?xC:(C*)"err",x))
 S A1(ptr,oh(x);os("\n");x)
 S A1(argvf,Ay=aA0;C**p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
-S A1(envf,x(0);Ay=aS0,z=aA0;C**p=env;W(*p,ov(p);yq(syP(*p++));zq(aCz("")))am(y,z))
+S A1(envf,Ay=aS0,z=aA0;C**e=env;W(*e,C*p=*e++,*q=p+si(p,'=');yq(gS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au0?ap1(y,x):y)
 S A1(exitf,Xz(exit(gl(x));0)exit(1);0)
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
  Xs(P(n>1,ern(n,a))SF(x,*a,"``k`j`p`cf`t`x`hex`md5`sha1`sha256`sha3`aes`sin`err`epr`ptr`argv`env`exit",
