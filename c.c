@@ -13,18 +13,18 @@ S V m5i(){D a=.8414709848078965,b=.54030230586813977,s=a,c=b,t;i(64,m5k[i]=(1ll<
 S V m5h(Ni,U3 f,U s,Nm,U*b,O U*d){b[4-i&3]=b[5-i&3]+R(b[4-i&3]+f(b[5-i&3],b[6-i&3],b[7-i&3])+m5k[i]+d[m],s);}
 #define h(q,f,s0,s1,s2,s3,m)\
  W(i<16*(q+1),m5h(i,f,s0,m,b,d);i++;m5h(i,f,s1,m,b,d);i++;m5h(i,f,s2,m,b,d);i++;m5h(i,f,s3,m,b,d);i++)
-S V m5u(U*d,Nn,U*a){
+S V m5u(O U*d,Nn,U*a){
  i(n,U i=0,b[4];mc(b,a,16);
   h(0,chx,7,12,17,22,i)h(1,chz,5,9,14,20,5*i+1&15)h(2,xor,4,11,16,23,3*i+5&15)h(3,mf3,6,10,15,21,7*i&15)
   i(4,a[i]+=b[i])d+=16)}
 #undef h
-S V s1u(U*d,Nn,U*a){
+S V s1u(O U*d,Nn,U*a){
  i(n,U x=*a,y=a[1],z=a[2],u=a[3],v=a[4],w[80];bn(w,d,16);i(64,w[i+16]=R(w[i+13]^w[i+8]^w[i+2]^w[i],1))
   i(80,U t=R(x,5)+CH(i/20,&chx,xor,maj,xor)(y,z,u)+v+CH(i/20,0x5a827999u,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6)+w[i];
        v=u;u=z;z=R(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
-S A md(Ax/*1*/,OV*iv,N nv,V(*f)(U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
- I a[nv];mc(a,iv,Z a);Nn=xn,k=n>>6,r=n&63,m=n+72&~63;Cc[128];m2(x,f(xI,k,a);mc(c,xC+n-r,r));c[r]=128;ms(c+r+1,0,m-n-9);
+S A md(Ax/*1*/,OV*iv,N nv,V(*f)(O U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
+ I a[nv];Cc[128]={};mc(a,iv,Z a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;m2(x,f(xI,k,a);mc(c,xC+n-r,r));c[r]=128;
  *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);Y(b,bn(a,a,nv))aCn((V*)a,Z a))
 A1(md5,Y(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))
 
@@ -37,7 +37,7 @@ S O U s2k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0
   0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,
   0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,
   0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2};
-S V s2u(U*v,Nn,U*s){U w[64],t[8],r;
+S V s2u(O U*v,Nn,U*s){U w[64],t[8],r;
  i(n,r=0;bn(w,v,16);i(48,U p=w[i+1],q=w[i+14];w[i+16]=w[i]+(R(p,25)^R(p,14)^p>>3)+w[i+9]+(R(q,15)^R(q,13)^q>>10))
      F8(t[i]=s[i])i(8,g(0)g(1)g(2)g(3)g(4)g(5)g(6)g(7))F8(s[i]+=t[i])v+=16)}
 A1(sha256,md(x,(U[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19},8,s2u,1))
