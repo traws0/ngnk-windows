@@ -36,13 +36,12 @@ A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<
  If=N(o(x,O_RDWR|O_CREAT|O_TRUNC));Au=v1c(ai(f),y);f>2&&close(f);u)
 
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
-S A1(cmdt,Q(xtC);C*s=xC;Ln=*s==':'?++s,pl(&s):1;L t=now();x=N(cpl(N(prs(N(cut(az(s-xC),x))))));i(n,mr(Nx(app(x,0,0))))
- x(az((now()-t+500)/1000)))
-S A1(cmdw,Q(xtC);Nn=mU;P(!xn,x(az(n)))mr(out(Nx(val(xR))));n=mU-n;x(n?enl(cat(as(0),az(n))):au0))
-A1(cmd,Et(!xtC,x)Cc=*xC;P(c=='\\',exit(0);x)
- Y(c3('a',c,'z')&&(xn==1||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=N(cut(az(i),x));
-  A1*f=CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,0);P(f,f(x)))
- K("{0x0a\\`x(,\"/bin/sh\";x)}",x))
+S A cmdt(C*s)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCz(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
+S A cmdw(C*s)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCz(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
+A1(cmd,Et(!xtC,x)Cc=*xC;P(c=='\\',exit(0);x)x=str0(x);
+ P(cA9(c)&&(!xC[1]||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=str0(N(cut(az(i),x)));
+  TY(&cmdl)f=CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,0);f?x(f(xC)):en1(x))
+ K("0x0a\\`x(,,\"/bin/sh\"),,:",x))
 S A rda(If)_(Au=aC(256-ZA);L m=0,k;
  W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
 A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(ea1(str0,x));C*a[xn+1];i(xn,a[i]=dat(xa))a[xn]=0;

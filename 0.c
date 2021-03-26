@@ -14,7 +14,7 @@ I strcmp(OC*x,OC*y)_(W(*x&&*x==*y,x++;y++)*x-*y)
 N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
 
 #ifndef shared
- I main(In,C**a)_(init(n,a);P(n>1,exit(!cmdl(aCz(a[1])));0)repl();exit(0);0)
+ I main(In,C**a)_(init(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
  #if __FreeBSD__
   V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
  #elif i386
