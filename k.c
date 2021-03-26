@@ -37,8 +37,8 @@ S A1(argvf,Ay=aA0;C**p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
 S A1(envf,x(0);Ay=aS0,z=aA0;C**p=env;W(*p,ov(p);yq(syP(*p++));zq(aCz("")))am(y,z))
 S A1(exitf,Xz(exit(gl(x));0)exit(1);0)
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
- Xs(P(n>1,ern(n,a))SF(x,*a,"``k`j`p`cf`t`x`hex`md5`sha1`sha256`sha3`aes`sin`err`epr`ptr`argv`env`exit`ksl`ksr`ksw",
-                      ser,kst,jsw,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr,ptr,argvf,envf,exitf,ksl,ksr,ksw))
+ Xs(P(n>1,ern(n,a))SF(x,*a,"``k`j`p`cf`t`x`hex`md5`sha1`sha256`sha3`aes`sin`err`epr`ptr`argv`env`exit",
+                      ser,kst,jsw,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr,ptr,argvf,envf,exitf))
  Xm(Ay=N(idx_(xy,N(fnd(mR(xx),*a))));n-1?y(app(y,a+1,n-1)):y)XM(Ay=*a;n>1?ern(n,a):ytzZ?idx_(x,y):app(AT(tm,mut(x)),a,n))
  P(n<xk,prj(x,a,n))Xv(n==2?((A2*)vf[32+xv])(*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))Xr(((AX*)vf[58+xv])(xx,a,n))
  P(n>xk,ern(n,a))Xu(((A1*)vf[xv])(*a))Xw(Ay=*a;AK(0<xv&&xv<4&&yk==2?1:ytF?yk:1,AV(xv,atnv(tr,1,a))))Xo(run(x,a,n))

@@ -6,11 +6,11 @@
 #endif
 
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
-S V*mm(V*p,Nn,I f)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
+S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
  P((L)p==-1,eo0();(V*)0)P(f>0,p)Y(nm==ZZ(m),die("mmap lmt\n"))*(C*)p=nm;m[nm++]=(TY(m[0])){p,n};p)
 S A mu(V*p,Nn)_(munmap(p,n);i(ZZ(m),Y(m[i].p==p,mc(m+i,m+i+1,(--nm-i)*Z m[0]);BR));0)
 S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
-A mf(I f,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
+A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
 
 #define xX xA[-3]
 S Au[35];L mU;S I lck;S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)
@@ -53,5 +53,5 @@ V repl(){W(rep())}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
 A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))hS(" r",xr);hS(" n",xn)
          i(min(5,cap(x)/8),hs(" ");s=h8(s,xl)))x)
-A1(cmdm,i(nm,V*p=m[i].p,*q=p+m[i].n;I f=!!*(C*)p;hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p));
+A1(cmdm,i(nm,V*p=m[i].p,*q=p+m[i].n;If=!!*(C*)p;hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p));
              Ax=(A)p+ZA+ZP*f,y=(A)q;In=0;W(x<y,n++;hx(x);x+=cap(x)+ZA)hb(hS("N:",n)hs("\n")))x(au0))

@@ -172,7 +172,3 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 S I os(OC*x)_(write(2,x,mn(x)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
 S L ov_(C*s,Nn)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
-
-
-
-A1 ksl,ksr,ksw;
