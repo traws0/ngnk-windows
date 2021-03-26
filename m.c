@@ -37,12 +37,13 @@ S I ln(C*p,C*q)_(Ax=val(aCm(p,q));Y(x,x=out(x))P(x,mr(x);1)epr(0))
 S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
 A1(cmdl,x=N(u1c(x));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
-A glb,ce[tn],cn[tn],ci[2][5];C**argv,**env;
-V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;i(tS+1,ce[i]=atn(i,0))ce[tm]=am(aS0,aA0);glb=aa0();
- cn[tA]=ce[tA];cn[tC]=ac(32);cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
+A glb,cns,ce[tn],cn[tn],ci[2][5];C**argv,**env;
+V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ay=cns=AN(0,aA(10));glb=aa0();
+ i(tS+1,yq(ce[i]=atn(i,0)))yq(ce[tm]=am(aS0,aA0));
+ cn[tA]=ce[tA];cn[tC]=ac(32);yq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));yq(cn[tD]=ad(ND));cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
- ci[0][0]=ab(0);ci[0][1]=ab(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
- ci[1][0]=ad(0);ci[1][1]=ad(1);ci[1][2]=ad(WD);ci[1][3]=ad(-WD);ci[1][4]=cn[tD];}
+    ci[0][0]=ab(0);    ci[0][1]=ab(1); yq(ci[0][2]=al(WL));yq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
+ yq(ci[1][0]=ad(0));yq(ci[1][1]=ad(1));yq(ci[1][2]=ad(WD));yq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];}
 I rep()_(S Cb[256];Lm=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,ln(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 V repl(){W(rep())}
 
