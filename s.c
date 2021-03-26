@@ -40,7 +40,9 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  Y(l>0,*s++='.';s+=l)*s++='e';Y(t<0,t=-t;*s++='-')s4(s,t))
 A1(str0,Q(xtC);x=room(x,1);xC[xn]=0;x)
 A1(str,P(xtz||xtd,I d=xtd;Au=aC(24);AN((d?sd:sl)(uC,gl(x))-uC,u))Xs(Iv=gi(x);aCz(syp(&v)))Xc(enl(x))XF(kst(x))K("$:'",x))
-A1(kst,K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //p:parenthesize
+
+A1(kst,
+ K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //p:parenthesize
  "l:p[`A`C;`B`H`I`L`D`S]`M`m`q`r`u`v`w;r:p[`;`]`q`r`u`v`w;w:p[`A`C;`B`H`I`L`D`S]`M`m`p`q`w;" //l:as left arg, r:as right arg, w:under an adverb
  "$[(|/`A`C`B`H`I`L`D`S=t:@x)&1=n:#x;0x2c,r@*x;`A=t;(0x28,0x3b/o'x),0x29;"
    "|/`C`c=t;$[&/</[x</:32 127]|~^(a:0x00090a0d225c)?x;(0x22,/((0x5c,'0x30746e72225c),x)(a,x)?x),0x22;\"0x\",`hex x];"
@@ -52,6 +54,6 @@ A1(kst,K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //
    "|/`u`v=t;$[(`u=t)&29=.:x;0x;\":+-*%!&|<>=~,^#_$?@.0123456789\"[i],((`u=t)+19<i:.:x)#0x3a];"
    "`w=t;0x272f5c[3!i],(2<i:.:x)#0x3a;\"???\"]}",x))
 A1(out,P(x==au0,x)dex(v0c(ai(1),xtA&&1<xn?cat(ac('('),cat(rdc(aCz("\n "),A(ea1(kst,xR)),1),ac(')'))):kst(xR)),x))
-#define HX "0123456789abcdef"
-A1(hex,Xc(hex(enl(x)))XC(Ay=aC(2*xn);C*s=yC;m2(x,i(yn,*s++=HX[xc>>4];*s++=HX[xc&15])y))ed1(x))
-A1(unh,K("`c$16/+0N 2#0^\""HX"\"?_:",x))
+S OC*h="0123456789abcdef";S C u1(Cc)_(c3('0',c,'9')?c-'0':c3('a',c,'f')?c-'a'+10:c3('A',c,'F')?c-'A'+10:0)
+A1(hex,Xc(hex(enl(x)))XC(Ay=aC(2*xn);C*s=yC;m2(x,i(yn,*s++=h[xc>>4];*s++=h[xc&15])y))et1(x))
+A1(unh,XC(El(xn%2,x)Nm=xn/2;Ay=aC(m);i(yn,yc=u1(xC[2*i])<<4|u1(xC[2*i+1]))y)et1(x))
