@@ -41,8 +41,8 @@
  #define Q(x)
 #endif
 
-TD void V;TD char B;TD char unsigned C,UC;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;TD long long L;
-TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I);TD size_t N;
+TD void V;TD char B;TD char unsigned C,UC;TD O C*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
+TD long long L;TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I);TD size_t N;
 #define A0(f,b...) A f(          )_(b)
 #define A1(f,b...) A f(Ax        )_(b)
 #define A2(f,b...) A f(Ax,Ay     )_(b)
@@ -62,7 +62,7 @@ S I c09(Cc)_(c3('0',c,'9'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c0
 #define mc(a...) __builtin_memcpy(a)
 #define mC(a...) __builtin_memcmp(a)
 #define mn(a...) __builtin_strlen(a)
-V*memcpy(V*,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),exit(I);N strlen(OC*);I strcmp(OC*,OC*),memcmp(OV*,OV*,N);
+V*memcpy(V*,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),exit(I);N strlen(Q);I strcmp(Q,Q),memcmp(OV*,OV*,N);
 
 //             1  2  3  4  5  6  7  8  9 10 11 13 14 15 16 17 18 19 20 21 22 23 24 25
 //            01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18
@@ -88,7 +88,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 #define bkt(x) ((C*)dat(x))[-16]
 #define cap(x) ((ZA<<bkt(x))-ZA)
 #define _q(x,y) (x=apd(x,y))
-A die(OC*);
+A die(Q);
 
 //getters                           setters
 S  C At(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_P(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
@@ -108,13 +108,13 @@ A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,join
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCm(OC*,OC*),aCn(OC*,N),aCz(OC*),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,OC*,N),cmdl(C*),cmdm(C*),
- ea1(A1,A),e0(OC*),e1(OC*,A),e2(OC*,A,A),eN(OC*,I,OA*),get(A,N),getr(A,N),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
-V init(I,C**),mrn(I,OA*),repl();
+A aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,Q,N),cmdl(Q),cmdm(Q),
+ ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),get(A,N),getr(A,N),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
+V init(I,Q*),mrn(I,OA*),repl();
 C*sl(C*,L),*syp(L*),tZ(L);
-I asg(Ax),si(OC*,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(OC*);
-L _N(A),now(),pl(C**),pu(C**),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
-TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX L mU;EX A1*ct[];EX C**argv,**env;
+I asg(Ax),si(Q,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(Q);
+L _N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
+TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX L mU;EX A1*ct[];EX Q*argv,*env;
 EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
@@ -164,6 +164,6 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
-S I os(OC*x)_(write(2,x,mn(x)))
+S I os(Qs)_(write(2,s,mn(s)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
-S L ov_(C*s,Nn)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
+S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)

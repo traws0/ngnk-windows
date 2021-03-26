@@ -23,21 +23,21 @@ A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_P(t));
  xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Ax=atn(t,n);mc(xC,v,n*ZT[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
-A aCn(OC*s,Nn)_(atnv(tC,n,s))A aCm(OC*s,OC*t)_(aCn(s,t-s))A aCz(OC*s)_(aCn(s,mn(s)))A az(Lv)_(Ct=tZ(v);t==tL?al(v):ai(v))
+A aCn(Qs,Nn)_(atnv(tC,n,s))A aCm(Qp,Qq)_(aCn(p,q-p))A aCz(Qs)_(aCn(s,mn(s)))A az(Lv)_(Ct=tZ(v);t==tL?al(v):ai(v))
 C tZ(Lv)_(v==(B)v?tB:v==(H)v?tH:v==(I)v?tI:tL)A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=mR(xx);mR(xy))*p=xx;AN(0,x);x(xy))
 A1(mut,XP(x)P(xr==1,x)x=x(atnv(xt,xn,xC));Y(xtR,mRa(x))x)
 A room(Ax,Nm)_(Q(xtC);Nn=xn;P(xr==1&&n+m<=cap(x),x)Ay=AN(n,aC(n+m));mc(yC,xC,n);x(y))
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
-I syP(OC*s)_(In=mn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)OC*p=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
+I syP(Qs)_(In=mn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
  P(s1+n>s0+Z s0,die("syms oom\n"))mc(s1,s,n);s1+=n;s0-s1+n)
 
 S I ln(C*p,C*q)_(Ax=val(aCm(p,q));x=x?out(x):0;x?x(1):epr(0))
 S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
-A cmdl(C*s)_(Ax=N(u1c(aCz(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
+A cmdl(Qs)_(Ax=N(u1c(aCz(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
-A glb,cns,ce[tn],cn[tn],ci[2][5];C**argv,**env;
-V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(20));glb=aa0();
+A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
+V init(In,Q*a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(20));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(aS0,aA0));
  cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
@@ -58,7 +58,7 @@ V repl(){W(rep())}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
 A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))
  hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,cap(x)/8),hs(" ");s=h8(s,xl)))x)
-A cmdm(C*s)_(obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
+A cmdm(Qs)_(obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
 // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
  hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
 // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))

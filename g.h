@@ -444,3 +444,6 @@
 #define OA O A
 #define OC O C
 #define OV O V
+#define Qs Q s
+#define Qp Q p
+#define Qq Q q

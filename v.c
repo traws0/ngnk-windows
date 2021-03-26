@@ -30,7 +30,7 @@ A1(gI,XiI(x)Xz(ai(gl(x)))XdD(gI(N(gL(x))))P(xtc||xtz,ai(gl(x)))
 A1(gL,XlL(x)Xz(al(gl(x)))Xt(gt(x,gL))XD(Au=aL(xn);m2(x,cDL(xC,uC,un);u))x=N(gI(x));Au=aL(xn);m2(x,cIL(xC,uC,un);u))
 A1(gD,XdD(x)Xz(ad(gl(x)))Xt(gt(x,gD))x=N(gL(x));Au=aD(xn);m2(x,cLD(xC,uC,un);u))
 A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(gi(x)))et1(x))
-A1(pI,XmMA(ea1(pI,x))Xc(pI(enl(x)))XC(x=str0(x);C*s=xC;P(!*s,x(mR(cn[tl])))Lv=pl(&s);x(*s?mR(cn[tl]):az(v)))et1(x))
+A1(pI,XmMA(ea1(pI,x))Xc(pI(enl(x)))XC(x=str0(x);Qs=xC;P(!*s,x(mR(cn[tl])))Lv=pl(&s);x(*s?mR(cn[tl]):az(v)))et1(x))
 TY(ct)ct={[tA]=blw,gC,gB,gH,gI,gL,gD,gS};
 A2(cst,P(xtS||ytmMA,eac(cv('$'),A(x,y),2))P(xtz&&ytC,K("{y@(!x)+(x<0)*#y}",x,y))
  Xs(SF(x,y,"c\0\0\0b\0\0\0h\0\0\0i\0\0\0l\0\0\0d\0\0\0\0\0\0\0s\0\0\0I\0\0\0",gC,gB,gH,gI,gL,gD,gS,gS,pI))en2(x,y))

@@ -5,18 +5,18 @@
  #define SYS_getdents SYS_freebsd11_getdents
 #endif
 
-V*memcpy(V*x,OV*y,Nn)_(C*p=x  ;OC*q=y  ;i(n,*p++=*q++)x)
-V*memCPY(V*x,OV*y,Nn)_(C*p=x+n;OC*q=y+n;i(n,*--p=*--q)x)
+V*memcpy(V*x,OV*y,Nn)_(C*p=x  ;Qq=y  ;i(n,*p++=*q++)x)
+V*memCPY(V*x,OV*y,Nn)_(C*p=x+n;Qq=y+n;i(n,*--p=*--q)x)
 V*memmove(V*x,OV*y,Nn)_((y<x&&x<y+n?memCPY:memcpy)(x,y,n))
 V*memset(V*x,Iv,Nn)_(C*p=x;i(n,*p++=v);x)
-I memcmp(OV*x,OV*y,Nn)_(OC*s=x,*t=y;i(n,Iv=*s++-*t++;P(v,v))0)
-I strcmp(OC*x,OC*y)_(W(*x&&*x==*y,x++;y++)*x-*y)
-N strlen(OC*x)_(OC*p=x;W(*p,p++)p-x)
+I memcmp(OV*x,OV*y,Nn)_(Qs=x,t=y;i(n,Iv=*s++-*t++;P(v,v))0)
+I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
+N strlen(Qs)_(Qp=s;W(*p,p++)p-s)
 
 #ifndef shared
- I main(In,C**a)_(init(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
+ I main(In,Q*a)_(init(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
  #if __FreeBSD__
-  V _start(C**p){main(*(I*)(V*)p,p+1);} //can't use _() here
+  V _start(Q*p){main(*(I*)(V*)p,p+1);} //can't use _() here
  #elif i386
   asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
  #elif !wasm
