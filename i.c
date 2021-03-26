@@ -38,9 +38,10 @@ A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;C*s=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A cmdt(C*s)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCz(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
 S A cmdw(C*s)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCz(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
-A1(cmd,Et(!xtC,x)Cc=*xC;P(c=='\\',exit(0);x)x=str0(x);
- P(cA9(c)&&(!xC[1]||xC[1]==32||xC[1]==':'),Ii=1;W(i<xn&&xc==32,i++)x=str0(N(cut(az(i),x)));
-  TY(&cmdl)f=CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,0);f?x(f(xC)):en1(x))
+S A cmdx(C*s)_(en1(0))
+A1(cmd,Et(!xtC,x)Cc=*xC,d=xC[1];P(c=='\\',exit(0);x)x=str0(x);
+ P(cA9(c)&&(!d||d==32||d==':'),C*s=xC+1;W(*s==32,s++)x=str0(N(cut(az(s-xC),x))); //todo
+  x(CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(xC)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",x))
 S A rda(If)_(Au=aC(256-ZA);L m=0,k;
  W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
