@@ -41,19 +41,33 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
 A1(str0,Q(xtC);x=room(x,1);xC[xn]=0;x)
 A1(str,P(xtz||xtd,I d=xtd;Au=aC(24);AN((d?sd:sl)(uC,gl(x))-uC,u))Xs(Iv=gi(x);aCz(syp(&v)))Xc(enl(x))XF(kst(x))K("$:'",x))
 
+S I cin(Cc,OC*s)_(s[si(s,c)])S A sur(Cc,Ax,Cd)_(apc(cat(ac(c),x),d))S A raz(Ax)_(rdc(cv(','),A(x),1))
+S I esc(Cc)_(i(6,P(c=="\0\t\n\r\"\\"[i],i))-1)
+S A1(kss,Nn=xn+2;Iv=1;i(xn,I e=esc(xc)>=0;n+=e;v&=e||c3(32,xc,126))P(!v,cat(aCz("0x"),hex(x)))
+ Ay=aC(n);C*s=yC;*s++='"';i(xn,Ij=esc(xc);Y(j<0,*s++=xc)E(*s++='\\';*s++="0tnr\"\\"[j]))*s++='"';x(y))
+S A par(Ax,OC*a,OC*b,OC*c)_(Ct=TS[xt];(cin(t,a)?xn==1:cin(t,b)?xn<2:cin(t,c))?sur('(',kst(x),')'):kst(x))
+A1(ksl,par(x,"AC","BHILDS","Mmqruvw"))A1(ksr,par(x,"","","qruvw"))A1(ksw,par(x,"AC","BHILDS","Mmpqw"))
 A1(kst,
- K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //p:parenthesize
- "l:p[`A`C;`B`H`I`L`D`S]`M`m`q`r`u`v`w;r:p[`;`]`q`r`u`v`w;w:p[`A`C;`B`H`I`L`D`S]`M`m`p`q`w;" //l:as left arg, r:as right arg, w:under an adverb
- "$[(|/`A`C`B`H`I`L`D`S=t:@x)&1=n:#x;0x2c,r@*x;`A=t;(0x28,0x3b/o'x),0x29;"
-   "|/`C`c=t;$[&/</[x</:32 127]|~^(a:0x00090a0d225c)?x;(0x22,/((0x5c,'0x30746e72225c),x)(a,x)?x),0x22;\"0x\",`hex x];"
-   "|/`B`H`I`L=t;$[n;0x20/$x;\"!0\"];`D=t;$[n;0x20/$x;\"0#0n\"];`S=t;$[n;,/o'x;\"0#`\"];"
-   "`M=t;0x2b,o@+x;`m=t;l[!x],0x21,r@.:x;|/`b`h`i`l`d=t;$x;"
-   "`s=t;0x60,$[*/-1/0x303a415b617b>\\:a:$x;a;(0x3a=*a)**/-1/0x2e3a415b617b>\\:1_a;a;(1=#a)_`k a];"
-   "`o=t;*.:x;`p=t;$[$[~3=#a:.:x;0;~|/`v`r=@*a;0;</~[*|.(1+);]'1_a];l[a@1],$*a;@[0x3b/b;#*b:o'a;:;0x5b],0x5d];"
-   "`q=t;,/o'.:x;`r=t;,/(w;$:)@'.:x;"
-   "|/`u`v=t;$[(`u=t)&29=.:x;0x;\":+-*%!&|<>=~,^#_$?@.0123456789\"[i],((`u=t)+19<i:.:x)#0x3a];"
-   "`w=t;0x272f5c[3!i],(2<i:.:x)#0x3a;\"???\"]}",x))
-A1(out,P(x==au0,x)dex(v0c(ai(1),xtA&&1<xn?cat(ac('('),cat(rdc(aCz("\n "),A(ea1(kst,xR)),1),ac(')'))):kst(xR)),x))
+ P(c3(tA,xt,tS)&&xn==1,cat(ac(','),ksr(fir(x))))
+ XA(sur('(',join(ac(';'),ea1(kst,x)),')'))
+ Xc(kss(enl(x)))XC(kss(x))
+ XZ(xn?join(ac(32),ea1(str,x)):aCz("!0"))
+ XD(xn?join(ac(32),ea1(str,x)):aCz("0#0n"))
+ XS(xn?raz(ea1(kst,x)):aCz("0#`"))
+ XM(cat(ac('+'),kst(flp(x))))
+ Xm(Ay=kv(&x);cat(apc(ksl(x),'!'),ksr(y)))
+ P(xtz||xtd,str(x))
+ Xs(x=str(x);Iv=1;i(xn,v&=c3('0',xc,'9')||c3('a',xc,'z')||c3('A',xc,'Z'))
+    Y(!v,x=kst(x);Y(*xC==',',x=cut(ai(1),x)))cat(ac('`'),x))
+ Xo(x(mR(xx)))
+ Xp(x=val(x);P(xn-3?0:!cin(TS[At(xx)],"vr")?0:xy-PLH&&xz==PLH,x(cat(ksl(mR(xy)),kst(mR(xx)))))
+    x=ea1(kst,x);Nm=An(xx);x=apc(join(ac(';'),x),']');Q(xr==1);xC[m]='[';x)
+ Xq(raz(ea1(kst,val(x))))
+ Xr(x=val(x);Ay=kv(&x);cat(ksw(x),str(y)))
+ P(xtu||xtv,P(x==PLH,aC0)Ay=atnv(tC,1,&vc[xv]);i(xtu+(19<xv),y=apc(y,':'))y)
+ Xw(atnv(tC,1+xv/3,&"':/:\\:"[xv%3*2]))
+ aCz("???"))
+A1(out,P(x==au0,x)dex(v0c(ai(1),xtA&&1<xn?cat(ac('('),cat(join(aCz("\n "),ea1(kst,xR)),ac(')'))):kst(xR)),x))
 S OC*h="0123456789abcdef";S C u1(Cc)_(c3('0',c,'9')?c-'0':c3('a',c,'f')?c-'a'+10:c3('A',c,'F')?c-'A'+10:0)
 A1(hex,Xc(hex(enl(x)))XC(Ay=aC(2*xn);C*s=yC;m2(x,i(yn,*s++=h[xc>>4];*s++=h[xc&15])y))et1(x))
 A1(unh,XC(El(xn%2,x)Nm=xn/2;Ay=aC(m);i(yn,yc=u1(xC[2*i])<<4|u1(xC[2*i+1]))y)et1(x))

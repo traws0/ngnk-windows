@@ -103,7 +103,7 @@ A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cmd,cmdl,cmdm,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gD,gH,gI,gL,gS,grp,
  hex,jsr,jsw,kst,las,len,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
-A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
+A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,join,ltn,mnm,mod,mtc,mul,mxm,rsh,sub,v0c,v1c,xpt;
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
@@ -172,3 +172,7 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 S I os(OC*x)_(write(2,x,mn(x)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
 S L ov_(C*s,Nn)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
+
+
+
+A1 ksl,ksr,ksw;

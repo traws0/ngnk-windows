@@ -8,7 +8,7 @@ S A2(enc,x=Ny(gL(x));y=Nx(gL(y));Yt(Az=enc(x,enl(y));zn?fir(flp(z)):z(aL0))
 S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(bin,K("-1+/~>\\:",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
 SN A2(spl,Q(xtcC);Et(!ytC,x,y)C*s=xtc?(V*)&x:xC;Lm=xN;El(!m,x,y)Au=aA0;C*p=yC,*q=p,*t=p+yn,*r=t+1-xN;
  W(q<r,Y(mC(s,q,m),q++)E(uq(aCm(p,q));p=q+=m))Y(!xtc||gi(x)-10||p<t,uq(aCm(p,t)))x(y(u)))
-S A2(join,Q(xtcC);Et(!ytA,x,y)C*s=xtc?(V*)&x:xC;Lm=xN,k=yn,l=m*(k-!!k);
+A2(join,Q(xtcC);Et(!ytA,x,y)C*s=xtc?(V*)&x:xC;Lm=xN,k=yn,l=m*(k-!!k);
  i(k,Az=ya;Et(!ztcC,x,y)l+=zN)Au=aC(l);C*p=uC;i(k-1,Az=ya;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn)mc(p,s,m);p+=m)
  Y(k,Az=yA[k-1];Y(ztc,*p=gi(z))E(mc(p,zC,zn)))x(y(u)))
 A ea1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=ea1(f,xy);P(!xy,xy=au0;x(0))x)I b=xtA&&xr==1;Nn=xN;P(!n,x)Au=aA0;
