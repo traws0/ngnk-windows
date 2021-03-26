@@ -13,10 +13,9 @@ S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
 A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
 
 #define xX xA[-3]
-S Au[35];L mU;S I lck;S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)
+S Au[35];L mU;S I lck;S A mb(Cb,Ax)_(xX=0;dbg(AN(-1,x));bkt(x)=b;x)V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 A1(m0,dbg(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,x=AT(tn,x))xX=u[b];u[b]=(A)xC;Y(xtR,mrn(xn,xA))x)
-A1(m1,dbg(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))dbg(ms(xC,0xab,xn*ZT[xt]);dbg(AN(-1,x)));0)
-A1(mr,m1(m0(x)))V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
+A1(m1,dbg(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))dbg(ms(xC,0xab,xn*ZT[xt]);dbg(AN(-1,x)));0)A1(mr,m1(m0(x)))
 
 S C s0[1<<16],*s1=s0+1;C*syp(I*p)_(*p<0?s0-*p:(V*)p)
 I syP(OC*s)_(In=mn(s)+1;P(n<5,mc(&n,s,n);n)
