@@ -272,6 +272,14 @@
 #define ytMT  (ytM||ytT)
 #define ztMT  (ztM||ztT)
 #define utMT  (utM||utT)
+#define xtZD  (xtZ||xtD)
+#define ytZD  (ytZ||ytD)
+#define ztZD  (ztZ||ztD)
+#define utZD  (utZ||utD)
+#define xtzd  (xtz||xtd)
+#define ytzd  (ytz||ytd)
+#define ztzd  (ztz||ztd)
+#define utzd  (utz||utd)
 #define xtmMA (xtmM||xtA)
 #define ytmMA (ytmM||ytA)
 #define ztmMA (ztmM||ztA)
@@ -386,6 +394,10 @@
 #define YMT(a...) P(ytMT,a)
 #define XmMA(a...) P(xtmMA,a)
 #define YmMA(a...) P(ytmMA,a)
+#define XZD(a...) P(xtZD,a)
+#define YZD(a...) P(ytZD,a)
+#define Xzd(a...) P(xtzd,a)
+#define Yzd(a...) P(ytzd,a)
 #define Cb C b
 #define Cc C c
 #define Cd C d

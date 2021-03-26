@@ -19,11 +19,13 @@ d("@t$   _$(@t)"      ;v;K)            /pseudotypes
 d("@t%$  (@t%||@t$)"  ;v;1_t,"SMZ")    /atom|list of type?
 d("@tmt  (@tm||@tt)"  ;v)              /atom|dict
 d("@tMT  (@tM||@tT)"  ;v)              /list|tbl
+d("@tZD  (@tZ||@tD)"  ;v)              /list|tbl
+d("@tzd  (@tz||@td)"  ;v)              /list|tbl
 d("@tmMA (@tmM||@tA)" ;v)              /container?
 d("@q(a) _q(@,a)"     ;v)              /append
 d("N@(r) N1(@,r)"     ;v)              /error pass-through
 d("a@0   mR(ce[t@])"  ;"ACLDSm")       /empty
 d("E@(a...) E_(@,a)"  ;"cdilnoprstvz") /errors
-d("$@(a...) P(%t@,a)" ;T,K,(+|_:\1_t,"SZ")," "\"mt MT mMA";"XY")
+d("$@(a...) P(%t@,a)" ;T,K,(+|_:\1_t,"SZ")," "\"mt MT mMA ZD zd";"XY")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdknotv BHIL:ijkmnv D:dv A:xyzu N:ijmn O:ACV"; /c type+var
 "g.h"0:r
