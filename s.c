@@ -52,5 +52,6 @@ A1(kst,K("{p:{[a;b;c;x]$[|/a=t:@x;1=#x;|/b=t;2>#x;|/c=t]{0x28,x,0x29}/`k@x};" //
    "|/`u`v=t;$[(`u=t)&29=.:x;0x;\":+-*%!&|<>=~,^#_$?@.0123456789\"[i],((`u=t)+19<i:.:x)#0x3a];"
    "`w=t;0x272f5c[3!i],(2<i:.:x)#0x3a;\"???\"]}",x))
 A1(out,P(x==au0,x)dex(v0c(ai(1),xtA&&1<xn?cat(ac('('),cat(rdc(aCz("\n "),A(ea1(kst,xR)),1),ac(')'))):kst(xR)),x))
-A1(hex,K("\"0123456789abcdef\"@,/+16 16\\",x))
-A1(unh,K("`c$16/+0N 2#0^\"0123456789abcdef\"?_:",x))
+#define HX "0123456789abcdef"
+A1(hex,Xc(hex(enl(x)))XC(Ay=aC(2*xn);C*s=yC;m2(x,i(yn,*s++=HX[xc>>4];*s++=HX[xc&15])y))ed1(x))
+A1(unh,K("`c$16/+0N 2#0^\""HX"\"?_:",x))
