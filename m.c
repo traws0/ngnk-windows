@@ -41,7 +41,7 @@ A glb,ce[tn],cn[tn],ci[2][5];C**argv,**env;
 V init(In,C**a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;i(tS+1,ce[i]=atn(i,0))ce[tm]=am(aS0,aA0);glb=aa0();
  cn[tA]=ce[tA];cn[tC]=ac(32);cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL);cn[tD]=ad(ND);cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
- ci[0][0]=al(0);ci[0][1]=al(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
+ ci[0][0]=ab(0);ci[0][1]=ab(1);ci[0][2]=al(WL);ci[0][3]=al(-WL);ci[0][4]=cn[tL];
  ci[1][0]=ad(0);ci[1][1]=ad(1);ci[1][2]=ad(WD);ci[1][3]=ad(-WD);ci[1][4]=cn[tD];}
 I rep()_(S Cb[256];Lm=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,line(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
 V repl(){W(rep())}
