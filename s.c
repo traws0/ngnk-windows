@@ -57,7 +57,7 @@ A1(kst,
  XM(cat(ac('+'),kst(flp(x))))
  Xm(Ay=kv(&x);cat(apc(ksl(x),'!'),ksr(y)))
  Xzd(str(x))
- Xs(x=str(x);Iv=1;i(xn,v&=c3('0',xc,'9')||c3('a',xc,'z')||c3('A',xc,'Z'))
+ Xs(x=str(x);Iv=1;i(xn,v&=dgt(xc)||ltr(xc))
     Y(!v,x=kst(x);Y(*xC==',',x=cut(ai(1),x)))cat(ac('`'),x))
  Xo(x(mR(xx)))
  Xp(x=val(x);P(xn-3?0:!cin(TS[At(xx)],"vr")?0:xy-PLH&&xz==PLH,x(cat(ksl(mR(xy)),kst(mR(xx)))))

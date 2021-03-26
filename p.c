@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-S I ltr(Cc)_(c3('a',c|32,'z'))S I ldg(Cc)_(ltr(c)||dgt(c))S I num(C*s)_(dgt(s[*s=='-']))S A pb(A,C);
+S I num(C*s)_(dgt(s[*s=='-']))S A pb(A,C);
 I si(OC*s,I c)_(OC*t=s;W(*t&&*t-c,t++)t-s)S A1(p1,xn-1?x:fir(x))S D p10(In)_(Dd=1;i(n,d*=10)d)
 L pu(C**p)_(C*s=*p;Lv=0;Cc=*s;W(dgt(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(C**p)_(Im=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(C**p)_(UL v=pu(p);C*s=*p,c=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
