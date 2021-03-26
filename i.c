@@ -8,9 +8,13 @@
 #include<sys/time.h>
 #undef __USE_EXTERN_INLINES
 #include<sys/stat.h>
-#include<dirent.h>
 #include"a.h"
 ssize_t getdents(I,char*,N);
+#if __FreeBSD__
+ ST DE{UI d_fileno;UH d_reclen;C d_type,d_namlen,d_name[255+1];};
+#else
+ ST DE{long d_ino;off_t d_off;UH d_reclen;C d_name[];};
+#endif
 S UI addr(C**p)_(C*s=*p;P(!*s,0x0100007f)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=pu(&s);Ed(r[i]>255))*p=s;*(UI*)r)
 S I skt(UI h,UH p)_(I f=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)Iv=setsockopt(f,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4);Eo(v<0)
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,Z(a))<0)f)
@@ -23,7 +27,7 @@ A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
 A1(u0c,x=N(u1c(x));x=N(scn(ac(10),&x,1));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
 A1(u1c,Xz(I f=gl(x);Cb[4096];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))I f=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
  P(t=='d',Cb[ZP];Ik;Au=aC0;
-  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST dirent*e=(V*)b+i;C*s=e->d_name;u=catc(u,s,mn(s));u=apc(u,10);i+=e->d_reclen))
+  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST DE*e=(V*)b+i;C*s=e->d_name;u=catc(u,s,mn(s));u=apc(u,10);i+=e->d_reclen))
   close(f);u)
  P(t=='r',Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
  Au=u1c(ai(f));close(f);u)

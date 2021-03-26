@@ -2,7 +2,7 @@
 #include"a.h"
 #include<sys/syscall.h>
 #ifndef SYS_getdents
- #define SYS_getdents SYS_getdirentries
+ #define SYS_getdents SYS_freebsd11_getdents
 #endif
 
 V*memcpy(V*x,OV*y,Nn)_(C*p=x  ;OC*q=y  ;i(n,*p++=*q++)x)
