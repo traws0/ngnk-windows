@@ -51,6 +51,6 @@ S A1(asci,Ez(xn-(I)xn,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),
  m2(x,m2(y,j(w,ms(c,0,Z c);i(n,a[i]=xC[w*ui+j])i(n,c[a[i]+1]++)Y(c[1+*a]-n,i(255,c[i+1]+=c[i])i(n,zI[c[a[i]]++]=ui)SWP(z,u)))z(u))))
 A1(asc,XA(Ez(xn-(I)xn,x)A*a=xA,u=gI(til(ai(xn)));In=xn,i=n/2;W(i-->0,sft(a,uI,i,n-1))i=n-1;W(i>0,SWP(ui,*uI)sft(a,uI,0,--i))x(u))
  Xm(Ay=kv(&x);idx(x,N(asc(y))))P(xtC||xtZ,asci(x))XS(asc(N(ea1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)opn(x))
-A1(dsc,Xz(cls(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)sub(ai(xN-1),rev(asc(rev(x)))))
+A1(dsc,Xz(cls(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)x=rev(asc(rev(x)));sub(ai(xN-1),x))
 A1(grp,Xz(K("{(2#x)#1,&x}",x))Xt(et1(x))Xm(Au=grp(kv(&x));Q(ur==1);uy=idx(x,uy);u)
  K("{x[*'g]!g@:<g:(&(~x~':x i),!0)_i:<x}",x))
