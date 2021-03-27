@@ -63,9 +63,11 @@ S I c09(Cc)_(c3('0',c,'9'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c0
 #define mC(a...) __builtin_memcmp(a)
 #define sn(a...) __builtin_strlen(a)
 #define sc(a...) __builtin_strchr(a)
+#define ss(a...) __builtin_strstr(a)
+#define sC(a...) __builtin_strcmp(a)
 #define sc0(a...) strchrnul(a)
 V*memcpy(V*,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),exit(I);N strlen(Q);I strcmp(Q,Q),memcmp(OV*,OV*,N);
-C*strchr(Q,I),*strchrnul(Q,I);
+C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);
 
 //             1  2  3  4  5  6  7  8  9 10 11 13 14 15 16 17 18 19 20 21 22 23 24 25
 //            01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18
