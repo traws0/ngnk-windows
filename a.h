@@ -61,7 +61,7 @@ S I c09(Cc)_(c3('0',c,'9'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c0
 #define mv(a...) __builtin_memmove(a)
 #define mc(a...) __builtin_memcpy(a)
 #define mC(a...) __builtin_memcmp(a)
-#define mn(a...) __builtin_strlen(a)
+#define sn(a...) __builtin_strlen(a)
 #define mh(a...) __builtin_strchr(a)
 V*memcpy(V*,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),exit(I);N strlen(Q);I strcmp(Q,Q),memcmp(OV*,OV*,N);C*strchr(Q,I);
 
@@ -165,6 +165,6 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
-S I os(Qs)_(write(2,s,mn(s)))
+S I os(Qs)_(write(2,s,sn(s)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
-S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,10-mn(s)));oh(n);write(2,"\n",1);n)
+S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,10-sn(s)));oh(n);write(2,"\n",1);n)
