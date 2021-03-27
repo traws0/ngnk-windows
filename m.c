@@ -34,7 +34,7 @@ I syP(Qs)_(In=sn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!strcmp(p,s),s0-p
 S Q skp(Qp)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)S I ln(Q,Q);S A cmdx(Qs)_(en0())
 S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
 S A cmdw(Qs)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCl(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
-A cmdl(Qs)_(Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
+A cmdl(Qs)_(Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(*p=='#'&&p[1]=='!',p=sc0(p+2,10))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
  P(cA9(c)&&(!d||d==10||d==32||d==':'),CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s+2+(d==32)))

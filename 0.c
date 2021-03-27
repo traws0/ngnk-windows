@@ -12,6 +12,7 @@ V*memset(V*x,Iv,Nn)_(C*p=x;i(n,*p++=v);x)
 I memcmp(OV*x,OV*y,Nn)_(Qs=x,t=y;i(n,Iv=*s++-*t++;P(v,v))0)
 I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
 C*strchr(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s++,(V*)0))(V*)0)
+C*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
 N strlen(Qs)_(Qp=s;W(*p,p++)p-s)
 
 #ifndef shared
