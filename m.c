@@ -31,12 +31,12 @@ S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
 I syP(Qs)_(In=mn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
  P(s1+n>s0+Z s0,die("syms oom\n"))mc(s1,s,n);s1+=n;s0-s1+n)
 
-S I ln(C*p,C*q)_(Ax=val(aCm(p,q));x=x?out(x):0;x?x(1):epr(0))
-S C*skp(C*p)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
-A cmdl(Qs)_(Ax=N(u1c(aCz(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
- W(*p,C*q=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
+S I ln(Qp,Qq)_(Ax=val(aCm(p,q));x=x?out(x):0;x?x(1):epr(0))
+S Q skp(Qp)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
+A cmdl(Qs)_(Ax=N(u1c(aCz(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
+ W(*p,Qq=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
-V init(In,Q*a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(20));glb=aa0();
+V init(In,Q*a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(aS0,aA0));
  cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
