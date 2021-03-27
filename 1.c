@@ -10,7 +10,7 @@ TD size_t(*F1)(OV*,V*,N);
 #define NG(T) hf(neg##T,T,Ni=0;W(i<n,I o=0;j(ZA/Z(T),o|=a[j]==(T)(1<<Z(T)*8-1))P(o,i)j(ZA/Z(T),r[j]=-a[j])a+=ZA/Z(T);r+=ZA/Z(T);i+=ZA/Z(T))n)
 #define F1(f,T,c...) hf(f##T,T,i(PD(n,a),r[i]=({c;}))n)
 NG(B)NG(H)NG(I)
-F1(neg,L,-a[i])F1(neg,D,-a[i])F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*c3('A',a[i],'Z'))
+F1(neg,L,-a[i])F1(neg,D,-a[i])F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*cAZ(a[i]))
 
 #define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
 SN A fx(Ax,F1 f)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);m2(x,f(xC,uC,un);u))

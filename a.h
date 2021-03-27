@@ -54,8 +54,9 @@ TD long long L;TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,
 #define min(a...) extr(<,a)
 #define max(a...) extr(>,a)
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>Z(x)*8-y_:x;})
-S L absL(Lv)_(v<0?-v:v)S I c3(Cc,Cv,Cd)_(c<=v&&v<=d)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I in(Ni,Nn)_(i<n)
-S I c09(Cc)_(c3('0',c,'9'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c09(c))
+S L absL(Lv)_(v<0?-v:v)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I in(Ni,Nn)_(i<n)S I c3(Cc,Cv,Cd)_(c<=v&&v<=d)
+S I c09(Cc)_(c3('0',c,'9'))S I caf(Cc)_(c3('a',c,'f'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c09(c))
+S I cAZ(Cc)_(c3('A',c,'Z'))S I cAF(Cc)_(c3('A',c,'F'))S I cAf(Cc)_(c3('a',c|32,'f'))
 
 #define ms(a...) __builtin_memset(a)
 #define mv(a...) __builtin_memmove(a)

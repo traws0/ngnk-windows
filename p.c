@@ -10,7 +10,7 @@ S A pLm(L*m)_(Ax=aL0;Cc;
 S A0(pZ,Lm[2]={};Ax=pLm(m);ct[max(tZ(*m),tZ(m[1]))](x))
 S A0(pD,Ax=aD0;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),BR)s++)x)
 S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
-S C ph()_(Cc=*s;c09(c)?c-'0':c3('a',c,'f')?c+10-'a':16)
+S C ph()_(Cc=*s;c09(c)?c-'0':caf(c)?c+10-'a':16)
 S A0(p0x,Ax=aC0;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
 S A0(ps,Qp=s;Cc=*s;Y(c&128,W((c=*++s)>>6==2)s+=c==':')EY(c==':',W(cA9(c=*++s)||si("./:",c)<3))E(W(cA9(c),c=*++s))aCm(p,s))
 S A pS(Cc)_(Ax=aS0;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);x=y(apv(x,(I[]){syP(yC)}));P(*s-c,x)++s)0)
