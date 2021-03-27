@@ -37,8 +37,8 @@ S A cmdw(Qs)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCl(s)))));n=mU-n;n?enl(cat(as(0),a
 A cmdl(Qs)_(Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
- P(cA9(c)&&(!d||d==10||d==32||d==':'),s+=2+(d==32);CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s))
- K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s)))
+ P(cA9(c)&&(!d||d==10||d==32||d==':'),CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s+2+(d==32)))
+ K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
