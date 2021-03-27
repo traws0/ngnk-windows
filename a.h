@@ -109,8 +109,8 @@ A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,join
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,Q,N),cmd(Q),cmdl(Q),cmdm(Q),
- ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),get(A,N),getr(A,N),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
+A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,Q,N),cmdl(Q),cmdm(Q),
+ ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,N),getr(A,N),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
 V init(I,Q*),mrn(I,OA*),repl();
 C*sl(C*,L),*syp(L*),tZ(L);
 I asg(Ax),si(Q,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(Q);

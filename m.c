@@ -31,20 +31,25 @@ S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
 I syP(Qs)_(In=mn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!strcmp(p,s),s0-p)p+=mn(p)+1)
  P(s1+n>s0+Z s0,die("syms oom\n"))mc(s1,s,n);s1+=n;s0-s1+n)
 
-S I ln(Qp,Qq)_(Ax=*p-'\\'?val(aCm(p,q)):cmd(p+1);x=x?out(x):0;x?x(1):epr(0))
-S Q skp(Qp)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)
+S Q skp(Qp)_(W(*p=='/'&&p[1]==10,p+=3;W(*p&&(p[-1]-10||p[-2]-'\\'||p[-3]-10),p++))p)S I ln(Q,Q);S A cmdx(Qs)_(en0())
+S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
+S A cmdw(Qs)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCl(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
 A cmdl(Qs)_(Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(*p=='#'&&p[1]=='!',p+=2;W(*p&&*p-10,p++))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||q[1]==32||q[1]=='}'),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
+A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
+ P(cA9(c)&&(!d||d==10||d==32||d==':'),s+=2+(d==32);CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s))
+ K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s)))
+S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
+
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
+I rep()_(S Cb[256];Lm=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,ln(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
+V repl(){W(rep())}
 V init(In,Q*a){argv=a;env=a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(aS0,aA0));
  cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
- mc(cn+tc,cn+tC,(tS-tC+1)*Z(*cn));i(tn-to,cn[to+i]=au0)
+ mc(cn+tc,cn+tC,(tS-tC+1)*Z(A));i(tn-to,cn[to+i]=au0)
     ci[0][0]=ab(0);    ci[0][1]=ab(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
- xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];
- cns=x;}
-I rep()_(S Cb[256];Lm=0,k=read(0,b,256);P(k<0,0)C*p=b,*q=p+m,*r=q+k;W(q<r,Y(*q==10,ln(p,q);p=q+1)q++)mc(b,p,m=q-p);1)
-V repl(){W(rep())}
+ xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
 
 #define _m(x) ((I*)dat(x))[-7]
 #define xm _m(x)
@@ -59,7 +64,7 @@ A1(hx,hb(s=h8(s,x);hS(" b",bkt(x));Ct=xC[-15];hs(" t");Y(c3(1,t,tn),*s++=TS[t])E
  hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,cap(x)/8),hs(" ");s=h8(s,xl)))x)
 A cmdm(Qs)_(obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
 // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
- hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
+// hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
 // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
  obs(Y(!c3(tA,xt,tn-1)&&(xr||xt),hb(hs("bad type:"));hx(x)));
  obs(Y(xr-xm,hb(hs("bad refc:"));hx(x)));
