@@ -39,5 +39,5 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,x?x(0):0);*
  Az=pe(0,v);P(!z,y(x?x(0):0))P(z==PLH,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
 S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',Ep(c==')',x,y)y=au0)xq(y);Y(*s-';'&&*s-10,BR)s++)Ep(*s-c,x)s++;x)
-A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=*s=='\\'?a2(PRG,AO(0,a2(CMD,aCz(s+1)))):pb(a1(PRG),0);
+A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=pb(a1(PRG),0);
  !y?eS(x,s-s0),0:lam(0,x,shy(y),aS0))

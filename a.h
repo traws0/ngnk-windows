@@ -134,7 +134,7 @@ S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)S D gd_(Ax
  c=='~'?11:c==','?12:c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:20+c-'0')
 #define cu(c) au(vi(c))
 #define cv(c) av(vi(c))
-S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
+S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 
 #define ND (D)(0./0.)
 #define WD __builtin_inf()
