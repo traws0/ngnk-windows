@@ -40,8 +40,7 @@ S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCz(s)))));i(n,mr(N
 S A cmdw(Qs)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCz(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
 S A cmdx(Qs)_(en1(0))
 A1(cmd,Et(!xtC,x)x=str0(x);Cc=*xC,d=xC[1];P(c=='\\',exit(0);x)
- P(cA9(c)&&(!d||d==32||d==':'),Qs=xC+1;s+=*s==32;x=str0(N(cut(az(s-xC),x))); //todo
-  x(CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(xC)))
+ P(cA9(c)&&(!d||d==32||d==':'),Qs=xC+1;s+=*s==32;x(CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",x))
 S A rda(If)_(Au=aC(256-ZA);L m=0,k;
  W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
