@@ -6,7 +6,7 @@
 #define hN(f,T,l,o)      hf(f,T,Y(l,AL(a))i(PD(n,a),r[i]=a[l*i]o b[i])n) //+ and * for widest types, no overflow
 #define hO(f,T,l,g,e...) hf(f,T,Y(l,AL(a))Li=0;W(i<n,e;j(g,r[j]=v[j])i+=g;a+=l*g;b+=g;r+=g)i) //support overflows
 #define hA(f,T,l,g)      hO(f,T,l,g,T v[g];j(g,v[j]=a[l*j]+b[j])T o=0;j(g,o|=(a[l*j]^v[j])&(b[j]^v[j]))P(o>>Z(T)*8-1,i))
-#define hM(f,T,l,g)      hO(f,T,l,g,T##2 v[g];j(g,v[j]=a[l*j]*(T##2)b[j])j(g,P(v[j]<=N##T||W##T<=v[j],i)))
+#define hM(f,T,l,g)      hO(f,T,l,g,T##2 v[g];j(g,v[j]=a[l*j]*(T##2)b[j])j(g,P(v[j]-(T)v[j],i)))
 #define ho(t,T) hA(a##t##T,T,0,(ZA/Z(T)))hA(a##T##T,T,1,(ZA/Z(T)))hM(m##t##T,T,0,(ZA/Z(T)))hM(m##T##T,T,1,(ZA/Z(T)))
 #define hn(t,T) hN(a##t##T,T,0,+)hN(a##T##T,T,1,+)hN(m##t##T,T,0,*)hN(m##T##T,T,1,*)
 ho(b,B)ho(h,H)ho(i,I)hn(l,L)hn(d,D)

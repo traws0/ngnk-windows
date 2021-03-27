@@ -8,7 +8,7 @@ S A rnd(Ln,Lm)_(Y(n==NL,Ed(m<0)n=-m)
  Y(n<0,n=-n;El(n>m,u)i(n,Lk=m-n+i;Lv=((UL*)uL)[i]%=k+1;L*p=&ul;j(i,Y(ul==v,*p=k;BR)))Ay=rnd(n,0);m2(y,i(n,SWP(ul,uL[(UL)yl%(i+1)]))0))u)
 S A rndD(Ln)_(A x=AT(tD,rnd(n,0));i(n,xl=xl&-1ull>>12|1023ll<<52)x)
 
-#define h(T) NO L f##T(OV*p,Nn,Lv)_(P(v<N##T||W##T<v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
+#define h(T) NO L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
  NO L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xC,n,v);P(i<0,*p=apv(x,&v);n)i)
 h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)

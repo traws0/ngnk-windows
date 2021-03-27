@@ -7,7 +7,7 @@ S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about
 
 TD size_t(*F1)(OV*,V*,N);
 #define hf(f,T,e...) S N f(OV*RE a0,V*RE r0,Nn)_(O T*a=a0;T*r=r0;AL(a)AL(r)e)
-#define NG(T) hf(neg##T,T,Ni=0;W(i<n,I o=0;j(ZA/Z(T),o|=a[j]==N##T)P(o,i)j(ZA/Z(T),r[j]=-a[j])a+=ZA/Z(T);r+=ZA/Z(T);i+=ZA/Z(T))n)
+#define NG(T) hf(neg##T,T,Ni=0;W(i<n,I o=0;j(ZA/Z(T),o|=a[j]==(T)(1<<Z(T)*8-1))P(o,i)j(ZA/Z(T),r[j]=-a[j])a+=ZA/Z(T);r+=ZA/Z(T);i+=ZA/Z(T))n)
 #define F1(f,T,c...) hf(f##T,T,i(PD(n,a),r[i]=({c;}))n)
 NG(B)NG(H)NG(I)
 F1(neg,L,-a[i])F1(neg,D,-a[i])F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*c3('A',a[i],'Z'))

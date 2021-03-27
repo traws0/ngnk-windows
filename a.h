@@ -138,12 +138,6 @@ S OA au0=au(0),av0=av(0),OUT=au(25),CMD=au(28),PLH=au(29),PRG=au(30),COM=av(24),
 #define WD __builtin_inf()
 #define NL (1ll<<63)
 #define WL (~NL)
-#define NI (1<<31)
-#define WI (~NI)
-#define NH (H)(1<<15)
-#define WH (~NH)
-#define NB -128
-#define WB 127
 
 #define iut(t,v...) ({i(un,u##t=({v;}))u;})
 #define iua(v...) iut(a,v)
