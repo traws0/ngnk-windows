@@ -101,7 +101,7 @@ S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 A0 aa0;
-A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cmd,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gD,gH,gI,gL,gS,grp,
+A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gD,gH,gI,gL,gS,grp,
  hex,jsr,jsw,kst,las,len,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,join,ltn,mnm,mod,mtc,mul,mxm,rsh,
@@ -109,7 +109,7 @@ A2 a2,add,aM,am,ap1,apn,apd,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,join
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,Q,N),cmdl(Q),cmdm(Q),
+A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,Q,N),cmd(Q),cmdl(Q),cmdm(Q),
  ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),get(A,N),getr(A,N),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
 V init(I,Q*),mrn(I,OA*),repl();
 C*sl(C*,L),*syp(L*),tZ(L);
