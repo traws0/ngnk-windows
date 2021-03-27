@@ -38,7 +38,7 @@ A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;Qs=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<0
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
 S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCz(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
 S A cmdw(Qs)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCz(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
-S A cmdx(Qs)_(en1(0))
+S A cmdx(Qs)_(en0())
 A1(cmd,Et(!xtC,x)x=str0(x);Cc=*xC,d=xC[1];P(c=='\\',exit(0);x)
  P(cA9(c)&&(!d||d==32||d==':'),Qs=xC+1;s+=*s==32;x(CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",x))
