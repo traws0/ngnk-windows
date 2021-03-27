@@ -66,7 +66,7 @@ A cmdm(Qs)_(obs(xm=0);xys(Y(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
 // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
 // hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
 // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
- obs(Y(!c3(tA,xt,tn-1)&&(xr||xt),hb(hs("bad type:"));hx(x)));
+ obs(Y(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
  obs(Y(xr-xm,hb(hs("bad refc:"));hx(x)));
  xys(Y(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));
  hb(hs("-----------"));au0)
