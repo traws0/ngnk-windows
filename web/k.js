@@ -44,7 +44,7 @@ file=async f=>{fs[f]=fs[f]||t1(await(await fetch(f)).text())},ap=s=>{out.value+=
 if(location.hash==='#r'){ //repl mode
  rdy(_=>{doc.body.classList.add('repl');ed.value='';out=ed;let ha=[''],hi=0 //ha,hi:history array and index
   wa(async _=>{await file('repl.k');await file('golf.k')
-   let p=ms('k.wasm\0'),argv=ma(16);S4(argv,[p,0,0]);app.init(1,argv);inp='\\l repl.k\n';app.rep()})
+   let p=ms('k.wasm\0repl.k\0'),argv=ma(16);S4(argv,[p,p+7,0,0]);app.init(1,argv);inp='\\l repl.k\n';app.rep()})
   ed.onkeydown=x=>{const k=kc(x)
    if(k===38||k===40){let s=ed.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
     ed.value=s._(0,i)+ha[hi];cur(ed,skPR(i));return!1}
