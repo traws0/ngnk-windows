@@ -33,7 +33,7 @@ A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(gi(x)))et1(x))
 A1(pI,XmMA(ea1(pI,x))Xc(pI(enl(x)))XC(x=str0(x);Qs=xC;P(!*s,x(mR(cn[tl])))Lv=pl(&s);x(*s?mR(cn[tl]):az(v)))et1(x))
 TY(ct)ct={[tA]=blw,gC,gB,gH,gI,gL,gD,gS};
 A2(cst,P(xtS||ytmMA,eac(cv('$'),A(x,y),2))P(xtz&&ytC,K("{y@(!x)+(x<0)*#y}",x,y))
- Xs(SF(x,y,"c\0\0\0b\0\0\0h\0\0\0i\0\0\0l\0\0\0d\0\0\0\0\0\0\0s\0\0\0I\0\0\0",gC,gB,gH,gI,gL,gD,gS,gS,pI))en2(x,y))
+ Xs(Ss("c","b","h","i","l","d","","s","I")Sf(x,y,s,gC,gB,gH,gI,gL,gD,gS,gS,pI))en2(x,y))
 A1(sqz,P(!xtA||!xn,x)Au=aA0;i(xn,uq(mR(xa)))x(u))
 A1(blw,XA(x)Xt(a1(x))Et(xtm,x)Nn=xN;Au=aA(n);x(iua(get(x,i))))
 L tru(Ax/*1*/)_(Lv=c3(tc,xt,ts)?gl_(x):xtF?!xtu||xv:xn;x(0);v)A1(fir,xtt?x:x(getr(x,0)))A1(las,xtt?x:x(getr(x,xn-1)))

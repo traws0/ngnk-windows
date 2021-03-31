@@ -165,7 +165,8 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define N(r)      N_(r,)
 #define N1(x,r)   N_(r,x(0))
 #define N2(x,y,r) N_(r,x(y(0)))
-#define SF(x,y,s,f...) ({Iv=gi(x);i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
+#define Ss(a...) S O C s[][4]={a};
+#define Sf(x,y,s,f...) ({Iv=gi(x);i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
