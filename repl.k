@@ -3,7 +3,7 @@ repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for more info\n"
 repl.prompt:," "
 cmds:()!()
 cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
-cmds["l"]:{` 1:1:repl.basename[`argv 0],"/LICENSE";}
+cmds["a"]:{` 1:1:repl.basename[`argv 0],"/LICENSE";}
 repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
 repl.line:{$[#x;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[` 1:repl.fmt@.:;,x;`epr@]];` 1:repl.prompt;1}
@@ -13,14 +13,13 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 /
 --------------------------------------------------------------------------------
 
-\   Help
-\0  datatypes     \l file.k  load
-\+  primitives    \t:n expr  time (elapsed milliseconds after n runs)
-\:  I/O           \w         workspace bytes
-\'  adverbs       \v         variables
-\`  symbols       \f         functions
-\h  summary       \other     shell command (through /bin/sh)
-\l  license       \\         exit
+\   Help         \a  agpl3  license
+\0  datatypes    \l file.k  load
+\+  primitives   \t:n expr  time (elapsed milliseconds after n runs)
+\:  I/O          \v         variables
+\'  adverbs      \f         functions
+\`  symbols      \other     shell command (through /bin/sh)
+\h  summary      \\         exit
 --------------------------------------------------------------------------------
 \0
 Types: ACBHILDSMmcbhildsopqruvw
