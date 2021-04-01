@@ -27,7 +27,8 @@ A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,at
 A aCn(Qs,Nn)_(atnv(tC,n,s))A aCm(Qp,Qq)_(aCn(p,q-p))A aCz(Qs)_(aCn(s,sn(s)))A aCl(Qs)_(Qq=sc(s,10);q?aCm(s,q):aCz(s))
 C tZ(Lv)_(v==(B)v?tB:v==(H)v?tH:v==(I)v?tI:tL)A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=mR(xx);mR(xy))*p=xx;AN(0,x);x(xy))
 A az(Lv)_(Ct=tZ(v);t==tL?al(v):ai(v))A1(mut,XP(x)P(xr==1,x)x=x(atnv(xt,xn,xC));Y(xtR,mRa(x))x)
-A room(Ax/*1*/,Nn)_(P(xr==1&&n*ZT[xt]<=cap(x),x)Ay=AN(xn,atn(xt,n));mc(yC,xC,xn*ZT[xt]);Y(ytR,Y(xr==1,AN(0,x))E(mRa(y)))x(y))
+A room(Ax/*1*/,Nn)_(P(xr==1&&n*ZT[xt]<=cap(x),AN(n,x))Ay=atn(xt,n);mc(yC,xC,xn*ZT[xt]);
+ Y(ytR,Y(xr==1,AN(0,x))E(i(xn,mR(ya))))x(y))
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
 I syP(Qs)_(In=sn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!sC(p,s),s0-p)p+=sn(p)+1)
