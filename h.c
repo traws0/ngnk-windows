@@ -1,15 +1,15 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
-A rsh_(Ax/*0*/,L m,L*pj,L*s,L r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rsh_(x,m,pj,s+1,r-1))y)
- Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);mc(yC,xC+j*w,q*w);
- mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,mc(yC+m*w,yC,m*w);m*=2)Y(n>m,mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
 SN A flt(Ax,Ay,Cb)_(Er(!ytT,x,y)Au=atn(yt,0);
  i(yn,Az=get(y,i);z=app(x,&z,1);Y(!z,u=u(0);BR)z=gL(z);P(!z,x(y(u(0))))Ln=gl(z);j(b?n:!n,uq(get(y,i))))x(y(u)))
+S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1,r-1))y)
+ Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);mc(yC,xC+j*w,q*w);
+ mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,mc(yC+m*w,yC,m*w);m*=2)Y(n>m,mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
 A2(rsh,XF(flt(x,y,1))Ym(Xz(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y,z))x=enla(x);xR;am(x,ap1(y,x)))
  YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)Yt(rsh(x,enl(y)))P(!yn,rsh(x,enl(fir(y))))
- x=enla(Ny(gL(x)));P(!xn,fir(x(y)))
- i(xn,Lv=xl;Y(v<0,Ed(xn>2||xn==2&&v-NL,x,y)P(xn==1&&v==NL,x(y))
-  P(xn==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
- Lj=0;x(y(rsh_(y,yn,&j,xL,xn))))
+ x=enla(Ny(gL(x)));Nn=xn;P(!n,fir(x(y)))P(n>4,ez2(x,y))
+ i(n,Lv=xl;Y(v<0,Ed(n>2||n==2&&v-NL,x,y)P(n==1&&v==NL,x(y))
+  P(n==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
+ Nj=0;x(y(rs(y,yn,&j,xL,n))))
 A2(cut,XF(flt(x,y,0))Ym(K("{((!y)^x)#y}",x,y))
  YT(x=Ny(gL(x));K("{n:#y;y$[x~*x;$[n<x|-x;!0;x<0;!n+0^x;x+!n-x];$[|/0<':x,#y;`err\"dom\";x+!'1_-':x,#y]]}",x,y))
  Yz(Et(!xtT,x,y)Li=gl(y);P(!in(i,xn),x)
