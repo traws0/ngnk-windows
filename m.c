@@ -13,7 +13,7 @@ S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
 A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
 
 #define xX xA[-3]
-S Au[35];L mU;S I lck;
+S Au[35];S I lck;
 S A mb(Cb,Ax)_(xX=0;xr=0;dbg(AN(-1,AT(0,x)));bkt(x)=b;x)V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,mR(xa))x)
 A1(m0,dbg(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=bkt(x);P(!b,x=AT(tn,x))xX=u[b];u[b]=(A)xC;Y(xtR,mrn(xn,xA))x)
 A1(m1,dbg(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))dbg(ms(xC,0xab,cap(x));dbg(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
@@ -33,11 +33,10 @@ I syP(Qs)_(In=sn(s)+1;P(n<6,Lv=0;mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!sC(p,s),s0-p)p+=
 
 S Q skp(Qs)_(W(!mC(s,"/\n",2),Qp=ss(s+1,"\n\\\n");s=p?p+3:s+sn(s))s)S I ln(Q,Q);S A cmdx(Qs)_(en0())
 S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
-S A cmdw(Qs)_(Nn=mU;P(!*s,az(n))mr(out(N(val(aCl(s)))));n=mU-n;n?enl(cat(as(0),az(n))):au0)
 A cmdl(Qs)_(Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(!mC(p,"#!",2),p=sc0(p+2,10))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||si(" }",q[1])<2),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
- P(cA9(c)&&sc("\n :",d),CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdw,cmdx)(s+2+(d==32)))
+ P(cA9(c)&&sc("\n :",d),CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdx)(s+2+(d==32)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 
