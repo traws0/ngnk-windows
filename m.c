@@ -5,6 +5,8 @@
  #define MAP_NORESERVE 0 //freebsd
 #endif
 
+#define bkt(x) ((C*)dat(x))[-16]
+#define cap(x) ((ZA<<bkt(x))-ZA)
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
 S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
  P((L)p==-1,eo0();(V*)0)P(f>0,p)Y(nm==ZZ(m),die("mmap lmt\n"))*(C*)p=nm;m[nm++]=(TY(m[0])){p,n};p)
