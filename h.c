@@ -17,13 +17,12 @@ A2(cut,XF(flt(x,y,0))Ym(K("{((!y)^x)#y}",x,y))
  et2(x,y))
 A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtc||xtz||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,ea1(enl,y)))a1(x))
 A1(enla,Xmt(enl(x))x)
+S V cpi(V*a,Ax/*1*/){mc(a,xC,xn*ZT[xt]);x(!xtA?0:xr-1?mRa(x):AN(0,x));}
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
               Au=eac(cv(','),A(mR(xy),mR(yy)),2);x(y(u?aM(mR(xx),u):0)))
- x=enla(x);P(!xn,x(enla(y)))P(ytT&&!yn,y(x))Y(xtZ&&ytzZ,N(sup(&x,&y)))
- y=enla(y);Y(xt-yt,x=blw(x);y=blw(y))L w=ZT[xt],m=xn,n=yn;Au;
- Y(xr==1&&(m+n)*w<=cap(x),u=AN(m+n,x))E(u=atn(xt,m+n);mc(uC,xC,m*w);Y(xtA,Y(xr==1,AN(0,x))E(mRa(x)))x(0))
- mc(uC+m*w,yC,n*w);Y(ytA,mRa(y))y(u))
+ x=enla(x);P(!xn,x(enla(y)))P(ytT&&!yn,y(x))Y(xtZ&&ytzZ,N(sup(&x,&y)))y=enla(y);Y(xt-yt,x=blw(x);y=blw(y))
+ Nm=xn,n=yn;Au;Y(xr==1&&(m+n)*ZT[xt]<=cap(x),u=AN(m+n,x))E(u=atn(xt,m+n);cpi(uC,x))cpi(uC+m*ZT[xt],y);u)
 A apv(Ax,OV*v)_(Q(xtT);Nn=xn,w=ZT[xt];
  Y(xr==1&&(n+1)*w<=cap(x),x=AN(n+1,x))E(Ay=atn(xt,n+1);Y(xr>1&&xtA,mRa(x))EY(xtR,x=AT(tL,mut(x)))m2(x,mc(yC,xC,n*w));x=y)
  V*p=xC+n*w;mc(p,v,w);x)
