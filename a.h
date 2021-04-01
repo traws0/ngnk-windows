@@ -117,8 +117,8 @@ AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),catc(A,Q,N),cmdl(Q),cmdm(Q),
  ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,N),getr(A,N),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
 V init(I,Q*),mrn(I,OA*),repl();
-C*sl(C*,L),*syp(L*),tZ(L);
-I asg(Ax),si(Q,I),eS(A,I),mtc_(A,A),sup(A*,A*),syP(Q);
+C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);
+I asg(Ax),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
 L _N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;
 EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
