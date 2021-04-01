@@ -38,7 +38,7 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
  P(in(t,16),Ik=l<t?l:t;mv(s,s+1,k);ms(s+l,'0',max(0,t-l));s+=t;*s++='.';s+=l-k;Y(t>=l,*s++='0')s)
  P(-4<t&&t<0,i(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';ms(s,'0',-t-1)+l-t)
  Y(l>0,*s++='.';s+=l)*s++='e';Y(t<0,t=-t;*s++='-')s4(s,t))
-A1(str0,Q(xtC);x=room(x,1);xC[xn]=0;x)
+A1(str0,Q(xtC);x=room(x,xn+1);xC[xn]=0;x)
 A1(str,Xzd(I d=xtd;Au=aC(24);AN((d?sd:sl)(uC,gl(x))-uC,u))Xs(Lv=gi(x);aCz(syp(&v)))Xc(enl(x))XF(kst(x))K("$:'",x))
 
 S I cin(Cc,Qs)_(s[si(s,c)])S A pre(Cc,Ax)_(cat(ac(c),x))S A sur(Cc,Ax,Cd)_(apc(pre(c,x),d))
