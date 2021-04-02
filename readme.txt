@@ -16,7 +16,7 @@ s.c  object to string: $x `k@x
 f.c  find, random: x?y
 1.c  monadic arithmetic
 2.c  dyadic  arithmetic except + and *
-3.c  dyadic  arithmetci + and *
+3.c  dyadic  arithmetic + and *
 i.c  i/o and \cmds
 v.c  the rest of the verbs
 w.c  adverbs
