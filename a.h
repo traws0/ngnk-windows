@@ -113,8 +113,8 @@ A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),
- ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N);
-V init(I,Q*),mrn(I,OA*),repl();
+ ea1(A1,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),kv(A*),mf(I,N),room(A,N),wdn(A,N,N,N),K0(Q,I);
+V mrn(I,OA*),repl();
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);
 I asg(Ax),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
 L _N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
@@ -165,6 +165,7 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define N2(x,y,r) N_(r,x(y(0)))
 #define Ss(a...) S O C s[][4]={a};
 #define Sf(x,y,s,f...) ({Iv=gi(x);i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
+#define K(s,a...) ({static A f;if(!f)f=K0(s,sizeof s);sizeof(A[]){a}?app(f,(A[]){a},sizeof((A[]){a})/sizeof(A)):f;})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");

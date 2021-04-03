@@ -17,9 +17,9 @@ C*strstr(Qp,Qq)_(In=sn(q);W(*p,P(!memcmp(p,q,n),(V*)p)p++)(V*)(*q?0:p))
 N strlen(Qs)_(Qp=s;W(*p,p++)p-s)
 
 #ifndef shared
- I main(In,Q*a)_(init(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
+ I main(In,O char**a)_(kinit(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
  #if __FreeBSD__
-  V _start(Q*p){main(*(I*)(V*)p,p+1);} //can't use _() here
+  V _start(O char**a){main(*(I*)(V*)a,a+1);} //can't use _() here
  #elif i386
   asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
  #elif !wasm
