@@ -70,13 +70,13 @@ S I cAZ(Cc)_(c3('A',c,'Z'))S I cAF(Cc)_(c3('A',c,'F'))S I cAf(Cc)_(c3('a',c|32,'
 V*memcpy(V*,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),exit(I);N strlen(Q);I strcmp(Q,Q),memcmp(OV*,OV*,N);
 C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);
 
-//             1  2  3  4  5  6  7  8  9 10 11 13 14 15 16 17 18 19 20 21 22 23 24 25
-//            01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18
-//            () "" ,0 ,1 ,2 ,3 ,d ,` +!  ! "c" 0  1  2  3 .3  ` {} 1+ ++ +/ +: +  /
-enum      {t_,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,tn}; //types
-#define TS "0""A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w" //their symbols
-#define TZ  0, 8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
-#define Tz  0, 4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3  //log2(size) or 4=reftypes
+//             1  2  3  4  5  6  7  8  9 10 11 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+//            01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19
+//            () "" ,0 ,1 ,2 ,3 ,d ,` +!  ! "c" 0  1  2  3 .3  ` {} 1+ ++ +/ +: +  /  f
+enum      {t_,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,th,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
+#define TS "0""A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w""e" //their symbols
+#define TZ  0, 8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
+#define Tz  0, 4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
 EX OC Zt[],ZT[];S C At(A);S I _t(Ct)_(t>tm)S I _T(Ct)_(t<tM)S I _z(Ct)_(c3(tb,t,tl))S I _Z(Ct)_(c3(tB,t,tL))
 S I _F(Ct)_(t>=to)S I _P(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,tw))S I _R(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
