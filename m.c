@@ -42,7 +42,7 @@ A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
  P(cA9(c)&&sc("\n :",d),CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdx)(s+2+(d==32)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
-I k(O char*s)_(Ax=evs(s,s+sn(s));Xz(gl(x))x(0))
+L k(O char*s)_(Ax=N(evs(s,s+sn(s)));Xz(gl(x))x(0))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,Z(b)-1);P(n<0,0)b[n]=0;Qp=b;W(*p,Qq=sc0(p,10);ln(p,q);p=q+1)1)V repl(){W(rep())}
