@@ -23,6 +23,7 @@ AX(eac,Xz(AX2(win))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8];Ct[8];Lm=-1;
  i(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 A eac1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=eac1(f,xy);P(!xy,xy=au0;x(0))x)I b=xtA&&xr==1;Nn=xN;P(!n,x)Au=aA0;
  i(n,Ay=f(b?xa:get(x,i));Y(!y,Y(b,mrn(xn-i-1,xA+i+1))u=u(0);BR)uq(y))Y(b,x=AN(0,x))x(u))
+A eac2(Au/*0*/,Ax,Ay)_(eac(u,A(x,y),2))
 AX(ear,XzZ(rdc(x,a,n))P(n-2,ern(n,a))x=prj(x,A(*a,PLH  ),n);x(eac(x,a+1,1)))
 AX(eal,XzZ(scn(x,a,n))P(n-2,ern(n,a))x=prj(x,A(PLH,a[1]),n);x(eac(x,a  ,1)))
 S AX(cvg,P(n==1,Ay=*a,z=yR,u;W(1,zR;u=N2(y,z,app(x,&z,1));P(mtc_(u,y)||mtc_(u,z),y(u(z)))z=z(u))y(z(u)))

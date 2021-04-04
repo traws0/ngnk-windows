@@ -43,7 +43,7 @@ g(r)g(s)g(p)g(a)
 S C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
-S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac(av(v),A(x,y),2))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
+S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[t-(k?tB:tb)][v-4][k];t=art(v,t);
  Y(!k,t+=tb-tB;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
  Au=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,uC,un);x==u?y(u):y==u?x(u):x(y(u)))
