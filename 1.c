@@ -12,7 +12,7 @@ TD size_t(*F1)(OV*,V*,N);
 NG(B)NG(H)NG(I)
 F1(neg,L,-a[i])F1(neg,D,-a[i])F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*cAZ(a[i]))
 
-#define R1(f,a...) A1(f,XmMA(ea1(f,x))a)
+#define R1(f,a...) A1(f,XmMA(eac1(f,x))a)
 SN A fx(Ax,F1 f)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);m2(x,f(xC,uC,un);u))
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZ&&!xtD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
