@@ -28,7 +28,7 @@ libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(CC) $(F) $(O) $^ -shared -Dshared -o $@
 
 #wasm
-CW=clang-10 $(F) -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include
+CW=clang $(F) -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include
 o/wasm/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o/wasm && $(CW) -c $< -o $@
 web/k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c)) # /usr/lib/llvm-10/bin/wasm-ld should be on $PATH
