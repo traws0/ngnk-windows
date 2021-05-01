@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 SN A flt(Ax,Ay,Cb)_(Er(!ytT,x,y)Au=atn(yt,0);
  i(yn,Az=get(y,i);z=app(x,&z,1);Y(!z,u=u(0);BR)z=gL(z);P(!z,x(y(u(0))))Ln=gl(z);j(b?n:!n,uq(get(y,i))))x(y(u)))
 S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1,r-1))y)

@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #define h(T) S V i##T(V*p,Nn)_(T*a=p;AL(a)i(PD(n,a),a[i]=i))\
              S V r##T(V*p,V*q)_(T*a=p,*b=q;AL(a)W(a<b,SWP(*a,*b);a++;b--))
 h(B)h(H)h(I)h(L)

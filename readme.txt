@@ -1,5 +1,5 @@
 ngn/k is a simple fast vector programming language
-license: GNU AGPLv3 (v3 only) - https://git.sr.ht/~ngn/k/blob/master/LICENSE
+license: GNU AGPLv3 (v3 only) - https://codeberg.org/ngn/k/blob/master/LICENSE
 build: CC=clang-10 make -e  # or CC=clang-7 or CC=gcc-8
 usage: rlwrap ./k repl.k
 

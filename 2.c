@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 S L c(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define hf(v,T,f) S T v(T x,T y)_(f)
 #define hd(v,f,g) hf(v##b,B,f)hf(v##h,H,f)hf(v##i,I,f)hf(v##l,L,f)hf(v##d,D,g)

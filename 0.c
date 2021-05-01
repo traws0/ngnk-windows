@@ -1,4 +1,4 @@
-// ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://git.sr.ht/~ngn/k/blob/master/LICENSE
+// ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #include"a.h"
 #include<sys/syscall.h>
 #ifndef SYS_getdents
