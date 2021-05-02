@@ -5,7 +5,7 @@ NO A e1(Qs,Ax)_(x(e0(s)))
 NO A e2(Qs,Ax,Ay)_(y(e1(s,x)))
 NO A eN(Qs,In,OA*a)_(mrn(n,a);e0(s))
 SN I eC()_(e.n=0;Y(e.s,mr(e.s);e.s=0)e.o=0)
-NO I eS(Ax/*1*/,Ii)_(Y(!e.s,e.s=x;e.o=i)0)
+NO I eS(Ax/*1*/,Ii)_(Y(!e.s,e.s=x;e.o=i)E(x(0))0)
 A3(try,x=apn(x,y);P(x,z(x))
  Y(ztF,Ck=zk;z=k==1?ap1(z,aCn(e.m,e.n)):k==2?apn(z,a2(aCn(e.m,e.n),a2(e.s?mR(e.s):ac(0),az(e.o)))):z)eC();z)
 A1(epr,I h=64;C s0[3*h+Z(e.m)+6],*s=s0;*s++='\'';mc(s,e.m,e.n);s+=e.n;*s++=10;
