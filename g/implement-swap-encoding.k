@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/224849/implement-swap-encoding/224929#224929
-f:*'-1_{1_(|i#x),(i:1+0|*2_0,*=x)_x}\
+f:*'{1<#x}{{(|x),y}.(1|2#*=x)_x}\
 
 \l 0.k
 t["Sandbox for Proposed Challenges"        ;"SahC Pr foropox dbosenallednges"        ]
@@ -12,4 +12,3 @@ t["Determine if a dot(comma) program halts";"Detoc(tlamarommi finerp ha mrgod a)
 t["Closest Binary Fraction"                ;"CloinosestiB Fry tcaran"                ]
 t["Quote a rational number"                ;"Qunatebmuoiton re al ar"                ]
 t["Solve the Alien Probe puzzle"           ;"SorP Alveht en eilzzup elobe"           ]
-
