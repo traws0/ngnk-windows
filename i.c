@@ -24,7 +24,7 @@ S C ft(If)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
  S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),m))])
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
 A1(u0c,x=N(u1c(x));x=N(spl(ac(10),x));xn&&!An(xA[xn-1])?cut(az(-1),x):x)
-A1(u1c,Xz(If=gl(x);Cb[4096];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
+A1(u1c,Xz(If=gl(x);Cb[8192];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
  P(t=='d',Cb[ZP];Ik;Au=aC0;
   W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST DE*e=(V*)b+i;Qs=e->d_name;u=cts(u,s,sn(s));u=apc(u,10);i+=e->d_reclen))
   close(f);u)
