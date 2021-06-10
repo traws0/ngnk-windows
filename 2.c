@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 S L c(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
-#define idiv(x,y) (!(y)?(x):(x<0)?(-1-(x))/(y)-1:(x)/(y))
+#define idiv(x,y) ({typeof(x)a=(x),b=(y);!b?a:a<0?-1-(-1-a)/b:a/b;})
 
 #define hf(v,T,f) S T v(T x,T y)_(f)
 #define hd(v,f,g) hf(v##b,B,f)hf(v##h,H,f)hf(v##i,I,f)hf(v##l,L,f)hf(v##d,D,g)
