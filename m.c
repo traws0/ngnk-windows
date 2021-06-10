@@ -39,7 +39,7 @@ S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(N
 A cmdl(Qs)_(Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xC;Y(!mC(p,"#!",2),p=sc0(p+2,10))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||si(" }",q[1])<2),q++)Nx(ln(p,q));p=q+!!*q)x(au0))
 A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
- P(cA9(c)&&sc("\n :",d),CH(si("lmtw",c),&cmdl,cmdm,cmdt,cmdx)(s+2+(d==32)))
+ P(cA9(c)&&sc("\n :",d),CH(si("lmt",c),&cmdl,cmdm,cmdt,cmdx)(s+2+(d==32)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 V kf(O char*s,L(*f)(L)){Ax=dmd(A(as(syP(s)),aA0,av0,AT(te,AK(1,(A)f))),4);Y(x,x(0))}
