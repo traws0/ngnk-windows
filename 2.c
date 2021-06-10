@@ -3,7 +3,7 @@ S L c(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define hf(v,T,f) S T v(T x,T y)_(f)
 #define hd(v,f,g) hf(v##b,B,f)hf(v##h,H,f)hf(v##i,I,f)hf(v##l,L,f)hf(v##d,D,g)
 #define h(v,f) hd(v,f,f)
-h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:x?y/-x:y,y-(L)(y/x)*x)
+h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,y?x/y:0,x/y)hd(mod,x>0?(y%x+x)%x:!x?y:y>=0?y/-x:-1+(-1-y)/x,y-(L)(y/x)*x)
 h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,c(x)<c(y))hd(gtn,x>y,c(x)>c(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 #undef hd
