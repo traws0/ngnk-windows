@@ -18,7 +18,7 @@ AX(eac,Xz(AX2(win))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8];Ct[8];Lm=-1;
  P(m<0,app(x,a,n))i(n,Y(t[i]==1,rfc(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
  Au=0;Y(!m,Y(x==cu('#'),u=aL0)EY(n==2&&xtv&&xv<11,u=a[!_N(a[1])];uR)E(u=aA0))
  j(m,i(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))Az=app(x,b,n);
-     Y(!z,Y(u,u(0))i(n,Ay=a[i];Y(t[i]==1,yr-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1)))BR)
+     Y(!z,Y(u,u=u(0))i(n,Ay=a[i];Y(t[i]==1,yr-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1)))BR)
      Y(!j,u=c3(tc,zt,ts)?AN(0,atn(tT(zt),m)):aA0)uq(z))
  i(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 A eac1(A1 f,Ax)_(Xt(f(x))Xm(x=mut(x);xy=eac1(f,xy);P(!xy,xy=au0;x(0))x)I b=xtA&&xr==1;Nn=xN;P(!n,x)Au=aA0;
