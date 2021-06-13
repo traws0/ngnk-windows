@@ -30,7 +30,7 @@ A1(u1c,Xz(If=gl(x);Cb[8192];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))If=N(o(x,O_RDONLY))
   close(f);u)
  P(t=='r',Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
  Au=u1c(ai(f));close(f);u)
-A2(v0c,Y(ytA,y=join(ac(10),y))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
+A2(v0c,Y(ytA,y=Nx(join(ac(10),y)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
 A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;Qs=yC;m2(y,Au=au0;W(n>0,Lk=write(f,s,n);Y(k<0,u=eo0())Y(k<=0,BR)s+=k;n-=k)u))
  If=N(o(x,O_RDWR|O_CREAT|O_TRUNC));Au=v1c(ai(f),y);f>2&&close(f);u)
 
