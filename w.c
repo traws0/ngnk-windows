@@ -5,7 +5,7 @@ S A2(enc,x=Ny(gL(x));y=Nx(gL(y));Yt(Az=enc(x,enl(y));zn?fir(flp(z)):z(aL0))
  Xt(UL v=gl(x),r=0,m=0,b=1;i(yn,UL w=yl;Y(r<w,r=w))W(m<64&&b<=r,m++;b*=v)enc(rsh(az(m),az(v)),y))
  P(!xn,x(y(aA0)))Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);i(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=gl(x);ux=y;Y(m,i(yn,yl%=m))u)
-S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(bin,K("-1+/~>\\:",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
+S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
 A2(spl,Q(xtcC);Et(!ytC,x,y)C*s=xtc?(V*)&x:xC;Lm=xN;El(!m,x,y)Au=aA0;C*p=yC,*q=p,*t=p+yn,*r=t+1-xN;
  W(q<r,Y(mC(s,q,m),q++)E(uq(aCm(p,q));p=q+=m))Y(!xtc||gi(x)-10||p<t,uq(aCm(p,t)))x(y(u)))
 A2(join,Q(xtcC);Et(!ytA,x,y)Nm=xN,n=yn,l=m*(n-!!n);i(n,Az=ya;Et(!ztcC,x,y)l+=zN)Au=aC(l);C*s=xtc?(V*)&x:xC,*p=uC;

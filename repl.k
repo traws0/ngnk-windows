@@ -151,7 +151,7 @@ Adverbs:   ' / \ ': /: \:
   f'x  each1     #'("abc";3 4 5 6) -> 3 4
 x F'y  each2     2 3#'"ab" -> ("aa";"bbb")
   i'x  window    3'"abcdef" -> ("abc";"bcd";"cde";"def")
-  X'x  bin       1 3 5 7 9':8 9 0 -> 3 4 -1
+  X'x  binsearch 1 3 5 7 9'8 9 0 -> 3 4 -1
   F/x  fold      +/1 2 3 -> 6
   F\x  scan      +\1 2 3 -> 1 3 6
 x F/y  seeded /  10+/1 2 3 -> 16
