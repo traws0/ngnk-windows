@@ -1,12 +1,11 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-S L c(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1) //comparable double
 #define idiv(x,y) ({typeof(x)a=(x),b=(y);!b?a:a<0?-1-(-1-a)/b:a/b;})
 
 #define hf(v,T,f) S T v(T x,T y)_(f)
 #define hd(v,f,g) hf(v##b,B,f)hf(v##h,H,f)hf(v##i,I,f)hf(v##l,L,f)hf(v##d,D,g)
 #define h(v,f) hd(v,f,f)
 h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,idiv(x,y),x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),y-(L)(y/x)*x)
-h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,c(x)<c(y))hd(gtn,x>y,c(x)>c(y))hd(eql,x==y,*(L*)&x==*(L*)&y)
+h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x,y)<0)hd(gtn,x>y,cD(x,y)>0)hd(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 #undef hd
 #undef hf

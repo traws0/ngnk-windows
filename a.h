@@ -117,7 +117,7 @@ A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(
  wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);
-I asg(Ax),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
+I asg(Ax),cD(D,D),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
 L _N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;
 EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
