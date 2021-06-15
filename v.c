@@ -50,7 +50,7 @@ S I cA(Ax,Ay/*00*/)_(P(mtc_(x,y),0)
 S A1(asci,Ez(xn-(I)xn,x)x=N(K("{x-&/x}",x));I w=ZT[xt];UI n=xn;Ay=aC(n),z=aI(n),u=aI(n);C*a=dat(y);UI c[257];iI(uI,n);
  m2(x,m2(y,j(w,ms(c,0,Z c);i(n,a[i]=xC[w*ui+j])i(n,c[a[i]+1]++)Y(c[1+*a]-n,i(255,c[i+1]+=c[i])i(n,zI[c[a[i]]++]=ui)SWP(z,u)))z(u))))
 S OA*ascA(OA*v,I*a,I n,I*r,I*t)_(P(n<2,Y(n,*r=*a)v)I m=n/2;ascA(v,a,m,t,r);ascA(v,a+m,n-m,t+m,r+m);
- I*p=t,*q=t+m,*p1=q,*q1=t+n;W(p<p1&&q<q1,*r++=cA(v[*p],v[*q])<=0?*p++:*q++)mc(r,p,(V*)p1-(V*)p);mc(r,q,(V*)q1-(V*)q);v)
+ I*p=t,*q=t+m,*p1=q,*q1=t+n;W(p<p1&&q<q1,*r++=cA(v[*p],v[*q])<=0?*p++:*q++)mc(r,p<p1?p:q,(L)p1-(L)p+(L)q1-(L)q);v)
 A1(asc,XA(Ez(xn-(UI)xn,x)A y=gI(til(ai(xn))),z=aI(xn);ascA(xA,yI,xn,zI,yI);x(y(z)))
  Xm(Ay=kv(&x);idx(x,N(asc(y))))P(xtC||xtZ,asci(x))XS(asc(N(eac1(str,x))))XD(asc(blw(x)))Et(!(xts||xti),x)opn(x))
 A1(dsc,Xz(cls(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)x=rev(asc(rev(x)));sub(ai(xN-1),x))
