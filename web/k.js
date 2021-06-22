@@ -3,11 +3,11 @@
  Object.defineProperty(x.prototype,'n',{get:function(){return this.length}})
  '_:slice,sub:subarray,io:indexOf,lio:lastIndexOf,fe:forEach,ch:charCodeAt'.split(',')
   .map(y=>{let[p,q]=y.split(':');if(x.prototype[q]!=null)x.prototype[p]=x.prototype[q]})})
-const c1=x=>{let r='';for(let i=0;i<x.n;i++)r+=chr(x[i]);return r},
+const c1=x=>{let r='';for(let i=0;i<x.n;i++)r+=String.fromCharCode(x[i]);return r},
 c0=x=>{const r=U8(x.n);for(let i=0;i<x.n;i++)r[i]=x.ch(i);return r},
 T1=new TextEncoder,T0=new TextDecoder,t1=x=>T1.encode(x),t0=x=>T0.decode(x),z1=pako.deflate,z0=pako.inflate,
 p1=x=>x?btoa(c1(z1(t1(x)))):'',p0=x=>{try{return x?t0(z0(c0(atob(x)))):''}catch(x){error(x);return''}},
-{log,error}=console,{min,max}=Math,U8=x=>new Uint8Array(x),N='\n',chr=String.fromCharCode,
+{log,error}=console,{min,max}=Math,U8=x=>new Uint8Array(x),N='\n',
 thr=(f,d)=>{let i,l=0,g=_=>{i=0;l=Date.now();f()};return _=>{i=i||setTimeout(g,l+d-Date.now())}},
 doc=document,kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 rdy=f=>['complete','interactive'].io(doc.readyState)<0?doc.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
@@ -66,6 +66,9 @@ else{ //editor mode
    out.value=`# [K (ngn/k)], ${g.n} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
     `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: https://ngn.bitbucket.io/k#${p1(s)}\n`
    navigator.clipboard.writeText(out.value)}
-  ed.onkeydown=x=>{const k=kc(x);if(k===1013){ev.onclick();return!1}if(k===1071){cg.onclick();return!1}}
+  ch.onclick=_=>{const s=ed.value,g=ubc()
+   out.value=`ngn/k, ${g.n} bytes: [\`${g.replace(/`/g,'\\`').replace(/\\$/,'\\ ')}\`](https://ngn.bitbucket.io/k#${p1(s)})`
+   navigator.clipboard.writeText(out.value)}
+  ed.onkeydown=x=>{const b={1013:ev,1071:cg,1072:ch}[kc(x)];if(b){b.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)
   if(location.hash._(-1)!=='-')ev.onclick()})}
