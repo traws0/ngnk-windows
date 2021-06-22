@@ -145,14 +145,6 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define NL (1ll<<63)
 #define WL (~NL)
 
-#define iut(t,v...) ({i(un,u##t=({v;}))u;})
-#define iua(v...) iut(a,v)
-#define iuc(v...) iut(c,v)
-#define iuh(v...) iut(h,v)
-#define iui(v...) iut(i,v)
-#define iul(v...) iut(l,v)
-#define iud(v...) iut(d,v)
-
 #define EN(x,y,z,n,...) n
 #define EF(f,x,a...) P(x,f(a))
 #define E_(t,a...) EF(EN(a,e##t##2,e##t##1,e##t##0),a)

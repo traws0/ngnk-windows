@@ -35,7 +35,7 @@ TY(ct)ct={[tA]=blw,gC,gB,gH,gI,gL,gD,gS};
 A2(cst,P(xtS||ytmMA,eac2(cv('$'),x,y))P(xtz&&ytcC,K("{y@(!x)+(x<0)*#y}",x,enla(y)))
  Xs(Ss("c","b","h","i","l","d","","s","I")Sf(x,y,s,gC,gB,gH,gI,gL,gD,gS,gS,pI))en2(x,y))
 A1(sqz,P(!xtA||!xn,x)Au=aA0;i(xn,uq(mR(xa)))x(u))
-A1(blw,XA(x)Xt(a1(x))Et(xtm,x)Nn=xN;Au=aA(n);x(iua(get(x,i))))
+A1(blw,XA(x)Xt(a1(x))Et(xtm,x)Nn=xN;Au=aA(n);i(un,ua=get(x,i))x(u))
 L tru(Ax/*1*/)_(Lv=c3(tc,xt,ts)?gl_(x):xtF?!xtu||xv:xn;x(0);v)A1(fir,xtt?x:x(getr(x,0)))A1(las,xtt?x:x(getr(x,xN-1)))
 I mtc_(Ax,Ay/*00*/)_(P(x==y,1)P(xtZ&&ytZ&&xn==yn,gl(rdc(cv('*'),A(eql(xR,yR)),1)))P(xtz&&ytz,gl_(x)==gl_(y))
  P(xt-yt||xtP||(xtr&&xv-yv)||xn-yn,0)P(!xtR,i(xn*ZT[xt],P(xc-yc,0))1)i(xn,P(!mtc_(xa,ya),0))1)

@@ -4,7 +4,7 @@
 S V rndL(L*r,Nn){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
  i(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=rot(d,45))}
 S A rnd(Ln,Lm)_(Y(n==NL,Ed(m<0)n=-m)
- Au=aL(absL(n));rndL(uL,un);Y(m,Y(m<=1ll<<32,iul((UI)ul*(UL)m>>32))E(iul((UL)ul%m)))
+ Au=aL(absL(n));rndL(uL,un);Y(m,Y(m<=1ll<<32,i(un,ul=(UI)ul*(UL)m>>32))E(i(un,ul=(UL)ul%m)))
  Y(n<0,n=-n;El(n>m,u)i(n,Lk=m-n+i;Lv=((UL*)uL)[i]%=k+1;L*p=&ul;j(i,Y(ul==v,*p=k;BR)))Ay=rnd(n,0);m2(y,i(n,SWP(ul,uL[(UL)yl%(i+1)]))0))u)
 S A rndD(Ln)_(A x=AT(tD,rnd(n,0));i(n,xl=xl&-1ull>>12|1023ll<<52)x)
 
@@ -18,8 +18,11 @@ A2(fnd,Xs(Ss("","j","hex","aes")Sf(x,y,s,des,jsr,unh,aes1))
  Xz(Yz(rnd(gl(x),gl(y)))Yc(K("{`c$\"aA\"[y~\"A\"]+x?26}",x,y))Yd(mul(sub(rndD(gl(x)),ad(1)),y))K("{y@x?#y}",x,y))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  XZ(TY(fB)*f=CH(Zt[xt],&fB,fH,fI,fL);Yz(x(az(f(xC,xn,gl(y)))))
-    YZ(Au=aL(yn);x(m2(y,ytB?iul(f(xC,xn,yb)):ytH?iul(f(xC,xn,yh)):ytI?iul(f(xC,xn,yi)):iul(f(xC,xn,yl)))))
+    YZ(Au=aL(yn);x(m2(y,Y(ytB,i(un,ul=f(xC,xn,yb)))
+                       EY(ytH,i(un,ul=f(xC,xn,yh)))
+                       EY(ytI,i(un,ul=f(xC,xn,yi)))
+                        E(    i(un,ul=f(xC,xn,yl)))u)))
     K("{$[y~*y;0N;(#y)#0N]}",x,y))
  P((xtS&&ytsS)||(xtC&&ytcC)||(xtD&&ytdD),fnd(AT(tB+Zt[xt],mut(x)),AT(tB+Zt[xt]+(tc-tC)*ytt,mut(y))))
  Ymt(fir(N(fnd(x,enl(y)))))
- Au=aL(yN);x(y(iul(Az=get(y,i);z(fA(x,z))))))
+ Au=aL(yN);i(un,Az=get(y,i);ul=z(fA(x,z)))x(y(u)))
