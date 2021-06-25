@@ -4,7 +4,7 @@ OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?'
 OV*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out,   0,  0,   0,  0,  0,  0,
          dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,fnd,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,XmMA(eac1(mkn,x))Ay=mR(cn[xt]);xtt?x(y):rsh(len(x),y)) //                                              MKL   '   /    \  ':   /:  \:
-S A emp(Ct)_(Ax=ce[t];x?xR:aA0)
+S A emp(Ct)_(Ax=ce[t];x?xR:oA)
 A2(id_,/*00*/x==cv(',')?emp(yt):xtv&&xv<11?mR(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 A2(com,AK(yk,AT(tq,a2(x,y))))
 AX(prj,XA(app(x,a,n))Ck=max(n,xk);i(n,k-=a[i]!=PLH)Au=AK(k,atn(tp,n+1));ux=xR;mc(uA+1,a,8*n);u)
@@ -23,7 +23,7 @@ A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xN)?get(x,i):xn?mkn(get(x,0)):mR(cn[xt]))
 iC_(I)iC_(L)i_(B,I)j_(B,I)i_(B,L)j_(B,L)i_(H,I)j_(H,I)i_(H,L)j_(H,L)i_(I,I)j_(I,I)i_(I,L)j_(I,L)j_(L,I)j_(L,L)
 iD_(I)iD_(L)iS_(I)iS_(L)
 S A2(idx_,/*01*/Er(xtt,y)P(y==PLH||y==au0,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)YF(et1(y))Yt(getr(x,gl(y)))
- Y(!ytL&&!ytI,y=N(gI(y)))Nn=yn;P(xtA||xtM,Au=aA0;Y(ytL,i(n,uq(getr(x,yl))))E(i(n,uq(getr(x,yi))))y(u))
+ Y(!ytL&&!ytI,y=N(gI(y)))Nn=yn;P(xtA||xtM,Au=oA;Y(ytL,i(n,uq(getr(x,yl))))E(i(n,uq(getr(x,yi))))y(u))
  Au=xtL&&ytL&&yr==1?y:atn(xt,n);
  Lm=CH(xt-tC+7*ytL,&iCI,iBI,iHI,iII,jLI,iDI,iSI,iCL,iBL,iHL,iIL,jLL,iDL,iSL)(xC,xn,yC,uC,n);
  Y(m<n,u=u(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xC,xn,yC,uC,n))y-u?y(u):u)
@@ -34,8 +34,8 @@ S A2(wrt,Xl(wrt(gI(x),y))Yc(wrt(x,enl(y)))Et(!xtz||!ytC,y)write(gi(x),yC,yn);y)
 S A1(tme,x(al(now())))
 S A1(err,e1(xtC?xC:(C*)"err",x))
 S A1(ptr,oh(x);os("\n");x)
-S A1(argvf,Ay=aA0;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
-S A1(envf,Ay=aS0,z=aA0;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(gS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au0?ap1(y,x):y)
+S A1(argvf,Ay=oA;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
+S A1(envf,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(gS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au0?ap1(y,x):y)
 S A1(exitf,Xz(exit(gl(x));0)exit(1);0)
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
  Xs(Ss("","k","j","p","cf","t","x","hex","md5","sha1","sha2","sha3","aes","sin","err","epr","ptr","argv","env","exit")

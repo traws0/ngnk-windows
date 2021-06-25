@@ -54,7 +54,7 @@ A1(kst,P(c3(tA,xt,tS)&&xn==1,pre(',',ksr(fir(x))))XA(par(join(ac(';'),ek(x))))Xc
  Xp(x=val(x);P(xn-3?0:!cin(TS[At(xx)],"vr")?0:xy-PLH&&xz==PLH,Ay=mR(xy);cat(ksl(y),kst(fir(x))))
     x=ek(x);Nm=An(xx);x=apc(join(ac(';'),x),']');Q(xr==1);xC[m]='[';x)
  Xq(raz(ek(val(x))))Xr(x=val(x);Ay=mR(xy);cat(ksw(fir(x)),str(y)))Xw(atnv(tC,1+xv/3,&"':/:\\:"[xv%3*2]))
- P(xtu||xtv,P(x==PLH,aC0)Ay=atnv(tC,1,&vc[xv]);i(xtu+(19<xv),y=apc(y,':'))y)aCz("???"))
+ P(xtu||xtv,P(x==PLH,oC)Ay=atnv(tC,1,&vc[xv]);i(xtu+(19<xv),y=apc(y,':'))y)aCz("???"))
 A1(out,P(x==au0,x)dex(v0c(ai(1),xtA&&1<xn?par(join(aCz("\n "),ek(xR))):kst(xR)),x))
 S Q h="0123456789abcdef";S C u1(Cc)_(c09(c)?c-'0':cAf(c)?(c|32)-'a'+10:0)
 A1(hex,Xc(hex(enl(x)))XC(Ay=aC(2*xn);C*s=yC;m2(x,i(xn,*s++=h[xc>>4];*s++=h[xc&15])y))et1(x))

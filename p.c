@@ -5,21 +5,21 @@ S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(c09(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
 S D pd(Q*p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S Qs,s0;S I na;
-S A0(pZ,L l=0,h=0;Ax=aL0;W(1,Lv=pl(&s);Y(!v&&*s=='N',v=NL;s++)v<l?l=v:h<v?h=v:0;x=apv(x,&v);Y(*s-32||!num(s+1),BR)s++)
+S A0(pZ,L l=0,h=0;Ax=oL;W(1,Lv=pl(&s);Y(!v&&*s=='N',v=NL;s++)v<l?l=v:h<v?h=v:0;x=apv(x,&v);Y(*s-32||!num(s+1),BR)s++)
  ct[max(tZ(l),tZ(h))](x))
-S A0(pD,Ax=aD0;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),BR)s++)x)
-S A0(pC,Ax=aC0;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
+S A0(pD,Ax=oD;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),BR)s++)x)
+S A0(pC,Ax=oC;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
 S C ph()_(Cc=*s;c09(c)?c-'0':caf(c)?c+10-'a':16)
-S A0(p0x,Ax=aC0;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
+S A0(p0x,Ax=oC;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
 S A0(ps,Qp=s;Cc=*s;Y(c&128,W((c=*++s)>>6==2)s+=c==':')EY(c==':',W(cA9(c=*++s)||si("./:",c)<3))E(W(cA9(c),c=*++s))aCm(p,s))
-S A pS(Cc)_(Ax=aS0;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);x=y(apv(x,(I[]){syP(yC)}));P(*s-c,x)++s)0)
+S A pS(Cc)_(Ax=oS;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);x=y(apv(x,(I[]){syP(yC)}));P(*s-c,x)++s)0)
 S A lam(Ck,Ax,Ay,Az)_(AK(k,atnv(tA,5,A(x,y,au0,z,au0)))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];Y(ytA&&yn>2,Az=yx;Y((z==av0||ztu)&&asg(yy),xq(au0)))x) //if last is assignment, return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
-S A0(po,C nb=na;na=1;Q s1=s0,t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(aA0,']')));Ep(!ytS||yn>8,y))
+S A0(po,C nb=na;na=1;Q s1=s0,t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(oA,']')));Ep(!ytS||yn>8,y))
  Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
 S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
- P(c=='(',s++;P(*s==')',s++;aA0)x=N(pb(enl(MKL),')'));xn-2?x:las(x))
+ P(c=='(',s++;P(*s==')',s++;oA)x=N(pb(enl(MKL),')'));xn-2?x:las(x))
  P(c09(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!cA9(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;Qp=s;c=*p;
   W(1,p+=*p==32;p+=*p=='-';c=*p;Y(!cA9(c),BR)W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
@@ -37,4 +37,4 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,x?x(0):0);*
  Az=pe(0,v);P(!z,y(x?x(0):0))P(z==PLH,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
 S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',Ep(c==')',x,y)y=au0)xq(y);Y(*s-';'&&*s-10,BR)s++)Ep(*s-c,x)s++;x)
-A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=pb(a1(PRG),0);!y?eS(x,s-s0),0:lam(0,x,shy(y),aS0))
+A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=pb(a1(PRG),0);!y?eS(x,s-s0),0:lam(0,x,shy(y),oS))

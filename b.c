@@ -12,7 +12,7 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define r(a...) N(cr(a)) //right
 S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gi(z));Ez(i>15)fu[i]=An(fb);h(bs|i);x)
  P(ztS&&!Av(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
- P(zts||(ztA&&At(zx)==ts),Y(zts,hc(aA0))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
+ P(zts||(ztA&&At(zx)==ts),Y(zts,hc(oA))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
   Ik=gi(zts?z:zx);Li=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=An(fb);h(bm);h(i))h(Av(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(mR(fs),o);ec0())
@@ -31,7 +31,7 @@ S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==cu('!')&&ytL&&yn<4,i(yn,P(!in(yl,101),0
 S A3(f3,/*0*/P(xtv&&c3(vi('+'),xv,vi('*'))&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(Co=xo;Nn=xn;P(n==2?f2(xx,xy):n==3?f3(xx,xy,xz):0,wrp(val(x)))x=mut(x);i(xn,xa=cf(xa))AO(o,x))x)
-A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=aC0;fm=aC0;fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);y=cf(y);Q(*yA==PRG);
+A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);Co=0;ms(fu,-1,64);y=cf(y);Q(*yA==PRG);
  P(!cr(x,y),mr(xA[5]);x(y(0)))y=y(fb);Q(yr==1);j(16,Ii=fu[j];Y(i>=0&&yc==bg,yc=bd))mr(xA[5]);x)
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop

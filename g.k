@@ -24,7 +24,7 @@ d("@tzd  (@tz||@td)"  ;v)              /list|tbl
 d("@tmMA (@tmM||@tA)" ;v)              /container?
 d("@q(a) _q(@,a)"     ;v)              /append
 d("N@(r) N1(@,r)"     ;v)              /error pass-through
-d("a@0   mR(ce[t@])"  ;"ACLDSm")       /empty
+d("o@    mR(ce[t@])"  ;"ACLDS")        /empty
 d("E@(a...) E_(@,a)"  ;"cdilnoprstvz") /errors
 d("$@(a...) P(%t@,a)" ;T,K,(+|_:\1_t,"SZ")," "\"mt MT mMA ZD zd";"XY")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdknotv BHIL:ijkmnv I:f D:dv A:xyzu N:ijmn O:ACV Q:spq"; /c type+var
