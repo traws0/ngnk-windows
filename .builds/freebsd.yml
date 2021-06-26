@@ -1,8 +1,0 @@
-image: freebsd/12.x
-packages:
-  - gmake
-  - llvm10
-tasks:
-  - build: |
-      cd k
-      gmake c; CC=clang10 gmake -e
