@@ -5,9 +5,9 @@ S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);mc(yC,xC+j*w,q*w);
  mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,mc(yC+m*w,yC,m*w);m*=2)Y(n>m,mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
 A2(rsh,XF(flt(x,y,1))Ym(Xz(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y,z))x=enla(x);xR;am(x,ap1(y,x)))
- YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)Yt(rsh(x,enl(y)))P(!yn,rsh(x,enl(fir(y))))
- x=enla(Ny(gL(x)));Nn=xn;P(!n,fir(x(y)))P(n>4,ez2(x,y))
- i(n,Lv=xl;Y(v<0,Ed(n>2||n==2&&v-NL,x,y)P(n==1&&v==NL,x(y))
+ YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)Yt(rsh(x,enl(y)))
+ x=enla(Ny(gL(x)));Nn=xn;P(!n,fir(x(y)))P(n>4,ez2(x,y))P(n==1&&*xL==NL,x(y))P(!yn,rsh(x,enl(fir(y))))
+ i(n,Lv=xl;Y(v<0,Ed(n>2||n==2&&v-NL,x,y)
   P(n==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
  Nj=0;x(y(rs(y,yn,&j,xL,n))))
 A2(cut,XF(flt(x,y,0))Ym(K("{((!y)^x)#y}",x,y))
