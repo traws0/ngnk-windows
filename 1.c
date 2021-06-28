@@ -9,12 +9,12 @@ TD size_t(*F1)(OV*,V*,N);
 #define hf(f,T,e...) S N f(OV*RE a0,V*RE r0,Nn)_(O T*a=a0;T*r=r0;AL(a)AL(r)e)
 #define NG(T) hf(neg##T,T,Ni=0;W(i<n,I o=0;j(ZA/Z(T),o|=a[j]==(T)(1<<Z(T)*8-1))P(o,i)j(ZA/Z(T),r[j]=-a[j])a+=ZA/Z(T);r+=ZA/Z(T);i+=ZA/Z(T))n)
 #define F1(f,T,c...) hf(f##T,T,i(PD(n,a),r[i]=({c;}))n)
-NG(B)NG(H)NG(I)
-F1(neg,L,-a[i])F1(neg,D,-a[i])F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*cAZ(a[i]))
+NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])
+F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*cAZ(a[i]))
 
 #define R1(f,a...) A1(f,XmMA(eac1(f,x))a)
 SN A fx(Ax,F1 f)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);m2(x,f(xC,uC,un);u))
-R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZ&&!xtD,et1(x))
+R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
  Nn=xn;Au=xr>1?atn(xt,n):x;Nm=f[xt-tB](xC,uC,n);
  Y(m<n,Y(x-u,x=wdn(x,m,n,n-m);u=wdn(u,0,m,n))E(x=u=wdn(u,0,n,n))
