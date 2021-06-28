@@ -8,5 +8,5 @@ t:-`t[]
 {1(2#x)," ";e:.[1::;,"o/",2#x;""];t:-`t[];r:`x(,x;"");t+:`t[];OK&:ok:e~r
  1$[ok;"ok ",u[t],"\n";"FAIL\n expected:",k[e],"\n   actual:",k[r],"\n"]}'a^{x,".k"}'$skip;
 t+:`t[]
-1"ALL   ",u[t],$[#skip;" (skipped: ",`k[skip],")";""],"\n";
+1"      ",u[t],$[#skip;" (skipped: ",`k[skip],")";""],"\n";
 `exit@~OK
