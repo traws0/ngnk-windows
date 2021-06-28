@@ -20,7 +20,7 @@ A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
               Au=eac2(cv(','),mR(xy),mR(yy));x(y(u?aM(mR(xx),u):0)))
- x=enla(x);P(!xn,x(enla(y)))P(ytT&&!yn,y(x))Y(xtZ&&ytzZ,N(sup(&x,&y)))y=enla(y);Y(xt-yt,x=blw(x);y=blw(y))
+ x=enla(x);P(!xn,x(enla(y)))P(ytT&&!yn,y(x))y=enla(y);Y(xtZ&&ytzZ,N(sup(&x,&y)))Y(xt-yt,x=blw(x);y=blw(y))
  Nm=xn,n=yn;x=room(x,m+n);mc(xC+m*ZT[xt],yC,n*ZT[xt]);y(!ytA?0:yr-1?mRa(y):AN(0,y));x)
 A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,get(yy,i)))y(x))
  Q(xtT);P(xtZ&&ytz,N(sup(&x,&y));ytP?apv(x,&y):y(apv(x,yC)))

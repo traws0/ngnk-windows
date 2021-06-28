@@ -50,7 +50,7 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
  cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
  mc(cn+tc,cn+tC,(tS-tC+1)*Z(A));i(tn-to,cn[to+i]=au0)
-    ci[0][0]=ab(0);    ci[0][1]=ab(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
+    ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
  xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
 
 #define _m(x) ((I*)dat(x))[-7]

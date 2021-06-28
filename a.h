@@ -127,10 +127,10 @@ EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
  h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S) //aA aC aB aH aI aL aD aS
 #undef h
 #define h(T,tt) S A a##tt(T v)_(AT(t##tt,(I)v))
- h(C,c)h(B,b)h(H,h)h(I,i)h(I,s) //ac ab ah ai as
+ h(C,c)h(I,i)h(I,s) //ac ai as
 #undef h
 S A al(Lv)_(atnv(tl,1,&v))S A ad(Dv)_(atnv(td,1,&v))S I gi (Ax)_(Q(c3(tc,xt,ti)||xts);x)
-S L gl_(Ax)_(Xb((B)x)Xh((H)x)XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
+S L gl_(Ax)_(XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
