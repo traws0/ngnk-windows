@@ -1,3 +1,3 @@
 0:
-	@echo 'project euler tests' && ./e.k
+	@echo 'project euler tests' && ./a.k
 .PHONY: 0
