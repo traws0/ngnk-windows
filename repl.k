@@ -26,8 +26,8 @@ Types: ACBHILDSMmcbhildsopqruvw
 list atom
  `A        generic list   ()   ,"ab"   (0;`1;"2";{3};%)
  `C   `c   char    8bit   "a"   0x62   "b\0\"\n\r\t"
- `B   `b   byte    8bit   -128 127
- `H   `h   short  16bit   -32768 32787
+ `B        byte    8bit   -128 127
+ `H        short  16bit   -32768 32787
  `I   `i   int    32bit   -2147483648 2147483647
  `L   `l   long   64bit   0N 9223372036854775807
  `D   `d   double 64bit   -0w -0.0 0.0 0w 1.2e308 0n
