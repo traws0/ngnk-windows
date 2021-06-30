@@ -1,12 +1,14 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #define idiv(x,y) ({TY(x)a=(x),b=(y);!b?a:a<0?-1-(-1-a)/b:a/b;})
 
-#define hf(v,T,f) S T v(T x,T y)_(f)
-#define hd(v,f,g) hf(v##b,B,f)hf(v##h,H,f)hf(v##i,I,f)hf(v##l,L,f)hf(v##d,D,g)
+#define hf(v,T,R,f) S T v(T x,T y)_(f)
+#define hd(v,f,g) hf(v##b,B,B,f)hf(v##h,H,H,f)hf(v##i,I,I,f)hf(v##l,L,L,f)hf(v##d,D,D,g)
+#define hc(v,f,g) hf(v##b,B,B,f)hf(v##h,H,B,f)hf(v##i,I,B,f)hf(v##l,L,B,f)hf(v##d,D,B,g)
 #define h(v,f) hd(v,f,f)
 h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,idiv(x,y),x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),y-(L)(y/x)*x)
-h(mnm,min(x,y))h(mxm,max(x,y))hd(ltn,x<y,cD(x,y)<0)hd(gtn,x>y,cD(x,y)>0)hd(eql,x==y,*(L*)&x==*(L*)&y)
+h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
+#undef hc
 #undef hd
 #undef hf
 
@@ -46,7 +48,7 @@ S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
 S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[t-(k?tB:tb)][v-4][k];t=art(v,t);
- Y(!k,t+=tc-tC;P(_P(t),Iv;f(a,b,&v,1);x(y(AT(t,v)))))
+ Y(!k,t+=tc-tC;P(_P(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Au=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,uC,un);x==u?y(u):y==u?x(u):x(y(u)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
 S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
