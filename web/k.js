@@ -60,8 +60,8 @@ else{ //editor mode
   ev.onclick=_=>{wa(async _=>{ubc();location.hash=p1(ed.value)+'-';await file('golf.k');await file('repl.k')
    const s='\\l golf.k\n'+ed.value;fs['a.k']=t1(s._(-1)===N?s:s+N);out.value=''
    const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
-   const t=Date.now();let e;try{app.main(2,a)}catch(x){e=x}
-   tm.textContent=Date.now()-t;location.hash=p1(ed.value);if(e&&e.message!=='exit(0)')throw e})}
+   let e;try{app.main(2,a)}catch(x){e=x}
+   location.hash=p1(ed.value);if(e&&e.message!=='exit(0)')throw e})}
   cg.onclick=_=>{const s=ed.value,h='ngn-'+hex8(hsh(s)),g=ubc()
    out.value=`# [K (ngn/k)], ${g.n} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
     `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: https://ngn.bitbucket.io/k#${p1(s)}\n`
