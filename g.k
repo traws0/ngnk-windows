@@ -15,7 +15,7 @@ d("@x    @A[0]"       ;v)              /nested
 d("@y    @A[1]"       ;v)              /nested
 d("@z    @A[2]"       ;v)              /nested
 d("@t$   (@t==t$)"    ;v;T)            /of type?
-d("@t$   _$(@t)"      ;v;K)            /pseudotypes
+d("@t$   _t$(@t)"     ;v;K)            /pseudotypes
 d("@t%$  (@t%||@t$)"  ;v;1_t,"SMZ")    /atom|list of type?
 d("@tmt  (@tm||@tt)"  ;v)              /atom|dict
 d("@tMT  (@tM||@tT)"  ;v)              /list|tbl
