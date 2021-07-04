@@ -92,17 +92,6 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 #define dat(x) ((V*)((x)<<16>>16))
 #define rfc(x) ((I*)dat(x))[-3]
 #define _q(x,y) (x=apd(x,y))
-A die(Q);
-
-//getters                           setters
-S  C At(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
-S  C Av(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
-S  C Ak(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
-S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
-S  N An(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);       xL[-1]=n;x)
-S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
-#define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
-
 A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
  hex,jsr,jsw,kst,las,len,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,
@@ -112,7 +101,7 @@ A2 a2,add,aM,am,ap1,apn,apd,bin,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),
+A aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),
  eac1(A1,A),eac2(A,A,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),kv(A*),mf(I,N),room(A,N),
  wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();
@@ -122,6 +111,15 @@ L _N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(
 TD V(*Fc)(OV*RE,V*RE,N);EX Fc wf[];EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;
 EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define m2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
+
+//getters                           setters
+S  C At(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
+S  C Av(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
+S  C Ak(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
+S UH Ao(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
+S  N An(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);       xL[-1]=n;x)
+S A1(mR,Q(x);XP(x)Q(xr>=0);xr++;x)
+#define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
 #define h(T) S A a##T(Nn)_(atn(t##T,n))
  h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S) //aA aC aB aH aI aL aD aS
