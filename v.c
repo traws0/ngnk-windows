@@ -1,6 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #define h(T) S V i##T(V*p,Nn)_(T*a=p;AL(a)i(PD(n,a),a[i]=i))\
-             S V r##T(V*p,V*q)_(T*a=p,*b=q;AL(a)W(a<b,SWP(*a,*b);a++;b--))
+             S V r##T(V*p,V*q)_(T*a=p,*b=q;AL(a)W(a<b,SWP(*a,*b);a++;b--))\
+             S V w##T(L*RE p,Nn,V*RE r)_(T*a=r;AL(p)AL(a)i(n,j(p[i],*a++=i)))
 h(B)h(H)h(I)h(L)
 #define c_(T,R,p) S V c##T##R(OV*RE v,V*RE w,Nn)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]))
 #define cN(T,R,p) S V c##T##R(OV*RE v,V*RE w,Nn)_(O T*RE a=v;R*RE r=w;i(PD(n,p),r[i]=a[i]==N##T?N##R:a[i]))
@@ -12,10 +13,7 @@ A1(flp,XM(AT(tm,mut(x)))Xm(Ay=xy;Er(!ytA||!yn,x)i(yn,Az=ya;En(!ztT,x))Lm=An(yx);
 A1(til,Xz(Ln=gl(x);P(n<0,n-NL?add(az(n),til(az(-n))):ed0())Ez(n>1<<30)x=atn(tZ(n-1),n);CH(xt-tB,&iB,iH,iI,iL)(xC,n);x)
  XZ(K("{x((*a)#&#)'1_a:|*\\|x,1}",x))Xm(x(mR(xx)))Xo(val(x))Xs(til(N(enl(x))))XS(til(N(val(x))))Et(!xtA||xn,x)x)
 A1(whr,XA(K("{$[`A~@x;(,&#'*'x),,'/x@\\:!0|/#'x:o'x;,&x]}",x))Xm(Ay=kv(&x);idx(x,Nx(whr(y))))Et(xtM,x)
- x=N(gL(enla(x)));Ln=0;i(xn,Ed(xl<0,x)n+=xl)Ct=tZ(xn-1);Ez(t>tI,x)
- Au=atn(t,n);m2(x,n=0;Y( t==tB,i(xn,j(xl,uB[n++]=i)))
-                      EY(t==tH,i(xn,j(xl,uH[n++]=i)))
-                      E(       i(xn,j(xl,uI[n++]=i)))u))
+ x=N(gL(enla(x)));Ln=0;i(xn,Ed(xl<0,x)n+=xl)Ct=tZ(xn-1);Ez(t>tI,x)Au=atn(t,n);m2(x,n=0;CH(t-tB,&wB,wH,wI)(xL,xn,uC);u))
 A1(rev,XT(x=mut(x);CH(Zt[xt],&rB,rH,rI,rL,rL)(xC,xC+ZT[xt]*(xn-1));x)
  Xm(AT(tm,N(eac1(rev,AT(tA,mut(x))))))XM(Ay=kv(&x);aM(x,Nx(eac1(rev,y))))x)
 A1(typ,x(as(TS[xt])))
