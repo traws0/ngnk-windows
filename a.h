@@ -73,7 +73,7 @@ C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);
 //             1  2  3  4  5  6  7  8  9 10 11       15 16 17 18 19 20 21 22 23 24 25 26
 //            01 02 03 04 05 06 07 08 09 0a 0b       0e 0f 10 11 12 13 14 15 16 17 18 19
 //            () "" ,0 ,1 ,2 ,3 ,d ,` +!  ! "c"       2  3 .3  ` {} 1+ ++ +/ +: +  /  f
-enum      {t_,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,tb,_1,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
+enum      {t_,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,_0,_1,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
 #define TS "0""A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w""e" //their symbols
 #define TZ  0, 8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  0, 4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
