@@ -22,7 +22,7 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 \h  summary      \\         exit
 --------------------------------------------------------------------------------
 \0
-Types: ACBHILDSMmcbhildsopqruvw
+Types: ACBHILDSMmcildsopqruvw
 list atom
  `A        generic list   ()   ,"ab"   (0;`1;"2";{3};%)
  `C   `c   char    8bit   "a"   0x62   "b\0\"\n\r\t"
