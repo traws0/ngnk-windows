@@ -1,6 +1,7 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/177870/does-this-set-represent-a-natural-number/177885#177885
-f:~^{$[#(!#x)^o'x;0N;#x]}@`j?
+f:{{o'!x}[#x]~{x@<x:o'x}x}`j?
+
 \l 0.k
 t["[]"                                                                             ;1]
 t["[[]]"                                                                           ;1]
