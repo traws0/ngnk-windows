@@ -17,7 +17,7 @@ h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(xn,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
 L fAI(Ax,Iv)_(fI(xI,xn,v))
-S I r(Ax/*0*/)_(Xt(0)XA(P(!xn,2)Iv=r(xx);P(v<0,v)i(xn,P(v-r(xa),-1))v+1)XMT(1)Xm(0)-1)//rank
+S I r(Ax/*0*/)_(XA(P(!xn,2)Ik=r(xx);P(k<0,k)i(xn,P(k-r(xa),-1))k+1)xtm||xtM?r(xy):xtT)//rank
 A2(fnd,P(xtZ&&ytzZ||xtC&&ytcC||xtS&&ytsS||xtD&&ytdD,TY(fB)*f=CH(Zt[xt],&fB,fH,fI,fL);Yt(x(az(f(xC,xn,gl(y)))))
         Au=aL(yn);x(m2(y,CH(Zt[yt],&ffB,ffH,ffI,ffL)(xC,xn,f,yC,yn,uL);u)))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
