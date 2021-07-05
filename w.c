@@ -9,9 +9,9 @@ S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
 A2(spl,Q(xtcC);Et(!ytC,x,y)C*s=xtc?(V*)&x:xC;Lm=xN;El(!m,x,y)Au=oA;C*p=yC,*q=p,*t=p+yn,*r=t+1-xN;
  W(q<r,Y(mC(s,q,m),q++)E(uq(aCm(p,q));p=q+=m))Y(!xtc||gi(x)-10||p<t,uq(aCm(p,t)))x(y(u)))
 NO L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
-A joc(Cc,   Ax)_(Ln=jn(1,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,*p++=c        )Az=xa;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn))x(u))
-A joC(Qs,Nm,Ax)_(Ln=jn(m,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,mc(p,s,m);p+=m)Az=xa;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn))x(u))
-A2(join,Xc(joc(gi(x),y))XC(x(joC(xC,xn,y)))et2(x,y))
+A jc(Cc,   Ax)_(Ln=jn(1,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,*p++=c        )Az=xa;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn))x(u))
+A jC(Qs,Nm,Ax)_(Ln=jn(m,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,mc(p,s,m);p+=m)Az=xa;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn))x(u))
+A2(join,Xc(jc(gi(x),y))XC(x(jC(xC,xn,y)))et2(x,y))
 S L cfm(OA*a/*0*/,In)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,N l=xN;P(m>=0&&m-l,-2)m=l))m)
 S AX(eacm,Az=oS,b[8];i(n,Ay=a[i];Y(ytm,z=cat(z,mR(yx))))z=unq(z);
  i(n,Ay=b[i]=a[i];Y(ytm,A u=kv(&y);uq(id_(x,u));b[i]=ap1(u,fil(ai(_n(y)),fnd(y,zR)))))Au=eac(x,b,n);u?am(z,u):z(u))
