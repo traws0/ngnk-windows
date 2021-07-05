@@ -11,16 +11,16 @@ S A rnd(Lm,Ax)_(Xz(rL(m,gl(x)))Xc(gC(add(gi(x)=='A'?x:ac('a'),Nx(rL(m,26)))))Xd(
  XMT(idx(x,Nx(rL(m,xN))))et1(x))
 
 #define h(T) NO L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
-             NO L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xC,n,v);P(i<0,*p=apv(x,&v);n)i)\
-             NO V ff##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}
+             NO V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
+             NO L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xC,n,v);P(i<0,*p=apv(x,&v);n)i)
 h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(xn,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
 L fAI(Ax,Iv)_(fI(xI,xn,v))
-S I r(Ax/*0*/)_(XA(P(!xn,2)Ik=r(xx);P(k<0,k)i(xn,P(k-r(xa),-1))k+1)xtm||xtM?r(xy):xtT)//rank
+I r(Ax/*0*/)_(XA(xn?r(xx)+1:2)XmMA(r(xy))xtT)//rank(assuming unirank)
 A2(fnd,P(xtZ&&ytzZ||xtC&&ytcC||xtS&&ytsS||xtD&&ytdD,TY(fB)*f=CH(Zt[xt],&fB,fH,fI,fL);Yt(x(az(f(xC,xn,gl(y)))))
-        Au=aL(yn);x(m2(y,CH(Zt[yt],&ffB,ffH,ffI,ffL)(xC,xn,f,yC,yn,uL);u)))
+        Au=aL(yn);x(m2(y,CH(Zt[yt],&FB,FH,FI,FL)(xC,xn,f,yC,yn,uL);u)))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
- Ik=r(x),l=r(y);P(k<0||l<0,er2(x,y))P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(cv('?'),A(x,y),2))er2(x,y))
+ Ik=r(x),l=r(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(cv('?'),A(x,y),2))er2(x,y))
 
 A2(que,Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes")Sf(x,y,s,des,jsr,unh,aes1))fnd(x,y))
