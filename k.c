@@ -60,11 +60,11 @@ S A set(Ax,Li,Ay)_(Q(xr==1);XA(Az=xa;xa=z(y);c3(tc,yt,ts)?sqz(x):x)P(knd(x)-knd(
  Y(xtZ,N(sup(&x,&y)))C w=Zt[xt];w==0?xb=gi(y):w==1?xh=gi(y):w==2?xi=gi(y):(xl=gl(y));x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&yx,xI[i+1]);Au=yy;Ed(!utA,x)
  yy=j==un?uq(aa0()):mut(u);Q(rfc(yy)==1);*p=(A*)dat(yy)+j;1)
-S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&At(yx)==tS&&At(yy)==tA);Lj=fpI(&yx,*xI);
- Y(j==An(yy),_q(yy,xn>1?aa0():au0))A*p=(A*)dat(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
+S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj=fpI(&yx,*xI);
+ Y(j==_n(yy),_q(yy,xn>1?aa0():au0))A*p=(A*)dat(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;mc(b+1,a+1,(n-1)*8);*p=mR(N(f(b,n))))
 AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
- Xm(x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rsh(az(An(xx)-An(xy)),id_(z,xy)));
+ Xm(x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rsh(az(_n(xx)-_n(xy)),id_(z,xy)));
   A b[8];*b=xy;b[1]=fnd(mR(xx),y);mc(b+2,a+2,(n-2)*8);xy=am1(b,n);P(!xy,xy=au0;x(0))x)
  P(y==au0,A b[8];mc(b,a,n*8);b[1]=til(al(xN));am1(b,n))
  Yt(x=mut(x);y=gL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))
