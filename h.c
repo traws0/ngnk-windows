@@ -27,4 +27,4 @@ A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(
  P(!xtA&&(!ytt||xt-tT(yt)),cat(x,enl(y)))P(!xn,enl(x(y)))Lv=xtA?(L)y:gl(y);apv(x,&v))
 A apv(Ax,OV*v )_(Q(xtT);Nn=xn;x=room(x,n+1);mc(xC+n*ZT[xt],v,ZT[xt]);x)
 A apc(Ax,Cc   )_(Q(xtC);Nn=xn;x=room(x,n+1);xC[n]=c;x)
-A cts(Ax,Qs,Nn)_(Q(xtC);Nm=xn;x=room(x,m+n);mc(xC+m,s,n);x)
+A cts(Ax,Qs,Nm)_(Q(xtC);Nn=xn;x=room(x,n+m);mc(xC+n,s,m);x)
