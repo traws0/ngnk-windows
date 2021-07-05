@@ -66,7 +66,7 @@ special:  var:y     set    a:1;a -> 1
           $[x;y;..] cond   $[0;`a;"\0";`b;`;`c;();`d;`e] -> `e
 
 ::  self      ::12 -> 12
- :  right     1 :2 -> 2
+ :  right     1 :2 -> 2   "abc":'"d" -> "ddd"
  +x flip      +("ab";"cd") -> ("ac";"bd")
 N+N add       1 2+3 -> 4 5
  -N negate    - 1 2 -> -1 -2
