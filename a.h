@@ -63,14 +63,14 @@ S I cAZ(Cc)_(c3('A',c,'Z'))S I cAF(Cc)_(c3('A',c,'F'))S I cAf(Cc)_(c3('a',c|32,'
 #define mc(a...) __builtin_memcpy(a)
 #define mC(a...) __builtin_memcmp(a)
 #define Mc(a...) __builtin_memchr(a)
-#define MM(a...) __builtin_memmem(a)
 #define sn(a...) __builtin_strlen(a)
 #define sc(a...) __builtin_strchr(a)
 #define ss(a...) __builtin_strstr(a)
 #define sC(a...) __builtin_strcmp(a)
+#define MM(a...)  memmem(a)
 #define sc0(a...) strchrnul(a)
 C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);I memcmp(OV*,OV*,N),strcmp(Q,Q),exit(I);N strlen(Q);
-V*memCPY(V*,OV*,N),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(Q,N,Q,N),*memmove(V*,OV*,N),*memset(V*,I,N);
+V*memCPY(V*,OV*,N),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N);
 
 //             1  2  3  4  5  6  7  8  9 10 11       15 16 17 18 19 20 21 22 23 24 25 26
 //            01 02 03 04 05 06 07 08 09 0a 0b       0e 0f 10 11 12 13 14 15 16 17 18 19
