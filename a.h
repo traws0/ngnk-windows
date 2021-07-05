@@ -96,7 +96,7 @@ A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
  hex,js0,js1,kst,las,len,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
-A2 a2,add,aM,am,ap1,apn,apd,bin,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,join,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
+A2 a2,add,aM,am,ap1,apn,apd,bin,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  spl,sub,v0c,v1c,xpt;
 A3 a3,try;
 AA amd,am1,dmd,dm1;
