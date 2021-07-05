@@ -134,17 +134,19 @@ x.y apply(n)  {x*y+1}. 2 3 -> 8   (`a`b`c;`d`e`f). 1 0 -> `d
 --------------------------------------------------------------------------------
 \`
 Special symbols:
-   `@x serialize    ` 7 8 9 -> 0x020300000000000000070809
-   `?C deserialize  `?0x020300000000000000070809 -> 7 8 9
-  `j?C parse json   `j?"{\"a\":1,\"b\":[true,\"c\"]}" -> `a`b!(1.0;(1;,"c"))
-  `k@x pretty-print `k("ab";2 3) -> "(\"ab\";2 3)"
-  `p@C parse k
-`hex@C hexadecimal  `hex"ab" -> "6162"
-`sin@N trigonometry `sin 12.34 -> 0.22444212919135995
-  `x@x fork-exec    `x(("/bin/wc";"-l");"a\nbc\nd\n") -> "3\n"
-  `t[] current time (milliseconds)
-`err@C throw error
- `md5@C `sha1@C `sha2@C `sha3@C             hash
+    `@x serialize    ` 7 8 9 -> 0x020300000000000000070809
+    `?C deserialize  `?0x020300000000000000070809 -> 7 8 9
+   `j?C parse json   `j?"{\"a\":1,\"b\":[true,\"c\"]}" -> `a`b!(1.0;(1;,"c"))
+   `k@x pretty-print `k("ab";2 3) -> "(\"ab\";2 3)"
+   `p@C parse k
+ `hex@C hexadecimal  `hex"ab" -> "6162"
+ `sin@N trigonometry `sin 12.34 -> 0.22444212919135995
+   `x@x fork-exec    `x(("/bin/wc";"-l");"a\nbc\nd\n") -> "3\n"
+   `t[] current time (milliseconds)
+`argv[] list of cmd line args
+ `env[] dict of env variables
+ `err@C throw error
+ `md5@C `sha1@C `sha2@C `sha3@C               hashes
  `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)
 --------------------------------------------------------------------------------
 \'
