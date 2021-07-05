@@ -41,7 +41,7 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,MC(s,"0n"))Y(x>>63
 A1(str0,Q(xtC);Nn=xn;x=AN(n,room(x,n+1));xC[n]=0;x)
 A1(str,Xzd(I d=xtd;Au=aC(24);AN((d?sd:sl)(uC,gl(x))-uC,u))Xs(Lv=gi(x);aCz(syp(&v)))Xc(enl(x))XF(kst(x))K("$:'",x))
 
-S I cin(Cc,Qs)_(s[si(s,c)])S A pre(Cc,Ax)_(cat(ac(c),x))S A par(Ax)_(apc(pre('(',x),')'))
+S I cin(Cc,Qs)_(s[si(s,c)])S A pre(Cc,Ax)_(cat(ac(c),x))A sur(Cc,Ax,Cd)_(apc(pre(c,x),d))S A1(par,sur('(',x,')'))
 S A raz(Ax)_(rdc(cv(','),A(x),1))S I esc(Cc)_(i(6,P(c=="\0\t\n\r\"\\"[i],i))-1)S A ek(Ax)_(eac1(kst,x))
 S A1(kss,Nn=xn+2;Iv=1;i(xn,I e=esc(xc)>=0;n+=e;v&=e||c3(32,xc,126))P(!v,cat(aCz("0x"),hex(x)))
  Ay=aC(n);C*s=yC;*s++='"';i(xn,Ij=esc(xc);Y(j<0,*s++=xc)E(*s++='\\';*s++="0tnr\"\\"[j]))*s++='"';x(y))
