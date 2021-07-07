@@ -58,6 +58,5 @@ A1(asc,
   ascA(v,a+m,n-m,b);ascA(v,a,m,a+n-m);mrg(v,a+n-m,a+n,b,b+n-m,a);x(z(y)))
  XS(asc(N(eac1(str,x))))XD(asc(blw(x)))Xm(Ay=kv(&x);idx(x,N(asc(y))))Et(!(xts||xti),x)opn(x))
 A1(dsc,Xz(cls(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)x=rev(asc(rev(x)));sub(ai(xN-1),x))
-A1(grp,Xz(K("{(2#x)#1,&x}",x))Xt(et1(x))Xm(Au=grp(kv(&x));Q(ur==1);uy=idx(x,uy);u)
- K("{x[*'g]!g@:<g:(&(~x~':x i),!0)_i:<x}",x))
+A1(grp,Xz(K("{(2#x)#1,&x}",x))Xt(et1(x))Xm(Au=grp(kv(&x));uy=idx(x,uy);u)K("{x[*'g]!g@:<g:(&(~x~':x i),!0)_i:<x}",x))
 A2(bin,Xmt(er2(x,y))YMT(K("{x''y}",x,y))Li=-1,j=xn;W(i+1<j,Lm=(i+j)/2;Az=get(x,m);cA(y,z)<0?j=m:(i=m);z(0))x(y(az(i))))
