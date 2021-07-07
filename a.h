@@ -58,17 +58,17 @@ S L absL(Lv)_(v<0?-v:v)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I in(Li,Ln)_(0<=i&&i<n)
 S I c09(Cc)_(c3('0',c,'9'))S I caf(Cc)_(c3('a',c,'f'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c09(c))
 S I cAZ(Cc)_(c3('A',c,'Z'))S I cAF(Cc)_(c3('A',c,'F'))S I cAf(Cc)_(c3('a',c|32,'f'))
 
-#define ms(a...) __builtin_memset(a)
-#define mv(a...) __builtin_memmove(a)
-#define mc(a...) __builtin_memcpy(a)
-#define mC(a...) __builtin_memcmp(a)
-#define Mc(a...) __builtin_memchr(a)
-#define sn(a...) __builtin_strlen(a)
-#define sc(a...) __builtin_strchr(a)
-#define ss(a...) __builtin_strstr(a)
-#define sC(a...) __builtin_strcmp(a)
+#define Ms(a...) __builtin_memset(a)
+#define Mm(a...) __builtin_memmove(a)
+#define Mc(a...) __builtin_memcpy(a)
+#define MQ(a...) __builtin_memcmp(a)
+#define MC(a...) __builtin_memchr(a)
+#define Sn(a...) __builtin_strlen(a)
+#define SC(a...) __builtin_strchr(a)
+#define SS(a...) __builtin_strstr(a)
+#define SQ(a...) __builtin_strcmp(a)
 #define MM(a...)  memmem(a)
-#define sc0(a...) strchrnul(a)
+#define SC0(a...) strchrnul(a)
 C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);I memcmp(OV*,OV*,N),strcmp(Q,Q),exit(I);N strlen(Q);
 V*memCPY(V*,OV*,N),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N);
 
@@ -163,6 +163,6 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
-S I os(Qs)_(write(2,s,sn(s)))
+S I os(Qs)_(write(2,s,Sn(s)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
-S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,10-sn(s)));oh(n);write(2,"\n",1);n)
+S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,10-Sn(s)));oh(n);write(2,"\n",1);n)

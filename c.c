@@ -14,7 +14,7 @@ S V m5h(Ni,U3 f,U s,Nm,U*b,O U*d){b[4-i&3]=b[5-i&3]+R(b[4-i&3]+f(b[5-i&3],b[6-i&
 #define h(q,f,s0,s1,s2,s3,m)\
  W(i<16*(q+1),m5h(i,f,s0,m,b,d);i++;m5h(i,f,s1,m,b,d);i++;m5h(i,f,s2,m,b,d);i++;m5h(i,f,s3,m,b,d);i++)
 S V m5u(O U*d,Nn,U*a){
- i(n,U i=0,b[4];mc(b,a,16);
+ i(n,U i=0,b[4];Mc(b,a,16);
   h(0,chx,7,12,17,22,i)h(1,chz,5,9,14,20,5*i+1&15)h(2,xor,4,11,16,23,3*i+5&15)h(3,mf3,6,10,15,21,7*i&15)
   i(4,a[i]+=b[i])d+=16)}
 #undef h
@@ -24,7 +24,7 @@ S V s1u(O U*d,Nn,U*a){
        v=u;u=z;z=R(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
 S A md(Ax/*1*/,OV*iv,N nv,V(*f)(O U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
- I a[nv];Cc[128]={};mc(a,iv,Z a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;x2(f(xI,k,a);mc(c,xC+n-r,r));c[r]=128;
+ I a[nv];Cc[128]={};Mc(a,iv,Z a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;x2(f(xI,k,a);Mc(c,xC+n-r,r));c[r]=128;
  *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);Y(b,bn(a,a,nv))aCn((V*)a,Z a))
 A1(md5,Y(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))
 
@@ -45,29 +45,29 @@ A1(sha256,md(x,(U[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b
 #undef h
 S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139,y+1,x+y+z+129, //keccak sponge
   x+z+9,138,136,y+z+9,y+10,y+z+139,x+139,x+z+137,x+z+3,x+z+2,x+128,z+10,x+y+10,x+y+z+129,x+z+128,y+1,x+y+z+8};
- i(24,UL s[7],b[25];ms(s,0,Z s);
+ i(24,UL s[7],b[25];Ms(s,0,Z s);
   i(5,F5(s[1+i]^=*a++))*s=s[5];s[6]=s[1];F5(s[i]^=R(s[i+2],1))a-=25;i(5,F5(*a++^=s[i]))a-=25;   //theta
   i(25,b[i]=R(a[i],C(0,1,62,28,27,36,44,6,55,20,3,10,43,25,39,41,45,15,21,8,18,2,61,56,14)[i])) //rho
   i(25,a[i]=b[C(0,6,12,18,24,3,9,10,16,22,1,7,13,19,20,4,5,11,17,23,2,8,14,15,21)[i]])          //pi
   i(5,UL*r=a+5*i,x=*r,y=r[1];F5(UL z=r[4-i];r[4-i]^=~x&y;y=x;x=z))                              //chi
   *a^=t[i])}                                                                                    //iota
-S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];ms(a,0,Z a);
+S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,Z a);
  W(n>0,b=min(n,r);i(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,ks((V*)a);b=0))
- a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);mc(z,a,b);z+=b;d-=b;Y(d>0,ks((V*)a)))}
+ a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);Mc(z,a,b);z+=b;d-=b;Y(d>0,ks((V*)a)))}
 A1(sha3_256,Et(!xtC,x)Au=aC(32);x2(kec(136,xC,xn,6,uC,un);u))
 
 S C s0[256],s1[256];S C t0(Cc)_(c<<1^27*(c>>7))S C t1(Cc,Cd)_(Cv=c*(d&1);i(4,c=t0(c);v^=(d>>i+1&1)*c)v)
-S V aei(){Cc=1,d=1;ms(s0,99,256);i(255,c^=t0(c);i(3,d^=d<<(1<<i))d^=(d>>7)*9;i(5,s0[c]^=R(d,i)))i(256,s1[s0[i]]=i)}
+S V aei(){Cc=1,d=1;Ms(s0,99,256);i(255,c^=t0(c);i(3,d^=d<<(1<<i))d^=(d>>7)*9;i(5,s0[c]^=R(d,i)))i(256,s1[s0[i]]=i)}
 S V x16(C*r,Qp){i(16,r[i]^=p[i])}S V i16(C*r,Qp,Qq){i(16,r[i]=p[q[i]])}
-S V kxp(V*w0,OV*k,U l){U*w=w0,t;mc(w,k,4*l);C*p=(V*)&t;
+S V kxp(V*w0,OV*k,U l){U*w=w0,t;Mc(w,k,4*l);C*p=(V*)&t;
  i(3*l+28,t=w[i+l-1];Y(i%l==0,t=R(t,24);j(4,p[j]=s0[p[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/l+1])
                      EY(l==8&&i%l==4,i(4,p[i]=s0[p[i]]))w[i+l]=w[i]^t)}
 S V mx0(C*a){i(4,Ct[4];i(4,t[i]=a[i]^a[i+1&3])Cc=*t^t[2];i(4,a[i]^=t0(t[i])^c)a+=4)}
-S V mx1(C*a){i(4,Ct[4]={};i(4,j(4,t[i]^=t1(a[j],C(14,11,13,9)[j-i&3])))mc(a,t,4);a+=4)}
+S V mx1(C*a){i(4,Ct[4]={};i(4,j(4,t[i]^=t1(a[j],C(14,11,13,9)[j-i&3])))Mc(a,t,4);a+=4)}
 S V ae0(V*a,OV*w,U r){Cb[16];
  i(r,x16(a,w+16*i);i16(b,s0,a);i16(a,b,C(0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11));i<r-1?mx0(a):x16(a,w+16*r))}
 S V ae1(V*a,OV*w,U r){Cb[16];x16(a,w+16*r);
- i(r,i16(b,a,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));mc(a,b,16);i16(a,s1,a);x16(a,w+16*(r-1-i));Y(i<r-1,mx1(a)))}
+ i(r,i16(b,a,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));Mc(a,b,16);i16(a,s1,a);x16(a,w+16*(r-1-i));Y(i<r-1,mx1(a)))}
 S V ecb(V*a,OV*k,U l,U d){C w[l+7<<4];kxp(w,k,l);(d?ae1:ae0)(a,w,l+6);}
 S A aes(Ax,U d)_(Y(!*s0,aei())Ed(!xtA||xn-2,x)
  Ay=kv(&x);Ed(!xtC||!ytC||xn-16||(yn-16&&yn-24&&yn-32))x=mut(x);ecb(xC,yC,yn/4,d);y(x))

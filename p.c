@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-S I num(Qs)_(c09(s[*s=='-']))I si(Qs,Iv)_(sc0(s,v)-s)S D p10(In)_(Dd=1;i(n,d*=10)d)
+S I num(Qs)_(c09(s[*s=='-']))I si(Qs,Iv)_(SC0(s,v)-s)S D p10(In)_(Dd=1;i(n,d*=10)d)
 L pu(Q*p)_(Qs=*p;Lv=0;Cc=*s;W(c09(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(Q*p)_(Im=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(c09(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
@@ -27,7 +27,7 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='
  P(c>127,Qp=s;x=pS('.');*v=1;AO(p-s0,p1(x)))
  Ii=si(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,PLH)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
 S A1(mon,P(xtv&&x-av0,au(xv))P(xtA&&(xn==2&&xx==aw(0)||xn==3&&xx==COM),x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)
- P(xts,Lv=gi(x);Qs=syp(&v);Nn;P((*s&128)&&s[(n=sn(s))-1]-':',Cb[8];mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b)))x)x)
+ P(xts,Lv=gi(x);Qs=syp(&v);Nn;P((*s&128)&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b)))x)x)
 S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si(vc+26,c);P(i>3,x)s++;
  Y(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));Y(xn==2,Y(xy==PLH,xy=au0)E(xx=mon(xx)))*v=0)E(I u=*s==':';s+=u;x=a2(aw(i+3*u),x);*v=1))x)
 S V pw()_(Cc=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
