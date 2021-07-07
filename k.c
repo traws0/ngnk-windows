@@ -2,7 +2,7 @@
 A1(sam,x) //                                                                                                                   PLH  PRG
 OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5','\'','/','\\','[',  0,  0};
 OV*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out,   0,  0,   0,  0,  0,  0,
-         dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,xpt,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
+         dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,XmMA(eac1(mkn,x))Ay=mR(cn[xt]);xtt?x(y):rsh(len(x),y)) //                                              MKL   '   /    \  ':   /:  \:
 S A emp(Ct)_(Ax=ce[t];x?xR:oA)
 A2(id_,/*00*/x==cv(',')?emp(yt):xtv&&xv<11?mR(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
