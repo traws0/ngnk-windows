@@ -21,6 +21,7 @@ d("@tMT  (@tM||@tT)"  ;v)              /list|tbl
 d("@tZD  (@tZ||@tD)"  ;v)              /list|tbl
 d("@tzd  (@tz||@td)"  ;v)              /list|tbl
 d("@tmMA (@tmM||@tA)" ;v)              /container?
+d("@2(a...) _2(@,a)"  ;v)              /2phase free
 d("@q(a) _q(@,a)"     ;v)              /append
 d("N@(r) N1(@,r)"     ;v)              /error pass-through
 d("o@    mR(ce[t@])"  ;"ACLDS")        /empty

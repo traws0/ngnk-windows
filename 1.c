@@ -13,7 +13,7 @@ NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])
 F1(sqr,D,__builtin_sqrt(a[i]))F1(sin,D,sind(a[i]))F1(flr,C,a[i]+32*cAZ(a[i]))
 
 #define R1(f,a...) A1(f,XmMA(eac1(f,x))a)
-SN A fx(Ax,F1 f)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);m2(x,f(xC,uC,un);u))
+SN A fx(Ax,F1 f)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);x2(f(xC,uC,un);u))
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
  Nn=xn;Au=xr>1?atn(xt,n):x;Nm=f[xt-tB](xC,uC,n);
@@ -25,4 +25,4 @@ R1(sqr,fx(N(gD(x)),sqrD))
 R1(sin,fx(N(gD(x)),sinD))
 R1(nul,XF(x(ai(x==au0)))eql(x,mR(cn[xt])))
 R1(flr,XC(fx(x,flrC))Xc(fir(flr(enl(x))))XzZ(x)XsS(K("`$_$:",x))
- x=N(gD(x));Au=atn(xt+tl-td,xn);m2(x,i(un,ul=xd<0?(L)xd-(xd<(L)xd):(L)xd)u))
+ x=N(gD(x));Au=atn(xt+tl-td,xn);x2(i(un,ul=xd<0?(L)xd-(xd<(L)xd):(L)xd)u))

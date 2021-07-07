@@ -37,7 +37,7 @@ S AX(cvi,P(n>2,ern(n,a))Ay,z,u;Y(n==1,y=0;z=*a)E(y=*a;z=a[1])
 AX(rdc,Y(n==1,XzZ(dec(xR,*a))Xc(jc(gi(x),*a))XC(jC(xC,xn,*a)))P(xk<2,cvg(x,a,n))
  Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):*a)P(m<0,Y(y,y(0))eln(n,a))P(!m&&!y,Au=id_(x,z);mrn(n,a);u)
  P(n==1&&xtv&&xv<8&&(!y||ytt)&&c3(tC,zt,tD),Y(ztC,z=gH(z))Y(y&&(ytd||ztD),y=gD(y);z=gD(z))Ct=zt;
-  Lv=gl(y?y:get(z,0));m2(z,((int(*)(V*,V*,N))arr[t-tB][xv])(&v,zC+ZT[t]*!y,m-!y));t==tD?atnv(td,1,&v):az(v))
+  Lv=gl(y?y:get(z,0));z2(((int(*)(V*,V*,N))arr[t-tB][xv])(&v,zC+ZT[t]*!y,m-!y));t==tD?atnv(td,1,&v):az(v))
  Li=!y;Y(i,y=get(z,0))A b[8];W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);Y(!y,BR)i++)mrn(n,a);y)
 AX(scn,Y(n==1,XzZ(enc(xR,*a))Xc(splc(gi(x),*a))XC(splC(xC,xn,*a)))P(xk<2,cvi(x,a,n))
  P(n==1,Az=a[n-1];P(ztt||!zn,z)P(ztm,Ay=kv(&z);y=Nz(scn(x,&y,1));am(z,y))P(x==cv(','),scn(x,A(oA,z),2))
