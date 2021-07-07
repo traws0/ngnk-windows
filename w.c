@@ -8,7 +8,7 @@ A splcC(Cc    ,C*p,Ln)_(      Ax=oA;C*q;W((q=Mc(p,c,n  )),xq(aCm(p,q));n-=q-p+1;
 A splCC(C*s,Lm,C*p,Ln)_(El(!m)Ax=oA;C*q=p,*t=p+n,*r=t+1-m;W(q<r,Y(mC(s,q,m),q++)E(xq(aCm(p,q));p=q+=m))xq(aCm(p,t)))
 A splc(Cc    ,Ax)_(XC(x(splcC(c,  xC,xn)))et1(x))
 A splC(C*s,Lm,Ax)_(XC(x(splCC(s,m,xC,xn)))et1(x))
-NO L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
+NI L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
 A jc(Cc,   Ax)_(Ln=jn(1,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,*p++=c        )Az=xa;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn))x(u))
 A jC(Qs,Nm,Ax)_(Ln=jn(m,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,mc(p,s,m);p+=m)Az=xa;Y(ztc,*p++=gi(z))E(mc(p,zC,zn);p+=zn))x(u))
 S L cfm(OA*a/*0*/,In)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,N l=xN;P(m>=0&&m-l,-2)m=l))m)

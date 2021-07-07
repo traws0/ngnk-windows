@@ -19,8 +19,8 @@
 #define ZZ(x) (Z(x)/Z((x)[0]))
 #define ZP 4096ll //page
 #define ZA 32ll   //hdr
-#define NO __attribute__((noinline))
-#define SN S NO
+#define NI __attribute__((noinline))
+#define SN S NI
 #define TD typedef
 #define TY __typeof__
 #define ST struct

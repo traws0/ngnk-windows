@@ -10,9 +10,9 @@ S A rD(Ln)_(A x=AT(tD,rL(n,0));i(n,xl=xl&-1ull>>12|1023ll<<52)x)
 S A rnd(Lm,Ax)_(Xz(rL(m,gl(x)))Xc(gC(add(gi(x)=='A'?x:ac('a'),Nx(rL(m,26)))))Xd(mul(x,add(ad(-1),Nx(rD(m)))))
  XMT(idx(x,Nx(rL(m,xN))))et1(x))
 
-#define h(T) NO L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
-             NO V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
-             NO L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xC,n,v);P(i<0,*p=apv(x,&v);n)i)
+#define h(T) NI L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
+             NI V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
+             NI L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xC,n,v);P(i<0,*p=apv(x,&v);n)i)
 h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(xn,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
