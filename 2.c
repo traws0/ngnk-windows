@@ -53,6 +53,7 @@ S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
 S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
 A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xzd(vv(x,y,vi('!')))dct(x,y))
+A2(dex,mr(x);y)A2(sub,add(x,Nx(neg(y))))A2(gtn,ltn(y,x))
 #define h(c,s) A2(s,vv(x,y,vi(c)))
-A2(dex,mr(x);y)A2(sub,add(x,Nx(neg(y))))A2(gtn,ltn(y,x))h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)
+h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)
 #undef h
