@@ -93,12 +93,11 @@ OV*ara[][11]={//amend
  {dexDa,addDa,subDa,mulDa,dvdDa,modDa,mnmDa,mxmDa,ltnDa,gtnDa,eqlDa,},
 };
 
-S C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
 S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];t=art(v,t);
- Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
+ Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];
+ Y(t>tD,t+=tD-td)Y(v>7&&t==tD,t=tI)Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
 S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)
 S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
