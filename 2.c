@@ -13,9 +13,9 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x
 #undef hf
 
 #define hF(f,T,R,e...) SN I f(O T*RE a,O T*RE b,R*RE r,Nn)_(e)
-#define h0(v,t,T,R) SN I v##T##a(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
-                                hF(v##T##s,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)\
-                                hF(v##T##p,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
+#define h0(v,t,T,R) SN I v##a##T(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
+                                hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)\
+                                hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
 #define ht(v,t,T,R) h0(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)\
                                 hF(v##T##T,T,R,AL(a)AL(b)AL(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)\
                                 hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
@@ -56,7 +56,7 @@ S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-lis
   {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD,},},
 };
 
-#define h(v,T,R,Q) SN I v##T##r(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
+#define h(v,T,R,Q) SN I v##r##T(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
 h(dex,B,L,l)h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(dvd,B,L,l)h(mod,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)h(ltn,B,L,l)h(gtn,B,L,l)h(eql,B,L,l)
 h(dex,H,L,l)h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(dvd,H,L,l)h(mod,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)h(ltn,H,L,l)h(gtn,H,L,l)h(eql,H,L,l)
 h(dex,I,L,l)h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(dvd,I,L,l)h(mod,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)h(ltn,I,L,l)h(gtn,I,L,l)h(eql,I,L,l)
@@ -65,32 +65,32 @@ h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(dvd,D,D,d)h(mod,D,D,d)h(mnm,D,
 #undef h
 
 OV*arr[][11]={//reduce
- {dexBr,addBr,subBr,mulBr,dvdBr,modBr,mnmBr,mxmBr,ltnBr,gtnBr,eqlBr,},
- {dexHr,addHr,subHr,mulHr,dvdHr,modHr,mnmHr,mxmHr,ltnHr,gtnHr,eqlHr,},
- {dexIr,addIr,subIr,mulIr,dvdIr,modIr,mnmIr,mxmIr,ltnIr,gtnIr,eqlIr,},
- {dexLr,addLr,subLr,mulLr,dvdLr,modLr,mnmLr,mxmLr,ltnLr,gtnLr,eqlLr,},
- {dexDr,addDr,subDr,mulDr,dvdDr,modDr,mnmDr,mxmDr,ltnDr,gtnDr,eqlDr,},
+ {dexrB,addrB,subrB,mulrB,dvdrB,modrB,mnmrB,mxmrB,ltnrB,gtnrB,eqlrB,},
+ {dexrH,addrH,subrH,mulrH,dvdrH,modrH,mnmrH,mxmrH,ltnrH,gtnrH,eqlrH,},
+ {dexrI,addrI,subrI,mulrI,dvdrI,modrI,mnmrI,mxmrI,ltnrI,gtnrI,eqlrI,},
+ {dexrL,addrL,subrL,mulrL,dvdrL,modrL,mnmrL,mxmrL,ltnrL,gtnrL,eqlrL,},
+ {dexrD,addrD,subrD,mulrD,dvdrD,modrD,mnmrD,mxmrD,ltnrD,gtnrD,eqlrD,},
 };
 OV*ars[][11]={//scan
- {dexBs,addBs,subBs,mulBs,dvdBs,modBs,mnmBs,mxmBs,ltnBs,gtnBs,eqlBs,},
- {dexHs,addHs,subHs,mulHs,dvdHs,modHs,mnmHs,mxmHs,ltnHs,gtnHs,eqlHs,},
- {dexIs,addIs,subIs,mulIs,dvdIs,modIs,mnmIs,mxmIs,ltnIs,gtnIs,eqlIs,},
- {dexLs,addLs,subLs,mulLs,dvdLs,modLs,mnmLs,mxmLs,ltnLs,gtnLs,eqlLs,},
- {dexDs,addDs,subDs,mulDs,dvdDs,modDs,mnmDs,mxmDs,ltnDs,gtnDs,eqlDs,},
+ {dexsB,addsB,subsB,mulsB,dvdsB,modsB,mnmsB,mxmsB,ltnsB,gtnsB,eqlsB,},
+ {dexsH,addsH,subsH,mulsH,dvdsH,modsH,mnmsH,mxmsH,ltnsH,gtnsH,eqlsH,},
+ {dexsI,addsI,subsI,mulsI,dvdsI,modsI,mnmsI,mxmsI,ltnsI,gtnsI,eqlsI,},
+ {dexsL,addsL,subsL,mulsL,dvdsL,modsL,mnmsL,mxmsL,ltnsL,gtnsL,eqlsL,},
+ {dexsD,addsD,subsD,mulsD,dvdsD,modsD,mnmsD,mxmsD,ltnsD,gtnsD,eqlsD,},
 };
 OV*arp[][11]={//eachprior
- {dexBp,addBp,subBp,mulBp,dvdBp,modBp,mnmBp,mxmBp,ltnBp,gtnBp,eqlBp,},
- {dexHp,addHp,subHp,mulHp,dvdHp,modHp,mnmHp,mxmHp,ltnHp,gtnHp,eqlHp,},
- {dexIp,addIp,subIp,mulIp,dvdIp,modIp,mnmIp,mxmIp,ltnIp,gtnIp,eqlIp,},
- {dexLp,addLp,subLp,mulLp,dvdLp,modLp,mnmLp,mxmLp,ltnLp,gtnLp,eqlLp,},
- {dexDp,addDp,subDp,mulDp,dvdDp,modDp,mnmDp,mxmDp,ltnDp,gtnDp,eqlDp,},
+ {dexpB,addpB,subpB,mulpB,dvdpB,modpB,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB,},
+ {dexpH,addpH,subpH,mulpH,dvdpH,modpH,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH,},
+ {dexpI,addpI,subpI,mulpI,dvdpI,modpI,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI,},
+ {dexpL,addpL,subpL,mulpL,dvdpL,modpL,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL,},
+ {dexpD,addpD,subpD,mulpD,dvdpD,modpD,mnmpD,mxmpD,ltnpD,gtnpD,eqlpD,},
 };
 OV*ara[][11]={//amend
- {dexBa,addBa,subBa,mulBa,dvdBa,modBa,mnmBa,mxmBa,ltnBa,gtnBa,eqlBa,},
- {dexHa,addHa,subHa,mulHa,dvdHa,modHa,mnmHa,mxmHa,ltnHa,gtnHa,eqlHa,},
- {dexIa,addIa,subIa,mulIa,dvdIa,modIa,mnmIa,mxmIa,ltnIa,gtnIa,eqlIa,},
- {dexLa,addLa,subLa,mulLa,dvdLa,modLa,mnmLa,mxmLa,ltnLa,gtnLa,eqlLa,},
- {dexDa,addDa,subDa,mulDa,dvdDa,modDa,mnmDa,mxmDa,ltnDa,gtnDa,eqlDa,},
+ {dexaB,addaB,subaB,mulaB,dvdaB,modaB,mnmaB,mxmaB,ltnaB,gtnaB,eqlaB,},
+ {dexaH,addaH,subaH,mulaH,dvdaH,modaH,mnmaH,mxmaH,ltnaH,gtnaH,eqlaH,},
+ {dexaI,addaI,subaI,mulaI,dvdaI,modaI,mnmaI,mxmaI,ltnaI,gtnaI,eqlaI,},
+ {dexaL,addaL,subaL,mulaL,dvdaL,modaL,mnmaL,mxmaL,ltnaL,gtnaL,eqlaL,},
+ {dexaD,addaD,subaD,mulaD,dvdaD,modaD,mnmaD,mxmaD,ltnaD,gtnaD,eqlaD,},
 };
 
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
