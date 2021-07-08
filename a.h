@@ -91,8 +91,8 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 // tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
 // tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
-#define dat(x) ((V*)((x)<<16>>16))
-#define _r(x) ((I*)dat(x))[-3] //refcount
+#define _V(x) ((V*)((x)<<16>>16)) //ptr to data
+#define _r(x) ((I*)_V(x))[-3] //refcount
 #define _q(x,y) (x=apd(x,y))
 A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,

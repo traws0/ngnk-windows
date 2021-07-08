@@ -5,7 +5,7 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define fm xz    //srcmap         bs,bg,bd:set|get|delete local    a:b   bz:branch if falsey  $[x;y;z]
 #define fl xA[3] //local syms     bm,bM:l|glb modified assign  a[i]+:b   bj,bp,br:jmp|pop|ret $[x;:y;]
 #define fc xA[4] //constants      bl,bL:make|unmake list   (a;b):(c;d)   bc:load constant     12;`a;""
-#define fu ((I*)dat(xA[5])) //last usages of locals
+#define fu ((I*)_V(xA[5])) //last usages of locals
 #define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
 #define hc(a) ({Iv=bc+fpA(&fc,a);Ez(v>bC)h(v);}) //add a "load constant" instruction
 #define l(a...) N(cl(a)) //compile left-hand side of assignment
@@ -45,5 +45,5 @@ S A1(vm,/*0*/W(1,Cb=*c++;
         EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(mR(l[1])))EY(b==bp,mr(q()))E(Q(b==br);_(*s)))
  EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(x=x(*v=mR(*s))))
  EY(b>=bv,Ax=q();N(*s=((A2*)vf[b])(x,*s)))E(N(*s=((A1*)vf[b])(*s))))0)
-AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=dat(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au0))
+AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au0))
  Au=vm(x);Y(!u,Ay=fb,z=fm;eS(mR(fs),zC[c-1-yC]);W(s<l-m,Ax=q();Y(x,x(0))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)

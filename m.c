@@ -53,7 +53,7 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=
     ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
  xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
 
-#define _m(x) ((I*)dat(x))[-7]
+#define _m(x) ((I*)_V(x))[-7]
 #define xm _m(x)
 #define mms(a...) i(nm,V*p=m[i].p,*q=p+m[i].n;If=!!*(C*)p;a)
 #define obs(a...) mms(Ax=(A)p+ZA+ZP*f,y=(A)q;W(x<y,a;x+=xZ+ZA))
