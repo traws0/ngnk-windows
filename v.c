@@ -28,7 +28,7 @@ A1(gH,XH( x)Xz(gI(x))    Xt(gt(x,gH))x=N(gI(x));Au=aH(xn);x2(cIH(xC,uC,un);u))
 A1(gI,XiI(x)Xz(ai(gl(x)))XdD(gI(N(gL(x))))Xcz(ai(gl(x)))XCZ(Au=aI(xn);x2(CH(xt-tC,&cCI,cBI,cHI,0,cLI)(xC,uC,un);u))et1(x))
 A1(gL,XlL(x)Xz(al(gl(x)))Xt(gt(x,gL))XD(Au=aL(xn);x2(cDL(xC,uC,un);u))x=N(gI(x));Au=aL(xn);x2(cIL(xC,uC,un);u))
 A1(gD,XdD(x)Xz(ad(gl(x)))Xt(gt(x,gD))x=N(gL(x));Au=aD(xn);x2(cLD(xC,uC,un);u))
-A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(gi(x)))et1(x))
+A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(gi(x)))XmMA(eac1(gS,x))et1(x))
 A1(pI,XmMA(eac1(pI,x))Xc(pI(enl(x)))XC(x=str0(x);Qs=xC;P(!*s,x(_R(cn[tl])))Lv=pl(&s);x(*s?_R(cn[tl]):az(v)))et1(x))
 TY(ct)ct={[tA]=blw,gC,gB,gH,gI,gL,gD,gS};
 A2(cst,P(xtS||ytmMA,eac2(cv('$'),x,y))P(xtz&&ytcC,K("{y@(!x)+(x<0)*#y}",x,enla(y)))
