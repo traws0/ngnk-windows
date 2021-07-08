@@ -1,5 +1,5 @@
 #faster builds: export MAKEFLAGS=-j8
-F=-nostdlib -ffreestanding -fno-math-errno -fno-stack-protector \
+F=-nostdlib -ffreestanding -fno-math-errno -fno-stack-protector -fomit-frame-pointer \
  -Werror -Wno-assume -Wno-pointer-sign -Wfatal-errors -Wno-shift-op-parentheses \
  -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion
 O=-O3 -march=native
