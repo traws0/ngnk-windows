@@ -5,17 +5,17 @@
 TD size_t(*F1)(OV*,V*,N);NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])F1(flr,C,a[i]+32*cAZ(a[i]))
 
 #define R1(f,a...) A1(f,XmMA(eac1(f,x))a)
-SN A fx(F1 f,Ax)_(P(xr==1,f(xC,xC,xn);x)Au=atn(xt,xn);x2(f(xC,uC,un);u))
+SN A fx(F1 f,Ax)_(P(xr==1,f(xC,xC,xn);x)Ay=atn(xt,xn);x2(f(xC,yC,yn);y))
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
- Nn=xn;Au=xr>1?atn(xt,n):x;Nm=f[xt-tB](xC,uC,n);
- Y(m<n,Y(x-u,x=wdn(x,m,n,n-m);u=wdn(u,0,m,n))E(x=u=wdn(u,0,n,n))
-       N mw=m*ZT[ut];f[xt-tB](xC+(x-u?0:mw),uC+mw,n-m))
- x-u?x(u):u)
+ Nn=xn;Ay=xr>1?atn(xt,n):x;Nm=f[xt-tB](xC,yC,n);
+ Y(m<n,Y(x-y,x=wdn(x,m,n,n-m);y=wdn(y,0,m,n))E(x=y=wdn(y,0,n,n))
+       N mw=m*ZT[yt];f[xt-tB](xC+(x-y?0:mw),yC+mw,n-m))
+ x-y?x(y):y)
 R1(not,XF(x(ai(x==au0)))eql(x,xtsS?as(0):ac(0)))
 R1(nul,XF(x(ai(x==au0)))eql(x,_R(cn[xt])))
 R1(flr,XC(fx(flrC,x))Xc(fir(flr(enl(x))))XzZ(x)XsS(gS(flr(str(x))))
- x=N(gD(x));Au=atn(xt+tl-td,xn);x2(i(un,ul=xd<0?(L)xd-(xd<(L)xd):(L)xd)u))
+ x=N(gD(x));Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))
 
 #define sqrd __builtin_sqrt
 S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)

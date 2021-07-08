@@ -54,7 +54,7 @@ S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139
 S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,Z a);
  W(n>0,b=min(n,r);i(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,ks((V*)a);b=0))
  a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);Mc(z,a,b);z+=b;d-=b;Y(d>0,ks((V*)a)))}
-A1(sha3_256,Et(!xtC,x)Au=aC(32);x2(kec(136,xC,xn,6,uC,un);u))
+A1(sha3_256,Et(!xtC,x)Ay=aC(32);x2(kec(136,xC,xn,6,yC,yn);y))
 
 S C s0[256],s1[256];S C t0(Cc)_(c<<1^27*(c>>7))S C t1(Cc,Cd)_(Cv=c*(d&1);i(4,c=t0(c);v^=(d>>i+1&1)*c)v)
 S V aei(){Cc=1,d=1;Ms(s0,99,256);i(255,c^=t0(c);i(3,d^=d<<(1<<i))d^=(d>>7)*9;i(5,s0[c]^=R(d,i)))i(256,s1[s0[i]]=i)}

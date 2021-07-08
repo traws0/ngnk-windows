@@ -25,17 +25,17 @@ S C ft(If)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
 A1(u0c,x=N(splc(10,N(u1c(x))));xn&&!_n(xA[xn-1])?cut(az(-1),x):x)
 A1(u1c,Xz(If=gl(x);Cb[8192];Ik=read(f,b,Z b);Eo(k<0)aCn(b,k))If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
- P(t=='d',Cb[ZP];Ik;Au=oC;
-  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST DE*e=(V*)b+i;Qs=e->d_name;u=cts(u,s,Sn(s));u=apc(u,10);i+=e->d_reclen))
-  close(f);u)
+ P(t=='d',Cb[ZP];Ik;Ay=oC;
+  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,ST DE*e=(V*)b+i;Qs=e->d_name;y=cts(y,s,Sn(s));y=apc(y,10);i+=e->d_reclen))
+  close(f);y)
  P(t=='r',Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
- Au=u1c(ai(f));close(f);u)
+ Ay=u1c(ai(f));close(f);y)
 A2(v0c,Y(ytA,y=Nx(jc(10,y)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
-A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;Qs=yC;y2(Au=au0;W(n>0,Lk=write(f,s,n);Y(k<0,u=eo0())Y(k<=0,BR)s+=k;n-=k)u))
- If=N(o(x,O_RDWR|O_CREAT|O_TRUNC));Au=v1c(ai(f),y);f>2&&close(f);u)
+A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;Qs=yC;y2(Az=au0;W(n>0,Lk=write(f,s,n);Y(k<0,z=eo0())Y(k<=0,BR)s+=k;n-=k)z))
+ If=N(o(x,O_RDWR|O_CREAT|O_TRUNC));Az=v1c(ai(f),y);f>2&&close(f);z)
 
-S A rda(If)_(Au=aC(256-ZA);L m=0,k;
- W((k=read(f,uC+m,un-m))>0,m+=k;Y(m+1000000>un&&2*m>un,Az=aC(2*un+ZA);Mc(zC,uC,m);u=u(z)))close(f);AN(m,u))
+S A rda(If)_(Ax=aC(256-ZA);L m=0,k;
+ W((k=read(f,xC+m,xn-m))>0,m+=k;Y(m+1000000>xn&&2*m>xn,Ay=aC(2*xn+ZA);Mc(yC,xC,m);x=x(y)))close(f);AN(m,x))
 A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(eac1(str0,x));Q a[xn+1];i(xn,a[i]=_V(xa))a[xn]=0;
  I p[4];pipe(p);pipe(p+2);P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,(char*O*)env));0)
  close(*p);close(p[3]);N(v0c(ai(p[1]),x(y)));close(p[1]);rda(p[2]))
