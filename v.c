@@ -25,8 +25,7 @@ S A gt(Ax,A1*f)_(fir(N(f(enl(x)))))
 A1(gC,XcC(x)Xz(ac(gl(x)))Xt(gt(x,gC))x=N(gI(x));Au=aC(xn);x2(cIC(xC,uC,un);u))
 A1(gB,XB( x)Xz(gI(x))    Xt(gt(x,gB))x=N(gI(x));Au=aB(xn);x2(cIB(xC,uC,un);u))
 A1(gH,XH( x)Xz(gI(x))    Xt(gt(x,gH))x=N(gI(x));Au=aH(xn);x2(cIH(xC,uC,un);u))
-A1(gI,XiI(x)Xz(ai(gl(x)))XdD(gI(N(gL(x))))P(xtc||xtz,ai(gl(x)))
- P(xtC||xtZ,Au=aI(xn);x2(CH(xt-tC,&cCI,cBI,cHI,0,cLI)(xC,uC,un);u))et1(x))
+A1(gI,XiI(x)Xz(ai(gl(x)))XdD(gI(N(gL(x))))Xcz(ai(gl(x)))XCZ(Au=aI(xn);x2(CH(xt-tC,&cCI,cBI,cHI,0,cLI)(xC,uC,un);u))et1(x))
 A1(gL,XlL(x)Xz(al(gl(x)))Xt(gt(x,gL))XD(Au=aL(xn);x2(cDL(xC,uC,un);u))x=N(gI(x));Au=aL(xn);x2(cIL(xC,uC,un);u))
 A1(gD,XdD(x)Xz(ad(gl(x)))Xt(gt(x,gD))x=N(gL(x));Au=aD(xn);x2(cLD(xC,uC,un);u))
 A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(gi(x)))et1(x))
@@ -43,17 +42,15 @@ A2(mtc,x(y(ai(mtc_(x,y)))))
 S C ot(Ax)_(xtz?tl:xtZ?tL:xt)S L od(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1)
 S I cL(Li,Lj)_(i<j?-1:i>j)I cD(Dd,Dv)_(cL(od(d),od(v)))
 S I cA(Ax,Ay/*00*/)_(P(mtc_(x,y),0)
- P(xtd&&ytd,cD(gd_(x),gd_(y)))P((xtc||xtz)&&ytd,cD(gl_(x),gd_(y)))P(xtd&&(ytc||ytz),cD(gd_(x),gl_(y)))
- Iv=ot(x)-ot(y);P(v,v)P(xtc||xtz,cL(gl_(x),gl_(y)))Xd(Dv=gd_(x),w=gd_(y);v<w?-1:v>w?1:0)
+ P(xtd&&ytd,cD(gd_(x),gd_(y)))P(xtcz&&ytd,cD(gl_(x),gd_(y)))P(xtd&&ytcz,cD(gd_(x),gl_(y)))
+ Iv=ot(x)-ot(y);P(v,v)Xcz(cL(gl_(x),gl_(y)))Xd(Dv=gd_(x),w=gd_(y);v<w?-1:v>w?1:0)
  Xs(Lv=gi(x),w=gi(y);strcmp(syp(&v),syp(&w)))
  Y(!xtP,Iv=cL(xn,yn);XT(i(min(xn,yn),Az=get(x,i),u=get(y,i);I d=cA(z,u);mr(z(u));P(d,d))v))cL(x,y))
 S I*ascZ(O UC*v,UC*g,I*a,I*b,In,I w)_(UI c[257];iI(a,n);
  j(w,Ms(c,0,Z c);i(n,g[i]=v[w*a[i]+j])i(n,c[g[i]+1]++)Y(c[1+*g]-n,i(255,c[i+1]+=c[i])i(n,b[c[g[i]]++]=a[i])SWP(b,a)))a)
 S V mrg(OA*v,I*p,I*p1,I*q,I*q1,I*r){W(p<p1&&q<q1,*r++=cA(v[*p],v[*q])<=0?*p++:*q++)Mc(r,p<p1?p:q,p1-p+q1-q<<2);}
 S V ascA(OA*v,I*a,I n,I*b){P(n<2,Y(n,*b=*a);)I m=n/2;ascA(v,a+m,n-m,b+m);ascA(v,a,m,a+m);mrg(v,a+m,a+2*m,b+m,b+n,b);}
-A1(asc,
- P(xtC||xtZ,In=xn;Ez(n-xn,x)x=N(K("{x-&/x}",x));Ay=aC(n),z=aI(n),u=aI(n);
-  x2(y2(ascZ(xC,yC,zI,uI,n,ZT[xt])==zI?u(z):z(u))))
+A1(asc,XCZ(In=xn;Ez(n-xn,x)x=N(K("{x-&/x}",x));Ay=aC(n),z=aI(n),u=aI(n);x2(y2(ascZ(xC,yC,zI,uI,n,ZT[xt])==zI?u(z):z(u))))
  XA(In=xn;Ez(xn-n,x)Im=n/2;OA*v=xA;Ay=aI(n),z=aI(n-m);I*a=yI,*b=zI;iI(a,n);
   ascA(v,a+m,n-m,b);ascA(v,a,m,a+n-m);mrg(v,a+n-m,a+n,b,b+n-m,a);x(z(y)))
  XS(asc(N(eac1(str,x))))XD(asc(blw(x)))Xm(Ay=kv(&x);idx(x,N(asc(y))))Et(!(xts||xti),x)opn(x))
