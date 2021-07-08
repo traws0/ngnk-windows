@@ -6,7 +6,7 @@ S V rn(L*r,Nn){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5
 S A rL(Ln,Lm)_(Y(n==NL,Ed(m<0)n=-m)
  Ax=aL(absL(n));rn(xL,xn);Y(m,Y(m<=1ll<<32,i(xn,xl=(UI)xl*(UL)m>>32))E(i(xn,xl=(UL)xl%m)))
  Y(n<0,n=-n;El(n>m,x)i(n,Lk=m-n+i;Lv=((UL*)xL)[i]%=k+1;L*p=&xl;j(i,Y(xl==v,*p=k;BR)))Ay=rL(n,0);y2(i(n,SWP(xl,xL[(UL)yl%(i+1)]))0))x)
-S A rD(Ln)_(A x=AT(tD,rL(n,0));i(n,xl=xl&-1ull>>12|1023ll<<52)x)
+S A rD(Ln)_(AT(tD,add(al(1023ll<<52),rL(n,1ll<<52))))
 S A rnd(Lm,Ax)_(Xz(rL(m,gl(x)))Xc(gC(add(gi(x)=='A'?x:ac('a'),Nx(rL(m,26)))))Xd(mul(x,add(ad(-1),Nx(rD(m)))))
  XMT(idx(x,Nx(rL(m,xN))))et1(x))
 
