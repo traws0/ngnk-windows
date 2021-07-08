@@ -4,8 +4,7 @@ r:("// ngn/k, (c) 2019-2021 ngn, license: GNU AGPLv3 - https://codeberg.org/ngn/
 R:,/{$[x~"@";*y;x~"$";y 1;x~"%";_y 1;x]}\:;d:{r,:"#define ",/:x[0]R/:+a@'!#'a:1_x;}
 v:"xyzu";t:"ACBHILD";T:t,"SMmcildsopqruvwe";K:"FPRzZtT"
 /@:arg[0],$:arg[1],%:lower(arg[1])
-d("@$    _$(@)"       ;v;"knNotv")     /properties
-d("@r    rfc(@)"      ;v)              /refcount
+d("@$    _$(@)"       ;v;"knNortv")    /properties
 d("@R    mR(@)"       ;v)              /inc refcount
 d("@(a)  dex(@,a)"    ;v)              /free and return other
 d("@$    (($*)dat(@))";v;t)            /items

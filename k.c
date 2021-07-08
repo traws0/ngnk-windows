@@ -59,7 +59,7 @@ S I knd(Ax)_(Xz(ti)XZ(tI)xt)
 S A set(Ax,Li,Ay)_(Q(xr==1);XA(Az=xa;xa=z(y);c3(tc,yt,ts)?sqz(x):x)P(knd(x)-knd(y)-tC+tc,set(blw(x),i,y))
  Y(xtZ,N(sup(&x,&y)))C w=Zt[xt];w==0?xb=gi(y):w==1?xh=gi(y):w==2?xi=gi(y):(xl=gl(y));x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&yx,xI[i+1]);Au=yy;Ed(!utA,x)
- yy=j==un?uq(aa0()):mut(u);Q(rfc(yy)==1);*p=(A*)dat(yy)+j;1)
+ yy=j==un?uq(aa0()):mut(u);Q(_r(yy)==1);*p=(A*)dat(yy)+j;1)
 S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj=fpI(&yx,*xI);
  Y(j==_n(yy),_q(yy,xn>1?aa0():au0))A*p=(A*)dat(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;Mc(b+1,a+1,(n-1)*8);*p=mR(N(f(b,n))))
