@@ -15,7 +15,7 @@ S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&xk,Li=fpI(&fl,gi(z));Ez(i>15)fu[i]=_n(fb);h(b
  P(zts||(ztA&&_t(zx)==ts),Y(zts,hc(oA))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
   Ik=gi(zts?z:zx);Li=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
- eS(mR(fs),o);ec0())
+ eS(_R(fs),o);ec0())
 I asg(Ax)_(xtA||xts||(xtS&&xn>1)) //is lhs of assignment?
 S A2(cr,/*0*/Co=yo;Li;P(yts&&(i=fAI(fl,gi(y)))>=0,fu[i]=_n(fb);h(bg|i);x)P(yts&&gi(y)=='o',h(bo);x)
  P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Nn=yn;Au=yx;
@@ -36,14 +36,14 @@ A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);Co=0;Ms(
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;
- Y(b>=bm,Y(b>=bc,Ay=fc;p(mR(yA[b-bc])))
-        EY(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(mR(*v=Ny(dm1(A(x,yR,av(*c++),z),4))),y)))
+ Y(b>=bm,Y(b>=bc,Ay=fc;p(_R(yA[b-bc])))
+        EY(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(_R(*v=Ny(dm1(A(x,yR,av(*c++),z),4))),y)))
         EY(b==bM,Ax=q()         ,y=q(),z=*s;       *s=au0;N(*s=apn(      Ny(dmd(A(x,yR,av(*c++),z),4)) ,y)))
         EY(b==bl,Cn=*c++;s+=n;p(sqz(atnv(tA,n,s-n))))
         EY(b==bL,Cn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
         EY(b==ba||b==bP,Cn=*c++;Au=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(u))
-        EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(mR(l[1])))EY(b==bp,mr(q()))E(Q(b==br);_(*s)))
- EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(x=x(*v=mR(*s))))
+        EY(b==bz,c+=1+*c*!tru(q()))EY(b==bj,c+=(C)*c)EY(b==bo,p(_R(l[1])))EY(b==bp,mr(q()))E(Q(b==br);_(*s)))
+ EY(b>=bs,A*v=l-b%16,x=*v;Y(b>=bd,p(x);*v=au0)EY(b>=bg,p(xR))E(x=x(*v=_R(*s))))
  EY(b>=bv,Ax=q();N(*s=((A2*)vf[b])(x,*s)))E(N(*s=((A1*)vf[b])(*s))))0)
 AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au0))
- Au=vm(x);Y(!u,Ay=fb,z=fm;eS(mR(fs),zC[c-1-yC]);W(s<l-m,Ax=q();Y(x,x(0))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)
+ Au=vm(x);Y(!u,Ay=fb,z=fm;eS(_R(fs),zC[c-1-yC]);W(s<l-m,Ax=q();Y(x,x(0))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)

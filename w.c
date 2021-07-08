@@ -12,7 +12,7 @@ NI L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//to
 A jc(Cc,   Ax)_(Ln=jn(1,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,*p++=c        )Az=xa;Y(ztc,*p++=gi(z))E(Mc(p,zC,zn);p+=zn))x(u))
 A jC(Qs,Nm,Ax)_(Ln=jn(m,x);Et(n<0,x)Au=aC(n);C*p=uC;i(xn,Y(i,Mc(p,s,m);p+=m)Az=xa;Y(ztc,*p++=gi(z))E(Mc(p,zC,zn);p+=zn))x(u))
 S L cfm(OA*a/*0*/,In)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,N l=xN;P(m>=0&&m-l,-2)m=l))m)
-S AX(eacm,Az=oS,b[8];i(n,Ay=a[i];Y(ytm,z=cat(z,mR(yx))))z=unq(z);
+S AX(eacm,Az=oS,b[8];i(n,Ay=a[i];Y(ytm,z=cat(z,_R(yx))))z=unq(z);
  i(n,Ay=b[i]=a[i];Y(ytm,A u=kv(&y);uq(id_(x,u));b[i]=ap1(u,fil(ai(_n(y)),fnd(y,zR)))))Au=eac(x,b,n);u?am(z,u):z(u))
 AX(eac,Y(n==1,Xz(win(xR,*a)))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8];Ct[8];Lm=-1;
  i(n,Ay=b[i]=a[i];Ym(eacm(x,a,n))t[i]=ytP?0:ytt?1:ytA?2+(yr>1):4;Y(t[i]>1,L l=yN;P(m>=0&&m-l,eln(n,a))m=l))

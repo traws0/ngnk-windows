@@ -4,8 +4,7 @@ r:("// ngn/k, (c) 2019-2021 ngn, license: GNU AGPLv3 - https://codeberg.org/ngn/
 R:,/{$[x~"@";*y;x~"$";y 1;x~"%";_y 1;x]}\:;d:{r,:"#define ",/:x[0]R/:+a@'!#'a:1_x;}
 v:"xyzu";t:"ACBHILD";T:t,"SMmcildsopqruvwe";K:"FPRzZtT"
 /@:arg[0],$:arg[1],%:lower(arg[1])
-d("@$    _$(@)"      ;v;"knNortv")    /properties
-d("@R    mR(@)"      ;v)              /inc refcount
+d("@$    _$(@)"      ;v;"knNorRtv")   /properties
 d("@(a)  dex(@,a)"   ;v)              /free and return other
 d("@$    (($*)_V(@))";v;t)            /items
 d("@%    @$[i]"      ;v;t)            /i-th item
@@ -25,7 +24,7 @@ d("@tmMA (@tmM||@tA)";v)              /container?
 d("@2(a...) _2(@,a)" ;v)              /2phase free
 d("@q(a) _q(@,a)"    ;v)              /append
 d("N@(r) N1(@,r)"    ;v)              /error pass-through
-d("o@    mR(ce[t@])" ;"ACLDS")        /empty
+d("o@    _R(ce[t@])" ;"ACLDS")        /empty
 d("E@(a...) E_(@,a)" ;"cdilnoprstvz") /errors
 d("$@(a...) P(%t@,a)";T,K,(+|_:\"CILDSZ")," "\"mt MT mMA ZD zd CZ cz";"XY")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdknotv BHIL:ijkmnv I:f D:dv A:xyzu N:ijmn O:ACV Q:spq"; /c type+var
