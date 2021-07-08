@@ -30,7 +30,7 @@ h1(mod,b,B,B)h1(mod,h,H,H)h1(mod,i,I,I)h1(mod,l,L,L)h1(mod,d,D,D)
 h2(mnm,b,B,B)h2(mnm,h,H,H)h2(mnm,i,I,I)h2(mnm,l,L,L)h2(mnm,d,D,D)
 h2(mxm,b,B,B)h2(mxm,h,H,H)h2(mxm,i,I,I)h2(mxm,l,L,L)h2(mxm,d,D,D)
 h1(ltn,b,B,B)h1(ltn,h,H,H)h1(ltn,i,I,I)h1(ltn,l,L,L)h1(ltn,d,D,I)
-h0(gtn,b,B,B)h0(gtn,h,H,H)h0(gtn,i,I,I)h0(gtn,l,L,L)h0(gtn,d,D,D)
+h0(gtn,b,B,B)h0(gtn,h,H,H)h0(gtn,i,I,I)h0(gtn,l,L,L)h0(gtn,d,D,I)
 h2(eql,b,B,B)h2(eql,h,H,H)h2(eql,i,I,I)h2(eql,l,L,L)h2(eql,d,D,I)
 
 S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-list
@@ -100,10 +100,17 @@ S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];t=art(v,t);
  Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
-A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
-S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
+S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)
+S A2(dct,x=ext(x,yN);y=ext(y,xN);El(xN-yN,x,y)am(x,y))
+
+A2(dex,mr(x);y)
+A2(add,adm(x,y,0))
+A2(sub,add(x,Nx(neg(y))))
+A2(mul,adm(x,y,1))
+A2(dvd,vv(x,y,vi('%')))
 A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xzd(vv(x,y,vi('!')))dct(x,y))
-A2(dex,mr(x);y)A2(sub,add(x,Nx(neg(y))))A2(gtn,ltn(y,x))
-#define h(c,s) A2(s,vv(x,y,vi(c)))
-h('%',dvd)h('&',mnm)h('|',mxm)h('<',ltn)
-#undef h
+A2(mnm,vv(x,y,vi('&')))
+A2(mxm,vv(x,y,vi('|')))
+A2(ltn,vv(x,y,vi('<')))
+A2(gtn,ltn(y,x))
+A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
