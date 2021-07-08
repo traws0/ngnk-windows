@@ -21,33 +21,83 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x
                                 hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
 #define h1(v,t,T,R) ht(v,t,T,R) hF(v##T##t,T,R,AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
 #define h2(v,t,T,R) ht(v,t,T,R) hF(v##T##t,T,R,v##t##T(b,a,r,n))
-#define v0(v)    h0(v,b,B,B)h0(v,h,H,H)h0(v,i,I,I)h0(v,l,L,L)h0(v,d,D,D)  //impl provided elsewhere
-#define v1(v,RD) h1(v,b,B,B)h1(v,h,H,H)h1(v,i,I,I)h1(v,l,L,L)h1(v,d,D,RD) //standard Tt
-#define v2(v,RD) h2(v,b,B,B)h2(v,h,H,H)h2(v,i,I,I)h2(v,l,L,L)h2(v,d,D,RD) //Tt swaps args and delegates to tT
-v0(dex)v0(add)v0(sub)v0(mul)v1(dvd,D)v1(mod,D)v2(mnm,D)v2(mxm,D)v1(ltn,I)v0(gtn)v2(eql,I)
+h0(dex,b,B,B)h0(dex,h,H,H)h0(dex,i,I,I)h0(dex,l,L,L)h0(dex,d,D,D)
+h0(add,b,B,B)h0(add,h,H,H)h0(add,i,I,I)h0(add,l,L,L)h0(add,d,D,D)
+h0(sub,b,B,B)h0(sub,h,H,H)h0(sub,i,I,I)h0(sub,l,L,L)h0(sub,d,D,D)
+h0(mul,b,B,B)h0(mul,h,H,H)h0(mul,i,I,I)h0(mul,l,L,L)h0(mul,d,D,D)
+h1(dvd,b,B,B)h1(dvd,h,H,H)h1(dvd,i,I,I)h1(dvd,l,L,L)h1(dvd,d,D,D)
+h1(mod,b,B,B)h1(mod,h,H,H)h1(mod,i,I,I)h1(mod,l,L,L)h1(mod,d,D,D)
+h2(mnm,b,B,B)h2(mnm,h,H,H)h2(mnm,i,I,I)h2(mnm,l,L,L)h2(mnm,d,D,D)
+h2(mxm,b,B,B)h2(mxm,h,H,H)h2(mxm,i,I,I)h2(mxm,l,L,L)h2(mxm,d,D,D)
+h1(ltn,b,B,B)h1(ltn,h,H,H)h1(ltn,i,I,I)h1(ltn,l,L,L)h1(ltn,d,D,I)
+h0(gtn,b,B,B)h0(gtn,h,H,H)h0(gtn,i,I,I)h0(gtn,l,L,L)h0(gtn,d,D,D)
+h2(eql,b,B,B)h2(eql,h,H,H)h2(eql,i,I,I)h2(eql,l,L,L)h2(eql,d,D,I)
 
-#define h(v,t,T) {v##t##t,v##t##T,v##T##t,v##T##T},
-#define g(a...) {h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a){0},h(eql,a)},
-S OV*arf[][7][5]={g(b,B)g(h,H)g(i,I)g(l,L)g(d,D)};
-#undef g
-#undef h
+S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-list
+ {{dvdbb,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb,},
+  {dvdhh,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh,},
+  {dvdii,modii,mnmii,mxmii,ltnii,0,eqlii,},
+  {dvdll,modll,mnmll,mxmll,ltnll,0,eqlll,},
+  {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd,},},
+ {{dvdbB,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB,},
+  {dvdhH,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH,},
+  {dvdiI,modiI,mnmiI,mxmiI,ltniI,0,eqliI,},
+  {dvdlL,modlL,mnmlL,mxmlL,ltnlL,0,eqllL,},
+  {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD,},},
+ {{dvdBb,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb,},
+  {dvdHh,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh,},
+  {dvdIi,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi,},
+  {dvdLl,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl,},
+  {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd,},},
+ {{dvdBB,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB,},
+  {dvdHH,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH,},
+  {dvdII,modII,mnmII,mxmII,ltnII,0,eqlII,},
+  {dvdLL,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL,},
+  {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD,},},
+};
 
 #define h(v,T,R,Q) SN I v##T##r(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
-#define g(a...) h(dex,a)h(add,a)h(sub,a)h(mul,a)h(dvd,a)h(mod,a)h(mnm,a)h(mxm,a)h(ltn,a)h(gtn,a)h(eql,a)
-g(B,L,l)g(H,L,l)g(I,L,l)g(L,L,l)g(D,D,d)
-#undef g
+h(dex,B,L,l)h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(dvd,B,L,l)h(mod,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)h(ltn,B,L,l)h(gtn,B,L,l)h(eql,B,L,l)
+h(dex,H,L,l)h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(dvd,H,L,l)h(mod,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)h(ltn,H,L,l)h(gtn,H,L,l)h(eql,H,L,l)
+h(dex,I,L,l)h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(dvd,I,L,l)h(mod,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)h(ltn,I,L,l)h(gtn,I,L,l)h(eql,I,L,l)
+h(dex,L,L,l)h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(dvd,L,L,l)h(mod,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)h(ltn,L,L,l)h(gtn,L,L,l)h(eql,L,L,l)
+h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(dvd,D,D,d)h(mod,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)h(ltn,D,D,d)h(gtn,D,D,d)h(eql,D,D,d)
 #undef h
-#define h(x) {dex##x,add##x,sub##x,mul##x,dvd##x,mod##x,mnm##x,mxm##x,ltn##x,gtn##x,eql##x},
-#define g(x) OV*ar##x[][11]={h(B##x)h(H##x)h(I##x)h(L##x)h(D##x)};
-g(r)g(s)g(p)g(a)
-#undef g
-#undef h
+
+OV*arr[][11]={//reduce
+ {dexBr,addBr,subBr,mulBr,dvdBr,modBr,mnmBr,mxmBr,ltnBr,gtnBr,eqlBr,},
+ {dexHr,addHr,subHr,mulHr,dvdHr,modHr,mnmHr,mxmHr,ltnHr,gtnHr,eqlHr,},
+ {dexIr,addIr,subIr,mulIr,dvdIr,modIr,mnmIr,mxmIr,ltnIr,gtnIr,eqlIr,},
+ {dexLr,addLr,subLr,mulLr,dvdLr,modLr,mnmLr,mxmLr,ltnLr,gtnLr,eqlLr,},
+ {dexDr,addDr,subDr,mulDr,dvdDr,modDr,mnmDr,mxmDr,ltnDr,gtnDr,eqlDr,},
+};
+OV*ars[][11]={//scan
+ {dexBs,addBs,subBs,mulBs,dvdBs,modBs,mnmBs,mxmBs,ltnBs,gtnBs,eqlBs,},
+ {dexHs,addHs,subHs,mulHs,dvdHs,modHs,mnmHs,mxmHs,ltnHs,gtnHs,eqlHs,},
+ {dexIs,addIs,subIs,mulIs,dvdIs,modIs,mnmIs,mxmIs,ltnIs,gtnIs,eqlIs,},
+ {dexLs,addLs,subLs,mulLs,dvdLs,modLs,mnmLs,mxmLs,ltnLs,gtnLs,eqlLs,},
+ {dexDs,addDs,subDs,mulDs,dvdDs,modDs,mnmDs,mxmDs,ltnDs,gtnDs,eqlDs,},
+};
+OV*arp[][11]={//eachprior
+ {dexBp,addBp,subBp,mulBp,dvdBp,modBp,mnmBp,mxmBp,ltnBp,gtnBp,eqlBp,},
+ {dexHp,addHp,subHp,mulHp,dvdHp,modHp,mnmHp,mxmHp,ltnHp,gtnHp,eqlHp,},
+ {dexIp,addIp,subIp,mulIp,dvdIp,modIp,mnmIp,mxmIp,ltnIp,gtnIp,eqlIp,},
+ {dexLp,addLp,subLp,mulLp,dvdLp,modLp,mnmLp,mxmLp,ltnLp,gtnLp,eqlLp,},
+ {dexDp,addDp,subDp,mulDp,dvdDp,modDp,mnmDp,mxmDp,ltnDp,gtnDp,eqlDp,},
+};
+OV*ara[][11]={//amend
+ {dexBa,addBa,subBa,mulBa,dvdBa,modBa,mnmBa,mxmBa,ltnBa,gtnBa,eqlBa,},
+ {dexHa,addHa,subHa,mulHa,dvdHa,modHa,mnmHa,mxmHa,ltnHa,gtnHa,eqlHa,},
+ {dexIa,addIa,subIa,mulIa,dvdIa,modIa,mnmIa,mxmIa,ltnIa,gtnIa,eqlIa,},
+ {dexLa,addLa,subLa,mulLa,dvdLa,modLa,mnmLa,mxmLa,ltnLa,gtnLa,eqlLa,},
+ {dexDa,addDa,subDa,mulDa,dvdDa,modDa,mnmDa,mxmDa,ltnDa,gtnDa,eqlDa,},
+};
 
 S C art(Iv,Ct)_(Q(c3(tc,t,td)||c3(tC,t,tD));Q(in(v,11));Y(t>tD,t+=tD-td)v>7&&t==tD?tI:t) //arithmetic op's result type
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
 S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[tT(t)-tB][v-4][k];t=art(v,t);
+ Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];t=art(v,t);
  Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
