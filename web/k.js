@@ -27,7 +27,7 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
  try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r}
 X('mmap',(p,n,_,_1,f,o)=>{p=p||ma(n);if(f>=0){f=fd[f];BADF(!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
 X('read',(f,a,n)=>{if(f<3){let s=inp||prompt('stdin:')+N;inp='';return T1.encodeInto(s,M(a,n)).written}
- f=fd[f];BADF(!f);n=min(n,fs[f.p].n-f.o);return n<=0?0:(M(a,n).set(fs[f.p].sub(f.o,n)),n)})
+ f=fd[f];BADF(!f);n=max(0,min(n,fs[f.p].n-f.o));M(a,n).set(fs[f.p].sub(f.o,f.o+n));f.o+=n;return n})
 X('write',(f,a,n)=>{if(f<3)return(ap(t0(M(a,n))),n);f=fd[f];BADF(!f)
  let{p,o}=f,l=fs[p].n;(fs[p]=rsz(fs[p],max(l,o+n))).set(M(a,n),o);f.o+=n;return n})
 X('gettimeofday',x=>S4(x,[(x=Date.now())/1000|0,x%1000*1000])&0)
