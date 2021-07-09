@@ -43,7 +43,7 @@ let out=ou;const PR=' ',skPR=i=>i+PR.n*(ed.value._(i,i+PR.n)===PR),cur=(ta,i)=>t
 file=async f=>{fs[f]=fs[f]||t1(await(await fetch(f)).text())},ap=s=>{out.value+=s;cur(out,out.value.n)}
 if(location.hash==='#r'){ //repl mode
  rdy(_=>{doc.body.classList.add('repl');ed.value='';out=ed;let ha=[''],hi=0 //ha,hi:history array and index
-  wa(async _=>{await file('repl.k');await file('golf.k')
+  wa(async _=>{await file('repl.k');await file('golf.k');await file('./LICENSE')
    let p=ms('k.wasm\0repl.k\0'),argv=ma(16);S4(argv,[p,p+7,0,0]);app.kinit(1,argv);inp='\\l repl.k\n';app.rep()})
   ed.onkeydown=x=>{const k=kc(x)
    if(k===38||k===40){let s=ed.value,i=s.lio(N)+1;ha[hi]=s._(i);hi=max(0,min(ha.n-1,hi+k-39))
