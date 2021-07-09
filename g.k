@@ -20,12 +20,13 @@ d("@tZD  (@tZ||@tD)" ;v)              /ints|floats?
 d("@tzd  (@tz||@td)" ;v)              /int|float?
 d("@tCZ  (@tC||@tZ)" ;v)              /chars|ints?
 d("@tcz  (@tc||@tz)" ;v)              /char|int?
+d("@tCZD (@tC||@tZD)";v)              /chars|ints|floats?
 d("@tmMA (@tmM||@tA)";v)              /container?
 d("@2(a...) _2(@,a)" ;v)              /2phase free
 d("@q(a) _q(@,a)"    ;v)              /append
 d("N@(r) N1(@,r)"    ;v)              /error pass-through
 d("o@    _R(ce[t@])" ;"ACLDS")        /empty
 d("E@(a...) E_(@,a)" ;"cdilnoprstvz") /errors
-d("$@(a...) P(%t@,a)";T,K,(+|_:\"CILDSZ")," "\"mt MT mMA ZD zd CZ cz";"XY")
+d("$@(a...) P(%t@,a)";T,K,(+|_:\"CILDSZ")," "\"mt MT mMA ZD zd CZ cz CZD";"XY")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdknotv BHIL:ijkmnv I:f D:dv A:xyzu N:ijmn O:ACV Q:spq"; /c type+var
 "g.h"0:r

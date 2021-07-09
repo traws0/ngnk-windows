@@ -284,6 +284,10 @@
 #define ytcz  (ytc||ytz)
 #define ztcz  (ztc||ztz)
 #define utcz  (utc||utz)
+#define xtCZD (xtC||xtZD)
+#define ytCZD (ytC||ytZD)
+#define ztCZD (ztC||ztZD)
+#define utCZD (utC||utZD)
 #define xtmMA (xtmM||xtA)
 #define ytmMA (ytmM||ytA)
 #define ztmMA (ztmM||ztA)
@@ -403,6 +407,8 @@
 #define YCZ(a...) P(ytCZ,a)
 #define Xcz(a...) P(xtcz,a)
 #define Ycz(a...) P(ytcz,a)
+#define XCZD(a...) P(xtCZD,a)
+#define YCZD(a...) P(ytCZD,a)
 #define Cb C b
 #define Cc C c
 #define Cd C d
