@@ -3,7 +3,7 @@
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S V rn(L*r,Nn){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
  i(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=rot(d,45))}
-S A rL(Ln,Lm)_(Y(n==NL,Ed(m<0)n=-m)
+S A rL(Ln,Lm)_(Ed(m<0)Y(n==NL,n=-m)
  Ax=aL(absL(n));rn(xL,xn);Y(m,Y(m<=1ll<<32,i(xn,xl=(UI)xl*(UL)m>>32))E(i(xn,xl=(UL)xl%m)))
  Y(n<0,n=-n;El(n>m,x)i(n,Lk=m-n+i;Lv=((UL*)xL)[i]%=k+1;L*p=&xl;j(i,Y(xl==v,*p=k;BR)))Ay=rL(n,0);y2(i(n,SWP(xl,xL[(UL)yl%(i+1)]))0))x)
 S A rD(Ln)_(AT(tD,add(al(1023ll<<52),rL(n,1ll<<52))))
