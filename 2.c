@@ -65,32 +65,32 @@ h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(dvd,D,D,d)h(mod,D,D,d)h(mnm,D,
 #undef h
 
 OV*arr[][11]={//reduce
- {dexrB,addrB,subrB,mulrB,dvdrB,modrB,mnmrB,mxmrB,ltnrB,gtnrB,eqlrB,},
- {dexrH,addrH,subrH,mulrH,dvdrH,modrH,mnmrH,mxmrH,ltnrH,gtnrH,eqlrH,},
- {dexrI,addrI,subrI,mulrI,dvdrI,modrI,mnmrI,mxmrI,ltnrI,gtnrI,eqlrI,},
- {dexrL,addrL,subrL,mulrL,dvdrL,modrL,mnmrL,mxmrL,ltnrL,gtnrL,eqlrL,},
- {dexrD,addrD,subrD,mulrD,dvdrD,modrD,mnmrD,mxmrD,ltnrD,gtnrD,eqlrD,},
+ {dexrB,addrB,subrB,mulrB,0,modrB,mnmrB,mxmrB,ltnrB,gtnrB,eqlrB,},
+ {dexrH,addrH,subrH,mulrH,0,modrH,mnmrH,mxmrH,ltnrH,gtnrH,eqlrH,},
+ {dexrI,addrI,subrI,mulrI,0,modrI,mnmrI,mxmrI,ltnrI,gtnrI,eqlrI,},
+ {dexrL,addrL,subrL,mulrL,0,modrL,mnmrL,mxmrL,ltnrL,gtnrL,eqlrL,},
+ {dexrD,addrD,subrD,mulrD,0,modrD,mnmrD,mxmrD,ltnrD,gtnrD,eqlrD,},
 };
 OV*ars[][11]={//scan
- {dexsB,addsB,subsB,mulsB,dvdsB,modsB,mnmsB,mxmsB,ltnsB,gtnsB,eqlsB,},
- {dexsH,addsH,subsH,mulsH,dvdsH,modsH,mnmsH,mxmsH,ltnsH,gtnsH,eqlsH,},
- {dexsI,addsI,subsI,mulsI,dvdsI,modsI,mnmsI,mxmsI,ltnsI,gtnsI,eqlsI,},
- {dexsL,addsL,subsL,mulsL,dvdsL,modsL,mnmsL,mxmsL,ltnsL,gtnsL,eqlsL,},
- {dexsD,addsD,subsD,mulsD,dvdsD,modsD,mnmsD,mxmsD,ltnsD,gtnsD,eqlsD,},
+ {dexsB,addsB,subsB,mulsB,0,modsB,mnmsB,mxmsB,ltnsB,gtnsB,eqlsB,},
+ {dexsH,addsH,subsH,mulsH,0,modsH,mnmsH,mxmsH,ltnsH,gtnsH,eqlsH,},
+ {dexsI,addsI,subsI,mulsI,0,modsI,mnmsI,mxmsI,ltnsI,gtnsI,eqlsI,},
+ {dexsL,addsL,subsL,mulsL,0,modsL,mnmsL,mxmsL,ltnsL,gtnsL,eqlsL,},
+ {dexsD,addsD,subsD,mulsD,0,modsD,mnmsD,mxmsD,ltnsD,gtnsD,eqlsD,},
 };
 OV*arp[][11]={//eachprior
- {dexpB,addpB,subpB,mulpB,dvdpB,modpB,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB,},
- {dexpH,addpH,subpH,mulpH,dvdpH,modpH,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH,},
- {dexpI,addpI,subpI,mulpI,dvdpI,modpI,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI,},
- {dexpL,addpL,subpL,mulpL,dvdpL,modpL,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL,},
- {dexpD,addpD,subpD,mulpD,dvdpD,modpD,mnmpD,mxmpD,ltnpD,gtnpD,eqlpD,},
+ {dexpB,addpB,subpB,mulpB,0,modpB,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB,},
+ {dexpH,addpH,subpH,mulpH,0,modpH,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH,},
+ {dexpI,addpI,subpI,mulpI,0,modpI,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI,},
+ {dexpL,addpL,subpL,mulpL,0,modpL,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL,},
+ {dexpD,addpD,subpD,mulpD,0,modpD,mnmpD,mxmpD,ltnpD,gtnpD,eqlpD,},
 };
 OV*ara[][11]={//amend
- {dexaB,addaB,subaB,mulaB,dvdaB,modaB,mnmaB,mxmaB,ltnaB,gtnaB,eqlaB,},
- {dexaH,addaH,subaH,mulaH,dvdaH,modaH,mnmaH,mxmaH,ltnaH,gtnaH,eqlaH,},
- {dexaI,addaI,subaI,mulaI,dvdaI,modaI,mnmaI,mxmaI,ltnaI,gtnaI,eqlaI,},
- {dexaL,addaL,subaL,mulaL,dvdaL,modaL,mnmaL,mxmaL,ltnaL,gtnaL,eqlaL,},
- {dexaD,addaD,subaD,mulaD,dvdaD,modaD,mnmaD,mxmaD,ltnaD,gtnaD,eqlaD,},
+ {dexaB,addaB,subaB,mulaB,0,modaB,mnmaB,mxmaB,ltnaB,gtnaB,eqlaB,},
+ {dexaH,addaH,subaH,mulaH,0,modaH,mnmaH,mxmaH,ltnaH,gtnaH,eqlaH,},
+ {dexaI,addaI,subaI,mulaI,0,modaI,mnmaI,mxmaI,ltnaI,gtnaI,eqlaI,},
+ {dexaL,addaL,subaL,mulaL,0,modaL,mnmaL,mxmaL,ltnaL,gtnaL,eqlaL,},
+ {dexaD,addaD,subaD,mulaD,0,modaD,mnmaD,mxmaD,ltnaD,gtnaD,eqlaD,},
 };
 
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
