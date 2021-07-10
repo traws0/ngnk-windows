@@ -5,7 +5,7 @@
 #define hd(v,f,g) hf(v##b,B,B,f)hf(v##h,H,H,f)hf(v##i,I,I,f)hf(v##l,L,L,f)hf(v##d,D,D,g)
 #define hc(v,f,g) hf(v##b,B,B,f)hf(v##h,H,B,f)hf(v##i,I,B,f)hf(v##l,L,B,f)hf(v##d,D,B,g)
 #define h(v,f) hd(v,f,f)
-h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)h(dvd,x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),y-(L)(y/x)*x)
+h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hf(dvdd,D,D,x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),y-(L)(y/x)*x)
 h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 #undef hc
@@ -25,7 +25,7 @@ h0(dex,b,B,B)h0(dex,h,H,H)h0(dex,i,I,I)h0(dex,l,L,L)h0(dex,d,D,D)
 h0(add,b,B,B)h0(add,h,H,H)h0(add,i,I,I)h0(add,l,L,L)h0(add,d,D,D)
 h0(sub,b,B,B)h0(sub,h,H,H)h0(sub,i,I,I)h0(sub,l,L,L)h0(sub,d,D,D)
 h0(mul,b,B,B)h0(mul,h,H,H)h0(mul,i,I,I)h0(mul,l,L,L)h0(mul,d,D,D)
-h1(dvd,b,B,B)h1(dvd,h,H,H)h1(dvd,i,I,I)h1(dvd,l,L,L)h1(dvd,d,D,D)
+                                                    h1(dvd,d,D,D)
 h1(mod,b,B,B)h1(mod,h,H,H)h1(mod,i,I,I)h1(mod,l,L,L)h1(mod,d,D,D)
 h2(mnm,b,B,B)h2(mnm,h,H,H)h2(mnm,i,I,I)h2(mnm,l,L,L)h2(mnm,d,D,D)
 h2(mxm,b,B,B)h2(mxm,h,H,H)h2(mxm,i,I,I)h2(mxm,l,L,L)h2(mxm,d,D,D)
@@ -34,25 +34,25 @@ h0(gtn,b,B,B)h0(gtn,h,H,H)h0(gtn,i,I,I)h0(gtn,l,L,L)h0(gtn,d,D,I)
 h2(eql,b,B,B)h2(eql,h,H,H)h2(eql,i,I,I)h2(eql,l,L,L)h2(eql,d,D,I)
 
 S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-list
- {{dvdbb,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb,},
-  {dvdhh,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh,},
-  {dvdii,modii,mnmii,mxmii,ltnii,0,eqlii,},
-  {dvdll,modll,mnmll,mxmll,ltnll,0,eqlll,},
+ {{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb,},
+  {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh,},
+  {    0,modii,mnmii,mxmii,ltnii,0,eqlii,},
+  {    0,modll,mnmll,mxmll,ltnll,0,eqlll,},
   {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd,},},
- {{dvdbB,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB,},
-  {dvdhH,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH,},
-  {dvdiI,modiI,mnmiI,mxmiI,ltniI,0,eqliI,},
-  {dvdlL,modlL,mnmlL,mxmlL,ltnlL,0,eqllL,},
+ {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB,},
+  {    0,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH,},
+  {    0,modiI,mnmiI,mxmiI,ltniI,0,eqliI,},
+  {    0,modlL,mnmlL,mxmlL,ltnlL,0,eqllL,},
   {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD,},},
- {{dvdBb,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb,},
-  {dvdHh,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh,},
-  {dvdIi,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi,},
-  {dvdLl,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl,},
+ {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb,},
+  {    0,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh,},
+  {    0,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi,},
+  {    0,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl,},
   {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd,},},
- {{dvdBB,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB,},
-  {dvdHH,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH,},
-  {dvdII,modII,mnmII,mxmII,ltnII,0,eqlII,},
-  {dvdLL,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL,},
+ {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB,},
+  {    0,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH,},
+  {    0,modII,mnmII,mxmII,ltnII,0,eqlII,},
+  {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL,},
   {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD,},},
 };
 
@@ -106,13 +106,7 @@ A2(dex,mr(x);y)
 A2(add,adm(x,y,0))
 A2(sub,add(x,Nx(neg(y))))
 A2(mul,adm(x,y,1))
-A2(dvd,Iv=4;P(xtmMA||ytmMA,eac2(av(v),x,y))
- x=Ny(gD(x));
- y=Nx(gD(y));
- Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];
- Y(t>tD,t+=tD-td)Y(v>7&&t==tD,t=tI)Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
- Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
+A2(dvd,vv(Ny(gD(x)),Nx(gD(y)),4))
 A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xzd(vv(x,y,vi('!')))dct(x,y))
 A2(mnm,vv(x,y,vi('&')))
 A2(mxm,vv(x,y,vi('|')))
