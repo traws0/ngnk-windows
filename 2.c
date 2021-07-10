@@ -5,7 +5,7 @@
 #define hd(v,f,g) hf(v##b,B,B,f)hf(v##h,H,H,f)hf(v##i,I,I,f)hf(v##l,L,L,f)hf(v##d,D,D,g)
 #define hc(v,f,g) hf(v##b,B,B,f)hf(v##h,H,B,f)hf(v##i,I,B,f)hf(v##l,L,B,f)hf(v##d,D,B,g)
 #define h(v,f) hd(v,f,f)
-h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hd(dvd,idiv(x,y),x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),y-(L)(y/x)*x)
+h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)h(dvd,x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),y-(L)(y/x)*x)
 h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 #undef hc
@@ -57,11 +57,11 @@ S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-lis
 };
 
 #define h(v,T,R,Q) SN I v##r##T(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
-h(dex,B,L,l)h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(dvd,B,L,l)h(mod,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)h(ltn,B,L,l)h(gtn,B,L,l)h(eql,B,L,l)
-h(dex,H,L,l)h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(dvd,H,L,l)h(mod,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)h(ltn,H,L,l)h(gtn,H,L,l)h(eql,H,L,l)
-h(dex,I,L,l)h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(dvd,I,L,l)h(mod,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)h(ltn,I,L,l)h(gtn,I,L,l)h(eql,I,L,l)
-h(dex,L,L,l)h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(dvd,L,L,l)h(mod,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)h(ltn,L,L,l)h(gtn,L,L,l)h(eql,L,L,l)
-h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(dvd,D,D,d)h(mod,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)h(ltn,D,D,d)h(gtn,D,D,d)h(eql,D,D,d)
+h(dex,B,L,l)h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(mod,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)h(ltn,B,L,l)h(gtn,B,L,l)h(eql,B,L,l)
+h(dex,H,L,l)h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(mod,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)h(ltn,H,L,l)h(gtn,H,L,l)h(eql,H,L,l)
+h(dex,I,L,l)h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(mod,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)h(ltn,I,L,l)h(gtn,I,L,l)h(eql,I,L,l)
+h(dex,L,L,l)h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(mod,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)h(ltn,L,L,l)h(gtn,L,L,l)h(eql,L,L,l)
+h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(mod,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)h(ltn,D,D,d)h(gtn,D,D,d)h(eql,D,D,d)
 #undef h
 
 OV*arr[][11]={//reduce
@@ -106,7 +106,13 @@ A2(dex,mr(x);y)
 A2(add,adm(x,y,0))
 A2(sub,add(x,Nx(neg(y))))
 A2(mul,adm(x,y,1))
-A2(dvd,vv(x,y,vi('%')))
+A2(dvd,Iv=4;P(xtmMA||ytmMA,eac2(av(v),x,y))
+ x=Ny(gD(x));
+ y=Nx(gD(y));
+ Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
+ Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];
+ Y(t>tD,t+=tD-td)Y(v>7&&t==tD,t=tI)Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
+ Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
 A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xzd(vv(x,y,vi('!')))dct(x,y))
 A2(mnm,vv(x,y,vi('&')))
 A2(mxm,vv(x,y,vi('|')))
