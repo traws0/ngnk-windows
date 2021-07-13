@@ -31,7 +31,7 @@ A room(Ax/*1*/,Nn)_(P(xr==1&&n*ZT[xt]<=xZ,AN(n,x))Ay=atn(xt,n);Mc(yC,xC,xn*ZT[xt
  Y(ytR,Y(xr==1,AN(0,x))E(i(xn,_R(ya))))x(y))
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
-I syP(Qs)_(In=Sn(s)+1;P(n<6,Lv=0;Mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!SQ(p,s),s0-p)p+=Sn(p)+1)
+I syP(Qs)_(In=Sn(s)+1;P(n<6&&(n<5||s[3]<128),Lv=0;Mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!SQ(p,s),s0-p)p+=Sn(p)+1)
  P(s1+n>s0+Z s0,die("syms oom\n"))Mc(s1,s,n);s1+=n;s0-s1+n)
 
 S Q skp(Qs)_(W(!MQ(s,"/\n",2),Qp=SS(s+1,"\n\\\n");s=p?p+3:s+Sn(s))s)S I ln(Q,Q);S A cmdx(Qs)_(en0())
