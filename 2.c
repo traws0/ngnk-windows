@@ -33,28 +33,27 @@ h1(ltn,b,B,B)h1(ltn,h,H,H)h1(ltn,i,I,I)h1(ltn,l,L,L)h1(ltn,d,D,I)
 h0(gtn,b,B,B)h0(gtn,h,H,H)h0(gtn,i,I,I)h0(gtn,l,L,L)h0(gtn,d,D,I)
 h2(eql,b,B,B)h2(eql,h,H,H)h2(eql,i,I,I)h2(eql,l,L,L)h2(eql,d,D,I)
 
-S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-list
- {{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb,},
-  {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh,},
-  {    0,modii,mnmii,mxmii,ltnii,0,eqlii,},
-  {    0,modll,mnmll,mxmll,ltnll,0,eqlll,},
-  {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd,},},
- {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB,},
-  {    0,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH,},
-  {    0,modiI,mnmiI,mxmiI,ltniI,0,eqliI,},
-  {    0,modlL,mnmlL,mxmlL,ltnlL,0,eqllL,},
-  {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD,},},
- {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb,},
-  {    0,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh,},
-  {    0,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi,},
-  {    0,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl,},
-  {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd,},},
- {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB,},
-  {    0,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH,},
-  {    0,modII,mnmII,mxmII,ltnII,0,eqlII,},
-  {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL,},
-  {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD,},},
-};
+S OV*arf[][5][7]={//0=atom-atom,1=atom-list,2=list-atom,3=list-list
+ {{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},
+  {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh},
+  {    0,modii,mnmii,mxmii,ltnii,0,eqlii},
+  {    0,modll,mnmll,mxmll,ltnll,0,eqlll},
+  {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd}},
+ {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB},
+  {    0,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH},
+  {    0,modiI,mnmiI,mxmiI,ltniI,0,eqliI},
+  {    0,modlL,mnmlL,mxmlL,ltnlL,0,eqllL},
+  {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD}},
+ {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb},
+  {    0,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh},
+  {    0,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi},
+  {    0,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl},
+  {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd}},
+ {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB},
+  {    0,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH},
+  {    0,modII,mnmII,mxmII,ltnII,0,eqlII},
+  {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL},
+  {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD}}};
 
 #define h(v,T,R,Q) SN I v##r##T(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
 h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)
