@@ -57,41 +57,34 @@ S OV*arf[][5][7]={//first dim: 0=atom-atom, 1=atom-list, 2=list-atom, 3=list-lis
 };
 
 #define h(v,T,R,Q) SN I v##r##T(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
-h(dex,B,L,l)h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(mod,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)h(ltn,B,L,l)h(gtn,B,L,l)h(eql,B,L,l)
-h(dex,H,L,l)h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(mod,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)h(ltn,H,L,l)h(gtn,H,L,l)h(eql,H,L,l)
-h(dex,I,L,l)h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(mod,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)h(ltn,I,L,l)h(gtn,I,L,l)h(eql,I,L,l)
-h(dex,L,L,l)h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(mod,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)h(ltn,L,L,l)h(gtn,L,L,l)h(eql,L,L,l)
-h(dex,D,D,d)h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(mod,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)h(ltn,D,D,d)h(gtn,D,D,d)h(eql,D,D,d)
+h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)
+h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)
+h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)
+h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)
+h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)
 #undef h
 
-OV*arr[][11]={//reduce
- {dexrB,addrB,subrB,mulrB,0,modrB,mnmrB,mxmrB,ltnrB,gtnrB,eqlrB,},
- {dexrH,addrH,subrH,mulrH,0,modrH,mnmrH,mxmrH,ltnrH,gtnrH,eqlrH,},
- {dexrI,addrI,subrI,mulrI,0,modrI,mnmrI,mxmrI,ltnrI,gtnrI,eqlrI,},
- {dexrL,addrL,subrL,mulrL,0,modrL,mnmrL,mxmrL,ltnrL,gtnrL,eqlrL,},
- {dexrD,addrD,subrD,mulrD,0,modrD,mnmrD,mxmrD,ltnrD,gtnrD,eqlrD,},
-};
-OV*ars[][11]={//scan
- {dexsB,addsB,subsB,mulsB,0,modsB,mnmsB,mxmsB,ltnsB,gtnsB,eqlsB,},
- {dexsH,addsH,subsH,mulsH,0,modsH,mnmsH,mxmsH,ltnsH,gtnsH,eqlsH,},
- {dexsI,addsI,subsI,mulsI,0,modsI,mnmsI,mxmsI,ltnsI,gtnsI,eqlsI,},
- {dexsL,addsL,subsL,mulsL,0,modsL,mnmsL,mxmsL,ltnsL,gtnsL,eqlsL,},
- {dexsD,addsD,subsD,mulsD,0,modsD,mnmsD,mxmsD,ltnsD,gtnsD,eqlsD,},
-};
-OV*arp[][11]={//eachprior
- {dexpB,addpB,subpB,mulpB,0,modpB,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB,},
- {dexpH,addpH,subpH,mulpH,0,modpH,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH,},
- {dexpI,addpI,subpI,mulpI,0,modpI,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI,},
- {dexpL,addpL,subpL,mulpL,0,modpL,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL,},
- {dexpD,addpD,subpD,mulpD,0,modpD,mnmpD,mxmpD,ltnpD,gtnpD,eqlpD,},
-};
-OV*ara[][11]={//amend
- {dexaB,addaB,subaB,mulaB,0,modaB,mnmaB,mxmaB,ltnaB,gtnaB,eqlaB,},
- {dexaH,addaH,subaH,mulaH,0,modaH,mnmaH,mxmaH,ltnaH,gtnaH,eqlaH,},
- {dexaI,addaI,subaI,mulaI,0,modaI,mnmaI,mxmaI,ltnaI,gtnaI,eqlaI,},
- {dexaL,addaL,subaL,mulaL,0,modaL,mnmaL,mxmaL,ltnaL,gtnaL,eqlaL,},
- {dexaD,addaD,subaD,mulaD,0,modaD,mnmaD,mxmaD,ltnaD,gtnaD,eqlaD,},
-};
+TD OV*ART[][11];ART
+arr={{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
+     {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
+     {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
+     {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
+     {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}},
+ars={{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},//scan
+     {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
+     {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
+     {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
+     {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}},
+arp={{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
+     {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
+     {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
+     {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
+     {dexpD,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}},
+ara={{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
+     {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
+     {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
+     {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
+     {dexaD,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
 
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
