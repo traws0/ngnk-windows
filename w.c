@@ -5,7 +5,7 @@ S A2(enc,x=Ny(gL(x));y=Nx(gL(y));Yt(Az=enc(x,enl(y));zn?fir(flp(z)):z(oL))
  UL m=gl(x);ux=y;Y(m,i(yn,yl%=m))u)
 S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
 A splcC(Cc    ,C*p,Ln)_(      Ax=oA;C*q;W((q=MC(p,c,n  )),xq(aCm(p,q));n-=q-p+1;p=q+1)Y(c-10||n,xq(aCn(p,n)))x)
-A splCC(C*s,Lm,C*p,Ln)_(El(!m)Ax=oA;C*q=p,*t=p+n,*r=t+1-m;W(q<r,Y(MQ(s,q,m),q++)E(xq(aCm(p,q));p=q+=m))xq(aCm(p,t)))
+A splCC(C*s,Lm,C*p,Ln)_(El(!m)Ax=oA;C*q;W((q=MM(p,n,s,m)),xq(aCm(p,q));n-=q+m-p;p=q+m)xq(aCn(p,n)))
 A splc(Cc    ,Ax)_(XC(x(splcC(c,  xC,xn)))et1(x))
 A splC(C*s,Lm,Ax)_(XC(x(splCC(s,m,xC,xn)))et1(x))
 NI L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
