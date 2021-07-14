@@ -157,5 +157,4 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(Qs)_(write(2,s,Sn(s)))
-S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
-S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));oh(n);write(2,"\n",1);n)
+S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));C s[17];s[16]=10;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17);n)
