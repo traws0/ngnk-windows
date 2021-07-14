@@ -103,15 +103,16 @@ A2 a2,add,aM,am,ap1,apn,apd,bin,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,
 A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),
- cmdl(Q),cmdm(Q),die(Q),eac1(A1,A),eac2(A,A,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),
- jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),splc(C,A),sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
+A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),
+ aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A1,A),eac2(A,A,A),
+ e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),splc(C,A),
+ sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);
-I asg(Ax),cD(D,D),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
-L _N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
-EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;
-EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
+I gi(A),asg(Ax),cD(D,D),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
+L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
+D gd_(A),gd(A);
+EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
 #define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
 //getters                           setters
@@ -123,14 +124,6 @@ S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);       
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
 #define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
 
-#define h(T) S A a##T(Nn)_(atn(t##T,n))
- h(A)h(C)h(B)h(H)h(I)h(L)h(D)h(S) //aA aC aB aH aI aL aD aS
-#undef h
-#define h(T,tt) S A a##tt(T v)_(AT(t##tt,(I)v))
- h(C,c)h(I,i)h(I,s) //ac ai as
-#undef h
-S A al(Lv)_(atnv(tl,1,&v))S A ad(Dv)_(atnv(td,1,&v))S I gi (Ax)_(Q(c3(tc,xt,ti)||xts);x)
-S L gl_(Ax)_(XP((I)x)*xL)S L gl(Ax)_(Lv=gl_(x);x(0);v)S D gd_(Ax)_(Q(xtd);*xD)S D gd(Ax)_(Dv=*xD;x(0);v)
 #define au(i) tvk(tu,i,1)
 #define av(i) tvk(tv,i,2)
 #define aw(i) tvk(tw,i,1)
@@ -165,4 +158,4 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define nop {asm volatile("fnop");}
 S I os(Qs)_(write(2,s,Sn(s)))
 S I oh(Ln)_(C s[17];s[16]=0;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17))
-S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,10-Sn(s)));oh(n);write(2,"\n",1);n)
+S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));oh(n);write(2,"\n",1);n)

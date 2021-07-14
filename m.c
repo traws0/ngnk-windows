@@ -24,11 +24,15 @@ A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_tP(t));Cb=59-__builtin_clzll(ZA|ZA-1+
  Y(b<i,xU=b;W(b<i--,u[i]=mb(i,(A)x+(ZA<<i))))xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Ax=atn(t,n);Mc(xC,v,n*ZT[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
+A aA(Nn)_(atn(tA,n))A aC(Nn)_(atn(tC,n))A aB(Nn)_(atn(tB,n))A aH(Nn)_(atn(tH,n))
+A aI(Nn)_(atn(tI,n))A aL(Nn)_(atn(tL,n))A aD(Nn)_(atn(tD,n))A aS(Nn)_(atn(tS,n))
+A ac(Cv)_(AT(tc,v))A ai(Iv)_(AT(ti,v))A as(Iv)_(AT(ts,v))A al(Lv)_(atnv(tl,1,&v))A ad(Dv)_(atnv(td,1,&v))
 A aCn(Qs,Nn)_(atnv(tC,n,s))A aCm(Qp,Qq)_(aCn(p,q-p))A aCz(Qs)_(aCn(s,Sn(s)))A aCl(Qs)_(Qq=SC(s,10);q?aCm(s,q):aCz(s))
 C tZ(Lv)_(v==(B)v?tB:v==(H)v?tH:v==(I)v?tI:tL)A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=_R(xx);_R(xy))*p=xx;AN(0,x);x(xy))
 A az(Lv)_(Ct=tZ(v);t==tL?al(v):ai(v))A1(mut,XP(x)P(xr==1,x)x=x(atnv(xt,xn,xC));Y(xtR,mRa(x))x)
 A room(Ax/*1*/,Nn)_(P(xr==1&&n*ZT[xt]<=xZ,AN(n,x))Ay=atn(xt,n);Mc(yC,xC,xn*ZT[xt]);
  Y(ytR,Y(xr==1,AN(0,x))E(i(xn,_R(ya))))x(y))
+I gi(Ax)_(Q(c3(tc,xt,ti)||xts);x)L gl_(Ax)_(XP((I)x)*xL)L gl(Ax)_(Lv=gl_(x);x(0);v)D gd_(Ax)_(*xD)D gd(Ax)_(Dv=*xD;x(0);v)
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
 I syP(Qs)_(In=Sn(s)+1;P(n<6&&(n<5||!(s[3]&128)),Lv=0;Mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!SQ(p,s),s0-p)p+=Sn(p)+1)
@@ -46,7 +50,7 @@ V kf(O char*s,L(*f)(L)){Ax=dmd(A(as(syP(s)),oA,av0,AT(te,AK(1,(A)f))),4);Y(x,x(0
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,Z(b)-1);P(n<0,0)b[n]=0;Qp=b;W(*p,Qq=SC0(p,10);ln(p,q);p=q+1)1)V repl(){W(rep())}
-V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=aa0();
+V kinit(In,O char**a){ov(123);argv=(Q*)a;env=(Q*)a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
  cn[tA]=ce[tA];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
  Mc(cn+tc,cn+tC,(tS-tC+1)*Z(A));i(tn-to,cn[to+i]=au0)
