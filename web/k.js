@@ -58,7 +58,7 @@ else{ //editor mode
   bc.textContent=s.n+'bytes'+(r.n?`(${r.join(', ')})`:'');return s}
  rdy(_=>{ed.value=p0(location.hash._(1).replace(/-$/,''));out.value=''
   ev.onclick=_=>{wa(async _=>{ubc();location.hash=p1(ed.value)+'-';await file('golf.k');await file('repl.k')
-   const s='\\l golf.k\n'+ed.value;fs['a.k']=t1(s._(-1)===N?s:s+N);out.value=''
+   const s='\\l golf.k\n\n'+ed.value;fs['a.k']=t1(s._(-1)===N?s:s+N);out.value=''
    const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
    let e;try{app.main(2,a)}catch(x){e=x}
    location.hash=p1(ed.value);if(e&&e.message!=='exit(0)')throw e})}
