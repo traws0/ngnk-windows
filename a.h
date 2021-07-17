@@ -55,10 +55,6 @@ TD long long L;TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,
 #define min(a...) extr(<,a)
 #define max(a...) extr(>,a)
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>Z(x)*8-y_:x;})
-S L absL(Lv)_(v<0?-v:v)S C hx1(Ii)_(i+(i>9?'a'-10:'0'))S I in(Li,Ln)_(0<=i&&i<n)S I c3(Cc,Cv,Cd)_(c<=v&&v<=d)
-S I c09(Cc)_(c3('0',c,'9'))S I caf(Cc)_(c3('a',c,'f'))S I cAz(Cc)_(c3('a',c|32,'z'))S I cA9(Cc)_(cAz(c)||c09(c))
-S I cAZ(Cc)_(c3('A',c,'Z'))S I cAF(Cc)_(c3('A',c,'F'))S I cAf(Cc)_(c3('a',c|32,'f'))
-
 #define Ms(a...) __builtin_memset(a)
 #define Mm(a...) __builtin_memmove(a)
 #define Mc(a...) __builtin_memcpy(a)
@@ -72,6 +68,28 @@ S I cAZ(Cc)_(c3('A',c,'Z'))S I cAF(Cc)_(c3('A',c,'F'))S I cAf(Cc)_(c3('a',c|32,'
 #define SC0(a...) strchrnul(a)
 C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);I memcmp(OV*,OV*,N),strcmp(Q,Q),exit(I);N strlen(Q);
 V*memCPY(V*,OV*,N),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N);
+L absL(L);
+
+A0 aa0;
+A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
+ hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,
+ str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
+A2 a2,add,aM,am,ap1,apn,apd,bin,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
+ sub,v0c,v1c,exc;
+A3 a3,try;
+AA amd,am1,dmd,dm1;
+AX eac,rdc,scn,eap,ear,eal,app,prj,run;
+A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),
+ aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A1,A),eac2(A,A,A),
+ e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),splc(C,A),
+ sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
+V mrn(I,OA*),repl();
+C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
+I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),gi(A),in(L,L),mtc_(A,A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
+L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
+D gd_(A),gd(A);
+EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
+#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
 //             1  2  3  4  5  6  7  8  9 10 11       15 16 17 18 19 20 21 22 23 24 25 26
 //            01 02 03 04 05 06 07 08 09 0a 0b       0e 0f 10 11 12 13 14 15 16 17 18 19
@@ -95,28 +113,6 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 #define _V(x) ((V*)((x)<<16>>16)) //ptr to data
 #define _r(x) ((I*)_V(x))[-3] //refcount
 #define _q(x,y) (x=apd(x,y))
-A0 aa0;
-A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
- hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sam,sha1,sha256,sha3_256,sin,ser,sqr,sqz,
- str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
-A2 a2,add,aM,am,ap1,apn,apd,bin,cat,com,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
- sub,v0c,v1c,exc;
-A3 a3,try;
-AA amd,am1,dmd,dm1;
-AX eac,rdc,scn,eap,ear,eal,app,prj,run;
-A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),
- aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A1,A),eac2(A,A,A),
- e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),splc(C,A),
- sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
-V mrn(I,OA*),repl();
-C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);
-I gi(A),asg(Ax),cD(D,D),si(Q,I),eS(A,I),mtc_(A,A),syP(Q);
-L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
-D gd_(A),gd(A);
-EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
-#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
-
-//getters                           setters
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
 S  C _v(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
