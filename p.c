@@ -5,9 +5,9 @@ S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(c09(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
 S D pd(Q*p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S Qs,s0;S I na;
-S A0(pZ,L l=0,h=0;Ax=oL;W(1,Lv=pl(&s);Y(!v&&*s=='N',v=NL;s++)v<l?l=v:h<v?h=v:0;x=apv(x,&v);Y(*s-32||!num(s+1),BR)s++)
+S A0(pZ,L l=0,h=0;Ax=oL;W(1,Lv=pl(&s);Y(!v&&*s=='N',v=NL;s++)v<l?l=v:h<v?h=v:0;x=apv(x,&v);B(*s-32||!num(s+1))s++)
  ct[max(tZ(l),tZ(h))](x))
-S A0(pD,Ax=oD;W(1,x=apv(x,(D[]){pd(&s)});Y(*s-32||!num(s+1),BR)s++)x)
+S A0(pD,Ax=oD;W(1,x=apv(x,(D[]){pd(&s)});B(*s-32||!num(s+1))s++)x)
 S A0(pC,Ax=oC;Cc=*++s;W(c&&c-'"',Y(c=='\\',c=*++s;Ii=si("tnr0",c);Y(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
 S C ph()_(Cc=*s;c09(c)?c-'0':caf(c)?c+10-'a':16)
 S A0(p0x,Ax=oC;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
@@ -22,7 +22,7 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='
  P(c=='(',s++;P(*s==')',s++;oA)x=N(pb(enl(MKL),')'));xn-2?x:las(x))
  P(c09(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!cA9(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;Qp=s;c=*p;
-  W(1,p+=*p==32;p+=*p=='-';c=*p;Y(!cA9(c),BR)W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
+  W(1,p+=*p==32;p+=*p=='-';c=*p;B(!cA9(c))W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
  P(cAz(c),Qp=s;x=pS('.');Y(s-p==1&&c3('y',c,'z'),na=max(na,c-'w'))AO(p-s0,p1(x)))
  P(c>127,Qp=s;x=pS('.');*v=1;AO(p-s0,p1(x)))
  Ii=si(vc,c);P(25<i&&i<30,c=*++s;I h=c==':';s+=h;*v=1;aw(i-26+3*h))P(i>19,PLH)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
@@ -36,5 +36,5 @@ S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Au=pe(0,v);P(!u,x?x(0):0);*
  P(!b,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(COM,x,z):AO(o,a2(mon(x),z)))
  Az=pe(0,v);P(!z,y(x?x(0):0))P(z==PLH,*v=1;P(!x,y)Ep(ytu,x,y)AO(o,a3(y,x,z)))
  *v&=y!=av0;Y(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
-S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',Ep(c==')',x,y)y=au0)xq(y);Y(*s-';'&&*s-10,BR)s++)Ep(*s-c,x)s++;x)
+S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));Y(y==PLH&&c-']',Ep(c==')',x,y)y=au0)xq(y);B(*s-';'&&*s-10)s++)Ep(*s-c,x)s++;x)
 A1(prs,Et(!xtC,x)x=str0(x);s=s0=xC;Ay=pb(a1(PRG),0);!y?eS(x,s-s0),0:lam(0,x,shy(y),oS))
