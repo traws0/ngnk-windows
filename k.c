@@ -5,7 +5,7 @@ OV*vf[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq
          dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex, eac,rdc, scn,eap,ear,eal};
 A1(mkn,XmMA(eac1(mkn,x))Ay=_R(cn[xt]);xtt?x(y):rsh(len(x),y)) //                                              MKL   '   /    \  ':   /:  \:
 S A emp(Ct)_(Ax=ce[t];x?xR:oA)
-A2(id_,/*00*/x==cv(',')?emp(yt):xtv&&xv<11?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
+A2(id_,/*00*/x==cv(',')?emp(yt):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 A2(com,AK(yk,AT(tq,a2(x,y))))
 AX(prj,XA(app(x,a,n))Ck=max(n,xk);i(n,k-=a[i]!=PLH)Ay=AK(k,atn(tp,n+1));yx=xR;Mc(yA+1,a,8*n);y)
 SN A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=aA(yn);Q(ytA);i(un,ua=get(ya,j))am(_R(xx),sqz(u)))
