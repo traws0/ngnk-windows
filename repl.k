@@ -108,9 +108,10 @@ I#y reshape   2 3#` -> (```;```)   3#2 -> 2 2 2
 f#y filter    {x>1}#0 2 1 3 5 4 -> 2 3 5 4
  _n floor     _12.34 -12.34 -> 12 -13
  _c lowercase _"Ab" -> "ab"
-x_y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
-x_i delete    "abcde"_2 -> "abde"
-f_y filterout {x>1}_0 2 1 3 5 4 -> 0 1
+i_Y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
+I_Y cut       2 4 4_"abcde" -> ("cd";"";,"e")
+f_Y filterout {x>1}_0 2 1 3 5 4 -> 0 1
+X_i delete    "abcde"_2 -> "abde"
  $x string    $(12;"ab";`cd;+) -> ("12";(,"a";,"b");"cd";,"+")
 i$C pad       5$"abc" -> "abc  "   -3$"a" -> "  a"
 s$y cast      `c$97 -> "a"   `d$1 -> 1.0   `$"a" -> `a
