@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/225962/peter-is-a-picky-eater/225990#225990
-f:{#(0>)_x{x[y#>x]-:1;x}\1+!#x}
+f:{#(|/0>)_x{x[y#>x]-:1;x}\1+!#x}
 
 \l 0.k
 t[1 2;2]
