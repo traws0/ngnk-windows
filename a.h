@@ -66,9 +66,8 @@ TD long long L;TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,
 #define SQ(a...) __builtin_strcmp(a)
 #define MM(a...)  memmem(a)
 #define SC0(a...) strchrnul(a)
-C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);I memcmp(OV*,OV*,N),strcmp(Q,Q),exit(I);N strlen(Q);
-V*memCPY(V*,OV*,N),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N);
-L absL(L);
+L absL(L);C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);I memcmp(OV*,OV*,N),strcmp(Q,Q),exit(I);N strlen(Q);
+V*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N);
 
 A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,

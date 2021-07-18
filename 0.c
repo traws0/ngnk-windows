@@ -5,9 +5,9 @@
  #define SYS_getdents SYS_freebsd11_getdents
 #endif
 
-V*memcpy(V*x,OV*y,Nn)_(C*p=x  ;Qq=y  ;i(n,*p++=*q++)x)
-V*memCPY(V*x,OV*y,Nn)_(C*p=x+n;Qq=y+n;i(n,*--p=*--q)x)
-V*memmove(V*x,OV*y,Nn)_((y<x&&x<y+n?memCPY:memcpy)(x,y,n))
+V*memcpy (V*x,OV*y,Nn)_(C*p=x  ;Qq=y  ;i(n,*p++=*q++)x)
+V*memrcpy(V*x,OV*y,Nn)_(C*p=x+n;Qq=y+n;i(n,*--p=*--q)x)
+V*memmove(V*x,OV*y,Nn)_((y<x&&x<y+n?memrcpy:memcpy)(x,y,n))
 V*memset(V*x,Iv,Nn)_(C*p=x;i(n,*p++=v);x)
 V*memchr(Qs,Iv,Nn)_(i(n,P(s[i]==v,(V*)(s+i)))(V*)0)
 V*memmem(OV*x,Nm,OV*y,Nn)_(Qp=x,q=y;i((L)m-(L)n+1,P(!memcmp(p+i,q,n),(V*)(p+i)))(V*)0)
