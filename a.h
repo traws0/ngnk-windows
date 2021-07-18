@@ -88,7 +88,8 @@ C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
 I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),gi(A),in(L,L),mtc_(A,A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 D gd_(A),gd(A);
-EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;EX OV*vf[],*arr[][11],*ars[][11],*arp[][11],*ara[][11];
+EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*ct[];EX Q*argv,*env;
+EX OV*vf[],*arrT[][11],*arsT[][11],*arpT[][11],*araT[][11];
 #define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
 //             1  2  3  4  5  6  7  8  9 10 11       15 16 17 18 19 20 21 22 23 24 25 26

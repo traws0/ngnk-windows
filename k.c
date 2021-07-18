@@ -70,7 +70,7 @@ AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
   A b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
  Y(n==4,Au=a[3];
   P(xtZ&&ytZ&&ztv&&zv<8&&utzZ,Ei(utT&&yn-un,x(y),u)x=mut(x);y=gL(y);Ny(sup(&x,&u));
-   Ei(y2(u2(x?((int(*)(V*,N,L*,N,V*,I))ara[xt-tB][zv])(xC,xn,yL,yn,utP?&u:(V*)uC,utT):0)))x)
+   Ei(y2(u2(x?((int(*)(V*,N,L*,N,V*,I))araT[xt-tB][zv])(xC,xn,yL,yn,utP?&u:(V*)uC,utT):0)))x)
   P(xtC&&ytZ&&z==av0&&utcC,x=mut(x);y=gL(y);I d=utT;u=enla(u);El(d&&yn-un,x(y),u)
    x=y2(u2(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));Ei(!x)x))
  rdc(cv('@'),a,n))

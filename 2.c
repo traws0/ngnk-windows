@@ -64,26 +64,26 @@ h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)
 #undef h
 
 TD OV*ART[][11];ART
-arr={{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
-     {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
-     {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
-     {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
-     {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}},
-ars={{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},//scan
-     {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
-     {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
-     {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
-     {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}},
-arp={{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
-     {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
-     {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
-     {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
-     {dexpD,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}},
-ara={{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
-     {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
-     {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
-     {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
-     {dexaD,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
+arrT={{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
+      {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
+      {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
+      {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
+      {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}},
+arsT={{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},//scan
+      {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
+      {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
+      {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
+      {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}},
+arpT={{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
+      {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
+      {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
+      {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
+      {dexpD,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}},
+araT={{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
+      {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
+      {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
+      {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
+      {dexaD,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
 
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
