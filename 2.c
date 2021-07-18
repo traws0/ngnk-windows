@@ -13,7 +13,7 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x
 #undef hf
 
 #define hF(f,T,R,e...) SN I f(O T*RE a,O T*RE b,R*RE r,Nn)_(e)
-#define h0(v,t,T,R) SN I v##a##T(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
+#define h0(v,t,T,R)           SN I v##a##T(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
                                 hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)\
                                 hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
 #define ht(v,t,T,R) h0(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)\
@@ -78,16 +78,16 @@ arpT={{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
       {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
       {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
       {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
-      {dexpD,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}},
+      {dexpL,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}},
 araT={{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
       {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
       {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
       {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
-      {dexaD,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
+      {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
 
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
-S A vv(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
+S A ari(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(av(v),x,y))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];
  Y(t>tD,t+=tD-td)Y(v>7&&t==tD,t=tI)Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
@@ -98,10 +98,10 @@ A2(dex,mr(x);y)
 A2(add,adm(x,y,0))
 A2(sub,add(x,Nx(neg(y))))
 A2(mul,adm(x,y,1))
-A2(dvd,vv(Ny(gD(x)),Nx(gD(y)),4))
-A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xzd(vv(x,y,vi('!')))dct(x,y))
-A2(mnm,vv(x,y,vi('&')))
-A2(mxm,vv(x,y,vi('|')))
-A2(ltn,vv(x,y,vi('<')))
+A2(dvd,ari(Ny(gD(x)),Nx(gD(y)),4))
+A2(mod,P(xtl&&gl_(x)==NL,out(x(y)))Xzd(ari(x,y,vi('!')))dct(x,y))
+A2(mnm,ari(x,y,vi('&')))
+A2(mxm,ari(x,y,vi('|')))
+A2(ltn,ari(x,y,vi('<')))
 A2(gtn,ltn(y,x))
-A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):vv(x,y,vi('=')))
+A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):ari(x,y,vi('=')))
