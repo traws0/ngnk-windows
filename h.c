@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 SN A flt(Ax,Ay,Cb)_(Er(!ytT,x,y)Au=rsh(ai(0),yR);
- i(yn,Az=get(y,i);z=app(x,&z,1);B(!z||!(z=gL(z)),u=u(0))Ln=gl(z);P(n<0||n!=(I)n,x(y(u(0))))j(b?n:!n,uq(get(y,i))))x(y(u)))
+ i(yN,Az=app(x,A(get(y,i)),1);B(!z,u=u(0))B(!ztz,u=et2(u,z))Ln=gl(z);B(n!=(UI)n,u=ed1(u))j(b?n:!n,uq(get(y,i))))x(y(u)))
 S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1,r-1))y)
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);Mc(yC,xC+j*w,q*w);
  Mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,Mc(yC+m*w,yC,m*w);m*=2)Y(n>m,Mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
