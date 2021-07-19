@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-SN A flt(Ax,Ay,Cb)_(Er(!ytT,x,y)Au=rsh(ai(0),yR);
+SN A flt(Ax,Ay,Cb)_(Er(!ytT,x,y)Au=rshL(0,yR);
  i(yN,Az=app(x,A(get(y,i)),1);B(!z,u=u(0))B(!ztz,u=et2(u,z))Ln=gl(z);B(n!=(UI)n,u=ed1(u))j(b?n:!n,uq(get(y,i))))x(y(u)))
 S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1,r-1))y)
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);Mc(yC,xC+j*w,q*w);
@@ -10,6 +10,7 @@ A2(rsh,XF(flt(x,y,1))Ym(Xz(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y
  i(n,Lv=xl;Y(v<0,Ed(n>2||n==2&&v-NL,x,y)
   P(n==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
  Nj=0;x(y(rs(y,yn,&j,xL,n))))
+A rshL(Ln,Ax)_(rsh(az(n),x))
 A2(cut,XF(flt(x,y,0))Ym(K("{((!y)^x)#y}",x,y))
  YT(x=Ny(gL(x));K("{n:#y;y$[x~*x;$[n<x|-x;!0;x<0;!n+0^x;x+!n-x];$[|/0<':x,#y;`err\"dom\";x+!'1_-':x,#y]]}",x,y))
  Yz(Et(!xtT,x,y)Li=gl(y);P(!in(i,xn),x)
