@@ -13,14 +13,19 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x
 #undef hf
 
 #define hF(f,T,R,e...) SN I f(O T*RE a,O T*RE b,R*RE r,Nn)_(e)
-#define h0(v,t,T,R)           SN I v##a##T(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)\
-                                hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)\
-                                hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
-#define ht(v,t,T,R) h0(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)\
-                                hF(v##T##T,T,R,AL(a)AL(b)AL(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)\
-                                hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
-#define h1(v,t,T,R) ht(v,t,T,R) hF(v##T##t,T,R,AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
-#define h2(v,t,T,R) ht(v,t,T,R) hF(v##T##t,T,R,v##t##T(b,a,r,n))
+#define  hr(v,T,R,Q) SN I v##r##T(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
+#define  ha(v,t,T,R) SN I v##a##T(T*RE a,Nn,L*RE p,Nm,T*RE b,I d)_(i(m,Lj=p[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)
+#define  hs(v,t,T,R) hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)
+#define  hp(v,t,T,R) hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
+#define htt(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)
+#define htT(v,t,T,R) hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
+#define hTT(v,t,T,R) hF(v##T##T,T,R,AL(a)AL(b)AL(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)
+#define hTt(v,t,T,R) hF(v##T##t,T,R,AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
+#define hsw(v,t,T,R) hF(v##T##t,T,R,v##t##T(b,a,r,n))
+
+#define h0(a...) ha(a)hs(a)hp(a)
+#define h1(a...) h0(a)htt(a)htT(a)hTT(a)hTt(a)
+#define h2(a...) h0(a)htt(a)htT(a)hTT(a)hsw(a)
 h0(dex,b,B,B)h0(dex,h,H,H)h0(dex,i,I,I)h0(dex,l,L,L)h0(dex,d,D,D)
 h0(add,b,B,B)h0(add,h,H,H)h0(add,i,I,I)h0(add,l,L,L)h0(add,d,D,D)
 h0(sub,b,B,B)h0(sub,h,H,H)h0(sub,i,I,I)h0(sub,l,L,L)h0(sub,d,D,D)
@@ -33,35 +38,33 @@ h1(ltn,b,B,B)h1(ltn,h,H,H)h1(ltn,i,I,I)h1(ltn,l,L,L)h1(ltn,d,D,I)
 h0(gtn,b,B,B)h0(gtn,h,H,H)h0(gtn,i,I,I)h0(gtn,l,L,L)h0(gtn,d,D,I)
 h2(eql,b,B,B)h2(eql,h,H,H)h2(eql,i,I,I)h2(eql,l,L,L)h2(eql,d,D,I)
 
-S OV*arf[][5][7]={//0=atom-atom,1=atom-list,2=list-atom,3=list-list
- {{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},
+hr(add,B,L,l)hr(add,H,L,l)hr(add,I,L,l)hr(add,L,L,l)hr(add,D,D,d)
+hr(sub,B,L,l)hr(sub,H,L,l)hr(sub,I,L,l)hr(sub,L,L,l)hr(sub,D,D,d)
+hr(mul,B,L,l)hr(mul,H,L,l)hr(mul,I,L,l)hr(mul,L,L,l)hr(mul,D,D,d)
+hr(mnm,B,L,l)hr(mnm,H,L,l)hr(mnm,I,L,l)hr(mnm,L,L,l)hr(mnm,D,D,d)
+hr(mxm,B,L,l)hr(mxm,H,L,l)hr(mxm,I,L,l)hr(mxm,L,L,l)hr(mxm,D,D,d)
+
+S OV*arf[][5][7]={
+ {{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},//atom+atom
   {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh},
   {    0,modii,mnmii,mxmii,ltnii,0,eqlii},
   {    0,modll,mnmll,mxmll,ltnll,0,eqlll},
   {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd}},
- {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB},
+ {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB},//atom+list
   {    0,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH},
   {    0,modiI,mnmiI,mxmiI,ltniI,0,eqliI},
   {    0,modlL,mnmlL,mxmlL,ltnlL,0,eqllL},
   {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD}},
- {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb},
+ {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb},//list+atom
   {    0,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh},
   {    0,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi},
   {    0,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl},
   {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd}},
- {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB},
+ {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB},//list+list
   {    0,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH},
   {    0,modII,mnmII,mxmII,ltnII,0,eqlII},
   {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL},
   {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD}}};
-
-#define h(v,T,R,Q) SN I v##r##T(R*RE a,T*RE b,Nn)_(R c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
-h(add,B,L,l)h(sub,B,L,l)h(mul,B,L,l)h(mnm,B,L,l)h(mxm,B,L,l)
-h(add,H,L,l)h(sub,H,L,l)h(mul,H,L,l)h(mnm,H,L,l)h(mxm,H,L,l)
-h(add,I,L,l)h(sub,I,L,l)h(mul,I,L,l)h(mnm,I,L,l)h(mxm,I,L,l)
-h(add,L,L,l)h(sub,L,L,l)h(mul,L,L,l)h(mnm,L,L,l)h(mxm,L,L,l)
-h(add,D,D,d)h(sub,D,D,d)h(mul,D,D,d)h(mnm,D,D,d)h(mxm,D,D,d)
-#undef h
 
 TD OV*ART[][11];ART
 arrT={{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
