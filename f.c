@@ -3,9 +3,8 @@
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S V rn(L*r,Nn){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
  i(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=rot(d,45))}
-S A rL(Ln,Lm)_(Ed(m<0)Y(n==NL,n=-m)
- Ax=aL(absL(n));rn(xL,xn);Y(m,Y(m<=1ll<<32,i(xn,xl=(UI)xl*(UL)m>>32))E(i(xn,xl=(UL)xl%m)))
- Y(n<0,n=-n;El(n>m,x)i(n,Lk=m-n+i;Lv=((UL*)xL)[i]%=k+1;L*p=&xl;j(i,B(xl==v,*p=k)))Ay=rL(n,0);y2(i(n,SWP(xl,xL[(UL)yl%(i+1)]))0))x)
+S A rU(UL n,Lm)_(Ed(m<0)Ax=aL(n);rn(xL,n);Y(m,Y(m<=1ll<<32,i(n,xl=(UI)xl*(UL)m>>32))E(i(n,xl=(UL)xl%m)))x)
+S A rL(Ln,Lm)_(P(n>=0,rU(n,m))P(n==NL,rL(-m,m))n=-n;El(n>m)Ax=rU(n,0);i(n,UL k=m-n+i,v=xl%=k+1;j(i,B(xL[j]==v,xl=k)))x)
 S A rD(Ln)_(AT(tD,add(al(1023ll<<52),rL(n,1ll<<52))))
 S A rnd(Lm,Ax)_(Xz(rL(m,gl(x)))Xc(gC(add(gi(x)=='A'?x:ac('a'),Nx(rL(m,26)))))Xd(mul(x,add(ad(-1),Nx(rD(m)))))
  XMT(idx(x,Nx(rL(m,xN))))et1(x))
