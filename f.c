@@ -1,13 +1,15 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 //prng: xoshiro256+ (public domain) http://vigna.di.unimi.it/xorshift/ seeded with the central column of rule30, little-endian:
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
-S V rn(L*r,Nn){S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
- i(n,r[i]=a+d;O UL t=b<<17;c^=a;d^=b;b^=c;a^=d;c^=t;d=rot(d,45))}
-S A rU(UL n,Lm)_(Ed(m<0)Ax=aL(n);rn(xL,n);Y(m,Y(m<=1ll<<32,i(n,xl=(UI)xl*(UL)m>>32))E(i(n,xl=(UL)xl%m)))x)
-S A rL(Ln,Lm)_(P(n>=0,rU(n,m))P(n==NL,rL(-m,m))n=-n;El(n>m)Ax=rU(n,0);i(n,UL k=m-n+i,v=xl%=k+1;j(i,B(xL[j]==v,xl=k)))x)
-S A rD(Ln)_(AT(tD,add(al(1023ll<<52),rL(n,1ll<<52))))
-S A rnd(Lm,Ax)_(Xz(rL(m,gl(x)))Xc(gC(add(gi(x)=='A'?x:ac('a'),Nx(rL(m,26)))))Xd(mul(x,add(ad(-1),Nx(rD(m)))))
- XMT(idx(x,Nx(rL(m,xN))))et1(x))
+S UL r1()_(S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
+ Lv=b<<17;c^=a;d^=b;b^=c;a^=d;c^=v;d=rot(d,45);a+d)
+S UI rm(UL m)_((UI)r1()*m>>32)
+S V shf(L*r,Nn){i(n,UI j=rm(i+1);SWP(r[i],r[j]))}
+S A ro(UL n,UL m)_(Ax=aL(n);i(n,xl=r1())Y(m,Y(m<=1ll<<32,i(n,xl=rm(m)))E(i(n,xl=(UL)xl%m)))x)
+S A de(UL n,UL m)_(El(n>m)Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xL,n);x)
+S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
+S A rnd(Ln,Ax)_(Xz(rd(n,gl(x)))Xc(gC(add(gi(x)=='A'?x:ac('a'),Nx(rd(n,26)))))
+ Xd(mul(x,add(ad(-1),Nx(AT(tD,add(al(1023ll<<52),rd(n,1ll<<52)))))))XMT(idx(x,Nx(rd(n,xN))))et1(x))
 
 #define h(T) NI L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
              NI V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
