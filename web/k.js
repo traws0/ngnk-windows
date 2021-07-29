@@ -50,7 +50,8 @@ if(location.hash==='#r'){ //repl mode
     ed.value=s._(0,i)+ha[hi];cur(ed,skPR(i));return!1}
    if(k===13){let s=ed.value,p=ed.selectionStart,q=ed.selectionEnd;if(p===q){p=s._(0,p).lio(N)+1;q=(s+N).io(N,q)}
     ha[hi]=s._(p,q);inp=s._(skPR(p),q)+N;let l=ha.n-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push('')-1;ap(q-s.n?inp+N:N);
-    inp='repl.line"'+kstr(inp)+'";\n';try{app.rep()}catch(x){ed.disabled=1;error(x)};return!1}}})}
+    inp='repl.line@'+(inp.length===1?',':'')+'"'+kstr(inp)+'";\n'
+    try{app.rep()}catch(x){ed.disabled=1;error(x)};return!1}}})}
 else{ //editor mode
  const ubc=_=>{let s=ed.value,i=s.io(N+N),r=[] //update byte count and return the counted part
   if(i>=0){s=s._(0,i);r.push('till empty line')}
