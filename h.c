@@ -16,7 +16,7 @@ A2(cut,XF(flt(x,y,0))Ym(K("{((!y)^x)#y}",x,y))
  Yz(Et(!xtT,x,y)Li=gl(y);P(!in(i,xn),x)
   Az=atn(xt,xn-1);L w=ZT[xt];Mc(zC,xC,i*w);Mc(zC+i*w,xC+i*w+w,(xn-i-1)*w);Y(xtA,z=sqz(mRa(z)))x(z))
  et2(x,y))
-A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtcz||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,eac1(enl,y)))a1(x))
+A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtcz||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
 A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)

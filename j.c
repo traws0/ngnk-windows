@@ -14,5 +14,5 @@ S A jr(Qp,Lv)_(Cc;W((c=*p++),P(c-*s,0)s++)az(v))S A0(jt,jr("true",1))S A0(jf,jr(
 S A0(jv,Cc=jw();Ii=si("-ftn[{\"",c)*!c09(c);Ax=CH(i,&jd,jf,jt,jn,ja,jo,js,je)();jw();x)
 A1(js0,Et(!xtcC,x)x=str0(enla(x));s=xC;Ay=jv();Y(y&&*s,y=y(0))P(!y,eS(x,s-xC);ep0())x(y))
 
-A1(js1,Xd(str(x))XC(xn-1?kst(x):kst(fir(x)))Xc(js1(enl(x)))XzZ(js1(gD(x)))XMT(sur('[',jc(',',N(eac1(js1,x))),']'))
+A1(js1,Xd(str(x))XC(xn-1?kst(x):kst(fir(x)))Xc(js1(enl(x)))XzZ(js1(gD(x)))XMT(sur('[',jc(',',N(eac1(x,js1))),']'))
  Xm(Ay=kv(&x);sur('{',jc(',',N(K("{(`j'x),'\":\",'`j'y}",x,y))),'}'))js1(str(x)))

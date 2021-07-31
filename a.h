@@ -79,7 +79,7 @@ A3 a3,try;
 AA amd,am1,dmd,dm1;
 AX eac,rdc,scn,eap,ear,eal,app,prj,run;
 A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),
- aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A1,A),eac2(A,A,A),
+ aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A,A1),eac2(A,A,A),
  e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),rshL(L,A),
  splc(C,A),sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();

@@ -37,7 +37,7 @@ A2(v1c,Et(!ytC,x)Xz(If=gl(x);Nn=yn;Qs=yC;y2(Az=au0;W(n>0,Lk=write(f,s,n);Y(k<0,z
 
 S A rda(If)_(Ax=aC(256-ZA);L m=0,k;
  W((k=read(f,xC+m,xn-m))>0,m+=k;Y(m+1000000>xn&&2*m>xn,Ay=aC(2*xn+ZA);Mc(yC,xC,m);x=x(y)))close(f);AN(m,x))
-A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(eac1(str0,x));Q a[xn+1];i(xn,a[i]=_V(xa))a[xn]=0;
+A1(frk,Et(!xtA||xn-2,x)Ay=kv(&x);Ed(!xtA||!ytC,x,y)x=Ny(eac1(x,str0));Q a[xn+1];i(xn,a[i]=_V(xa))a[xn]=0;
  I p[4];pipe(p);pipe(p+2);P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,(char*O*)env));0)
  close(*p);close(p[3]);N(v0c(ai(p[1]),x(y)));close(p[1]);rda(p[2]))
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)

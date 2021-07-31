@@ -4,7 +4,7 @@
 #define F1(f,T,c...) hf(f##T,T,i(PD(n,a),r[i]=({c;}))n)
 TD size_t(*F1)(OV*,V*,N);NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])F1(flr,C,a[i]+32*cAZ(a[i]))
 
-#define R1(f,a...) A1(f,XmMA(eac1(f,x))a)
+#define R1(f,a...) A1(f,XmMA(eac1(x,f))a)
 SN A fx(F1 f,Ax)_(P(xr==1,f(xC,xC,xn);x)Ay=atn(xt,xn);x2(f(xC,yC,yn);y))
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
