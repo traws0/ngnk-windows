@@ -95,7 +95,7 @@ EX OV*vf[],*arrT[][11],*arsT[][11],*arpT[][11],*araT[][11];
 //            01 02 03 04 05 06 07 08 09 0a 0b       0e 0f 10 11 12 13 14 15 16 17 18 19
 //            () "" ,0 ,1 ,2 ,3 ,d ,` +!  ! "c"       2  3 .3  ` {} 1+ ++ +/ +: +  /  f
 enum      {t9,tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tc,t8,t7,ti,tl,td,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
-#define TS "0""A""C""B""H""I""L""D""S""M""m""c""b""h""i""l""d""s""o""p""q""r""u""v""w""e" //their symbols
+#define TS "?""A""C""B""H""I""L""D""S""M""m""c""?""?""i""l""d""s""o""p""q""r""u""v""w""e" //their symbols
 #define TZ  0, 8, 1, 1, 2, 4, 8, 8, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  0, 4, 0, 0, 1, 2, 3, 3, 2, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
 EX OC Zt[],ZT[];S C _t(A);S I _tt(Ct)_(t>tm)S I _tT(Ct)_(t<tM)S I _tz(Ct)_(c3(ti,t,tl))S I _tZ(Ct)_(c3(tB,t,tL))
