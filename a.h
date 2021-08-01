@@ -103,16 +103,16 @@ S I _tF(Ct)_(t>=to)S I _tP(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,te))S I _tR(Ct)_(Zt[
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
 //header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset,r=refcount,n=length)
-//tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,0=alignment,i=value):
-// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
+//tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,i=value):
+// 00000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii tc,ti
 // tttttttt........ooooooooooooooooiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ts
-// tttttttt.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
-// tttttttt..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
+// 00000000.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
+// 00000000..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // ttttttttvvvvvkkk................................................ tu,tv,tw
 #define _V(x) ((V*)((x)<<16>>16)) //ptr to data
-#define _r(x) ((I*)_V(x))[-3] //refcount
-#define _q(x,y) (x=apd(x,y))
+#define _r(x) ((I*)_V(x))[-3]     //refcount
+#define _q(x,y) (x=apd(x,y))      //append
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
 S  C _v(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
 S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
