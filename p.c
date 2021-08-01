@@ -7,7 +7,7 @@ L pu(Q*p)_(Qs=*p;Lv=0;Cc=*s;W(c09(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(Q*p)_(Im=**
 S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  Y(c=='.',c=*++s;W(c09(c),Y(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))Y(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
 S D pd(Q*p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
-S Qs,s0;S I na;
+S Qs,s0;S I nx;
 S A0(pZ,L l=0,h=0;Ax=oL;W(1,Lv=pl(&s);Y(!v&&*s=='N',v=NL;s++)v<l?l=v:h<v?h=v:0;x=apv(x,&v);B(*s-32||!num(s+1))s++)
  ct[max(tZ(l),tZ(h))](x))
 S A0(pD,Ax=oD;W(1,x=apv(x,(D[]){pd(&s)});B(*s-32||!num(s+1))s++)x)
@@ -19,14 +19,14 @@ S A pS(Cc)_(Ax=oS;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);x=y(apv(x,(I[]){s
 S A lam(Ck,Ax,Ay,Az)_(AK(k,atnv(tA,5,A(x,y,au0,z,au0)))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];Y(ytA&&yn>2,Az=yx;Y((z==av0||ztu)&&asg(yy),xq(au0)))x) //if last is assignment, return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
-S A0(po,C nb=na;na=1;Q s1=s0,t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(oA,']')));Ep(!ytS||yn>8,y))
- Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))Y(y==au0,y=px(na))E(na=yn)Ax=cpl(lam(na,aCn(t,s-t),shy(z),y));s0=s1;na=nb;x)
+S A0(po,C nb=nx;nx=1;Q s1=s0,t=s0=s++;Ay;Y(*s-'[',y=au0)E(s++;y=sqz(N(pb(oA,']')));Ep(!ytS||yn>8,y))
+ Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))Y(y==au0,y=px(nx))E(nx=yn)Ax=cpl(lam(nx,aCn(t,s-t),shy(z),y));s0=s1;nx=nb;x)
 S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
  P(c=='(',s++;P(*s==')',s++;oA)x=N(pb(enl(MKL),')'));xn-2?x:las(x))
  P(c09(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';*v=1;u?au(i):av(i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!cA9(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;Qp=s;c=*p;
   W(1,p+=*p==32;B(!num(p))p+=*p=='-';c=*p;B(!cA9(c))W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
- P(cAz(c),Qp=s;x=pS('.');Y(s-p==1&&c3('y',c,'z'),na=max(na,c-'w'))AO(p-s0,p1(x)))
+ P(cAz(c),Qp=s;x=pS('.');Y(s-p==1&&c3('y',c,'z'),nx=max(nx,c-'w'))AO(p-s0,p1(x)))
  P(c>127,Qp=s;x=pS('.');*v=1;AO(p-s0,p1(x)))
  Ii=si("'/\\",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw(i+3*h))i=si(vc,c);P(i>19,PLH)I u=*++s==':';s+=u;*v=1;u?au(i):av(i))
 S A1(mon,P(xtv&&x-av0,au(xv))P(xtA&&(xn==2&&xx==aw(0)||xn==3&&xx==COM),x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)
