@@ -3,9 +3,9 @@ S A1(sam,x)S A2(com,AK(na(y),AT(tq,a2(x,y))))A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt
 OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'};
 A1*v1[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out};
 A2*v2[]={dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex};
-A2(id_,/*00*/x==cv(',')?(ce[yt]?_R(ce[yt]):oA):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
-I na(Ax/*0*/)_(xtu?1:xtv?2:xtw?1:xk) //arity
-AX(prj,XA(app(x,a,n))Ck=max(n,na(x));i(n,k-=a[i]!=PLH)Ay=AK(k,atn(tp,n+1));yx=xR;Mc(yA+1,a,8*n);y)
+A2(id_,/*00*/x==cv(',')?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
+I na(Ax/*0*/)_(xtu||xtw?1:xtv?2:xk) //arity
+AX(prj,XA(app(x,a,n))Ik=max(n,na(x));i(n,k-=a[i]!=PLH)Ay=aA(n+1);yx=xR;Mc(yA+1,a,8*n);AT(tp,AK(k,y)))
 SN A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=aA(yn);Q(ytA);i(un,ua=get(ya,j))am(_R(xx),sqz(u)))
 A get(Ax/*0*/,Li)_(XA(_R(xa))XC(ac(xc))XB(ai(xb))XH(ai(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))XM(getM(x,i))Xm(getr(xy,i))xR)
 A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xN)?get(x,i):xN?mkn(get(x,0)):_R(cn[xt]))
