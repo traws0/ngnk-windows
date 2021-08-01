@@ -84,7 +84,7 @@ A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),
  splc(C,A),sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
-I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),gi(A),in(L,L),mtc_(A,A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
+I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),gi(A),in(L,L),mtc_(A,A),na(A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 D gd_(A),gd(A);
 EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*ct[];EX Q*argv,*env;
@@ -119,11 +119,11 @@ S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<
 S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
 S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);       xL[-1]=n;x)
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
-#define tvk(t,v,k) (A)((UL)(t)<<56|(UL)(v)<<51|(UL)(k)<<48) //type,value,arity
+#define TV(t,v) (A)((UL)(t)<<56|(UL)(v)<<51)
 
-#define au(i) tvk(tu,i,1)
-#define av(i) tvk(tv,i,2)
-#define aw(i) tvk(tw,i,1)
+#define au(i) TV(tu,i)
+#define av(i) TV(tv,i)
+#define aw(i) TV(tw,i)
 #define vi(c) (c==':'?0:c=='+'?1:c=='-'?2:c=='*'?3:c=='%'?4:c=='!'?5:c=='&'?6:c=='|'?7:c=='<'?8:c=='>'?9:c=='='?10:\
  c=='~'?11:c==','?12:c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:20+c-'0')
 #define cu(c) au(vi(c))
