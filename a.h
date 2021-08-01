@@ -104,11 +104,11 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 
 //header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset,r=refcount,n=length)
 //tagged ptr bits (t=type,v=value,w=adverb,k=arity,o=srcoffset,x=ptr,i=value):
-// 00000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
+// ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti
 // tttttttt........oooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
-// 00000000.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
-// 00000000..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
+// .............kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
+// ..........wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // tttttttt...................................................vvvvv tu,tv,tw
 #define _V(x) ((V*)((x)<<16>>16)) //ptr to data
 #define _r(x) ((I*)_V(x))[-3]     //refcount
@@ -120,8 +120,7 @@ S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);x&~( 7ll<<48)|k<<48)
 S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
 S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
-#define TV(t,v) (A)((UL)(t)<<56|(UL)(v))
-
+#define TV(t,v) (A)((UL)(t)<<56|(v))
 #define au(i) TV(tu,i)
 #define av(i) TV(tv,i)
 #define aw(i) TV(tw,i)
