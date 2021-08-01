@@ -103,13 +103,13 @@ S I _tF(Ct)_(t>=to)S I _tP(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,te))S I _tR(Ct)_(Zt[
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
 //header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset,r=refcount,n=length)
-//tagged ptr bits (t=type,v=verb,k=arity,o=srcoffset,x=ptr,i=value):
+//tagged ptr bits (t=type,v=verb,w=adverb,k=arity,o=srcoffset,x=ptr,i=value):
 // 00000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
 // tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii tc,ti
 // tttttttt........ooooooooooooooooiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ts
 // 00000000.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
-// 00000000..vvvkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
-// ttttttttvvvvvkkk................................................ tu,tv,tw
+// 00000000..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
+// ttttttttvvvvv................................................... tu,tv,tw
 #define _V(x) ((V*)((x)<<16>>16)) //ptr to data
 #define _r(x) ((I*)_V(x))[-3]     //refcount
 #define _q(x,y) (x=apd(x,y))      //append
