@@ -52,7 +52,7 @@ A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,Z(b)-1);P(n<0,0)b[n]=0;Qp=b;W(*p,Qq=SC0(p,10);ln(p,q);p=q+1)1)V repl(){W(rep())}
 V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
- cn[tA]=ce[tC];cn[tC]=ac(32);xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tS]=as(0);
+ cn[tA]=ce[tC];xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tC]=ac(32);cn[tS]=as(0);
  Mc(cn+tc,cn+tC,(tS-tC+1)*Z(A));i(tn-to,cn[to+i]=au0)
     ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
  xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
