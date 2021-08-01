@@ -109,17 +109,18 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 // tttttttt........ooooooooooooooooiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ts
 // 00000000.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
 // 00000000..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
-// ttttttttvvvvv................................................... tu,tv,tw
+// tttttttt...................................................vvvvv tu,tv,tw
 #define _V(x) ((V*)((x)<<16>>16)) //ptr to data
 #define _r(x) ((I*)_V(x))[-3]     //refcount
 #define _q(x,y) (x=apd(x,y))      //append
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
-S  C _v(Ax)_(x>>51&31)              S A AV(UL v,Ax)_(Q(v<32);          x&~(31ll<<51)|v<<51)
-S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);           x&~( 7ll<<48)|k<<48)
+S  C _v(Ax)_(x&31)                  S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
+S  C _w(Ax)_(x>>51&31)              S A AW(UL v,Ax)_(Q(v<32);x&~(31ll<<51)|v<<51)
+S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);x&~( 7ll<<48)|k<<48)
 S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
-S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);       xL[-1]=n;x)
+S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
-#define TV(t,v) (A)((UL)(t)<<56|(UL)(v)<<51)
+#define TV(t,v) (A)((UL)(t)<<56|(UL)(v))
 
 #define au(i) TV(tu,i)
 #define av(i) TV(tv,i)
