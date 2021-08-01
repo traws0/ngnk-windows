@@ -84,7 +84,7 @@ A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),
  splc(C,A),sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
-I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),gi(A),in(L,L),mtc_(A,A),na(A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
+I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),in(L,L),mtc_(A,A),na(A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 D gd_(A),gd(A);
 EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*ct[];EX Q*argv,*env;
@@ -103,10 +103,10 @@ S I _tF(Ct)_(t>=to)S I _tP(Ct)_(c3(tc,t,ti)||t==ts||c3(tu,t,te))S I _tR(Ct)_(Zt[
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list type
 
 //header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset,r=refcount,n=length)
-//tagged ptr bits (t=type,v=verb,w=adverb,k=arity,o=srcoffset,x=ptr,i=value):
+//tagged ptr bits (t=type,v=value,w=adverb,k=arity,o=srcoffset,x=ptr,i=value):
 // 00000000........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td
-// tttttttt........................iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii tc,ti
-// tttttttt........ooooooooooooooooiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ts
+// tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti
+// tttttttt........oooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // 00000000.....kkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 to,tp,tq
 // 00000000..wwwkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tr
 // tttttttt...................................................vvvvv tu,tv,tw
@@ -114,7 +114,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>=tc?t+tC-tc:t) //tT():get corresponding list typ
 #define _r(x) ((I*)_V(x))[-3]     //refcount
 #define _q(x,y) (x=apd(x,y))      //append
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
-S  C _v(Ax)_(x&31)                  S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
+S  I _v(Ax)_(x)                     S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
 S  C _w(Ax)_(x>>51&31)              S A AW(UL v,Ax)_(Q(v<32);x&~(31ll<<51)|v<<51)
 S  C _k(Ax)_(x>>48&7)               S A AK(UL k,Ax)_(Q(k<9);x&~( 7ll<<48)|k<<48)
 S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
@@ -148,7 +148,7 @@ S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
 #define N1(x,r)   N_(r,x(0))
 #define N2(x,y,r) N_(r,x(y(0)))
 #define Ss(a...) S O C s[][4]={a};
-#define Sf(x,y,s,f...) ({Iv=gi(x);i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
+#define Sf(x,y,s,f...) ({Iv=xv;i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
 #define K(s,a...) ({S A f;Y(!f,f=K0(s,Z s))Z A(a)?app(f,A(a),ZZ(A(a))):f;})
 
 #define ov(x) ov_(#x":",(L)(x))

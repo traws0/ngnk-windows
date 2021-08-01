@@ -32,7 +32,7 @@ C tZ(Lv)_(v==(B)v?tB:v==(H)v?tH:v==(I)v?tI:tL)A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,-
 A az(Lv)_(Ct=tZ(v);t==tL?al(v):ai(v))A1(mut,XP(x)P(xr==1,x)x=x(atnv(xt,xn,xC));Y(xtR,mRa(x))x)
 A room(Ax/*1*/,Nn)_(P(xr==1&&n*ZT[xt]<=xZ,AN(n,x))Ay=atn(xt,n);Mc(yC,xC,xn*ZT[xt]);
  Y(ytR,Y(xr==1,AN(0,x))E(i(xn,_R(ya))))x(y))
-I gi(Ax)_(Q(c3(tc,xt,ti)||xts);x)L gl_(Ax)_(XP((I)x)*xL)L gl(Ax)_(Lv=gl_(x);x(0);v)D gd_(Ax)_(*xD)D gd(Ax)_(Dv=*xD;x(0);v)
+L gl_(Ax)_(XP((I)x)*xL)L gl(Ax)_(Lv=gl_(x);x(0);v)D gd_(Ax)_(*xD)D gd(Ax)_(Dv=*xD;x(0);v)
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
 I syP(Qs)_(In=Sn(s)+1;P(n<6&&(n<5||!(s[3]&128)),Lv=0;Mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!SQ(p,s),s0-p)p+=Sn(p)+1)

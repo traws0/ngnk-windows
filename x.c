@@ -5,7 +5,7 @@ S A f8(Lv,Ay)_(cts(y,(V*)&v,8))
 S A2(f,y=Nx(apc(y,xt));
  P(xtA||xtS,y=Nx(f8(xn,y));i(xn,y=Nx(f(get(x,i),y)))x(y))
  XmMA(f(AT(tA,mut(x)),y))
- Xs(Lv=gi(x);Qs=syp(&v);In=Sn(s)+1;y=Nx(apc(y,n));cts(y,s,n))
+ Xs(Lv=xv;Qs=syp(&v);In=Sn(s)+1;y=Nx(apc(y,n));cts(y,s,n))
  XP(f8(x,y))
  Xr(f(AT(tA,mut(x)),Nx(apc(y,xw<<3|xk))))
  XF(f(AT(tA,mut(x)),Nx(apc(y,xv<<3|xk))))

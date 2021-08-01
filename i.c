@@ -19,7 +19,7 @@ S UI addr(Q*p)_(Qs=*p;P(!*s,0x0100007f)C r[4];i(4,Y(i,Ed(*s-'.')s++)r[i]=pu(&s);
 S I skt(UI h,UH p)_(If=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)Iv=setsockopt(f,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4);Eo(v<0)
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,Z(a))<0)f)
 S I o1(Qs,L fl)_(P(!SC(s,':'),If=open(s,fl,0666);Eo(f<3/*fbsd*/)f)UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
-S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Lv=gi(x);P(!v,1)Qs=syp(&v);o1(s,fl))Et(!xtC,x)x=str0(x);x2(o1(xC,fl)))
+S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Lv=xv;P(!v,1)Qs=syp(&v);o1(s,fl))Et(!xtC,x)x=str0(x);x2(o1(xC,fl)))
 S C ft(If)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
  S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),m))])
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)

@@ -28,7 +28,7 @@ A1(gH,XH( x)Xz(gI(x))    Xt(gt(x,gH))x=N(gI(x));Ay=aH(xn);x2(cIH(xC,yC,yn);y))
 A1(gI,XiI(x)Xz(ai(gl(x)))XdD(gI(N(gL(x))))Xcz(ai(gl(x)))XCZ(Ay=aI(xn);x2(CH(xt-tC,&cCI,cBI,cHI,0,cLI)(xC,yC,yn);y))et1(x))
 A1(gL,XlL(x)Xz(al(gl(x)))Xt(gt(x,gL))XD(Ay=aL(xn);x2(cDL(xC,yC,yn);y))x=N(gI(x));Ay=aL(xn);x2(cIL(xC,yC,yn);y))
 A1(gD,XdD(x)Xz(ad(gl(x)))Xt(gt(x,gD))x=N(gL(x));Ay=aD(xn);x2(cLD(xC,yC,yn);y))
-A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(gi(x)))XmMA(eac1(x,gS))et1(x))
+A1(gS,XsS(x)XC(x=str0(x);x(as(syP(xC))))Xc(as(xv))XmMA(eac1(x,gS))et1(x))
 A1(pI,XmMA(eac1(x,pI))Xc(pI(enl(x)))XC(x=str0(x);Qs=xC;P(!*s,x(_R(cn[tl])))Lv=pl(&s);x(*s?_R(cn[tl]):az(v)))et1(x))
 TY(ct)ct={[tA]=blw,gC,gB,gH,gI,gL,gD,gS};
 A2(cst,P(xtS||ytmMA,eac2(x,y,cv('$')))P(xtz&&ytcC,K("{y@(!x)+(x<0)*#y}",x,enla(y)))
@@ -45,7 +45,7 @@ S C ot(Ax)_(xtz?tl:xtZ?tL:xt)S L od(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1)S I cL(Li,L
 S I cA(Ax,Ay/*00*/)_(P(mtc_(x,y),0)
  P(xtd&&ytd,cD(gd_(x),gd_(y)))P(xtcz&&ytd,cD(gl_(x),gd_(y)))P(xtd&&ytcz,cD(gd_(x),gl_(y)))
  Iv=ot(x)-ot(y);P(v,v)Xcz(cL(gl_(x),gl_(y)))Xd(Dv=gd_(x),w=gd_(y);v<w?-1:v>w?1:0)
- Xs(Lv=gi(x),w=gi(y);strcmp(syp(&v),syp(&w)))
+ Xs(Lv=xv,w=yv;strcmp(syp(&v),syp(&w)))
  Y(!xtP,Iv=cL(xn,yn);XT(i(min(xn,yn),Az=get(x,i),u=get(y,i);I d=cA(z,u);mr(z(u));P(d,d))v))cL(x,y))
 S I*ascZ(O UC*v,UC*g,I*a,I*b,In,I w)_(UI c[257];iI(a,n);
  j(w,Ms(c,0,Z c);i(n,g[i]=v[w*a[i]+j])i(n,c[g[i]+1]++)Y(c[1+*g]-n,i(255,c[i+1]+=c[i])i(n,b[c[g[i]]++]=a[i])SWP(b,a)))a)
