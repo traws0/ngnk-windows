@@ -24,7 +24,7 @@ iD_(I)iD_(L)iS_(I)iS_(L)
 S A2(idx_,/*01*/Er(xtt,y)P(y==PLH||y==au0,xR)YA(ear(cv('@'),A(xR,y),2))Ym(y=mut(y);yy=idx_(x,yy);y)YF(et1(y))Yt(getr(x,gl(y)))
  Y(!ytL&&!ytI,y=N(gI(y)))Nn=yn;P(xtA||xtM,Az=oA;Y(ytL,i(n,zq(getr(x,yl))))E(i(n,zq(getr(x,yi))))y(z))
  Az=xtL&&ytL&&yr==1?y:atn(xt,n);
- Lm=CH(xt-tC+7*ytL,&iCI,iBI,iHI,iII,jLI,iDI,iSI,iCL,iBL,iHL,iIL,jLL,iDL,iSL)(xC,xn,yC,zC,n);
+ Lm=CH(xt-tB+7*ytL,&iBI,iHI,iII,jLI,iDI,iCI,iSI,iBL,iHL,iIL,jLL,iDL,iCL,iSL)(xC,xn,yC,zC,n);
  Y(m<n,z=z(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xC,xn,yC,zC,n))y-z?y(z):z)
 S AX(idxA,Ay=*a++;n--;P(ytT||y==PLH||y==au0,x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)K(".\\:",x,atnv(tA,n,a)))
  x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)x(idxA(x,a,n)))

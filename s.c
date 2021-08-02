@@ -53,7 +53,7 @@ A1(kst,P(c3(tA,xt,tS)&&xn==1,pre(',',ksr(fir(x))))XA(par(jc(';',ek(x))))XcC(kss(
  Xs(x=str(x);Iv=1;i(xn,v&=c09(xc)||cAz(xc))Y(!v,x=kst(x);Y(*xC==',',x=cut(ai(1),x)))pre('`',x))Xo(x(_R(xx)))
  Xp(x=val(x);P(xn-3?0:!SC("vr",TS[_t(xx)])?0:xy-PLH&&xz==PLH,Ay=_R(xy);cat(ksl(y),kst(fir(x))))
     x=ek(x);Nm=_n(xx);x=apc(jc(';',x),']');Q(xr==1);xC[m]='[';x)
- Xq(raz(ek(val(x))))Xr(x=val(x);Ay=_R(xy);cat(ksw(fir(x)),str(y)))Xw(atnv(tC,1+xv/3,&"':/:\\:"[xv%3*2]))
+ Xq(raz(ek(val(x))))Xr(x=val(x);Ay=_R(xy);cat(ksw(fir(x)),str(y)))Xw(aCn(&"':/:\\:"[xv%3*2],1+xv/3))
  P(xtu||xtv,P(x==PLH,oC)Ay=enl(ac(vc[xv]));i(xtu+(19<xv),y=apc(y,':'))y)aCz("???"))
 A1(out,P(x==au0,x)dex(v0c(ai(1),xtA&&1<xn?par(jC("\n ",2,ek(xR))):kst(xR)),x))
 S C u1(Cc)_(c09(c)?c-'0':cAf(c)?(c|32)-'a'+10:0)

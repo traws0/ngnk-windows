@@ -20,7 +20,7 @@ AX(eac,Y(n==1,Xz(win(xR,*a)))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))A b[8];Ct[8];Lm
  Au=0;Y(!m,Y(x==cu('#'),u=oL)EY(n==2&&xtv&&xv<11,u=a[!_N(a[1])];uR)E(u=oA))
  j(m,i(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))Az=app(x,b,n);
      B(!z,Y(u,u=u(0))i(n,Ay=a[i];Y(t[i]==1,yr-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1))))
-     Y(!j,u=c3(tc,zt,ts)?AN(0,atn(tT(zt),m)):oA)uq(z))
+     Y(!j,u=c3(ti,zt,ts)?AN(0,atn(tT(zt),m)):oA)uq(z))
  i(n,mr(t[i]-2?a[i]:AN(0,a[i])))u)
 A eac1(Ax,A1 f)_(Xt(f(x))Xm(Ay=kv(&x);am(x,Nx(eac1(y,f))))
  I b=xtA&&xr==1;Nn=xN;P(!n,x)Ay=oA;i(n,Az=f(b?xa:get(x,i));B(!z,Y(b,mrn(xn-i-1,xA+i+1))y=y(0))yq(z))Y(b,x=AN(0,x))x(y))
