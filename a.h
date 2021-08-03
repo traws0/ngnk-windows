@@ -99,22 +99,21 @@ EX OC Zt[],ZT[];S C _t(A);S I _tt(Ct)_(t>tm)S I _tT(Ct)_(t<tM)S I _tz(Ct)_(c3(ti
 S I _tF(Ct)_(t>=to)S I _tP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))S I _tR(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>tm?t+tI-ti:t) //tT():get corresponding list type
 
-//header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset,r=refcount,n=length)
-//                wk             (oo also used as: w=adverb,k=arity)
-//tagged ptr bits (t=type,v=value,w=adverb,k=arity,o=srcoffset,x=ptr,i=value):
+//header bytes: btoorrrrnnnnnnnn (b=bucket,t=type,o=srcoffset(also used as: w=adverb,k=arity),r=refcount,n=length)
+//tagged ptr bits (t=type,v=value,o=srcoffset,x=ptr,i=value):
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti,tu,tv,tw
 // tttttttt........oooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
-#define _V(x) (V*)(x) //ptr to data
-#define _r(x) ((I*)_V(x))[-3]     //refcount
-#define _q(x,y) (x=apd(x,y))      //append
-S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
-S  I _v(Ax)_(x)                     S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
-S  C _w(Ax)_(xC[-14])               S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)
-S  C _k(Ax)_(xC[-13])               S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)
-S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UH o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xH[-7]=o;x)
-S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)
-S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
+#define _V(x) (V*)(x)              //ptr to data
+#define _r(x) ((I*)_V(x))[-3]      //refcount
+#define _q(x,y) (x=apd(x,y))       //append
+S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x) //set refcount
+S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
+S  I _v(Ax)_(x)                     S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                  //value(i32)
+S  C _w(Ax)_(xC[-14])               S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)                                 //adverb(for tr)
+S  C _k(Ax)_(xC[-13])               S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)                                 //arity(for funcs)
+S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UH o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xH[-7]=o;x)          //offset
+S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                     //length
 #define TV(t,v) (A)((UL)(t)<<56|(v))
 #define au(i) TV(tu,i)
 #define av(i) TV(tv,i)
