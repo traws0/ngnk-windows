@@ -4,7 +4,7 @@ OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?'
 A1*v1[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out};
 A2*v2[]={dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex};
 A2(id_,/*00*/x==cv(',')?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
-I na(Ax/*0*/)_(xtu||xtw?1:xtv?2:xk) //arity
+I na(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //arity
 AX(prj,XA(app(x,a,n))Ik=max(n,na(x));i(n,k-=a[i]!=PLH)
  Ay=xtp?val(xR):a1(xR);Ii=0,j=1;W(i<n&&j<yn,Y(yA[j]==PLH,yA[j]=a[i++])j++)W(i<n,yq(a[i++]))AT(tp,AK(k,y)))
 SN A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=aA(yn);Q(ytA);i(un,ua=get(ya,j))am(_R(xx),sqz(u)))
