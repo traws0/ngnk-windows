@@ -105,7 +105,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>tm?t+tI-ti:t) //tT():get corresponding list type
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti,tu,tv,tw
 // tttttttt........oooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
-#define _V(x) ((V*)((x)<<16>>16)) //ptr to data
+#define _V(x) (V*)(x) //ptr to data
 #define _r(x) ((I*)_V(x))[-3]     //refcount
 #define _q(x,y) (x=apd(x,y))      //append
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
