@@ -112,7 +112,7 @@ S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<
 S  I _v(Ax)_(x)                     S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
 S  C _w(Ax)_(xC[-14])               S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)
 S  C _k(Ax)_(xC[-13])               S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)
-S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UL o,Ax)_(Xs(x&~(0xffffll<<32)|o<<32)xH[-7]=o;x)
+S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UH o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xH[-7]=o;x)
 S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
 #define TV(t,v) (A)((UL)(t)<<56|(v))
