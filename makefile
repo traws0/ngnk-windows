@@ -5,6 +5,7 @@ F=-nostdlib -ffreestanding -fno-math-errno -fno-stack-protector -fomit-frame-poi
  -Wno-unused-result
 O=-O3 -march=native
 MD= >/dev/null mkdir -pv
+STRIP ?= strip
 
 t:k #test
 	@+$(MAKE) -sC t && g/0.sh && $(MAKE) -sC a19 && $(MAKE) -sC a20 && $(MAKE) -sC e
@@ -20,7 +21,7 @@ o/%.s:%.c *.h makefile
 	@echo    '$@ ' && $(MD) o && $(CC) $(F) -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(CC) $(F) $^ -static -o $@
-	@strip -R .comment $@ # -R '.note*'
+	@$(STRIP) -R .comment $@ # -R '.note*'
 
 #lib
 o/so/%.o:%.c *.h makefile
