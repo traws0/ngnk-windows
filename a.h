@@ -83,7 +83,7 @@ A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),
  splc(C,A),sur(C,A,C),wdn(A,N,N,N),K0(Q,I);
 V mrn(I,OA*),repl();
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
-I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),in(L,L),mtc_(A,A),na(A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
+I asg(Ax),c3(C,C,C),cD(D,D),eS(A,I),in(L,L),mtc_(A,A),np(A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 D gd_(A),gd(A);
 EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*ct[];EX Q*argv,*env;
