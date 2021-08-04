@@ -1,7 +1,8 @@
 #faster builds: export MAKEFLAGS=-j8
 F=-nostdlib -ffreestanding -fno-math-errno -fno-stack-protector -fomit-frame-pointer \
  -Werror -Wno-assume -Wno-pointer-sign -Wfatal-errors -Wno-shift-op-parentheses \
- -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion
+ -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion \
+ -Wno-unused-result
 O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 
