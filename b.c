@@ -16,7 +16,7 @@ S A3(cl,/*0*/Co=yo;P(zts&&yx==av0&&np(x),Li=fpI(&fl,zv);Ez(i>15)fu[i]=_n(fb);h(b
   Ik=_v(zts?z:zx);Li=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(_R(fs),o);ec0())
-I asg(Ax)_(xtA||xts||(xtS&&xn>1)) //is lhs of assignment?
+I asg(Ax)_(xtA||xtsS) //is lhs of assignment?
 S A2(cr,/*0*/Co=yo;Li;P(yts&&(i=fAI(fl,yv))>=0,fu[i]=_n(fb);h(bg|i);x)P(yts&&yv=='o',h(bo);x)
  P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Nn=yn;Au=yx;
  P(u==PRG,i(n-1,r(x,yA[i+1]);h(i==n-2?br:bp))x)
