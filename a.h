@@ -90,7 +90,7 @@ EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*ct[];EX Q
 EX OV*arrT[][11],*arsT[][11],*arpT[][11],*araT[][11];
 #define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 
-//            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .7 "c" ` {} 1+ ++ +/ +: +  /  f
+//            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +: +  /  f
 enum      {t9,tA,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
 #define TS "?""A""B""H""I""L""D""C""S""M""m""i""l""d""c""s""o""p""q""r""u""v""w""e" //their symbols
 #define TZ  0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
@@ -100,7 +100,7 @@ S I _tF(Ct)_(t>=to)S I _tP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))S I _tR(Ct)_(Zt
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>tm?t+tI-ti:t) //tT():get corresponding list type
 
 //header bytes: Utoorrrrnnnnnnnn (U=bucket,t=type,o=srcoffset(also used as: w=adverb,k=arity),r=refcount,n=length)
-//tagged ptr bits (t=type,v=value,o=srcoffset,x=ptr,i=value):
+//tagged ptr bits (t=type,v=value,o=srcoffset,v=value,x=ptr):
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti,tu,tv,tw
 // tttttttt........oooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
