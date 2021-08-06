@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/170695/construct-a-line-graph-conjugate-graph/170698#170698
-f:(*<:)#(3=#?,/)#,/{x,/:\:x}@,:'
+f:(*'<:')#(3=#'?',/')#,/{x,/:\:x}@,:'
 \l 0.k
 s:{x@<x} /sort
 f:s@s'f@ /for testing, make sure the result from f is sorted
