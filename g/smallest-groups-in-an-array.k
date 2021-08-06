@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/79037/smallest-groups-in-an-array/216391#216391
-f:{((&/#'t)=#:)#t:(&~=':x)_x}
+f:{((&/#'t)=#:')#t:(&~=':x)_x}
 
 \l 0.k
 t[1 1 2 2 3 3 4;,,4]

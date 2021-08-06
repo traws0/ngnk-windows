@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/229375/decode-usb-packets/229440#229440
-f:*|+(126=2/)_7'(&6),0=':
+f:*|+(126=2/')_7'(&6),0=':
 
 l:"JK"?
 \l 0.k

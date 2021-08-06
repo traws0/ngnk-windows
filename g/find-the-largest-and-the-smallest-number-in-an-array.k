@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/71172/find-the-largest-and-the-smallest-number-in-an-array/216975#216975
-f:(&/;|/)@\:(`i~@:)#
+f:(&/;|/)@\:(`i=@:')#
 
 \l 0.k
 t[1 2 3 4 5 6 7 8;1 8]

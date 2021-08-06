@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/217328/help-stack-exchange-transpose-tables/217343#217343
-f:{,/'+({"|",'n$(*x;(n:|/#'x)#"-"),1_x}(~""~)#{(-^*|x)_(^*x)_x}/'"|"\)'x_1}
+f:{,/'+({"|",'n$(*x;(n:|/#'x)#"-"),1_x}(~#:')_{(-^*|x)_(^*x)_x}/'"|"\)'x_1}
 
 \l 0.k
 out1:("|A header      |First|Second";"|--------------|-----|------";"|Another header|row  |row   ");
