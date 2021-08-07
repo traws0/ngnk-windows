@@ -76,7 +76,7 @@ A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,
  sub,v0c,v1c,exc;
 A3 a3,try;
 AA amd,am1,dmd,dm1;
-AX eac,rdc,scn,eap,ear,eal,app,prj,run;
+AX eac,rdc,scn,eap,ear,eal,app,prj,run,w0,w1,w2,w3,w4,w5;
 A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),
  aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A,A1),eac2(A,A,A),
  e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),rshL(L,A),
