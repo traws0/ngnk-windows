@@ -64,7 +64,7 @@ S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;Mc(b
 AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
  Xm(x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rshL(_n(xx)-_n(xy),id_(z,xy)));
   A b[8];*b=xy;b[1]=fnd(_R(xx),y);Mc(b+2,a+2,(n-2)*8);xy=am1(b,n);P(!xy,xy=au0;x(0))x)
- P(y==au0,A b[8];Mc(b,a,n*8);b[1]=til(al(xN));am1(b,n))
+ P(y==au0,A b[8];Mc(b,a,n*8);b[1]=tilL(xN);am1(b,n))
  Yt(x=mut(x);y=gL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))
   A b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
  Y(n==4,Au=a[3];
