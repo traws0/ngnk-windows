@@ -4,11 +4,11 @@ S A2(enc,x=Ny(gL(x));y=Nx(gL(y));Yt(Az=enc(x,enl(y));zn?fir(flp(z)):z(oL))
  P(!xn,x(y(oA)))Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);i(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=gl(x);ux=y;Y(m,i(yn,yl%=m))u)
 S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))
-  A splcC(Cc    ,C*p,Ln)_(      Ax=oA;C*q;W((q=MC(p,c,n  )),xq(aCm(p,q));n-=q-p+1;p=q+1)Y(c-10||n,xq(aCn(p,n)))x)
-  A splCC(C*s,Lm,C*p,Ln)_(El(!m)Ax=oA;C*q;W((q=MM(p,n,s,m)),xq(aCm(p,q));n-=q+m-p;p=q+m)xq(aCn(p,n)))
-  A splc(Cc    ,Ax)_(XC(x(splcC(c,  xC,xn)))et1(x))
-S A splC(C*s,Lm,Ax)_(XC(x(splCC(s,m,xC,xn)))et1(x))
-NI L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
+S A scC(Cc    ,C*p,Ln)_(      Ax=oA;C*q;W((q=MC(p,c,n  )),xq(aCm(p,q));n-=q-p+1;p=q+1)Y(c-10||n,xq(aCn(p,n)))x)
+S A sCC(C*s,Lm,C*p,Ln)_(El(!m)Ax=oA;C*q;W((q=MM(p,n,s,m)),xq(aCm(p,q));n-=q+m-p;p=q+m)xq(aCn(p,n)))
+S A sc(Cc    ,Ax)_(XC(x(scC(c,  xC,xn)))et1(x))A1(spl,sc(10,x))
+S A sC(C*s,Lm,Ax)_(XC(x(sCC(s,m,xC,xn)))et1(x))
+SN L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
 A jc(Cc,   Ax)_(Ln=jn(1,x);Et(n<0,x)Ay=aC(n);C*p=yC;i(xn,Y(i,*p++=c        )Az=xa;Y(ztc,*p++=zv)E(Mc(p,zC,zn);p+=zn))x(y))
 A jC(Qs,Nm,Ax)_(Ln=jn(m,x);Et(n<0,x)Ay=aC(n);C*p=yC;i(xn,Y(i,Mc(p,s,m);p+=m)Az=xa;Y(ztc,*p++=zv)E(Mc(p,zC,zn);p+=zn))x(y))
 S L cfm(OA*a/*0*/,In)_(Lm=-1;i(n,Ax=a[i];Y(!xtt,Lv=xN;P(m>=0&&m-v,-2)m=v))m)
@@ -51,9 +51,9 @@ AX(eap,P(n>2,ern(n,a))Az=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);Et(!ztT,y,z)P(!zn
  Y(xtv&&xv<11&&ytZC&&ztZC/*todo*/&&(xv-1&&xv-2&&xv-3||ztL),Y(ytz,y=az(gl(y)))N(sup(&y,&z));Lv=gl(y);
   int(*f)(V*,V*,V*,N)=arpT[zt-tB][xv];P(f,Au=ax(z);f(&v,zC,uC,zn);u))
  Au=oA;i(zn,y=app(x,A(get(z,i),y),2);P(!y,z(u(0)))uq(y);y=get(z,i))y(z(u)))
-AX(w0,Y(n==1, Xz(win(xR,*a)))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))               eac(x,a,n)) /* '  */
-AX(w1,Y(n==1,XzZ(dec(xR,*a))Xc(  jc(xv,*a))XC(  jC(xC,xn,*a)))P(xK<2,cvg(x,a,n))rdc(x,a,n)) /* /  */
-AX(w2,Y(n==1,XzZ(enc(xR,*a))Xc(splc(xv,*a))XC(splC(xC,xn,*a)))P(xK<2,cvi(x,a,n))scn(x,a,n)) /* \  */
-AX(w3,XzZ(w0(x,a,n))                                                            eap(x,a,n)) /* ': */
-AX(w4,XzZ(w1(x,a,n))                                                            ear(x,a,n)) /* /: */
-AX(w5,XzZ(w2(x,a,n))                                                            eal(x,a,n)) /* \: */
+AX(w0,Y(n==1, Xz(win(xR,*a)))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))           eac(x,a,n)) /* '  */
+AX(w1,Y(n==1,XzZ(dec(xR,*a))Xc(jc(xv,*a))XC(jC(xC,xn,*a)))P(xK<2,cvg(x,a,n))rdc(x,a,n)) /* /  */
+AX(w2,Y(n==1,XzZ(enc(xR,*a))Xc(sc(xv,*a))XC(sC(xC,xn,*a)))P(xK<2,cvi(x,a,n))scn(x,a,n)) /* \  */
+AX(w3,XzZ(w0(x,a,n))                                                        eap(x,a,n)) /* ': */
+AX(w4,XzZ(w1(x,a,n))                                                        ear(x,a,n)) /* /: */
+AX(w5,XzZ(w2(x,a,n))                                                        eal(x,a,n)) /* \: */

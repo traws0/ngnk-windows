@@ -23,7 +23,7 @@ S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Lv=xv;P(!v,1)Qs=syp(&v);o1(s,fl))Et(!xtC,x)x=st
 S C ft(If)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
  S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),m))])
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
-A1(u0c,x=N(splc(10,N(u1c(x))));xn&&!_n(xA[xn-1])?cut(az(-1),x):x)
+A1(u0c,x=N(spl(N(u1c(x))));xn&&!_n(xA[xn-1])?cut(az(-1),x):x)
 A1(u1c,Xz(If=gl(x);Cb[1024];x=oC;W(1,Ik=read(f,b,Z b);Eo(k<0,x)x=cts(x,b,k);P(k-Z b,x))0)
  If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
  P(t=='d',Cb[ZP];Ik;Ay=oC;
