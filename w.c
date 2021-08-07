@@ -54,6 +54,6 @@ AX(eap,P(n>2,ern(n,a))Az=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);Et(!ztT,y,z)P(!zn
 AX(w0,Y(n==1, Xz(win(xR,*a)))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))eac(x,a,n))                   /* '  */
 AX(w1,Y(n==1,XzZ(dec(xR,*a))Xc(  jc(xv,*a))XC(  jC(xC,xn,*a)))P(np(x)<2,cvg(x,a,n))rdc(x,a,n)) /* /  */
 AX(w2,Y(n==1,XzZ(enc(xR,*a))Xc(splc(xv,*a))XC(splC(xC,xn,*a)))P(np(x)<2,cvi(x,a,n))scn(x,a,n)) /* \  */
-AX(w3,XzZ(eac(x,a,n))eap(x,a,n))                                                               /* ': */
-AX(w4,XzZ( w1(x,a,n))ear(x,a,n))                                                               /* /: */
-AX(w5,XzZ( w2(x,a,n))eal(x,a,n))                                                               /* \: */
+AX(w3,XzZ(w0(x,a,n))eap(x,a,n))                                                                /* ': */
+AX(w4,XzZ(w1(x,a,n))ear(x,a,n))                                                                /* /: */
+AX(w5,XzZ(w2(x,a,n))eal(x,a,n))                                                                /* \: */
