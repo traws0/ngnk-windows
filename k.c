@@ -1,11 +1,11 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-S A1(sam,x)S A2(com,AK(np(y),AT(tq,a2(x,y))))A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);xtt?x(y):rsh(len(x),y))
+S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);xtt?x(y):rsh(len(x),y))
 OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'};
 A1*v1[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out};
 A2*v2[]={dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex};
 A2(id_,/*00*/x==cv(',')?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
-I np(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //arity
-AX(prj,XA(app(x,a,n))Ik=max(n,np(x));i(n,k-=a[i]!=PLH)
+I _K(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //arity
+AX(prj,XA(app(x,a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
  Ay=xtp?val(xR):a1(xR);Ii=0,j=1;W(i<n&&j<yn,Y(yA[j]==PLH,yA[j]=a[i++])j++)W(i<n,yq(a[i++]))AT(tp,AK(k,y)))
 SN A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,u=aA(yn);Q(ytA);i(un,ua=get(ya,j))am(_R(xx),sqz(u)))
 A get(Ax/*0*/,Li)_(XA(_R(xa))XC(ac(xc))XB(ai(xb))XH(ai(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))XM(getM(x,i))Xm(getr(xy,i))xR)
@@ -39,9 +39,9 @@ AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
  Xs(Ss("","k","j","p","cf","t","x","hex","md5","sha1","sha2","sha3","aes","sin","err","epr","argv","env","exit","e")
     Sf(x,*a,s,ser,kst,js1,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr,argvf,envf,exitf,exp))
  XM(Ay=*a;YsS(idxm(x,a,n))x=idx_(x,y);P(n==1,x)x(app(x,a+1,n-1)))Xm(idxm(x,a,n))
- Ik=np(x);P(n<k,prj(x,a,n))Xv(n==2?v2[xv](*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))
+ Ik=xK;P(n<k,prj(x,a,n))Xv(n==2?v2[xv](*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))
  Xr(CH(xw,&w0,w1,w2,w3,w4,w5)(xx,a,n))
- P(n>k,ern(n,a))Xu(v1[xv](*a))Xw(Ay=*a;AK(0<xv&&xv<4&&np(y)==2?1:ytF?np(y):1,AW(xv,atnv(tr,1,a))))Xo(run(x,a,n))
+ P(n>k,ern(n,a))Xu(v1[xv](*a))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,atnv(tr,1,a))))Xo(run(x,a,n))
  Xp(P(n+xn>9,ern(n,a))I m=xn-1,j=0;A b[8];i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);app(xx,b,m+l))
  Xq(app(xx,&(A){N(app(xy,a,n))},1))
  Xe(P(n-1,ern(n,a))az(((A1*)(V*)xC)(gl(N(gL(*a))))))
