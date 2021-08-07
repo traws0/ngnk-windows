@@ -25,7 +25,7 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 Types: ACBHILDSMmcildsopqruvw
 list atom
  `A        generic list   ()   ,"ab"   (0;`1;"2";{3};%)
- `C   `c   char    8bit   "a"   0x62   "b\0\"\n\r\t"
+ `C   `c   char    8bit   "a"   0x6263   "d\0\"\n\r\t"
  `B        byte    8bit   -128 127
  `H        short  16bit   -32768 32787
  `I   `i   int    32bit   -2147483648 2147483647
@@ -105,12 +105,12 @@ a^y fill      1^0 0N 2 3 0N -> 0 1 2 3 1   "b"^" " -> "b"
 X^y without   "abracadabra"^"bc" -> "araadara"
  #x length    #"abc" -> 3   #4 -> 1   #`a`b`c!0 1 0 -> 3
 I#y reshape   2 3#` -> (```;```)   3#2 -> 2 2 2
-f#y filter    {x>1}#0 2 1 3 5 4 -> 2 3 5 4
+f#y filter    (3>#:')#(0;2 1 3;5 4) -> (0;5 4)   {2}#"ab" -> "aabb"
  _n floor     _12.34 -12.34 -> 12 -13
  _c lowercase _"Ab" -> "ab"
 i_Y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
 I_Y cut       2 4 4_"abcde" -> ("cd";"";,"e")
-f_Y filterout {x>1}_0 2 1 3 5 4 -> 0 1
+f#y filterout (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
 X_i delete    "abcde"_2 -> "abde"
  $x string    $(12;"ab";`cd;+) -> ("12";(,"a";,"b");"cd";,"+")
 i$C pad       5$"abc" -> "abc  "   -3$"a" -> "  a"
