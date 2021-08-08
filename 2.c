@@ -44,44 +44,42 @@ hr(mul,B,L,l)hr(mul,H,L,l)hr(mul,I,L,l)hr(mul,L,L,l)hr(mul,D,D,d)
 hr(mnm,B,L,l)hr(mnm,H,L,l)hr(mnm,I,L,l)hr(mnm,L,L,l)hr(mnm,D,D,d)
 hr(mxm,B,L,l)hr(mxm,H,L,l)hr(mxm,I,L,l)hr(mxm,L,L,l)hr(mxm,D,D,d)
 
-S OV*arf[][5][7]={
- {{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},//atom+atom
-  {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh},
-  {    0,modii,mnmii,mxmii,ltnii,0,eqlii},
-  {    0,modll,mnmll,mxmll,ltnll,0,eqlll},
-  {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd}},
- {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB},//atom+list
-  {    0,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH},
-  {    0,modiI,mnmiI,mxmiI,ltniI,0,eqliI},
-  {    0,modlL,mnmlL,mxmlL,ltnlL,0,eqllL},
-  {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD}},
- {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb},//list+atom
-  {    0,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh},
-  {    0,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi},
-  {    0,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl},
-  {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd}},
- {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB},//list+list
-  {    0,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH},
-  {    0,modII,mnmII,mxmII,ltnII,0,eqlII},
-  {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL},
-  {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD}}};
-
-X(arrT,{{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},
+X(arf,{{{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},//atom+atom
+        {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh},
+        {    0,modii,mnmii,mxmii,ltnii,0,eqlii},
+        {    0,modll,mnmll,mxmll,ltnll,0,eqlll},
+        {dvddd,moddd,mnmdd,mxmdd,ltndd,0,eqldd}},
+       {{    0,modbB,mnmbB,mxmbB,ltnbB,0,eqlbB},//atom+list
+        {    0,modhH,mnmhH,mxmhH,ltnhH,0,eqlhH},
+        {    0,modiI,mnmiI,mxmiI,ltniI,0,eqliI},
+        {    0,modlL,mnmlL,mxmlL,ltnlL,0,eqllL},
+        {dvddD,moddD,mnmdD,mxmdD,ltndD,0,eqldD}},
+       {{    0,modBb,mnmBb,mxmBb,ltnBb,0,eqlBb},//list+atom
+        {    0,modHh,mnmHh,mxmHh,ltnHh,0,eqlHh},
+        {    0,modIi,mnmIi,mxmIi,ltnIi,0,eqlIi},
+        {    0,modLl,mnmLl,mxmLl,ltnLl,0,eqlLl},
+        {dvdDd,modDd,mnmDd,mxmDd,ltnDd,0,eqlDd}},
+       {{    0,modBB,mnmBB,mxmBB,ltnBB,0,eqlBB},//list+list
+        {    0,modHH,mnmHH,mxmHH,ltnHH,0,eqlHH},
+        {    0,modII,mnmII,mxmII,ltnII,0,eqlII},
+        {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL},
+        {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD}}})
+X(arrT,{{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
         {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
         {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
         {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
         {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}})
-X(arsT,{{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},
+X(arsT,{{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},//scan
         {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
         {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
         {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
         {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}})
-X(arpT,{{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},
+X(arpT,{{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
         {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
         {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
         {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
         {dexpL,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
-X(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},
+X(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
         {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
         {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
         {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
@@ -90,7 +88,7 @@ X(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
 S A ari(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(x,y,av(v)))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
- Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;int(*f)(V*,V*,V*,N)=arf[k][tT(t)-tB][v-4];
+ Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;V(f,arf[k][tT(t)-tB][v-4]);
  Y(t>tD,t+=tD-td)Y(v>7&&t==tD,t=tI)Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x==z?y(z):y==z?x(z):x(y(z)))
 S A ext(Ax,Nn)_(xtm?enl(x):xtt?rsh(az(n),x):x)
