@@ -14,49 +14,23 @@ C*strchr(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s++,(V*)0))(V*)0)
 C*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
 C*strstr(Qp,Qq)_(MM(p,Sn(p),q,Sn(q)))
 I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
-
 #ifndef shared
  I main(In,O char**a)_(kinit(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
 #endif
-
-#if !wasm
-
- #if __FreeBSD__
-  V _start(O char**a){main(*(I*)(V*)a,a+1);} //can't use _() here
- #elif i386
-  asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main");
- #else
-  asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;jmp main");
- #endif
-
- #if i386
-  #define  h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;"
-  #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
-  #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
-  #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
-  #define h5(x) ".globl "#x";"#x":mov %esp,%ebx;add $4,%ebx;mov $"M2(SYS_##x)",%eax;int $0x80;ret;"
-  #define h6 h5
- #else
-  #define h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;"
-  #define h1 h
-  #define h2 h
-  #define h3 h
-  #define h4 h
-  #define h5(x) h(x,"movq %rcx,%r10;")
-  #define h6 h5
- #endif
-
- #ifdef SYS_pipe
-  asm(h(pipe));
- #else //freebsd
-  asm(h(pipe2));I pipe(Iv[2])_(pipe2(v,0));
- #endif
-
- #ifndef SYS_getdents //freebsd
-  #define SYS_getdents SYS_freebsd11_getdents
- #endif
-
+NWASM(
+ FBSD(V _start(O char**a){main(*(I*)(V*)a,a+1);})
+ NFBSD(asm(".globl _start;_start:"I386("pop %eax;push %esp;push %eax;call main")
+                                 NI386("pop %rdi;mov %rsp,%rsi;jmp main"));)
+ #define  h(x,a...) I386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
+                   NI386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;")
+ #define h1(x,a...) I386( h(x,a"mov  4(%esp),%ebx;"))NI386(h(x,a))
+ #define h2(x,a...) I386(h1(x,a"mov  8(%esp),%ecx;"))NI386(h(x,a))
+ #define h3(x,a...) I386(h2(x,a"mov 12(%esp),%edx;"))NI386(h(x,a))
+ #define h5(x)      I386(".globl "#x";"#x":mov %esp,%ebx;add $4,%ebx;mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
+                   NI386(h(x,"movq %rcx,%r10;"))
+ #define h6 h5
+ FBSD(asm(h(pipe2));I pipe(Iv[2])_(pipe2(v,0));)NFBSD(asm(h(pipe)))
+ FBSD(asm(h3(freebsd11_getdents));ssize_t getdents(I f,C*b,Nn)_(getdents(f,b,n)))NFBSD(asm(h3(getdents)))
  asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h5(setsockopt)h3(connect)
-     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents));
-
-#endif
+     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap));
+)
