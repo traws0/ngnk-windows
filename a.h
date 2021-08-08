@@ -83,9 +83,9 @@ TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L absL(L),gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 D gd_(A),gd(A);N strlen(Q);
 EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*ct[];EX Q*argv,*env;
-TD I Tf(OV*,OV*,V*,N);  EX Tf*arf[][5][7],*arsT[][11],*arpT[][11];
-TD I Ta(V*,N,L*,N,V*,I);EX Ta*araT[][11];
-TD I Tr(V*,V*,N);       EX Tr*arrT[][11];
+TD I Tf(OV*,OV*,V*,N);     EX Tf*arsT[][11],*arpT[][11],*arf[][5][7];
+TD I Ta(V*,N,O L*,N,OV*,I);EX Ta*araT[][11];
+TD I Tr(V*,OV*,N);         EX Tr*arrT[][11];
 
 //            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  /  e
 enum      { tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
