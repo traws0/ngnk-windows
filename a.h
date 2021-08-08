@@ -67,35 +67,29 @@ TD long long L;TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,
 #define SQ(a...) __builtin_strcmp(a)
 #define MM(a...)  memmem(a)
 #define SC0(a...) strchrnul(a)
-L absL(L);C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);I memcmp(OV*,OV*,N),strcmp(Q,Q),exit(I);N strlen(Q);
-V*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N);
-
-A0 aa0;
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
  hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sha1,sha256,sha3_256,sin,ser,spl,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  sub,v0c,v1c,exc;
-A3 a3,try;
-AA amd,am1,dmd,dm1;
-AX eac,rdc,scn,eap,ear,eal,app,prj,run,w0,w1,w2,w3,w4,w5;
+A0 aa0;A3 a3,try;AA amd,am1,dmd,dm1;AX eac,rdc,scn,eap,ear,eal,app,prj,run,w0,w1,w2,w3,w4,w5;
 A aA(N),aC(N),aB(N),aH(N),aI(N),aL(N),aD(N),aS(N),ac(C),ai(I),as(I),al(L),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),
  aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),atnv(C,N,OV*),az(L),cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A,A1),eac2(A,A,A),
  e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),get(A,L),getr(A,L),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),room(A,N),rshL(L,A),
  sur(C,A,C),tilL(L),wdn(A,N,N,N),K0(Q,I);
-V mrn(I,OA*),repl();
-C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
-I _K(A),asg(A),c3(C,C,C),cD(D,D),eS(A,I),in(L,L),mtc_(A,A),si(Q,I),syP(Q);TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
-L gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
-D gd_(A),gd(A);
+V*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),mrn(I,OA*),repl();
+C*sl(C*,L),*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
+I _K(A),asg(A),c3(C,C,C),cD(D,D),eS(A,I),exit(I),in(L,L),memcmp(OV*,OV*,N),mtc_(A,A),si(Q,I),strcmp(Q,Q),syP(Q);
+TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
+L absL(L),gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
+D gd_(A),gd(A);N strlen(Q);
 EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*ct[];EX Q*argv,*env;
-TD I Tarf(OV*,OV*,V*,N);  EX Tarf*arf[][5][7],*arsT[][11],*arpT[][11];
-TD I Tara(V*,N,L*,N,V*,I);EX Tara*araT[][11];
-TD I Tarr(V*,V*,N);       EX Tarr*arrT[][11];
-#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
+TD I Tf(OV*,OV*,V*,N);  EX Tf*arf[][5][7],*arsT[][11],*arpT[][11];
+TD I Ta(V*,N,L*,N,V*,I);EX Ta*araT[][11];
+TD I Tr(V*,V*,N);       EX Tr*arrT[][11];
 
-//            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +: +  /  f
-enum      {t9,tA,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
+//            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  /  e
+enum      { tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
 #define TS "?""A""B""H""I""L""D""C""S""M""m""i""l""d""c""s""o""p""q""r""u""v""w""e" //their symbols
 #define TZ  0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
@@ -111,6 +105,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>tm?t+tI-ti:t) //tT():get corresponding list type
 #define _V(x) (V*)(x)              //ptr to data
 #define _r(x) ((I*)_V(x))[-3]      //refcount
 #define _q(x,y) (x=apd(x,y))       //append
+#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x) //set refcount
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
 S  I _v(Ax)_(x)                     S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                  //value(i32)
