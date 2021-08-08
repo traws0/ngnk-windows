@@ -23,7 +23,7 @@ S V s1u(O U*d,Nn,U*a){
   i(80,U t=R(x,5)+CH(i/20,&chx,xor,maj,xor)(y,z,u)+v+CH(i/20,0x5a827999u,0x6ed9eba1,0x8f1bbcdc,0xca62c1d6)+w[i];
        v=u;u=z;z=R(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
-S A md(Ax/*1*/,OV*iv,N nv,V(*f)(O U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
+S A md(Ax/*1*/,OV*iv,N nv,void(*f)(O U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
  I a[nv];Cc[128]={};Mc(a,iv,Z a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;x2(f(xI,k,a);Mc(c,xC+n-r,r));c[r]=128;
  *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);Y(b,bn(a,a,nv))aCn((V*)a,Z a))
 A1(md5,Y(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))

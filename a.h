@@ -5,9 +5,11 @@
 #include"g.h"
 #define   _(a...) {return({a;});}
 #define W(x,a...) while(x){a;}
-#define Y(x,a...) if(x){a;}
-#define P(x,a...) Y(x,_(a))
+#define V(x,a...) TY(a)x=(a);
+#define X(x,a...) TY(x)x=a;
 #define B(x,a...) Y(x,a;break)
+#define P(x,a...) Y(x,_(a))
+#define Y(x,a...) if(x){a;}
 #define  EY(a...) else Y(a)
 #define   E(a...) else{a;}
 #define   i(a...) F_(i,a)

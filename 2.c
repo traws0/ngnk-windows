@@ -66,26 +66,26 @@ S OV*arf[][5][7]={
   {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL},
   {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD}}};
 
-Tarr*arrT[][11]={{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},
-                 {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
-                 {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
-                 {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
-                 {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}};
-Tars*arsT[][11]={{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},
-                 {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
-                 {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
-                 {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
-                 {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}};
-Tarp*arpT[][11]={{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},
-                 {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
-                 {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
-                 {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
-                 {dexpL,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}};
-Tara*araT[][11]={{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},
-                 {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
-                 {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
-                 {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
-                 {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
+X(arrT,{{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},
+        {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
+        {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
+        {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
+        {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}})
+X(arsT,{{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},
+        {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
+        {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
+        {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
+        {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}})
+X(arpT,{{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},
+        {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
+        {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
+        {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
+        {dexpL,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
+X(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},
+        {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
+        {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
+        {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
+        {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}})
 
 S C tZx(Ax)_(xtdD?tD:xtL?tL:xtcC?tH:xtZ?xt:xtz?tZ(gl_(x)):tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
