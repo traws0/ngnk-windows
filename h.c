@@ -5,7 +5,7 @@ SN A flt(Ax,Ay,Cb)_(En(xK-1,x,y)Er(!ytT,x,y)x=Ny(x(app(x,A(yR),1)));x=xN?Ny(gL(x
 S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1,r-1))y)
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);Mc(yC,xC+j*w,q*w);
  Mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,Mc(yC+m*w,yC,m*w);m*=2)Y(n>m,Mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
-A2(rsh,XF(flt(x,y,1))Ym(Xz(Az=kv(&y);xR;y=N2(x,z,rsh(x,y));z=N1(y,rsh(x,z));am(y,z))x=enla(x);xR;am(x,ap1(y,x)))
+A2(rsh,XF(flt(x,y,1))Ym(Xz(Ln=gl(x);Az=kv(&y);am(Nz(rshL(n,y)),Ny(rshL(n,z))))x=enla(x);xR;am(x,ap1(y,x)))
  YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)Yt(rsh(x,enl(y)))
  x=enla(Ny(gL(x)));Nn=xn;P(!n,fir(x(y)))P(n>8,ez2(x,y))P(n==1&&*xL==NL,x(y))P(!yn,rsh(x,enl(fir(y))))
  i(n,Lv=xl;Y(v<0,Ed(n>2||n==2&&v-NL,x,y)
