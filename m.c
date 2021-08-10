@@ -15,13 +15,13 @@ S A mu(V*p,Nn)_(munmap(p,n);i(ZZ(m),B(m[i].p==p,Mc(m+i,m+i+1,(--nm-i)*Z m[0])));
 S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
 A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
 
-S Au[Z(N)==4?27:35];S I lck;
+S Az[Z(N)==4?27:35];S I lck;
 S A mb(Cb,Ax)_(xX=0;xr=0;DBG(AN(-1,AT(0,x)));xU=b;x)V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,_R(xa))x)
-A1(m0,DBG(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=xU;P(!b,x=AT(tn,x))xX=u[b];u[b]=(A)xC;Y(xtR,mrn(xn,xA))x)
+A1(m0,DBG(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=xU;P(!b,x=AT(tn,x))xX=z[b];z[b]=(A)xC;Y(xtR,mrn(xn,xA))x)
 A1(m1,DBG(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))DBG(Ms(xC,0xab,xZ);DBG(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
-A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_tP(t));Cb=59-__builtin_clzll(ZA|ZA-1+n*ZT[t]);P(n>1ull<<ZZ(u)||b>ZZ(u)-2,oom())
- Ax=u[b];Ii=b;W(!u[i],i++)Y(i<ZZ(u)-1,x=u[i];u[i]=xX)E(x=mb(b,mx(ZA<<(i=max(b,24)))))
- Y(b<i,xU=b;W(b<i--,u[i]=mb(i,(A)x+(ZA<<i))))xr=1;AT(t,AN(n,x)))
+A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_tP(t));Cb=59-__builtin_clzll(ZA|ZA-1+n*ZT[t]);P(n>1ull<<ZZ(z)||b>ZZ(z)-2,oom())
+ Ax=z[b];Ii=b;W(!z[i],i++)Y(i<ZZ(z)-1,x=z[i];z[i]=xX)E(x=mb(b,mx(ZA<<(i=max(b,24)))))
+ Y(b<i,xU=b;W(b<i--,z[i]=mb(i,(A)x+(ZA<<i))))xr=1;AT(t,AN(n,x)))
 A atnv(Ct,Nn,OV*v)_(Ax=atn(t,n);Mc(xC,v,n*ZT[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au0)))
 A1(a1,atnv(tA,1,A(x)))A2(a2,atnv(tA,2,A(x,y)))A3(a3,atnv(tA,3,A(x,y,z)))A2(aM,atnv(tM,2,A(x,y)))A2(am,atnv(tm,2,A(x,y)))
 A aA(Nn)_(atn(tA,n))A aC(Nn)_(atn(tC,n))A aB(Nn)_(atn(tB,n))A aH(Nn)_(atn(tH,n))
@@ -49,7 +49,7 @@ S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,Z(b)-1);P(n<0,0)b[n]=0;Qp=b;W(*p,Qq=SC0(p,10);ln(p,q);p=q+1)1)V repl(){W(rep())}
-V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;u[ZZ(u)-1]=1;Ax=AN(0,aA(32));glb=aa0();
+V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
  cn[tA]=ce[tC];xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tC]=ac(32);cn[tS]=as(0);
  Mc(cn+ti,cn+tI,(tS-tI+1)*Z(A));i(tn-to,cn[to+i]=au0)

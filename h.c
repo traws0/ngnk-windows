@@ -1,7 +1,7 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 SN A flt(Ax,Ay,Cb)_(En(xK-1,x,y)Er(!ytT,x,y)x=Ny(x(app(x,A(yR),1)));x=xN?Ny(gL(x)):x(aL(0));XmMA(et2(x,y))
  Y(xtt,x=Ny(rshL(yN,x)))E(P(xn-yN,el2(x,y)))
- Au=rshL(0,yR);i(yN,Ln=gl(get(x,i));B(n-(UI)n,u=ed1(u))j(b?n:!n,uq(get(y,i))))x(y(u)))
+ Az=rshL(0,yR);i(yN,Ln=gl(get(x,i));B(n-(UI)n,z=ed1(z))j(b?n:!n,zq(get(y,i))))x(y(z)))
 S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1,r-1))y)
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);Mc(yC,xC+j*w,q*w);
  Mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,Mc(yC+m*w,yC,m*w);m*=2)Y(n>m,Mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
