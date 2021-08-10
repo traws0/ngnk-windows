@@ -34,21 +34,20 @@ S AX(cvi,P(n>2,ern(n,a))Ay,z,u;Y(n==1,y=0;z=*a)E(y=*a;z=a[1])
  P(!y,A v=y=zR;u=enl(yR);W(1,z=yR;y=app(x,&y,1);P(!y,z(u(dex(v,0))))Im=mtc_(y,z)||mtc_(y,v);z(0);B(m)uq(yR))y(dex(v,u)))
  Yz(u=enl(zR);i(gl(y),z=Nu(app(x,&z,1));uq(zR))z(u))
  u=enl(zR);W(1,zR;A w=app(y,&z,1);P(!w,y(z(u(0))))B(!tru(w))z=app(x,&z,1);P(!z,y(u(0)))uq(zR))y(z(u)))
-AX(rdc,
- Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):*a)P(m<0,Y(y,y(0))eln(n,a))P(!m&&!y,Au=id_(x,z);mrn(n,a);u)
- Y(n==1&&xtv&&xv<8&&(!y||ytt)&&ztZDC,Y(ztC,z=gH(z))Y(y&&(ytd||ztD),y=gD(y);z=gD(z))Ct=zt;
-  V(f,arrT[t-tB][xv])P(f,Lv=gl(y?y:get(z,0));z2(f(&v,zC+ZT[t]*!y,m-!y));t==tD?atnv(td,1,&v):az(v)))
+AX(rdc,Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):z)P(m<0,Y(y,y(0))eln(n,a))P(!m&&!y,x=id_(x,z);mrn(n,a);x)
+ Y(n==1&&xtv&&xv<11&&(!y||ytz||ytd||ytc)&&ztZDC,Y(ztC,z=gH(z))Y(y&&(ytd||ztD),y=gD(y);z=gD(z))Ct=zt;
+  V(f,arrT[t-tB][xv])P(f,Lv=gl(y?y:get(z,0));z2(f(&v,zC+ZT[t]*!y,m-!y));t-tD?az(v):ad(*(D*)&v)))
  Li=!y;Y(i,y=get(z,0))A b[8];W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);B(!y)i++)mrn(n-1,a+1);z(y))
 AX(scn,
  P(n==1,Az=a[n-1];P(ztt||!zN,z)P(ztm,Ay=kv(&z);y=Nz(scn(x,&y,1));am(z,y))P(x==cv(','),scn(x,A(oA,z),2))
-  Y(xtv&&xv&&xv<8&&ztZDC/*todo*/&&(xv-1&&xv-2&&xv-3||ztL||ztD),Y(ztC,z=N(gL(z)))
+  Y(xtv&&xv&&xv<8&&ztZDC,Y(ztC,z=N(gL(z)))
    V(f,arsT[zt-tB][xv])P(f,I w=ZT[zt];Au=ax(z);Mc(uC,zC,w);f(zC,zC+w,uC+w,zN-1);u))
   Ay=get(z,0),u=enl(yR);Li=0,n=zN;W(++i<n,y=N(app(x,A(y,get(z,i)),2));uq(yR))y(z(u)))
  Y(n==2,Au=a[1];P(utt,app(x,a,n))P(utm,u=mut(u);uy=scn(x,A(*a,uy),2);u)P(!un,mr(*a),u))
  Ay=*a++;n--;Lm=cfm(a,n);P(m==-2,y(eln(n,a)))Au=oA,b[8];
  i(m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);P(!y,mrn(n,a);u(0))uq(yR))mrn(n,a);y(u))
 AX(eap,P(n>2,ern(n,a))Az=a[n-1],y=n-1?*a:zt-tS?id_(x,*a):as(0);Et(!ztT,y,z)P(!zn,y(z))
- Y(xtv&&xv<11&&ytZC&&ztZC/*todo*/&&(xv-1&&xv-2&&xv-3||ztL),Y(ytz,y=az(gl(y)))N(sup(&y,&z));Lv=gl(y);
+ Y(xtv&&xv<11&&ytZC&&ztZC,Y(ytz,y=az(gl(y)))N(sup(&y,&z));Lv=gl(y);
   V(f,arpT[zt-tB][xv])P(f,Au=ax(z);f(&v,zC,uC,zn);u))
  Au=oA;i(zn,y=app(x,A(get(z,i),y),2);P(!y,z(u(0)))uq(y);y=get(z,i))y(z(u)))
 AX(w0,Y(n==1, Xz(win(xR,*a)))P(xtT&&!xtA,n>1?ern(n,a):bin(xR,*a))           eac(x,a,n)) /* '  */

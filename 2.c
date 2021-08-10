@@ -69,16 +69,16 @@ X(arrT,{{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
         {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
         {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
         {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}})
-X(arsT,{{    0,addsB,subsB,mulsB,0,0,mnmsB,mxmsB},//scan
-        {    0,addsH,subsH,mulsH,0,0,mnmsH,mxmsH},
-        {    0,addsI,subsI,mulsI,0,0,mnmsI,mxmsI},
-        {    0,addsL,subsL,mulsL,0,0,mnmsL,mxmsL},
-        {    0,addsD,subsD,mulsD,0,0,mnmsD,mxmsD}})
-X(arpT,{{dexpB,addpB,subpB,mulpB,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
-        {dexpH,addpH,subpH,mulpH,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
-        {dexpI,addpI,subpI,mulpI,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
-        {dexpL,addpL,subpL,mulpL,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
-        {dexpL,addpD,subpD,mulpD,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
+X(arsT,{{    0,    0,    0,    0,0,0,mnmsB,mxmsB},//scan
+        {    0,    0,    0,    0,0,0,mnmsH,mxmsH},
+        {    0,    0,    0,    0,0,0,mnmsI,mxmsI},
+        {    0,    0,    0,    0,0,0,mnmsL,mxmsL},
+        {    0,    0,    0,    0,0,0,mnmsD,mxmsD}})
+X(arpT,{{dexpB,    0,    0,    0,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
+        {dexpH,    0,    0,    0,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
+        {dexpI,    0,    0,    0,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
+        {dexpL,    0,    0,    0,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
+        {dexpL,    0,    0,    0,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
 X(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
         {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
         {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
