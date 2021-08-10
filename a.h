@@ -35,10 +35,10 @@
 #define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define EX extern
 #ifdef DEBUG
- #define dbg(x) x
+ #define DBG(x) x
  #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n")) //assert
 #else
- #define dbg(x)
+ #define DBG(x)
  #define Q(x)
 #endif
 #if __FreeBSD__
@@ -125,7 +125,7 @@ S C tT(Ct)_(t==tm?tM:t>=to?tA:t>tm?t+tI-ti:t) //tT():get corresponding list type
 #define _V(x) (V*)(x)         //ptr to data
 #define _r(x) ((I*)_V(x))[-3] //refcount
 #define _q(x,y) (x=apd(x,y))  //append
-#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});dbg(x=0);m1(t_);r_;}) //two-phase free()
+#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x) //set refcount
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])  S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
 S  I _v(Ax)_(x)                     S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                  //value(i32)
