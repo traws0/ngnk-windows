@@ -34,34 +34,7 @@
 #define A(a...) (A[]){a}
 #define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define EX extern
-#ifdef DEBUG
- #define DBG(x) x
- #define Q(x) Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n")) //assert
-#else
- #define DBG(x)
- #define Q(x)
-#endif
-#if __FreeBSD__
- #define FBSD(a...) a
- #define NFBSD(a...)
-#else
- #define FBSD(a...)
- #define NFBSD(a...) a
-#endif
-#if i386
- #define I386(a...) a
- #define NI386(a...)
-#else
- #define I386(a...)
- #define NI386(a...) a
-#endif
-#if wasm
- #define WASM(a...) a
- #define NWASM(a...)
-#else
- #define WASM(a...)
- #define NWASM(a...) a
-#endif
+#define Q(x) DBG(Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
 
 TD void V;TD char B;TD char unsigned C,UC;TD O C*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
 TD long long L;TD double D;TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I);TD size_t N;
