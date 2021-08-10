@@ -37,7 +37,7 @@ S A1(envf,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(gS(aCm(p,q)));zq(aCz(
 S A1(exitf,Xz(exit(gl(x));0)exit(1);0)
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(n,a):idx_(x,*a))Xz(n-1?ern(n,a):wrt(xR,*a))
  Xs(Ss("","k","j","p","cf","t","x","hex","md5","sha1","sha2","sha3","aes","sin","err","epr","argv","env","exit","e")
-    Sf(x,*a,s,ser,kst,js1,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr,argvf,envf,exitf,exp))
+    Sf(x,*a,ser,kst,js1,prs,cf,tme,frk,hex,md5,sha1,sha256,sha3_256,aes0,sin,err,epr,argvf,envf,exitf,exp))
  XM(Ay=*a;YsS(idxm(x,a,n))x=idx_(x,y);P(n==1,x)x(app(x,a+1,n-1)))Xm(idxm(x,a,n))
  Ik=xK;P(n<k,prj(x,a,n))Xv(n==2?v2[xv](*a,a[1]):x==cv('@')?amd(a,n):x==cv('.')?dmd(a,n):enn(n,a))
  Xr(CH(xw,&w0,w1,w2,w3,w4,w5)(xx,a,n))

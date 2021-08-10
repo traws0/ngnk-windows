@@ -24,4 +24,4 @@ A2(fnd,P(xtZ&&ytzZ||xtC&&ytcC||xtS&&ytsS||xtD&&ytdD,TY(fB)*f=CH(Zt[xt],&fB,fH,fI
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=rnk(x),l=rnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(cv('?'),A(x,y),2))er2(x,y))
 
-A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes","e")Sf(x,y,s,des,js0,unh,aes1,log))et2(x,y))fnd(x,y))
+A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes","e")Sf(x,y,des,js0,unh,aes1,log))et2(x,y))fnd(x,y))
