@@ -1,7 +1,6 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #include"a.h"
 #include<sys/syscall.h>
-
 V*memcpy (V*x,OV*y,Nn)_(C*p=x  ;Qq=y  ;i(n,*p++=*q++)x)
 V*memrcpy(V*x,OV*y,Nn)_(C*p=x+n;Qq=y+n;i(n,*--p=*--q)x)
 V*memmove(V*x,OV*y,Nn)_((y<x&&x<y+n?memrcpy:memcpy)(x,y,n))
@@ -29,8 +28,9 @@ NWASM(
  #define h5(x)      I386(".globl "#x";"#x":mov %esp,%ebx;add $4,%ebx;mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
                    NI386(h(x,"movq %rcx,%r10;"))
  #define h6 h5
- FBSD(asm(h(pipe2));I pipe(Iv[2])_(pipe2(v,0));)NFBSD(asm(h(pipe));)
- FBSD(asm(h3(freebsd11_getdents));ssize_t getdents(I f,C*b,Nn)_(getdents(f,b,n)))NFBSD(asm(h3(getdents));)
+ #ifdef SYS_freebsd11_getdents
+  #define SYS_getdents SYS_freebsd11_getdents
+ #endif
+ FBSD(asm(h(pipe2));I pipe(Iv[2])_(pipe2(v,0)))NFBSD(asm(h(pipe));)
  asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h5(setsockopt)h3(connect)
-     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap));
-)
+     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents));)
