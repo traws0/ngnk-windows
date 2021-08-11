@@ -13,7 +13,7 @@ A2(rsh,XF(flt(x,y,1))Ym(Xz(Ln=gl(x);Az=kv(&y);am(Nz(rshL(n,y)),Ny(rshL(n,z))))x=
  Nj=0;x(y(rs(y,yn,&j,xL,n))))
 A rshL(Ln,Ax)_(rsh(az(n),x))
 S A slc(Ax/*0*/,Li,Lj)_(Q(xtT&&0<=i&&i<=j&&i<=xn)Ay=atn(xt,j-i);Mc(yC,xC+i*ZT[xt],(j-i)*ZT[xt]);XA(sqz(mRa(y)))y)
-S A drp(Ln,Ax/*1*/)_(XT(n*=n!=NL;x(slc(x,max(0,min((L)xn,n)),max(0,min((L)xn,xn+n)))))
+A drp(Ln,Ax/*1*/)_(XT(n*=n!=NL;P(n<=0&&-n<=xn&&xr==1,AN(xn+n,x))x(slc(x,max(0,min((L)xn,n)),max(0,min((L)xn,xn+n)))))
  Xm(Ay=kv(&x);am(Ny(drp(n,x)),Nx(drp(n,y))))XM(Ay=kv(&x);aM(x,Nx(eac2(az(n),y,cv('_')))))er1(x))
 A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xt(en2(x,y))
  Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am(Nz(cut(x,y)),Nx(cut(z,y))))

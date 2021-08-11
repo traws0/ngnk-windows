@@ -50,7 +50,7 @@ A1(ksl,ksp(x,"AC","BHILDS","Mmqruvw"))A1(ksr,ksp(x,"","","qruvw"))A1(ksw,ksp(x,"
 A1(kst,P(xtT&&xn==1,pre(',',ksr(fir(x))))XA(par(jc(';',ek(x))))XcC(kss(enla(x)))
  XZD(xn?jc(32,eac1(x,str)):x(aCz(xtD?"0#0n":"!0")))XS(xn?raz(ek(x)):x(aCz("0#`")))XM(pre('+',kst(flp(x))))
  Xm(Ay=kv(&x);cat(apc(ksl(x),'!'),ksr(y)))Xzd(str(x))
- Xs(x=str(x);Iv=1;i(xn,v&=c09(xc)||cAz(xc))Y(!v,x=kst(x);Y(*xC==',',x=cut(ai(1),x)))pre('`',x))Xo(x(_R(xx)))
+ Xs(x=str(x);Iv=1;i(xn,v&=c09(xc)||cAz(xc))Y(!v,x=kst(x);Y(*xC==',',x=drp(1,x)))pre('`',x))Xo(x(_R(xx)))
  Xp(x=val(x);P(xn-3?0:!SC("vr",TS[_t(xx)])?0:xy-PLH&&xz==PLH,Ay=_R(xy);cat(ksl(y),kst(fir(x))))
     x=ek(x);Nm=_n(xx);x=apc(jc(';',x),']');Q(xr==1);xC[m]='[';x)
  Xq(raz(ek(val(x))))Xr(x=val(x);Ay=_R(xy);cat(ksw(fir(x)),str(y)))Xw(aCn(&"':/:\\:"[xv%3*2],1+xv/3))
