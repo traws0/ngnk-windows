@@ -1,7 +1,7 @@
 #!k
 repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for more info\n"
 repl.prompt:," "
-cmds:()!()
+cmds:""!()
 cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
 cmds["a"]:{` 1:1:repl.basename[`argv 0],"/LICENSE";}
 repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
@@ -105,12 +105,12 @@ a^y fill      1^0 0N 2 3 0N -> 0 1 2 3 1   "b"^" " -> "b"
 X^y without   "abracadabra"^"bc" -> "araadara"
  #x length    #"abc" -> 3   #4 -> 1   #`a`b`c!0 1 0 -> 3
 I#y reshape   2 3#` -> (```;```)   3#2 -> 2 2 2
-f#y filter    (3>#:')#(0;2 1 3;5 4) -> (0;5 4)   {2}#"ab" -> "aabb"
+f#y replicate (3>#:')#(0;2 1 3;5 4) -> (0;5 4)   {2}#"ab" -> "aabb"
  _n floor     _12.34 -12.34 -> 12 -13
  _c lowercase _"Ab" -> "ab"
 i_Y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
 I_Y cut       2 4 4_"abcde" -> ("cd";"";,"e")
-f#y filterout (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
+f_y weed out  (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
 X_i delete    "abcde"_2 -> "abde"
  $x string    $(12;"ab";`cd;+) -> ("12";(,"a";,"b");"cd";,"+")
 i$C pad       5$"abc" -> "abc  "   -3$"a" -> "  a"
