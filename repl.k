@@ -161,15 +161,15 @@ x F'y  each2     2 3#'"ab" -> ("aa";"bbb")
 x F/y  seeded /  10+/1 2 3 -> 16
 y F\x  seeded \  10+\1 2 3 -> 11 13 16
   f/x  converge  {1+1.0%x}/1 -> 1.618033988749895
-  f\x  c-scan    (-2!)\100 -> 100 50 25 12 6 3 1 0
-i f/x  n-times   5(2*)/1 -> 32
-i f\x  n-scan    5(2*)\1 -> 1 2 4 8 16 32
+  f\x  converges (-2!)\100 -> 100 50 25 12 6 3 1 0
+i f/x  n-do      5(2*)/1 -> 32
+i f\x  n-dos     5(2*)\1 -> 1 2 4 8 16 32
 f f/x  while     (1<){$[2!x;1+3*x;-2!x]}/3 -> 1
-f f\x  w-scan    (1<){$[2!x;1+3*x;-2!x]}\3 -> 3 10 5 16 8 4 2 1
+f f\x  whiles    (1<){$[2!x;1+3*x;-2!x]}\3 -> 3 10 5 16 8 4 2 1
   C/X  join      "ra"/("ab";"cadab";"") -> "abracadabra"
   C\C  split     "ra"\"abracadabra" -> ("ab";"cadab";"")
-  I/I  decode    24 60 60/1 2 3 -> 3723   2/1 1 0 1 -> 13
-  I\I  encode    24 60 60\3723 -> 1 2 3   2\13 -> 1 1 0 1
+  I/x  decode    24 60 60/1 2 3 -> 3723   2/1 1 0 1 -> 13
+  I\x  encode    24 60 60\3723 -> 1 2 3   2\13 -> 1 1 0 1
   F':x eachprior -':12 13 11 17 14 -> 12 1 -2 6 -3
 x F':y seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3
 x F/:y eachright 1 2*/:3 4 -> (3 6;4 8)
