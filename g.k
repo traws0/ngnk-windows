@@ -28,7 +28,7 @@ d("N@(r) N1(@,r)"    ;v)              /error pass-through
 d("o@ _R(ce[t@])";"ACLDS")            /empty
 d("E@(a...) E_(@,a)" ;"cdilnoprstvz") /errors
 d("$@(a...) P(%t@,a)";T,K,(+|_:\"CILDSZ")," "\"mt MT mMA ZD zd ZC zc ZDC";"XY")
-d'(,"@$ @ $"),/:":"\'" "\"C:bcdknotv BHIL:ijkmnv I:f D:dv A:xyzu N:ijmn O:ACV Q:spq"; /c type+var
+d'(,"@$ @ $"),/:":"\'" "\"C:bcdkntv H:o BHIL:ijkmnv I:f D:dv A:xyzu N:ijmn O:ACV Q:spq"; /c type+var
 f:{r,:"|"\x/"@"\"#if ",y,"|#define  @(a...) a|#define N@(a...)|#else| #define  @(a...)| #define N@(a...) a|#endif"}
 f/'$(`DBG`DEBUG;`FBSD`"__FreeBSD__";`I386`i386;`WASM`wasm);
 "g.h"0:r
