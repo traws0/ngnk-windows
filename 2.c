@@ -18,9 +18,9 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x
 #define  hs(v,t,T,R) hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)
 #define  hp(v,t,T,R) hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
 #define htt(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)
-#define htT(v,t,T,R) hF(v##t##T,T,R,AL(b)AL(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
-#define hTT(v,t,T,R) hF(v##T##T,T,R,AL(a)AL(b)AL(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)
-#define hTt(v,t,T,R) hF(v##T##t,T,R,AL(a)AL(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
+#define htT(v,t,T,R) hF(v##t##T,T,R,LN(b)LN(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
+#define hTT(v,t,T,R) hF(v##T##T,T,R,LN(a)LN(b)LN(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)
+#define hTt(v,t,T,R) hF(v##T##t,T,R,LN(a)LN(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
 #define hsw(v,t,T,R) hF(v##T##t,T,R,v##t##T(b,a,r,n))
 
 #define h0(a...) ha(a)hs(a)hp(a)

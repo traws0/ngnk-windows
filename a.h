@@ -27,7 +27,7 @@
 #define ST struct
 #define RE restrict
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
-#define AL(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);}
+#define LN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);} //alignment
 #define PD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p)) //pad
 #define M1(x) #x
 #define M2(x) M1(x)

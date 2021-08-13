@@ -12,7 +12,7 @@ SN A getM(Ax/*0*/,Lj)_(Q(xtM);Ay=xy,z=aA(yn);Q(ytA);i(zn,za=get(ya,j))am(_R(xx),
 A get(Ax/*0*/,Li)_(XA(_R(xa))XC(ac(xc))XB(ai(xb))XH(ai(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))Xm(getr(xy,i))XM(getM(x,i))xR)
 A getr(Ax/*0*/,Li)_(Q(!xtt);in(i,xN)?get(x,i):xN?mkn(get(x,0)):_R(cn[xt]))
 #define G(T,U) (32/(Z(T)>Z(U)?Z(T):Z(U)))
-#define iF(f,T,U,R,e...) S L f(OV*RE a,Lm,OV*RE b,V*RE c,Nn)_(O T*p=a;O U*q=b;R*r=c;AL(p)AL(q)AL(r)e;n)
+#define iF(f,T,U,R,e...) S L f(OV*RE a,Lm,OV*RE b,V*RE c,Nn)_(O T*p=a;O U*q=b;R*r=c;LN(p)LN(q)LN(r)e;n)
 #define iC_(U) iF(  iC##U,C,U,C,i(PD(n,q),r[i]=in(q[i],m)?p[q[i]]:32))
 #define iS_(U) iF(  iS##U,I,U,I,i(PD(n,q),Iv=in(q[i],m);r[i]=v*p[v*q[i]]))
 #define iD_(U) iF(  iD##U,D,U,D,i(n,r[i]=in(q[i],m)?p[q[i]]:ND))
