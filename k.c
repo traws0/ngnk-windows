@@ -58,9 +58,10 @@ S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&
 S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj=fpI(&yx,*xI);
  Y(j==_n(yy),_q(yy,xn>1?aa0():au0))A*p=(A*)_V(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;Mc(b+1,a+1,(n-1)*8);*p=_R(N(f(b,n))))
-AA(am1,Ax=*a,y=a[1],z=a[2];Xt(etn(n,a))
- Xm(x=mut(x);xx=unq(cat(xx,yR));xy=cat(xy,rshL(_n(xx)-_n(xy),id_(z,xy)));
-  A b[8];*b=xy;b[1]=fnd(_R(xx),y);Mc(b+2,a+2,(n-2)*8);xy=am1(b,n);P(!xy,xy=au0;x(0))x)
+AA(am1,Ax=*a,y=a[1];Xt(etn(n,a))
+ Xm(Az=kv(&x),u=fnd(xR,yR);Y(utlL,i(uN,Y(ul==NL,ul=xN;xq(get(y,i));zq(id_(a[2],z)))))
+  A b[8];Mc(b+2,a+2,(n-2)*Z*a);*b=y(z);b[1]=u;am(x,am1(b,n)))
+ Az=a[2];
  P(y==au0,A b[8];Mc(b,a,n*8);b[1]=tilL(xN);am1(b,n))
  Yt(x=mut(x);y=gL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))
   A b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
