@@ -61,13 +61,12 @@ S A mend(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;Mc(b
 AA(am1,Ax=*a,y=a[1];Xt(etn(n,a))
  Xm(Az=kv(&x),u=fnd(xR,yR);Y(utlL,i(uN,Y(ul==NL,ul=xN;xq(get(y,i));zq(id_(a[2],z)))))
   A b[8];Mc(b+2,a+2,(n-2)*Z*a);*b=y(z);b[1]=u;am(x,am1(b,n)))
- Az=a[2];
  P(y==au0,A b[8];Mc(b,a,n*8);b[1]=tilL(xN);am1(b,n))
  Yt(x=mut(x);y=gL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))
-  A b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
- Y(n==4,Au=a[3];
-  P(xtZ&&ytZ&&ztv&&zv<8&&utzZ,Ei(utT&&yn-un,x(y),u)x=mut(x);y=gL(y);Ny(sup(&x,&u));
-   Ei(y2(u2(x?(araT[xt-tB][zv])(xC,xn,yL,yn,utP?&u:(V*)uC,utT):0)))x)
+  Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
+ Y(n==4,Az=a[2],u=a[3];
+  P(xtZ&&ytZ&&ztv&&zv<8&&utzZ,El(utT&&yn-un,x(y),u)x=mut(x);y=gL(y);Ny(sup(&x,&u));
+   y2(u2(araT[xt-tB][zv](xC,xn,yL,yn,utP?&u:(V*)uC,utT)))+1?x:ei1(x))
   P(xtC&&ytZ&&z==av0&&utcC,x=mut(x);y=gL(y);I d=utT;u=enla(u);El(d&&yn-un,x(y),u)
    x=y2(u2(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));Ei(!x)x))
  rdc(cv('@'),a,n))

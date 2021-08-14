@@ -12,9 +12,9 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,cD(x,y)<0)hc(gtn,x>y,cD(x,y)>0)hc(eql,x
 #undef hd
 #undef hf
 
-#define hF(f,T,R,e...) SN I f(OV*RE p,OV*RE q,V*RE s,Nn)_(O T*a=p,*b=q;R*r=s;e)
-#define  hr(v,T,R,Q) SN I v##r##T(V*RE p,OV*RE q,Nn)_(O T*b=q;R*a=p,c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
-#define  ha(v,t,T,R) SN I v##a##T(V*RE p,Nn,O L*RE q,Nm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),0)a[j]=v##t(a[j],b[d*i]))0)
+#define hF(f,T,R,e...) SN I f(OV*RE p,OV*RE q,V*RE s,Ln)_(O T*a=p,*b=q;R*r=s;e)
+#define  hr(v,T,R,Q) SN I v##r##T(V*RE p,OV*RE q,Ln)_(O T*b=q;R*a=p,c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
+#define  ha(v,t,T,R) SN I v##a##T(V*RE p,Ln,O L*RE q,Lm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),-1)a[j]=v##t(a[j],b[d*i]))0)
 #define  hs(v,t,T,R) hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)
 #define  hp(v,t,T,R) hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
 #define htt(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)
