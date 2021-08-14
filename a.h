@@ -35,6 +35,7 @@
 #define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define EX extern
 #define Q(x) DBG(Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
+#define Ab8 A b[8];
 
 TD void V;TD char B;TD char unsigned C,UC;TD O C*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
 TD long long L;TD double D;TD size_t N;
