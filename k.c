@@ -60,7 +60,7 @@ S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj
 S A mnd(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)A b[8];*b=*p;*p=au0;Mc(b+1,a+1,(n-1)*8);*p=_R(N(f(b,n))))
 AA(am1,Ax=*a,y=a[1];Xt(etn(n,a))
  Xm(Az=kv(&x),u=fnd(xR,yR);Y(utlL,i(uN,Y(ul==NL,ul=xN;xq(get(y,i));zq(id_(a[2],z)))))
-  A b[8];Mc(b+2,a+2,(n-2)*Z*a);*b=y(z);b[1]=u;am(x,am1(b,n)))
+  A b[8];Mc(b+2,a+2,(n-2)*Z*a);*b=y(z);b[1]=u;am(x,Nx(am1(b,n))))
  P(y==au0,A b[8];Mc(b,a,n*8);b[1]=tilL(xN);am1(b,n))
  Yt(x=mut(x);y=gL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))
   Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
