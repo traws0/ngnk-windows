@@ -8,7 +8,7 @@ S V shf(L*r,Nn){i(n,UI j=rm(i+1);SWP(r[i],r[j]))}
 S A ro(UL n,UL m)_(Ax=aL(n);i(n,xl=r1())Y(m,Y(m<=1ll<<32,i(n,xl=rm(m)))E(i(n,xl=(UL)xl%m)))x)
 S A de(UL n,UL m)_(El(n>m)Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xL,n);x)
 S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
-S A rnd(Ln,Ax)_(Xz(rd(n,gl(x)))Xc(gC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))
+ALA(rnd,Xz(rd(n,gl(x)))Xc(gC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))
  Xd(mul(x,add(ad(-1),Nx(AT(tD,add(al(1023ll<<52),rd(n,1ll<<52)))))))XMT(idx(x,Nx(rd(n,xN))))et1(x))
 
 #define h(T) NI L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
@@ -18,12 +18,15 @@ h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(xn,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
 L fAI(Ax,Iv)_(fI(xI,xn,v))
-I rnk(Ax/*0*/)_(XA(xn?rnk(xx)+1:2)XmMA(rnk(xy))xtT)//rank(assuming unirank)
+I rnk(Ax/*0*/)_(XA(xn?rnk(xx)+1:2)XmMA(rnk(xy))xtT)//assuming unirank
+S A2(sdf,K("{a:&/x;b:1+|/x;@[(b-a)#0N;|x-a;:;|!#x]y-a}",x,y)) //small-domain find
 A2(fnd,
  P(xtT&&!xtA&&!ytmMA,
-  P(xtZ&&ytzZ||xt==tT(yt),TY(fB)*f=CH(Zt[xt],&fB,fH,fI,fL);Yt(x(az(f(xC,xn,gl(y)))))
+  P(xtZ&&ytzZ||xt==tT(yt),
+   P(Zt[xt]<2&&xn>99&&yN>99,sdf(x,y))
+   V(f,CH(Zt[xt],&fB,fH,fI,fL))Yt(x(az(f(xC,xn,gl(y)))))
    Az=aL(yn);x2(y2(CH(Zt[yt],&FB,FH,FI,FL)(xC,xn,f,yC,yn,zL);z)))
-  Az=cn[tl];x(y(ytt?zR:rshL(yN,zR))))
+  Az=cn[tl];zR;x(y(ytt?z:rshL(yN,z))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=rnk(x),l=rnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(cv('?'),A(x,y),2))er2(x,y))
 
