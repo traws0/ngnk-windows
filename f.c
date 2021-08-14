@@ -19,8 +19,11 @@ S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(xn,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
 L fAI(Ax,Iv)_(fI(xI,xn,v))
 I rnk(Ax/*0*/)_(XA(xn?rnk(xx)+1:2)XmMA(rnk(xy))xtT)//rank(assuming unirank)
-A2(fnd,P(xtZ&&ytzZ||xtC&&ytcC||xtS&&ytsS||xtD&&ytdD,TY(fB)*f=CH(Zt[xt],&fB,fH,fI,fL);Yt(x(az(f(xC,xn,gl(y)))))
-        Az=aL(yn);x2(y2(CH(Zt[yt],&FB,FH,FI,FL)(xC,xn,f,yC,yn,zL);z)))
+A2(fnd,
+ P(xtT&&!xtA&&!ytmMA,
+  P(xtZ&&ytzZ||xt==tT(yt),TY(fB)*f=CH(Zt[xt],&fB,fH,fI,fL);Yt(x(az(f(xC,xn,gl(y)))))
+   Az=aL(yn);x2(y2(CH(Zt[yt],&FB,FH,FI,FL)(xC,xn,f,yC,yn,zL);z)))
+  Az=cn[tl];x(y(ytt?zR:rshL(yN,zR))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=rnk(x),l=rnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(cv('?'),A(x,y),2))er2(x,y))
 
