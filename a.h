@@ -50,21 +50,21 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define ALA(f,b...) A f(Ln,Ax     )_(b)
 #define AAL(f,b...) A f(Ax,Li     )_(b)
 
-#define extr(c,x,y) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
+#define  Ms(a...) __builtin_memset(a)
+#define  Mm(a...) __builtin_memmove(a)
+#define  Mc(a...) __builtin_memcpy(a)
+#define  MQ(a...) __builtin_memcmp(a)
+#define  MC(a...) __builtin_memchr(a)
+#define  Sn(a...) __builtin_strlen(a)
+#define  SC(a...) __builtin_strchr(a)
+#define  SS(a...) __builtin_strstr(a)
+#define  SQ(a...) __builtin_strcmp(a)
+#define  MM(a...) memmem(a)
+#define SC0(a...) strchrnul(a)
 #define min(a...) extr(<,a)
 #define max(a...) extr(>,a)
+#define extr(c,x,y) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>Z(x)*8-y_:x;})
-#define Ms(a...) __builtin_memset(a)
-#define Mm(a...) __builtin_memmove(a)
-#define Mc(a...) __builtin_memcpy(a)
-#define MQ(a...) __builtin_memcmp(a)
-#define MC(a...) __builtin_memchr(a)
-#define Sn(a...) __builtin_strlen(a)
-#define SC(a...) __builtin_strchr(a)
-#define SS(a...) __builtin_strstr(a)
-#define SQ(a...) __builtin_strcmp(a)
-#define MM(a...)  memmem(a)
-#define SC0(a...) strchrnul(a)
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
  hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sha1,sha256,sha3_256,sin,ser,spl,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
@@ -111,14 +111,10 @@ S  C _w(Ax)_(xC[-14])               S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)        
 S  C _k(Ax)_(xC[-13])               S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)                                 //arity(for funcs)
 S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UH o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xH[-7]=o;x)          //offset
 S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                     //length
-#define TV(t,v) (A)((UL)(t)<<56|(v))
-#define au(i) TV(tu,i)
-#define av(i) TV(tv,i)
-#define aw(i) TV(tw,i)
-S OA au0=au(0),FIR=au(3),TIL=au(5),REV=au(7),LEN=au(14),OUT=au(25),PLH=au(29),PRG=au(30),
-     av0=av(0),ADD=av(1),MUL=av(3),MOD=av(5),MNM=av(6),MXM=av(7),LTN=av(8),EQL=av(10),CAT=av(12),EXC=av(13),RSH=av(14),
-      CUT=av(15),CST=av(16),QUE=av(17),AP1=av(18),APN=av(19),COM=av(24),MKL=av(25);
-
+S OA au0=(UL)tu<<56,FIR=au0+3,TIL=au0+5,REV=au0+7,LEN=au0+14,OUT=au0+25,PLH=au0+29,PRG=au0+30,
+     av0=(UL)tv<<56,ADD=av0+1,MUL=av0+3,MOD=av0+5,MNM=av0+6,MXM=av0+7,LTN=av0+8,EQL=av0+10,CAT=av0+12,EXC=av0+13,
+      RSH=av0+14,CUT=av0+15,CST=av0+16,QUE=av0+17,AP1=av0+18,APN=av0+19,COM=av0+24,MKL=av0+25;
+#define aw(i) AT(tw,i)
 #define ND (D)(0./0.)
 #define WD __builtin_inf()
 #define NL (1ll<<63)

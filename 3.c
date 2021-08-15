@@ -11,7 +11,7 @@
 #define ho(t,T)          hA(a##t##T,T,0,GZ(T))hA(a##T##T,T,1,GZ(T))hM(m##t##T,T,0,GZ(T))hM(m##T##T,T,1,GZ(T))
 #define hn(t,T)          hN(a##t##T,T,0,+)hN(a##T##T,T,1,+)hN(m##t##T,T,0,*)hN(m##T##T,T,1,*)
 ho(b,B)ho(h,H)ho(i,I)hn(l,L)hn(d,D)
-A adm(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(x,y,av(v?3:1)))N(sup(&x,&y));Ik=xtT<<1|ytT;
+A adm(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(x,y,v?MUL:ADD))N(sup(&x,&y));Ik=xtT<<1|ytT;
  P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))Y(k==2||(k==3&&xr==1),SWP(x,y))
  S O TY(&abB)f[][2][5]={{{abB,ahH,aiI,alL,adD},{aBB,aHH,aII,aLL,aDD}},{{mbB,mhH,miI,mlL,mdD},{mBB,mHH,mII,mLL,mDD}}};
  Nn=yn;El(k==3&&xn-n,x,y)Az=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC,zC,n);
