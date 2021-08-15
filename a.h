@@ -11,9 +11,9 @@
 #define I(x,a...) if(x){a;}
 #define  EI(a...) else I(a)
 #define   E(a...) else{a;}
-#define   i(a...) F_(i,a)
-#define   j(a...) F_(j,a)
-#define F_(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
+#define   i(a...) ij(i,a)
+#define   j(a...) ij(j,a)
+#define ij(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
 #define O const
 #define S static
 #define Z sizeof
