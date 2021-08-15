@@ -9,7 +9,7 @@ SN A fx(F1 f,Ax)_(P(xr==1,f(xC,xC,xn);x)Ay=atn(xt,xn);x2(f(xC,yC,yn);y))
 R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
  Nn=xn;Ay=xr>1?atn(xt,n):x;Nm=f[xt-tB](xC,yC,n);
- Y(m<n,Y(x-y,x=wdn(x,m,n,n-m);y=wdn(y,0,m,n))E(x=y=wdn(y,0,n,n))
+ I(m<n,I(x-y,x=wdn(x,m,n,n-m);y=wdn(y,0,m,n))E(x=y=wdn(y,0,n,n))
        N mw=m*ZT[yt];f[xt-tB](xC+(x-y?0:mw),yC+mw,n-m))
  x-y?x(y):y)
 R1(not,XF(x(ai(x==au0)))eql(x,xtsS?as(0):ac(0)))
@@ -21,7 +21,7 @@ R1(flr,XC(fx(flrC,x))Xc(fir(flr(enl(x))))XzZ(x)XsS(gS(flr(str(x))))
 S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
  S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.32913446369766718e-10,-2.33177897192836082e-8,
   2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
- P(x<0,-sind(-x))Y(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
+ P(x<0,-sind(-x))I(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
 S D expd(D x)_(0) //todo
 S D logd(D x)_(0) //todo
 #define h(f) F1(f,D,f##d(a[i])) R1(f,fx(f##D,N(gD(x))))

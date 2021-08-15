@@ -25,8 +25,8 @@ S V s1u(O U*d,Nn,U*a){
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
 S A md(Ax/*1*/,OV*iv,N nv,void(*f)(O U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
  I a[nv];Cc[128]={};Mc(a,iv,Z a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;x2(f(xI,k,a);Mc(c,xC+n-r,r));c[r]=128;
- *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);Y(b,bn(a,a,nv))aCn((V*)a,Z a))
-A1(md5,Y(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))
+ *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);I(b,bn(a,a,nv))aCn((V*)a,Z a))
+A1(md5,I(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))
 
 #define h(a,b,c,d,e,f,g,h) {d+=h+=(R(e,26)^R(e,21)^R(e,7))+chx(e,f,g)+s2k[r]+w[r];h+=(R(a,30)^R(a,19)^R(a,10))+maj(a,b,c);r++;}
 #define g(j) h(t[-j&7],t[1-j&7],t[2-j&7],t[3-j&7],t[4-j&7],t[5-j&7],t[6-j&7],t[7-j&7])
@@ -52,23 +52,23 @@ S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139
   i(5,UL*r=a+5*i,x=*r,y=r[1];F5(UL z=r[4-i];r[4-i]^=~x&y;y=x;x=z))                              //chi
   *a^=t[i])}                                                                                    //iota
 S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,Z a);
- W(n>0,b=min(n,r);i(b,a[i]^=p[i])p+=b;n-=b;Y(b==r,ks((V*)a);b=0))
- a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);Mc(z,a,b);z+=b;d-=b;Y(d>0,ks((V*)a)))}
+ W(n>0,b=min(n,r);i(b,a[i]^=p[i])p+=b;n-=b;I(b==r,ks((V*)a);b=0))
+ a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);Mc(z,a,b);z+=b;d-=b;I(d>0,ks((V*)a)))}
 A1(sha3_256,Et(!xtC,x)Ay=aC(32);x2(kec(136,xC,xn,6,yC,yn);y))
 
 S C s0[256],s1[256];S C t0(Cc)_(c<<1^27*(c>>7))S C t1(Cc,Cd)_(Cv=c*(d&1);i(4,c=t0(c);v^=(d>>i+1&1)*c)v)
 S V aei(){Cc=1,d=1;Ms(s0,99,256);i(255,c^=t0(c);i(3,d^=d<<(1<<i))d^=(d>>7)*9;i(5,s0[c]^=R(d,i)))i(256,s1[s0[i]]=i)}
 S V x16(C*r,Qp){i(16,r[i]^=p[i])}S V i16(C*r,Qp,Qq){i(16,r[i]=p[q[i]])}
 S V kxp(V*w0,OV*k,U l){U*w=w0,t;Mc(w,k,4*l);C*p=(V*)&t;
- i(3*l+28,t=w[i+l-1];Y(i%l==0,t=R(t,24);j(4,p[j]=s0[p[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/l+1])
-                     EY(l==8&&i%l==4,i(4,p[i]=s0[p[i]]))w[i+l]=w[i]^t)}
+ i(3*l+28,t=w[i+l-1];I(i%l==0,t=R(t,24);j(4,p[j]=s0[p[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/l+1])
+                     EI(l==8&&i%l==4,i(4,p[i]=s0[p[i]]))w[i+l]=w[i]^t)}
 S V mx0(C*a){i(4,Ct[4];i(4,t[i]=a[i]^a[i+1&3])Cc=*t^t[2];i(4,a[i]^=t0(t[i])^c)a+=4)}
 S V mx1(C*a){i(4,Ct[4]={};i(4,j(4,t[i]^=t1(a[j],C(14,11,13,9)[j-i&3])))Mc(a,t,4);a+=4)}
 S V ae0(V*a,OV*w,U r){Cb[16];
  i(r,x16(a,w+16*i);i16(b,s0,a);i16(a,b,C(0,5,10,15,4,9,14,3,8,13,2,7,12,1,6,11));i<r-1?mx0(a):x16(a,w+16*r))}
 S V ae1(V*a,OV*w,U r){Cb[16];x16(a,w+16*r);
- i(r,i16(b,a,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));Mc(a,b,16);i16(a,s1,a);x16(a,w+16*(r-1-i));Y(i<r-1,mx1(a)))}
+ i(r,i16(b,a,C(0,13,10,7,4,1,14,11,8,5,2,15,12,9,6,3));Mc(a,b,16);i16(a,s1,a);x16(a,w+16*(r-1-i));I(i<r-1,mx1(a)))}
 S V ecb(V*a,OV*k,U l,U d){C w[l+7<<4];kxp(w,k,l);(d?ae1:ae0)(a,w,l+6);}
-S A aes(Ax,U d)_(Y(!*s0,aei())Ed(!xtA||xn-2,x)
+S A aes(Ax,U d)_(I(!*s0,aei())Ed(!xtA||xn-2,x)
  Ay=kv(&x);Ed(!xtC||!ytC||xn-16||(yn-16&&yn-24&&yn-32))x=mut(x);ecb(xC,yC,yn/4,d);y(x))
 A1(aes0,aes(x,0))A1(aes1,aes(x,1))

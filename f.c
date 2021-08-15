@@ -5,7 +5,7 @@ S UL r1()_(S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d
  Lv=b<<17;c^=a;d^=b;b^=c;a^=d;c^=v;d=rot(d,45);a+d)
 S UI rm(UL m)_((UI)r1()*m>>32)
 S V shf(L*r,Nn){i(n,UI j=rm(i+1);SWP(r[i],r[j]))}
-S A ro(UL n,UL m)_(Ax=aL(n);i(n,xl=r1())Y(m,Y(m<=1ll<<32,i(n,xl=rm(m)))E(i(n,xl=(UL)xl%m)))x)
+S A ro(UL n,UL m)_(Ax=aL(n);i(n,xl=r1())I(m,I(m<=1ll<<32,i(n,xl=rm(m)))E(i(n,xl=(UL)xl%m)))x)
 S A de(UL n,UL m)_(El(n>m)Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xL,n);x)
 S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
 ALA(rnd,Xz(rd(n,gl(x)))Xc(gC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))

@@ -89,7 +89,7 @@ S C tZx(Ax)_(XcC(tH)Xz(tZ(gl_(x)))Xd(tD)XZD(xt)XsS(tI)tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
 S A ari(Ax,Ay,Iv)_(P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2(x,y,av0+v))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;V(f,arf[k][tT(t)-tB][v-4]);
- Y(t>tD,t+=tD-td)Y(v>7&&t==tD,t=tI)Y(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
+ I(t>tD,t+=tD-td)I(v>7&&t==tD,t=tI)I(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zC,zn);x-z?x(y-z?y(z):z):y(z))
 S A ext(Nn,Ax)_(XMT(x)rshL(n,xtm?enl(x):x))
 S A2(dct,x=ext(yN,x);y=ext(xN,y);El(xN-yN,x,y)am(x,y))

@@ -6,10 +6,10 @@
 #define W(x,a...) while(x){a;}
 #define V(x,a...) TY(a)x=(a);
 #define X(x,a...) TY(x)x=a;
-#define B(x,a...) Y(x,a;break)
-#define P(x,a...) Y(x,_(a))
-#define Y(x,a...) if(x){a;}
-#define  EY(a...) else Y(a)
+#define B(x,a...) I(x,a;break)
+#define P(x,a...) I(x,_(a))
+#define I(x,a...) if(x){a;}
+#define  EI(a...) else I(a)
 #define   E(a...) else{a;}
 #define   i(a...) F_(i,a)
 #define   j(a...) F_(j,a)
@@ -34,7 +34,7 @@
 #define A(a...) (A[]){a}
 #define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define EX extern
-#define Q(x) DBG(Y(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
+#define Q(x) DBG(I(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
 #define Ab8 A b[8];
 
 TD void V;TD char B;TD char unsigned C,UC;TD O C*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
@@ -131,7 +131,7 @@ S OA au0=(UL)tu<<56,FIR=au0+3,TIL=au0+5,REV=au0+7,LEN=au0+14,OUT=au0+25,PLH=au0+
 #define N1(x,r) N_(r,x(0))
 #define Ss(a...) S O C s[][4]={a};
 #define Sf(x,y,f...) ({Iv=xv;i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
-#define K(s,a...) ({S A f;Y(!f,f=K0(s,Z s))Z A(a)?app(f,A(a),ZZ(A(a))):f;})
+#define K(s,a...) ({S A f;I(!f,f=K0(s,Z s))Z A(a)?app(f,A(a),ZZ(A(a))):f;})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
