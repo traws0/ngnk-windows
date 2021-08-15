@@ -95,8 +95,8 @@ EX OC Zt[],ZT[];S C _t(A);S I _tt(Ct)_(t>tm)S I _tT(Ct)_(t<tM)S I _tz(Ct)_(c3(ti
 S I _tF(Ct)_(t>=to)S I _tP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))S I _tR(Ct)_(Zt[t]==4)
 S C tT(Ct)_(t==tm?tM:t>=to?tA:t>tm?t+tI-ti:t) //tT():get corresponding list type
 
-//header bytes: Utoorrrrnnnnnnnn (U=bucket,t=type,o=srcoffset(also used as: w=adverb,k=arity),r=refcount,n=length)
-//tagged ptr bits (t=type,v=value,o=srcoffset,v=value,x=ptr):
+//header bytes: Utoorrrrnnnnnnnn (U=bucket,t=type,o=srcoffset(or:w=adverb,k=arity),r=refcount,n=length)
+//tagged ptr bits (t=type,v=value,o=srcoffset,x=ptr):
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti,tu,tv,tw
 // tttttttt........oooooooooooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
