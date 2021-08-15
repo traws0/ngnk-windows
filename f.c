@@ -28,6 +28,6 @@ A2(fnd,
    Az=aL(yn);x2(y2(CH(Zt[yt],&FB,FH,FI,FL)(xC,xn,f,yC,yn,zL);z)))
   Az=cn[tl];zR;x(y(ytt?z:rshL(yN,z))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
- Ik=rnk(x),l=rnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(QUE,A(x,y),2))er2(x,y))
+ Ik=rnk(x),l=rnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(x,y,QUE))er2(x,y))
 
 A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes","e")Sf(x,y,des,js0,unh,aes1,log))et2(x,y))fnd(x,y))
