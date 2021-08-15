@@ -14,17 +14,17 @@ TD ST{FBSD(UI d_fileno;UH d_reclen;C d_type,d_namlen,d_name[255+1])
      NFBSD(long d_ino;off_t d_off;UH d_reclen;C d_name[]);}DE;
 S UI addr(Q*p)_(Qs=*p;P(!*s,0x0100007f)Cv[4];i(4,I(i,Ed(*s-'.')s++)v[i]=pu(&s);Ed(v[i]>255))*p=s;*(UI*)v)
 S I skt(UI h,UH p)_(If=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)Iv=setsockopt(f,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4);Eo(v<0)
- ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,Z(a))<0)f)
+ ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,SZ a)<0)f)
 S I o1(Qs,L fl)_(P(!SC(s,':'),If=open(s,fl,0666);Eo(f<3/*fbsd*/)f)UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
 S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Lv=xv;P(!v,1)Qs=syp(&v);o1(s,fl))Et(!xtC,x)x=str0(x);x2(o1(xC,fl)))
 S C ft(If)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
  S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),m))])
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))A1(cls,xtz?close(gl(x)):x(0);au0)
 A1(u0c,x=N(spl(N(u1c(x))));xn&&!_n(xA[xn-1])?drp(-1,x):x)
-A1(u1c,Xz(If=gl(x);Cb[1024];x=oC;W(1,Ik=read(f,b,Z b);Eo(k<0,x)x=cts(x,b,k);P(k-Z b,x))0)
+A1(u1c,Xz(If=gl(x);Cb[1024];x=oC;W(1,Ik=read(f,b,SZ b);Eo(k<0,x)x=cts(x,b,k);P(k-SZ b,x))0)
  If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
  P(t=='d',Cb[ZP];Ik;Ay=oC;
-  W((k=getdents(f,b,Z b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;y=cts(y,s,Sn(s));y=apc(y,10);i+=e->d_reclen))
+  W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;y=cts(y,s,Sn(s));y=apc(y,10);i+=e->d_reclen))
   close(f);y)
  P(t=='r',Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
  Ay=u1c(ai(f));close(f);y)

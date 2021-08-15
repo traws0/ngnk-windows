@@ -16,8 +16,8 @@
 #define ij(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
 #define O const
 #define S static
-#define Z sizeof
-#define ZZ(x) (Z(x)/Z((x)[0]))
+#define SZ sizeof
+#define ZZ(x) (SZ(x)/SZ((x)[0]))
 #define ZP 4096ll //page
 #define ZA 32ll   //hdr
 #define NI __attribute__((noinline))
@@ -28,7 +28,7 @@
 #define RE restrict
 #define SWP(x,y) {TY(x)t_=x;x=y;y=t_;}
 #define LN(x) {Q(!((L)x&ZA-1));x=__builtin_assume_aligned(x,ZA);} //alignment
-#define PD(n,p) ((n)+ZA/Z(*p)-1&-ZA/Z(*p)) //pad
+#define PD(n,p) ((n)+ZA/SZ(*p)-1&-ZA/SZ(*p)) //pad
 #define M1(x) #x
 #define M2(x) M1(x)
 #define A(a...) (A[]){a}
@@ -64,7 +64,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define min(a...) extr(<,a)
 #define max(a...) extr(>,a)
 #define extr(c,x,y) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
-#define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>Z(x)*8-y_:x;})
+#define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
  hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sha1,sha256,sha3_256,sin,ser,spl,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
@@ -130,8 +130,8 @@ S OA au0=(UL)tu<<56,FIR=au0+3,TIL=au0+5,REV=au0+7,LEN=au0+14,OUT=au0+25,PLH=au0+
 #define N(r) N_(r,)
 #define N1(x,r) N_(r,x(0))
 #define Ss(a...) S O C s[][4]={a};
-#define Sf(x,y,f...) ({Iv=xv;i(Z(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
-#define K(s,a...) ({S A f;I(!f,f=K0(s,Z s))Z A(a)?app(f,A(a),ZZ(A(a))):f;})
+#define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
+#define K(s,a...) ({S A f;I(!f,f=K0(s,SZ s))SZ A(a)?app(f,A(a),ZZ(A(a))):f;})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");

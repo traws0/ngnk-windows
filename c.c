@@ -24,8 +24,8 @@ S V s1u(O U*d,Nn,U*a){
        v=u;u=z;z=R(y,30);y=x;x=t)
   *a+=x;a[1]+=y;a[2]+=z;a[3]+=u;a[4]+=v;d+=16)}
 S A md(Ax/*1*/,OV*iv,N nv,void(*f)(O U*,N,U*),I b)_(Et(!xtC,x) //merkle-damgard construction with padding
- I a[nv];Cc[128]={};Mc(a,iv,Z a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;x2(f(xI,k,a);Mc(c,xC+n-r,r));c[r]=128;
- *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);I(b,bn(a,a,nv))aCn((V*)a,Z a))
+ I a[nv];Cc[128]={};Mc(a,iv,SZ a);Nn=xn,k=n/64,r=n%64,m=n+72&~63;x2(f(xI,k,a);Mc(c,xC+n-r,r));c[r]=128;
+ *(UL*)(V*)(c+m-n+r-8)=b?bL(8*n):8*n;f((V*)c,m/64-k,a);I(b,bn(a,a,nv))aCn((V*)a,SZ a))
 A1(md5,I(!*m5k,m5i())md(x,iv,4,m5u,0))A1(sha1,md(x,iv,5,s1u,1))
 
 #define h(a,b,c,d,e,f,g,h) {d+=h+=(R(e,26)^R(e,21)^R(e,7))+chx(e,f,g)+s2k[r]+w[r];h+=(R(a,30)^R(a,19)^R(a,10))+maj(a,b,c);r++;}
@@ -45,13 +45,13 @@ A1(sha256,md(x,(U[]){0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b
 #undef h
 S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139,y+1,x+y+z+129, //keccak sponge
   x+z+9,138,136,y+z+9,y+10,y+z+139,x+139,x+z+137,x+z+3,x+z+2,x+128,z+10,x+y+10,x+y+z+129,x+z+128,y+1,x+y+z+8};
- i(24,UL s[7],b[25];Ms(s,0,Z s);
+ i(24,UL s[7],b[25];Ms(s,0,SZ s);
   i(5,F5(s[1+i]^=*a++))*s=s[5];s[6]=s[1];F5(s[i]^=R(s[i+2],1))a-=25;i(5,F5(*a++^=s[i]))a-=25;   //theta
   i(25,b[i]=R(a[i],C(0,1,62,28,27,36,44,6,55,20,3,10,43,25,39,41,45,15,21,8,18,2,61,56,14)[i])) //rho
   i(25,a[i]=b[C(0,6,12,18,24,3,9,10,16,22,1,7,13,19,20,4,5,11,17,23,2,8,14,15,21)[i]])          //pi
   i(5,UL*r=a+5*i,x=*r,y=r[1];F5(UL z=r[4-i];r[4-i]^=~x&y;y=x;x=z))                              //chi
   *a^=t[i])}                                                                                    //iota
-S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,Z a);
+S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,SZ a);
  W(n>0,b=min(n,r);i(b,a[i]^=p[i])p+=b;n-=b;I(b==r,ks((V*)a);b=0))
  a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);Mc(z,a,b);z+=b;d-=b;I(d>0,ks((V*)a)))}
 A1(sha3_256,Et(!xtC,x)Ay=aC(32);x2(kec(136,xC,xn,6,yC,yn);y))

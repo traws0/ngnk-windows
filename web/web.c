@@ -15,12 +15,12 @@
 #define i(x,a...) for(I i=0,n_=(x);i<n_;i++){a;}
 #define S static
 #define O const
-#define Z sizeof
-#define ZZ(x) (Z(x)/Z*(x))
+#define SZ sizeof
+#define ZZ(x) (SZ(x)/SZ*(x))
 #define Q(x) ({I r_=(x);r_<0?die(#x):r_;})
 #define Mc memcpy
 #define wr write
-#define wrZ(x,y) wr(x,y,Z y)
+#define wrZ(x,y) wr(x,y,SZ y)
 #define Sn strlen
 #define SC0 strchrnul
 #define SR strrchr
@@ -34,16 +34,16 @@ S O C*m[][2]={{"html","text/html"},{"js","application/javascript"},{"k","text/pl
 S O C*mime(O C*x)_(i(ZZ(m),P(!strcmp(x,*m[i]),m[i][1]))(V*)0)
 S V r404(I f){wrZ(f,"HTTP/1.1 404 Not Found\nContent-Length:4\nConnection:close\nContent-Type:text/html\n\n404\n");}
 S V ap(C**p,O C*s){I n=Sn(s);Mc(*p,s,n);*p+=n;}
-S O C*web(I f)_(C b[4096];I r=read(f,b,Z b-1);P(r<=0,"read failed")b[r]=0;*SC0(b,10)=0;*SC0(b,13)=0;
+S O C*web(I f)_(C b[4096];I r=read(f,b,SZ b-1);P(r<=0,"read failed")b[r]=0;*SC0(b,10)=0;*SC0(b,13)=0;
  wr(1,b,Sn(b));wrZ(1," - ");P(strncmp(b,"GET ",4),"not GET")C*s=b+4;s=sk(s,32);s+=*s=='/';*SC0(s,32)=0;
  Y(!*s,s="index.html")O C*d=SR(s,'.'),*m=d?mime(d+1):0;Y(!m,m="text/plain")
  I g=open(s,O_RDONLY);P(g<0,"not found")I n=lseek(g,0,SEEK_END);lseek(g,0,SEEK_SET);s=b;
  ap(&s,"HTTP/1.1 200 OK\nContent-Length:");s=su(s,n);ap(&s,"\nConnection:close\nContent-Type:");ap(&s,m);ap(&s,"\n\n");r=s-b;
- W(r>0,wr(f,b,r);r=read(g,b,Z b))close(g);wrZ(1,"ok\n");(V*)0)
+ W(r>0,wr(f,b,r);r=read(g,b,SZ b))close(g);wrZ(1,"ok\n");(V*)0)
 #define port 8080
 I main(){struct sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=0;a.sin_port=htons(port);
  I l=Q(socket(AF_INET,SOCK_STREAM,0));
  Q(setsockopt(l,SOL_SOCKET,SO_REUSEADDR,(I[]){1},4));
  Q(setsockopt(l,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4));
- Q(bind(l,(V*)&a,Z a));Q(listen(l,64));wrZ(1,"http://127.0.0.1:"M2(port)"/\n");
- W(1,UI n=Z a;I f=Q(accept(l,(V*)&a,&n));O C*r=web(f);Y(r,wr(1,r,Sn(r));wrZ(1,"\n");r404(f))close(f))}
+ Q(bind(l,(V*)&a,SZ a));Q(listen(l,64));wrZ(1,"http://127.0.0.1:"M2(port)"/\n");
+ W(1,UI n=SZ a;I f=Q(accept(l,(V*)&a,&n));O C*r=web(f);Y(r,wr(1,r,Sn(r));wrZ(1,"\n");r404(f))close(f))}

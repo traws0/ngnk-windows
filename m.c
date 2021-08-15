@@ -11,11 +11,11 @@
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
 S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
  P((L)p==-1,eo0();(V*)0)P(f>0,p)I(nm==ZZ(m),die("mmap lmt\n"))*(C*)p=nm;m[nm++]=(TY(*m)){p,n};p)
-S A mu(V*p,Nn)_(munmap(p,n);i(ZZ(m),B(m[i].p==p,Mc(m+i,m+i+1,(--nm-i)*Z m[0])));0)
+S A mu(V*p,Nn)_(munmap(p,n);i(ZZ(m),B(m[i].p==p,Mc(m+i,m+i+1,(--nm-i)*SZ m[0])));0)
 S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
 A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
 
-S Az[Z(N)==4?27:35];S I lck;
+S Az[SZ(N)==4?27:35];S I lck;
 S A mb(Cb,Ax)_(xX=0;xr=0;DBG(AN(-1,AT(0,x)));xU=b;x)V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,_R(xa))x)
 A1(m0,DBG(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=xU;P(!b,x=AT(tn,x))xX=z[b];z[b]=(A)xC;I(xtR,mrn(xn,xA))x)
 A1(m1,DBG(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))DBG(Ms(xC,0xab,xZ);DBG(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
@@ -35,7 +35,7 @@ L gl_(Ax)_(XP((I)x)*xL)L gl(Ax)_(Lv=gl_(x);x(0);v)D gd_(Ax)_(*xD)D gd(Ax)_(Dv=*x
 
 S C s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
 I syP(Qs)_(In=Sn(s)+1;P(n<6&&(n<5||!(s[3]&128)),Lv=0;Mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!SQ(p,s),s0-p)p+=Sn(p)+1)
- P(s1+n>s0+Z s0,die("syms oom\n"))Mc(s1,s,n);s1+=n;s0-s1+n)
+ P(s1+n>s0+SZ s0,die("syms oom\n"))Mc(s1,s,n);s1+=n;s0-s1+n)
 
 S Q skp(Qs)_(W(!MQ(s,"/\n",2),Qp=SS(s+1,"\n\\\n");s=p?p+3:s+Sn(s))s)S I ln(Q,Q);S A cmdx(Qs)_(en0())
 S A cmdt(Qs)_(Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
@@ -47,11 +47,11 @@ A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
-I rep()_(Cb[256];Ln=read(0,b,Z(b)-1);P(n<0,0)b[n]=0;Qp=b;W(*p,Qq=SC0(p,10);ln(p,q);p=q+1)1)V repl(){W(rep())}
+I rep()_(Cb[256];Ln=read(0,b,SZ(b)-1);P(n<0,0)b[n]=0;Qp=b;W(*p,Qq=SC0(p,10);ln(p,q);p=q+1)1)V repl(){W(rep())}
 V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
  cn[tA]=ce[tC];xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tC]=ac(32);cn[tS]=as(0);
- Mc(cn+ti,cn+tI,(tS-tI+1)*Z(A));i(tn-to,cn[to+i]=au0)
+ Mc(cn+ti,cn+tI,(tS-tI+1)*SZ(A));i(tn-to,cn[to+i]=au0)
     ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
  xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
 
@@ -60,7 +60,7 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=
 #define mms(a...) i(nm,V*p=m[i].p,*q=p+m[i].n;If=!!*(C*)p;a)
 #define obs(a...) mms(Ax=(A)p+ZA+ZP*f,y=(A)q;W(x<y,a;x+=xZ+ZA))
 #define xys(a...) obs(I(xtR&&xr,i(xn,Ay=xa;a)))
-#define hs(x) {Mc(s,x,Z(x)-1);s+=Z(x)-1;}
+#define hs(x) {Mc(s,x,SZ(x)-1);s+=SZ(x)-1;}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;a;hs("\n\0");write(1,b,s-b);}
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
