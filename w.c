@@ -25,8 +25,6 @@ AX(eac,Ab8;Ct[8];Lm=-1;
 A eac1(Ax,A1 f)_(Xt(f(x))Xm(Ay=kv(&x);am(x,Nx(eac1(y,f))))
  I b=xtA&&xr==1;Nn=xN;P(!n,x)Ay=oA;i(n,Az=f(b?xa:get(x,i));B(!z,Y(b,mrn(xn-i-1,xA+i+1))y=y(0))yq(z))Y(b,x=AN(0,x))x(y))
 A3(eac2,/*110*/eac(z,A(x,y),2))
-A3(ear,/*110*/z=prj(z,A(x,PLH),2);z(eac(z,&y,1)))
-A3(eal,/*110*/z=prj(z,A(PLH,y),2);z(eac(z,&x,1)))
 S A nr(Ax/*0*/,Ln,Ay/*1*/)_(      i(n,       y= N(app(x,&y,1)))   y )
 S A ns(Ax/*0*/,Ln,Ay/*1*/)_(Az=oC;i(n,zq(yR);y=Nz(app(x,&y,1)))zq(y))
 S A3(wr,/*011*/           W(1,zR;A w=app(y,&z,1);B(!w,z=z(0))B(!tru(w))z=app(x,&z,1);Ny(z)              )y(z)   )
@@ -53,5 +51,5 @@ AX(w0,Y(n==1, Xz(win(xR,*a))XT(bin(xR,*a)))                              eac(x,a
 AX(w1,Y(n==1,XzZ(dec(xR,*a))Xc(jc(xv,*a))XC(jC(xC,xn,*a)))xK<2?lr(x,a,n):rdc(x,a,n)) /* / */
 AX(w2,Y(n==1,XzZ(enc(xR,*a))Xc(sc(xv,*a))XC(sC(xC,xn,*a)))xK<2?ls(x,a,n):scn(x,a,n)) /* \ */
 AX(w3,eap(x,a,n))
-AX(w4,P(n-2,ern(n,a))ear(*a,a[1],x))
-AX(w5,P(n-2,ern(n,a))eal(*a,a[1],x))
+AX(w4,n-2?ern(n,a):ear(*a,a[1],x))A3(ear,/*110*/z=prj(z,A(x,PLH),2);z(eac(z,&y,1)))
+AX(w5,n-2?ern(n,a):eal(*a,a[1],x))A3(eal,/*110*/z=prj(z,A(PLH,y),2);z(eac(z,&x,1)))
