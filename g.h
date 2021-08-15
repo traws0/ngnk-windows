@@ -466,28 +466,28 @@
 #define Qs Q s
 #define Qp Q p
 #define Qq Q q
-#if DEBUG
+#ifdef DEBUG
 #define  DBG(a...) a
 #define NDBG(a...)
 #else
  #define  DBG(a...)
  #define NDBG(a...) a
 #endif
-#if __FreeBSD__
+#ifdef __FreeBSD__
 #define  FBSD(a...) a
 #define NFBSD(a...)
 #else
  #define  FBSD(a...)
  #define NFBSD(a...) a
 #endif
-#if i386
+#ifdef i386
 #define  I386(a...) a
 #define NI386(a...)
 #else
  #define  I386(a...)
  #define NI386(a...) a
 #endif
-#if wasm
+#ifdef wasm
 #define  WASM(a...) a
 #define NWASM(a...)
 #else
