@@ -28,7 +28,7 @@ S A2(cr,/*0*/Ho=yo;Li;P(yts&&(i=fAI(fl,yv))>=0,fu[i]=_n(fb);h(bg|i);x)P(yts&&yv=
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)
  P(n==2&&u==av0,h(br);x)P(u==MKL,h(bl);h(n-1);x)P(n==2&&utu,h(bu|uv);x)P(n==3&&utv,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
 S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
-S A3(f3,/*0*/P(xtv&&c3(ADD-av0,xv,MUL-av0)&&ytL&&ztL&&yn==zn&&yn<101,x)0)
+S A3(f3,/*0*/P(xtv&&(ADD<=x&&x<=MUL)&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(Ho=xo;Nn=xn;P(n==2?f2(xx,xy):n==3?f3(xx,xy,xz):0,wrp(val(x)))x=mut(x);i(xn,xa=cf(xa))AO(o,x))x)
 A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);Ho=0;Ms(fu,-1,64);y=cf(y);Q(*yA==PRG);
