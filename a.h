@@ -115,17 +115,14 @@ S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=
 #define au(i) TV(tu,i)
 #define av(i) TV(tv,i)
 #define aw(i) TV(tw,i)
-#define vi(c) (c==':'?0:c=='+'?1:c=='-'?2:c=='*'?3:c=='%'?4:c=='!'?5:c=='&'?6:c=='|'?7:c=='<'?8:c=='>'?9:c=='='?10:\
- c=='~'?11:c==','?12:c=='^'?13:c=='#'?14:c=='_'?15:c=='$'?16:c=='?'?17:c=='@'?18:c=='.'?19:20+c-'0')
-#define cu(c) au(vi(c))
-#define cv(c) av(vi(c))
-S OA au0=au(0),av0=av(0),OUT=au(25),PLH=au(29),PRG=au(30),COM=av(24),MKL=av(25);
+S OA au0=au(0),FIR=au(3),TIL=au(5),REV=au(7),LEN=au(14),OUT=au(25),PLH=au(29),PRG=au(30),
+     av0=av(0),ADD=av(1),MUL=av(3),MOD=av(5),MNM=av(6),MXM=av(7),LTN=av(8),EQL=av(10),CAT=av(12),EXC=av(13),RSH=av(14),
+      CUT=av(15),CST=av(16),QUE=av(17),AP1=av(18),APN=av(19),COM=av(24),MKL=av(25);
 
 #define ND (D)(0./0.)
 #define WD __builtin_inf()
 #define NL (1ll<<63)
 #define WL (~NL)
-
 #define EN(x,y,z,n,...) n
 #define EF(f,x,a...) P(x,f(a))
 #define E_(t,a...) EF(EN(a,e##t##2,e##t##1,e##t##0),a)

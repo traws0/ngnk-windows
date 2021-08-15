@@ -17,7 +17,7 @@ S AX(eacm,Az=oS,b[8];i(n,Ay=a[i];Y(ytm,z=cat(z,_R(yx))))z=unq(z);
 AX(eac,Ab8;Ct[8];Lm=-1;
  i(n,Ay=b[i]=a[i];Ym(eacm(x,a,n))t[i]=ytP?0:ytt?1:ytA?2+(yr>1):4;Y(t[i]>1,L l=yN;P(m>=0&&m-l,eln(n,a))m=l))
  P(m<0,app(x,a,n))i(n,Y(t[i]==1,_r(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
- Au=0;Y(!m,Y(x==cu('#'),u=oL)EY(n==2&&xtv&&xv<11,u=a[!_N(a[1])];uR)E(u=oA))
+ Au=0;Y(!m,Y(x==LEN,u=oL)EY(n==2&&xtv&&xv<11,u=a[!_N(a[1])];uR)E(u=oA))
  j(m,i(n,Ay=a[i];Y(t[i]==2,b[i]=yA[j])Y(t[i]>2,b[i]=get(y,j)))Az=app(x,b,n);
      B(!z,Y(u,u=u(0))i(n,Ay=a[i];Y(t[i]==1,yr-=m-j-1)Y(t[i]==2,mrn(m-j-1,yA+j+1))))
      Y(!j,u=c3(ti,zt,ts)?AN(0,atn(tT(zt),m)):oA)uq(z))
@@ -40,7 +40,7 @@ AX(rdc,Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):z)P(m<0,Y(y,y
   V(f,arrT[t-tB][xv])P(f,Lv=gl(y?y:get(z,0));z2(f(&v,zC+ZT[t]*!y,m-!y));t-tD?az(v):ad(*(D*)&v)))
  Li=!y;Y(i,y=get(z,0))Ab8;W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);B(!y)i++)mrn(n-1,a+1);z(y))
 AX(scn,
- P(n==1,Az=a[n-1];P(ztt||!zN,z)P(ztm,Ay=kv(&z);y=Nz(scn(x,&y,1));am(z,y))P(x==cv(','),scn(x,A(oA,z),2))
+ P(n==1,Az=a[n-1];P(ztt||!zN,z)P(ztm,Ay=kv(&z);y=Nz(scn(x,&y,1));am(z,y))P(x==CAT,scn(x,A(oA,z),2))
   Y(xtv&&xv&&xv<8&&ztZDC,Y(ztC,z=N(gL(z)))V(f,arsT[zt-tB][xv])P(f,I w=ZT[zt];Au=ax(z);Mc(uC,zC,w);f(zC,zC+w,uC+w,zN-1);u))
   Ay=get(z,0),u=enl(yR);Li=0,n=zN;W(++i<n,y=N(app(x,A(y,get(z,i)),2));uq(yR))y(z(u)))
  Y(n==2,Au=a[1];P(utt,app(x,a,n))P(utm,u=mut(u);uy=scn(x,A(*a,uy),2);u)P(!un,mr(*a),u))

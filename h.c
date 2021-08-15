@@ -6,7 +6,7 @@ S A rs(Ax/*0*/,Nm,N*pj,L*s,N r)_(Nn=absL(*s);P(r>1,Ay=aA(n);i(n,ya=rs(x,m,pj,s+1
  Ct=tT(xt);Y(t&&!xn,x=cn[t])Lj=*s>=0?*pj:(m-n%m)%m,w=ZT[t],q=min(m-j,n);*pj=(j+n)%m;Ay=atn(t,n);Mc(yC,xC+j*w,q*w);
  Mc(yC+q*w,xC,min(j,n-q)*w);W(2*m<=n,Mc(yC+m*w,yC,m*w);m*=2)Y(n>m,Mc(yC+m*w,yC,(n-m)*w))Y(t==tA,y=sqz(mRa(y)))y)
 A2(rsh,XF(flt(x,y,1))Ym(Xz(Ln=gl(x);Az=kv(&y);am(Nz(rshL(n,y)),Ny(rshL(n,z))))x=enla(x);xR;am(x,ap1(y,x)))
- YM(y=mut(y);yy=ear(cv('#'),A(x,yy),2);y)Yt(rsh(x,enl(y)))
+ YM(y=mut(y);yy=ear(RSH,A(x,yy),2);y)Yt(rsh(x,enl(y)))
  x=enla(Ny(gL(x)));Nn=xn;P(!n,fir(x(y)))P(n>8,ez2(x,y))P(n==1&&*xL==NL,x(y))P(!yn,rsh(x,enl(fir(y))))
  i(n,Lv=xl;Y(v<0,Ed(n>2||n==2&&v-NL,x,y)
   P(n==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?K("{x@:1;(x*!1+(-x)!-1+#y)_y}",x,y):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
@@ -14,7 +14,7 @@ A2(rsh,XF(flt(x,y,1))Ym(Xz(Ln=gl(x);Az=kv(&y);am(Nz(rshL(n,y)),Ny(rshL(n,z))))x=
 ALA(rshL,rsh(az(n),x))
 S A slc(Ax/*0*/,Li,Lj)_(Q(xtT&&0<=i&&i<=j&&i<=xn)Ay=atn(xt,j-i);Mc(yC,xC+i*ZT[xt],(j-i)*ZT[xt]);XA(sqz(mRa(y)))y)
 ALA(drp,/*1*/XT(n*=n!=NL;P(n<=0&&-n<=xn&&xr==1,AN(xn+n,x))x(slc(x,max(0,min((L)xn,n)),max(0,min((L)xn,xn+n)))))
- Xm(Ay=kv(&x);am(Ny(drp(n,x)),Nx(drp(n,y))))XM(Ay=kv(&x);aM(x,Nx(eac2(az(n),y,cv('_')))))er1(x))
+ Xm(Ay=kv(&x);am(Ny(drp(n,x)),Nx(drp(n,y))))XM(Ay=kv(&x);aM(x,Nx(eac2(az(n),y,CUT))))er1(x))
 S A rmv(Ax/*1*/,Li)_(
  XT(P(!in(i,xn),x)Ay=atn(xt,xn-1);L w=ZT[xt];Mc(yC,xC,i*w);Mc(yC+i*w,xC+i*w+w,(xn-i-1)*w);Y(xtA,y=sqz(mRa(y)))x(y))et1(x))
 A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am(Nz(cut(x,y)),Nx(cut(z,y))))
@@ -23,7 +23,7 @@ A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtzc||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);a
 A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
-              Az=eac2(_R(xy),_R(yy),cv(','));x(y(z?aM(_R(xx),z):0)))
+              Az=eac2(_R(xy),_R(yy),CAT);x(y(z?aM(_R(xx),z):0)))
  x=enla(x);P(!xn,x(enla(y)))P(ytT&&!yn,y(x))y=enla(y);Y(xtZ&&ytzZ,N(sup(&x,&y)))Y(xt-yt,x=blw(x);y=blw(y))
  Nm=xn,n=yn;x=room(x,m+n);Mc(xC+m*ZT[xt],yC,n*ZT[xt]);y(!ytA?0:yr-1?mRa(y):AN(0,y));x)
 A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,get(yy,i)))y(x))

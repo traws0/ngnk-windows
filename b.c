@@ -11,24 +11,24 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x
 #define l(a...) N(cl(a)) //compile left-hand side of assignment
 #define r(a...) N(cr(a)) //right
 S A3(cl,/*0*/Ho=yo;P(zts&&yx==av0&&xK,Li=fpI(&fl,zv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
- P(ztS&&!_v(yx),hc(av0);hc(au0);hc(zR);hc(cv('.'));h(ba);h(4);x)
+ P(ztS&&!_v(yx),hc(av0);hc(au0);hc(zR);hc(APN);h(ba);h(4);x)
  P(zts||(ztA&&_t(zx)==ts),Y(zts,hc(oA))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
   Ik=_v(zts?z:zx);Li=fAI(fl,k);Y(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(yx));x)
  P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(_R(fs),o);ec0())
 I asg(Ax)_(xtA||xtsS) //is lhs of assignment?
 S A2(cr,/*0*/Ho=yo;Li;P(yts&&(i=fAI(fl,yv))>=0,fu[i]=_n(fb);h(bg|i);x)P(yts&&yv=='o',h(bo);x)
- P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|vi('.'));x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Nn=yn;Au=yx;
+ P(ytS&&yn==1,hc(get(y,0));x)YsS(hc(AO(0,yR));h(bu|APN-av0);x)P(!ytA||!yn,hc(y==PLH?au0:yR);x)Nn=yn;Au=yx;
  P(u==PRG,i(n-1,r(x,yA[i+1]);h(i==n-2?br:bp))x)
  P(n<2,hc(uR);x)P(n==3&&(utu||u==av0)&&asg(yy),r(x,yz);l(x,y,yy))
- P(n>3&&u==cv('$'),n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=_n(fb);h(0))r(x,n&1?*++a:au0);Az=fb;
+ P(n>3&&u==CST,n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=_n(fb);h(0))r(x,n&1?*++a:au0);Az=fb;
   i(n&~1,I d=(i&1?zn:p[i+1])-p[i];Y(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
- Y(n==2&&u==cu('*'),Az=yy;P(ztA&&zn==2&&zx==cu('|'),r(x,zy);h(bu|24);x))
+ Y(n==2&&u==FIR,Az=yy;P(ztA&&zn==2&&zx==REV,r(x,zy);h(bu|24);x))
  Y(n==2&&utw,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)
  P(n==2&&u==av0,h(br);x)P(u==MKL,h(bl);h(n-1);x)P(n==2&&utu,h(bu|uv);x)P(n==3&&utv,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
-S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==cu('!')&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
-S A3(f3,/*0*/P(xtv&&c3(vi('+'),xv,vi('*'))&&ytL&&ztL&&yn==zn&&yn<101,x)0)
+S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
+S A3(f3,/*0*/P(xtv&&c3(ADD-av0,xv,MUL-av0)&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(Ho=xo;Nn=xn;P(n==2?f2(xx,xy):n==3?f3(xx,xy,xz):0,wrp(val(x)))x=mut(x);i(xn,xa=cf(xa))AO(o,x))x)
 A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);Ho=0;Ms(fu,-1,64);y=cf(y);Q(*yA==PRG);
