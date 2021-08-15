@@ -11,9 +11,11 @@
 #define I(x,a...) if(x){a;}
 #define  EI(a...) else I(a)
 #define   E(a...) else{a;}
+#define   A(a...) (A[]){a}
 #define   i(a...) ij(i,a)
 #define   j(a...) ij(j,a)
 #define ij(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
+#define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define O const
 #define S static
 #define SZ sizeof
@@ -31,8 +33,6 @@
 #define PD(n,p) ((n)+ZA/SZ(*p)-1&-ZA/SZ(*p)) //pad
 #define M1(x) #x
 #define M2(x) M1(x)
-#define A(a...) (A[]){a}
-#define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define EX extern
 #define Q(x) DBG(I(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
 #define Ab8 A b[8];
@@ -50,20 +50,20 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define ALA(f,b...) A f(Ln,Ax     )_(b)
 #define AAL(f,b...) A f(Ax,Li     )_(b)
 
-#define  Ms(a...) __builtin_memset(a)
-#define  Mm(a...) __builtin_memmove(a)
-#define  Mc(a...) __builtin_memcpy(a)
-#define  MQ(a...) __builtin_memcmp(a)
-#define  MC(a...) __builtin_memchr(a)
-#define  Sn(a...) __builtin_strlen(a)
-#define  SC(a...) __builtin_strchr(a)
-#define  SS(a...) __builtin_strstr(a)
-#define  SQ(a...) __builtin_strcmp(a)
-#define  MM(a...) memmem(a)
+#define Ms(a...) __builtin_memset(a)
+#define Mm(a...) __builtin_memmove(a)
+#define Mc(a...) __builtin_memcpy(a)
+#define MQ(a...) __builtin_memcmp(a)
+#define MC(a...) __builtin_memchr(a)
+#define Sn(a...) __builtin_strlen(a)
+#define SC(a...) __builtin_strchr(a)
+#define SS(a...) __builtin_strstr(a)
+#define SQ(a...) __builtin_strcmp(a)
+#define MM(a...) memmem(a)
 #define SC0(a...) strchrnul(a)
-#define min(a...) extr(<,a)
-#define max(a...) extr(>,a)
-#define extr(c,x,y) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
+#define min(x,y) extr(x,y,<)
+#define max(x,y) extr(x,y,>)
+#define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
 A1 a1,aes0,aes1,asc,ax,blw,cf,cls,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,gB,gC,gD,gH,gI,gL,gS,grp,
  hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sha1,sha256,sha3_256,sin,ser,spl,sqr,sqz,
@@ -87,7 +87,7 @@ TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
 TD I Tr(V*,OV*,L);         EX Tr*arrT[][11];
 
 //            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  /  e
-enum      { tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
+enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
 #define TS "?""A""B""H""I""L""D""C""S""M""m""i""l""d""c""s""o""p""q""r""u""v""w""e" //their symbols
 #define TZ  0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //size in bytes
 #define Tz  0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
