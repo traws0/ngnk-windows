@@ -20,7 +20,7 @@ S C*s,*p;
 S A0(g,Ct=h1;Ed(!in(t,tn))
  P(t==tA||t==tS,Ln=h8;Ed(!in(n,1ll<<45))Ax=AN(0,atn(t,n));i(n,xq(Nx(g())))x)
  P(t==tm||t==tM,Ax=N(g());Ed(!xtA||xn-2||_t(xx)>tM||_t(xy)>tM||_N(xx)-_N(xy))AT(t,mut(x)))
- P(t==ts,Cn=h1;as(syP(h(n))))
+ P(t==ts,Nn=h1;as(syP(h(n))))
  P(_tP(t),h8)
  P(t==tr ,Cc=h1;AT(t,AK(c&7,AW(c>>3,N(g())))))
  P(_tF(t),Cc=h1;AT(t,AK(c&7,AV(c>>3,N(g())))))
