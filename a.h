@@ -5,7 +5,7 @@
 #define   _(a...) {return({a;});}
 #define W(x,a...) while(x){a;}
 #define V(x,a...) TY(a)x=(a);
-#define X(x,a...) TY(x)x=a;
+#define U(x,a...) TY(x)x=a;
 #define B(x,a...) I(x,a;break)
 #define P(x,a...) I(x,_(a))
 #define I(x,a...) if(x){a;}

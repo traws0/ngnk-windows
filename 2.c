@@ -44,7 +44,7 @@ hr(mul,B,L,l)hr(mul,H,L,l)hr(mul,I,L,l)hr(mul,L,L,l)hr(mul,D,D,d)
 hr(mnm,B,L,l)hr(mnm,H,L,l)hr(mnm,I,L,l)hr(mnm,L,L,l)hr(mnm,D,D,d)
 hr(mxm,B,L,l)hr(mxm,H,L,l)hr(mxm,I,L,l)hr(mxm,L,L,l)hr(mxm,D,D,d)
 
-X(arf,{{{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},//atom+atom
+U(arf,{{{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},//atom+atom
         {    0,modhh,mnmhh,mxmhh,ltnhh,0,eqlhh},
         {    0,modii,mnmii,mxmii,ltnii,0,eqlii},
         {    0,modll,mnmll,mxmll,ltnll,0,eqlll},
@@ -64,22 +64,22 @@ X(arf,{{{    0,modbb,mnmbb,mxmbb,ltnbb,0,eqlbb},//atom+atom
         {    0,modII,mnmII,mxmII,ltnII,0,eqlII},
         {    0,modLL,mnmLL,mxmLL,ltnLL,0,eqlLL},
         {dvdDD,modDD,mnmDD,mxmDD,ltnDD,0,eqlDD}}})
-X(arrT,{{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
+U(arrT,{{    0,addrB,subrB,mulrB,0,0,mnmrB,mxmrB},//reduce
         {    0,addrH,subrH,mulrH,0,0,mnmrH,mxmrH},
         {    0,addrI,subrI,mulrI,0,0,mnmrI,mxmrI},
         {    0,addrL,subrL,mulrL,0,0,mnmrL,mxmrL},
         {    0,addrD,subrD,mulrD,0,0,mnmrD,mxmrD}})
-X(arsT,{{    0,    0,    0,    0,0,0,mnmsB,mxmsB},//scan
+U(arsT,{{    0,    0,    0,    0,0,0,mnmsB,mxmsB},//scan
         {    0,    0,    0,    0,0,0,mnmsH,mxmsH},
         {    0,    0,    0,    0,0,0,mnmsI,mxmsI},
         {    0,    0,    0,    0,0,0,mnmsL,mxmsL},
         {    0,    0,    0,    0,0,0,mnmsD,mxmsD}})
-X(arpT,{{dexpB,    0,    0,    0,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
+U(arpT,{{dexpB,    0,    0,    0,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
         {dexpH,    0,    0,    0,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
         {dexpI,    0,    0,    0,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
         {dexpL,    0,    0,    0,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
         {dexpL,    0,    0,    0,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
-X(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
+U(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
         {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
         {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
         {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
