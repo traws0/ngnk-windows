@@ -1,11 +1,14 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #include"a.h"
 #include<sys/mman.h>
+#ifndef MAP_NORESERVE
+ #define MAP_NORESERVE 0
+#endif
 #define xU xC[-16]       //bucket
 #define xX xA[-3]        //next
 #define xZ ((ZA<<xU)-ZA) //capacity
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
-S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,NFBSD(MAP_NORESERVE|)MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
+S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
  P((L)p==-1,eo0();(V*)0)P(f>0,p)I(nm==ZZ(m),die("mmap lmt\n"))*(C*)p=nm;m[nm++]=(TY(*m)){p,n};p)
 S A mu(V*p,Nn)_(munmap(p,n);i(ZZ(m),B(m[i].p==p,Mc(m+i,m+i+1,(--nm-i)*SZ m[0])));0)
 S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
