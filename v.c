@@ -53,7 +53,7 @@ S V ascA(OA*v,I*a,In,I*b){P(n<2,I(n,*b=*a);)I m=n/2;ascA(v,a+m,n-m,b+m);ascA(v,a
 A1(asc,XZC(In=xn;Ez(n-xn,x)x=N(K("{x-&/x}",x));Ay=aC(n),z=aI(n),u=aI(n);x2(y2(ascZ(xC,yC,zI,uI,n,ZT[xt])==zI?u(z):z(u))))
  XA(In=xn;Ez(xn-n,x)Im=n/2;OA*v=xA;Ay=aI(n),z=aI(n-m);I*a=yI,*b=zI;iI(a,n);
   ascA(v,a+m,n-m,b);ascA(v,a,m,a+n-m);mrg(v,a+n-m,a+n,b,b+n-m,a);x(z(y)))
- XS(asc(N(eac1(x,str))))XD(asc(blw(x)))Xm(K("{(!x)@<. x}",x))XM(K("{(!#x){x@<y x}/|.+x}",x))P(xts||xti,opn(x))et1(x))
+ XS(asc(str(x)))XD(asc(blw(x)))Xm(K("{(!x)@<. x}",x))XM(K("{(!#x){x@<y x}/|.+x}",x))P(xts||xti,opn(x))et1(x))
 A1(dsc,Xz(cls(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Et(!xtT,x)x=rev(asc(rev(x)));sub(ai(xN-1),x))
 A1(grp,Xz(K("{x=/:x:!x}",x))Xt(et1(x))Xm(Ay=grp(kv(&x));yy=idx(x,yy);y)K("{x[*'g]!g@:<g:(&(~x~':x i),!0)_i:<x}",x))
 A2(bin,Xmt(er2(x,y))YMT(K("{x''y}",x,y))Li=-1,j=xn;W(i+1<j,Lm=(i+j)/2;Az=get(x,m);cA(y,z)<0?j=m:(i=m);z(0))x(y(az(i))))
