@@ -8,10 +8,10 @@
 #include<sys/types.h>
 #include<signal.h>
 #define   _(a...) {return({a;});}
-#define Y(x,a...) if(x){a;}
+#define I(x,a...) if(x){a;}
 #define   E(a...) else{a;}
-#define P(x,a...) Y(x,_(a))
-#define B(x,a...) Y(x,a;break)
+#define P(x,a...) I(x,_(a))
+#define B(x,a...) I(x,a;break)
 #define W(x,a...) while(x){a;}
 #define i(x,a...) for(I i=0,n_=(x);i<n_;i++){a;}
 #define S static
@@ -23,8 +23,8 @@ typedef char C;typedef int I;typedef long long L;
 S L szf(I f)_(struct stat h;fstat(f,&h);h.st_size)
 S L sz(C*s)_(I f=open(s,0);L n=szf(f);cl(f);n)
 S C*mm(C*s,C**e)_(I f=open(s,0);L n=szf(f);C*r=mmap(0,n,PROT_READ,MAP_PRIVATE,f,0);cl(f);*e=r+n;r)
-S I nl(C*s,I n)_(C*p=s;I i=0;W(i<n,Y(s[i]==10&&i<n-1&&s[i+1]==32,*p++=';';i+=2)E(*p++=s[i++]))p-s)
-S I t(C*s,I n)_(write(1,".",1);P(*s=='/'||*s==10,0)
+S I nl(C*s,I n)_(C*p=s;I i=0;W(i<n,I(s[i]==10&&i<n-1&&s[i+1]==32,*p++=';';i+=2)E(*p++=s[i++]))p-s)
+S I t(C*s,I n)_(wr(1,".",1);P(*s=='/'||*s==10,0)
  C*u=strstr(s," /");P(!u,wr(1,"bad test: ",10);wr(1,s,n);-1)
  C*a[]={"../k",0};I p[4];pipe(p);pipe(p+2);
  I c=fork();P(!c,dup2(*p,0);dup2(p[3],1);i(4,cl(p[i]))exit(execve(*a,a,0));0)
