@@ -80,7 +80,7 @@ C*sl(C*,L),*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q),sup(A*,A*),*syp(L*),tZ(L),h
 I _K(A),asg(A),c3(C,C,C),cD(D,D),eS(A,I),exit(I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),si(Q,I),strcmp(Q,Q),syP(Q);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L absL(L),gl_(A),gl(A),_N(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
-D gd_(A),gd(A);N strlen(Q);
+D gd(A);N strlen(Q);
 EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX AA*vn[];EX A1*ct[];EX Q*argv,*env;
 TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arpT[][11],*arf[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];

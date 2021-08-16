@@ -45,10 +45,8 @@ I mtc_(Ax,Ay/*00*/)_(P(x==y,1)P(xtZ&&ytZ&&xn==yn,gl(rdc(MUL,A(eql(xR,yR)),1)))P(
  P(xt-yt||xtP||(xtr&&xw-yw)||xn-yn,0)P(!xtR,i(xn*ZT[xt],P(xc-yc,0))1)i(xn,P(!mtc_(xa,ya),0))1)
 A2(mtc,x(y(ai(mtc_(x,y)))))
 S C ot(Ax)_(xtz?tl:xtZ?tL:xt)S L od(Dd)_(Lv=*(L*)&d;v^(UL)(v>>63)>>1)S I cL(Li,Lj)_(i<j?-1:i>j)I cD(Dd,Dv)_(cL(od(d),od(v)))
-S I cA(Ax,Ay/*00*/)_(P(mtc_(x,y),0)
- P(xtd&&ytd,cD(gd_(x),gd_(y)))P(xtzc&&ytd,cD(gl_(x),gd_(y)))P(xtd&&ytzc,cD(gd_(x),gl_(y)))
- Iv=ot(x)-ot(y);P(v,v)Xzc(cL(gl_(x),gl_(y)))Xd(Dv=gd_(x),w=gd_(y);v<w?-1:v>w?1:0)
- Xs(Lv=xv,w=yv;strcmp(syp(&v),syp(&w)))
+S I cA(Ax,Ay/*00*/)_(P(mtc_(x,y),0)P(xtd&&ytd,cD(*xD,*yD))P(xtzc&&ytd,cD(gl_(x),*yD))P(xtd&&ytzc,cD(*xD,gl_(y)))
+ Iv=ot(x)-ot(y);P(v,v)Xzc(cL(gl_(x),gl_(y)))Xd(*xD<*yD?-1:*xD>*yD?1:0)Xs(strcmp(syp(&x),syp(&y)))
  I(!xtP,Iv=cL(xn,yn);XT(i(min(xn,yn),Az=get(x,i),u=get(y,i);I d=cA(z,u);mr(z(u));P(d,d))v))cL(x,y))
 S I*ascZ(O UC*v,UC*g,I*a,I*b,In,I w)_(UI c[257];iI(a,n);
  j(w,Ms(c,0,SZ c);i(n,g[i]=v[w*a[i]+j])i(n,c[g[i]+1]++)I(c[1+*g]-n,i(255,c[i+1]+=c[i])i(n,b[c[g[i]]++]=a[i])SWP(b,a)))a)
