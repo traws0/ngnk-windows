@@ -8,7 +8,7 @@ S V shf(L*r,Nn){i(n,UI j=rm(i+1);SWP(r[i],r[j]))}
 S A ro(UL n,UL m)_(Ax=aL(n);i(n,xl=r1())I(m,I(m<=1ll<<32,i(n,xl=rm(m)))E(i(n,xl=(UL)xl%m)))x)
 S A de(UL n,UL m)_(El(n>m)Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xL,n);x)
 S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
-ALA(rnd,Xz(rd(n,gl(x)))Xc(gC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))
+S ALA(rnd,Xz(rd(n,gl(x)))Xc(gC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))
  Xd(mul(x,add(ad(-1),Nx(AT(tD,add(al(1023ll<<52),rd(n,1ll<<52)))))))XMT(idx(x,Nx(rd(n,xN))))et1(x))
 
 #define h(T) NI L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\

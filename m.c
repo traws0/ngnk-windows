@@ -7,7 +7,6 @@
 #define xU xC[-16]       //bucket
 #define xX xA[-3]        //next
 #define xZ ((ZA<<xU)-ZA) //capacity
-
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
 S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
  P((L)p==-1,eo0();(V*)0)P(f>0,p)I(nm==ZZ(m),die("mmap lmt\n"))*(C*)p=nm;m[nm++]=(TY(*m)){p,n};p)
