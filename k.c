@@ -76,5 +76,5 @@ AA(dm1,Ax=*a,y=a[1],z=a[2];Lm=yN;P(!m||y==au0,y(0);Ab8;*b=x;Mc(b+1,a+3,(n-3)*8);
  P(m==1,Ab8;Mc(b,a,n*8);b[1]=fir(y);am1(b,n))
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))P(n==3,K("{@[x;*y;.[;1_y;z]]}",x,y,z))enn(n,a))
 AA(dmd,Ax=*a,y=a[1],z=a[2];n==3&&xtF?try(x,y,z):xtsS?mnd(a,n,dm1):dm1(a,n))
-A K0(OC*s,In)_(Ax=val(aCn(s,n+1));cns=apd(cns,x);x)
+A K0(A*p,Qs,OA*a,In)_(Ax=*p;I(!x,x=*p=N(val(aCz(s)));cns=apd(cns,x))n?app(x,a,n):x)
 OC Zt[]={Tz},ZT[]={TZ};
