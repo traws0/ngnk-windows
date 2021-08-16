@@ -38,8 +38,6 @@ A1(sqz,P(!xtA||!xn,x)Nn=xn;Ay=xx;Ct=yt;Ym(y=oA;i(n,yq(_R(xa)))x(y))P(!c3(ti,t,ts
  I(ytz,i(n,Ay=xa;P(!ytz,x)t=max(t,yt)))E(i(n,P(t-_t(xa),x)))
  y=atn(tT(t),n);Iv=Zt[yt];I(v<3,CH(v,&cLC,cLH,cLI)(xC,yC,n))E(i(n,yl=gl_(xa)))x(y))
 A1(blw,XA(x)Xt(a1(x))Et(xtm,x)Nn=xN;Ay=aA(n);i(yn,ya=get(x,i))x(y))
-A1(fir,Xt(x)x(getr(x,0)))
-A1(las,Xt(x)x(getr(x,xN-1)))
 L tru(Ax/*1*/)_(Lv=xtF?x==av0:xtt?gl_(x):xN;x(0);v)
 I mtc_(Ax,Ay/*00*/)_(P(x==y,1)P(xtZ&&ytZ&&xn==yn,gl(rdc(MUL,A(eql(xR,yR)),1)))P(xtz&&ytz,gl_(x)==gl_(y))
  P(xt-yt||xtP||(xtr&&xw-yw)||xn-yn,0)P(!xtR,i(xn*ZT[xt],P(xc-yc,0))1)i(xn,P(!mtc_(xa,ya),0))1)
