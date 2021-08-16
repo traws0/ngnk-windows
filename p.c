@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-L absL(Lv)_(v<0?-v:v)C hx1(Ii)_(i+(i>9?'a'-10:'0'))I in(Li,Ln)_(0<=i&&i<n)I c3(Cc,Cv,Cd)_(c<=v&&v<=d)
+L absL(Lv)_(v<0?-v:v)C hx1(Ii)_(i+(i>9?'a'-10:'0'))I in(Li,UL n)_(i<n)I c3(Cc,Cv,Cd)_(c<=v&&v<=d)
 I c09(Cc)_(c3('0',c,'9'))I caf(Cc)_(c3('a',c,'f'))I cAz(Cc)_(c3('a',c|32,'z'))I cA9(Cc)_(cAz(c)||c09(c))
 I cAZ(Cc)_(c3('A',c,'Z'))I cAF(Cc)_(c3('A',c,'F'))I cAf(Cc)_(c3('a',c|32,'f'))
 S I num(Qs)_(c09(s[*s=='-']))I si(Qs,Iv)_(SC0(s,v)-s)S D p10(In)_(Dd=1;i(n,d*=10)d)
