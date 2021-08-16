@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 S A2(enc,x=Ny(gL(x));y=Nx(gL(y));Yt(Az=enc(x,enl(y));zn?fir(flp(z)):z(oL))
- Xt(UL v=gl(x),r=0,m=0,b=1;i(yn,UL w=yl;I(r<w,r=w))W(m<64&&b<=r,m++;b*=v)enc(rshL(m,az(v)),y))
+ Xt(UL v=gl(x),r=0,m=0,b=1;i(yn,UL w=yl;I(r<w,r=w))W(m<64&&b<=r,m++;b*=v)enc(rshN(m,az(v)),y))
  P(!xn,x(y(oA)))Au=aA(xn);y=mut(y);Li=xn;W(--i>0,UL m=xl;m+=!m;Az=ua=aL(yn);i(yn,UL v=yl,w=yl=v/m;zl=v-w*m))
  UL m=gl(x);ux=y;I(m,i(yn,yl%=m))u)
 S A2(dec,K("{z+x*y}/[0;;]",x,y))S A2(win,K("{y(!x)+/:!0|1-x-#y}",x,y))

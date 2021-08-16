@@ -4,7 +4,7 @@ U(vc,{':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@
 U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})
 U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex})
 U(vn,{___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,amd,dmd,___,___,___,___,___,___})
-A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))Ln=xN;rshL(n,x(y)))I _K(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //_K:arity
+A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 AX(prj,XA(app(x,a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
  Ay=(xtp?val:a1)(xR);Ii=0,j=1;W(i<n&&j<yn,I(yA[j]==PLH,yA[j]=a[i++])j++)W(i<n,yq(a[i++]))AT(tp,AK(k,y)))
