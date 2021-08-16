@@ -23,7 +23,7 @@ A1(fir,Xt(x)x(getr(x,0)))A1(las,Xt(x)x(getr(x,xN-1)))
  L l=n/g*g;j(n-l,P(!in(q[j],m),l))j(n-l,r[j]=p[q[j]]))
 iC_(I)iC_(L)i_(B,I)j_(B,I)i_(B,L)j_(B,L)i_(H,I)j_(H,I)i_(H,L)j_(H,L)i_(I,I)j_(I,I)i_(I,L)j_(I,L)j_(L,I)j_(L,L)
 iD_(I)iD_(L)iS_(I)iS_(L)
-S A2(idx_,/*01*/Er(xtt,y)P(y==PLH||y==au0,xR)YA(ear(xR,y,AP1))Ym(y=mut(y);yy=idx_(x,yy);y)YF(et1(y))Yt(getr(x,gl(y)))
+S A2(idx_,/*01*/Er(xtt,y)P(y==PLH||y==au0,xR)YA(ear(AP1,xR,y))Ym(y=mut(y);yy=idx_(x,yy);y)YF(et1(y))Yt(getr(x,gl(y)))
  I(!ytL&&!ytI,y=N(gI(y)))Nn=yn;P(xtA||xtM,Az=oA;I(ytL,i(n,zq(getr(x,yl))))E(i(n,zq(getr(x,yi))))y(z))
  Az=xtL&&ytL&&yr==1?y:atn(xt,n);Lm=CH(xt-tB+7*ytL,&iBI,iHI,iII,jLI,iDI,iCI,iSI,iBL,iHL,iIL,jLL,iDL,iCL,iSL)(xC,xn,yC,zC,n);
  I(m<n,z=z(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xC,xn,yC,zC,n))y-z?y(z):z)
