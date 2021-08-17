@@ -15,7 +15,7 @@ A1(til,Xz(tilL(gl(x)))XZ(K("{x((*a)#&#)'1_a:|*\\|x,1}",x))XmM(x(_R(xx)))Xo(val(x
 A1(whr,XA(K("{$[`A~@x;(,&#'*'x),,'/x@\\:!0|/#'x:o'x;,&x]}",x))Xm(Ay=kv(&x);idx(x,Nx(whr(y))))XM(et1(x))
  x=N(cL(enla(x)));Ln=0;i(xn,Ed(xl<0,x)n+=xl)Ct=tZ(xn-!!xn);Ez(t>tI,x)Ay=atn(t,n);x2(n=0;CH(t-tB,&wB,wH,wI)(xL,xn,yC);y))
 A1(rev,XT(x=mut(x);CH(Zt[xt],&rB,rH,rI,rL,rL)(xC,xC+ZT[xt]*(xn-1));x)
- Xm(AT(tm,N(eac1(AT(tA,mut(x)),rev))))XM(Ay=kv(&x);aM(x,Nx(eac1(y,rev))))x)
+ Xm(Ay=kv(&x);am(rev(x),rev(y)))XM(Ay=kv(&x);aM(x,Nx(eac1(y,rev))))x)
 A1(typ,x(as(TS[xt])))
 A1(len,x(az(xN)))L _N(Ax/*0*/)_(xtT?xn:xtm?_N(xy):!xtM?1:_n(xy)?_N(*(A*)_V(xy)):1)
 A1(unq,XT(xN<2?x:K("{x@i@<i@:&@[;0;:;1]@~~':x@i:<x}",x))Xz(rndD(gl(x)))et1(x))
