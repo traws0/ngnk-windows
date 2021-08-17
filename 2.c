@@ -86,7 +86,7 @@ U(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
         {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}})
 
 S C tZx(Ax)_(XcC(tH)Xz(tZ(gl_(x)))Xd(tD)XZD(xt)XsS(tI)tB)
-C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(ct[t](x));*q=y=Nx(ct[t](y));t)
+C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(cT[t](x));*q=y=Nx(cT[t](y));t)
 S A ari(Ax,Ay,Iv)_(P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2(x,y,av0+v))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xC,*b=ytP?(V*)&y:yC;V(f,arf[k][tT(t)-tB][v-4]);
  I(t>tD,t+=tD-td)I(v>7&&t==tD,t=tI)I(!k,t+=tc-tC;P(_tP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
@@ -98,7 +98,7 @@ A2(dex,mr(x);y)
 A2(add,adm(x,y,0))
 A2(sub,add(x,Nx(neg(y))))
 A2(mul,adm(x,y,1))
-A2(dvd,ari(Ny(gD(x)),Nx(gD(y)),4))
+A2(dvd,ari(Ny(cD(x)),Nx(cD(y)),4))
 A2(mod,Xzd(P(xtl&&*xL==NL,out(x(y)))ari(x,y,MOD-av0))dct(x,y))
 A2(mnm,ari(x,y,MNM-av0))
 A2(mxm,ari(x,y,MXM-av0))

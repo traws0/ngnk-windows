@@ -7,7 +7,7 @@ TD size_t(*F1)(OV*,V*,N);NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])F1(flr,C,a
 
 #define R1(f,a...) A1(f,XmMA(eac1(x,f))a)
 SN A fx(F1 f,Ax)_(P(xr==1,f(xC,xC,xn);x)Ay=atn(xt,xn);x2(f(xC,yC,yn);y))
-R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
+R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(cH(x)))P(!xtZD,et1(x))
  S O F1 f[]={negB,negH,negI,negL,negD};
  Nn=xn;Ay=xr>1?atn(xt,n):x;Nm=f[xt-tB](xC,yC,n);
  I(m<n,I(x-y,x=wdn(x,m,n,n-m);y=wdn(y,0,m,n))E(x=y=wdn(y,0,n,n))
@@ -15,8 +15,8 @@ R1(neg,Xz(az(-gl(x)))Xd(ad(-gd(x)))XcC(neg(gH(x)))P(!xtZD,et1(x))
  x-y?x(y):y)
 R1(not,XF(x(ai(x==au0)))eql(x,xtsS?as(0):ac(0)))
 R1(nul,XF(x(ai(x==au0)))eql(x,_R(cn[xt])))
-R1(flr,XC(fx(flrC,x))Xc(fir(flr(enl(x))))XzZ(x)XsS(gS(flr(str(x))))
- x=N(gD(x));Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))
+R1(flr,XC(fx(flrC,x))Xc(fir(flr(enl(x))))XzZ(x)XsS(cS(flr(str(x))))
+ x=N(cD(x));Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))
 
 #define sqrd __builtin_sqrt
 S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
@@ -25,5 +25,5 @@ S D sind(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about
  P(x<0,-sind(-x))I(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
 S D expd(D x)_(0) //todo
 S D logd(D x)_(0) //todo
-#define h(f) F1(f,D,f##d(a[i])) R1(f,fx(f##D,N(gD(x))))
+#define h(f) F1(f,D,f##d(a[i])) R1(f,fx(f##D,N(cD(x))))
 h(sqr)h(sin)h(exp)h(log)

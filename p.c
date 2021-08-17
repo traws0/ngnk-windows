@@ -9,7 +9,7 @@ S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
 S D pd(Q*p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
 S Qs,s0;S I nx;
 S A0(pZ,L l=0,h=0;Ax=oL;W(1,Lv=pl(&s);I(!v&&*s=='N',v=NL;s++)v<l?l=v:h<v?h=v:0;x=apv(x,&v);B(*s-32||!num(s+1))s++)
- ct[max(tZ(l),tZ(h))](x))
+ cT[max(tZ(l),tZ(h))](x))
 S A0(pD,Ax=oD;W(1,x=apv(x,(D[]){pd(&s)});B(*s-32||!num(s+1))s++)x)
 S A0(pC,Ax=oC;Cc=*++s;W(c&&c-'"',I(c=='\\',c=*++s;Ii=si("tnr0",c);I(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)Ep(!c,x)c=*++s;x)
 S C ph()_(Cc=*s;c09(c)?c-'0':caf(c)?c+10-'a':16)
