@@ -111,10 +111,9 @@ S  C _w(Ax)_(xC[-14])               S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)        
 S  C _k(Ax)_(xC[-13])               S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)                                 //arity(for funcs)
 S UH _o(Ax)_(xts?x>>32:xtP?0:xH[-7])S A AO(UH o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xH[-7]=o;x)          //offset
 S  N _n(Ax)_(xL[-1])                S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                     //length
-S OA au0=(UL)tu<<56,FIR=au0+3,TIL=au0+5,REV=au0+7,LEN=au0+14,OUT=au0+25,PLH=au0+29,PRG=au0+30,
-     av0=(UL)tv<<56,ADD=av0+1,MUL=av0+3,MOD=av0+5,MNM=av0+6,MXM=av0+7,LTN=av0+8,EQL=av0+10,CAT=av0+12,EXC=av0+13,
-      RSH=av0+14,CUT=av0+15,CST=av0+16,QUE=av0+17,AP1=av0+18,APN=av0+19,COM=av0+24,MKL=av0+25;
-#define aw(i) AT(tw,i)
+S OA au0=(UL)tu<<56,av0=(UL)tv<<56,aw0=(UL)tw<<56,FIR=au0+3,TIL=au0+5,REV=au0+7,LEN=au0+14,OUT=au0+25,PLH=au0+29,PRG=au0+30,
+ ADD=av0+1,MUL=av0+3,MOD=av0+5,MNM=av0+6,MXM=av0+7,LTN=av0+8,EQL=av0+10,CAT=av0+12,EXC=av0+13,RSH=av0+14,CUT=av0+15,
+ CST=av0+16,QUE=av0+17,AP1=av0+18,APN=av0+19,COM=av0+24,MKL=av0+25;
 #define ND (D)(0./0.)
 #define WD __builtin_inf()
 #define NL (1ll<<63)
