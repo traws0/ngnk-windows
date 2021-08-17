@@ -39,7 +39,7 @@ S A1(vm,/*0*/W(1,Cb=*c++;
  I(b>=bm,I(b>=bc,Ay=fc;p(_R(yA[b-bc])))
         EI(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(_R(*v=Ny(dm1(A(x,yR,av0+*c++,z),4))),y)))
         EI(b==bM,Ax=q()         ,y=q(),z=*s;       *s=au0;N(*s=apn(      Ny(dmd(A(x,yR,av0+*c++,z),4)) ,y)))
-        EI(b==bl,Nn=*c++;s+=n;p(sqz(atnv(tA,n,s-n))))
+        EI(b==bl,Nn=*c++;s+=n;p(sqz(aV(tA,n,s-n))))
         EI(b==bL,Nn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
         EI(b==ba||b==bP,Nn=*c++;Ax=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(x))
         EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(C)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q()))E(Q(b==br);_(*s)))

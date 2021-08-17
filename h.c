@@ -19,7 +19,7 @@ S A rmv(Ax/*1*/,Li)_(
  XT(P(!in(i,xn),x)Ay=atn(xt,xn-1);L w=ZT[xt];Mc(yC,xC,i*w);Mc(yC+i*w,xC+i*w+w,(xn-i-1)*w);I(xtA,y=sqz(mRa(y)))x(y))et1(x))
 A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am(Nz(cut(x,y)),Nx(cut(z,y))))
  YMT(K("{y$[|/0<':x,#y;`err\"dom\";x+!'1_-':x,#y]}",Ny(gL(x)),y))Ym(K("{((!y)^x)#y}",x,y))Yz(rmv(x,gl(y)))et2(x,y))
-A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtzc||xts,atnv(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
+A1(enl,P(xtl||xtd,AT(tT(xt),mut(x)))P(xtzc||xts,aV(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
 A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av0,z),4))Ed(!mtc_(xx,yx),x,y)
