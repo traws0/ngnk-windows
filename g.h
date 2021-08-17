@@ -401,6 +401,8 @@
 #define YsS(a...) P(ytsS,a)
 #define XzZ(a...) P(xtzZ,a)
 #define YzZ(a...) P(ytzZ,a)
+#define XmM(a...) P(xtmM,a)
+#define YmM(a...) P(ytmM,a)
 #define Xmt(a...) P(xtmt,a)
 #define Ymt(a...) P(ytmt,a)
 #define XMT(a...) P(xtMT,a)
