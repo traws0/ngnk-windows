@@ -4,10 +4,10 @@ SN A flt(Ax,Ay,Cb)_(En(xK-1,x,y)Er(!ytT,x,y)x=Ny(x(app(x,A(yR),1)));x=xN?Ny(cL(x
  Az=rshN(0,yR);i(yN,Ln=gl(get(x,i));B(n-(UI)n,z=ed1(z))j(b?n:!n,zq(get(y,i))))x(y(z)))
 S V rshV(OV*a,Nm,V*b,Nn){Q(m);Mc(b,a,min(m,n));W(2*m<=n,Mc(b+m,b,m);m*=2)I(n>m,Mc(b+m,b,n-m))}
 ALA(rshN,Xm(Ay=kv(&x);x=Ny(rshN(n,x));y=Nx(rshN(n,y));am(x,y))XM(Ay=kv(&x);aM(x,Nx(ear(RSH,az(n),y))))
- Xt(rshN(n,enl(x)))P(!xn,rshN(n,enl(fir(x))))P(n<0,n==NL?x:rev(rshN(-n,rev(x))))
+ Xt(rshN(n,enl(x)))P(!xn,rshN(n,enl(fir(x))))P(n<0,n-NL?rev(rshN(-n,rev(x))):x)
  Ay=atn(xt,n);rshV(xC,xn*ZT[xt],yC,n*ZT[xt]);x(ytA?sqz(mRa(y)):y))
 S A slc(Ax/*0*/,Li,Lj)_(Q(xtT&&0<=i&&i<=j&&i<=xn)Ay=atn(xt,j-i);Mc(yC,xC+i*ZT[xt],(j-i)*ZT[xt]);XA(sqz(mRa(y)))y)
-ALA(chp,Q(n>0);Lm=(xn+n-1)/n;Ay=aA(m);i(m,ya=slc(x,n*i,min(xn,n*i+n)))x(y))
+S ALA(chp,Q(n>0);Lm=(xn+n-1)/n;Ay=aA(m);i(m,ya=slc(x,n*i,min(xn,n*i+n)))x(y))
 S A shp(O L*s,Ln,Ax,Lm)_(P(n<=0,en1(x))m*=*s;P(n==1,rshN(m,x))chp(s[1],shp(s+1,n-1,x,m)))
 A2(rsh,XF(flt(x,y,1))Xz(rshN(gl(x),y))Ym(Xmt(rsh(enl(x),y))am(x,ap1(y,xR)))Yt(rsh(x,enl(y)))
  x=Ny(cL(x));Nn=xN;P(!n,fir(x(y)))P(n>8,ez2(x,y))P(n==1&&*xL==NL,x(y))P(!yn,rsh(x,enl(fir(y))))Lm=1;
