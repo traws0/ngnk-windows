@@ -79,9 +79,9 @@ U(arpT,{{dexpB,    0,    0,    0,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
         {dexpI,    0,    0,    0,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
         {dexpL,    0,    0,    0,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
         {dexpL,    0,    0,    0,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
-U(araT,{{dexaB,addaB,subaB,mulaB,0,0,mnmaB,mxmaB},//amend
-        {dexaH,addaH,subaH,mulaH,0,0,mnmaH,mxmaH},
-        {dexaI,addaI,subaI,mulaI,0,0,mnmaI,mxmaI},
+U(araT,{{dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},//amend
+        {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
+        {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
         {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
         {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}})
 
