@@ -423,7 +423,6 @@
 #define Cc C c
 #define Cd C d
 #define Ct C t
-#define Ho H o
 #define Ii I i
 #define Ij I j
 #define Ik I k
