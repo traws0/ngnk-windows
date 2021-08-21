@@ -27,9 +27,9 @@ S A2(cr,/*0*/I o=yo;Ys(Li=fAI(fl,yv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(yv=='o',h(b
 S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
-A1(cf,XA(I o=xo;Nn=xn;P(n==2?f2(xx,xy):n==3?f3(xx,xy,xz):0,wrp(val(x)))x=mut(x);i(xn,xa=cf(xa))AO(o,x))x)
-A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);I o=0;Ms(fu,-1,64);y=cf(y);Q(*yA==PRG);
- P(!cr(x,y),mr(xA[5]);x(y(0)))h(br);y=y(fb);Q(yr==1);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))mr(xA[5]);x)
+A1(cf,XA(I o=xo;P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,wrp(val(x)))AO(o,blw(eac1(x,cf))))x)
+A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);I o=0;Ms(fu,-1,64);y=cf(y);
+ P(!cr(x,y),y(x(dex(xA[5],0))))h(br);y=y(fb);Q(yr==1);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))dex(xA[5],x))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;
@@ -42,5 +42,5 @@ S A1(vm,/*0*/W(1,Cb=*c++;
         EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(C)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q()))E(Q(b==br);_(*s)))
  EI(b>=bs,A*v=l-b%16,x=*v;I(b>=bd,p(x);*v=au0)EI(b>=bg,p(xR))E(x=x(*v=_R(*s))))
  EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))E(N(*s=v1[b](*s))))0)
-AX(run,Q(xto);Q(n==xK);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au0))
+AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au0))
  Au=vm(x);I(!u,Ay=fb,z=fm;eS(_R(fs),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)
