@@ -16,14 +16,24 @@ S A3(cl,/*0*/I o=yo;P(zts&&yx==av0&&xK,Li=fpI(&fl,zv);Ez(i>15)fu[i]=_n(fb);h(bs|
  P(ztS&&!_v(yx),hc(av0);hc(au0);hc(zR);hc(APN);h(ba);h(4);x)P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(_R(fs),o);ec0())
 I asg(Ax)_(xtA||xtsS) //is lhs of assignment?
-S A2(cr,/*0*/I o=yo;Ys(Li=fAI(fl,yv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(yv=='o',h(bo);x)hc(AO(0,yR));h(bu|APN-av0);x)
- YS(P(yn==1,hc(get(y,0));x)hc(AO(0,yR));h(bu|APN-av0);x)P(!ytA||!yn,hc(y-PLH?yR:au0);x)Nn=yn;Au=yx;
- P(u==PRG,i(n-1,I(i,h(bp))r(x,yA[i+1]))x)P(n<2,hc(uR);x)P(n==3&&(utu||u==av0)&&asg(yy),r(x,yz);l(x,y,yy))
+S A2(cr,/*0*/I o=yo;
+ Ys(Li=fAI(fl,yv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(yv=='o',h(bo);x)hc(AO(0,yR));h(bu|APN-av0);x)
+ YS(P(yn-1,hc(AO(0,yR));h(bu|APN-av0);x)hc(get(y,0));x)
+ P(!ytA||!yn,hc(y-PLH?yR:au0);x)Nn=yn;Au=yx;
+ P(u==PRG,i(n-1,I(i,h(bp))r(x,yA[i+1]))x)
+ P(n<2,hc(uR);x)
+ P(n==3&&(utu||u==av0)&&asg(yy),r(x,yz);l(x,y,yy))
  P(n>3&&u==CST,n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=_n(fb);h(0))r(x,n&1?*++a:au0);Az=fb;
   i(n&~1,I d=(i&1?zn:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
- I(n==2&&u==FIR,Az=yy;P(ztA&&zn==2&&zx==REV,r(x,zy);h(bu|24);x))I(n==2&&utw,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
- I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))P(p,r(x,yx);h(bP);h(n-1);x)
- P(u==MKL,h(bl);h(n-1);x)P(n==2&&u==av0,h(br);x)P(n==2&&utu,h(bu|uv);x)P(n==3&&utv,h(bv|uv);x)r(x,yx);h(ba);h(n-1);x)
+ I(n==2&&u==FIR,Az=yy;P(ztA&&zn==2&&zx==REV,r(x,zy);h(bu|24);x))
+ I(n==2&&utw,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
+ I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))
+ P(p,r(x,yx);h(bP);h(n-1);x)
+ P(u==MKL,h(bl);h(n-1);x)
+ P(n==2&&u==av0,h(br);x)
+ P(n==2&&utu,h(bu|uv);x)
+ P(n==3&&utv,h(bv|uv);x)
+ r(x,yx);h(ba);h(n-1);x)
 S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
