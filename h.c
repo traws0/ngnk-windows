@@ -14,7 +14,7 @@ A2(rsh,XF(flt(x,y,1))Xz(rshN(gl(x),y))Ym(Xmt(rsh(enl(x),y))am(x,ap1(y,xR)))Yt(rs
  i(n,Lv=xl;m*=v;I(v<0,Ed(n>2||n==2&&v-NL,x,y)
   P(n==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?x(chp(xL[1],y)):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
  x(m?shp(xL,n,y,1):rshN(0,enl(y))))
-ALA(drp,XT(n*=n!=NL;P(n<=0&&-n<=xn&&xr==1,AN(xn+n,x))x(slc(x,max(0,min((L)xn,n)),max(0,min((L)xn,xn+n)))))
+ALA(drp,XT(n*=n!=NL;P(n<=0&&-n<=xn&&xr==1,I(xtA,mrn(-n,xA+xn+n))AN(xn+n,x))x(slc(x,max(0,min((L)xn,n)),max(0,min((L)xn,xn+n)))))
  Xm(Ay=kv(&x);am(Ny(drp(n,x)),Nx(drp(n,y))))XM(Ay=kv(&x);aM(x,Nx(eac2(az(n),y,CUT))))er1(x))
 S AAL(rmv,XT(P(!in(i,xn),x)Ay=atn(xt,xn-1);Iv=ZT[xt];Mc(yC,xC,i*v);Mc(yC+i*v,xC+i*v+v,(xn-i-1)*v);I(xtA,y=sqz(mRa(y)))x(y))et1(x))
 A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am(Nz(cut(x,y)),Nx(cut(z,y))))
