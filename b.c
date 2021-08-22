@@ -1,9 +1,9 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,br=0x7f,bc=0x80,bC=0xff};S A2 cr;
+enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,bc=0x80,bC=0xff};S A2 cr;
 #define fs xx    //src            BYTECODE                               ba:apply n-adic      f[x;y;z]
 #define fb xy    //ast|bytecode   bu,bv:apply unary|binary verb   +x*y   bP:make projection   f[x;;z]
 #define fm xz    //srcmap         bs,bg,bd:set|get|delete local    a:b   bz:branch if falsey  $[x;y;z]
-#define fl xA[3] //local syms     bm,bM:l|glb modified assign  a[i]+:b   bj,bp,br:jmp|pop|ret $[x;:y;]
+#define fl xA[3] //local syms     bm,bM:l|glb modified assign  a[i]+:b   bj,bp:jmp|pop        $[x;:y;]
 #define fc xA[4] //constants      bl,bL:make|unmake list   (a;b):(c;d)   bc:load constant     12;`a;""
 #define fu ((I*)_V(xA[5])) //last usages of locals
 #define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
@@ -30,7 +30,7 @@ S A2(cr,/*0*/I o=yo;
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))
  P(p,r(x,yx);h(bP);h(n-1);x)
  P(u==MKL,h(bl);h(n-1);x)
- P(n==2&&u==av0,h(br);x)
+ P(n==2&&u==av0,h(bu);x)
  P(n==2&&utu,h(bu|uv);x)
  P(n==3&&utv,h(bv|uv);x)
  r(x,yx);h(ba);h(n-1);x)
@@ -39,7 +39,7 @@ S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(I o=xo;P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,wrp(val(x)))AO(o,blw(eac1(x,cf))))x)
 A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);I o=0;Ms(fu,-1,64);y=cf(y);
- P(!cr(x,y),y(x(dex(xA[5],0))))h(br);y=y(fb);Q(yr==1);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))dex(xA[5],x))
+ P(!cr(x,y),y(x(dex(xA[5],0))))h(bu);y=y(fb);Q(yr==1);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))dex(xA[5],x))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;
@@ -49,8 +49,8 @@ S A1(vm,/*0*/W(1,Cb=*c++;
         EI(b==bl,Nn=*c++;s+=n;p(sqz(aV(tA,n,s-n))))
         EI(b==bL,Nn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
         EI(b==ba||b==bP,Nn=*c++;Ax=s[n]=(b==ba?app:prj)(*s,s+1,n);mr(*s);s+=n;N(x))
-        EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(C)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q()))E(Q(b==br);_(*s)))
+        EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(C)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q())))
  EI(b>=bs,A*v=l-b%16,x=*v;I(b>=bd,p(x);*v=au0)EI(b>=bg,p(xR))E(x=x(*v=_R(*s))))
- EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))E(N(*s=v1[b](*s))))0)
+ EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))EI(b,N(*s=v1[b](*s)))E(_(*s)))0)
 AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au0))
  Au=vm(x);I(!u,Ay=fb,z=fm;eS(_R(fs),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)
