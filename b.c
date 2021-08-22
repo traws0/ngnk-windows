@@ -6,20 +6,23 @@ enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,bc=0x
 #define fl xA[3] //local syms     bm,bM:l|glb modified assign  a[i]+:b   bj,bp:jmp|pop        $[x;:y;]
 #define fc xA[4] //constants      bl,bL:make|unmake list   (a;b):(c;d)   bc:load constant     12;`a;""
 #define fu ((I*)_V(xA[5])) //last usages of locals
-#define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add byte
+#define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add instruction
 #define hc(a) ({Iv=bc+fpA(&fc,a);Ez(v>bC)h(v);}) //add a "load constant" instruction
 #define l(a...) N(cl(a)) //compile left-hand side of assignment
 #define r(a...) N(cr(a)) //right
-S A3(cl,/*0*/I o=yo;P(zts&&yx==av0&&xK,Li=fpI(&fl,zv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
+S A3(cl,/*0*/I o=yo;
+ P(zts&&yx==av0&&xK,Li=fpI(&fl,zv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
  P(zts||(ztA&&_t(zx)==ts),I(zts,hc(oA))E(i(zn-1,r(x,zA[zn-1-i]))h(bl);h(zn-1))
   Ik=_v(zts?z:zx);Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(yx));x)
- P(ztS&&!_v(yx),hc(av0);hc(au0);hc(zR);hc(APN);h(ba);h(4);x)P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
+ P(ztS&&!_v(yx),hc(av0);hc(au0);hc(zR);hc(APN);h(ba);h(4);x)
+ P(ztA&&zx==MKL,h(bL);h(zn-1);i(zn-1,l(x,y,zA[i+1]);h(bp))1)
  eS(_R(fs),o);ec0())
 I asg(Ax)_(xtA||xtsS) //is lhs of assignment?
 S A2(cr,/*0*/I o=yo;
  Ys(Li=fAI(fl,yv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(yv=='o',h(bo);x)hc(AO(0,yR));h(bu|APN-av0);x)
  YS(P(yn-1,hc(AO(0,yR));h(bu|APN-av0);x)hc(get(y,0));x)
- P(!ytA||!yn,hc(y-PLH?yR:au0);x)Nn=yn;Au=yx;
+ P(!ytA||!yn,hc(y-PLH?yR:au0);x)
+ Nn=yn;Au=yx;
  P(u==PRG,i(n-1,I(i,h(bp))r(x,yA[i+1]))x)
  P(n<2,hc(uR);x)
  P(n==3&&(utu||u==av0)&&asg(yy),r(x,yz);l(x,y,yy))
@@ -30,7 +33,6 @@ S A2(cr,/*0*/I o=yo;
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))
  P(p,r(x,yx);h(bP);h(n-1);x)
  P(u==MKL,h(bl);h(n-1);x)
- P(n==2&&u==av0,h(bu);x)
  P(n==2&&utu,h(bu|uv);x)
  P(n==3&&utv,h(bv|uv);x)
  r(x,yx);h(ba);h(n-1);x)

@@ -28,7 +28,7 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='
   W(1,p+=*p==32;B(!num(p))p+=*p=='-';c=*p;B(!cA9(c))W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
  P(cAz(c),Qp=s;x=pS('.');I(s-p==1&&c3('y',c,'z'),nx=max(nx,c-'w'))AO(p-s0,p1(x)))P(c>127,Qp=s;x=pS('.');*v=1;AO(p-s0,p1(x)))
  Ii=si("'/\\",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw0+i+3*h)i=si(vc,c);P(i>19,PLH)I u=*++s==':';s+=u;*v=1;AT(tv-u,i))
-S A1(mon,P(xtv&&x-av0,x^au0^av0)P(xtA&&(xn==2&&xx==aw0||xn==3&&xx==COM),x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)
+S A1(mon,P(xtv,x^au0^av0)P(xtA&&(xn==2&&xx==aw0||xn==3&&xx==COM),x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)
  P(xts,Lv=xv;Qs=syp(&v);Nn;P((*s&128)&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b)))x)x)
 S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si("'/\\[",c);P(i>3,x)s++;
  I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au0)E(xx=mon(xx)))*v=0)E(I u=*s==':';s+=u;x=a2(aw0+i+3*u,x);*v=1))x)
