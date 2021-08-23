@@ -13,7 +13,7 @@ doc=document,kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 rdy=f=>['complete','interactive'].io(doc.readyState)<0?doc.addEventListener('DOMContentLoaded',f):setTimeout(f,1),
 hsh=x=>x.split('').reduce((x,y)=>0|(x<<5)-x+y.ch(0),0),hex8=x=>('0000000'+x.toString(16))._(-8)
 
-let kwasm,app,mem,heap,inp='',strace=0;const env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/},
+let kwasm,app,mem,heap,inp='',strace=1;const env={},fd=Array(8/*[{p:path,o:offset}]*/),fs={/*{path:U8(content)}*/js:U8([])},
 uMem=_=>mem=new DataView(app.memory.buffer),M=(p,n)=>U8(app.memory.buffer).sub(p,p+n),g1=p=>mem.getUint8(p),
 gb=p=>{let q=p;while(g1(q))q++;return M(p,q-p)},gs=p=>t0(gb(p)),ms=s=>{let p=ma(s.n);M(p,s.n).set(t1(s));return p},
 s4=(p,x)=>mem.setUint32(p,x,1),S4=(p,a)=>a.fe((x,i)=>s4(p+4*i,x)),
@@ -28,7 +28,8 @@ X=(s,f)=>env[s]=(...a)=>{strace&&log(s+'('+popn(a)+')');let r;
 X('mmap',(p,n,_,_1,f,o)=>{p=p||ma(n);if(f>=0){f=fd[f];BADF(!f);M(p,n).set(fs[f.p].sub(o,o+n))}return p})
 X('read',(f,a,n)=>{if(f<3){let s=inp||prompt('stdin:')+N;inp='';return T1.encodeInto(s,M(a,n)).written}
  f=fd[f];BADF(!f);n=max(0,min(n,fs[f.p].n-f.o));M(a,n).set(fs[f.p].sub(f.o,f.o+n));f.o+=n;return n})
-X('write',(f,a,n)=>{if(f<3)return(ap(t0(M(a,n))),n);f=fd[f];BADF(!f)
+X('write',(f,a,n)=>{if(f<3){ap(t0(M(a,n)));return n}f=fd[f];BADF(!f)
+ if(f.p==='js'){eval(t0(M(a,n)));return n}
  let{p,o}=f,l=fs[p].n;(fs[p]=rsz(fs[p],max(l,o+n))).set(M(a,n),o);f.o+=n;return n})
 X('gettimeofday',x=>S4(x,[(x=Date.now())/1000|0,x%1000*1000])&0)
 X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.n);E('NOENT:'+p,!fs[p]&&~u&64/*O_CREAT*/)
