@@ -75,9 +75,12 @@ AA(dm1,Ax=*a,y=a[1],z=a[2];Lm=yN;P(!m||y==au0,y(0);Ab8;*b=x;Mc(b+1,a+3,(n-3)*8);
  P(m==1,Ab8;Mc(b,a,n*8);b[1]=fir(y);am1(b,n))
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))P(n==3,K("{@[x;*y;.[;1_y;z]]}",x,y,z))enn(n,a))
 AA(dmd,Ax=*a,y=a[1],z=a[2];n==3&&xtF?try(x,y,z):xtsS?mnd(a,n,dm1):dm1(a,n))
-S A3(ins3,
- Xt(z(et2(x,y)))
- YzZ(P(yn-2,z(el2(x,y)))K("{((*y)#x),z,(*|y)_x}",x,y,z))
+S A insL(Ax,Li,Ln,Ay)_(P(!in(i,xN+1),ei2(x,y))P(!in(n,xN+1-i),el2(x,y))
+ Az=drp(i+n,xR);
+ x=rshN(i,x);
+ cat(cat(x,y),z)
+)
+S A3(ins3,Xt(z(et2(x,y)))Yz(ins3(x,rshN(2,y),z))YZ(P(yN-2,z(el2(x,y)))Ln=gl(get(y,1));Li=gl(fir(y));insL(x,i,n,z))
  z(et2(x,y)))
 AA(ins,P(n-3,enn(n,a))ins3(*a,a[1],a[2]))
 A K0(A*p,Qs,OA*a,In)_(Ax=*p;I(!x,x=*p=N(val(aCz(s)));cns=apd(cns,x))n?app(x,a,n):x)
