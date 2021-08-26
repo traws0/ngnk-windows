@@ -3,7 +3,7 @@ S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))S AA(___,ern(n,a))
 U(vc,{':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'})
 U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})
 U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,dex,com,dex})
-U(vn,{___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,amd,dmd,___,___,___,___,___,___})
+U(vn,{___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,ins,amd,dmd,___,___,___,___,___,___})
 A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 AX(prj,XA(app(x,a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
@@ -75,5 +75,10 @@ AA(dm1,Ax=*a,y=a[1],z=a[2];Lm=yN;P(!m||y==au0,y(0);Ab8;*b=x;Mc(b+1,a+3,(n-3)*8);
  P(m==1,Ab8;Mc(b,a,n*8);b[1]=fir(y);am1(b,n))
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))P(n==3,K("{@[x;*y;.[;1_y;z]]}",x,y,z))enn(n,a))
 AA(dmd,Ax=*a,y=a[1],z=a[2];n==3&&xtF?try(x,y,z):xtsS?mnd(a,n,dm1):dm1(a,n))
+S A3(ins3,
+ Xt(z(et2(x,y)))
+ YzZ(P(yn-2,z(el2(x,y)))K("{((*y)#x),z,(*|y)_x}",x,y,z))
+ z(et2(x,y)))
+AA(ins,P(n-3,enn(n,a))ins3(*a,a[1],a[2]))
 A K0(A*p,Qs,OA*a,In)_(Ax=*p;I(!x,x=*p=N(val(aCz(s)));cns=apd(cns,x))n?app(x,a,n):x)
 OC Zt[]={Tz},ZT[]={TZ};
