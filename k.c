@@ -80,7 +80,7 @@ S A insL(Ax,Li,Ln,Ay)_(P(!in(i,xN+1),ei2(x,y))P(!in(n,xN+1-i),el2(x,y))
  x=rshN(i,x);
  cat(cat(x,y),z)
 )
-S A3(ins3,Xt(z(et2(x,y)))Yz(ins3(x,rshN(2,y),z))YZ(P(yN-2,z(el2(x,y)))Ln=gl(get(y,1));Li=gl(fir(y));insL(x,i,n,z))
+S A3(ins3,Xt(z(et2(x,y)))Yz(ins3(x,cat(y,ai(0)),z))YZ(P(yN-2,z(el2(x,y)))Ln=gl(get(y,1));Li=gl(fir(y));insL(x,i,n,z))
  z(et2(x,y)))
 AA(ins,P(n-3,enn(n,a))ins3(*a,a[1],a[2]))
 A K0(A*p,Qs,OA*a,In)_(Ax=*p;I(!x,x=*p=N(val(aCz(s)));cns=apd(cns,x))n?app(x,a,n):x)
