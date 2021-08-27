@@ -15,7 +15,7 @@ S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
 A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
 
 S Az[SZ(N)==4?27:35];S I lck;
-S A mb(Cb,Ax)_(xX=0;xr=0;DBG(AN(-1,AT(0,x)));xU=b;x)V mrn(In,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,_R(xa))x)
+S A mb(Cb,Ax)_(xX=0;xr=0;DBG(AN(-1,AT(0,x)));xU=b;x)V mrn(Nn,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,_R(xa))x)
 A1(m0,DBG(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=xU;P(!b,x=AT(tn,x))xX=z[b];z[b]=(A)xC;XR(mrn(xn,xA);x)x)
 A1(m1,DBG(lck--);P(!x,0)P(xt==tn,mu(xC-ZP,xn+ZP))DBG(Ms(xC,0xab,xZ);DBG(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
 A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_tP(t));Cb=59-__builtin_clzll(ZA|ZA-1+n*ZT[t]);P(n>1ull<<ZZ(z)||b>ZZ(z)-2,oom())

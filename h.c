@@ -33,8 +33,11 @@ A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(
 A apv(Ax,OV*v )_(Q(xtT);Nn=xn;x=room(n+1,x);Mc(xC+n*xW,v,xW);x)
 A apc(Ax,Cc   )_(Q(xtC);Nn=xn;x=room(n+1,x);xC[n]=c;x)
 A cts(Ax,Qs,Nm)_(Q(xtC);Nn=xn;x=room(n+m,x);Mc(xC+n,s,m);x)
+S V mRn(Nn,OA*a){i(n,_R(a[i]))}
 S A insL(Ax,Li,Ln,Ay)_(Xmt(et2(x,y))Ymt(insL(x,i,n,enl(y)))P(xtM||ytM,en2(x,y))
  P(xtZ&&ytZ&&xt-yt,V(f,cT[max(xt,yt)])insL(f(x),i,n,f(y)))P(xt-yt,insL(blw(x),i,n,blw(y)))
- P(!in(i,xN+1)||!in(n,xN+1-i),el2(x,y))Az=drp(i+n,xR);x=rshN(i,x);cat(cat(x,y),z))
+ P(!in(i,xN+1)||!in(n,xN+1-i),el2(x,y))
+ Az=atn(xt,xn-n+yn);Mc(zC,xC,i*xW);Mc(zC+i*xW,yC,yn*xW);Mc(zC+(i+yn)*xW,xC+(i+n)*xW,(xn-n-i)*xW);
+ I(xtR,I(xr-1,mRn(i,xA);mRn(xn-i-n,xA+i+n))E(mrn(n,xA+i);AN(0,x))I(yr-1,mRa(y))E(AN(0,y)))x(y(z)))
 S A3(ins3,Yz(insL(x,gl(y),0,z))YZ(P(yN-2,z(el2(x,y)))Ln=gl(get(y,1));insL(x,gl(fir(y)),n,z))z(et2(x,y)))
 AA(ins,P(n-3,enn(n,a))ins3(*a,a[1],a[2]))
