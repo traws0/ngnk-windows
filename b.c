@@ -28,7 +28,7 @@ S A2(cr,/*0*/I o=yo;
  P(n==3&&(utu||u==av0)&&asg(yy),r(x,yz);l(x,y,yy))
  P(n>3&&u==CST,n--;I p[n];A*a=yA;i(n&~1,r(x,*++a);h(i&1?bj:bz);p[i]=_n(fb);h(0))r(x,n&1?*++a:au0);Az=fb;
   i(n&~1,I d=(i&1?zn:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
- I(n==2&&u==FIR,Az=yy;P(ztA&&zn==2&&zx==REV,r(x,zy);h(bu|24);x))
+ I(n==2&&u==FIR,Az=yy;P(ztA&&zn==2&&zx==REV,r(x,zy);h(bu|LAS-au0);x))
  I(n==2&&utw,Az=yy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
  I p=0;i(n-1,Az=yA[n-1-i];z==PLH?(p=1),hc(PLH):r(x,z))
  P(p,r(x,yx);h(bP);h(n-1);x)
