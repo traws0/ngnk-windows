@@ -33,3 +33,8 @@ A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(
 A apv(Ax,OV*v )_(Q(xtT);Nn=xn;x=room(n+1,x);Mc(xC+n*xW,v,xW);x)
 A apc(Ax,Cc   )_(Q(xtC);Nn=xn;x=room(n+1,x);xC[n]=c;x)
 A cts(Ax,Qs,Nm)_(Q(xtC);Nn=xn;x=room(n+m,x);Mc(xC+n,s,m);x)
+S A insL(Ax,Li,Ln,Ay)_(Xmt(et2(x,y))Ymt(insL(x,i,n,enl(y)))P(xtM||ytM,en2(x,y))
+ P(xtZ&&ytZ&&xt-yt,V(f,cT[max(xt,yt)])insL(f(x),i,n,f(y)))P(xt-yt,insL(blw(x),i,n,blw(y)))
+ P(!in(i,xN+1)||!in(n,xN+1-i),el2(x,y))Az=drp(i+n,xR);x=rshN(i,x);cat(cat(x,y),z))
+S A3(ins3,Yz(insL(x,gl(y),0,z))YZ(P(yN-2,z(el2(x,y)))Ln=gl(get(y,1));insL(x,gl(fir(y)),n,z))z(et2(x,y)))
+AA(ins,P(n-3,enn(n,a))ins3(*a,a[1],a[2]))
