@@ -17,5 +17,5 @@ A adm(Ax,Ay,Iv)_(P(xtmMA||ytmMA,eac2(x,y,v?MUL:ADD))N(sup(&x,&y));Ik=xtT<<1|ytT;
  Nn=yn;El(k==3&&xn-n,x,y)Az=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC,zC,n);
  I(m<n,I(k-3,x=cT[xt+1+tC-tc](x))E(x=wdn(x,m,n,n-m))
        I(y-z,y=wdn(y,m,n,n-m);z=wdn(z,0,m,n))E(y=z=wdn(z,0,n,n))
-       N l=m*ZT[zt];f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC+(y-z?0:l),zC+l,n-m))
+       N l=m*zW;f[v][k==3][yt-tB](xtP?(V*)&x:xC,yC+(y-z?0:l),zC+l,n-m))
  x(y-z?y(z):z))

@@ -35,11 +35,11 @@ S AX(lr,Ay=*a;P(n==1,cr(x,y))P(n==2,Yz(nr(x,gl(y),a[1]))wr(x,y,a[1]))ern(n,a))
 S AX(ls,Ay=*a;P(n==1,cs(x,y))P(n==2,Yz(ns(x,gl(y),a[1]))ws(x,y,a[1]))ern(n,a))
 AX(rdc,Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):z)P(m<0,I(y,y(0))eln(n,a))P(!m&&!y,x=id_(x,z);mrn(n,a);x)
  I(n==1&&xtv&&xv<11&&(!y||ytz||ytd||ytc)&&ztZDC,I(ztC,z=cH(z))I(y&&(ytd||ztD),y=cD(y);z=cD(z))Ct=zt;
-  V(f,arrT[t-tB][xv])P(f,Lv=gl(y?y:get(z,0));z2(f(&v,zC+ZT[t]*!y,m-!y));t-tD?az(v):ad(*(D*)&v)))
+  V(f,arrT[t-tB][xv])P(f,Lv=gl(y?y:get(z,0));z2(f(&v,zC+!y*zW,m-!y));t-tD?az(v):ad(*(D*)&v)))
  Li=!y;I(i,y=get(z,0))Ab8;W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);B(!y)i++)mrn(n-1,a+1);z(y))
 S AX(scn,
  P(n==1,Az=a[n-1];P(ztt||!zN,z)P(ztm,Ay=kv(&z);y=Nz(scn(x,&y,1));am(z,y))P(x==CAT,scn(x,A(oA,z),2))
-  I(xtv&&xv&&xv<8&&ztZDC,I(ztC,z=N(cL(z)))V(f,arsT[zt-tB][xv])P(f,I w=ZT[zt];Au=ax(z);Mc(uC,zC,w);f(zC,zC+w,uC+w,zN-1);u))
+  I(xtv&&xv&&xv<8&&ztZDC,I(ztC,z=N(cL(z)))V(f,arsT[zt-tB][xv])P(f,Au=ax(z);Mc(uC,zC,zW);f(zC,zC+zW,uC+zW,zN-1);u))
   Ay=get(z,0),u=enl(yR);Li=0,n=zN;W(++i<n,y=N(app(x,A(y,get(z,i)),2));uq(yR))y(z(u)))
  I(n==2,Au=a[1];P(utt,app(x,a,n))P(utm,u=mut(u);uy=scn(x,A(*a,uy),2);u)P(!un,mr(*a),u))
  Ay=*a++;n--;Lm=cfm(a,n);P(m==-2,y(eln(n,a)))Au=oA,b[8];
