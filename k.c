@@ -61,8 +61,8 @@ AA(amn,Ax=*a,y=a[1];Xt(etn(n,a))
  Yt(x=mut(x);y=cL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(n-2,a+2)))
   Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
  I(n==4,Az=a[2],u=a[3];
-  P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,I(c3(1,zv,3),/*todo*/x=cL(x))
-   El(utT&&yn-un,x(y),u)x=mut(x);y=cL(y);Ny(sup(&x,&u));y2(u2(araT[xt-tB][zv](xC,xn,yL,yn,utP?&u:(V*)uC,utT)))+1?x:ei1(x))
+  P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,El(utT&&yn-un,x(y),u)I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))x=mut(x);y=cL(y);Ny(sup(&x,&u));
+   y2(u2(araT[xt-tB][zv](xC,xn,yL,yn,utP?&u:_V(u),utT)))+1?x:ei1(x))
   P(xtC&&ytZ&&z==av0&&utcC,x=mut(x);y=cL(y);I d=utT;u=enla(u);El(d&&yn-un,x(y),u)
    x=y2(u2(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));Ei(!x)x))
  rdc(AP1,a,n))
