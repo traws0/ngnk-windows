@@ -14,7 +14,7 @@ C*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
 C*strstr(Qp,Qq)_(MM(p,Sn(p),q,Sn(q)))
 I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
 #ifndef shared
- I main(In,O char**a)_(kinit(n,a);P(n>1,exit(!cmdl(a[1]));0)repl();exit(0);0)
+ I main(In,O char**a)_(kinit(n,a);exit(n>1?!cmdl(a[1]):repl());0)
 #endif
 NWASM(
  FBSD(V _start(O char**a){main(*(I*)(V*)a,a+1);})
