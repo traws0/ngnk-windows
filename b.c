@@ -46,7 +46,7 @@ A1(cpl,x=AK(xk,AT(to,mut(x)));Ay=fb;fb=oC;fm=oC;fc=a1(au0);xA[5]=aI(16);I o=0;Ms
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 S A1(vm,/*0*/W(1,Cb=*c++;
  I(b>=bm,I(b>=bc,Ay=fc;p(_R(yA[b-bc])))
-        EI(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(_R(*v=Ny(dm1(A(x,yR,av0+*c++,z),4))),y)))
+        EI(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au0;*s=au0;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av0+*c++,z),4))),y)))
         EI(b==bM,Ax=q()         ,y=q(),z=*s;       *s=au0;N(*s=apn(      Ny(dmd(A(x,yR,av0+*c++,z),4)) ,y)))
         EI(b==bl,Nn=*c++;s+=n;p(sqz(aV(tA,n,s-n))))
         EI(b==bL,Nn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
