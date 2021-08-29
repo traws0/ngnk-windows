@@ -9,7 +9,7 @@ S A2(f,y=Nx(apc(y,xt));
  XP(f8(x,y))
  Xr(f(AT(tA,mut(x)),Nx(apc(y,xw<<3|xk))))
  XF(f(AT(tA,mut(x)),Nx(apc(y,xv<<3|xk))))
- In=8*xtT;x(cts(y,xC-n,n+xn*xW)))
+ In=8*xtT;x(cts(y,xV-n,n+xn*xW)))
 A1(ser,f(x,oC))
 
 //deserialize
@@ -25,4 +25,4 @@ S A0(g,Ct=h1;Ed(!in(t,tn))
  P(t==tr ,Cc=h1;AT(t,AK(c&7,AW(c>>3,N(g())))))
  P(_tF(t),Cc=h1;AT(t,AK(c&7,AV(c>>3,N(g())))))
  Ln=t<tm?h8:1;Ed(!in(n,1ll<<45))aV(t,n,h(n*ZT[t])))
-A1(des,Ed(!xtC,x)s=xC;p=s+xn;x(g()))
+A1(des,Ed(!xtC,x)s=xV;p=s+xn;x(g()))
