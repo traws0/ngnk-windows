@@ -2,7 +2,7 @@
 repl.banner:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for more info\n"
 repl.prompt:," "
 cmds:""!()
-cmds["vf"]:{ \^[;``repl`cmds]@&((x~"f")=|/`o`p`q`r`u`v`w=@:)'.:0#`}
+cmds["vf"]:{` 0:($!h),'":",'`k'. h:(&(x~"v")=^`o`p`q`r`u`v`w?@'h)#h:``repl`cmds_.:0#`}
 cmds["a"]:{` 1:1:repl.basename[`argv 0],"/LICENSE";}
 repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
