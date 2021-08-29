@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,bc=0x80,bC=0xff};S A2 cr;
+enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bl,bL,ba,bP,bz,bj,bo,bp,bc=128,bC=255};S A2 cr;
 #define fs xx    //src            BYTECODE                               ba:apply n-adic      f[x;y;z]
 #define fb xy    //ast|bytecode   bu,bv:apply unary|binary verb   +x*y   bP:make projection   f[x;;z]
 #define fm xz    //srcmap         bs,bg,bd:set|get|delete local    a:b   bz:branch if falsey  $[x;y;z]
