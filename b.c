@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 //bu,bv:apply unary|binary verb;bs,bg,bd:set|get|delete local;bm,bM:l|glb modified assign;bl:list,bL:unlist
-//ba:n-adic apply;bP:projection;bz:branch if falsey;bj:jmp,bp:pop;b4:tetradic dmend;bc:load constant
+//ba:n-adic apply;bP:projection;bz:branch if falsey;bj:jmp,bp:pop;b4:tetradic dot;bc:load constant
 enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=0x80,bC=0xff};
 #define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add instruction
 #define hc(a) ({Iv=bc+fpA(&fc,a);Ez(v>bC)h(v);}) //add a "load constant" instruction
@@ -36,7 +36,7 @@ S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,x)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(I o=xo;P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,wrp(val(x)))AO(o,blw(eac1(x,cf))))x)
-A1(cpl,Ik=xk;fs=get(x,0);fb=oC;fm=oC;fl=get(x,3);fc=a1(au);Ms(fu,-1,SZ fu);Ay=ap1(x,ai(1))/*ast*/;
+A1(cpl,Ik=xk;Ay=get(x,1)/*ast*/;fs=get(x,0);fb=oC;fm=oC;fl=las(x);fc=a1(au);Ms(fu,-1,SZ fu);
  y=cf(y);I r=!!cr(y);I o=0;h(bu);y=y(fb);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))r?AK(k,aV(to,5,A(fs,fb,fm,fl,fc))):0)
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
