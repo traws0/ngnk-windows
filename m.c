@@ -27,7 +27,7 @@ AL(aA,atn(tA,n))AL(aC,atn(tC,n))AL(aB,atn(tB,n))AL(aH,atn(tH,n))AL(aI,atn(tI,n))
 A ac(Cv)_(AT(tc,v))A ai(Iv)_(AT(ti,v))A as(Iv)_(AT(ts,v))A al(Lv)_(aV(tl,1,&v))A ad(Dv)_(aV(td,1,&v))
 A aCn(Qs,Nn)_(aV(tC,n,s))A aCm(Qp,Qq)_(aCn(p,q-p))A aCz(Qs)_(aCn(s,Sn(s)))A aCl(Qs)_(Qq=SC(s,10);q?aCm(s,q):aCz(s))
 C tZ(Lv)_(v==(B)v?tB:v==(H)v?tH:v==(I)v?tI:tL)A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=_R(xx);_R(xy))*p=xx;AN(0,x);x(xy))
-A az(Lv)_(Ct=tZ(v);t==tL?al(v):ai(v))A1(mut,XP(x)P(xr==1,x)x=x(aV(xt,xn,xC));XR(mRa(x))x)
+AL(az,n-(I)n?al(n):ai(n))A1(mut,XP(x)P(xr==1,x)x=x(aV(xt,xn,xC));XR(mRa(x))x)
 ALA(room,P(xr==1&&n*xW<=xZ,AN(n,x))Ay=atn(xt,n);Mc(yC,xC,xn*xW);I(ytR,I(xr==1,AN(0,x))E(i(xn,_R(ya))))x(y))
 L gl_(Ax)_(XP((I)x)*xL)L gl(Ax)_(Lv=gl_(x);x(0);v)D gd(Ax)_(Dv=*xD;x(0);v)
 
