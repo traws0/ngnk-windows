@@ -18,8 +18,9 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 \+  primitives   \t:n expr  time (elapsed milliseconds after n runs)
 \:  I/O          \v         variables
 \'  adverbs      \f         functions
-\`  symbols      \other     shell command (through /bin/sh)
-\h  summary      \\         exit
+\`  symbols      \cd path   change directory
+\h  summary      \other     shell command (through /bin/sh)
+                 \\         exit
 --------------------------------------------------------------------------------
 \0
 Types: ACBHILDSMmcildsopqruvw

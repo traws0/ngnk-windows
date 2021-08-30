@@ -39,7 +39,7 @@
 
 TD void V;TD char B;TD char unsigned C,UC;TD O C*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
 TD long long L;TD double D;TD size_t N;
-TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL(L),ALA(L,A),AAL(A,L);
+TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL(L),ALA(L,A),AAL(A,L),AQ(Q);
 #define  A0(f,b...) A f(          )_(b)
 #define  A1(f,b...) A f(Ax        )_(b)
 #define  A2(f,b...) A f(Ax,Ay     )_(b)
@@ -49,6 +49,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define  AL(f,b...) A f(Ln        )_(b)
 #define ALA(f,b...) A f(Ln,Ax     )_(b)
 #define AAL(f,b...) A f(Ax,Li     )_(b)
+#define  AQ(f,b...) A f(Qs        )_(b)
 
 #define Ms(a...) __builtin_memset(a)
 #define Mm(a...) __builtin_memmove(a)
@@ -70,11 +71,10 @@ A1 a1,aes0,aes1,asc,ax,blw,cf,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,cB,cC
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  sub,v0c,v1c,exc;
-A0 aa0;A3 a3,try,ear,eal;AA amd,amn,dmd,dmn,ins;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;
-AL aA,aC,aB,aH,aI,aL,aD,aS,al,az,cls,tilL,rndD;ALA drp,room,rshN;AAL get;
-A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCl(Q),aCm(Q,Q),aCn(Q,N),aCz(Q),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),
- cts(A,Q,N),cmdl(Q),cmdm(Q),die(Q),eac1(A,A1),eac2(A,A,A),e0(Q),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),K0(A*,Q,OA*,I),
- jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),sur(C,A,C),wdn(A,N,N,N);
+A0 aa0;A3 a3,try,ear,eal;AA amd,amn,dmd,dmn,ins;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;ALA drp,room,rshN;AAL get;
+AL aA,aC,aB,aH,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCl,aCz,cmdcd,cmdl,cmdm,die,e0;
+A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1(A,A1),
+ eac2(A,A,A),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),sur(C,A,C),wdn(A,N,N,N);
 V iI(V*,N),kinit(),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),mrn(N,OA*);
 C*sl(C*,L),*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
 I _K(A),asg(A),c3(C,C,C),qD(D,D),eS(A,I),exit(I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),syP(Q);
