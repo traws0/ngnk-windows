@@ -8,11 +8,13 @@
 #define xX xA[-3]        //next
 #define xZ ((ZA<<xU)-ZA) //capacity
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
-S V*mm(V*p,Nn,If)_(p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|MAP_PRIVATE|(f<0?MAP_ANON:MAP_FIXED),f,0);
+S V*mm(V*p,Nn,If)_(
+ p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|(f>0&&!p?MAP_SHARED:MAP_PRIVATE)|(p?MAP_FIXED:0)|(f<0?MAP_ANON:0),f,0);
  P((L)p==-1,eo0();(V*)0)P(f>0,p)I(nm==ZZ(m),die("mmap lmt\n"))*(C*)p=nm;m[nm++]=(TY(*m)){p,n};p)
 S A mu(V*p,Nn)_(munmap(p,n);i(ZZ(m),B(m[i].p==p,Mc(m+i,m+i+1,(--nm-i)*SZ m[0])));0)
 S A mx(Nn)_(V*p=mm(0,n,-1);P(!p,oom())*(C*)p=0;(A)(p+ZA))
 A mf(If,Nn)_(V*p=mm(0,ZP+n,-1);P(!p,0)Ax=(A)(p+ZP);*(C*)p=1;x=AT(tC,AN(n,x));xR;P(!mm(p+ZP,n,f),x(0))x)
+V mw(If,Nn,Qs){ftruncate(f,n);V*p=mmap(0,n,PROT_READ|PROT_WRITE,MAP_SHARED,f,0);Mc(p,s,n);mu(p,n);}
 
 S Az[SZ(N)==4?27:35];S I lck;
 S A mb(Cb,Ax)_(xX=0;xr=0;DBG(AN(-1,AT(0,x)));xU=b;x)V mrn(Nn,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,_R(xa))x)

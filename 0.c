@@ -33,4 +33,4 @@ NWASM(
  #endif
  FBSD(asm(h(pipe2));I pipe(Iv[2])_(pipe2(v,0)))NFBSD(asm(h(pipe));)
  asm(h3(read)h3(write)h3(open)h1(close)h2(fstat)h3(lseek)h2(munmap)h2(dup2)h3(socket)h5(setsockopt)h3(connect)
-     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents)h1(chdir));)
+     h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents)h1(chdir)h2(ftruncate));)
