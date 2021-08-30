@@ -38,7 +38,7 @@ X('lseek',(f,o,w)=>(f=fd[f])?f.o=o+(!w?0:w===1?f.o:fs[f.p].n):BADF())
 //fstat:dev(8B),ino,mode(S_IFREG=0o100000),nlink,uid,gid,rdev(8B),size,blksize,blocks
 X('fstat',(f,b)=>{f=fd[f]||BADF();let{n}=fs[f.p];S4(b,[0,0,0,0,1<<15,1,0,0,0,0,n,512,n+511>>9]);return 0})
 X('munmap',_=>0);X('close',f=>fd[f]?fd[f]=0:BADF());X('exit',x=>{throw Error('exit('+x+')')})
-'dup2,pipe,execve,fork,socket,setsockopt,connect,getdents'.split`,`.map(s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
+'dup2,pipe,execve,fork,socket,setsockopt,connect,getdents,chdir,ftruncate'.split`,`.map(s=>X(s,_=>{alert(s='nyi:'+s);E(s)}))
 
 let out=ou;const PR=' ',skPR=i=>i+PR.n*(ed.value._(i,i+PR.n)===PR),cur=(ta,i)=>ta.setSelectionRange(i,i),
 file=async f=>{fs[f]=fs[f]||t1(await(await fetch(f)).text())},ap=s=>{out.value+=s;cur(out,out.value.n)}
