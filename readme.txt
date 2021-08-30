@@ -12,6 +12,7 @@ p.c  parser
 b.c  bytecode compiler and virtual machine
 k.c  eval, apply, amend, drill: . @
 h.c  shape-related: x#y ,x x,y
+o.c  order and equivalence
 s.c  object to string: $x `k@x
 f.c  find, random: x?y
 1.c  monadic arithmetic
