@@ -1,27 +1,8 @@
 #!../k
-/very slow
-a:0:"i/22"
-a:`c$.''1 2_'(0,&~#'a)_a
+a:`b$`I$1_'"\n"\'"\n\n"\1:"i/22"
++/r*1+|!#r:,/(&/#:'){w:</c:*'x;@[1_'x;w;,;w|:/c]}/a
 
-N:10000000
-a:a,'`c$&'N-n:#'a
-
-r:{x+!y-x}                    /range
-d:{a@'r/'x}                   /data slices between pairs of ptrs
-e:|/-/'                       /game end condition
-s:{+/x*|1+!#x:,/d x}          /score
-p:{.[`a;y,,x[y;1]+!#z;:;z]    /append
-   .[x;y,1;+;#z]}
-f:{c:a@'*'x;x:1 0+/:x;w:</c
-   p[x;w;c w,~w]}
-s e f/0,'n /part1
-
-m:() /memory
-f:{$[~^*m?,k:d x;:!1 2;m,:,k] /repeated position
- c:a@'*'x;x:1 0+/:x           /draw cards
- w:</$[&/~c>--/'x             /winner
-       --/'g a@'(*'x)+!'`l$c  /subgame
-       c]
- p[x;w;c w,~w]}
-g:{A:a;n:#'x;a::x,'`c$&'N-n;M:m;m::();r:e f/0,'n;m::M;a::A;r}
-s e f/0,'n
+f:{n:*'x;e:1_'x;($[~^y?hx;1,,!0;e,'(n i;!0)i:>$[|/n>#'e;n;#'g n#'e]];y,hx:h x)}. /step
+g:{*(&/#'*:)f/(x;!0)} /game
+h:{+/#[#y;x]*y:(*y),0,*|y}99(37*)\1 /hash
++/r*|1+!#r:,/g a
