@@ -77,7 +77,7 @@ A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C
  eac2(A,A,A),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),sur(C,A,C),wdn(A,N,N,N);
 V iI(V*,N),kinit(),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),mrn(N,OA*),mw(I,N,Q);
 C*sl(C*,L),*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
-I _K(A),asg(A),c3(C,C,C),qD(D,D),eS(A,I),exit(I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),syP(Q);
+I _K(A),asg(A),c3(C,C,C),qD(D,D),eS(A,I),exit(I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),syP(Q),rnk(A);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L absL(L),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
 D gd(A);N strlen(Q),_N(A);

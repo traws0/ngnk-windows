@@ -18,7 +18,8 @@ h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(n,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
 L fAI(Ax,Iv)_(fI(xV,xn,v))
-I rnk(Ax/*0*/)_(XA(xn?rnk(xx)+1:2)XmMA(rnk(xy))xtT)//assuming unirank
+I rnk(Ax/*0*/)_(XA(P(!xn,2)Iv=rnk(xx);P(v<0,v)i(xn,P(v-rnk(xa),-1))v+1)XmM(rnk(xy))xtT) //-1 for mixed rank
+I urnk(Ax/*0*/)_(XA(xn?urnk(xx)+1:2)XmM(urnk(xy))xtT)//assuming unirank
 S A2(sdf,K("{a:&/x;b:1+|/x;@[(b-a)#0N;|x-a;:;|!#x]y-a}",x,y)) //small-domain find
 A2(fnd,
  P(xtT&&!xtA&&!ytmMA,
@@ -28,6 +29,6 @@ A2(fnd,
    Az=aL(yn);x2(y2(CH(Zt[yt],&FB,FH,FI,FL)(xV,xn,f,yV,yn,zV);z)))
   Az=cn[tl];zR;x(y(ytt?z:rshN(yN,z))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
- Ik=rnk(x),l=rnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(QUE,x,y))er2(x,y))
+ Ik=urnk(x),l=urnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(QUE,x,y))er2(x,y))
 
 A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes","e")Sf(x,y,des,js0,unh,aes1,log))et2(x,y))fnd(x,y))
