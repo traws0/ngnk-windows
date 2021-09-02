@@ -65,6 +65,7 @@ special:  var:y     set    a:1;a -> 1
           (v;..):y  unpack (b;(c;d)):(2 3;4 5);c -> 4
           :x        return {:x+1;2}[3] -> 4
           $[x;y;..] cond   $[0;`a;"\0";`b;`;`c;();`d;`e] -> `e
+          ?[x;y;z]  splice ?["abcdefgh";6;"xyz"] -> "abcdefxyzgh"
 
 ::  self      ::12 -> 12
  :  right     1 :2 -> 2   "abc":'"d" -> "ddd"
