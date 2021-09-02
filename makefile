@@ -1,8 +1,7 @@
 #faster builds: export MAKEFLAGS=-j8
 F=-nostdlib -ffreestanding -fno-math-errno -fno-stack-protector -fomit-frame-pointer \
  -Werror -Wno-assume -Wno-pointer-sign -Wfatal-errors -Wno-shift-op-parentheses \
- -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion \
- -Wno-unused-result
+ -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion -Wno-unused-result
 O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 STRIP ?= strip
@@ -11,9 +10,11 @@ t:k #test
 	@+$(MAKE) -sC t && g/0.sh && $(MAKE) -sC a19 && $(MAKE) -sC a20 && $(MAKE) -sC e
 c: #clean
 	@rm -rfv k libk.so web/k.wasm k32 o t/t web/web
-w:web/k.wasm #wasm
-	@+$(MAKE) -sC web
-.PHONY: t c w
+w: #wasm
+	@cd web && ./a.sh
+W: #web server
+	@cd o/wasm && ./web
+.PHONY: t c w W
 
 o/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o && $(CC) $(F) -c $(O) $< -o $@
@@ -28,13 +29,6 @@ o/so/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o/so && $(CC) $(F) $(O) -c $< -o $@ -fPIC -Dshared
 libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(CC) $(F) $(O) $^ -shared -Dshared -o $@
-
-#wasm
-CW=clang $(F) -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include
-o/wasm/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o/wasm && $(CW) -c $< -o $@
-web/k.wasm:$(patsubst %.c,o/wasm/%.o,$(wildcard *.c)) # /usr/lib/llvm-10/bin/wasm-ld should be on $PATH
-	@echo '$@ ' && $(CW) $^ -o $@ -Wl,--no-entry,--export=main,--export=kinit,--export=rep,--export=val,--export=aCz,--export=__heap_base,--initial-memory=33554432,--allow-undefined
 
 #32bit
 C32=$(CC) $(F) -m32
