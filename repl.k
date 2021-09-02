@@ -65,7 +65,6 @@ special:  var:y     set    a:1;a -> 1
           (v;..):y  unpack (b;(c;d)):(2 3;4 5);c -> 4
           :x        return {:x+1;2}[3] -> 4
           $[x;y;..] cond   $[0;`a;"\0";`b;`;`c;();`d;`e] -> `e
-          ?[x;y;z]  splice ?["abcdefgh";6;"xyz"] -> "abcdefxyzgh"
 
 ::  self      ::12 -> 12
  :  right     1 :2 -> 2   "abc":'"d" -> "ddd"
@@ -129,11 +128,12 @@ x@y apply(1)  {x+1}@2 -> 3   "abc"@1 -> "b"   (`a`b!0 1)@`b -> 1
  .d values    .`a`b!0 1 -> 0 1
 x.y apply(n)  {x*y+1}. 2 3 -> 8   (`a`b`c;`d`e`f). 1 0 -> `d
 
-@[x;y;f]   amend @["ABC";1;_:] -> "AbC"   @[2 3;1;{-x}] -> 2 -3
-@[x;y;F;z] amend @["abc";1;:;"x"] -> "axc"   @[2 3;0;+;4] -> 6 3
-.[x;y;f]   drill .[("AB";"CD");1 0;_:] -> ("AB";"cD")
-.[x;y;F;z] drill .[("ab";"cd");1 0;:;"x"] -> ("ab";"xd")
-.[f;y;f]   try   .[+;1 2;"E:",] -> 3   .[+;1,`2;"E:",] -> "E:typ"
+@[x;y;f]   amend  @["ABC";1;_:] -> "AbC"   @[2 3;1;{-x}] -> 2 -3
+@[x;y;F;z] amend  @["abc";1;:;"x"] -> "axc"   @[2 3;0;+;4] -> 6 3
+.[x;y;f]   drill  .[("AB";"CD");1 0;_:] -> ("AB";"cD")
+.[x;y;F;z] drill  .[("ab";"cd");1 0;:;"x"] -> ("ab";"xd")
+.[f;y;f]   try    .[+;1 2;"E:",] -> 3   .[+;1,`2;"E:",] -> "E:typ"
+?[x;y;z]   splice ?["abcd";1 2;"xyz"] -> "axyzd"
 --------------------------------------------------------------------------------
 \`
 Special symbols:
