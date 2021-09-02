@@ -22,7 +22,7 @@ gs=p=>t0(gb(p)),
 s4=(p,x)=>mem.setUint32(p,x,1),
 S4=(p,a)=>a.forEach((x,i)=>s4(p+4*i,x)),
 ma=n=>{heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>>16)+1);uMem();return heap-n},
-ms=s=>{let p=ma(s.length);M(p,s.length).set(t1(s));return p},
+ms=s=>{s=t1(s);let p=ma(s.length);M(p,s.length).set(s);return p},
 wa=async f=>{if(!kwasm)kwasm=await(await fetch`k.wasm`).arrayBuffer()
  app=(await WebAssembly.instantiate(kwasm,{env})).instance.exports;uMem();heap=app.__heap_base;f()},
 js_in=(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
@@ -33,9 +33,9 @@ js_time=now,
 env={js_in,js_out,js_exit,js_alloc,js_time},
 X=(s,f)=>env[s]=(...a)=>{if(strace){while(a.length&&a[a.length-1]==null)a.pop();log(s+'('+a+')')}let r
  try{r=f(...a)}catch(x){if(s==='exit')throw x;error(x);r=-1}strace&&log(s+'(..)='+r);return r},
-E=(s,b=1)=>{if(b)throw Error(s)},BADF=(b=1)=>E('BADF',b),
+E=(s,b=1)=>{if(b)throw Error(s)},BADF=(b=1)=>E('BADF',b),O_RDWR=2,O_CREAT=64,
 rsz=(a,n)=>{const m=a.length,b=new a.constructor(n);b.set(m>n?a.subarray(0,n):a,min(m,n));return b}
-X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.length);E('NOENT:'+p,!fs[p]&&~u&64/*O_CREAT*/)
+X('open',(p,u,_)=>{p=gs(p);let f=3;while(fd[f])f++;E('MFILE',f>fd.length);E('NOENT:'+p,!fs[p]&&~u&O_CREAT)
  if(!fs[p]||u&512/*O_TRUNC*/)fs[p]=new Uint8Array(0);fd[f]={p,o:0};return f})
 X('close',f=>fd[f]?fd[f]=0:BADF())
 X('read',(f,a,n)=>{if(f<3)return js_in(a,n)
@@ -75,8 +75,9 @@ else{ //editor mode
   bc.textContent=s.length+'bytes'+(r.length?`(${r.join`, `})`:'');return s}
  rdy(_=>{ed.value=p0(location.hash.slice(1).replace(/-$/,''));out.value=''
   btnEval.onclick=_=>{wa(async _=>{ubc();location.hash=p1(ed.value)+'-'
-   const s=ed.value;fs['a.k']=t1(s.slice(-1)==='\n'?s:s+'\n');out.value=''
-   const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16;
+   const v=ed.value,s=v.slice(-1)==='\n'?v:v+'\n';out.value=''
+   fs['a.k']='';const f=env.open(ms('a.k\0'),O_RDWR|O_CREAT,0o666);env.write(f,ms(s),s.length);env.close(f)
+   const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16
    let e;try{app.main(2,a)}catch(x){e=x}
    location.hash=p1(ed.value);if(e&&e.message!=='exit(0)')throw e})}
   btnCGCC.onclick=_=>{const s=ed.value,h='ngn-'+hx8(hsh(s)),g=ubc()

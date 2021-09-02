@@ -51,14 +51,14 @@ S V ks(UL*a){S O UL z=1<<15,y=1ll<<31,x=1ll<<63,t[]={1,z+130,x+z+138,x+y+z,z+139
   i(25,a[i]=b[C(0,6,12,18,24,3,9,10,16,22,1,7,13,19,20,4,5,11,17,23,2,8,14,15,21)[i]])          //pi
   i(5,UL*r=a+5*i,x=*r,y=r[1];F5(UL z=r[4-i];r[4-i]^=~x&y;y=x;x=z))                              //chi
   *a^=t[i])}                                                                                    //iota
-S V kec(U r,Qp,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,SZ a);
+S V kec(U r,OC*p,Nn,C s,C*z,U d){U b=0,i;C a[200];Ms(a,0,SZ a);
  W(n>0,b=min(n,r);i(b,a[i]^=p[i])p+=b;n-=b;I(b==r,ks((V*)a);b=0))
  a[b]^=s;if((s&128)&&b==r-1)ks((V*)a);a[r-1]^=128;ks((V*)a);W(d>0,b=min(d,r);Mc(z,a,b);z+=b;d-=b;I(d>0,ks((V*)a)))}
 A1(sha3_256,Et(!xtC,x)Ay=aC(32);x2(kec(136,xV,xn,6,yV,yn);y))
 
 S C s0[256],s1[256];S C t0(Cc)_(c<<1^27*(c>>7))S C t1(Cc,Cd)_(Cv=c*(d&1);i(4,c=t0(c);v^=(d>>i+1&1)*c)v)
 S V aei(){Cc=1,d=1;Ms(s0,99,256);i(255,c^=t0(c);i(3,d^=d<<(1<<i))d^=(d>>7)*9;i(5,s0[c]^=R(d,i)))i(256,s1[s0[i]]=i)}
-S V x16(C*r,Qp){i(16,r[i]^=p[i])}S V i16(C*r,Qp,Qq){i(16,r[i]=p[q[i]])}
+S V x16(C*r,OC*p){i(16,r[i]^=p[i])}S V i16(C*r,OC*p,OC*q){i(16,r[i]=p[q[i]])}
 S V kxp(V*w0,OV*k,U l){U*w=w0,t;Mc(w,k,4*l);C*p=(V*)&t;
  i(3*l+28,t=w[i+l-1];I(i%l==0,t=R(t,24);j(4,p[j]=s0[p[j]])t^=C(141,1,2,4,8,16,32,64,128,27,54)[i/l+1])
                      EI(l==8&&i%l==4,i(4,p[i]=s0[p[i]]))w[i+l]=w[i]^t)}
