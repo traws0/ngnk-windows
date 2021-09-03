@@ -13,3 +13,4 @@ clang ../*.c -o $O/k.wasm -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I
  -Werror -Wno-assume -Wno-pointer-sign -Wfatal-errors -Wno-shift-op-parentheses \
  -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion -Wno-unused-result \
  -Wl,--no-entry,--export=main,--export=kinit,--export=rep,--export=val,--export=aCz,--export=open,--export=close,--export=write,--export=__heap_base,--initial-memory=33554432,--allow-undefined
+ls -l $O/k.wasm
