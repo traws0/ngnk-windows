@@ -57,12 +57,12 @@ NWASM(
  #define LOGE(x) x //({js_log(#x);x;})
  I logi(Qs,Iv)_(Cb[99];In=Sn(s);Mc(b,s,n);*sl(b+n,v)=0;js_log(b);v)
  V logs(Qs,Qp){Cb[99];In=Sn(s);Mc(b,s,n);Im=Sn(p);Mc(b+n,p,m);b[n+m]=0;}
- ST{I u;char p[16],a[1<<18];Nn;}fs[8]={{1,"stdin",""},{1,"stdout",""},{1,"stderr",""},{1,"repl.k",
+ S ST{C u;char p[16],a[1<<18];Nn;}fs[8]={{1,"stdin",""},{1,"stdout",""},{1,"stderr",""},{1,"repl.k",
    #include"o/wasm/repl.k.h"
   },{1,"./LICENSE",
    #include"o/wasm/LICENSE.h"
   }};
- ST{I u;UI i,o;}fd[8]={{1,0,0},{1,1,0},{1,2,0}};
+ S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
  I open(Qp,Iv,...)_(LOGF(open);
   P(Sn(p)>=ZZ(fs[0].p),LOGE(ENAMETOOLONG))
   If=0;W(f<ZZ(fd)&&fd[f].u,f++)P(f>=ZZ(fd),LOGE(EMFILE))fd[f].u=1;
