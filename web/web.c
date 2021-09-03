@@ -26,7 +26,7 @@
 #define SR strrchr
 #define M1(x) #x
 #define M2(x) M1(x)
-typedef void V;typedef char C;typedef int I;typedef unsigned short UH;typedef unsigned UI;typedef unsigned long long UL;
+typedef void V;typedef char C;typedef int I;typedef unsigned UI;typedef unsigned long long UL;
 S C*sk(C*s,C c)_(W(*s==c,s++)s)S C*su(C*s,UL x)_(I(x>9,s=su(s,x/10))*s++='0'+x%10;s)
 S I die(O C*s)_(I e=errno;wrZ(1,"ERR: ");wr(1,s,Sn(s));wrZ(1," -> ");s=strerror(e);wr(1,s,Sn(s));wrZ(1,"\n");exit(e);0)
 S O C*m[][2]={{"html","text/html"},{"js","application/javascript"},{"k","text/plain"},{"wasm","application/wasm"}};
