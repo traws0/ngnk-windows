@@ -19,7 +19,7 @@ S A pS(Cc)_(Ax=oS;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);y(xq(as(syP(yV)))
 S A lam(Ik,Ax,Ay,Az)_(AK(k,a3(x,y,z))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];I(ytA&&yn>2,Az=yx;I((z==av||ztu)&&asg(yy),xq(au)))x) //if last is assignment, return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
-S A0(po,C nb=nx;nx=1;Q s1=s0,t=s0=s++;Ay;I(*s-'[',y=au)E(s++;y=sqz(N(pb(oA,']')));Ep(!ytS||yn>8,y))
+S A0(po,C nb=nx;nx=1;Q s1=s0,t=s0=s++;Ay;I(*s-'[',y=au)E(s++;y=sqz(N(pb(oA,']')));P(!ytS,ep1(y))P(yN>8,s--;ez1(y)))
  Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))I(y==au,y=px(nx))E(nx=yn)Ax=cpl(lam(nx,aCn(t,s-t),shy(z),y));s0=s1;nx=nb;x)
 S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
  P(c=='(',s++;P(*s==')',s++;oA)x=N(pb(enl(MKL),')'));xn-(C)xn?ez1(x):xn-2?x:las(x))P(c=='[',s++;pb(a1(PRG),']'))
@@ -30,8 +30,10 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='
  Ii=si("'/\\",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw+i+3*h)i=si(vc,c);P(i>19,PLH)I u=*++s==':';s+=u;*v=1;AT(tv-u,i))
 S A1(mon,P(xtv,x^au^av)P(xtA&&(xn==2&&xx==aw||xn==3&&xx==COM),x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)
  P(xts,Lv=xv;Qs=syp(&v);Nn;P((*s&128)&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b)))x)x)
-S A pT(C*v)_(Ax=N(pt(v));W(1,Cc=*s;Ii=si("'/\\[",c);P(i>3,x)s++;
- I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au)E(xx=mon(xx)))*v=0)E(I u=*s==':';s+=u;x=a2(aw+i+3*u,x);*v=1))x)
+S A pT(C*v)_(Ax=N(pt(v));
+ W(1,Cc=*s;Ii=si("'/\\[",c);P(i>3,x)s++;
+  I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au)E(xx=mon(xx)))P(xn>9,s--;ez1(x))*v=0)
+  E(I u=*s==':';s+=u;x=a2(aw+i+3*u,x);*v=1))x)
 S V pw()_(Cc=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
 S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Ay=pe(0,v);P(!y,x?x(0):0);*v=0;y=a2(OUT,y);I(x,y=a2(mon(x),y))y)
  UH o=s-s0;Cb=0;Ay=pT(&b);P(!y,x?x(0):0)P(y==PLH,x?x:y)P(!b,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(COM,x,z):AO(o,a2(mon(x),z)))
