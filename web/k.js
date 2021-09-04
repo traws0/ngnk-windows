@@ -28,7 +28,7 @@ env={
  js_in:(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
  js_out:(a,n)=>(ap(t0(M(a,n))),n),
  js_log:a=>console.info(t0(gb(a))),
- js_time:now,
+ js_time:(a,b)=>{const t=now();s4(a,t/1000);s4(b,t%1000*1000)},
  js_exit:x=>{throw Error(`exit(${x})`)},
  js_alloc:n=>{const p=4096,r=heap%p;r&&ma(p-r);return ma(n)}}
 
