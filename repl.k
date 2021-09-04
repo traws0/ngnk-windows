@@ -13,14 +13,14 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 /
 --------------------------------------------------------------------------------
 
-\   Help         \a  agpl3  license
-\0  datatypes    \l file.k  load
-\+  primitives   \t:n expr  time (elapsed milliseconds after n runs)
-\:  I/O          \v         variables
-\'  adverbs      \f         functions
-\`  symbols      \cd path   change directory
-\h  summary      \other     shell command (through /bin/sh)
-                 \\         exit
+\   help               \\         exit
+\a  license(AGPL3)     \l file.k  load
+\0  types              \t:n expr  time(elapsed milliseconds after n runs)
+\+  verbs              \v         variables
+\:  I/O verbs          \f         functions
+\'  adverbs            \cd path   change directory
+\`  symbols            \other     command(through /bin/sh)
+\h  summary
 --------------------------------------------------------------------------------
 \0
 Types: ACBHILDSMmcildsopqruvw
