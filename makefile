@@ -6,9 +6,9 @@ STRIP ?= strip
 t:k #test
 	@+$(MAKE) -sC t && g/0.sh && $(MAKE) -sC a19 && $(MAKE) -sC a20 && $(MAKE) -sC e
 c: #clean
-	@rm -rfv k libk.so web/k.wasm k32 o t/t web/web
+	@rm -rfv k libk.so w/k.wasm k32 o t/t
 w: #wasm
-	@cd web && ./a.k
+	@cd w && ./a.k
 W: #web server
 	@cd o/wasm && ./web
 .PHONY: t c w W
