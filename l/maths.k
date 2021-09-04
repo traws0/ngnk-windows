@@ -1,5 +1,5 @@
-abs:{x|-x}
-sgn:{(x>0)-x<0}
+abs:|/-:\
+sgn:-/0<-:\
 gcd:*|(*:)(|!\)/,
 lcm:{x*(-gcd[x]y)!y}
 prm:{(x-1){,/'((,(#*x)##x),x)(~i=\:i)*i+i<\:i:!1+#x}/0} /permutations(non-lexicographic)
