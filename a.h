@@ -72,7 +72,7 @@ A1 a1,aes0,aes1,asc,ax,blw,cf,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,cB,cC
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  sub,v0c,v1c,exc;
 A0 aa0;A3 a3,try,ear,eal;AA amd,amn,dmd,dmn,ins;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;ALA drp,room,rshN;AAL get;
-AL aA,aC,aB,aH,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCl,aCz,cmdcd,cmdl,cmdm,die,e0;
+AL aA,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCl,aCz,cmdcd,cmdl,cmdm,die,e0;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1(A,A1),
  eac2(A,A,A),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),sur(C,A,C),wdn(A,N,N,N);
 V exit(I),iI(V*,N),kinit(),*memchr(Q,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
