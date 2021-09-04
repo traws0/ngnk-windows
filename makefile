@@ -14,21 +14,21 @@ W: #web server
 .PHONY: t c w W
 
 _/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) _ && $(CC) @opts -c $(O) $< -o $@
+	@echo -n '$< ' && $(MD) _ && $(CC) @o -c $(O) $< -o $@
 _/%.s:%.c *.h makefile
-	@echo    '$@ ' && $(MD) o && $(CC) @opts -c $(O) $< -o $@ -S -masm=intel
+	@echo    '$@ ' && $(MD) o && $(CC) @o -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) @opts $^ -static -o $@
+	@echo '$@ ' && $(CC) @o $^ -static -o $@
 	@$(STRIP) -R .comment $@ # -R '.note*'
 
 #lib
 _/so/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) _/so && $(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
+	@echo -n '$< ' && $(MD) _/so && $(CC) @o $(O) -c $< -o $@ -fPIC -Dshared
 libk.so:$(patsubst %.c,_/so/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) @opts $(O) $^ -shared -Dshared -o $@
+	@echo '$@ ' && $(CC) @o $(O) $^ -shared -Dshared -o $@
 
 # #32bit
-# C32=$(CC) @opts -m32
+# C32=$(CC) @o -m32
 # _/32/%.o:%.c *.h makefile
 # 	@echo -n '$< ' && $(MD) _/32 && $(C32) -c $< -o $@
 # k32:$(patsubst %.c,_/32/%.o,$(wildcard *.c))
