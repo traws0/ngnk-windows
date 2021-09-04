@@ -32,7 +32,7 @@ env={
  js_exit:x=>{throw Error(`exit(${x})`)},
  js_alloc:n=>{const p=4096,r=heap%p;r&&ma(p-r);return ma(n)}}
 
-let out=ou;const PR=' ',skPR=i=>i+PR.length*(ed.value.slice(i,i+PR.length)===PR),cur=(ta,i)=>ta.setSelectionRange(i,i),
+let out=ou;const skp/*skip prompt*/=i=>i+(ed.value[i]===' '),cur=(ta,i)=>ta.setSelectionRange(i,i),
 copy=x=>{let c=navigator.clipboard;c&&c.writeText(out.value)},ap=s=>{out.value+=s;cur(out,out.value.length)},
 kstr=s=>s.replace(/[\0\t\n\r\"\\]/g,c=>'\\'+'0tnr"\\'['\0\t\n\r\"\\'.indexOf(c)])
 if(location.hash==='#r'){ //repl mode
@@ -40,10 +40,10 @@ if(location.hash==='#r'){ //repl mode
   wa(_=>{let p=ms('k.wasm\0repl.k\0'),argv=ma(16);S4(argv,[p,p+7,0,0]);app.kinit(1,argv);inp='\\l repl.k\n';app.rep()})
   ed.onkeydown=x=>{const k=kc(x)
    if(k===38||k===40){let s=ed.value,i=s.lastIndexOf`\n`+1;ha[hi]=s.slice(i);hi=max(0,min(ha.length-1,hi+k-39))
-    ed.value=s.slice(0,i)+ha[hi];cur(ed,skPR(i));return!1}
+    ed.value=s.slice(0,i)+ha[hi];cur(ed,skp(i));return!1}
    if(k===13){let s=ed.value,p=ed.selectionStart,q=ed.selectionEnd
     if(p===q){p=s.slice(0,p).lastIndexOf`\n`+1;q=(s+'\n').indexOf('\n',q)}
-    ha[hi]=s.slice(p,q);inp=s.slice(skPR(p),q)+'\n';let l=ha.length-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push``-1
+    ha[hi]=s.slice(p,q);inp=s.slice(skp(p),q)+'\n';let l=ha.length-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push``-1
     ap(q-s.length?inp+'\n':'\n');inp=`repl.line@${inp.length-1?'':','}"${kstr(inp)}";\n`
     try{app.rep()}catch(x){ed.disabled=1;error(x)};return!1}}})}
 else{ //editor mode

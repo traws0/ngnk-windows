@@ -64,7 +64,7 @@ NWASM(
   #include"o/wasm/LICENSE.h"
  };
  S ST{C u;char p[16],a[1<<16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
- V ff0(Ii/*inode*/,Qp/*path*/,Qs/*content*/,In/*content length*/){fs[i].u=1;Mc(fs[i].p,p,Sn(p)+1);Mc(fs[i].a,s,n);}
+ V ff0(Ii,Qp/*path*/,Qs/*data*/,In/*data len*/){fs[i].u=1;Mc(fs[i].p,p,Sn(p)+1);Mc(fs[i].a,s,n);fs[i].n=n;}
  V fs0(){i(3,fs[i].u=1)ff0(3,"repl.k",file_repl_k,ZZ(file_repl_k));ff0(4,"./LICENSE",file_LICENSE,ZZ(file_LICENSE));}
  I open(Qp,Iv,...)_(LOGF(open);
   I(!fs[0].u,fs0())
@@ -82,7 +82,9 @@ NWASM(
  I fstat(If,ST stat*r)_(LOGF(fstat);FI;In=fs[i].n;
   *r=(TY(*r)){.st_dev=0,.st_ino=i,.st_mode=S_IFREG,.st_nlink=1,.st_uid=0,.st_gid=0,
               .st_rdev=0,.st_size=n,.st_blksize=512,.st_blocks=n+511>>9};0)
- V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(LOGF(mmap);I(!a,a=js_alloc(n))P(f<0,a)P(f>=ZZ(fd)||!fd[f].u,(V*)-1)
+ V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(LOGF(mmap);
+  I(!fs[0].u,fs0())
+  I(!a,a=js_alloc(n))P(f<0,a)P(f>=ZZ(fd)||!fd[f].u,(V*)-1)
   Ii=fd[f].i;Mc(a,fs[i].a+o,n);a)//todo:range check
  I munmap(If,In)_(LOGF(munmap);0)
  I gettimeofday(ST timeval*a,ST timezone*b)_(LOGF(gettimeofday);js_time(&a->tv_sec,&a->tv_usec);0)
