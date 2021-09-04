@@ -57,13 +57,17 @@ NWASM(
  #define LOGE(x) x //({js_log(#x);x;})
  I logi(Qs,Iv)_(Cb[99];In=Sn(s);Mc(b,s,n);*sl(b+n,v)=0;js_log(b);v)
  V logs(Qs,Qp){Cb[99];In=Sn(s);Mc(b,s,n);Im=Sn(p);Mc(b+n,p,m);b[n+m]=0;}
- S ST{C u;char p[16],a[1<<18];Nn;}fs[8]={{1,"stdin",""},{1,"stdout",""},{1,"stderr",""},{1,"repl.k",
-   #include"o/wasm/repl.k.h"
-  },{1,"./LICENSE",
-   #include"o/wasm/LICENSE.h"
-  }};
- S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
+ S C file_repl_k[]={
+  #include"o/wasm/repl.k.h"
+ };
+ S C file_LICENSE[]={
+  #include"o/wasm/LICENSE.h"
+ };
+ S ST{C u;char p[16],a[1<<16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
+ V ff0(Ii/*inode*/,Qp/*path*/,Qs/*content*/,In/*content length*/){fs[i].u=1;Mc(fs[i].p,p,Sn(p)+1);Mc(fs[i].a,s,n);}
+ V fs0(){i(3,fs[i].u=1)ff0(3,"repl.k",file_repl_k,ZZ(file_repl_k));ff0(4,"./LICENSE",file_LICENSE,ZZ(file_LICENSE));}
  I open(Qp,Iv,...)_(LOGF(open);
+  I(!fs[0].u,fs0())
   P(Sn(p)>=ZZ(fs[0].p),LOGE(ENAMETOOLONG))
   If=0;W(f<ZZ(fd)&&fd[f].u,f++)P(f>=ZZ(fd),LOGE(EMFILE))fd[f].u=1;
   Ii=0;W(i<ZZ(fs)&&SQ(fs[i].p,p),i++)
