@@ -30,5 +30,5 @@ g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
 a19/ https://adventofcode.com/2019
 a20/ https://adventofcode.com/2020
-o/   build tmp
-web/ browser ui
+w/   web ui
+_/   build tmp
