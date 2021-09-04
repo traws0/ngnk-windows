@@ -1,3 +1,4 @@
 0:
-	@echo 'aoc19 tests' && ../k a.k
+	@echo 'aoc19 tests'
+	@../l/runparts.k
 .PHONY:0
