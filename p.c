@@ -32,7 +32,7 @@ S A1(mon,P(xtv,x^au^av)P(xtA&&(xn==2&&xx==aw||xn==3&&xx==COM),x=mut(x);xA[xn-1]=
  P(xts,Lv=xv;Qs=syp(&v);Nn;P((*s&128)&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b)))x)x)
 S A pT(C*v)_(Ax=N(pt(v));
  W(1,Cc=*s;Ii=si("'/\\[",c);P(i>3,x)s++;
-  I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au)E(xx=mon(xx)))P(xn>9,s--;ez1(x))*v=0)
+  I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au)E(xx=mon(xx)))*v=0)
   E(I u=*s==':';s+=u;x=a2(aw+i+3*u,x);*v=1))x)
 S V pw()_(Cc=*s;W(c==32,c=*++s)P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
 S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Ay=pe(0,v);P(!y,x?x(0):0);*v=0;y=a2(OUT,y);I(x,y=a2(mon(x),y))y)
