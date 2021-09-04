@@ -10,7 +10,7 @@ c: #clean
 w: #wasm
 	@cd w && ./a.k
 W: #web server
-	@cd o/wasm && ./web
+	@cd o/w && ./web
 .PHONY: t c w W
 
 o/%.o:%.c *.h makefile
