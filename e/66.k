@@ -1,3 +1,3 @@
 #!../k
 \l l.k
-*&a~\:{(x;y)L[x]y}/a:{(2!#c)(A[B 1]@A/2#,M/2#,:)/*|(B'!2){(x 1;A[*x]M[y]x 1)}/|B'c:-1_CF x}'!1001
+*&a~\:{(x;y)ltn[x]y}/a:{(2!#c)(add[big 1]@add/2#,mul/2#,:)/*|(big'!2){(x 1;add[*x]mul[y]x 1)}/|big'c:-1_cfs x}'!1001
