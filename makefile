@@ -1,7 +1,4 @@
 #faster builds: export MAKEFLAGS=-j8
-F=-nostdlib -ffreestanding -fno-math-errno -fno-stack-protector -fomit-frame-pointer \
- -Werror -Wno-assume -Wno-pointer-sign -Wfatal-errors -Wno-shift-op-parentheses \
- -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-constant-conversion -Wno-unused-result
 O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 STRIP ?= strip
@@ -17,21 +14,21 @@ W: #web server
 .PHONY: t c w W
 
 o/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o && $(CC) $(F) -c $(O) $< -o $@
+	@echo -n '$< ' && $(MD) o && $(CC) @opts -c $(O) $< -o $@
 o/%.s:%.c *.h makefile
-	@echo    '$@ ' && $(MD) o && $(CC) $(F) -c $(O) $< -o $@ -S -masm=intel
+	@echo    '$@ ' && $(MD) o && $(CC) @opts -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) $(F) $^ -static -o $@
+	@echo '$@ ' && $(CC) @opts $^ -static -o $@
 	@$(STRIP) -R .comment $@ # -R '.note*'
 
 #lib
 o/so/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o/so && $(CC) $(F) $(O) -c $< -o $@ -fPIC -Dshared
+	@echo -n '$< ' && $(MD) o/so && $(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
 libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) $(F) $(O) $^ -shared -Dshared -o $@
+	@echo '$@ ' && $(CC) @opts $(O) $^ -shared -Dshared -o $@
 
 #32bit
-C32=$(CC) $(F) -m32
+C32=$(CC) @opts -m32
 o/32/%.o:%.c *.h makefile
 	@echo -n '$< ' && $(MD) o/32 && $(C32) -c $< -o $@
 k32:$(patsubst %.c,o/32/%.o,$(wildcard *.c))
