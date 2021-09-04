@@ -40,14 +40,14 @@ A1(cpl,Ik=xk;Ay=get(x,1)/*ast*/;fs=get(x,0);fb=oC;fm=oC;fl=las(x);fc=a1(au);Ms(f
  y=cf(y);I r=!!cr(y);I o=0;h(bu);y=y(fb);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))r?AK(k,aV(to,5,A(fs,fb,fm,fl,fc))):0)
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
-S A1(vm,/*0*/W(1,Cb=*c++;
+S A1(vm,/*0*/W(1,UC b=*c++;
  I(b>=bm,I(b>=bc,Ay=xA[4]/*fc*/;p(_R(yA[b-bc])))
         EI(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au;*s=au;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av+*c++,z),4))),y)))
         EI(b==bM,Ax=q()         ,y=q(),z=*s;      *s=au;N(*s=apn(      Ny(dmd(A(x,yR,av+*c++,z),4)) ,y)))
         EI(b==bl,Nn=*c++;s+=n;p(sqz(aV(tA,n,s-n))))
         EI(b==bL,Nn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
         EI(b==ba||b==bP,Nn=*c++;Ax=s[n]=(b-ba?prj:app)(*s,s+1,n);mr(*s);s+=n;N(x))
-        EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(C)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q()))
+        EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(UC)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q()))
         EI(b==b4,s+=3;N(*s=dmd(s-3,4))))
  EI(b>=bs,A*v=l-b%16,x=*v;I(b>=bd,p(x);*v=au)EI(b>=bg,p(xR))E(x=x(*v=_R(*s))))
  EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))EI(b,N(*s=v1[b](*s)))E(_(*s)))0)

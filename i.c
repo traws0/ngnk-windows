@@ -12,7 +12,7 @@
 ssize_t getdents(I,char*,N);
 TD ST{FBSD(UI d_fileno;UH d_reclen;C d_type,d_namlen,d_name[255+1])
      NFBSD(long d_ino;off_t d_off;UH d_reclen;C d_name[]);}DE;
-S UI addr(Q*p)_(Qs=*p;P(!*s,0x0100007f)Cv[4];i(4,I(i,Ed(*s-'.')s++)v[i]=pu(&s);Ed(v[i]>255))*p=s;*(UI*)v)
+S UI addr(Q*p)_(Qs=*p;P(!*s,0x0100007f)UC v[4];i(4,I(i,Ed(*s-'.')s++)v[i]=pu(&s);Ed(v[i]>255))*p=s;*(UI*)v)
 S I skt(UI h,UH p)_(If=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)Iv=setsockopt(f,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4);Eo(v<0)
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,SZ a)<0)f)
 S I o1(Qs,L fl)_(P(!SC(s,':'),If=open(s,fl,0666);Eo(f<3/*fbsd*/)f)UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
