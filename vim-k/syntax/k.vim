@@ -9,10 +9,10 @@ sy match  k_e  /"/                                                 nextgroup=k_e
 sy match  k_es /.*/                                                nextgroup=@k_vw contained               |hi link k_es      k_string
 sy match  k_string /"\(\\.\|[^"\n]\)*"/                            nextgroup=@k_vw contains=k_q            |hi link k_string  string
 sy match  k_q  /\\./                                                               contained               |hi link k_q       specialchar
-sy match  k_u  /[:+\-*%!&|<>=~,^#_$?@.]:\=/                        nextgroup=k_w                           |hi link k_u       function
-sy match  k_v  /[+\-*%!&|<>=~,^#_$?@.]:\=/                         nextgroup=k_w   contained               |hi link k_v       type
+sy match  k_u  /[+\-*%!&|<>=~,^#_$?@.\x80-\U000fffff:]:\=/         nextgroup=k_w                           |hi link k_u       function
+sy match  k_v  /[+\-*%!&|<>=~,^#_$?@.\x80-\U000fffff]:\=/          nextgroup=k_w   contained               |hi link k_v       type
 sy match  k_n  /\v-=\d+([ijl]|[NW][ijl]=|[nw]|(\.\d+)=(e-=\d+)=)=/ nextgroup=@k_vw                         |hi link k_n       number
-sy match  k_i  /\(\.\=\(\I\i*\|[\x80-\U000fffff]\)\)\+/            nextgroup=@k_vw                         |hi link k_i       variable
+sy match  k_i  /\I\i*\(\.\=\I\i*\)*/                               nextgroup=@k_vw                         |hi link k_i       variable
 sy match  k_x  /\<[oxyz]\>/                                        nextgroup=@k_vw                         |hi link k_x       special
 sy match  k_string /\<0x\(\x\x\)*\>/                               nextgroup=@k_vw
 sy match  k_u  /\d::\=/                                            nextgroup=k_w
