@@ -26,9 +26,11 @@ x.c  serialization: `@x `?x
 c.c  cryptography
 e.c  error handling
 t/   unit tests
+w/   web ui
+_/   build tmp
+
+l/   k libraries
 g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
 a19/ https://adventofcode.com/2019
 a20/ https://adventofcode.com/2020
-w/   web ui
-_/   build tmp
