@@ -8,7 +8,7 @@ t:k #test
 c: #clean
 	@rm -rfv k libk.so web/k.wasm k32 o t/t web/web
 w: #wasm
-	@cd web && ./a.sh
+	@cd web && ./a.k
 W: #web server
 	@cd o/wasm && ./web
 .PHONY: t c w W
