@@ -58,10 +58,10 @@ NWASM(
  I logi(Qs,Iv)_(Cb[99];In=Sn(s);Mc(b,s,n);*sl(b+n,v)=0;js_log(b);v)
  V logs(Qs,Qp){Cb[99];In=Sn(s);Mc(b,s,n);Im=Sn(p);Mc(b+n,p,m);b[n+m]=0;}
  S C file_repl_k[]={
-  #include"o/w/repl.k.h"
+  #include"_/w/repl.k.h"
  };
  S C file_LICENSE[]={
-  #include"o/w/LICENSE.h"
+  #include"_/w/LICENSE.h"
  };
  S ST{C u;char p[16],a[1<<16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
  V ff0(Ii,Qp/*path*/,Qs/*data*/,In/*data len*/){fs[i].u=1;Mc(fs[i].p,p,Sn(p)+1);Mc(fs[i].a,s,n);fs[i].n=n;}

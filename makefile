@@ -6,30 +6,30 @@ STRIP ?= strip
 t:k #test
 	@+$(MAKE) -sC t && g/0.sh && $(MAKE) -sC a19 && $(MAKE) -sC a20 && $(MAKE) -sC e
 c: #clean
-	@rm -rfv k libk.so w/k.wasm k32 o t/t
+	@rm -rfv _ k libk.so k32 t/t
 w: #wasm
 	@cd w && ./a.k
 W: #web server
-	@cd o/w && ./web
+	@cd _/w && ./web
 .PHONY: t c w W
 
-o/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o && $(CC) @opts -c $(O) $< -o $@
-o/%.s:%.c *.h makefile
+_/%.o:%.c *.h makefile
+	@echo -n '$< ' && $(MD) _ && $(CC) @opts -c $(O) $< -o $@
+_/%.s:%.c *.h makefile
 	@echo    '$@ ' && $(MD) o && $(CC) @opts -c $(O) $< -o $@ -S -masm=intel
-k:$(patsubst %.c,o/%.o,$(wildcard *.c))
+k:$(patsubst %.c,_/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(CC) @opts $^ -static -o $@
 	@$(STRIP) -R .comment $@ # -R '.note*'
 
 #lib
-o/so/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o/so && $(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
-libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
+_/so/%.o:%.c *.h makefile
+	@echo -n '$< ' && $(MD) _/so && $(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
+libk.so:$(patsubst %.c,_/so/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(CC) @opts $(O) $^ -shared -Dshared -o $@
 
-#32bit
-C32=$(CC) @opts -m32
-o/32/%.o:%.c *.h makefile
-	@echo -n '$< ' && $(MD) o/32 && $(C32) -c $< -o $@
-k32:$(patsubst %.c,o/32/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(C32) $^ -static -o $@ -lgcc
+# #32bit
+# C32=$(CC) @opts -m32
+# _/32/%.o:%.c *.h makefile
+# 	@echo -n '$< ' && $(MD) _/32 && $(C32) -c $< -o $@
+# k32:$(patsubst %.c,_/32/%.o,$(wildcard *.c))
+# 	@echo '$@ ' && $(C32) $^ -static -o $@ -lgcc

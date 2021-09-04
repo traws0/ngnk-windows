@@ -1,5 +1,5 @@
 #!../k
-O:"../o/w"
+O:"../_/w"
 X:{ \x;."\\",x;}
 X"mkdir -p ",O
 X"cp *.html *.js ",O
