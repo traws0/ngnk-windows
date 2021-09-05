@@ -1,15 +1,16 @@
 #!../k
-O:"../_/w"
-X:{ \x;."\\",x;}
-X"mkdir -p ",O
-X"cp *.html *.js ",O
-X"cc web.c -o ",O,"/web"
+sub:"../_/w"/"%"\
+sh:{$[x:."\\",x: \sub x;x;]}
+sh"mkdir -p %"
+sh"cc web.c -o %/web"
 
-{(O,"/",x,".h")0:","/$0+1:"../",x}'("LICENSE";"repl.k");
+inl:{("<script>\n",(1:y),"\n</script>")/("<script src=",y,"></script>")\x}
+h:"index.html";sub["%/",h]1:1:[h]inl/."\\ls *.js"
+
+{sub["%/",x,".h"]0:","/$0+1:"../",x}'("LICENSE";"repl.k");
 
 / /usr/lib/llvm-10/bin/wasm-ld must be on $PATH
-X@,/("clang ../*.c -o ",O,"/k0.wasm -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include @../o"
+sh@,/("clang ../*.c -o %/k0.wasm --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include @../o"
  " -Wl,--no-entry",(,/",--export=",/:$`main`kinit`rep`val`aCz`open`close`write`"__heap_base"),",--initial-memory=33554432,--allow-undefined")
-X"wasm-opt -O3 ",O,"/k0.wasm -o ",O,"/k.wasm"
-
-."\\ls -l ",O,"/k.wasm"
+sh"wasm-opt -O3 %/k0.wasm -o %/k.wasm"
+sh"ls -l %/k.wasm"
