@@ -1,10 +1,10 @@
 'use strict' // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-const{log,error}=console,{min,max}=Math,{now}=Date,U8=x=>new Uint8Array(x),doc=document,
+const{min,max}=Math,{now}=Date,U8=x=>new Uint8Array(x),doc=document,
 T1=new TextEncoder,t1=x=>T1.encode(x),z1=pako.deflate,
 T0=new TextDecoder,t0=x=>T0.decode(x),z0=pako.inflate,
 c1=x=>{let r='';for(let i=0;i<x.length;i++)r+=String.fromCharCode(x[i]);return r},
 c0=x=>{const r=U8(x.length);for(let i=0;i<x.length;i++)r[i]=x.charCodeAt(i);return r},
-p0=x=>{try{return x?t0(z0(c0(atob(x)))):''}catch(x){error(x);return''}},
+p0=x=>{try{return x?t0(z0(c0(atob(x)))):''}catch(x){console.error(x);return''}},
 p1=x=>x?btoa(c1(z1(t1(x)))):'',
 kc=x=>x.which+1000*(x.ctrlKey+10*(x.shiftKey+10*x.altKey)),
 hsh=x=>x.split``.reduce((x,y)=>0|(x<<5)-x+y.charCodeAt(0),0),
@@ -27,7 +27,7 @@ wa=async f=>{if(!kwasm)kwasm=await(await fetch`k.wasm`).arrayBuffer()
 env={
  js_in:(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
  js_out:(a,n)=>(ap(t0(M(a,n))),n),
- js_log:a=>console.info(t0(gb(a))),
+ js_log:a=>console.log(t0(gb(a))),
  js_time:(a,b)=>{const t=now();s4(a,t/1000);s4(b,t%1000*1000)},
  js_exit:x=>{throw Error(`exit(${x})`)},
  js_alloc:n=>{const p=4096,r=heap%p;r&&ma(p-r);return ma(n)}}
@@ -45,7 +45,7 @@ if(location.hash==='#r'){ //repl mode
     if(p===q){p=s.slice(0,p).lastIndexOf`\n`+1;q=(s+'\n').indexOf('\n',q)}
     ha[hi]=s.slice(p,q);inp=s.slice(skp(p),q)+'\n';let l=ha.length-1;hi<l&&(ha[l]=ha[hi]);hi=ha.push``-1
     ap(q-s.length?inp+'\n':'\n');inp=`repl.line@${inp.length-1?'':','}"${kstr(inp)}";\n`
-    try{app.rep()}catch(x){ed.disabled=1;error(x)};return!1}}})}
+    try{app.rep()}catch(x){ed.disabled=1;console.error(x)};return!1}}})}
 else{ //editor mode
  const ubc=_=>{let s=ed.value,i=s.indexOf`\n\n`,r=[] //update byte count and return the counted part
   if(i>=0){s=s.slice(0,i);r.push`till empty line`}

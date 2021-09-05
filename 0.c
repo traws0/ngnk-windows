@@ -50,41 +50,33 @@ NWASM(
 
 #ifdef wasm
  I js_in(V*,N);V js_out(OV*,N);V js_log(OV*);V*js_alloc(N);V js_time(I*,long*);I js_exit(I);
- #define FI P((UI)f>=ZZ(fd)||!fd[f].u,EBADF)Ii=fd[f].i;//validate file descriptor "f" and get inode as "i"
  #define LOGF(x)   //js_log(#x)
  #define LOGI(x) x //logi(#x":",(I)x)
  #define LOGS(x)   //logs(#x":",(Q)x)
- #define LOGE(x) x //({js_log(#x);x;})
+ #define LOGE(x) x //({js_log("ERROR:" #x);x;})
  I logi(Qs,Iv)_(Cb[99];In=Sn(s);Mc(b,s,n);*sl(b+n,v)=0;js_log(b);v)
- V logs(Qs,Qp){Cb[99];In=Sn(s);Mc(b,s,n);Im=Sn(p);Mc(b+n,p,m);b[n+m]=0;}
+ Q logs(Qs,Qp)_(Cb[99];In=Sn(s);Mc(b,s,n);Im=Sn(p);Mc(b+n,p,m);b[n+m]=0;js_log(b);p)
  S C file_repl_k[]={
   #include"_/w/repl.k.h"
- };
- S C file_LICENSE[]={
+ },file_LICENSE[]={
   #include"_/w/LICENSE.h"
  };
- S ST{C u;char p[16],a[1<<16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
- V ff0(Ii,Qp/*path*/,Qs/*data*/,In/*data len*/){fs[i].u=1;Mc(fs[i].p,p,Sn(p)+1);Mc(fs[i].a,s,n);fs[i].n=n;}
- V fs0(){i(3,fs[i].u=1)ff0(3,"repl.k",file_repl_k,ZZ(file_repl_k));ff0(4,"LICENSE",file_LICENSE,ZZ(file_LICENSE));}
- I open(Qp,Iv,...)_(LOGF(open);
-  I(!fs[0].u,fs0())
-  P(Sn(p)>=ZZ(fs[0].p),LOGE(ENAMETOOLONG))
-  If=0;W(f<ZZ(fd)&&fd[f].u,f++)P(f>=ZZ(fd),LOGE(EMFILE))fd[f].u=1;
-  Ii=0;W(i<ZZ(fs)&&SQ(fs[i].p,p),i++)
-  I(i>=ZZ(fs),P(O_CREAT&~v,LOGE(ENOENT))i=0;W(i<ZZ(fs)&&fs[i].u,i++)P(i>=ZZ(fs),LOGE(ENOSPC))
-              fs[i].u=1;fs[i].n=0;Mc(fs[i].p,p,Sn(p)))
-  fd[f]=(TY(fd[f])){1,i,0};f)
+ S ST{C p[16],*a;Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1},{1},{1}};S O I nfs=ZZ(fs),nfd=ZZ(fd);
+ #define FF0(i,s,v) {Mc(fs[i].p,s,1+SZ s);fs[i].a=v;fs[i].n=SZ v;}
+ V ws0(){FF0(0,"","");FF0(1,"repl.k",file_repl_k);FF0(2,"LICENSE",file_LICENSE);}
+ #define FI P((UI)f>=nfd||!fd[f].u,LOGE(EBADF))Ii=fd[f].i;//validate file descriptor "f" and get inode as "i"
+ I open(Qp,Iv,...)_(LOGF(open);I(!fs[0].a,ws0())
+  Im=Sn(p);P(m>=SZ fs[0].p,LOGE(ENAMETOOLONG))Ii=0;W(i<nfs&&SQ(fs[i].p,p),i++)
+  I(i>=nfs,P(O_CREAT&~v,LOGE(ENOENT))i=0;W(i<nfs&&fs[i].a,i++)P(i>=nfs,LOGE(ENOSPC))fs[i].a="";fs[i].n=0;Mc(fs[i].p,p,m))
+  If=0;W(f<nfd&&fd[f].u,f++)P(f>=nfd,LOGE(EMFILE))fd[f].u=1;fd[f]=(TY(*fd)){.u=1,.i=i,.o=0};f)
  I close(If)_(LOGF(close);FI fd[f].u=0;0)
- I read(If,V*a,Nn)_(LOGF(read);FI P(i<3,js_in(a,n))I o=fd[f].o;n=max(0,min(n,fs[i].n-o));Mc(a,fs[i].a+o,n);fd[f].o+=n;n)
- I write(If,OV*a,Nn)_(LOGF(write);FI P(i<3,js_out(a,n);n)
-  n=min(n,ZZ(fs[0].a)-fd[f].o);P(!n,ENOSPC)fs[i].n=max(fs[i].n,fd[f].o+n);Mc(fs[i].a+fd[f].o,a,n);n)
- off_t lseek(If,off_t o,I w)_(FI;o=w==SEEK_CUR?o+fd[f].o:w==SEEK_END?o+fs[i].n:w==SEEK_SET?o:-1;P(o<0,EINVAL)fd[f].o=o)
+ I read(If,V*a,Nn)_(LOGF(read);FI P(!i,js_in(a,n))I o=fd[f].o;n=max(0,min(n,fs[i].n-o));Mc(a,fs[i].a+o,n);fd[f].o+=n;n)
+ I write(If,OV*a,Nn)_(LOGF(write);FI;P(!i,js_out(a,n);n)
+  Im=fd[f].o+n;I(m>fs[i].n,C*b=js_alloc(m);Mc(b,fs[i].a,n);fs[i].a=b;fs[i].n=m)Mc(fs[i].a+fd[f].o,a,n);n)
+ off_t lseek(If,off_t o,I w)_(FI;o=w==SEEK_CUR?o+fd[f].o:w==SEEK_END?o+fs[i].n:w==SEEK_SET?o:-1;P(o<0,LOGE(EINVAL))fd[f].o=o)
  I fstat(If,ST stat*r)_(LOGF(fstat);FI;In=fs[i].n;
-  *r=(TY(*r)){.st_dev=0,.st_ino=i,.st_mode=S_IFREG,.st_nlink=1,.st_uid=0,.st_gid=0,
-              .st_rdev=0,.st_size=n,.st_blksize=512,.st_blocks=n+511>>9};0)
- V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(LOGF(mmap);
-  I(!fs[0].u,fs0())
-  I(!a,a=js_alloc(n))P(f<0,a)P(f>=ZZ(fd)||!fd[f].u,(V*)-1)
+  *r=(TY(*r)){.st_ino=i,.st_mode=S_IFREG,.st_nlink=1,.st_size=n,.st_blksize=512,.st_blocks=n+511>>9};0)
+ V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(LOGF(mmap);I(!a,a=js_alloc(n))P(f<0,a)P(f>=nfd||!fd[f].u,LOGE((V*)-1))
   Ii=fd[f].i;Mc(a,fs[i].a+o,n);a)//todo:range check
  I munmap(If,In)_(LOGF(munmap);0)
  I gettimeofday(ST timeval*a,ST timezone*b)_(LOGF(gettimeofday);js_time(&a->tv_sec,&a->tv_usec);0)
