@@ -22,7 +22,7 @@ s4=(p,x)=>new DataView(app.memory.buffer).setUint32(p,x,1),
 S4=(p,a)=>a.forEach((x,i)=>s4(p+4*i,x)),
 ma=n=>{heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>>16)+1);return heap-n},
 ms=s=>{s=t1(s);let p=ma(s.length);M(p,s.length).set(s);return p},
-wa=async f=>{app=(await WebAssembly.instantiate(await kw,{env})).instance.exports;heap=app.__heap_base;f()},
+wa=_=>kw.then(x=>WebAssembly.instantiate(x,{env})).then(x=>{app=x.instance.exports;heap=app.__heap_base}),
 env={
  js_in:(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
  js_out:(a,n)=>(ap(t0(M(a,n))),n),
@@ -31,13 +31,14 @@ env={
  js_exit:x=>{throw Error(`exit(${x})`)},
  js_alloc:n=>{const p=4096,r=heap%p;r&&ma(p-r);return ma(n)}}
 
-let out=ou;const cur=(ta,i)=>ta.setSelectionRange(i,i),
+let w=wa(),out=ou;const cur=(ta,i)=>ta.setSelectionRange(i,i),
 cpy=x=>{let c=navigator.clipboard;c&&c.writeText(out.value)},ap=s=>{out.value+=s;cur(out,out.value.length)},
 kst=s=>s.replace(/[\0\t\n\r\"\\]/g,c=>'\\'+'0tnr"\\'['\0\t\n\r\"\\'.indexOf(c)])
 rdy(_=>{
  if(location.hash==='#r'){ //repl mode
   doc.body.classList.add`repl`;ed.value='';out=ed;let ha=[''],hi=0 //ha,hi:history array and index
-  wa(_=>{let p=ms('k.wasm\0repl.k\0'),argv=ma(16);S4(argv,[p,p+7,0,0]);app.kinit(1,argv);inp='\\l repl.k\n';app.rep()})
+  w.then(_=>{
+   let p=ms('k.wasm\0repl.k\0'),argv=ma(16);S4(argv,[p,p+7,0,0]);app.kinit(1,argv);inp='\\l repl.k\n';app.rep()})
   ed.onkeydown=x=>{const k=kc(x),skp/*skip prompt*/=i=>i+(ed.value[i]===' ')
    if(k===38||k===40){let s=ed.value,i=s.lastIndexOf`\n`+1;ha[hi]=s.slice(i);hi=max(0,min(ha.length-1,hi+k-39))
     ed.value=s.slice(0,i)+ha[hi];cur(ed,skp(i));return!1}
@@ -52,12 +53,12 @@ rdy(_=>{
    if(s.slice(0,2)==='f:'){s=s.slice(2);r.push`not counting initial "f:"`}
    bc.textContent=s.length+'bytes'+(r.length?`(${r.join`, `})`:'');return s}
   ed.value=p0(location.hash.slice(1).replace(/-$/,''))
-  const ev=_=>{wa(_=>{
+  const ev=_=>{w.then(_=>{
    const v=ed.value,s=v.slice(-1)==='\n'?v:v+'\n',p=p1(v);location.hash=p+'-';out.value='';ubc();
    const f=app.open(ms('a.k\0'),514,438/*O_RDWR|O_CREAT,0666*/);app.write(f,ms(s),s.length);app.close(f)
    const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16
    let e;try{app.main(2,a)}catch(x){e=x}
-   location.hash=p;if(e&&e.message!=='exit(0)')throw e})}
+   location.hash=p;w=wa();if(e&&e.message!=='exit(0)')throw e})}
   if(location.hash.slice(-1)!=='-')ev()
   out.value=''
   bEval.onclick=ev
