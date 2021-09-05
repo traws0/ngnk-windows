@@ -5,7 +5,7 @@ X"mkdir -p ",O
 X"cp *.html *.js ",O
 X"cc web.c -o ",O,"/web"
 
-{(O,"/",x,".h")0:","/$0+1:"../",x}'("./LICENSE";"repl.k");
+{(O,"/",x,".h")0:","/$0+1:"../",x}'("LICENSE";"repl.k");
 
 / /usr/lib/llvm-10/bin/wasm-ld must be on $PATH
 X@,/("clang ../*.c -o ",O,"/k.wasm -O3 --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include @../o"

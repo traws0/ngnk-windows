@@ -65,7 +65,7 @@ NWASM(
  };
  S ST{C u;char p[16],a[1<<16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1,0},{1,1},{1,2}};
  V ff0(Ii,Qp/*path*/,Qs/*data*/,In/*data len*/){fs[i].u=1;Mc(fs[i].p,p,Sn(p)+1);Mc(fs[i].a,s,n);fs[i].n=n;}
- V fs0(){i(3,fs[i].u=1)ff0(3,"repl.k",file_repl_k,ZZ(file_repl_k));ff0(4,"./LICENSE",file_LICENSE,ZZ(file_LICENSE));}
+ V fs0(){i(3,fs[i].u=1)ff0(3,"repl.k",file_repl_k,ZZ(file_repl_k));ff0(4,"LICENSE",file_LICENSE,ZZ(file_LICENSE));}
  I open(Qp,Iv,...)_(LOGF(open);
   I(!fs[0].u,fs0())
   P(Sn(p)>=ZZ(fs[0].p),LOGE(ENAMETOOLONG))
