@@ -66,8 +66,8 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define max(x,y) extr(x,y,>)
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
-A1 a1,aes0,aes1,asc,ax,blw,cf,cpl,des,dsc,enl,enla,epr,exp,fir,flp,flr,frk,cB,cC,cD,cH,cI,cL,cS,grp,
- hex,js0,js1,kst,las,len,log,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sha1,sha256,sha3_256,sin,ser,spl,sqr,sqz,
+A1 a1,aes0,aes1,asc,ax,blw,cf,cpl,des,dsc,enl,enla,epr,expx,fir,flp,flr,frk,cB,cC,cD,cH,cI,cL,cS,grp,
+ hex,js0,js1,kst,las,len,logx,md5,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prs,rev,sha1,sha256,sha3_256,sinx,ser,spl,sqr,sqz,
  str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  sub,v0c,v1c,exc;

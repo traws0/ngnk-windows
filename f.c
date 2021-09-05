@@ -31,4 +31,4 @@ A2(fnd,
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=urnk(x),l=urnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(QUE,x,y))er2(x,y))
 
-A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes","e")Sf(x,y,des,js0,unh,aes1,log))et2(x,y))fnd(x,y))
+A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex","aes","e")Sf(x,y,des,js0,unh,aes1,logx))et2(x,y))fnd(x,y))
