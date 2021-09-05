@@ -8,9 +8,9 @@ S A scC(Cc    ,C*p,Ln)_(      Ax=oA;C*q;W((q=MC(p,c,n  )),xq(aCm(p,q));n-=q-p+1;
 S A sCC(C*s,Lm,C*p,Ln)_(El(!m)Ax=oA;C*q;W((q=MM(p,n,s,m)),xq(aCm(p,q));n-=q+m-p;p=q+m)xq(aCn(p,n)))
 S A sc(Cc    ,Ax)_(XC(x(scC(c,  xV,xn)))et1(x))A1(spl,sc(10,x))
 S A sC(C*s,Lm,Ax)_(XC(x(sCC(s,m,xV,xn)))et1(x))
-SN L jn(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
-A jc(Cc,   Ax)_(Ln=jn(1,x);Et(n<0,x)Ay=aC(n);C*p=yV;i(xn,I(i,*p++=c        )Az=xa;I(ztc,*p++=zv)E(Mc(p,zV,zn);p+=zn))x(y))
-A jC(Qs,Nm,Ax)_(Ln=jn(m,x);Et(n<0,x)Ay=aC(n);C*p=yV;i(xn,I(i,Mc(p,s,m);p+=m)Az=xa;I(ztc,*p++=zv)E(Mc(p,zV,zn);p+=zn))x(y))
+SN L jN(Lm,Ax/*0*/)_(P(!xtA,-1)Ln=(xn-!!xn)*m;i(xn,Ay=xa;P(!ytcC,-1)n+=yN)n)//total length or -1
+A jc(Cc,   Ax)_(Ln=jN(1,x);Et(n<0,x)Ay=aC(n);C*p=yV;i(xn,I(i,*p++=c        )Az=xa;I(ztc,*p++=zv)E(Mc(p,zV,zn);p+=zn))x(y))
+A jC(Qs,Nm,Ax)_(Ln=jN(m,x);Et(n<0,x)Ay=aC(n);C*p=yV;i(xn,I(i,Mc(p,s,m);p+=m)Az=xa;I(ztc,*p++=zv)E(Mc(p,zV,zn);p+=zn))x(y))
 S L cfm(OA*a/*0*/,In)_(Lm=-1;i(n,Ax=a[i];I(!xtt,Lv=xN;P(m>=0&&m-v,-2)m=v))m)
 S AX(eacm,Az=oS,b[8];i(n,Ay=a[i];I(ytm,z=cat(z,_R(yx))))z=unq(z);
  i(n,Ay=b[i]=a[i];I(ytm,Au=kv(&y);uq(id_(x,u));b[i]=ap1(u,fil(ai(yn),fnd(y,zR)))))Au=eac(x,b,n);u?am(z,u):z(u))
