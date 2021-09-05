@@ -16,7 +16,7 @@ W: #web server
 _/%.o:%.c *.h makefile o
 	@echo -n '$< ' && $(MD) _ && $(CC) @o -c $(O) $< -o $@
 _/%.s:%.c *.h makefile o
-	@echo    '$@ ' && $(MD) o && $(CC) @o -c $(O) $< -o $@ -S -masm=intel
+	@echo    '$@ ' && $(MD) _ && $(CC) @o -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
 	@echo '$@ ' && $(CC) @o $^ -static -o $@
 	@$(STRIP) -R .comment $@ # -R '.note*'
