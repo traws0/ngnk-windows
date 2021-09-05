@@ -14,7 +14,7 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 --------------------------------------------------------------------------------
 
 \   help               \\         exit
-\a  license(AGPL3)     \l file.k  load
+\a  license(AGPLv3)    \l file.k  load
 \0  types              \t:n expr  time(elapsed milliseconds after n runs)
 \+  verbs              \v         variables
 \:  I/O verbs          \f         functions
