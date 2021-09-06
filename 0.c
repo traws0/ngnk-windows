@@ -84,5 +84,5 @@ NWASM(
  V exit(Iv){LOGF(exit);js_exit(v);}
  I dup2(If,Iv)_(-1)I pipe(Iv[2])_(-1)I execve(Qp,char*O*a,char*O*e)_(-1)I fork()_(-1)I socket(Ii,Ij,Ik)_(-1)
  I setsockopt(If,I l,I s,OV*v,socklen_t n)_(-1)I connect(If,O ST sockaddr*s,socklen_t n)_(-1)I chdir(Qp)_(-1)
- char*getcwd(char*,I)_(-1)I getdents(If,char*s,Nn)_(-1)I ftruncate(If,off_t o)_(-1)
+ char*getcwd(char*s,Nn)_((V*)0)I getdents(If,char*s,Nn)_(-1)I ftruncate(If,off_t o)_(-1)
 #endif
