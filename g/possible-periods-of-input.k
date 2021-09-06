@@ -1,6 +1,6 @@
 #!../k
 /https://codegolf.stackexchange.com/questions/222905/possible-periods-of-input/222919#222919
-f:1+?{(++,\x)?x}',\
+f:1+?{((#x)#',\x)?x}',\
 
 \l 0.k
 t[1 1 2 1 1 2 1 3 1 3;1 3 8 10]
