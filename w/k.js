@@ -21,7 +21,8 @@ gs=p=>t0(gb(p)),
 s4=(p,x)=>new DataView(app.memory.buffer).setUint32(p,x,1),
 S4=(p,a)=>a.forEach((x,i)=>s4(p+4*i,x)),
 ma=n=>{heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>>16)+1);return heap-n},
-ms=s=>{s=t1(s);let p=ma(s.length);M(p,s.length).set(s);return p},
+msn=s=>{s=t1(s);let p=ma(s.length);M(p,s.length).set(s);return[p,s.length]},
+ms=s=>msn(s)[0],
 wa=_=>kw.then(x=>WebAssembly.instantiate(x,{env})).then(x=>{app=x.instance.exports;heap=app.__heap_base}),
 env={
  js_in:(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
@@ -55,7 +56,7 @@ rdy(_=>{
   ed.value=p0(location.hash.slice(1).replace(/-$/,''))
   const ev=_=>{w.then(_=>{
    const v=ed.value,s=v.slice(-1)==='\n'?v:v+'\n',p=p1(v);location.hash=p+'-';out.value='';ubc();
-   const f=app.open(ms('a.k\0'),514,438/*O_RDWR|O_CREAT,0666*/);app.write(f,ms(s),s.length);app.close(f)
+   const f=app.open(ms('a.k\0'),514,438/*O_RDWR|O_CREAT,0666*/),[q,nq]=msn(s);app.write(f,q,nq);app.close(f)
    const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16
    let e;try{app.main(2,a)}catch(x){e=x}
    location.hash=p;w=wa();if(e&&e.message!=='exit(0)')throw e})}
