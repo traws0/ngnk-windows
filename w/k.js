@@ -65,8 +65,8 @@ rdy(_=>{
   bEval.onclick=ev
   bCGCC.onclick=_=>{const s=ed.value,h='ngn-'+hx8(hsh(s)),g=ubc()
    cpy(out.value=`# [K (ngn/k)], ${g.length} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
-    `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: https://ngn.bitbucket.io/k#${p1(s)}\n`)}
+    `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: https://ngn.codeberg.page/k#${p1(s)}\n`)}
   bChat.onclick=_=>{const s=ed.value,g=ubc(),u=g.replace(/`/g,'\\`').replace(/\\$/,'\\ ')
-   cpy(out.value=`ngn/k, ${g.length} bytes: [\`${u}\`](https://ngn.bitbucket.io/k#${p1(s)})`)}
+   cpy(out.value=`ngn/k, ${g.length} bytes: [\`${u}\`](https://ngn.codeberg.page/k#${p1(s)})`)}
   ed.onkeydown=x=>{const b={1013:bEval,1071:bCGCC,1072:bChat}[kc(x)];if(b){b.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)}})
