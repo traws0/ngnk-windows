@@ -18,19 +18,19 @@ S A1(cr,/*0*/I o=xo;
  Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(xv=='o',h(bo);x)hc(AO(0,xR));h(bu|APN-av);x)
  XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);x)hc(get(x,0));x)
  P(!xtA||!xn,hc(x-PLH?xR:au);x)
- Nn=xn;Au=xx;
- P(u==PRG,i(n-1,I(i,h(bp))N(cr(xA[i+1])))x)
- P(n<2,hc(uR);x)
- P(n==3&&(utu||u==av)&&asg(xy),N(cr(xz));N(cl(x,xy)))
- P(n>3&&u==CST,n--;I p[n];A*a=xA;i(n&~1,N(cr(*++a));h(i&1?bj:bz);p[i]=_n(fb);h(0))N(cr(n&1?*++a:au));Az=fb;
+ Nn=xn;Ay=xx;
+ P(y==PRG,i(n-1,I(i,h(bp))N(cr(xA[i+1])))x)
+ P(n<2,hc(yR);x)
+ P(n==3&&(ytu||y==av)&&asg(xy),N(cr(xz));N(cl(x,xy)))
+ P(n>3&&y==CST,n--;I p[n];A*a=xA;i(n&~1,N(cr(*++a));h(i&1?bj:bz);p[i]=_n(fb);h(0))N(cr(n&1?*++a:au));Az=fb;
   i(n&~1,I d=(i&1?zn:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
- I(n==2&&u==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,N(cr(zy));h(bu|LAS-au);x))
- I(n==2&&utw,Az=xy;P(!ztA&&!ztsS,zR;hc(app(u,&z,1));x))
+ I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,N(cr(zy));h(bu|LAS-au);x))
+ I(n==2&&ytw,Az=xy;P(!ztA&&!ztsS,zR;hc(app(y,&z,1));x))
  I p=0;i(n-1,Az=xA[n-1-i];z==PLH?(p=1),hc(PLH):N(cr(z)))
  P(p,N(cr(xx));h(bP);h(n-1);x)
- P(u==MKL,h(bl);h(n-1);x)
- P(n==2&&utu,h(bu|uv);x)
- P(n==3&&utv,h(bv|uv);x)
+ P(y==MKL,h(bl);h(n-1);x)
+ P(n==2&&ytu,h(bu|yv);x)
+ P(n==3&&ytv,h(bv|yv);x)
  N(cr(xx));h(ba);h(n-1);x)
 S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,x)0)
@@ -40,6 +40,7 @@ A1(cpl,Ik=xk;Ay=get(x,1)/*ast*/;fs=get(x,0);fb=oC;fm=oC;fl=las(x);fc=a1(au);Ms(f
  y=cf(y);I r=!!cr(y);I o=0;h(bu);y=y(fb);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))r?AK(k,aV(to,5,A(fs,fb,fm,fl,fc))):0)
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
+SN V rne(Ax/*0*/){Ay=xy,z=xz;Im=_n(xA[3]);eS(_R(xx),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0)))}
 S A1(vm,/*0*/W(1,UC b=*c++;
  I(b>=bm,I(b>=bc,Ay=xA[4]/*fc*/;p(_R(yA[b-bc])))
         EI(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au;*s=au;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av+*c++,z),4))),y)))
@@ -51,6 +52,5 @@ S A1(vm,/*0*/W(1,UC b=*c++;
         EI(b==b4,s+=3;N(*s=dmd(s-3,4))))
  EI(b>=bs,A*v=l-b%16,x=*v;I(b>=bd,p(x);*v=au)EI(b>=bg,p(xR))E(x=x(*v=_R(*s))))
  EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))EI(b,N(*s=v1[b](*s)))E(_(*s)))0)
-AX(run,Q(xto);Q(n==xk);A fs=xx,fb=xy,fm=xz,fl=xA[3];P(s<s0+16,esn(n,a))
- p((A)c);p((A)l);p(x);c=_V(fb);l=s-1;Im=_n(fl);i(n,p(a[i]))i(m-n,p(au))
- Au=vm(x);I(!u,Ay=fb,z=fm;eS(_R(fs),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0))))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();u)
+AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(xy);l=s-1;i(n,p(a[i]))Im=_n(xA[3]);i(m-n,p(au))
+ Ay=vm(x);I(!y,rne(x))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();y)
