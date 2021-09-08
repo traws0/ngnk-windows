@@ -20,7 +20,7 @@ S AAL(rmv,XT(P(!in(i,xn),x)Ay=atn(xt,xn-1);Mc(yV,xV,i*xW);Mc(yV+i*xW,xV+i*xW+xW,
 A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am(Nz(cut(x,y)),Nx(cut(z,y))))
  YMT(K("{y$[|/0<':x,#y;`err\"dom\";x+!'1_-':x,#y]}",Ny(cL(x)),y))Ym(K("{((!y)^x)#y}",x,y))Yz(rmv(x,gl(y)))et2(x,y))
 A1(enl,Xi(Iv=xv;aV(v==(B)v?tB:v==(H)v?tH:tI,1,&v))Xl(Lv=*xL;v==(I)v?enl(x(ai(v))):AT(tL,mut(x)))Xd(AT(tD,mut(x)))
- P(xtzc||xts,aV(tT(xt),1,&x))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
+ P(xtzc||xts,aV(TT[xt],1,&x))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
 A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);amd(A(x,y,av,z),4))Ed(!mtc_(xx,yx),x,y)
@@ -29,7 +29,7 @@ A2(cat,
  Nm=xn,n=yn;x=room(m+n,x);Mc(xV+m*xW,yV,n*xW);y(!ytA?0:yr-1?mRa(y):AN(0,y));x)
 A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,get(yy,i)))y(x))
  Q(xtT);P(xtZ&&ytz,N(sup(&x,&y));ytP?apv(x,&y):y(apv(x,yV)))
- P(!xtA&&(!ytt||xt-tT(yt)),cat(x,enl(y)))P(!xn,enl(x(y)))Lv=xtA?(L)y:gl(y);apv(x,&v))
+ P(!xtA&&(!ytt||xt-TT[yt]),cat(x,enl(y)))P(!xn,enl(x(y)))Lv=xtA?(L)y:gl(y);apv(x,&v))
 A apv(Ax,OV*v )_(Q(xtT);Nn=xn;x=room(n+1,x);Mc(xV+n*xW,v,xW);x)
 A apc(Ax,Cc   )_(Q(xtC);Nn=xn;x=room(n+1,x);xC[n]=c;x)
 A cts(Ax,Qs,Nm)_(Q(xtC);Nn=xn;x=room(n+m,x);Mc(xV+n,s,m);x)

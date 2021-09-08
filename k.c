@@ -48,7 +48,7 @@ A2(ap1,x(app(x,&y,1)))
 A2(apn,Ym(et2(x,y))Nn=yN;P(!n,y(x))Ez(n>8,x,y)y=mRa(Nx(blw(y)));x(y(app(x,yA,n))))
 S I knd(Ax)_(Xz(ti)XZ(tI)xt)
 S A set(Ax,Li,Ay)_(Q(xr==1);XA(Az=xa;xa=z(y);ytt&&!ytF?sqz(x):x)P(knd(x)-knd(y)-tC+tc,set(blw(x),i,y))
- I(xtZ,N(sup(&x,&y)))C w=Zt[xt];w==0?xb=yv:w==1?xh=yv:w==2?xi=yv:(xl=gl(y));x)
+ I(xtZ,N(sup(&x,&y)))C w=Tz[xt];w==0?xb=yv:w==1?xh=yv:w==2?xi=yv:(xl=gl(y));x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;Ed(!ytm,x)**p=y=mut(y);Az=yx;Ed(!ztS,x)Lj=fpI(&yx,xI[i+1]);
  z=yy;Ed(!ztA,x)yy=j==zn?zq(aa0()):mut(z);Q(_r(yy)==1);*p=(A*)_V(yy)+j;1)
 S A*pth(Ax/*1*/)_(x=enla(x);Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj=fpI(&yx,*xI);
@@ -72,4 +72,4 @@ AA(dmn,Ax=*a,y=a[1],z=a[2];Lm=yN;P(!m||y==au,y(0);Ab8;*b=x;Mc(b+1,a+3,(n-3)*8);z
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,z,a[3]))P(n==3,K("{@[x;*y;.[;1_y;z]]}",x,y,z))enn(n,a))
 AA(dmd,Ax=*a,y=a[1],z=a[2];n==3&&xtF?try(x,y,z):xtsS?mnd(a,n,dmn):dmn(a,n))
 A K0(A*p,Qs,OA*a,In)_(Ax=*p;I(!x,x=*p=N(val(aCz(s)));cns=apd(cns,x))n?app(x,a,n):x)
-OC Zt[]={Tz},ZT[]={TZ};
+OC Tz[]={Tzv},TZ[]={TZv},TT[]={TTv};

@@ -24,10 +24,10 @@ I urnk(Ax/*0*/)_(XA(xn?urnk(xx)+1:2)XmM(urnk(xy))xtT)//assuming unirank
 S A2(sdf,K("{a:&/x;b:1+|/x;@[(b-a)#0N;|x-a;:;|!#x]y-a}",x,y)) //small-domain find
 A2(fnd,
  P(xtT&&!xtA&&!ytmMA,
-  P(xtZ&&ytzZ||xt==tT(yt),
-   P(Zt[xt]<2&&xn>99&&yN>99,sdf(x,y))
-   V(f,CH(Zt[xt],&fB,fH,fI,fL))Yt(x(az(f(xV,xn,gl(y)))))
-   Az=aL(yn);Ii=Zt[yt];x2(y2(CH(i,&FB,FH,FI,FL)(xV,xn,f,yV,yn,zV);z)))
+  P(xtZ&&ytzZ||xt==TT[yt],
+   P(Tz[xt]<2&&xn>99&&yN>99,sdf(x,y))
+   V(f,CH(Tz[xt],&fB,fH,fI,fL))Yt(x(az(f(xV,xn,gl(y)))))
+   Az=aL(yn);Ii=Tz[yt];x2(y2(CH(i,&FB,FH,FI,FL)(xV,xn,f,yV,yn,zV);z)))
   Az=cn[tl];zR;x(y(ytt?z:rshN(yN,z))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=urnk(x),l=urnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear(QUE,x,y))er2(x,y))
