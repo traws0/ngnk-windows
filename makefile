@@ -4,7 +4,7 @@ MD= >/dev/null mkdir -pv
 STRIP ?= strip
 
 t:k #test
-	@+$(MAKE) -sC t && g/0.sh && $(MAKE) -sC a19 && $(MAKE) -sC a20 && $(MAKE) -sC e
+	@+$(MAKE) -sC t && g/0.sh && a19/a.sh && a20/a.sh && e/a.sh
 c: #clean
 	@rm -rfv _ k libk.so k32 t/t
 w: #wasm
