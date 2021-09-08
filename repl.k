@@ -150,8 +150,6 @@ Special symbols:
 `argv[] list of cmd line args
  `env[] dict of env variables
  `err@C throw error
- `md5@C `sha1@C `sha2@C `sha3@C               hashes
- `aes@(key;plaintext) `aes?(key;ciphertext)   encrypt/decrypt (ECB mode only)
 --------------------------------------------------------------------------------
 \'
 Adverbs:   ' / \ ': /: \:
