@@ -1,12 +1,13 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 //prng: xoshiro256+ (public domain) http://vigna.di.unimi.it/xorshift/ seeded with the central column of rule30, little-endian:
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
-S UL r1()_(S UL a=0xd5a986ae75c9a33b,b=0x1016d8e3483a8f0f,c=0x81f9e6260eb8e5df,d=0xfa9b718d8d0769bf;
- Lv=b<<17;c^=a;d^=b;b^=c;a^=d;c^=v;d=rot(d,45);a+d)
-S UI rm(UL m)_((UI)r1()*m>>32)
+S UL a[]={0xd5a986ae75c9a33b,0x1016d8e3483a8f0f,0x81f9e6260eb8e5df,0xfa9b718d8d0769bf};
+UL rnd1()_(Lv=a[1]<<17;a[2]^=a[0];a[3]^=a[1];a[1]^=a[2];a[0]^=a[3];a[2]^=v;a[3]=rot(a[3],45);a[0]+a[3])
+AQ(cmdS,Ax=N(val(aCl(s)));P(xtl&&*xL==NL,x(0);aV(tL,4,a))XzZ(x=cL(rshN(4,x));Mc(a,xV,SZ a);x(0);au)P(x==au,en0())et1(x))
+S UI rm(UL m)_((UI)rnd1()*m>>32)
 S V shf(L*r,Nn){i(n,Ij=rm(i+1);SWP(r[i],r[j]))}
 S A ro(UL n,UL m)_(Ct=m?tZ(m-1):tL;Ax=atn(t,n);P(t==tB,i(n,xb=rm(m))x)P(t==tH,i(n,xh=rm(m))x)P(t==tI,i(n,xi=rm(m))x)
- i(n,xl=r1())I(m,i(n,xl=(UL)xl%m))x)
+ i(n,xl=rnd1())I(m,i(n,xl=(UL)xl%m))x)
 S A de(UL n,UL m)_(El(n>m)Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xV,n);x)
 S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
 AL(rndD,add(ai(-1),AT(tD,add(al(1023ll<<52),N(rd(n,1ll<<52))))))
