@@ -19,9 +19,9 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 \0  types              \t:n expr  time(elapsed milliseconds after n runs)
 \+  verbs              \v         variables
 \:  I/O verbs          \f         functions
-\'  adverbs            \cd path   change directory
-\`  symbols            \other     command(through /bin/sh)
-\h  summary
+\'  adverbs            \S seed    set PRNG seed (get seed: \S 0N)
+\`  symbols            \cd path   change directory
+\h  summary            \other     command(through /bin/sh)
 --------------------------------------------------------------------------------
 \0
 Types: ACBHILDSMmcildsopqruvw
