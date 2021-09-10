@@ -2,7 +2,7 @@
 L absL(Lv)_(v<0?-v:v)C hx1(Ii)_(i+(i>9?'a'-10:'0'))I in(Li,UL n)_(i<n)I c3(Cc,Cv,Cd)_(c<=v&&v<=d)
 I c09(Cc)_(c3('0',c,'9'))I caf(Cc)_(c3('a',c,'f'))I cAz(Cc)_(c3('a',c|32,'z'))I cA9(Cc)_(cAz(c)||c09(c))
 I cAZ(Cc)_(c3('A',c,'Z'))I cAF(Cc)_(c3('A',c,'F'))I cAf(Cc)_(c3('a',c|32,'f'))
-S I num(Qs)_(c09(s[*s=='-']))I si(Qs,Iv)_(SC0(s,v)-(C*)s)S D p10(In)_(Dv=1;i(n,v*=10)v)
+S I num(Qs)_(c09(s[*s=='-']))I si(Qs,Iv)_(SC0(s,v)-(char*)s)S D p10(In)_(Dv=1;i(n,v*=10)v)
 L pu(Q*p)_(Qs=*p;Lv=0;Cc=*s;W(c09(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(Q*p)_(Im=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
  I(c=='.',c=*++s;W(c09(c),I(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))I(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
