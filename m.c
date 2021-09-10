@@ -42,7 +42,7 @@ S AQ(cmdt,Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(ap
 AQ(cmdl,Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xV;I(!MQ(p,"#!",2),p=SC0(p+2,10))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||si(" }",q[1])<2),q++)Nx(ln(p,q));p=q+!!*q)x(au))
 A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)P(c=='c'&&d=='d'&&SC("\n :",s[3]),cmdcd(s+3))
- P(cA9(c)&&SC("\n :",d),CH(si("lmSt",c),&cmdl,cmdm,cmdS,cmdt,cmdx)(s+2+(d==32)))K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
+ P(cA9(c)&&SC("\n :",d),CH(si("lmt",c),&cmdl,cmdm,cmdt,cmdx)(s+2+(d==32)))K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;

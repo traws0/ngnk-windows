@@ -3,7 +3,7 @@
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S UL a[]={0xd5a986ae75c9a33b,0x1016d8e3483a8f0f,0x81f9e6260eb8e5df,0xfa9b718d8d0769bf};
 UL rnd1()_(Lv=a[1]<<17;a[2]^=a[0];a[3]^=a[1];a[1]^=a[2];a[0]^=a[3];a[2]^=v;a[3]=rot(a[3],45);a[0]+a[3])
-AQ(cmdS,Ax=N(val(aCl(s)));P(xtl&&*xL==NL,x(0);aV(tL,4,a))XzZ(x=cL(rshN(4,x));Mc(a,xV,SZ a);x(0);au)P(x==au,en0())et1(x))
+A1(prng,P(x==au,aV(tL,4,a))XzZ(x=cL(rshN(4,x));Mc(a,xV,SZ a);x(au))et1(x))
 S UI rm(UL m)_((UI)rnd1()*m>>32)
 S V shf(L*r,Nn){i(n,Ij=rm(i+1);SWP(r[i],r[j]))}
 S A ro(UL n,UL m)_(Ct=m?tZ(m-1):tL;Ax=atn(t,n);P(t==tB,i(n,xb=rm(m))x)P(t==tH,i(n,xh=rm(m))x)P(t==tI,i(n,xi=rm(m))x)

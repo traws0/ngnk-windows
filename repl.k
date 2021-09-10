@@ -19,9 +19,9 @@ $["k.wasm"~`argv 0;;{x}{repl.line@1:`}/1];
 \0  types              \t:n expr  time(elapsed milliseconds after n runs)
 \+  verbs              \v         variables
 \:  I/O verbs          \f         functions
-\'  adverbs            \S seed    set PRNG seed (get seed: \S 0N)
-\`  symbols            \cd path   change directory
-\h  summary            \other     command(through /bin/sh)
+\'  adverbs            \cd path   change directory
+\`  symbols            \other     command(through /bin/sh)
+\h  summary
 --------------------------------------------------------------------------------
 \0
 Types: ACBHILDSMmcildsopqruvw
@@ -149,6 +149,8 @@ Special symbols:
    `t[] current time (milliseconds)
 `argv[] list of cmd line args
  `env[] dict of env variables
+`prng[] `prng@I get/set pseudo-random number generator internal state
+                     s:`prng[];r:9?0;`prng s;r~9?0 -> 1
  `err@C throw error
 --------------------------------------------------------------------------------
 \'
