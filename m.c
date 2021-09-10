@@ -42,7 +42,7 @@ S AQ(cmdt,Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(ap
 AQ(cmdl,Ax=N(u1c(aCl(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;Qp=xV;I(!MQ(p,"#!",2),p=SC0(p+2,10))
  W(*p,Qq=p=skp(p);W(*q&&(*q-10||si(" }",q[1])<2),q++)Nx(ln(p,q));p=q+!!*q)x(au))
 A evs(Qs,Qq)_(P(*s-'\\',val(aCm(s,q)))Cc=s[1],d=s[2];P(c=='\\',exit(0);0)P(c=='c'&&d=='d'&&SC("\n :",s[3]),cmdcd(s+3))
- P(cA9(c)&&SC("\n :",d),CH(si("lmt",c),&cmdl,cmdm,cmdt,cmdx)(s+2+(d==32)))K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
+ P(cA9(c)&&SC("\n :",d),CH(si("ltm",c),&cmdl,cmdt,cmdm,cmdx)(s+2+(d==32)))K("0x0a\\`x(,,\"/bin/sh\"),,:",aCl(s+1)))
 S I ln(Qp,Qq)_(Ax=evs(p,q);x=x?out(x):0;x?x(1):epr(0))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
@@ -62,13 +62,15 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=
 #define hs(x) {Mc(s,x,SZ(x)-1);s+=SZ(x)-1;}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;a;hs("\n\0");write(1,b,s-b);}
-C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
-A1(hx,hb(s=h8(s,x);hS(" U",xU);Ct=xC[-15];hs(" t");I(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))
- hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,xZ/8),hs(" ");s=h8(s,xl)))x)
-AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
-// In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
-// hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
-// hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
- obs(I(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
- obs(I(xr-xm,hb(hs("bad refc:"));hx(x)));
- xys(I(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));au)
+DBG(
+ C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
+ A1(hx,hb(s=h8(s,x);hS(" U",xU);Ct=xC[-15];hs(" t");I(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))
+  hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,xZ/8),hs(" ");s=h8(s,xl)))x)
+ AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
+ // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
+ // hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
+ // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
+  obs(I(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
+  obs(I(xr-xm,hb(hs("bad refc:"));hx(x)));
+  xys(I(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));au))
+NDBG(AQ(cmdm,au))
