@@ -3,7 +3,7 @@ S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))S AA(___,ern(n,a))VS
 A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 AX(prj,XA(app(x,a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
- Ay=(xtp?val:a1)(xR);Ii=0,j=1;W(i<n&&j<yn,I(yA[j]==PLH,yA[j]=a[i++])j++)W(i<n,yq(a[i++]))AT(tp,AK(k,y)))
+ x=(xtp?val:a1)(xR);Ii=0,j=1;W(i<n&&j<xn,I(xA[j]==PLH,xA[j]=a[i++])j++)W(i<n,xq(a[i++]))P(xn>9,ez1(x))AT(tp,AK(k,x)))
 AAL(get,/*0*/XA(_R(xa))XC(ac(xc))XB(ai(xb))XH(ai(xh))XI(ai(xi))XL(al(xl))XD(ad(xd))XS(as(xi))Xm(get(xy,i))
  XM(Ay=xy,z=aA(yn);Q(ytA);j(zn,zA[j]=get(yA[j],i))am(_R(xx),sqz(z)))xR)
 S AAL(getr,/*0*/xtt||in(i,xN)?get(x,i):xN?mkn(get(x,0)):xtm?getr(xy,i):_R(cn[xt]))A1(fir,x(getr(x,0)))A1(las,x(getr(x,xN-1)))
