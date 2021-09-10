@@ -34,8 +34,8 @@ ALA(room,P(xr==1&&n*xW<=xZ,AN(n,x))Ay=atn(xt,n);Mc(yV,xV,xn*xW);I(ytR,I(xr==1,AN
 L gl_(Ax)_(XP((I)x)*xL)L gl(Ax)_(Lv=gl_(x);x(0);v)D gd(Ax)_(Dv=*xD;x(0);v)
 
 S B s0[1<<16],*s1=s0+1;C*syp(L*p)_(*p<0?s0-*p:(V*)p)
-I syP(Qs)_(In=Sn(s)+1;P(n<6&&(n<5||!(s[3]&128)),Lv=0;Mc(&v,s,n);v)Qp=s0+1;W(p<s1,P(!SQ(p,s),s0-p)p+=Sn(p)+1)
- P(s1+n>s0+SZ s0,die("syms oom\n"))Mc(s1,s,n);s1+=n;s0-s1+n)
+AQ(syP,In=Sn(s)+1;P(n<6&&(n<5||!(s[3]&128)),Lv=0;Mc(&v,s,n);as(v))Qp=s0+1;W(p<s1,P(!SQ(p,s),as(s0-p))p+=Sn(p)+1)
+ P(s1+n>s0+SZ s0,die("syms oom\n"))Mc(s1,s,n);s1+=n;as(s0-s1+n))
 
 S Q skp(Qs)_(W(!MQ(s,"/\n",2),Qp=SS(s+1,"\n\\\n");s=p?p+3:s+Sn(s))s)S I ln(Q,Q);S AQ(cmdx,en0())
 S AQ(cmdt,Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cpl(N(prs(aCl(s)))));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))

@@ -15,7 +15,7 @@ S A0(pC,Ax=oC;Cc=*++s;W(c&&c-'"',I(c=='\\',c=*++s;Ii=si("tnr0",c);I(i<4,c="\t\n\
 S C ph()_(Cc=*s;c09(c)?c-'0':caf(c)?c+10-'a':16)
 S A0(p0x,Ax=oC;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
 S A0(ps,Qp=s;Cc=*s;I(c&128,W((c=*++s)>>6==2)s+=c==':')EI(c==':',W(cA9(c=*++s)||si("./:",c)<3))E(W(cA9(c),c=*++s))aCm(p,s))
-S A pS(Cc)_(Ax=oS;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);y(xq(as(syP(yV))));P(*s-c,x)++s)0)
+S A pS(Cc)_(Ax=oS;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);y(xq(syP(yV)));P(*s-c,x)++s)0)
 S A lam(Ik,Ax,Ay,Az)_(AK(k,a3(x,y,z))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];I(ytA&&yn>2,Az=yx;I((z==av||ztu)&&asg(yy),xq(au)))x) //if last is assignment, return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
@@ -29,7 +29,7 @@ S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='
  P(cAz(c),Qp=s;x=pS('.');I(s-p==1&&c3('y',c,'z'),nx=max(nx,c-'w'))AO(p-s0,p1(x)))P(c>127,Qp=s;x=pS('.');*v=1;AO(p-s0,p1(x)))
  Ii=si("'/\\",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw+i+3*h)i=si(vc,c);P(i>19,PLH)I u=*++s==':';s+=u;*v=1;AT(tv-u,i))
 S A1(mon,P(xtv,x^au^av)P(xtA&&(xn==2&&xx==aw||xn==3&&xx==COM),x=mut(x);xA[xn-1]=mon(xA[xn-1]);x)
- P(xts,Lv=xv;Qs=syp(&v);Nn;P((*s&128)&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;as(syP(b)))x)x)
+ P(xts,Lv=xv;Qs=syp(&v);Nn;P((*s&128)&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;syP(b))x)x)
 S A pT(C*v)_(Ax=N(pt(v));
  W(1,Cc=*s;Ii=si("'/\\[",c);P(i>3,x)s++;
   I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au)E(xx=mon(xx)))*v=0)
