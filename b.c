@@ -9,9 +9,9 @@ S A2(cl,/*0*/I o=xo;
  P(yts&&xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
  P(yts,hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(xx));x)
  P(ytS,hc(av);hc(au);hc(yR);h(b4);x)
- P(ytA&&_t(yx)==ts,i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);
-          Ik=_v(yx);Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(xx));x)
- P(ytA&&_t(yx)==tS,hc(av+_v(xx));i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);hc(_R(yx));h(b4);x)
+ P(ytA&&(xx==av||_t(xx)==tu)&&_t(yx)==ts,i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);
+  Ik=_v(yx);Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(_v(xx));x)
+ P(ytA&&(xx==av||_t(xx)==tu)&&_t(yx)==tS,hc(av+_v(xx));i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);hc(_R(yx));h(b4);x)
  P(ytA&&yx==MKL,h(bL);h(yn-1);i(yn-1,N(cl(x,yA[i+1]));h(bp))x)
  eS(_R(fs),o);ec0())
 S A1(cr,/*0*/I o=xo;
