@@ -62,15 +62,13 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=
 #define hs(x) {Mc(s,x,SZ(x)-1);s+=SZ(x)-1;}
 #define hS(x,y) {hs(x);s=sl(s,y);}
 #define hb(a...) {Cb[128],*s=b;a;hs("\n\0");write(1,b,s-b);}
-DBG(
- C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
- A1(hx,hb(s=h8(s,x);hS(" U",xU);Ct=xC[-15];hs(" t");I(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))
-  hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,xZ/8),hs(" ");s=h8(s,xl)))x)
- AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
- // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
- // hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
- // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
-  obs(I(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
-  obs(I(xr-xm,hb(hs("bad refc:"));hx(x)));
-  xys(I(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));au))
-NDBG(AQ(cmdm,au))
+C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
+A1(hx,hb(s=h8(s,x);hS(" U",xU);Ct=xC[-15];hs(" t");I(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))
+ hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,xZ/8),hs(" ");s=h8(s,xl)))x)
+AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
+// In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
+// hb(hs("cns:");s=h8(s,cns);hs(", glb:");s=h8(s,glb));
+// hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
+ obs(I(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
+ obs(I(xr-xm,hb(hs("bad refc:"));hx(x)));
+ xys(I(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));au)
