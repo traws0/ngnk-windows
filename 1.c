@@ -18,11 +18,5 @@ R1(flr,XC(fx(flrC,x))Xc(fir(flr(enl(x))))XzZ(x)XsS(cS(flr(str(x))))
  x=N(cD(x));Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))
 
 #define sqrd __builtin_sqrt
-S D sinxd(D x)_( //mooooo.ooo/chebyshev-sine-approximation (public domain: /about)
- S O D pi=3.14159265358979323846,d=pi-8.742277657347586e-8,a[]={1.32913446369766718e-10,-2.33177897192836082e-8,
-  2.52229235749396866e-6,-1.7350505791248e-4,0.00662087952180793,-0.10132118334670907};
- P(x<0,-sinxd(-x))I(x>pi,x-=pi*(L)(x/pi))D q=x*x,v=0;i(6,v=v*q+a[i])(x-d)*(x+d)*v*x)
-S D expxd(D x)_(0) //todo
-S D logxd(D x)_(0) //todo
 #define h(f) F1(f,D,f##d(a[i])) R1(f,fx(f##D,N(cD(x))))
-h(sqr)h(sinx)h(expx)h(logx)
+h(sqr)
