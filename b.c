@@ -10,7 +10,7 @@ S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);
  P(yts,hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
  P(ytS,hc(av+v);hc(au);hc(yR);h(b4);x)
  P(ytA&&_t(yx)==ts,i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);
-  Ik=_v(yx);Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
+  Li=fAI(fl,_v(yx));I(i<0,hc(yx);h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
  P(ytA&&_t(yx)==tS,hc(av+v);i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);hc(_R(yx));h(b4);x)
  P(ytA&&yx==MKL,h(bL);h(yn-1);i(yn-1,N(cl(x,yA[i+1]));h(bp))x)
  eS(_R(fs),o);ec0())
