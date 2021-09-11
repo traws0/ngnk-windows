@@ -30,5 +30,5 @@ d("E@(a...) E_(@,a)" ;"cdilnoprstvz")   /errors
 d("$@(a...) P(%t@,a)";T,K,(+|_:\"CILDSZM")," "\"mt MT mMA ZD zd ZC zc ZDC";"XY")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdt ILN:ijkmn CBHILD:v I:f A:xyzu O:ACV Q:spq"; /c type+var
 f:{r,:"|"\x/"@"\"#ifdef ",y,"| #define  @(a...) a| #define N@(a...)|#else| #define  @(a...)| #define N@(a...) a|#endif"}
-f/'$(`DBG`DEBUG;`FBSD`"__FreeBSD__";`I386`i386;`WASM`wasm);
+f/'$(`DBG`DEBUG;`FBSD`"__FreeBSD__";`I386`i386;`WASM`wasm;`LIBC`libc);
 "g.h"0:r

@@ -36,13 +36,6 @@
 #define EX extern
 #define Q(x) DBG(I(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
 #define Ab8 A b[8];
-#ifdef libc
- #define LIBC(x) x
- #define NLIBC(x)
-#else
- #define LIBC(x)
- #define NLIBC(x) x
-#endif
 
 TD void V;TD char B;TD char unsigned C,UC;TD O char*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
 TD long long L;TD double D;TD size_t N;

@@ -491,3 +491,10 @@
  #define  WASM(a...)
  #define NWASM(a...) a
 #endif
+#ifdef libc
+ #define  LIBC(a...) a
+ #define NLIBC(a...)
+#else
+ #define  LIBC(a...)
+ #define NLIBC(a...) a
+#endif
