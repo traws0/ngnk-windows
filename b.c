@@ -2,18 +2,19 @@
 //bu,bv:apply unary|binary verb;bs,bg,bd:set|get|delete local;bm,bM:l|glb modified assign;bl:list,bL:unlist
 //ba:n-adic apply;bP:projection;bz:branch if falsey;bj:jmp,bp:pop;b4:tetradic dot;bc:load constant
 enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=0x80,bC=0xff};
-#define h(a) ({fb=apc(fb,(C)(a));fm=apc(fm,o);}) //add instruction
-#define hc(a) ({Ij=bc+fpA(&fc,a);Ez(j>bC)h(j);}) //add a "load constant" instruction
-S A fs,fb,fm,fl,fc;S I fu[16];S A1 cr;I asg(Ax)_(xtA||xtsS)
+#define h(a) {fb=apc(fb,(C)(a));fm=apc(fm,o);} //add instruction
+#define hc(a) {Ij=bc+fpA(&fc,a);Ez(j>bC)h(j);} //add a "load constant" instruction
+S A fs,fb,fm,fl,fc;S I fu[16];S A1 cr;I asg(Ax)_(xtA||xtsS)S A eco(I o)_(eS(_R(fs),o);ec0())
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);
- P(yts&&xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
- P(yts,hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
- P(ytS,hc(av+v);hc(au);hc(yR);h(b4);x)
- P(ytA&&_t(yx)==ts,i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);
-  Li=fAI(fl,_v(yx));I(i<0,hc(yx);h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
- P(ytA&&_t(yx)==tS,hc(av+v);i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);hc(_R(yx));h(b4);x)
- P(ytA&&yx==MKL,h(bL);h(yn-1);i(yn-1,N(cl(x,yA[i+1]));h(bp))x)
- eS(_R(fs),o);ec0())
+ Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
+    hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
+ YS(hc(av+v);hc(au);hc(yR);h(b4);x)
+ YA(P(!yn,eco(o))Az=yx;
+    P(zt==ts,i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);Li=fAI(fl,zv);I(i<0,hc(z);h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
+    P(zt==tS,hc(av+v);i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);hc(zR);h(b4);x)
+    P(z==MKL&&xx==av,h(bL);h(yn-1);i(yn-1,N(cl(x,yA[i+1]));h(bp))x)
+    eco(o))
+ eco(o))
 S A1(cr,/*0*/I o=xo;
  Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(xv=='o',h(bo);x)hc(AO(0,xR));h(bu|APN-av);x)
  XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);x)hc(get(x,0));x)
@@ -26,7 +27,7 @@ S A1(cr,/*0*/I o=xo;
   i(n&~1,I d=(i&1?zn:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
  I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,N(cr(zy));h(bu|LAS-au);x))
  I(n==2&&ytw,Az=xy;P(!ztA&&!ztsS,zR;hc(app(y,&z,1));x))
- I p=0;i(n-1,Az=xA[n-1-i];z==PLH?(p=1),hc(PLH):N(cr(z)))
+ I p=0;i(n-1,Az=xA[n-1-i];I(z==PLH,p=1;hc(PLH))E(N(cr(z))))
  P(p,N(cr(xx));h(bP);h(n-1);x)
  P(y==MKL,h(bl);h(n-1);x)
  P(n==2&&ytu,h(bu|yv);x)
