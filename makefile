@@ -13,14 +13,14 @@ c: #clean
 	rm -rfv _ k libk.so k32 t/t
 .PHONY: t c w h
 
-_:
-	mkdir _
-_/%.o:%.c *.h makefile opts _
+_/%.o:%.c *.h makefile opts
+	@mkdir -p _
 	$(CC) @opts -c $(O) $< -o $@
-_/%.s:%.c *.h makefile opts _
+_/%.s:%.c *.h makefile opts
+	@mkdir -p _
 	$(CC) @opts -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
-	$(CC) -nostdlib -Dnostdlib -ffreestanding @opts $^ -static -o $@ -lm
+	$(CC) -nostdlib -Dnostdlib -ffreestanding @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
 k1:$(patsubst %.c,_/%.o,$(wildcard *.c))
 	$(CC) @opts $^ -static -o $@ -lm
