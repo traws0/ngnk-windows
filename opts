@@ -1,5 +1,7 @@
 -nostdlib
+-Dnostdlib
 -ffreestanding
+
 -fno-math-errno
 -fno-stack-protector
 -fomit-frame-pointer
