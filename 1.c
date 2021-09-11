@@ -1,4 +1,5 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
+#include<math.h> // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
+#include"a.h"
 #define hf(f,T,e...) S N f(OV*RE a0,V*RE r0,Nn)_(O T*a=a0;T*r=r0;LN(a)LN(r)e)
 #define NG(T) hf(neg##T,T,Ni=0;\
  W(i<n,I o=0;j(ZA/SZ(T),o|=a[j]==(T)(1<<SZ(T)*8-1))P(o,i)j(ZA/SZ(T),r[j]=-a[j])a+=ZA/SZ(T);r+=ZA/SZ(T);i+=ZA/SZ(T))n)
@@ -17,6 +18,7 @@ R1(nul,XF(x(ai(x==au)))eql(_R(cn[xt]),x))
 R1(flr,XC(fx(flrC,x))Xc(fir(flr(enl(x))))XzZ(x)XsS(cS(flr(str(x))))
  x=N(cD(x));Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))
 
-#define sqrd __builtin_sqrt
-#define h(f) F1(f,D,f##d(a[i])) R1(f,fx(f##D,N(cD(x))))
-h(sqr)
+hf(sqrD,D,i(PD(n,a),r[i]=__builtin_sqrt(a[i]))n)R1(sqr,fx(sqrD,N(cD(x))))
+NLIBC(A1(sinx,en1(x)))LIBC(hf(sinxD,D,i(PD(n,a),r[i]=sin(a[i]))n)R1(sinx,fx(sinxD,N(cD(x)))))
+NLIBC(A1(expx,en1(x)))LIBC(hf(expxD,D,i(PD(n,a),r[i]=exp(a[i]))n)R1(expx,fx(expxD,N(cD(x)))))
+NLIBC(A1(logx,en1(x)))LIBC(hf(logxD,D,i(PD(n,a),r[i]=log(a[i]))n)R1(logx,fx(logxD,N(cD(x)))))

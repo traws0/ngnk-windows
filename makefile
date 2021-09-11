@@ -18,7 +18,7 @@ _/%.o:%.c *.h makefile opts
 _/%.s:%.c *.h makefile opts
 	@echo    '$@ ' && $(MD) _ && $(CC) @opts -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) @opts $^ -static -o $@
+	@echo '$@ ' && $(CC) @opts $^ -static -o $@ -lm
 	@$(STRIP) -R .comment $@ # -R '.note*'
 
 #lib
