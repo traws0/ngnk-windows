@@ -5,27 +5,32 @@ STRIP ?= strip
 
 t:k #test
 	@+$(MAKE) -sC t && g/0.sh && a19/a.sh && a20/a.sh && e/a.sh
+w:k #wasm
+	cd w && ./a.k
+h:w #http server
+	cd _/w && ./web
 c: #clean
-	@rm -rfv _ k libk.so k32 t/t
-w: #wasm
-	@cd w && ./a.k
-W: #web server
-	@cd _/w && ./web
-.PHONY: t c w W
+	rm -rfv _ k libk.so k32 t/t
+.PHONY: t c w h
 
-_/%.o:%.c *.h makefile opts
-	@echo -n '$< ' && $(MD) _ && $(CC) @opts -c $(O) $< -o $@
-_/%.s:%.c *.h makefile opts
-	@echo    '$@ ' && $(MD) _ && $(CC) @opts -c $(O) $< -o $@ -S -masm=intel
+_:
+	mkdir _
+_/%.o:%.c *.h makefile opts _
+	$(CC) @opts -c $(O) $< -o $@
+_/%.s:%.c *.h makefile opts _
+	$(CC) @opts -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) @opts $^ -static -o $@ -lm
-	@$(STRIP) -R .comment $@ # -R '.note*'
+	$(CC) -nostdlib -Dnostdlib -ffreestanding @opts $^ -static -o $@ -lm
+	$(STRIP) -R .comment $@ -R '.note*'
+k1:$(patsubst %.c,_/%.o,$(wildcard *.c))
+	$(CC) @opts $^ -static -o $@ -lm
 
-#lib
-_/so/%.o:%.c *.h makefile opts
-	@echo -n '$< ' && $(MD) _/so && $(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
+_/so:
+	mkdir -p _/so
+_/so/%.o:%.c *.h makefile opts _/so
+	$(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
 libk.so:$(patsubst %.c,_/so/%.o,$(wildcard *.c))
-	@echo '$@ ' && $(CC) @opts $(O) $^ -shared -Dshared -o $@
+	$(CC) @opts $(O) $^ -shared -Dshared -o $@
 
 # #32bit
 # C32=$(CC) @opts -m32
