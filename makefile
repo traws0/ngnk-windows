@@ -22,8 +22,6 @@ _/%.s:%.c *.h makefile opts
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
 	$(CC) -nostdlib -Dnostdlib -ffreestanding @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
-k1:$(patsubst %.c,_/%.o,$(wildcard *.c))
-	$(CC) @opts $^ -static -o $@ -lm
 
 _/so:
 	mkdir -p _/so
