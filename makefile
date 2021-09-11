@@ -3,8 +3,12 @@ O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 STRIP ?= strip
 
-t:k #test
-	@+$(MAKE) -sC t && g/0.sh && a19/a.sh && a20/a.sh && e/a.sh
+t:k _/t #test
+	@cd t/ && echo 'unit tests' && ../_/t && cd -
+	@g/0.sh
+	@a19/a.sh
+	@a20/a.sh
+	@e/a.sh
 w:k #wasm
 	cd w && ./a.k
 h:w #http server
@@ -22,6 +26,9 @@ _/%.s:%.c *.h makefile opts
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
 	$(CC) @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
+
+_/t:
+	$(CC) t/t.c -o $@ -Wall -Wno-unused-result -Werror
 
 _/so:
 	mkdir -p _/so
