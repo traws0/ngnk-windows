@@ -1,5 +1,4 @@
 -nostdlib
--Dnostdlib
 -ffreestanding
 
 -fno-math-errno

@@ -20,7 +20,7 @@ _/%.s:%.c *.h makefile opts
 	@mkdir -p _
 	$(CC) @opts -c $(O) $< -o $@ -S -masm=intel
 k:$(patsubst %.c,_/%.o,$(wildcard *.c))
-	$(CC) -nostdlib -Dnostdlib -ffreestanding @opts $^ -o $@
+	$(CC) @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
 
 _/so:
