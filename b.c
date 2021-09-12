@@ -1,44 +1,36 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 //bu,bv:apply unary|binary verb;bs,bg,bd:set|get|delete local;bm,bM:l|glb modified assign;bl:list,bL:unlist
 //ba:n-adic apply;bP:projection;bz:branch if falsey;bj:jmp,bp:pop;b4:tetradic dot;bc:load constant
-enum{bu,bv=0x20,bs=0x40,bg=0x50,bd=0x60,bm=0x70,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=0x80,bC=0xff};
-#define h(a) {fb=apc(fb,(C)(a));fm=apc(fm,o);} //add instruction
+enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=128,bC=255};
+#define h(a) {m[nb]=o;b[nb]=a;nb=min(nb+1,SZ b-1);} //add instruction
 #define hc(a) {Ij=bc+fpA(&fc,a);Ez(j>bC)h(j);} //add a "load constant" instruction
-S A fs,fb,fm,fl,fc;S I fu[16];S A1 cr;I asg(Ax)_(xtA||xtsS)S A eco(I o)_(eS(_R(fs),o);ec0())
-S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);
- Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=_n(fb);h(bs|i);x)
-    hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
- YS(hc(av+v);hc(au);hc(yR);h(b4);x)
- YA(P(!yn,eco(o))Az=yx;
-    P(zt==ts,i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);Li=fAI(fl,zv);I(i<0,hc(z);h(bM))E(fu[i]=_n(fb);h(bm);h(i))h(v);x)
-    P(zt==tS,hc(av+v);i(yn-1,N(cr(yA[yn-1-i])))h(bl);h(yn-1);hc(zR);h(b4);x)
-    P(z==MKL&&xx==av,h(bL);h(yn-1);i(yn-1,N(cl(x,yA[i+1]));h(bp))x)
-    eco(o))
- eco(o))
-S A1(cr,/*0*/I o=xo;
- Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=_n(fb);h(bg|i);x)P(xv=='o',h(bo);x)hc(AO(0,xR));h(bu|APN-av);x)
- XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);x)hc(get(x,0));x)
- P(!xtA||!xn,hc(x-PLH?xR:au);x)
- Nn=xn;Ay=xx;
- P(y==PRG,i(n-1,I(i,h(bp))N(cr(xA[i+1])))x)
- P(n<2,hc(yR);x)
- P(n==3&&(ytu||y==av)&&asg(xy),N(cr(xz));N(cl(x,xy)))
- P(n>3&&y==CST,n--;I p[n];A*a=xA;i(n&~1,N(cr(*++a));h(i&1?bj:bz);p[i]=_n(fb);h(0))N(cr(n&1?*++a:au));Az=fb;
-  i(n&~1,I d=(i&1?zn:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)zC[p[i]]=d)x)
- I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,N(cr(zy));h(bu|LAS-au);x))
- I(n==2&&ytw,Az=xy;P(!ztA&&!ztsS,zR;hc(app(y,&z,1));x))
- I p=0;i(n-1,Az=xA[n-1-i];I(z==PLH,p=1;hc(PLH))E(N(cr(z))))
- P(p,N(cr(xx));h(bP);h(n-1);x)
- P(y==MKL,h(bl);h(n-1);x)
- P(n==2&&ytu,h(bu|yv);x)
- P(n==3&&ytv,h(bv|yv);x)
- N(cr(xx));h(ba);h(n-1);x)
-S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,x)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))x)*/0)
-S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,x)0)
+#define OK -1
+#define Nr(a...) {I r=cr(a);P(r-OK,r);}
+#define Nl(a...) {I r=cl(a);P(r-OK,r);}
+S UC b[2048],m[SZ b];S A fl,fc;S I nb,fu[16];S A1 cr;I asg(Ax)_(xtA||xtsS)
+S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);YS(hc(av+v);hc(au);hc(yR);h(b4);OK)
+ Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=nb;h(bs|i);OK)
+    hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
+ YA(In=yn-1;P(n-(UC)n,o)Az=yx;P(zt==tS,hc(av+v);i(n,Nr(yA[n-i]))h(bl);h(n);hc(zR);h(b4);OK)
+    P(zt==ts,i(n,Nr(yA[n-i]))h(bl);h(n);Li=fAI(fl,zv);I(i<0,hc(z);h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
+    P(z==MKL&&xx==av,h(bL);h(n);i(n,Nl(x,yA[i+1]);h(bp))OK)o)o)
+S A1(cr,/*0*/I o=xo;Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);OK)hc(AO(0,xR));h(bu|APN-av);OK)
+ XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);OK)hc(get(x,0));OK)P(!xtA||!xn,hc(x-PLH?xR:au);OK)Nn=xn;Ay=xx;
+ P(y==PRG,i(n-1,I(i,h(bp))Nr(xA[i+1]))OK)P(n<2,hc(yR);OK)P(n==3&&(ytu||y==av)&&asg(xy),Nr(xz);Nl(x,xy);OK)
+ P(n>3&&y==CST,n--;I p[n];A*a=xA;i(n&~1,Nr(*++a);h(i&1?bj:bz);p[i]=nb;h(0))Nr(n&1?*++a:au);
+  i(n&~1,I d=(i&1?nb:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)b[p[i]]=d)OK)
+ I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,Nr(zy);h(bu|LAS-au);OK))
+ I(n==2&&ytw,Az=xy;P(!ztA&&!ztsS,zR;hc(app(y,&z,1));OK))
+ I p=0;i(n-1,Az=xA[n-1-i];I(z==PLH,p=1;hc(PLH))E(Nr(z)))
+ P(p,Nr(xx);h(bP);h(n-1);OK)P(y==MKL,h(bl);h(n-1);OK)P(n==2&&ytu,h(bu|yv);OK)P(n==3&&ytv,h(bv|yv);OK)
+ Nr(xx);h(ba);h(n-1);OK)
+S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,OK)/*P(x==TIL&&ytL&&yn<4,i(yn,P(!in(yl,101),0))OK)*/0)
+S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,OK)0)
 S A1(wrp,/*1*/!x?x:xtA||xtsS?enl(x):x)
 A1(cf,XA(I o=xo;P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,wrp(val(x)))AO(o,blw(eac1(x,cf))))x)
-A1(cpl,Ik=xk;Ay=get(x,1)/*ast*/;fs=get(x,0);fb=oC;fm=oC;fl=las(x);fc=a1(au);Ms(fu,-1,SZ fu);
- y=cf(y);I r=!!cr(y);I o=0;h(bu);y=y(fb);j(16,Ii=fu[j];I(i>=0&&yc==bg,yc=bd))r?AK(k,aV(to,5,A(fs,fb,fm,fl,fc))):0)
+A3(cpl,/*src,ast,loc*/nb=0;fl=z;fc=a1(au);Ms(fu,-1,SZ fu);
+ y=cf(y);I r=cr(y);y(0);P(r-OK,eS(xR,r);ec0())P(nb>=SZ b,eS(xR,r);ez0())
+ I o=0;h(bu);i(16,Ij=fu[i];I(j>=0&&b[j]==bg,b[j]=bd))aV(to,5,A(x,aCn(b,nb),aCn(m,nb),fl,fc)))
 
 S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:locals,c:current instruction,p:push,q:pop
 SN V rne(Ax/*0*/){Ay=xy,z=xz;Im=_n(xA[3]);eS(_R(xx),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0)))}
