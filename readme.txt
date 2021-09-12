@@ -23,7 +23,6 @@ v.c  the rest of the verbs
 w.c  adverbs
 j.c  json: `j@x `j?x
 x.c  serialization: `@x `?x
-c.c  cryptography
 e.c  error handling
 t/   unit tests
 w/   web ui
