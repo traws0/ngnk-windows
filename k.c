@@ -22,7 +22,7 @@ S A2(idx_,/*01*/Er(xtt,y)P(y==PLH||y==au,xR)YA(ear(AP1,xR,y))Ym(y=mut(y);yy=idx_
  I(!ytL&&!ytI,y=N(cI(y)))Nn=yn;P(xtA||xtM,Az=oA;I(ytL,i(n,zq(getr(x,yl))))E(i(n,zq(getr(x,yi))))y(z))
  Az=xtL&&ytL&&yr==1?y:atn(xt,n);Lm=CH(xt-tB+7*ytL,&iBI,iHI,iII,jLI,iDI,iCI,iSI,iBL,iHL,iIL,jLL,iDL,iCL,iSL)(xV,xn,yV,zV,n);
  I(m<n,z=z(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xV,xn,yV,zV,n))y-z?y(z):z)
-S AX(idxA,Ay=*a++;n--;x=idx_(x,y);P(!n,x)P(!x,mrn(n,a);0)ytT||y==PLH||y==au?K(".\\:",x,aV(tA,n,a)):x(idxA(x,a,n)))
+S AX(idxA,Ay=*a++;n--;Cb=ytT||y==PLH||y==au;x=idx_(x,y);P(!n||!x,mrn(n,a);x)b?K(".\\:",x,aV(tA,n,a)):x(idxA(x,a,n)))
 S AX(idxm,Ay=N(idx_(xy,N(fnd(_R(xx),*a))));n-1?y(app(y,a+1,n-1)):y)
 S A2(wrt,Xl(wrt(cI(x),y))Yc(wrt(x,enl(y)))Et(!xtz||!ytC,y)write(xv,yV,yn);y)
 S A1(tme,x(al(now())))
