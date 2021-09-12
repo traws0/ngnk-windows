@@ -26,7 +26,7 @@ x.c  serialization: `@x `?x
 e.c  error handling
 t/   unit tests
 w/   web ui
-_/   build tmp
+o/   build tmp
 
 l/   k libraries
 g/   https://codegolf.stackexchange.com/

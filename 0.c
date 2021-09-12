@@ -60,9 +60,9 @@ NLIBC(NWASM(
  I logi(Qs,Iv)_(Cb[99];In=Sn(s);Mc(b,s,n);*sl(b+n,v)=0;js_log(b);v)
  Q logs(Qs,Qp)_(Cb[99];In=Sn(s);Mc(b,s,n);Im=Sn(p);Mc(b+n,p,m);b[n+m]=0;js_log(b);p)
  S C file_repl_k[]={
-  #include"_/w/repl.k.h"
+  #include"o/w/repl.k.h"
  },file_LICENSE[]={
-  #include"_/w/LICENSE.h"
+  #include"o/w/LICENSE.h"
  };
  S ST{C p[16],*a;Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1},{1},{1}};S O I nfs=ZZ(fs),nfd=ZZ(fd);
  #define FF0(i,s,v) {Mc(fs[i].p,s,1+SZ s);fs[i].a=v;fs[i].n=SZ v;}

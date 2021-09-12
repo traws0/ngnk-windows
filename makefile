@@ -3,8 +3,8 @@ O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 STRIP ?= strip
 
-t:k _/t #test
-	@cd t/ && echo 'unit tests' && ../_/t && cd -
+t:k o/t #test
+	@cd t/ && echo 'unit tests' && ../o/t && cd -
 	@g/0.sh
 	@a19/a.sh
 	@a20/a.sh
@@ -12,34 +12,34 @@ t:k _/t #test
 w:k #wasm
 	cd w && ./a.k
 h:w #http server
-	cd _/w && ./web
+	cd o/w && ./web
 c: #clean
-	rm -rfv _ k libk.so k32 t/t
+	rm -rfv o k libk.so k32 t/t
 .PHONY: t c w h
 
-_/%.o:%.c *.h makefile opts
-	@mkdir -p _
+o/%.o:%.c *.h makefile opts
+	@mkdir -p o
 	$(CC) @opts -c $(O) $< -o $@
-_/%.s:%.c *.h makefile opts
-	@mkdir -p _
+o/%.s:%.c *.h makefile opts
+	@mkdir -p o
 	$(CC) @opts -c $(O) $< -o $@ -S -masm=intel
-k:$(patsubst %.c,_/%.o,$(wildcard *.c))
+k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	$(CC) @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
 
-_/t:
+o/t:
 	$(CC) t/t.c -o $@ -Wall -Wno-unused-result -Werror
 
-_/so:
-	mkdir -p _/so
-_/so/%.o:%.c *.h makefile opts _/so
+o/so:
+	mkdir -p o/so
+o/so/%.o:%.c *.h makefile opts o/so
 	$(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
-libk.so:$(patsubst %.c,_/so/%.o,$(wildcard *.c))
+libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
 	$(CC) @opts $(O) $^ -shared -Dshared -o $@
 
 # #32bit
 # C32=$(CC) @opts -m32
-# _/32/%.o:%.c *.h makefile o
-# 	@echo -n '$< ' && $(MD) _/32 && $(C32) -c $< -o $@
-# k32:$(patsubst %.c,_/32/%.o,$(wildcard *.c))
+# o/32/%.o:%.c *.h makefile opts
+# 	@echo -n '$< ' && $(MD) o/32 && $(C32) -c $< -o $@
+# k32:$(patsubst %.c,o/32/%.o,$(wildcard *.c))
 # 	@echo '$@ ' && $(C32) $^ -static -o $@ -lgcc

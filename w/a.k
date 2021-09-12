@@ -1,5 +1,5 @@
 #!../k
-sub:"../_/w"/"%"\
+sub:"../o/w"/"%"\
 sh:{$[x:."\\",x: \sub x;x;]}
 sh"mkdir -p %"
 sh"cc web.c -o %/web"
