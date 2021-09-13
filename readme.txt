@@ -13,7 +13,7 @@ b.c  bytecode compiler and virtual machine
 k.c  eval, apply, amend, drill: . @
 h.c  shape-related: x#y ,x x,y
 o.c  order and equivalence
-s.c  object to string: $x `k@x
+s.c  string formatting: $x `k@x
 f.c  find, random: x?y
 1.c  monadic arithmetic
 2.c  dyadic  arithmetic except + and *
@@ -26,7 +26,7 @@ x.c  serialization: `@x `?x
 e.c  error handling
 t/   unit tests
 w/   web ui
-o/   build tmp
+o/   build output
 
 l/   k libraries
 g/   https://codegolf.stackexchange.com/
