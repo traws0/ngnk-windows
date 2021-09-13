@@ -110,17 +110,6 @@ S I _tT(Ax)_(xt<tM)S I _tZ(Ax)_(c3(tB,xt,tL))S I _tP(Ax)_(TP(xt))
 #define _r(x) ((I*)_V(x))[-3] //refcount
 #define _q(x,y) (x=apd(x,y))  //append
 #define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
-#define _x(x) ((A*)_V(x))[0]
-#define _y(x) ((A*)_V(x))[1]
-#define _z(x) ((A*)_V(x))[2]
-#define _tmt(x) (_tm(x)||_tt(x))
-#define _tMT(x) (_tM(x)||_tT(x))
-#define _tzd(x) (_tz(x)||_td(x))
-#define _tZD(x) (_tZ(x)||_tD(x))
-#define _tzc(x) (_tz(x)||_tc(x))
-#define _tZC(x) (_tZ(x)||_tC(x))
-#define _tZDC(x) (_tZD(x)||_tC(x))
-#define _tmMA(x) (_tmM(x)||_tA(x))
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x) //set refcount
 S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])   S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(TP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
 S  I _v(Ax)_(x)                      S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                 //value(i32)
