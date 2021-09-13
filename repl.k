@@ -66,6 +66,7 @@ special:  var:y     set    a:1;a -> 1
           (v;..):y  unpack (b;(c;d)):(2 3;4 5);c -> 4
           :x        return {:x+1;2}[3] -> 4
           $[x;y;..] cond   $[0;`a;"\0";`b;`;`c;();`d;`e] -> `e
+          o[..]     recur  {$[x<2;x;+/o'x-1 2]}9 -> 34
 
 ::  self      ::12 -> 12
  :  right     1 :2 -> 2   "abc":'"d" -> "ddd"
