@@ -71,11 +71,10 @@ A1 a1,asc,ax,blw,cB,cC,cD,cH,cI,cL,cS,cf,cplprs,des,dsc,enl,enla,epr,expx,fir,fl
  val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  sub,v0c,v1c,exc;
-A0 aa0;A3 a3,cpl,try,ear,eal;AA amd,amn,dmd,dmn,ins;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;ALA drp,room,rshN;AAL get;
+A0 aa0;A3 a3,cpl,try,ear,eal;ALA drp,room,rshN;AAL get;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;AA amd,amn,dmd,dmn,ins;
 AL aA,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCl,aCz,cmdcd,cmdl,cmdm,die,e0,syP;
-A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),
- eac1(A,A1),eac2(A,A,A),e1(Q,A),e2(Q,A,A),eN(Q,I,OA*),evs(Q,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),
- mf(I,N),sur(C,A,C),wdn(A,N,N,N);
+A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1(A,A1),
+ eac2(A,A,A),e1(Q,A),e2(Q,A,A),evs(Q,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),sur(C,A,C),wdn(A,N,N,N);
 V exit(I),iI(V*,N),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
  mrn(N,OA*),mw(I,N,Q);
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
@@ -134,7 +133,7 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define EF(f,x,a...) P(x,f(a))
 #define E_(t,a...) EF(EN(a,e##t##2,e##t##1,e##t##0),a)
 #define EA h(c,cpl)h(d,dom)h(i,idx)h(l,len)h(n,nyi)h(o,io)h(p,prs)h(r,rnk)h(s,stk)h(t,typ)h(v,val)h(z,lmt)
-#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;S A e##t##n(In,OA*a)_(eN(#m,n,a))
+#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;AA e##t##n;
  EA
 #undef h
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through

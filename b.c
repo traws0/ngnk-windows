@@ -43,5 +43,5 @@ S A1(vm,/*0*/W(1,UC b=*c++;
          EI(b==b4,s+=3;N(*s=dmd(s-3,4))))
  EI(b>=bs,A*v=l-b%16,x=*v;I(b>=bd,p(x);*v=au)EI(b>=bg,p(xR))E(x=x(*v=_R(*s))))
  EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))EI(b,N(*s=v1[b](*s)))E(_(*s)))0)
-AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(n,a))p((A)c);p((A)l);p(x);c=_V(xy);l=s-1;i(n,p(a[i]))Im=_n(xA[3]);i(m-n,p(au))
+AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(a,n))p((A)c);p((A)l);p(x);c=_V(xy);l=s-1;i(n,p(a[i]))Im=_n(xA[3]);i(m-n,p(au))
  Ay=vm(x);I(!y,rne(x))Q(s==l-m);mrn(m,s+1);s=l+2;l=(V*)q();c=(V*)q();y)
