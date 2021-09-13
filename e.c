@@ -13,7 +13,7 @@ A1(epr,I h=64;Cb[3*h+6+SZ e.m],*s=b;*s++='\'';Mc(s,e.m,e.n);s+=e.n;*s++=10;
  eC();write(1,b,s-b);x)
 A die(Qs)_(write(1,s,Sn(s));exit(1);0)
 
-#define g(t,m,n,a...) NI A##n(e##t##n,e##n(#m,##a))
-#define gn(t,m) AA(e##t##n,eN(a,n,#m))
-#define h(a...) g(a,0)g(a,1,x)g(a,2,x,y)gn(a)
+#define f(t,m,n,a...) NI A##n(e##t##n,e##n(#m,##a))
+#define g(t,m) AA(e##t##n,eN(a,n,#m))
+#define h(a...) f(a,0)f(a,1,x)f(a,2,x,y)g(a)
 EA
