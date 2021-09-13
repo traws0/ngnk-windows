@@ -33,3 +33,4 @@ g/   https://codegolf.stackexchange.com/
 e/   https://projecteuler.net/
 a19/ https://adventofcode.com/2019
 a20/ https://adventofcode.com/2020
+d14/ https://problems.tryapl.org/psets/2014.html

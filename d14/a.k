@@ -1,5 +1,5 @@
 #!../k
-/https://gist.github.com/xpqz/73e9d57a7f1921f7d44704505a22fa3e https://problems.tryapl.org/psets/2014.html
+/https://gist.github.com/xpqz/73e9d57a7f1921f7d44704505a22fa3e
 \l ../l/maths.k
 
 p1:{(z*z)=+/*/2 2#x,y}             ; p1:{~-/*/2#,|x,y,z}
@@ -10,7 +10,7 @@ p5:{{x~|x}l^(l:_x)^`c$"a"+!26}     ; p5:1=#|:\(~"a{"')#_:
 p6:{+(!x;.x)}@#'=+/1+!(),          ; p6:+(!:;.:)@\:#'=+/1+!:
 p7:{lcm[x;y]%y}                    ; p7:%/gcd\,
 p8:{%+/d*d:-/x}                    ; p8:%+/*/2#,-/
-p9:{(x*x*`sin@2*y*pi%180)%9.8}     ;
+p9:{(x*x*`sin@2*y*pi%180)%9.8}     ; p9:{x*x*`sin[y*pi%90]%9.8}
 p10:100*|/1_0{(x-y)%y}':           ; p10:100*|/1_-1+%':
 
 p:{`0:x:"p",$x;f::. x;} /prepare for testing problem x
