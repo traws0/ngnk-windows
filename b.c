@@ -7,7 +7,7 @@ enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=128,bC=2
 #define OK -1
 #define Nr(a...) {I r=cr(a);P(r-OK,r);}
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
-S UC b[2048],m[SZ b];S A fl,fc;S I nb,fu[16];S A1 cr;I asg(Ax)_(xtA||xtsS)
+S UC b[2048],m[SZ b];S A fl,fc;S I nb,fu[16];S A1 cr;
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);YS(hc(av+v);hc(au);hc(yR);h(b4);OK)
  Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=nb;h(bs|i);OK)
   hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
@@ -16,16 +16,16 @@ S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);YS(hc(av+v);hc(au);hc(yR);h(
   P(z==MKL&&xx==av,h(bL);h(n);i(n,Nl(x,yA[i+1]);h(bp))OK)o)o)
 S A1(cr,/*0*/I o=xo;Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);OK)hc(AO(0,xR));h(bu|APN-av);OK)
  XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);OK)hc(get(x,0));OK)P(!xtA||!xn,hc(x-PLH?xR:au);OK)Nn=xn;Ay=xx;
- P(y==PRG,i(n-1,I(i,h(bp))Nr(xA[i+1]))OK)P(n<2,hc(yR);OK)P(n==3&&(ytu||y==av)&&asg(xy),Nr(xz);Nl(x,xy);OK)
+ P(y==PRG,i(n-1,I(i,h(bp))Nr(xA[i+1]))OK)P(n<2,hc(yR);OK)P(n==3&&(ytu||y==av)&&_tsSA(xy),Nr(xz);Nl(x,xy);OK)
  P(n>3&&y==CST,n--;I p[n];A*a=xA;i(n&~1,Nr(*++a);h(i&1?bj:bz);p[i]=nb;h(0))Nr(n&1?*++a:au);
   i(n&~1,I d=(i&1?nb:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)b[p[i]]=d)OK)
  I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,Nr(zy);h(bu|LAS-au);OK))
  I p=0;i(n-1,Az=xA[n-1-i];I(z==PLH,p=1;hc(PLH))E(Nr(z)))
  P(p,Nr(xx);h(bP);h(n-1);OK)P(y==MKL,h(bl);h(n-1);OK)P(n==2&&ytu,h(bu|yv);OK)P(n==3&&ytv,h(bv|yv);OK)
  Nr(xx);h(ba);h(n-1);OK)
-S A2(f2,/*0*/P(xtw&&!ytA&&!ytsS,1)/*P(x==TIL&&ytZ&&yn<4,i(yn,P(!in(gl(get(y,i)),101),0))1)*/0)
+S A2(f2,/*0*/P(xtw&&!ytsSA,1)/*P(x==TIL&&ytZ&&yn<4,i(yn,P(!in(gl(get(y,i)),101),0))1)*/0)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,1)0)
-S A1(qt,/*1*/xtA||xtsS?enl(x):x)
+S A1(qt,/*1*/xtsSA?enl(x):x)
 A1(cf,XA(I o=xo;P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,qt(N(val(x))))AO(o,blw(eac1(x,cf))))x)
 A3(cpl,/*src,ast,loc*/nb=0;fl=z;fc=a1(au);Ms(fu,-1,SZ fu);y=cf(y);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
  P(nb>=SZ b-1,eS(xR,r);ez0())i(16,Ij=fu[i];I(j>=0&&b[j]==bg,b[j]=bd))AK(0,aV(to,5,A(x,aCn(b,nb),aCn(m,nb),fl,fc))))
