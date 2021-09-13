@@ -1,0 +1,17 @@
+-fPIC
+-Dlibc=1
+-DSYS_getcwd=304
+-Dstrchrnul=strchr
+
+-fno-math-errno
+-fno-stack-protector
+-fomit-frame-pointer
+-Werror
+-Wfatal-errors
+-Wno-assume
+-Wno-constant-conversion
+-Wno-int-to-pointer-cast
+-Wno-pointer-sign
+-Wno-pointer-to-int-cast
+-Wno-shift-op-parentheses
+-Wno-unused-result

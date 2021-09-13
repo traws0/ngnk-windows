@@ -32,9 +32,10 @@ NLIBC(
 #endif
 
 NLIBC(NWASM(
+ OBSD(V _start(O char**a){main(*(I*)(V*)a,a+1);})
  FBSD(V _start(O char**a){main(*(I*)(V*)a,a+1);})
- NFBSD(asm(".globl _start;_start:"I386("pop %eax;push %esp;push %eax;call main")
-                                 NI386("pop %rdi;mov %rsp,%rsi;jmp main"));)
+ NOBSD(NFBSD(asm(".globl _start;_start:"I386("pop %eax;push %esp;push %eax;call main")
+                                       NI386("pop %rdi;mov %rsp,%rsi;jmp main"));))
  #define  h(x,a...) I386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
                    NI386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;")
  #define h1(x,a...) I386( h(x,a"mov  4(%esp),%ebx;"))NI386(h(x,a))

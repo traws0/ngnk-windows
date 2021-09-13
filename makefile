@@ -14,7 +14,7 @@ w:k #wasm
 h:w #http server
 	cd o/w && ./web
 c: #clean
-	rm -rfv o k libk.so k32 t/t
+	rm -rfv o k libk.so k32 k-openbsd
 .PHONY: t c w h
 
 o/%.o:%.c *.h makefile opts
@@ -26,8 +26,10 @@ o/%.s:%.c *.h makefile opts
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	$(CC) @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
+k-openbsd:$(patsubst %.c,o/%.o,$(wildcard *.c))
+	$(CC) --static -fno-pie @opts-openbsd $^ -o $@ -lm -lc
 
-o/t:
+o/t: #test runner
 	$(CC) t/t.c -o $@ -Wall -Wno-unused-result -Werror
 
 o/so:

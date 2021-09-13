@@ -517,12 +517,26 @@
  #define  DBG(a...)
  #define NDBG(a...) a
 #endif
+#ifdef libc
+ #define  LIBC(a...) a
+ #define NLIBC(a...)
+#else
+ #define  LIBC(a...)
+ #define NLIBC(a...) a
+#endif
 #ifdef __FreeBSD__
  #define  FBSD(a...) a
  #define NFBSD(a...)
 #else
  #define  FBSD(a...)
  #define NFBSD(a...) a
+#endif
+#ifdef __OpenBSD__
+ #define  OBSD(a...) a
+ #define NOBSD(a...)
+#else
+ #define  OBSD(a...)
+ #define NOBSD(a...) a
 #endif
 #ifdef i386
  #define  I386(a...) a
@@ -537,11 +551,4 @@
 #else
  #define  WASM(a...)
  #define NWASM(a...) a
-#endif
-#ifdef libc
- #define  LIBC(a...) a
- #define NLIBC(a...)
-#else
- #define  LIBC(a...)
- #define NLIBC(a...) a
 #endif
