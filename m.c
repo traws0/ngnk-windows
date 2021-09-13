@@ -20,7 +20,7 @@ S Az[SZ(N)==4?27:35];S I lck;
 S A mb(Cb,Ax)_(xX=0;xr=0;DBG(AN(-1,AT(0,x)));xU=b;x)V mrn(Nn,OA*a){i(n,mr(a[i]))}A1(mRa,i(xn,_R(xa))x)
 A1(m0,DBG(lck++);Q(x);XP(0)Q(xr>0);P(--xr,0)Cb=xU;P(!b,x=AT(tn,x))xX=z[b];z[b]=(A)xV;XR(mrn(xn,xA);x)x)
 A1(m1,DBG(lck--);P(!x,0)P(xt==tn,mu(xV-ZP,xn+ZP))DBG(Ms(xV,0xab,xZ);DBG(AN(-1,AT(0,x))));0)A1(mr,m1(m0(x)))
-A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!_tP(t));Cb=59-__builtin_clzll(ZA|ZA-1+n*TZ[t]);P(n>1ull<<ZZ(z)||b>ZZ(z)-2,oom())
+A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!TP(t));Cb=59-__builtin_clzll(ZA|ZA-1+n*TZ[t]);P(n>1ull<<ZZ(z)||b>ZZ(z)-2,oom())
  Ax=z[b];Ii=b;W(!z[i],i++)I(i<ZZ(z)-1,x=z[i];z[i]=xX)E(x=mb(b,mx(ZA<<(i=max(b,24)))))
  I(b<i,xU=b;W(b<i--,z[i]=mb(i,(A)x+(ZA<<i))))xr=1;AT(t,AN(n,x)))
 A aV(Ct,Nn,OV*v)_(Ax=atn(t,n);Mc(xV,v,n*TZ[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au)))

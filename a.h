@@ -96,8 +96,9 @@ enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,
 #define TZv 0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //item size in bytes
 #define Tzv 0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
 #define TTv 0,tA,tB,tH,tI,tL,tD,tC,tS,tM,tM,tI,tL,tD,tC,tS,tA,tA,tA,tA,tA,tA,tA,tA  //corresponding list type
-EX OC Tz[],TZ[],TT[];S C _t(A);S I _tt(Ct)_(t>tm)S I _tT(Ct)_(t<tM)S I _tz(Ct)_(c3(ti,t,tl))S I _tZ(Ct)_(c3(tB,t,tL))
-S I _tF(Ct)_(t>=to)S I _tP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))S I _tR(Ct)_(Tz[t]==4)
+EX OC Tz[],TZ[],TT[];S C _t(A);S I TF(Ct)_(t>=to)S I TP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))
+S I _tt(Ax)_(xt>tm)S I _tz(Ax)_(c3(ti,xt,tl))S I _tF(Ax)_(TF(xt))S I _tR(Ax)_(Tz[xt]==4)
+S I _tT(Ax)_(xt<tM)S I _tZ(Ax)_(c3(tB,xt,tL))S I _tP(Ax)_(TP(xt))
 
 //header bytes: Ut.orrrrnnnnnnnn (U=bucket,t=type,o=srcoffset(or:w=adverb,k=arity),r=refcount,n=length)
 //tagged ptr bits (t=type,v=value,o=srcoffset,x=ptr):
@@ -109,13 +110,24 @@ S I _tF(Ct)_(t>=to)S I _tP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))S I _tR(Ct)_(Tz
 #define _r(x) ((I*)_V(x))[-3] //refcount
 #define _q(x,y) (x=apd(x,y))  //append
 #define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
+#define _x(x) ((A*)_V(x))[0]
+#define _y(x) ((A*)_V(x))[1]
+#define _z(x) ((A*)_V(x))[2]
+#define _tmt(x) (_tm(x)||_tt(x))
+#define _tMT(x) (_tM(x)||_tT(x))
+#define _tzd(x) (_tz(x)||_td(x))
+#define _tZD(x) (_tZ(x)||_tD(x))
+#define _tzc(x) (_tz(x)||_tc(x))
+#define _tZC(x) (_tZ(x)||_tC(x))
+#define _tZDC(x) (_tZD(x)||_tC(x))
+#define _tmMA(x) (_tmM(x)||_tA(x))
 S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x) //set refcount
-S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])   S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(_tP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
-S  I _v(Ax)_(x)                      S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                  //value(i32)
-S  C _w(Ax)_(xC[-14])                S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)                                 //adverb(for tr)
-S  C _k(Ax)_(xC[-13])                S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)                                 //arity(for funcs)
-S UC _o(Ax)_(xts?x>>32:xtP?0:xB[-13])S A AO(UC o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xB[-13]=o;x)         //srcoffset
-S  N _n(Ax)_(xL[-1])                 S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                     //length
+S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])   S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(TP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
+S  I _v(Ax)_(x)                      S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                 //value(i32)
+S  C _w(Ax)_(xC[-14])                S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)                                //adverb(for tr)
+S  C _k(Ax)_(xC[-13])                S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)                                //arity(for funcs)
+S UC _o(Ax)_(xts?x>>32:xtP?0:xB[-13])S A AO(UC o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xB[-13]=o;x)        //srcoffset
+S  N _n(Ax)_(xL[-1])                 S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                    //length
 
 #define Lt(t) (L)t<<56
 #define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
