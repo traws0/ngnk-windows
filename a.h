@@ -75,8 +75,8 @@ A0 aa0;A3 a3,cpl,try,ear,eal;ALA drp,room,rshN;AAL get;AX eac,rdc,app,prj,run,w0
 AL aA,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCl,aCz,cmdcd,cmdl,cmdm,die,e0,syP;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1(A,A1),
  eac2(A,A,A),e1(Q,A),e2(Q,A,A),evs(Q,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),sur(C,A,C),wdn(A,N,N,N);
-V exit(I),iI(V*,N),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
- mrn(N,OA*),mw(I,N,Q);
+V exit(I),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
+ mrn(N,OA*),mw(I,N,Q),tilV(V*,L,I);
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
 char*strchr(O char*,I),*strchrnul(O char*,I),*strstr(Q,Q);
 I _K(A),c3(C,C,C),qD(D,D),eS(A,I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
