@@ -1,28 +1,24 @@
 #faster builds: export MAKEFLAGS=-j8
-O=-O3 -march=native
 MD= >/dev/null mkdir -pv
 STRIP ?= strip
 
 t:k o/t #test
 	@cd t/ && echo 'unit tests' && ../o/t && cd -
-	@g/0.sh
-	@a19/a.sh
-	@a20/a.sh
-	@e/a.sh
+	@g/0.sh && a19/a.sh && a20/a.sh && e/a.sh
 w:k #wasm
-	cd w && ./a.k
+	cd w && ./a.k && cd -
 h:w #http server
 	cd o/w && ./web
 c: #clean
 	rm -rfv o k libk.so k32 k-openbsd
-.PHONY: t c w h
+.PHONY: t w h c
 
 o/%.o:%.c *.h makefile opts
 	@mkdir -p o
-	$(CC) @opts -c $(O) $< -o $@
+	$(CC) @opts -c $< -o $@
 o/%.s:%.c *.h makefile opts
 	@mkdir -p o
-	$(CC) @opts -c $(O) $< -o $@ -S -masm=intel
+	$(CC) @opts -c $< -o $@ -S -masm=intel
 k:$(patsubst %.c,o/%.o,$(wildcard *.c))
 	$(CC) @opts $^ -o $@
 	$(STRIP) -R .comment $@ -R '.note*'
@@ -35,9 +31,9 @@ o/t: #test runner
 o/so:
 	mkdir -p o/so
 o/so/%.o:%.c *.h makefile opts o/so
-	$(CC) @opts $(O) -c $< -o $@ -fPIC -Dshared
+	$(CC) @opts -c $< -o $@ -fPIC -Dshared
 libk.so:$(patsubst %.c,o/so/%.o,$(wildcard *.c))
-	$(CC) @opts $(O) $^ -shared -Dshared -o $@
+	$(CC) @opts $^ -shared -Dshared -o $@
 
 # #32bit
 # C32=$(CC) @opts -m32

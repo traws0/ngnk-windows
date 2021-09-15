@@ -1,5 +1,4 @@
--nostdlib
--ffreestanding
+-O3 -march=native -nostdlib -ffreestanding
 
 -fno-math-errno
 -fno-stack-protector
