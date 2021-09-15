@@ -120,7 +120,7 @@ S  N _n(Ax)_(xL[-1])                 S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]
 #define Lt(t) (L)t<<56
 #define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
            U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,com,dex,dex})\
-           U(vn,{___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,___,ins,amd,dmd,___,___,___,___,___,___})\
+           U(vn,{ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ins,amd,dmd,ern,ern,ern,ern,ern,ern})\
            U(vc,{':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'})
 enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,UNQ,TYP,VAL,U0C,U1C,U2C,U3C,LAS,OUT,
            av=Lt(tv),ADD,SUB,MUL,DVD,MOD,MNM,MXM,LTN,GTN,EQL,MTC,CAT,EXC,RSH,CUT,CST,QUE,AP1,APN,V0C,V1C,V2C,COM,MKL,PLH,
