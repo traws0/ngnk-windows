@@ -1,1 +1,0 @@
-@opts-common -O3 -march=native -nostdlib -ffreestanding -fPIC -Dshared

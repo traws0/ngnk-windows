@@ -1,1 +1,0 @@
-@opts-common -fPIC -Dlibc=1 -DSYS_getcwd=304 -Dstrchrnul=strchr

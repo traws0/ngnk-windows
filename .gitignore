@@ -1,5 +1,6 @@
 /o
 /k
-/k-openbsd
+/k-libc
+/k-obsd
 /k32
 /libk.so
