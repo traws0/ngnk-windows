@@ -4,7 +4,7 @@ STRIP ?= strip
 
 t:k o/t;o/t;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
 c:;rm -rf o k libk.so k32 k-obsd #clean
-w:k;cd w;./a.k;cd - #wasm
+w:k o/w/repl.k.h o/w/LICENSE.h o/w/k.wasm #wasm
 h:w;cd o/w;./web #http
 .PHONY: t c w h
 
@@ -26,6 +26,18 @@ libk.so:$(patsubst %.c,o/libk/%.o,$(wildcard *.c));$(CC) $(O_LIBK) -o $@ $^ -sha
 
 o/t:t/t.c;$(CC) $< -o $@ -Wall -Wno-unused-result -Werror
 o/asm/%.s:%.c *.h makefile opts;$(MD)             ;$(CC) $(O_DFLT) -c $< -o $@ -S -masm=intel
+
+#/usr/lib/llvm-10/bin/wasm-ld must be on $PATH
+o/w/k.wasm:*.c|o/w/repl.k.h o/w/LICENSE.h
+	$(MD)
+	clang $^ -o $@.tmp.wasm @opts -O3 -march=native -nostdlib -ffreestanding --target=wasm32 \
+	 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include\
+	 -Wl,--export=main,--export=kinit,--export=rep,--export=val,--export=aCz,--export=open,--export=close\
+	 -Wl,--export=write,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
+	wasm-opt -O3 $@.tmp.wasm -o $@
+	ls -l $@
+o/w/repl.k.h o/w/LICENSE.h:k
+	cd w && ./a.k && cd -
 
 # C32=$(CC) @opts -m32
 # o/32/%.o:%.c *.h makefile opts
