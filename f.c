@@ -13,9 +13,10 @@ S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
 AL(rndD,add(ai(-1),AT(tD,add(al(1023ll<<52),N(rd(n,1ll<<52))))))
 S ALA(rnd,Xz(rd(n,gl(x)))Xc(cC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))Xd(mul(x,Nx(rndD(n))))XMT(idx(x,Nx(rd(n,xN))))et1(x))
 
-#define h(T) NI L f##T(OV*p,Nn,Lv)_(P(v-(T)v,NL)O T*a=p,w=(T)v;i(n,P(a[i]==w,i))NL)\
-             NI V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
-             NI L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xV,n,v);P(i<0,*p=apv(x,&v);n)i)
+#define h(T)\
+ NI L f##T(OV*p,Nn,Lv)_(O T*a=p,q=v;P(v-q||!n,NL)Ii=0,g=ZA/SZ(*a),f=0;W(i<n&&!f,j(g,f|=a[i++]==q))i-=g;j(g,B(a[i]==q)i++)i<n?i:NL)\
+ NI V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
+ NI L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xV,n,v);P(i<0,*p=apv(x,&v);n)i)
 h(B)h(H)h(I)h(L)
 S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(n,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
