@@ -5,7 +5,7 @@ O=@opts
 
 t:k o/t;o/t;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
 c:;rm -rf o k libk.so k32 k-obsd #clean
-w:k o/w/repl.k.h o/w/LICENSE.h o/w/k.wasm
+w:k o/w/fs.h o/w/k.wasm
 h:w o/w/http;cd o/w;./http
 .PHONY: t c w h
 
@@ -29,7 +29,7 @@ o/t:t/t.c;$(CC) $< -o $@ -Wall -Wno-unused-result -Werror
 o/asm/%.s:%.c *.h makefile;$(MD);$(CC) $(O_DFLT) -c $< -o $@ -S -masm=intel
 
 #/usr/lib/llvm-10/bin/wasm-ld must be on $PATH
-o/w/k.wasm0:*.c|o/w/repl.k.h o/w/LICENSE.h
+o/w/k.wasm0:*.c|o/w/fs.h
 	$(MD)
 	clang $^ -o $@ $(O) -O3 -march=native -nostdlib -ffreestanding --target=wasm32 \
 	 -U __SIZEOF_INT128__ -Dwasm -Oz -I/usr/include\
@@ -37,7 +37,7 @@ o/w/k.wasm0:*.c|o/w/repl.k.h o/w/LICENSE.h
 	 -Wl,--export=write,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
 o/w/k.wasm:o/w/k.wasm0
 	wasm-opt -O3 $< -o $@ && ls -l $@
-o/w/repl.k.h o/w/LICENSE.h:k
+o/w/fs.h:k
 	cd w && ./a.k && cd -
 o/w/http:w/http.c
 	$(MD);$(CC) $< -o $@

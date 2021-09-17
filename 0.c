@@ -53,18 +53,13 @@ NLIBC(NWASM(
      h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents)h1(chdir)h2(ftruncate));))
 
 #ifdef wasm
+ #include"o/w/fs.h" //file_repl_k and file_LICENSE
  I js_in(V*,N);V js_out(OV*,N),js_log(OV*),*js_alloc(N),js_time(I*,long*),js_exit(I);
- S C file_repl_k[]={
-  #include"o/w/repl.k.h"
- },file_LICENSE[]={
-  #include"o/w/LICENSE.h"
- };
- S ST{C p[16],*a;Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1},{1},{1}};S O I nfs=ZZ(fs),nfd=ZZ(fd);
+ S ST{C*a,p[16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1},{1},{1}};S O I nfs=ZZ(fs),nfd=ZZ(fd);
  #define FF0(i,s,v) {Mc(fs[i].p,s,1+SZ s);fs[i].a=v;fs[i].n=SZ v;}
  V ws0(){FF0(0,"","");FF0(1,"repl.k",file_repl_k);FF0(2,"LICENSE",file_LICENSE);}
  #define FI P((UI)f>=nfd||!fd[f].u,EBADF)Ii=fd[f].i;//validate file descriptor "f" and get inode as "i"
- I open(Qp,Iv,...)_(I(!fs[0].a,ws0())
-  Im=Sn(p);P(m>=SZ fs[0].p,ENAMETOOLONG)Ii=0;W(i<nfs&&SQ(fs[i].p,p),i++)
+ I open(Qp,Iv,...)_(I(!fs[0].a,ws0())Im=Sn(p);P(m>=SZ fs[0].p,ENAMETOOLONG)Ii=0;W(i<nfs&&SQ(fs[i].p,p),i++)
   I(i>=nfs,P(O_CREAT&~v,ENOENT)i=0;W(i<nfs&&fs[i].a,i++)P(i>=nfs,ENOSPC)fs[i].a="";fs[i].n=0;Mc(fs[i].p,p,m))
   If=0;W(f<nfd&&fd[f].u,f++)P(f>=nfd,EMFILE)fd[f].u=1;fd[f]=(TY(*fd)){.u=1,.i=i,.o=0};f)
  I close(If)_(FI fd[f].u=0;0)
