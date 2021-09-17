@@ -53,24 +53,23 @@ NLIBC(NWASM(
      h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents)h1(chdir)h2(ftruncate));))
 
 #ifdef wasm
- #include"o/w/fs.h" //file_repl_k and file_LICENSE
  I js_in(V*,N);V js_out(OV*,N),js_log(OV*),*js_alloc(N),js_time(I*,long*),js_exit(I);
- S ST{C*a,p[16];Nn;}fs[8];S ST{C u,i;UI o;}fd[8]={{1},{1},{1}};S O I nfs=ZZ(fs),nfd=ZZ(fd);
- #define FF0(i,s,v) {Mc(fs[i].p,s,1+SZ s);fs[i].a=v;fs[i].n=SZ v;}
- V ws0(){FF0(0,"","");FF0(1,"repl.k",file_repl_k);FF0(2,"LICENSE",file_LICENSE);}
- #define FI P((UI)f>=nfd||!fd[f].u,EBADF)Ii=fd[f].i;//validate file descriptor "f" and get inode as "i"
- I open(Qp,Iv,...)_(I(!fs[0].a,ws0())Im=Sn(p);P(m>=SZ fs[0].p,ENAMETOOLONG)Ii=0;W(i<nfs&&SQ(fs[i].p,p),i++)
-  I(i>=nfs,P(O_CREAT&~v,ENOENT)i=0;W(i<nfs&&fs[i].a,i++)P(i>=nfs,ENOSPC)fs[i].a="";fs[i].n=0;Mc(fs[i].p,p,m))
-  If=0;W(f<nfd&&fd[f].u,f++)P(f>=nfd,EMFILE)fd[f].u=1;fd[f]=(TY(*fd)){.u=1,.i=i,.o=0};f)
- I close(If)_(FI fd[f].u=0;0)
- I read(If,V*a,Nn)_(FI P(!i,js_in(a,n))I o=fd[f].o;n=max(0,min(n,fs[i].n-o));Mc(a,fs[i].a+o,n);fd[f].o+=n;n)
+ S ST{C*a,p[16];Nn;}s[8]={{.a=""},
+  #include"o/w/fs.h"
+ };S ST{C u,i;UI o;}d[8]={{1},{1},{1}};S O I ns=ZZ(s),nd=ZZ(d);//s:storage,d:file descriptor table
+ #define FI P((UI)f>=nd||!d[f].u,EBADF)Ii=d[f].i;//validate file descriptor "f" and get inode as "i"
+ I open(Qp,Iv,...)_(Im=Sn(p);P(m>=SZ s[0].p,ENAMETOOLONG)Ii=0;W(i<ns&&SQ(s[i].p,p),i++)
+  I(i>=ns,P(O_CREAT&~v,ENOENT)i=0;W(i<ns&&s[i].a,i++)P(i>=ns,ENOSPC)s[i].a="";s[i].n=0;Mc(s[i].p,p,m))
+  If=0;W(f<nd&&d[f].u,f++)P(f>=nd,EMFILE)d[f].u=1;d[f]=(TY(*d)){.u=1,.i=i,.o=0};f)
+ I close(If)_(FI d[f].u=0;0)
+ I read(If,V*a,Nn)_(FI P(!i,js_in(a,n))I o=d[f].o;n=max(0,min(n,s[i].n-o));Mc(a,s[i].a+o,n);d[f].o+=n;n)
  I write(If,OV*a,Nn)_(FI;P(!i,js_out(a,n);n)
-  Im=fd[f].o+n;I(m>fs[i].n,C*b=js_alloc(m);Mc(b,fs[i].a,n);fs[i].a=b;fs[i].n=m)Mc(fs[i].a+fd[f].o,a,n);n)
- off_t lseek(If,off_t o,I w)_(FI;o=w==SEEK_CUR?o+fd[f].o:w==SEEK_END?o+fs[i].n:w==SEEK_SET?o:-1;P(o<0,EINVAL)fd[f].o=o)
- I fstat(If,ST stat*r)_(FI;In=fs[i].n;
+  Im=d[f].o+n;I(m>s[i].n,C*b=js_alloc(m);Mc(b,s[i].a,n);s[i].a=b;s[i].n=m)Mc(s[i].a+d[f].o,a,n);n)
+ off_t lseek(If,off_t o,I w)_(FI;o=w==SEEK_CUR?o+d[f].o:w==SEEK_END?o+s[i].n:w==SEEK_SET?o:-1;P(o<0,EINVAL)d[f].o=o)
+ I fstat(If,ST stat*r)_(FI;In=s[i].n;
   *r=(TY(*r)){.st_ino=i,.st_mode=S_IFREG,.st_nlink=1,.st_size=n,.st_blksize=512,.st_blocks=n+511>>9};0)
- V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(I(!a,a=js_alloc(n))P(f<0,a)P(f>=nfd||!fd[f].u,(V*)-1)
-  Ii=fd[f].i;Mc(a,fs[i].a+o,n);a)//todo:range check
+ V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(I(!a,a=js_alloc(n))P(f<0,a)P(f>=nd||!d[f].u,(V*)-1)
+  Ii=d[f].i;Mc(a,s[i].a+o,n);a)//todo:range check
  I munmap(If,In)_(0)
  I gettimeofday(ST timeval*a,ST timezone*b)_(js_time(&a->tv_sec,&a->tv_usec);0)
  V exit(Iv){js_exit(v);}
