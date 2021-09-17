@@ -5,8 +5,8 @@ O=@opts
 
 t:k o/t;o/t;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
 c:;rm -rf o k libk.so k32 k-obsd #clean
-w:k o/w/repl.k.h o/w/LICENSE.h o/w/k.wasm #wasm
-h:w;cd o/w;./web #http
+w:k o/w/repl.k.h o/w/LICENSE.h o/w/k.wasm
+h:w o/w/http;cd o/w;./http
 .PHONY: t c w h
 
 O_DFLT=$(O) -O3 -march=native -nostdlib -ffreestanding
@@ -39,6 +39,8 @@ o/w/k.wasm:o/w/k.wasm0
 	wasm-opt -O3 $< -o $@ && ls -l $@
 o/w/repl.k.h o/w/LICENSE.h:k
 	cd w && ./a.k && cd -
+o/w/http:w/http.c
+	$(MD);$(CC) $< -o $@
 
 # C32=$(CC) $(O) -m32
 # o/32/%.o:%.c *.h makefile
