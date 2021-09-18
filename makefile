@@ -4,8 +4,8 @@ STRIP ?= strip
 O=@opts
 
 t:k o/t;o/t;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
-c:;rm -rf o k libk.so k32 k-obsd #clean
-w:k o/w/fs.h o/w/k.wasm
+c:;rm -rf o k k-libc libk.so k32 k-obsd #clean
+w:k o/w/fs.h o/w/k.wasm o/w/index.html
 h:w o/w/http;cd o/w;./http
 .PHONY: t c w h
 
@@ -31,11 +31,12 @@ o/asm/%.s:%.c *.h;$(MD);$(CC) $(O_DFLT) -c $< -o $@ -S -masm=intel
 #/usr/lib/llvm-10/bin/wasm-ld must be on $PATH
 O_WASM=$(O) -Oz -nostdlib -ffreestanding --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -I/usr/include
 o/w/%.o:%.c *.h o/w/fs.h;$(MD);clang $(O_WASM) -o $@ -c $<
-o/w/k.wasm0:$(patsubst %.c,o/w/%.o,$(wildcard *.c));clang $(O_WASM) -o $@ $^ \
- -Wl,--export=main,--export=kinit,--export=rep,--export=val,--export=aCz,--export=open,--export=close\
- -Wl,--export=write,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
+o/w/k.wasm0:$(patsubst %.c,o/w/%.o,$(wildcard *.c));clang $(O_WASM) -o $@ $^\
+ -Wl,--export=main,--export=kinit,--export=rep,--export=open,--export=close,--export=write\
+ -Wl,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
 o/w/k.wasm:o/w/k.wasm0;wasm-opt -Oz $< -o $@ && ls -l $@
-o/w/fs.h:k|w/a.k;cd w && ./a.k && cd -
+o/w/fs.h:repl.k LICENSE|k w/fs.k;$(MD);./k w/fs.k $^ >$@
+o/w/index.html:w/index.html|k w/inl.k w/*.js;$(MD);cd w && ./inl.k index.html *.js >../$@ && cd -
 o/w/http:w/http.c;$(MD);$(CC) $< -o $@
 
 # C32=$(CC) $(O) -m32
