@@ -30,7 +30,8 @@ env={
  js_log:a=>console.log(t0(gb(a))),
  js_time:(a,b)=>{const t=now();s4(a,t/1000);s4(b,t%1000*1000)},
  js_exit:x=>{throw Error(`exit(${x})`)},
- js_alloc:n=>{const p=4096,r=heap%p;r&&ma(p-r);return ma(n)}}
+ js_alloc:n=>{const p=4096,r=heap%p;r&&ma(p-r);return ma(n)},
+ js_eval:(a,m,r,n)=>T1.encodeInto(''+eval(t0(M(a,m))),M(r,n)).written}
 
 let w=wa(),out=ou;const cur=(ta,i)=>ta.setSelectionRange(i,i),
 cpy=x=>{let c=navigator.clipboard;c&&c.writeText(out.value)},ap=s=>{out.value+=s;cur(out,out.value.length)},
