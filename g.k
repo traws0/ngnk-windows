@@ -25,5 +25,5 @@ m:("#ifdef @"
    " #define  $(a...)"
    " #define N$(a...) a"
    "#endif")
-r,:,/{(x/"@"\y/"$"\)'m}/'$(`DEBUG`DBG;`libc`LIBC;`"__FreeBSD__"`FBSD;`"__OpenBSD__"`OBSD;`i386`I386;`wasm`WASM);
+r,:,/{(x/"@"\y/"$"\)'m}/'$(`DEBUG`DBG;`libc`LIBC;`i386`I386;`wasm`WASM);
 "g.h"0:r
