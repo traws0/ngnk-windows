@@ -62,13 +62,19 @@ rdy(_=>{
    let e;try{app.main(2,a)}catch(x){e=x}
    location.hash=p;w=wa();if(e&&e.message!=='exit(0)')throw e})}
   if(location.hash.slice(-1)!=='-')ev()
-  const o=location.origin||'https://ngn.codeberg.page'
   out.value=''
   bEval.onclick=ev
   bGolf.onclick=_=>{const s=ed.value,h='ngn-'+hx8(hsh(s)),g=ubc()
    cpy(out.value=`# [K (ngn/k)], ${g.length} bytes\n\n    ${g.replace(/\n/g,'\n    ')}\n\n[Try it online!][${h}]\n`+
-    `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: ${o}/k#${p1(s)}\n`)}
+    `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: ${location.origin}/k#${p1(s)}\n`)}
   bLink.onclick=_=>{const s=ed.value,g=ubc(),u=g.replace(/`/g,'\\`').replace(/\\$/,'\\ ')
-   cpy(out.value=`ngn/k, ${g.length} bytes: [\`${u}\`](${o}/k#${p1(s)})`)}
+   cpy(out.value=`ngn/k, ${g.length} bytes: [\`${u}\`](${location.origin}/k#${p1(s)})`)}
   ed.onkeydown=x=>{const b={1013:bEval,1071:bGolf,1075:bLink}[kc(x)];if(b){b.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)}})
+
+let cnv,ctx
+onresize=_=>{let s=cnv.style,e=out
+ s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px';s.width=s.height=min(e.offsetWidth,e.offsetHeight)+'px'}
+const hgr=_=>{
+ if(!cnv){cnv=doc.createElement`canvas`;cnv.width=cnv.height=256;doc.body.appendChild(cnv);ctx=cnv.getContext`2d`}
+ ctx.clearRect(0,0,+cnv.width,+cnv.height);ctx.fillStyle='#fff';onresize()}
