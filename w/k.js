@@ -58,7 +58,7 @@ rdy(_=>{
   const ev=_=>{w.then(_=>{
    const v=ed.value,s=v.slice(-1)==='\n'?v:v+'\n',p=p1(v);location.hash=p+'-';out.value='';ubc();
    const f=app.open(ms('a.k\0'),514,438/*O_RDWR|O_CREAT,0666*/),[q,nq]=msn(s);app.write(f,q,nq);app.close(f)
-   const h=heap;heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;const a=heap;S4(heap,[h,h+2,0,0]);heap+=16
+   const h=heap,a=heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;S4(a,[h,h+2,0,0]);heap+=16
    let e;try{app.main(2,a)}catch(x){e=x}
    location.hash=p;w=wa();if(e&&e.message!=='exit(0)')throw e})}
   if(location.hash.slice(-1)!=='-')ev()
@@ -73,8 +73,8 @@ rdy(_=>{
   ed.onkeyup=thr(ubc,1000)}})
 
 let cnv,ctx
-onresize=_=>{let s=cnv.style,e=out
- s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px';s.width=s.height=min(e.offsetWidth,e.offsetHeight)+'px'}
+onresize=_=>{if(cnv&&out){let s=cnv.style,e=out
+ s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px';s.width=s.height=min(e.offsetWidth,e.offsetHeight)+'px'}}
 const hgr=_=>{
  if(!cnv){cnv=doc.createElement`canvas`;cnv.width=cnv.height=256;doc.body.appendChild(cnv);ctx=cnv.getContext`2d`}
  ctx.clearRect(0,0,+cnv.width,+cnv.height);ctx.fillStyle='#fff';onresize()}
