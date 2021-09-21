@@ -73,14 +73,16 @@ rdy(_=>{
   ed.onkeyup=thr(ubc,1000)}})
 
 let cnv,g,iid,tid,aid
-const pi=Math.PI,tau=2*pi,
-hgr=_=>{if(cnv)return;cnv=doc.createElement`canvas`;cnv.width=cnv.height=256;doc.body.appendChild(cnv)
- g=cnv.getContext`2d`;onresize();iid=setInterval(tick,50);req()},
-txt=_=>{if(!cnv)return;cnv.parentNode.removeChild(cnv);clearInterval(iid);clearTimeout(tid)
- cancelAnimationFrame(aid);cnv=g=iid=tid=null},
-K=s=>app.evs(ms(s+'\0')),
-tick=_=>K('tick[]'),
-draw=_=>{K('draw[]');tid=setTimeout(req,40)},
-req=_=>aid=requestAnimationFrame(draw)
+const pi=Math.PI,tau=2*pi,K=s=>app.evs(ms(s+'\0')),
+tick=_=>K('tick[]'),draw=_=>{K('draw[]');tid=setTimeout(req,40)},req=_=>aid=requestAnimationFrame(draw),
+hgr=_=>{if(g)return;cnv=doc.createElement('canvas');cnv.width=cnv.height=256;doc.body.appendChild(cnv)
+ g=cnv.getContext('2d');onresize();iid=setInterval(tick,50);req()
+ onkeydown=onkeyup=e=>g&&K('k'+e.type[3]+'@'+e.keyCode)
+ onkeypress=e=>{if(g){let c=e.charCode;K('kx@'+c);(c===10||c===13)&&K('kr@10');c===8&&K('kb@8')}}
+ cnv.onmousedown=cnv.onmouseup=cnv.onmousemove=
+  e=>{const r=cnv.getBoundingClientRect();K('m'+e.type[5]+'@'+[e.clientX-r.x,e.clientY-r.y])}},
+txt=_=>{if(!g)return;cnv.parentNode.removeChild(cnv);clearInterval(iid);clearTimeout(tid);cancelAnimationFrame(aid)
+ cnv=g=iid=tid=aid=null}
+
 onresize=_=>{if(!cnv||!out)return;let s=cnv.style,e=out;s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px'
  s.width=s.height=min(e.offsetWidth,e.offsetHeight)+'px'}
