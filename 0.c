@@ -14,7 +14,7 @@
 #undef __USE_EXTERN_INLINES
 #include<sys/stat.h>
 #ifndef shared
- I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));exit(r);r)
+ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 #endif
 #ifndef libc
  V*memcpy (V*x,OV*y,Nn)_(C*p=x  ;Qq=y  ;i(n,*p++=*q++)x)
@@ -31,9 +31,11 @@
  I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
  #ifndef wasm
   #if defined(__OpenBSD__)||defined(__FreeBSD__)
-   V _start(O char**a){main(*(I*)(V*)a,a+1);}
+   V _start(O char**a){exit(main(*(I*)(V*)a,a+1));}
+  #elif i386
+   asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main;jmp exit");
   #else
-   asm(".globl _start;_start:"I386("pop %eax;push %esp;push %eax;call main")NI386("pop %rdi;mov %rsp,%rsi;jmp main"));
+   asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;call main;mov %rdi,%rax;jmp exit");
   #endif
   #define  h(x,a...) I386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
                     NI386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;")
