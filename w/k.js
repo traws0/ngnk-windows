@@ -23,7 +23,7 @@ S4=(p,a)=>a.forEach((x,i)=>s4(p+4*i,x)),
 ma=n=>{heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>>16)+1);return heap-n},
 msn=s=>{s=t1(s);let p=ma(s.length);M(p,s.length).set(s);return[p,s.length]},
 ms=s=>msn(s)[0],
-wa=_=>kw.then(x=>WebAssembly.instantiate(x,{env})).then(x=>{app=x.instance.exports;heap=app.__heap_base}),
+wa=_=>kw.then(x=>WebAssembly.instantiate(x,{env})),
 env={
  js_in:(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
  js_out:(a,n)=>(ap(t0(M(a,n))),n),
@@ -39,8 +39,8 @@ kst=s=>s.replace(/[\0\t\n\r\"\\]/g,c=>'\\'+'0tnr"\\'['\0\t\n\r\"\\'.indexOf(c)])
 rdy(_=>{
  if(location.hash==='#r'){ //repl mode
   doc.body.classList.add`repl`;ed.value='';out=ed;let ha=[''],hi=0 //ha,hi:history array and index
-  w.then(_=>{
-   let p=ms('k.wasm\0repl.k\0'),argv=ma(16);S4(argv,[p,p+7,0,0]);app.kinit(1,argv);inp='\\l repl.k\n';app.rep()})
+  w.then(x=>{app=x.instance.exports;heap=app.__heap_base
+   let p=ms('kw\0repl.k\0'),argv=ma(16);S4(argv,[p,p+3,0,0]);app.kinit(1,argv);inp='\\l repl.k\n';app.rep()})
   ed.onkeydown=x=>{const k=kc(x),skp/*skip prompt*/=i=>i+(ed.value[i]===' ')
    if(k===38||k===40){let s=ed.value,i=s.lastIndexOf`\n`+1;ha[hi]=s.slice(i);hi=max(0,min(ha.length-1,hi+k-39))
     ed.value=s.slice(0,i)+ha[hi];cur(ed,skp(i));return!1}
@@ -55,7 +55,7 @@ rdy(_=>{
    if(s.slice(0,2)==='f:'){s=s.slice(2);r.push`not counting initial "f:"`}
    bc.textContent=s.length+'bytes'+(r.length?`(${r.join`, `})`:'');return s}
   ed.value=p0(location.hash.slice(1).replace(/-$/,''))
-  const ev=_=>{w.then(_=>{
+  const ev=_=>{w.then(x=>{app=x.instance.exports;heap=app.__heap_base;txt()
    const v=ed.value,s=v.slice(-1)==='\n'?v:v+'\n',p=p1(v);location.hash=p+'-';out.value='';ubc();
    const f=app.open(ms('a.k\0'),514,438/*O_RDWR|O_CREAT,0666*/),[q,nq]=msn(s);app.write(f,q,nq);app.close(f)
    const h=heap,a=heap+=T1.encodeInto('k\0a.k\0',M(heap,8)).written;S4(a,[h,h+2,0,0]);heap+=16
@@ -72,9 +72,15 @@ rdy(_=>{
   ed.onkeydown=x=>{const b={1013:bEval,1071:bGolf,1075:bLink}[kc(x)];if(b){b.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)}})
 
-let cnv,ctx
-onresize=_=>{if(cnv&&out){let s=cnv.style,e=out
- s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px';s.width=s.height=min(e.offsetWidth,e.offsetHeight)+'px'}}
-const hgr=_=>{
- if(!cnv){cnv=doc.createElement`canvas`;cnv.width=cnv.height=256;doc.body.appendChild(cnv);ctx=cnv.getContext`2d`}
- ctx.clearRect(0,0,+cnv.width,+cnv.height);ctx.fillStyle='#fff';onresize()}
+let cnv,g,iid,tid,aid
+const pi=Math.PI,tau=2*pi,
+hgr=_=>{if(cnv)return;cnv=doc.createElement`canvas`;cnv.width=cnv.height=256;doc.body.appendChild(cnv)
+ g=cnv.getContext`2d`;onresize();iid=setInterval(tick,50);req()},
+txt=_=>{if(!cnv)return;cnv.parentNode.removeChild(cnv);clearInterval(iid);clearTimeout(tid)
+ cancelAnimationFrame(aid);cnv=g=iid=tid=null},
+K=s=>app.evs(ms(s+'\0')),
+tick=_=>K('tick[]'),
+draw=_=>{K('draw[]');tid=setTimeout(req,40)},
+req=_=>aid=requestAnimationFrame(draw)
+onresize=_=>{if(!cnv||!out)return;let s=cnv.style,e=out;s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px'
+ s.width=s.height=min(e.offsetWidth,e.offsetHeight)+'px'}

@@ -32,7 +32,7 @@ o/asm/%.s:%.c *.h;$(MD);$(CC) $(O_DFLT) -c $< -o $@ -S -masm=intel
 O_WASM=$(O) -Oz -nostdlib -ffreestanding --target=wasm32 -U __SIZEOF_INT128__ -Dwasm -I/usr/include
 o/w/%.o:%.c *.h o/w/fs.h;$(MD);clang $(O_WASM) -o $@ -c $<
 o/w/k.wasm0:$(patsubst %.c,o/w/%.o,$(wildcard *.c));clang $(O_WASM) -o $@ $^\
- -Wl,--export=main,--export=kinit,--export=rep,--export=open,--export=close,--export=write\
+ -Wl,--export=main,--export=kinit,--export=rep,--export=open,--export=close,--export=write,--export=evs\
  -Wl,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
 o/w/k.wasm:o/w/k.wasm0;wasm-opt -Oz $< -o $@ && ls -l $@
 o/w/fs.h:repl.k LICENSE|k w/fs.k;$(MD);./k w/fs.k $^ >$@
