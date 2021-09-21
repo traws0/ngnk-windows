@@ -1,8 +1,6 @@
 #!k
 `1:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for more info\n",repl.prompt:," "
-repl.cmds:""!()
-repl.cmds["vf"]:{`0:($!h),'":",'`k'. h:(&(x~"v")=^`o`p`q`r`u`v`w?@'h)#h:``repl_.:0#`}
-repl.cmds["a"]:{`1:1:repl.joinpath[repl.basename`argv 0]"LICENSE";}
+repl.cmds:"a"!{`1:1:repl.joinpath[repl.basename`argv 0]"LICENSE";}
 repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
 repl.joinpath:{$[x~,".";y;"/"~*|x;x,y;x,"/",y]}
 repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}

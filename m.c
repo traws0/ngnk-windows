@@ -45,8 +45,12 @@ AQ(cmdcd,s+=*s==32;P(!*s||*s==10,Cb[256];getcwd(b,SZ b);aCz(b))chdir(s);au)
 AQ(cmdt,Ln=*s==':'?++s,pl(&s):1,t=now();Ax=N(cplprs(s));i(n,mr(Nx(app(x,0,0))))x(az((now()-t+500)/1000)))
 AQ(cmdl,Ax=N(u1c(aCz(s)));Ed(!xn||xC[xn-1]-10,x)xC[xn-1]=0;C*p=xV;I(!MQ(p,"#!",2),p=SC0(p+2,10))
  W(p<xC+xn,C*q=p=skp(p);W(*q&&(*q-10||si(" }",q[1])<2),q++)*q=0;Nx(ln(p));p=q+1)x(au))
+SN A cmdfv(Ii)_(K("{`0:($!h),'\":\",'`k'. h:(&x=^`o`p`q`r`u`v`w?@'h)#h:``repl_.:0#`}",ai(i)))
+AQ(cmdf,cmdfv(0))
+AQ(cmdv,cmdfv(1))
 AQ(evs,P(*s-'\\',Ax=N(cplprs(s));x(run(x,0,0)))Cc=s[1],d=s[2];P(c=='c'&&d=='d'&&(!s[3]||s[3]==32),cmdcd(s+3))
- P(!d||d==32||d==':',CH(si("ltm\\",c),&cmdl,cmdt,cmdm,cmdX,en0)(s+2+(d==32)))K("0x0a\\`x(,,\"/bin/sh\"),,:",aCz(s+1)))
+ P(!d||d==32||d==':',CH(si("\\flmtv",c),&cmdX,cmdf,cmdl,cmdm,cmdt,cmdv,en0)(s+2+(d==32)))
+ K("0x0a\\`x(,,\"/bin/sh\"),,:",aCz(s+1)))
 
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,SZ(b)-1);P(n<0,0)b[n]=0;C*p=b;W(*p,C*q=SC0(p,10);*q=0;ln(p);p=q+1)1)I repl()_(W(rep());0)
