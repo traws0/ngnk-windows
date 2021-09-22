@@ -35,7 +35,7 @@
   #elif i386
    asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main;jmp exit");
   #else
-   asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;call main;mov %rdi,%rax;jmp exit");
+   asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;and $-16,%rsp;call main;mov %rax,%rdi;jmp exit");
   #endif
   #define  h(x,a...) I386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
                     NI386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;")
