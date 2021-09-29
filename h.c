@@ -8,7 +8,7 @@ ALA(rshN,Xm(Ay=kv(&x);x=Ny(rshN(n,x));y=Nx(rshN(n,y));am(x,y))XM(Ay=kv(&x);aM(x,
 S A slc(Ax/*0*/,Li,Lj)_(Q(xtT&&0<=i&&i<=j&&i<=xn)Ay=atn(xt,j-i);Mc(yV,xV+i*xW,(j-i)*xW);XA(sqz(mRa(y)))y)
 S ALA(chp,Q(n>0);Lm=(xn+n-1)/n;Ay=aA(m);i(m,ya=slc(x,n*i,min(xn,n*i+n)))x(y))
 S A shp(O L*s,Ln,Ax,Lm)_(P(n<=0,en1(x))m*=*s;P(n==1,rshN(m,x))chp(s[1],shp(s+1,n-1,x,m)))
-A2(rsh,XF(flt(x,y,1))Xz(rshN(gl(x),y))Ym(Xmt(rsh(enl(x),y))am(x,ap1(y,xR)))Yt(rsh(x,enl(y)))
+A2(rsh,XF(flt(x,y,1))Xz(rshN(gl(x),y))Xm(et2(x,y))Ym(Xmt(rsh(enl(x),y))am(x,ap1(y,xR)))Yt(rsh(x,enl(y)))
  x=Ny(cL(x));Nn=xN;P(!n,fir(x(y)))P(n>8,ez2(x,y))P(n==1&&*xL==NL,x(y))P(!yn,rsh(x,enl(fir(y))))Lm=1;
  i(n,Lv=xl;m*=v;I(v<0,Ed(n>2||n==2&&v-NL,x,y)
   P(n==2,Ed(*xL<=0&&xL[1]<=0||!yn,x,y)*xL==NL?x(chp(xL[1],y)):K("{x@:0;((-x)!(#y)*!x)_y}",x,y))))
