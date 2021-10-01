@@ -8,6 +8,7 @@
 #include<sys/time.h>
 #undef __USE_EXTERN_INLINES
 #include<sys/stat.h>
+#include<sys/mman.h>
 #include"a.h"
 ssize_t getdents(I,char*,N);
 TD ST{FBSD(UI d_fileno;UH d_reclen;C d_type,d_namlen,d_name[255+1])
@@ -17,20 +18,21 @@ S I skt(UI h,UH p)_(If=socket(AF_INET,SOCK_STREAM,0);Eo(f<0)Iv=setsockopt(f,IPPR
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);Eo(connect(f,(ST sockaddr*)&a,SZ a)<0)f)
 S I o1(Qs,L fl)_(P(!SC(s,':'),If=open(s,fl,0666);Eo(f<3/*fbsd*/)f)UI h=addr(&s);Ed(*s-':')s++;UL p=pu(&s);Ed(*s)skt(h,p))
 S I o(Ax/*1*/,I fl)_(Xz(gl(x))Xs(Lv=xv;P(!v,1)Qs=syp(&v);o1(s,fl))Et(!xtC,x)x=str0(x);x2(o1(xV,fl)))
-S C ft(If)_(ST stat s;Iv=fstat(f,&s);P(v<0,0)Lm=s.st_mode&S_IFMT;
- S L a[]={-1,S_IFCHR,S_IFDIR,S_IFIFO,S_IFLNK,S_IFREG,S_IFSOCK};"?cdflrs"[max(0,fL(a,ZZ(a),m))])
-A1(opn,az(N(o(x,O_RDWR|O_CREAT))))AL(cls,close(n);au)
+S I fmd(If)_(ST stat s;fstat(f,&s)<0?0:s.st_mode)
+A1(opn,az(N(o(x,O_RDWR|O_CREAT))))
+AL(cls,close(n);au)
 A1(u0c,x=N(spl(N(u1c(x))));xn&&!_n(xA[xn-1])?drp(-1,x):x)
 A1(u1c,Xz(If=gl(x);Cb[1024];x=oC;W(1,Ik=read(f,b,SZ b);Eo(k<0,x)x=cts(x,b,k);P(k-SZ b,x))0)
- If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Ct=ft(f);
- P(t=='d',Cb[ZP];Ik;Ay=oC;
+ If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Im=fmd(f);
+ P(S_ISDIR(m),Cb[ZP];Ik;Ay=oC;
   W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;y=cts(y,s,Sn(s));y=apc(y,10);i+=e->d_reclen))
   close(f);y)
- P(t=='r',Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
+ P(S_ISREG(m),Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
  Ay=u1c(ai(f));close(f);y)
-A2(v0c,I(ytA,y=Nx(jc(10,y)))Et(!ytC,x,y)v1c(x,N(apc(y,10))))
-A2(v1c,Et(!ytC,x)
- Xz(If=gl(x);/*P(ft(f)=='r',y2(mw(f,yn,yV);au))*/Nn=yn;Qs=yV;y2(Az=au;W(n>0,Lk=write(f,s,n);I(k<0,z=eo0())B(k<=0)s+=k;n-=k)z))
+A2(v0c,YA(v0c(x,Nx(jc(10,y))))YC(v1c(x,apc(y,10)))et2(x,y))
+A2(v1c,P(!ytC,et2(x,y))
+ Xz(If=gl(x);Nn=yn;Qs=yV;P(f<3||!S_ISREG(fmd(f)),y2(Az=au;W(n>0,Lk=write(f,s,n);I(k<0,z=eo0())B(k<=0)s+=k;n-=k)z))
+    ftruncate(f,n);V*p=mmap(0,n,PROT_READ|PROT_WRITE,MAP_SHARED,f,0);Mc(p,s,n);munmap(p,n);y(au))
  If=N(o(x,O_RDWR|O_CREAT|O_TRUNC));Az=v1c(ai(f),y);f>2&&close(f);z)
 
 S A rda(If)_(Ax=aC(256-ZA);L m=0,k;
