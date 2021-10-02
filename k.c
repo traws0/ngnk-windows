@@ -30,7 +30,7 @@ S A1(e1f,e1(xtC?xV:"err",x))
 S A1(avf,Ay=oA;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
 S A1(enf,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(cS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au?ap1(y,x):y)
 S A1(exf,exit(xtz?gl(x):1);0)
-S A1(jsf,XC(WASM(Cb[4096];I js_eval(C*,I,C*,I);In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n))NWASM(en1(x)))et1(x))
+S A1(jsf,XC(WASM(Cb[4096];I js_eval(C*,I,C*,I);In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n))NWASM(en1(x)))XA(eac1(x,jsf))et1(x))
 AX(app,
  XA(idxA(x,a,n))
  XT(n-1?ern(a,n):idx_(x,*a))
