@@ -55,10 +55,10 @@
       h(fork)h3(execve)h1(exit)h2(gettimeofday)h6(mmap)h3(getdents)h1(chdir)h2(ftruncate));
  #else
   I js_in(V*,N);V js_out(OV*,N),js_log(OV*),*js_alloc(N),js_time(I*,long*),js_exit(I);
-  S ST{C*a,p[16];Nn;}s[8]={{.a=""},{.a=""},
+  S ST{C*a,p[16];Nn;}s[8]={{.a=""},{.a=""},//s:storage,
    #include"o/w/fs.h"
-  };S ST{C i;N o;}d[8]={{.i=1},{.i=1},{.i=1}};S O I ns=ZZ(s),nd=ZZ(d);//s:storage,d:file descriptor table
-  #define FI P((UI)f>=nd||!d[f].i,EBADF)Ii=d[f].i;//validate file descriptor "f" and get inode as "i"
+  };S ST{C i;N o;}d[8]={{.i=1},{.i=1},{.i=1}};S O I ns=ZZ(s),nd=ZZ(d);//d:fd table
+  #define FI P((UI)f>=nd||!d[f].i,EBADF)Ii=d[f].i;//validate fd "f" and get inode "i"
   I open(Qp,Iv,...)_(Im=Sn(p);P(m>=SZ s[0].p,ENAMETOOLONG)Ii=0;W(i<ns&&SQ(s[i].p,p),i++)
    I(i>=ns,P(O_CREAT&~v,ENOENT)i=0;W(i<ns&&s[i].a,i++)P(i>=ns,ENOSPC)s[i].a="";s[i].n=0;Mc(s[i].p,p,m))
    If=0;W(f<nd&&d[f].i,f++)P(f>=nd,EMFILE)d[f].i=1;d[f].i=i;d[f].o=0;f)
@@ -69,8 +69,7 @@
   off_t lseek(If,off_t o,I w)_(FI;o=w==SEEK_CUR?o+d[f].o:w==SEEK_END?o+s[i].n:w==SEEK_SET?o:-1;P(o<0,EINVAL)d[f].o=o)
   I fstat(If,ST stat*r)_(FI;In=s[i].n;
    *r=(TY(*r)){.st_ino=i,.st_mode=i==1?S_IFCHR:S_IFREG,.st_nlink=1,.st_size=n,.st_blksize=512,.st_blocks=n+511>>9};0)
-  V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(I(!a,a=js_alloc(n))P(f<0,a)P(f>=nd||!d[f].i,(V*)-1)
-   Ii=d[f].i;Mc(a,s[i].a+o,n);a)//todo:range check
+  V*mmap(V*a,Nn,I pr,I fl,If,off_t o)_(I(!a,a=js_alloc(n))P(f<0,a)P(f>=nd||!d[f].i,(V*)-1)Ii=d[f].i;Mc(a,s[i].a+o,n);a)
   I munmap(If,In)_(0)
   I gettimeofday(ST timeval*a,ST timezone*b)_(js_time(&a->tv_sec,&a->tv_usec);0)
   V exit(Iv){js_exit(v);}
