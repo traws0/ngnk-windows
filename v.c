@@ -21,7 +21,7 @@ A1(whr,Xt(XF(et1(x))whr(enl(x)))XA(K("{$[`A~@x;(,&#'*'x),,'/x@\\:!0|/#'x:o'x;,&x
 A1(rev,Xm(Ay=kv(&x);am(rev(x),rev(y)))XM(Ay=kv(&x);aM(x,Nx(eac1(y,rev))))Xt(x)x=mut(x);Ii=0,j=xn-1,w=Tz[xt];
  W(i<j,I(!w,SWP(xb,xB[j]))EI(w==1,SWP(xh,xH[j]))EI(w==2,SWP(xi,xI[j]))E(SWP(xl,xL[j]))i++;j--)x)
 A1(typ,x(as(TS[xt])))
-A1(len,x(az(xN)))N _N(Ax/*0*/)_(xtT?xn:xtm?_N(xy):!xtM?1:_n(xy)?_N(*(A*)_V(xy)):1)
+A1(len,x(az(xN)))N _N(Ax/*0*/)_(XT(xn)Xm(_N(xy))XM(_n(xy)?_N(*_A(xy)):1)1)
 A1(unq,XT(xN<2?x:K("{x@i@<i@:&@[;0;:;1]@~~':x@i:<x}",x))Xz(rndD(gl(x)))et1(x))
 A2(fil,YmMA(eac2(x,y,EXC))YF(y==au?x:x(y))Yt(fir(fil(x,enl(y))))K("{@[y;&^y;:;x]}",x,y))
 A2(exc,Xt(fil(x,y))En(xtmM||ytmM,x,y)y=enla(y);P(!xn||!yn,y(x))
