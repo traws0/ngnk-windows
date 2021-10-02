@@ -92,7 +92,7 @@ S A3(ari,Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2(x,y,z))N(sup(&x,&y));Ik=
  I(t>tD,t+=tD-td)I(z>MXM&&t==tD,t=tI)I(!k,t+=tc-tC;P(TP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zV,zn);x-z?x(y-z?y(z):z):y(z))
 S ALA(ext,XMT(x)rshN(n,xtm?enl(x):x))
-S A2(dct,x=ext(yN,x);y=ext(xN,y);El(xN-yN,x,y)am(x,y))
+A2(dct,P(rnk(x)<0,ed2(x,y))x=ext(yN,x);y=ext(xN,y);El(xN-yN,x,y)am(x,y))
 
 A2(dex,mr(x);y)
 A2(add,adm(x,y,0))

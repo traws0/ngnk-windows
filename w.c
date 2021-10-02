@@ -13,7 +13,7 @@ A jc(Cc,   Ax)_(Ln=jN(1,x);Et(n<0,x)Ay=aC(n);C*p=yV;i(xn,I(i,*p++=c        )Az=x
 A jC(Qs,Nm,Ax)_(Ln=jN(m,x);Et(n<0,x)Ay=aC(n);C*p=yV;i(xn,I(i,Mc(p,s,m);p+=m)Az=xa;I(ztc,*p++=zv)E(Mc(p,zV,zn);p+=zn))x(y))
 L cfm(OA*a/*0*/,In)_(Lm=-1;i(n,Ax=a[i];I(!xtt,Lv=xN;P(m>=0&&m-v,-2)m=v))m)
 S AX(eacm,Az=oS;Ik=0;i(n,Ay=a[i];I(ytm,k++;z=cat(z,_R(yx))))I(k>1,z=unq(z))
- Ab8;i(n,Ay=b[i]=a[i];I(ytm,Au=kv(&y);uq(id_(x,u));b[i]=ap1(u,fil(ai(yn),fnd(y,zR)))))x=eac(x,b,n);x?am(z,x):z(x))
+ Ab8;i(n,Ay=b[i]=a[i];I(ytm,Au=kv(&y);uq(id_(x,u));b[i]=ap1(u,fil(ai(yn),fnd(y,zR)))))x=eac(x,b,n);P(!x,z(x))dct(z,x))
 AX(eac,Ab8;Ct[8];Lm=-1;
  i(n,Ay=b[i]=a[i];Ym(eacm(x,a,n))t[i]=ytP?0:ytt?1:ytA?2+(yr>1):4;I(t[i]>1,L l=yN;P(m>=0&&m-l,eln(a,n))m=l))
  P(m<0,app(x,a,n))i(n,I(t[i]==1,_r(a[i])+=m)) //0:pkdatm,1:refatm,2:tA(r=1),3:tA,4:other
