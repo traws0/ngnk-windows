@@ -72,11 +72,11 @@ rdy(_=>{
   ed.onkeydown=x=>{const b={1013:bEval,1071:bGolf,1075:bLink}[kc(x)];if(b){b.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)}})
 
-let cnv,g,iid,tid,aid
+let cnv,g,iid,tid,aid,tickPeriod=50
 const pi=Math.PI,tau=2*pi,K=s=>app.evs(ms(s+'\0')),
 tick=_=>K('tick[]'),draw=_=>{K('draw[]');tid=setTimeout(req,40)},req=_=>aid=requestAnimationFrame(draw),
 hgr=_=>{if(g)return;cnv=doc.createElement('canvas');cnv.width=cnv.height=256;doc.body.appendChild(cnv)
- g=cnv.getContext('2d');onresize();iid=setInterval(tick,50);req()
+ g=cnv.getContext('2d');onresize();iid=setInterval(tick,tickPeriod);req()
  onkeydown=onkeyup=e=>g&&K('k'+e.type[3]+'@'+e.keyCode)
  onkeypress=e=>{if(g){let c=e.charCode;K('kx@'+c);(c===10||c===13)&&K('kr@10');c===8&&K('kb@8')}}
  cnv.onmousedown=cnv.onmouseup=cnv.onmousemove=
