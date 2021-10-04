@@ -5,8 +5,8 @@ O=@opts
 
 t:k o/t;o/t;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
 c:;rm -rf o k k-libc libk.so k32 k-obsd #clean
-w:k o/w/fs.h o/w/k.wasm o/w/index.html
-h:w o/w/http;cd o/w;./http
+w:k o/w/fs.h o/w/k.wasm o/w/index.html o/w/tetris.k
+h:k o/w/fs.h o/w/k.wasm o/w/index.html o/w/tetris.k o/w/http;cd o/w;./http
 .PHONY: t c w h
 
 O_DFLT=$(O) -O3 -march=native -nostdlib -ffreestanding
@@ -36,7 +36,8 @@ o/w/k.wasm0:$(patsubst %.c,o/w/%.o,$(wildcard *.c));clang $(O_WASM) -o $@ $^\
  -Wl,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
 o/w/k.wasm:o/w/k.wasm0;wasm-opt -Oz $< -o $@ && ls -l $@
 o/w/fs.h:repl.k LICENSE|k w/fs.k;$(MD);./k w/fs.k $^ >$@
-o/w/index.html:w/index.html|k w/inl.k w/*.js;$(MD);cd w && ./inl.k index.html *.js >../$@ && cd -
+o/w/tetris.k:w/tetris.k;$(MD);cp $< $@
+o/w/index.html:w/index.html k w/inl.k w/*.js;$(MD);cd w && ./inl.k index.html *.js >../$@ && cd -
 o/w/http:w/http.c;$(MD);$(CC) $< -o $@
 
 # C32=$(CC) $(O) -m32

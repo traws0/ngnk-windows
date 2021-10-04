@@ -69,6 +69,7 @@ rdy(_=>{
     `\n[K (ngn/k)]: https://codeberg.org/ngn/k\n[${h}]: ${location.origin}/k#${p1(s)}\n`)}
   bLink.onclick=_=>{const s=ed.value,g=ubc(),u=g.replace(/`/g,'\\`').replace(/\\$/,'\\ ')
    cpy(out.value=`ngn/k, ${g.length} bytes: [\`${u}\`](${location.origin}/k#${p1(s)})`)}
+  selEx.onchange=_=>{const v=selEx.selectedOptions[0].value;if(v){fetch(v).then(x=>x.text()).then(x=>{ed.value=x;ev()})}}
   ed.onkeydown=x=>{const b={1013:bEval,1071:bGolf,1075:bLink}[kc(x)];if(b){b.onclick();return!1}}
   ed.onkeyup=thr(ubc,1000)}})
 
