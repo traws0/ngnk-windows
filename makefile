@@ -36,7 +36,7 @@ o/w/k.wasm0:$(patsubst %.c,o/w/%.o,$(wildcard *.c));clang $(O_WASM) -o $@ $^\
  -Wl,--export=__heap_base,--no-entry,--initial-memory=33554432,--allow-undefined
 o/w/k.wasm:o/w/k.wasm0;wasm-opt -Oz $< -o $@ && ls -l $@
 o/w/fs.h:repl.k LICENSE|k w/fs.k;$(MD);./k w/fs.k $^ >$@
-o/w/tetris.k:w/tetris.k;$(MD);cp $< $@
+o/w/tetris.k:w/tetris.k;$(MD);ln -f $< $@
 o/w/index.html:w/index.html k w/inl.k w/*.js;$(MD);cd w && ./inl.k index.html *.js >../$@ && cd -
 o/w/http:w/http.c;$(MD);$(CC) $< -o $@
 

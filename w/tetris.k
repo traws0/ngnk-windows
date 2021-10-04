@@ -1,12 +1,36 @@
-`js"hgr()";P:&''(3(|+:)\)'P,:|''-2#P:"#"=";"\'" "\"#### ##;## ###;.#. ##.;.## ###;#.."
-(h;w):hw:22 10;a:hw#0;b:_256%h;R:0
-s:{$[*/~a ./:+|x+P[y]z;[p::x;i::y;r::z;1];0]}
-d:{$[s[p+0 1;i;r];1;[F[];N[];0]]}
-F:{a::a .[;;:;1]/+|p+P[i]r;$[n:+/l:*/'a;[a::(n#,&w),a@&~l;`0:$R+:-1+*/n#2];]}
-N:{$[s[(-2!w;0);*1?#P;*1?4];1;[`0:"end";t::0N;0]]}
-kd:(32 37 38 39 40!({(::)d/1};{s[p-1 0;i;r]};{s[p;i;4!1+r]};{s[p+1 0;i;r]};d))@/2#  
-fs:{"g.fillStyle='",($x),"'"}
-q:{"g.fillRect(",(","/$(b*x),b-1 1),")"}
-draw:{`js("g.clearRect(0,0,256,256);g.strokeStyle='white';g.strokeRect(0,0,",(","/$b*|hw),")"
- fs`cyan`yellow`magenta`green`blue`red`orange i;q'+p+P[i]r;fs`white;q'+|&a);}
-N[];t:0;tick:{$[16=t+:1;[t::0;d[]];]}
+T:&''(3(|+:)\)'T,:|''-2#T:"#"=";"\'" "\"#### ##;## ###;.#. ##.;.## ###;#.." /tetrominos by type and rotation
+C:`cyan`yellow`magenta`green`blue`red`orange /colours by tetromino type
+a:20 10#0 /grid (boolean matrix without the falling tetromino)
+s:0 /score
+
+/falling tetromino (p:position,t:type,r:rotation)
+i:{f[3 0;*1?#T;*1?4];0}  /init
+f:{$[*/~a ./:+|x+T[y]z   /try to set position,type,rotation
+ [p::x;t::y;r::z;1];0]}  /return 1 for success, 0 for collision
+d:{$[f[p+0 1;t;r];:1;]   /try to move it down. if successful, return 1
+ a::a .[;;:;1]/+|p+T[t]r /freeze fallen blocks
+ n:+/m:*/'a              /number of and mask of completed lines
+ a::(0*n#a),a@&~m        /clear completed lines, replenish with empty
+ (1&n)(`0:)/$s+:-1+*/n#2 /update score and print it if necessary
+ i[]}                    /respawn
+tick:d                   /periodically call d[]
+
+/rendering
+b:_256%#a                                 /block size
+c:{"g.fillStyle='",($x),"';"}             /set colour
+q:{"g.fillRect(",(","/$(b*x),b-1 1),");"} /draw a square(block)
+draw:{`js@,//("g.clearRect(0,0,256,256);"
+              c`"#80808020";q'+|&1|a      /semi-transparent grid background
+              c C t;q'+p+T[t]r            /draw falling tetromino
+              c`white;q'+|&a)}            /draw stationary blocks
+
+/key down event handler
+kd:{$[32=x;(::)d/1      /space(drop)
+      37=x;f[p-1 0;t;r] /left
+      38=x;f[p;t;4!1+r] /up(rotate)
+      39=x;f[p+1 0;t;r] /right
+      40=x;d[]]}        /down
+
+i[];
+`js"tickPeriod=500"; /tick[] will be called every half second
+`js"hgr()";          /enter graphics mode
