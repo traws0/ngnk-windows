@@ -78,3 +78,6 @@
   char*getcwd(char*s,Nn)_((V*)0)I getdents(If,char*s,Nn)_(-1)I ftruncate(If,off_t o)_(-1)
  #endif
 #endif
+#if libc && __linux__
+ ssize_t getdents(If,char*a,Nn)_(syscall(SYS_getdents,f,a,n))
+#endif
