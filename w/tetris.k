@@ -1,4 +1,4 @@
-T:&''(3(|+:)\)'T,:|''-2#T:"#"=";"\'" "\"#### ##;## ###;.#. ##.;.## ###;#.." /tetrominos by type and rotation
+T:&''3(|+:)\'(+2\16\)'0x0f337263743671 /tetrominos by type and rotation
 C:`cyan`yellow`magenta`green`blue`red`orange /colours by tetromino type
 a:20 10#0 /grid (boolean matrix without the falling tetromino)
 s:0 /score
