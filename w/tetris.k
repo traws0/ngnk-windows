@@ -34,3 +34,6 @@ kd:{$[32=x;(::)d/1      /space(drop)
 i[];
 `js"tickPeriod=500"; /tick[] will be called every half second
 `js"hgr()";          /enter graphics mode
+
+/for a similar language with more advanced graphics capabilities see:
+/ https://johnearnest.github.io/ok/ike/ike.html
