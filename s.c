@@ -2,11 +2,13 @@
 #define Mh(x,y) (Mc(x,y,SZ(y)-1)+SZ(y)-1)
 S O H*dt=(H*)"0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849"
              "5051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899";
-S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))     S O UI T2=100;
-S C*S4(C*s,UI x)_(S2(S2(s,x/T2),x%T2))S C*s4(C*s,UI x)_(x<T2?s2(s,x):S2(s2(s,x/T2),x%T2))S O UI T4=1e4;
-S C*S8(C*s,UI x)_(S4(S4(s,x/T4),x%T4))S C*s8(C*s,UI x)_(x<T4?s4(s,x):S4(s4(s,x/T4),x%T4))S O UI T8=1e8;
-S C*S0(C*s,UL x)_(S8(S8(s,x/T8),x%T8))S C*sX(C*s,UL x)_(x<T8?s8(s,x):S8(s8(s,x/T8),x%T8))S O UL TX=1e16;
-S C*su(C*s,UL x)_(x<TX?sX(s,x):S0(s4(s,x/TX),x%TX))C*sl(C*s,Lv)_(I(v<0,P(v==NL,Mh(s,"0N"))v=-v;*s++='-')su(s,v))
+S O UI E2=100;S O UI E4=1e4;S O UI E8=1e8;S O UL Ex=1e16;
+S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))     
+S C*S4(C*s,UI x)_(S2(S2(s,x/E2),x%E2))S C*s4(C*s,UI x)_(x<E2?s2(s,x):S2(s2(s,x/E2),x%E2))
+S C*S8(C*s,UI x)_(S4(S4(s,x/E4),x%E4))S C*s8(C*s,UI x)_(x<E4?s4(s,x):S4(s4(s,x/E4),x%E4))
+S C*S0(C*s,UL x)_(S8(S8(s,x/E8),x%E8))S C*sX(C*s,UL x)_(x<E8?s8(s,x):S8(s8(s,x/E8),x%E8))
+S C*su(C*s,UL x)_(x<Ex?sX(s,x):S0(s4(s,x/Ex),x%Ex))
+C*sl(C*s,Lv)_(I(v<0,P(v==NL,Mh(s,"0N"))v=-v;*s++='-')su(s,v))
 // github.com/ulfjack/ryu (apache2|boost license)
 #if defined(__SIZEOF_INT128__)
  S UL msh(UL m,O UL*a,Ii)_(__uint128_t g=m;((g**a>>64)+g*a[1])>>(i-64))
@@ -37,7 +39,7 @@ S C*sd(C*s,L d)_(UL x=d,m=x<<12>>12;I e=x<<1>>53;P(m&&e==2047,Mh(s,"0n"))I(x>>63
  s++;I l=su(s,u)-s-1;s[-1]=*s;t+=l;
  P(in(t,16),Ik=l<t?l:t;Mm(s,s+1,k);Ms(s+l,'0',max(0,t-l));s+=t;*s++='.';s+=l-k;I(t>=l,*s++='0')s)
  P(-4<t&&t<0,i(l+1,s[l-t-i]=s[l-i])s[-1]='0';*s++='.';Ms(s,'0',-t-1)+l-t)
- I(l>0,*s++='.';s+=l)*s++='e';I(t<0,t=-t;*s++='-')s4(s,t))
+ I(l>0,*s++='.';s+=l)*s++='e';I(t<0,t=-t;*s++='-')su(s,t))
 A1(str0,Q(xtC);Nn=xn;x=AN(n,room(n+1,x));xC[n]=0;x)
 A1(str,Xzd(Ay=aC(24);V(f,xtd?sd:sl)AN(f(yC,gl(x))-yC,y))Xs(Lv=xv;aCz(syp(&v)))Xc(enl(x))XF(kst(x))K("$:'",x))
 
