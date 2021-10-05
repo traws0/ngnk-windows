@@ -26,6 +26,7 @@ x.c  serialization: `@x `?x
 e.c  error handling
 t/   unit tests
 w/   web ui
+x/   example for using libk.so
 o/   build output
 
 l/   k libraries

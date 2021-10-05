@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))VS
-A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw?1:xtv?2:xtF?xk:0) //_K:arity
+A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw||xte?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 AX(prj,XA(app(x,a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
  x=(xtp?val:a1)(xR);Ii=0,j=1;W(i<n&&j<xn,I(xA[j]==PLH,xA[j]=a[i++])j++)W(i<n,xq(a[i++]))P(xn>9,ez1(x))AT(tp,AK(k,x)))
@@ -48,7 +48,7 @@ AX(app,
  Xu(v1[xv](*a))
  Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))
  Xo(run(x,a,n))
- Xe(P(n-1,ern(a,n))az(((A1*)xV)(gl(N(cL(*a))))))
+ Xe(P(n-1,ern(a,n))az(((A1*)(x<<8>>8))(gl(N(cL(*a))))))
  etn(a,n))
 A1(val,P(xtc||xts,val(enl(x)))XS(Ay=glb;i(xn,Et(!ytm,x)Az=yx,u=yy;Ed(!ztS||!utA,x)Ik=xi;Lj=fAI(z,k);Ev(j<0,x)y=uA[j])x(yR))
  XC(x=str0(x);x(evs(xV)))XA(P(!xn,x)P(xn==1,fir(x))P(xn>9,ez1(x))x=mut(x);Ay=app(xx,&xy,xn-1);AN(1,x);x(y))

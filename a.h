@@ -104,6 +104,7 @@ S I _tT(Ax)_(xt<tM)S I _tZ(Ax)_(c3(tB,xt,tL))S I _tP(Ax)_(TP(xt))
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti,tu,tv,tw
 // tttttttt................oooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
+// tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx te
 #define _V(x) (V*)(x)         //ptr to data
 #define _W(x) TZ[_t(x)]       //item size in bytes
 #define _r(x) ((I*)_V(x))[-3] //refcount
