@@ -59,6 +59,8 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=
  Mc(cn+ti,cn+tI,(tS-tI+1)*SZ(A));i(tn-to,cn[to+i]=au)
     ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
  xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
+L k(O char*s)_(Ax=N(evs(s));Xz(gl(x))x(0))
+I kf(O char*s,L(*f)(L))_(Ax=dmd(A(syP(s),oA,av,AT(te,AK(1,(A)f))),4);I(x,x(0));!x)
 
 #define _m(x) ((I*)_V(x))[-7]
 #define xm _m(x)
