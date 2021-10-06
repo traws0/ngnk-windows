@@ -2,8 +2,8 @@
 #define Mh(x,y) (Mc(x,y,SZ(y)-1)+SZ(y)-1)
 S O H*dt=(H*)"0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849"
              "5051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899";
-S O UI E2=100;S O UI E4=1e4;S O UI E8=1e8;S O UL Ex=1e16;
-S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))     
+S O UI E2=100,E4=1e4,E8=1e8;S O UL Ex=1e16;
+S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))
 S C*S4(C*s,UI x)_(S2(S2(s,x/E2),x%E2))S C*s4(C*s,UI x)_(x<E2?s2(s,x):S2(s2(s,x/E2),x%E2))
 S C*S8(C*s,UI x)_(S4(S4(s,x/E4),x%E4))S C*s8(C*s,UI x)_(x<E4?s4(s,x):S4(s4(s,x/E4),x%E4))
 S C*S0(C*s,UL x)_(S8(S8(s,x/E8),x%E8))S C*sX(C*s,UL x)_(x<E8?s8(s,x):S8(s8(s,x/E8),x%E8))
