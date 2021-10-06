@@ -1,13 +1,12 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 #define Mh(x,y) (Mc(x,y,SZ(y)-1)+SZ(y)-1)
-S O H*dt=(H*)"0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849"
-             "5051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899";
-S O UI E2=100,E4=1e4,E8=1e8;S O UL Ex=1e16;
-S C*S2(C*s,UI x)_(*(H*)s=dt[x];s+2)   S C*s2(C*s,UI x)_(x<10?(*s++='0'+x),s:S2(s,x))
-S C*S4(C*s,UI x)_(S2(S2(s,x/E2),x%E2))S C*s4(C*s,UI x)_(x<E2?s2(s,x):S2(s2(s,x/E2),x%E2))
-S C*S8(C*s,UI x)_(S4(S4(s,x/E4),x%E4))S C*s8(C*s,UI x)_(x<E4?s4(s,x):S4(s4(s,x/E4),x%E4))
-S C*S0(C*s,UL x)_(S8(S8(s,x/E8),x%E8))S C*sX(C*s,UL x)_(x<E8?s8(s,x):S8(s8(s,x/E8),x%E8))
-S C*su(C*s,UL x)_(x<Ex?sX(s,x):S0(s4(s,x/Ex),x%Ex))
+S Qq="0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849"
+     "5051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899";
+S C*S8(C*s,UI v)_(i(4,Mc(s+6-2*i,q+v%100*2,2);v/=100)s+8)
+S C*s8(C*s,UI v)_(Cb[8],*p=b+6;W(1,Mc(p,q+v%100*2,2);v/=100;B(!v)p-=2)p+=*p=='0';In=b+8-p;Mc(s,p,n)+n)
+S C*S16(C*s,UL v)_(S8(S8(s,v/(UI)1e8),v%(UI)1e8))
+S C*s16(C*s,UL v)_(v<(UI)1e8?s8(s,v):S8(s8(s,v/(UI)1e8),v%(UI)1e8))
+S C*su(C*s,UL v)_(v<(UL)1e16?s16(s,v):S16(s8(s,v/(UL)1e16),v%(UL)1e16))
 C*sl(C*s,Lv)_(I(v<0,P(v==NL,Mh(s,"0N"))v=-v;*s++='-')su(s,v))
 // github.com/ulfjack/ryu (apache2|boost license)
 #if defined(__SIZEOF_INT128__)
