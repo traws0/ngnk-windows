@@ -34,8 +34,8 @@ S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:local
 SN V rne(Ax/*0*/){Ay=xy,z=xz;Im=_n(xA[3]);eS(_R(xx),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0)))}
 S A1(vm,/*0*/W(1,UC b=*c++;
  I(b>=bc,Ay=xA[4]/*fc*/;p(_R(yA[b-bc])))
- EI(b>=bm,I(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=au;*s=au;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av+*c++,z),4))),y)))
-         EI(b==bM,Ax=q()         ,y=q(),z=*s;      *s=au;N(*s=apn(      Ny(dmd(A(x,yR,av+*c++,z),4)) ,y)))
+ EI(b>=bm,I(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=*s=au;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av+*c++,z),4))),y)))
+         EI(b==bM,Ax=q()         ,y=q(),z=*s;   *s=au;N(*s=apn(      Ny(dmd(A(x,yR,av+*c++,z),4)) ,y)))
          EI(b==bl,Nn=*c++;s+=n;p(sqz(aV(tA,n,s-n))))
          EI(b==bL,Nn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
          EI(b==ba||b==bP,Nn=*c++;Ax=s[n]=(b-ba?prj:app)(*s,s+1,n);mr(*s);s+=n;N(x))
