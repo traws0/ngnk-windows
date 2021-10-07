@@ -66,12 +66,12 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define max(x,y) extr(x,y,>)
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
-A1 a1,asc,ax,blw,cB,cC,cD,cH,cI,cL,cS,cf,des,dsc,enl,enla,epr,expx,fir,flp,flr,frk,grp,hex,js0,js1,kst,
+A1 a1,amd,asc,ax,blw,cB,cC,cD,cH,cI,cL,cS,cf,des,dsc,enl,enla,epr,expx,fir,flp,flr,frk,grp,hex,ins,js0,js1,kst,
  las,len,logx,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prng,prs,rev,ser,sinx,spl,sqr,sqz,str,str0,til,typ,u0c,u1c,unh,unq,
  val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,
  sub,v0c,v1c,exc;
-A0 aa0;A3 a3,cpl,try,ear,eal;ALA drp,room,rshN;AAL get;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;AA amd,amn,dmd,dmn,ins;
+A0 aa0;A3 a3,cpl,try,ear,eal;ALA drp,room,rshN;AAL get;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;AA amn,dmd,dmn;
 AL aA,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCz,cmdl,cmdm,die,e0,evs,pk,syP;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1(A,A1),
  eac2(A,A,A),e1(Q,A),e2(Q,A,A),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),pen(A,A1*),sur(C,A,C),wdn(A,N,N,N);
@@ -84,7 +84,7 @@ TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 L absL(L),cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
 D gd(A);N strlen(Q),_N(A);
-EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX AA*vn[];EX A1*cT[];EX Q*argv,*env;
+EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*vn[];EX A1*cT[];EX Q*argv,*env;
 TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arpT[][11],*arf[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
 TD I Tr(V*,OV*,L);         EX Tr*arrT[][11];
@@ -118,10 +118,11 @@ S  C _k(Ax)_(xC[-13])                S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)       
 S UC _o(Ax)_(xts?x>>32:xtP?0:xB[-13])S A AO(UC o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xB[-13]=o;x)        //srcoffset
 S  N _n(Ax)_(xL[-1])                 S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                    //length
 
+A1 dmd_;
 #define Lt(t) (L)t<<56
 #define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
            U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,com,dex,dex})\
-           U(vn,{ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ern,ins,amd,dmd,ern,ern,ern,ern,ern,ern})\
+           U(vn,{er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,ins,amd,dmd_,er1,er1,er1,er1,er1,er1})\
            U(vc,{':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'})
 enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,UNQ,TYP,VAL,U0C,U1C,U2C,U3C,LAS,OUT,
            av=Lt(tv),ADD,SUB,MUL,DVD,MOD,MNM,MXM,LTN,GTN,EQL,MTC,CAT,EXC,RSH,CUT,CST,QUE,AP1,APN,V0C,V1C,V2C,COM,MKL,PLH,
