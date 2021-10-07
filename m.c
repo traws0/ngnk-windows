@@ -54,7 +54,7 @@ AQ(evs,P(*s-'\\',Ax=N(cplprs(s));x(run(x,0,0)))Cc=s[1],d=s[2];P(c=='c'&&d=='d'&&
 A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,SZ(b)-1);P(n<0,0)b[n]=0;C*p=b;W(*p,C*q=SC0(p,10);*q=0;ln(p);p=q+1)1)I repl()_(W(rep());0)
 L k(O char*s)_(Ax=N(evs(s));Xz(gl(x))x(0))
-V kf(O char*s,L(*f)(L)){glb=amd(A(glb,syP(s),av,AT(te,(A)f)),4);}
+V kf(O char*s,L(*f)(L)){K("@[;::;:;]",syP(s),AT(te,(A)f));}
 V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=aa0();
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
  cn[tA]=ce[tC];xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tC]=ac(32);cn[tS]=as(0);
