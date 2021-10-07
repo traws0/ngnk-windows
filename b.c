@@ -34,13 +34,13 @@ S A s0[65536],*s=s0+ZZ(s0),*l;S C*c;S A1(p,*--s=x)S A0(q,*s++) //s:stack,l:local
 SN V rne(Ax/*0*/){Ay=xy,z=xz;Im=_n(xA[3]);eS(_R(xx),zC[c-1-yC]);W(s<l-m,Ax=q();I(x,x(0)))}
 S A1(vm,/*0*/W(1,UC b=*c++;
  I(b>=bc,Ay=xA[4]/*fc*/;p(_R(yA[b-bc])))
- EI(b>=bm,I(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=*s=au;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av+*c++,z),4))),y)))
-         EI(b==bM,Ax=q()         ,y=q(),z=*s;   *s=au;N(*s=apn(      Ny(dmd(A(x,yR,av+*c++,z),4)) ,y)))
+ EI(b>=bm,I(b==bm,A*v=l-*c++,x=*v,y=q(),z=*s;*v=*s=au;N(*s=apn(_R(*v=Ny(dmn(A(x,yR,av+*c++,z),4    ))),y)))
+         EI(b==bM,Ax=q()         ,y=q(),z=*s;   *s=au;N(*s=apn(      Ny(mnd(A(x,yR,av+*c++,z),4,dmn)) ,y)))
          EI(b==bl,Nn=*c++;s+=n;p(sqz(aV(tA,n,s-n))))
          EI(b==bL,Nn=*c++;Ax=*s;El(!xtt&&xN-n)i(n,p(get(x,n-1-i))))
          EI(b==ba||b==bP,Nn=*c++;Ax=s[n]=(b-ba?prj:app)(*s,s+1,n);mr(*s);s+=n;N(x))
          EI(b==bz,c+=1+*c*!tru(q()))EI(b==bj,c+=(UC)*c)EI(b==bo,p(_R(l[1])))EI(b==bp,mr(q()))
-         EI(b==b4,s+=3;N(*s=dmd(s-3,4))))
+         EI(b==b4,s+=3;N(*s=dmd(aV(tA,4,s-3)))))
  EI(b>=bs,A*v=l-b%16,x=*v;I(b>=bd,p(x);*v=au)EI(b>=bg,p(xR))E(x=x(*v=_R(*s))))
  EI(b>=bv,Ax=q();N(*s=v2[b-bv](x,*s)))EI(b,N(*s=v1[b](*s)))E(_(*s)))0)
 AX(run,Q(xto);Q(n==xk);P(s<s0+16,esn(a,n))p((A)c);p((A)l);p(x);c=_V(xy);l=s-1;i(n,p(a[i]))Im=_n(xA[3]);i(m-n,p(au))
