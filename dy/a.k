@@ -28,6 +28,7 @@ p139:{(+/'x'y)%x}                             / ?goto=P9_It_Is_a_Moving_Experien
 / https://problems.tryapl.org/psets/2014.html
 p141:{~-/*/2#,|x,y,z}                         / ?goto=P1_It_Is_All_Right
 p142:{(2(|1|':)/"0">x)|^"aeiou"?_x}#          / ?goto=P2_How_Tweet_It_Is (via @chrispsn, @coltim)
+p143:1_*+(|+\)\[;!2]@                         / ?goto=P3_Tell_a_Fib
 p143:{-1_*|+x(|+\)\1 1}                       / ?goto=P3_Tell_a_Fib
 p144:" "/(~#:')_" "\                          / ?goto=P4_Space_The_Final_Frontier
 p145:1=#|:\(~"a{"')#_:                        / ?goto=P5_Mirror_Mirror
@@ -130,7 +131,7 @@ p2110:{(-x)$y}                                       / ?goto=P110
 (≈):{1.0e-6>{x|-x}x-y}  / approx equal
 (∆):{(_1000000*x)~_1000000*y} / approx float deep-match
 
-assert:{[cmp;f;a;e]$[cmp[e;r:f a];`ok;(`fail;cmp;a;e;r)]}
+assert:{[cmp;f;a;e]$[cmp[e;r:f a];;(`fail;cmp;a;e;r)]}
 
 / https://problems.tryapl.org/psets/2013.html
 

@@ -5,7 +5,8 @@
 #define hd(v,f,g) hf(v##b,B,B,f)hf(v##h,H,H,f)hf(v##i,I,I,f)hf(v##l,L,L,f)hf(v##d,D,D,g)
 #define hc(v,f,g) hf(v##b,B,B,f)hf(v##h,H,B,f)hf(v##i,I,B,f)hf(v##l,L,B,f)hf(v##d,D,B,g)
 #define h(v,f) hd(v,f,f)
-h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hf(dvdd,D,D,x/y)hd(mod,x>0?(y%x+x)%x:idiv(y,-x),x>0?y-(L)(y/x)*x:dvdd(y,-x))
+h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hf(dvdd,D,D,({D r=x/y;r!=r?ND:r;}))
+hd(mod,x>0?(y%x+x)%x:idiv(y,-x),x>0?y-(L)(y/x)*x:dvdd(y,-x))
 h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,qD(x,y)<0)hc(gtn,x>y,ltn(y,x))hc(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
 #undef hc
