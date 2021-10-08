@@ -88,7 +88,7 @@ U(araT,{{dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},//amend
 
 S C tZx(Ax)_(XcC(tH)Xz(tZ(gl_(x)))Xd(tD)XZD(xt)XsS(tI)tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(cT[t](x));*q=y=Nx(cT[t](y));t)
-S A3(ari,Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2(x,y,z))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
+S A3(ari,Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2(x,y,v2[zv]))N(sup(&x,&y));Ik=xtT<<1|ytT;El(k==3&&xn-yn,x,y)
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;V(f,arf[k][TT[t]-tB][z-DVD]);
  I(t>tD,t+=tD-td)I(z>MXM&&t==tD,t=tI)I(!k,t+=tc-tC;P(TP(t),Iv=0;f(a,b,&v,1);x(y(az(v)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zV,zn);x-z?x(y-z?y(z):z):y(z))
