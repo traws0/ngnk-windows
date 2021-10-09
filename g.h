@@ -440,9 +440,10 @@
 #define Nz(r) N1(z,r)
 #define Nu(r) N1(u,r)
 #define oA _R(ce[tA])
-#define oC _R(ce[tC])
+#define oB _R(ce[tB])
 #define oL _R(ce[tL])
 #define oD _R(ce[tD])
+#define oC _R(ce[tC])
 #define oS _R(ce[tS])
 #define Ec(a...) E_(c,a)
 #define Ed(a...) E_(d,a)
@@ -524,20 +525,6 @@
  #define  LIBC(a...)
  #define NLIBC(a...) a
 #endif
-#ifdef __FreeBSD__
- #define  FBSD(a...) a
- #define NFBSD(a...)
-#else
- #define  FBSD(a...)
- #define NFBSD(a...) a
-#endif
-#ifdef __OpenBSD__
- #define  OBSD(a...) a
- #define NOBSD(a...)
-#else
- #define  OBSD(a...)
- #define NOBSD(a...) a
-#endif
 #ifdef i386
  #define  I386(a...) a
  #define NI386(a...)
@@ -551,4 +538,11 @@
 #else
  #define  WASM(a...)
  #define NWASM(a...) a
+#endif
+#ifdef __FreeBSD__
+ #define  FBSD(a...) a
+ #define NFBSD(a...)
+#else
+ #define  FBSD(a...)
+ #define NFBSD(a...) a
 #endif

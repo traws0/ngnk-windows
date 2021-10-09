@@ -13,7 +13,7 @@ d("_@(x) ((@*)_V(x))";t)
 d("_%(x) _@(x)[i]";t)
 d("_t@(x) (_t(x)==t@)";T)
 d("N@(r) N1(@,r)";v)
-d("o@ _R(ce[t@])";"ACLDS")
+d("o@ _R(ce[t@])";"ABLDCS")
 d("E@(a...) E_(@,a)";"cdilnoprstvz")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdt ILN:ijkmn CBHILD:v I:f A:xyzu O:ACV Q:spq";
 r,:{"#define _",x,"(x) ((A*)_V(x))[",y,"]"}'["xyz";"012"]
@@ -25,5 +25,5 @@ m:("#ifdef @"
    " #define  $(a...)"
    " #define N$(a...) a"
    "#endif")
-r,:,/{(x/"@"\y/"$"\)'m}/'$(`DEBUG`DBG;`libc`LIBC;`i386`I386;`wasm`WASM);
+r,:,/{(x/"@"\y/"$"\)'m}/'$(`DEBUG`DBG;`libc`LIBC;`i386`I386;`wasm`WASM;`"__FreeBSD__"`FBSD);
 "g.h"0:r

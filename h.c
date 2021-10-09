@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
-SN A flt(Ax,Ay,Cb)_(Q(xtF);P(xK-1,er2(x,y))Ym(K("{y@&z~:/x y}",x,y,ai(!b)))x=Ny(ap1(x,yR));x=xN?Ny(cL(x)):x(oL);
+SN A flt(Ax,Ay,Cb)_(Q(xtF);P(xK-1,er2(x,y))Ym(K("{y@&z~:/x y}",x,y,ai(!b)))x=Ny(ap1(x,yR));x=xN?Ny(cL(x)):x(oB);
  P(!xtt&&xN-yN,el2(x,y))Az=rshN(0,yR);i(yN,Ln=gl(get(x,i));B(b&&n-(UI)n,z=ed1(z))j(b?n:!n,zq(get(y,i))))x(y(z)))
 S V rshV(OV*a,Nm,V*b,Nn){Q(m);Mc(b,a,min(m,n));W(2*m<=n,Mc(b+m,b,m);m*=2)I(n>m,Mc(b+m,b,n-m))}
 ALA(rshN,Xm(Ay=kv(&x);x=Ny(rshN(n,x));y=Nx(rshN(n,y));am(x,y))XM(Ay=kv(&x);aM(x,Nx(ear(RSH,az(n),y))))
