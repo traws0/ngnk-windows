@@ -16,18 +16,19 @@ S A0(pC,Ax=oC;Cc=*++s;W(c&&c-'"',I(c=='\\',c=*++s;Ii=si("tnr0",c);I(i<4,c="\t\n\
 S C ph()_(Cc=*s;c09(c)?c-'0':caf(c)?c+10-'a':16)
 S A0(p0x,Ax=oC;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();Ep(d>15,x)s++;x=apc(x,c<<4|d))x)
 S A0(ps,Qp=s;Cc=*s;I(c>>7,W((c=*++s)>>6==2)s+=c==':')EI(cAz(c),W(cA9(c),c=*++s))aCm(p,s))
-S A pS(Cc)_(Ax=oS;W(1,Ay=c-'`'||*s-'"'?ps():Nx(pC());y=str0(y);y(xq(syP(yV)));I(c=='`',Qp=p32(s);P(*p-c,x)s=p+1)E(P(*s-c,x)++s))0)
+S A0(pS,Ax=oS;W(1,Ay=*s-'"'?ps():Nx(pC());y=str0(y);xq(y(syP(yV)));Qp=p32(s);P(*p-'`',x)s=p+1)0)
+S A0(pP,Ax=oS;W(1,Ay=str0(ps());y(xq(syP(yV)));P(*s-'.',x)++s)0)
 S A lam(Ik,Ax,Ay,Az)_(AK(k,a3(x,y,z))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];I(ytA&&yn>2,Az=yx;I((z==av||ztu)&&_tsSA(yy),xq(au)))x) //if last is assignment, return ::
 S A px(In)_(Q(in(n,4));Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
 S A0(po,C nb=nx;nx=1;Q s1=s0,t=s0=s++;Ay;I(*s-'[',y=au)E(s++;y=sqz(N(pb(oA,']')));P(!ytS,ep1(y))P(yN>8,s--;ez1(y)))
  Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))I(y==au,y=px(nx))E(nx=yn)Ax=AK(nx,N(cpl(aCn(t,s-t),shy(z),y)));s0=s1;nx=nb;x)
-S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS(c));xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
+S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS());xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
  P(c=='(',s++;P(*s==')',s++;oA)x=N(pb(enl(MKL),')'));xn-(C)xn?ez1(x):xn-2?x:las(x))P(c=='[',s++;pb(a1(PRG),']'))
  P(c09(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';*v=1;AT(tv-u,i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
  P(num(s)&&(c-'-'||(!cA9(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;Qp=s;c=*p;
   W(1,p+=*p==32;B(!num(p))p+=*p=='-';c=*p;B(!cA9(c))W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
- P(cAz(c),Qp=s;x=pS('.');I(s-p==1&&c3('y',c,'z'),nx=max(nx,c-'w'))AO(p-s0,p1(x)))P(c>127,Qp=s;x=pS('.');*v=1;AO(p-s0,p1(x)))
+ P(cAz(c),Qp=s;x=pP();I(s-p==1&&c3('y',c,'z'),nx=max(nx,c-'w'))AO(p-s0,p1(x)))P(c>127,Qp=s;x=pP();*v=1;AO(p-s0,p1(x)))
  Ii=si("'/\\",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw+i+3*h)i=si(vc,c);P(i>19,PLH)I u=*++s==':';s+=u;*v=1;AT(tv-u,i))
 S A1(mon,Xv(x^au^av)XA(I(xn==2&&xx==aw||xn==3&&xx==COM,x=mut(x);xA[xn-1]=mon(xA[xn-1]))x)
  Xs(Lv=xv;Qs=syp(&v);Nn;P(*s>>7&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;syP(b))x)x)
