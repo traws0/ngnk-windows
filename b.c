@@ -26,7 +26,9 @@ S A1(cr,/*0*/I o=xo;Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);
 S A2(f2,/*0*/P(xtw&&!ytsSA,1)/*P(x==TIL&&ytZ&&yn<4,i(yn,P(!in(gl(get(y,i)),101),0))1)*/0)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,1)0)
 S A1(qt,/*1*/xtsSA?enl(x):x)
-A1(cf,XA(I o=xo;P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,qt(N(val(x))))AO(o,blw(eac1(x,cf))))x)
+A1(cf,XA(P(xx==MKL,i(xn,Ay=xa;YsSA(x))a1(drp(1,x)))
+         P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,qt(N(val(x))))
+         AO(xo,blw(eac1(x,cf))))x)
 A3(cpl,/*src,ast,loc*/nb=0;fl=z;fc=a1(au);Ms(fu,-1,SZ fu);y=cf(y);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
  P(nb>=SZ b-1,eS(xR,r);ez0())i(16,Ij=fu[i];I(j>=0&&b[j]==bg,b[j]=bd))AK(0,aV(to,5,A(x,aCn(b,nb),aCn(m,nb),fl,fc))))
 
