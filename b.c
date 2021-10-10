@@ -21,7 +21,7 @@ S A1(cr,/*0*/I o=xo;Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);
   i(n&~1,I d=(i&1?nb:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)b[p[i]]=d)OK)
  I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,Nr(zy);h(bu|LAS-au);OK))
  I p=0;i(n-1,Az=xA[n-1-i];I(z==PLH,p=1;hc(PLH))E(Nr(z)))
- P(p,Nr(xx);h(bP);h(n-1);OK)P(y==MKL,h(bl);h(n-1);OK)P(n==2&&ytu,h(bu|yv);OK)P(n==3&&ytv,h(bv|yv);OK)
+ P(p,Nr(xx);h(bP);h(n-1);OK)P(y==MKL,n--;P(n-(UC)n,o);h(bl);h(n);OK)P(n==2&&ytu,h(bu|yv);OK)P(n==3&&ytv,h(bv|yv);OK)
  Nr(xx);h(ba);h(n-1);OK)
 S A2(f2,/*0*/P(xtw&&!ytsSA,1)/*P(x==TIL&&ytZ&&yn<4,i(yn,P(!in(gl(get(y,i)),101),0))1)*/0)
 S A3(f3,/*0*/P(ADD<=x&&x<=MUL&&ytL&&ztL&&yn==zn&&yn<101,1)0)
