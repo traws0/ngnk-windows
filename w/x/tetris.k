@@ -13,7 +13,7 @@ d:{$[f[p+0 1;t;r];:1;]   /try to move it down. if successful, return 1
  a::a .[;;:;1]/+|p+T[t]r /freeze fallen blocks
  n:+/m:*/'a              /number of and mask of completed lines
  a::(0*n#a),a@&~m        /clear completed lines, replenish with empty
- (1&n)(`0:)/$s+:-1+*/n#2 /update score and print it if necessary
+ s+:-1+*/n#2             /update score
  i[]}                    /respawn
 tick:d                   /periodically call d[]
 
@@ -21,10 +21,12 @@ tick:d                   /periodically call d[]
 b:_256%#a                                 /block size
 c:{"g.fillStyle='",($x),"';"}             /set colour
 q:{"g.fillRect(",(","/$(b*x),b-1 1),");"} /draw a square(block)
+w:{"g.fillText(",(","/(,`k[x]),$y),");"}  /write text
 draw:{`js@,//("g.clearRect(0,0,256,256);"
               c`"#80808020";q'+|&1|a      /semi-transparent grid background
               c C t;q'+p+T[t]r            /draw falling tetromino
-              c`white;q'+|&a)}            /draw stationary blocks
+              c`white;q'+|&a              /draw stationary blocks
+              w["score:",$s;128 16])}     /draw score
 
 /key down event handler
 kd:{$[32=x;(::)d/1      /space(drop)
@@ -34,8 +36,8 @@ kd:{$[32=x;(::)d/1      /space(drop)
       40=x;d[]]}        /down
 
 i[];
-`js"tickPeriod=500"; /tick[] will be called every half second
-`js"hgr()";          /enter graphics mode
+`js"tickPeriod=500";     /tick[] will be called every half second
+`js"hgr()";              /enter graphics mode
 
 /for a similar language with more advanced graphics capabilities see:
 / https://johnearnest.github.io/ok/ike/ike.html
