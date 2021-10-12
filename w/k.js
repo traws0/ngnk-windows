@@ -79,8 +79,8 @@ const pi=Math.PI,tau=2*pi,K=s=>app.evs(ms(s+'\0')),
 tick=_=>K('tick[]'),
 draw=_=>{K('draw[]');tid=setTimeout(raf,40)},
 raf=_=>aid=requestAnimationFrame(draw),
-hgr=_=>{if(g)return;doc.body.appendChild(cnv=doc.createElement('canvas'));g=cnv.getContext('2d');onresize()
- iid=setInterval(tick,tickPeriod);raf()
+hgr=_=>{if(g)return;doc.body.appendChild(cnv=doc.createElement('canvas'));g=cnv.getContext('2d')
+ onresize();g.font='0.05px monospace';iid=setInterval(tick,tickPeriod);raf()
  onkeydown=onkeyup=e=>g&&K('k'+e.type[3]+'@'+e.keyCode)
  onkeypress=e=>{if(g){let c=e.charCode;K('kx@'+c);(c===10||c===13)&&K('kr@10');c===8&&K('kb@8')}}
  cnv.onmousedown=cnv.onmouseup=cnv.onmousemove=
@@ -89,4 +89,4 @@ txt=_=>{if(!g)return;cnv.parentNode.removeChild(cnv);clearInterval(iid);clearTim
  cnv=g=iid=tid=aid=null}
 
 onresize=_=>{if(!cnv||!out)return;let s=cnv.style,e=out;s.left=e.offsetLeft+'px';s.top=e.offsetTop+'px'
- const k=(cnv.width=cnv.height=min(e.offsetWidth,e.offsetHeight))/256;g.scale(k,k)}
+ const k=cnv.width=cnv.height=min(e.offsetWidth,e.offsetHeight);g.scale(k,k)}

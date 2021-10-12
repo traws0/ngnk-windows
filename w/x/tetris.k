@@ -18,15 +18,15 @@ d:{$[f[p+0 1;t;r];:1;]   /try to move it down. if successful, return 1
 tick:d                   /periodically call d[]
 
 /rendering
-b:_256%#a                                 /block size
-c:{"g.fillStyle='",($x),"';"}             /set colour
-q:{"g.fillRect(",(","/$(b*x),b-1 1),");"} /draw a square(block)
-w:{"g.fillText(",(","/(,`k[x]),$y),");"}  /write text
-draw:{`js@,//("g.clearRect(0,0,256,256);"
-              c`"#80808020";q'+|&1|a      /semi-transparent grid background
-              c C t;q'+p+T[t]r            /draw falling tetromino
-              c`white;q'+|&a              /draw stationary blocks
-              w["score:",$s;128 16])}     /draw score
+b:0.9*B:1%#a                             /block size
+c:{"g.fillStyle='",($x),"';"}            /set colour
+q:{"g.fillRect(",(","/$(B*x),2#b),");"}  /draw a square(block)
+w:{"g.fillText(",(","/(,`k[x]),$y),");"} /write text
+draw:{`js@,//("g.clearRect(0,0,1,1);"
+              c`"#80808020";q'+|&1|a     /semi-transparent grid background
+              c C t;q'+p+T[t]r           /draw falling tetromino
+              c`white;q'+|&a             /draw stationary blocks
+              w["score:",$s;1%2 16])}    /draw score
 
 /key down event handler
 kd:{$[32=x;(::)d/1      /space(drop)
