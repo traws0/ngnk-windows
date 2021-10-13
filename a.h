@@ -149,4 +149,5 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
 S I os(Qs)_(write(2,s,Sn(s)))
-S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));C s[17];s[16]=10;i(16,s[15-i]=hx1(n&15);n>>=4)write(2,s,17);n)
+S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));Cv[17];
+ i(16,Im=n&15;v[15-i]=m+(m>9?'a'-10:'0');n>>=4)v[16]=10;write(2,v,17);n)
