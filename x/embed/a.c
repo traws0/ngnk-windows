@@ -9,7 +9,7 @@ long sqr(long x){
 
 int main(int n,const char**a){
  setbuf(stdout,0);
- void*l=dlopen("../libk.so",RTLD_NOW);if(!l){printf("%s\n",dlerror());return 1;}
+ void*l=dlopen("../../libk.so",RTLD_NOW);if(!l){printf("%s\n",dlerror());return 1;}
  void(*kinit)(int,const char**)      =dlsym(l,"kinit");
  void(*kf)(const char*,long(*)(long))=dlsym(l,"kf"   );
  long(*k)(const char*)               =dlsym(l,"k"    );
