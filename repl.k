@@ -143,14 +143,14 @@ Special symbols:
    `p@C parse k
  `hex@C hexadecimal  `hex"ab" -> "6162"
    `x@x fork-exec    `x(("/bin/wc";"-l");"a\nbc\nd\n") -> "3\n"
-   `t[] current time (milliseconds)
+   `t[] current time (microseconds)
 `argv[] list of cmd line args
  `env[] dict of env variables
 `prng[] `prng@I get/set pseudo-random number generator internal state
                      s:`prng[];r:9?0;`prng s;r~9?0 -> 1
  `err@C throw error
 Special symbols available only in an interpreter built with "make k-libc":
- `sin@N trigonometry `sin 12.34 -> 0.22444212919135995
+ `sin@N trigonometry `sin 12.34 -> -0.22444212919135995
  `exp@N exponential  `exp 1 -> 2.7182818284590455
   `ln@N logarithm    `ln 2 -> 0.6931471805599453
 --------------------------------------------------------------------------------
