@@ -62,6 +62,14 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=
     ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
  xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;}
 
+A AT(UL t,Ax)_(Q(c3(0,t,tn));P(TP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
+A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
+A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)
+A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)
+A AO(UC o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xB[-13]=o;x)
+A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)
+A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x)
+
 #define _m(x) ((I*)_V(x))[-7]
 #define xm _m(x)
 #define mms(a...) i(nm,V*p=m[i].p,*q=p+m[i].n;If=!!*(C*)p;a)
@@ -80,3 +88,7 @@ AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));_m(glb)++;_m(cns)++;
  obs(I(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
  obs(I(xr-xm,hb(hs("bad refc:"));hx(x)));
  xys(I(!yt,hb(hs("dngl ptr:"));hx(x);hx(y)));au)
+
+I os(Qs)_(write(2,s,Sn(s)))
+L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));Cv[17];
+ i(16,Im=n&15;v[15-i]=m+(m>9?'a'-10:'0');n>>=4)v[16]=10;write(2,v,17);n)

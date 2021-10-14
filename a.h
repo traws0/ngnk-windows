@@ -82,23 +82,30 @@ C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);
 char*strchr(O char*,I),*strchrnul(O char*,I),*strstr(Q,Q);
 I _K(A),c3(C,C,C),qD(D,D),eS(A,I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
-L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),
- fpA(A*,A),fpB(A*,B),fpH(A*,H),fpI(A*,I),fpL(A*,L);
+L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),
+ fpI(A*,I),fpL(A*,L);
 D gd(A);N strlen(Q),_N(A);
-EX A glb,cns,ce[],cn[],ci[2][5];EX OC vc[];EX A1*v1[];EX A2*v2[];EX A1*vn[];EX A1*cT[];EX Q*argv,*env;
+EX A glb,cns,ce[],cn[],ci[2][5];EX A2*v2[];EX A1*v1[],*vn[],*cT[];EX Q*argv,*env;
 TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arpT[][11],*arf[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
 TD I Tr(V*,OV*,L);         EX Tr*arrT[][11];
+EX OC vc[],Tz[],TZ[],TT[];
 
 //            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  /  e
 enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
-#define TS "?""A""I""I""I""I""D""C""S""M""m""i""i""d""c""s""o""p""q""r""u""v""w""e" //their symbols
-#define TZv 0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //item size in bytes
-#define Tzv 0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
-#define TTv 0,tA,tB,tH,tI,tL,tD,tC,tS,tM,tM,tI,tL,tD,tC,tS,tA,tA,tA,tA,tA,tA,tA,tA  //corresponding list type
-EX OC Tz[],TZ[],TT[];S C _t(A);S I TF(Ct)_(t>=to)S I TP(Ct)_(t==ti||t==tc||t==ts||c3(tu,t,te))
-S I _tt(Ax)_(xt>tm)S I _tz(Ax)_(c3(ti,xt,tl))S I _tF(Ax)_(TF(xt))S I _tR(Ax)_(Tz[xt]==4)
-S I _tT(Ax)_(xt<tM)S I _tZ(Ax)_(c3(tB,xt,tL))S I _tP(Ax)_(TP(xt))
+#define TS "?""A""I""I""I""I""D""C""S""M""m""i""i""d""c""s""o""p""q""r""u""v""w""e"     //their symbols
+#define TZv 0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8      //item size in bytes
+#define Tzv 0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3      //log2(size) or 4=reftypes
+#define TTv 0,tA,tB,tH,tI,tL,tD,tC,tS,tM,tM,tI,tL,tD,tC,tS,tA,tA,tA,tA,tA,tA,tA,tA      //corresponding list type
+#define TP(t)  ((1<<ti|1<<tc|1<<ts|1<<tu|1<<tv|1<<tw|1<<te)>>(t)&1)
+#define TF(t)  ((t)>=to)
+#define _tt(x) (_t(x)>tm)
+#define _tT(x) (_t(x)<tM)
+#define _tz(x) c3(ti,_t(x),tl)
+#define _tZ(x) c3(tB,_t(x),tL)
+#define _tP(x) TP(_t(x))
+#define _tF(x) TF(_t(x))
+#define _tR(x) (Tz[_t(x)]==4)
 
 //header bytes: Ut.orrrrnnnnnnnn (U=bucket,t=type,o=srcoffset(or:w=adverb,k=arity),r=refcount,n=length)
 //tagged ptr bits (t=type,v=value,o=srcoffset,x=ptr):
@@ -106,18 +113,18 @@ S I _tT(Ax)_(xt<tM)S I _tZ(Ax)_(c3(tB,xt,tL))S I _tP(Ax)_(TP(xt))
 // tttttttt................oooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
 // ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
 // tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx te
-#define _V(x) (V*)(x)         //ptr to data
-#define _W(x) TZ[_t(x)]       //item size in bytes
-#define _r(x) ((I*)_V(x))[-3] //refcount
-#define _q(x,y) (x=apd(x,y))  //append
+#define _V(x) (V*)(x)                                  //ptr to data
+#define _W(x) TZ[_t(x)]                                //item size in bytes
+#define _k(x) (_C(x)[-13])                             //arity(for funcs)
+#define _n(x) (_L(x)[-1])                              //length
+#define _o(x) (UC)(_ts(x)?(x)>>32:_tP(x)?0:_B(x)[-13]) //srcoffset
+#define _q(x,y) (x=apd(x,y))                           //append
+#define _r(x) ((I*)_V(x))[-3]                          //refcount
+#define _t(x) ({Ct=(x)>>56;t?t:_C(x)[-15];})           //type
+#define _v(x) (I)(x)                                   //value(i32)
+#define _w(x) (_C(x)[-14])                             //adverb(for tr)
 #define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
-S A1(_R,Q(x);XP(x)Q(xr>=0);xr++;x) //set refcount
-S  C _t(Ax)_(Ct=x>>56;t?t:xC[-15])   S A AT(UL t,Ax)_(Q(c3(0,t,tn));P(TP(t),x=x<<8>>8|t<<56)xC[-15]=t;x) //type
-S  I _v(Ax)_(x)                      S A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)                                 //value(i32)
-S  C _w(Ax)_(xC[-14])                S A AW( C w,Ax)_(Q(w<6);xC[-14]=w;x)                                //adverb(for tr)
-S  C _k(Ax)_(xC[-13])                S A AK( C k,Ax)_(Q(k<9);xC[-13]=k;x)                                //arity(for funcs)
-S UC _o(Ax)_(xts?x>>32:xtP?0:xB[-13])S A AO(UC o,Ax)_(Xs(x&~(0xffffll<<32)|(UL)o<<32)xB[-13]=o;x)        //srcoffset
-S  N _n(Ax)_(xL[-1])                 S A AN(  Nn,Ax)_(Q(n<1ll<<48||n==-1);xL[-1]=n;x)                    //length
+A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 
 #define Lt(t) (L)t<<56
 #define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
@@ -148,6 +155,4 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
 #define nop {asm volatile("fnop");}
-S I os(Qs)_(write(2,s,Sn(s)))
-S L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));Cv[17];
- i(16,Im=n&15;v[15-i]=m+(m>9?'a'-10:'0');n>>=4)v[16]=10;write(2,v,17);n)
+I os(Q);L ov_(Q,N);
