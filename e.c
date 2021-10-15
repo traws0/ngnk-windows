@@ -1,8 +1,8 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 S C m[32];S I n,o;A src; //message,length,offset,source
 NI A e0(Qs)_(n=min(Sn(s),SZ m-1);Mc(m,s,n);m[n]=0;0)
-NI A e1(Qs,Ax)_(x(e0(s)))
-NI A e2(Qs,Ax,Ay)_(y(e1(s,x)))
+NI A e1(Ax,Qs)_(x(e0(s)))
+NI A e2(Ax,Ay,Qs)_(y(e1(x,s)))
 SN A eN(OA*a,In,Qs)_(mrn(n,a);e0(s))
 SN I eC()_(n=0;I(src,mr(src);src=0)o=0)
 NI I eS(Ax/*1*/,Ii)_(P(src,x(0))src=x;o=i;0)
@@ -13,7 +13,9 @@ A1(epr,I h=64;Cb[3*h+6+SZ m],*r=b;*r++='\'';Mc(r,m,n);r+=n;*r++=10;
  eC();write(1,b,r-b);x)
 A die(Qs)_(write(1,s,Sn(s));exit(1);0)
 
-#define f(t,m,n,a...) NI A##n(e##t##n,e##n(#m,##a))
-#define g(t,m) AA(e##t##n,eN(a,n,#m))
-#define h(a...) f(a,0)f(a,1,x)f(a,2,x,y)g(a)
+#define h(t,m)\
+ NI A0(e##t##0,e0(    #m))\
+ NI A1(e##t##1,e1(x,  #m))\
+ NI A2(e##t##2,e2(x,y,#m))\
+ NI AA(e##t##n,eN(a,n,#m))
 EA

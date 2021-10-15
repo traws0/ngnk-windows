@@ -445,18 +445,6 @@
 #define oD _R(ce[tD])
 #define oC _R(ce[tC])
 #define oS _R(ce[tS])
-#define Ec(a...) E_(c,a)
-#define Ed(a...) E_(d,a)
-#define Ei(a...) E_(i,a)
-#define El(a...) E_(l,a)
-#define En(a...) E_(n,a)
-#define Eo(a...) E_(o,a)
-#define Ep(a...) E_(p,a)
-#define Er(a...) E_(r,a)
-#define Es(a...) E_(s,a)
-#define Et(a...) E_(t,a)
-#define Ev(a...) E_(v,a)
-#define Ez(a...) E_(z,a)
 #define Cb C b
 #define Cc C c
 #define Cd C d

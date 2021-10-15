@@ -8,8 +8,8 @@ S UI rm(UL m)_((UI)rnd1()*m>>32)
 S V shf(L*r,Nn){i(n,Ij=rm(i+1);SWP(r[i],r[j]))}
 S A ro(UL n,UL m)_(Ct=m?tZ(m-1):tL;Ax=atn(t,n);P(t==tB,i(n,xb=rm(m))x)P(t==tH,i(n,xh=rm(m))x)P(t==tI,i(n,xi=rm(m))x)
  i(n,xl=rnd1())I(m,i(n,xl=(UL)xl%m))x)
-S A de(UL n,UL m)_(El(n>m)Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xV,n);x)
-S A rd(Ln,Lm)_(Ed(m<0)n<0?de(n-NL?-n:m,m):ro(n,m))
+S A de(UL n,UL m)_(P(n>m,el0())Ax=ro(n,0);i(n,UL k=m-n+i;xl%=k+1;j(i,B(xL[j]==xl,xl=k)))shf(xV,n);x)
+S A rd(Ln,Lm)_(P(m<0,ed0())n<0?de(n-NL?-n:m,m):ro(n,m))
 AL(rndD,add(ai(-1),AT(tD,add(al(1023ll<<52),N(rd(n,1ll<<52))))))
 S ALA(rnd,Xz(rd(n,gl(x)))Xc(cC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))Xd(mul(x,Nx(rndD(n))))XMT(idx(x,Nx(rd(n,xN))))et1(x))
 

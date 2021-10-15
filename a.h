@@ -74,7 +74,7 @@ A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,
 A0 aa0;A3 a3,cpl,try,ear,eal;ALA drp,room,rshN;AAL get;AX eac,rdc,app,prj,run,w0,w1,w2,w3,w4,w5;AA amn,dmn;
 AL aA,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCz,cmdl,cmdm,die,e0,evs,pk,syP;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),
- eac1(A,A1),eac2(A,A,A2),e1(Q,A),e2(Q,A,A),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),mnd(OA*,I,AA*),
+ eac1(A,A1),eac2(A,A,A2),e1(A,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),mnd(OA*,I,AA*),
  pen(A,A1*),sur(C,A,C),wdn(A,N,N,N);
 V exit(I),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
  mrn(N,OA*),tilV(V*,L,I);
@@ -138,9 +138,10 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define WD __builtin_inf()
 #define NL (1ll<<63)
 #define WL (~NL)
-#define EN(x,y,z,n,...) n
-#define EF(f,x,a...) P(x,f(a))
-#define E_(t,a...) EF(EN(a,e##t##2,e##t##1,e##t##0),a)
+#define Ss(a...) S O C s[][4]={a};
+#define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
+#define K(s,a...) ({S A f;K0(&f,s,A(a),ZZ(A(a)));})
+
 #define EA h(c,cpl)h(d,dom)h(i,idx)h(l,len)h(n,nyi)h(o,io)h(p,prs)h(r,rnk)h(s,stk)h(t,typ)h(v,val)h(z,lmt)
 #define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;AA e##t##n;
  EA
@@ -148,9 +149,6 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
 #define N(r) N_(r,)
 #define N1(x,r) N_(r,x(0))
-#define Ss(a...) S O C s[][4]={a};
-#define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
-#define K(s,a...) ({S A f;K0(&f,s,A(a),ZZ(A(a)));})
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");

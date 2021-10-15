@@ -2,14 +2,14 @@
 //bu,bv:apply unary|binary verb;bs,bg,bd:set|get|delete local;bm,bM:l|glb modified assign;bl:list,bL:unlist
 //ba:n-adic apply;bP:projection;bz:branch if falsey;bj:jmp,bp:pop;b4:tetradic dot;bc:load constant
 enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=128,bC=255};
-#define h(a) {m[nb]=o;b[nb]=a;nb+=nb<SZ b-1;} //add instruction
-#define hc(a) {Ij=bc+fpA(&fc,a);Ez(j>bC)h(j);} //add a "load constant" instruction
+#define h(a) {m[nb]=o;b[nb]=a;nb+=nb<SZ b-1;}       //add instruction
+#define hc(a) {Ij=bc+fpA(&fc,a);P(j>bC,ez0())h(j);} //add a "load constant" instruction
 #define OK -1
 #define Nr(a...) {I r=cr(a);P(r-OK,r);}
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
 S UC b[2048],m[SZ b];S A fl,fc;S I nb,fu[16];S A1 cr;
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);YS(hc(av+v);hc(au);hc(yR);h(b4);OK)
- Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);Ez(i>15)fu[i]=nb;h(bs|i);OK)
+ Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())fu[i]=nb;h(bs|i);OK)
   hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
  YA(In=yn-1;P(n-(UC)n,o)Az=yx;P(zt==tS,hc(av+v);i(n,Nr(yA[n-i]))h(bl);h(n);hc(zR);h(b4);OK)
   P(zt==ts,i(n,Nr(yA[n-i]))h(bl);h(n);Li=fAI(fl,zv);I(i<0,hc(z);h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
@@ -18,7 +18,7 @@ S A1(cr,/*0*/I o=xo;Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);
  XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);OK)hc(get(x,0));OK)P(!xtA||!xn,hc(x-PLH?xR:au);OK)Nn=xn;Ay=xx;
  P(y==PRG,i(n-1,I(i,h(bp))Nr(xA[i+1]))OK)P(n<2,hc(yR);OK)P(n==3&&(ytu||y==av)&&_tsSA(xy),Nr(xz);Nl(x,xy);OK)
  P(n>3&&y==CST,n--;I p[n];A*a=xA;i(n&~1,Nr(*++a);h(i&1?bj:bz);p[i]=nb;h(0))Nr(n&1?*++a:au);
-  i(n&~1,I d=(i&1?nb:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))Ez(d>255)b[p[i]]=d)OK)
+  i(n&~1,I d=(i&1?nb:p[i+1])-p[i];I(i&1,Ij=(n&~1)-1;W(i<j&&d>255,d=p[j]-1-p[i];j-=2))P(d>255,ez0())b[p[i]]=d)OK)
  I(n==2&&y==FIR,Az=xy;P(ztA&&zn==2&&zx==REV,Nr(zy);h(bu|LAS-au);OK))
  I p=0;i(n-1,Az=xA[n-1-i];I(z==PLH,p=1;hc(PLH))E(Nr(z)))
  P(p,Nr(xx);h(bP);h(n-1);OK)P(y==MKL,n--;P(n-(UC)n,o);h(bl);h(n);OK)P(n==2&&ytu,h(bu|yv);OK)P(n==3&&ytv,h(bv|yv);OK)
