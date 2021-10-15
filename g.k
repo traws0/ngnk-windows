@@ -12,7 +12,7 @@ d("@2(a...) _2(@,a)";v)
 d("_@(x) ((@*)_V(x))";t)
 d("_%(x) _@(x)[i]";t)
 d("_t@(x) (_t(x)==t@)";T)
-d("N@(r) N1(@,r)";v)
+d("N@(r) N_(r,@(0))";v)
 d("o@ _R(ce[t@])";"ABLDCS")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdt ILN:ijkmn CBHILD:v I:f A:xyzu O:ACV Q:spq";
 r,:{"#define _",x,"(x) ((A*)_V(x))[",y,"]"}'["xyz";"012"]
