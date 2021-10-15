@@ -1,8 +1,8 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
 S C m[32];S I n,o;A src; //message,length,offset,source
-NI A e0(Qs)_(n=min(Sn(s),SZ m-1);Mc(m,s,n);m[n]=0;0)
+SN A e0(Qs)_(n=min(Sn(s),SZ m-1);Mc(m,s,n);m[n]=0;0)
 NI A e1(Ax,Qs)_(x(e0(s)))
-NI A e2(Ax,Ay,Qs)_(y(e1(x,s)))
+SN A e2(Ax,Ay,Qs)_(y(e1(x,s)))
 SN A eN(OA*a,In,Qs)_(mrn(n,a);e0(s))
 SN I eC()_(n=0;I(src,mr(src);src=0)o=0)
 NI I eS(Ax/*1*/,Ii)_(P(src,x(0))src=x;o=i;0)
