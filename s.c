@@ -47,7 +47,7 @@ S A1(raz,rdc(CAT,A(x),1))S I esc(Cc)_(i(6,P(c=="\0\t\n\r\"\\"[i],i))-1)S A1(ek,e
 S A1(kss,Nn=xn+2;Iv=1;i(xn,I e=esc(xc)>=0;n+=e;v&=e||c3(32,xc,126))P(!v,cat(aCz("0x"),hex(x)))
  Ay=aC(n);C*s=yV;*s++='"';i(xn,Ij=esc(xc);I(j<0,*s++=xc)E(*s++='\\';*s++="0tnr\"\\"[j]))*s++='"';x(y))
 S A ksp(Ax,Qp,Qq,Qs)_(Ct=TS[xt];(SC(p,t)?xn==1:SC(q,t)?xn<2:!!SC(s,t))?par(kst(x)):kst(x))
-A1(ksl,ksp(x,"AC","BHILDS","Mmqruvw"))A1(ksr,ksp(x,"","","qruvw"))A1(ksw,ksp(x,"AC","BHILDS","Mmpqw"))
+A1(ksl,ksp(x,"AC","IDS","Mmqruvw"))A1(ksr,ksp(x,"","","qruvw"))A1(ksw,ksp(x,"AC","IDS","Mmpqw"))
 A1(kst,P(xtT&&xn==1,pre(',',ksr(fir(x))))XA(par(jc(';',ek(x))))XcC(kss(enla(x)))
  XZD(xn?jc(32,eac1(x,str)):x(aCz(xtD?"0#0n":"!0")))XS(xn?raz(ek(x)):x(aCz("0#`")))XM(pre('+',kst(flp(x))))
  Xm(Ay=kv(&x);cat(apc(ksl(x),'!'),ksr(y)))Xzd(str(x))
