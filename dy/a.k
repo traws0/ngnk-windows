@@ -9,9 +9,9 @@ rot:{@[x;(2!)#!#x;|:]}   /flip pairs at odd indices
 p131:-1+1_2*!1+                              /P1_Seems_a_Bit_Odd_To_Me
 p132:{100*(+/x>64)%#x}                       /P2_Making_The_Grade
 p133:+/~0=#'" "\                             /P3_What_Is_In_a_Word
-p134:{(0=#x)|(~*|m)&&/~0>m:+\0^1 -1"()"?x}   /P4_Keeping_Things_In_Balance
+p134:{~(*|0,m)|/0>m:+\-/"()"=\:x}            /P4_Keeping_Things_In_Balance
 p135:=                                       /P5_Identity_Crisis
-p136:{$[x~!0;0;{x|-x}(&/d)-|/d:,/x]}         /P6_Home_On_The_Range
+p136:{x[0]-*|x@:>,/x}                        /P6_Home_On_The_Range
 p137:{x=_x}_                                 /P7_Float_Your_Boat
 p138:{v*/:v:1+!x}                            /P8_Go_Forth_And_Multiply
 p139:{(+/'x'y)%x}                            /P9_It_Is_a_Moving_Experience
@@ -76,8 +76,8 @@ p189:{*(-/0<-:\(-/x)^0),0}                   /P9_Earlier_Later_or_the_Same
 p18X:~/{{=x@<x}x^" "}'                       /P10_Anagrammatically_Correct
 
 km:+,/'|:\2 1*1 -1@!2 2 /knight moves offsets (via @Traws)
-tel:ABC!({3 3 3 3 3 4 3 4}#2_!10)
-nums:(`c$"0"+!10)!(!10)
+tel:ABC!&0 0 3 3 3 3 3 4 3 4
+nums:(`c$"0"+!10)!!10
 p191:{(0N,x)#y}                              /P1_Chunky_Monkey
 p192:"FDCBA"@0 65 70 80 90' /binsearch       /P2_Making_the_Grade (-4 via @coltim)
 p193:{+(!t;.t;.0.1*_0.5+1000*t%+/t:0^"ABCDF"##'=x)} /P3_Grade_Distribution (-10, @coltim, @chrispsn)
@@ -120,7 +120,7 @@ E[p132].'((25 90 100 64 65;60);(,50;0);(80 90 100;100);(!0;0n)); /Dyalog wants 1
 E[p133].'(("Testing one, two, three";4);("";0);(" this vector has extra blanks ";5));
 E[p134].'(("((2×3)+4)";1);("";1);("hello world!";1);(")(2×3)+4(";0);("(()";0);(")";0));
 /skipping p135, as =: is a primitive k function
-E[p136].'((19 -3 7.6 22;25);(,101;0);(2 3#10 20 30 40 50 60;50);(!0;0)); /!0 -> 0 is dubious
+E[p136].'((19 -3 7.6 22;25);(,101;0);(2 3#10 20 30 40 50 60;50);(!0;0));
 M[p137].'((14.2 9 -3 3.1 0 -1.1;14.2 3.1 -1.1);(1 3 5;!0);(3.1415;,3.1415));
 M[p138].'((5;5 5#1 2 3 4 5 2 4 6 8 10 3 6 9 12 15 4 8 12 16 20 5 10 15 20 25);(1;1 1#1);(0;0 0#0));
 sa:200 300 2700 3400 100 2000 400 2100 3500 3000 4700 4300 /sales
@@ -172,16 +172,16 @@ M[p168].'((0 1 -2 3 -4 -5 6 7 8 -9 10;(-2 -4 -5 -9;0 1 3 6 7 8 10))
 /skipping p169 as split is a built-in k verb
 A[p16X].'(((5 0 2;2.99 4.99 1.99);18.93);((0 0 0;2.99 4.99 1.99);0));
 M[p171].'((5;1 3 5 7 9);(1;,1);(0;!0));
-M[p172].'((1 2 3 4 5;2 2 4 4 6);(!0;!0);(4 4#1+!16;4 4#2 2 4 4 6 6 8 8 10 10 12 12 14 14 16 16));
+M[p172].'((1 2 3 4 5;2 2 4 4 6);(!0;!0);(4 4#1+!16;(2 2 4 4;6 6 8 8;10 10 12 12;14 14 16 16)));
 M[p173].'(("this \"is\" a test";"this \"\" a test");("this is a test";"this is a test")
           ("this \"is\" a \"test\"";"this \"\" a \"\"");("";""));
 A[p174 .].'((60 12;18.84955592);(0 12;0);(60 0;0);((60;9 12 15);10.60287521 18.84955592 29.45243113)
  ((60 90 120;12);18.84955592 28.27433388 37.69911184);((60 90 120;9 12 15);10.60287521 28.27433388 58.90486225));
 E[p175].'(("ATGCTTCAGAAAGGTCTTACG";1);("Dyalog";0);("";1);(,"T";1));
 M[p176 .].'(((4;"ATCGAAGGTCGT");$`ATCG`TCGA`CGAA`GAAG`AAGG`AGGT`GGTC`GTCG`TCGT);((4;"AC");()));
-M[p177].'(("AGCTTTTCATTCTGACTGCTGTCTTTAAAAAAAGAGTGTCTGATAGCAG";14 8 10 17);("CCAAATGGGG";3 2 4 1);("";0 0 0 0);(,"G";0 0 1 0));
-M[p178].'((0 1 0 1 0 0 1;0 1 0 0 0 0 0);(!0;!0);(0 0 0 0;0 0 0 0));
-M[p179].'(("bookkeeper";0 1 0 1 0 1 0 0 0 0);("";"");("aaaaaa";1 1 1 1 1 0);("d";,0)); /"" as result arguably dogdy?
+M[p177].'(("AGCTTTTCATTCTGACTGCTGTCTTTAAAAAAAGAGTGTCTGATAGCAG";14 8 10 17);("CCAAATGGGG";3 2 4 1);("";&4);(,"G";0010b));
+M[p178].'((0101001b;0100000b);(!0;!0);(0000b;0000b));
+M[p179].'(("bookkeeper";0101010000b);("";"");("aaaaaa";111110b);("d";,0)); /"" as result arguably dogdy?
 M[p17X].'((1 2 3 4;2 2#1 2 3 4);(1 2 3 4 5;3 3#1 2 3 4 5 0N 0N 0N 0N);("Dyalog APL";4 4#"Dyalog APL      "));
 E[p181].'((5 5 2 10 3 15 10;3);(|5 5 2 10 3 15 10;2);(!0;0);(,10;1));
 A[p182].'((1.234;1 0.234);(12;12 0);(0;0 0));
@@ -204,7 +204,7 @@ M[p192].'((0 64 65 69 70 79 80 89 90 100;"FFDDCCBBAA");(!0;());(2 3#71 82 81 82 
 /floating point CT is too annoying at depth
 tmp:+p193@{9 3 8 4 7}#"DABFC";M[::;tmp@0;"ABCDF"];M[::;tmp@1;3 8 7 9 4];A[::;tmp@2;9.7 25.8 22.6 29.0 12.9]
 M[p194].'((5 4;(7 5;7 3;3 5;3 3;6 6;4 6;6 2;4 2));(1 1;(3 2;2 3)));
-M[p195].'((" "\"I feed the bookkeeper";0 1 0 1);(,"I";,0);(,"feed";,1);(" "\"MY LLAMAS HAVE BEEN GOOD";0 1 0 1 1));
+M[p195].'(($`I`feed`the`bookkeeper;0 1 0 1);(,"I";,0);(,"feed";,1);($`MY`LLAMAS`HAVE`BEEN`GOOD;01011b));
 M[p196].'(("IAMYY4U";4 2 6 9 9 4 8);("";!0);("UR2CUTE";8 7 2 2 8 8 3));
 M[p197 .;10,,$`APL`Problem`Solving`Competition;("   APL    ";" Problem  ";" Solving  ";"Competitio")]
 A[p198].'(((1 -1;1 3);8);((1 1;1 2;2 2;2 1);4);(5 5;0);((1 1;3 3);5.656854249));
@@ -238,6 +238,6 @@ M[p217].'((1 1#42;1);(3 3#4 9 2 3 5 7 8 1 6;1);(2 2#1 2 3 4;0));
 E[p218].'(((2 30;5 15);165);((5 15;2 30);165);((1 0 0;,0);1440));
 E[p219].'((1 2 3 5 5 5 6 4 3;3);(1 2 3 4 4 4 4 4 5 4 3;4);(1 2;1));
 M[p21X .].'(((6;">");"     >")
-            ((8;("K";"E";"Iversen"));("       K";"       E";" Iversen"))
+            ((8;("K";"E";"Iverson"));("       K";"       E";" Iverson"))
             ((8;("Longer Phrase";"APL";"Parade"));("r Phrase";"     APL";"  Parade")));
 `1:,"\n"
