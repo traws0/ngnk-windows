@@ -23,7 +23,7 @@ A1(rev,Xm(Ay=kv(&x);am(rev(x),rev(y)))XM(Ay=kv(&x);aM(x,Nx(eac1(y,rev))))Xt(x)x=
  W(i<j,I(!w,SWP(xb,xB[j]))EI(w==1,SWP(xh,xH[j]))EI(w==2,SWP(xi,xI[j]))E(SWP(xl,xL[j]))i++;j--)x)
 A1(typ,x(as(TS[xt])))
 A1(len,x(az(xN)))N _N(Ax/*0*/)_(XT(xn)Xm(_N(xy))XM(_n(xy)?_N(*_A(xy)):1)1)
-A1(unq,XT(xN<2?x:K("{x@i@<i@:&@[;0;:;1]@~~':x@i:<x}",x))Xz(rndD(gl(x)))et1(x))
+A1(unq,XT(xN<2?x:K("{x@i@<i@:&@[;0;:;1]@~~':x@i:<x}",x))Xz(Ln=gl(x);P(n<0,ed0())rndD(n))et1(x))
 A2(fil,YmMA(eac2(x,y,exc))YF(y==au?x:x(y))Yt(fir(fil(x,enl(y))))K("{@[y;&^y;:;x]}",x,y))
 A2(exc,Xt(fil(x,y))P(xtmM||ytmM,en2(x,y))y=enla(y);P(!xn||!yn,y(x))
  Ik=rnk(x);k>0&&k==rnk(y)?K("{x@&^y?x}",x,y):K("{x@&~(!0),x~\\:y}/",x,y))
