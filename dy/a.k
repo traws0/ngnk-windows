@@ -2,18 +2,18 @@
 / https://github.com/xpqz/dyalogk
 / https://problems.tryapl.org/psets/${YEAR}.html?goto=${PROBLEMNAME}
 
-pi:3.14159265359;abc:_ABC:`c$"A"+!26;sq:{x*x};ave:{(+/x)%#x};gcd:*|(*:)(|!\)/,
+pi:3.14159265359;az:_AZ:`c$"A"+!26;sq:{x*x};ave:{(+/x)%#x};gcd:*|(*:)(|!\)/,
 ctr:{?[x$"";-2!x-:#y;y]} /center string y in width x, padding with spaces, where ~x>#y
 rot:{@[x;(2!)#!#x;|:]}   /flip pairs at odd indices
 
 p131:-1+1_2*!1+                              /P1_Seems_a_Bit_Odd_To_Me
 p132:{100*(+/x>64)%#x}                       /P2_Making_The_Grade
-p133:+/~0=#'" "\                             /P3_What_Is_In_a_Word
+p133:+/1<':^:                                /P3_What_Is_In_a_Word
 p134:{~(*|0,m)|/0>m:+\-/"()"=\:x}            /P4_Keeping_Things_In_Balance
 p135:=                                       /P5_Identity_Crisis
 p136:{x[0]-*|x@:>,/x}                        /P6_Home_On_The_Range
 p137:{x=_x}_                                 /P7_Float_Your_Boat
-p138:{v*/:v:1+!x}                            /P8_Go_Forth_And_Multiply
+p138:{x*/:x:1+!x}                            /P8_Go_Forth_And_Multiply
 p139:{(+/'x'y)%x}                            /P9_It_Is_a_Moving_Experience
 
 p141:{~-/*/2#,|x,y,z}                        /P1_It_Is_All_Right
@@ -28,7 +28,7 @@ p148:%+/*/2#,-/                              /P8_Go_The_Distance
 /p149:{(x*x*`sin@2*y*pi%180)%9.8}            /P9_Going_Ballistic
 p14X:100*|/1_-1+%':                          /P10_Sales_Are_Up
 
-p151:~/{v@<v:l^(l:_x)^abc}'                  /P1_Nag_A_Ram
+p151:~/{x@<x^:x^az}'_:                       /P1_Nag_A_Ram
 p152:|/{y*x+y}\>':(!0),                      /P2_Longest_Streak (via @coltim)
 p153:{?(,!2),x@*'<==%/'x}1_+&+|\=1+          /P3_Farey_Tale (via @coltim)
 p154:{((#x)#<<x,y)?(#y)#<<y,x}               /P4_PDI_Progessive_Dyadic_Iota
@@ -53,61 +53,58 @@ p16X:+/*/                                    /P10_Order_Total_Dot_Product
 p171:1+2*!:                                  /P1_What_an_Odd_Bunch (via @razetime)
 p172:{x+2!x}                                 /P2_Good_Evening
 p173:"\"\""/{2!!#x}_"\""\                    /P3_Miss_Quoted (@coltim)
-p174:{(pi*r*r:y%2)%360%x}                    /P4_Slices_of_Pies
+p174:{x*y*y*pi%1440}                         /P4_Slices_of_Pies
 p175:{~#x^"ACGT"}                            /P5_DNA
 p176:{?x'y}                                  /P6_k_mers
 p177:+/'"ACGT"=\:                            /P7_Counting_DNA_Nucleotides
 p178:>':|\1=                                 /P8_Be_the_First_1 (via @chrispsn)
 p179:|=':|"",                                /P9_Double_Trouble (via @coltim)
-p17X:{(s;s)#x@!s*s:-_-%#x}                   /P10_Squaring_Off (via @traws)
+p17X:{x@s#!*/s:2#-_-%#x}                     /P10_Squaring_Off (via @traws)
 
 signsc:`Monkey`Rooster`Dog`Pig`Rat`Ox`Tiger`Rabbit`Dragon`Snake`Horse`Goat
-cutoffs:+((1+!12);20 19 21 20 21 21 23 23 10 23 22 22)
+cutoffs:+(1+!12;20 19 21 20 21 21 23 23 10 23 22 22)
 signsw:`Capricorn`Aquarius`Pisces`Aries`Taurus`Gemini`Cancer`Leo`Virgo`Libra`Scorpio`Sagittarius`Capricorn
 p181:#?|\                                    /P1_Oh_Say_Can_You_See
 p182:{(f;x-f:_x)}                            /P2_Number_Splitting
 p183:{" "/'+($'!m;.{x#"*"}'m:#'=+/1+!(),x)}  /P3_Rolling_Along
 p184:{signsc@12!x+0>x}                       /P4_Whats_Your_Sign
-p185:{signsw@({x@<x}cutoffs,,x)?x}           /P5_Whats_Your_Sign_Revisited
+p185:{signsw(x@<x:cutoffs,,x)?x}             /P5_Whats_Your_Sign_Revisited
 p186:{(~*|m)&&/~0>m:+\0^1 -1"<>"?x}          /P6_Whats_Your_Angle
-p187:{0^y[(-x)+!#y]}                         /P7_Unconditionally_Shifty
+p187:{0^y(-x)+!#y}                           /P7_Unconditionally_Shifty
 /p8: very APL-specific; skipping             /P8_Making_a_Good_Argument
 p189:{*(-/0<-:\(-/x)^0),0}                   /P9_Earlier_Later_or_the_Same
-p18X:~/{{=x@<x}x^" "}'                       /P10_Anagrammatically_Correct
+p18X:~/{=x@<x^:" "}'                         /P10_Anagrammatically_Correct
 
-km:+,/'|:\2 1*1 -1@!2 2 /knight moves offsets (via @Traws)
-tel:ABC!&0 0 3 3 3 3 3 4 3 4
-nums:(`c$"0"+!10)!!10
 p191:{(0N,x)#y}                              /P1_Chunky_Monkey
-p192:"FDCBA"@0 65 70 80 90' /binsearch       /P2_Making_the_Grade (-4 via @coltim)
+p192:"FDCBA"@0 65 70 80 90'                  /P2_Making_the_Grade (-4 via @coltim)
 p193:{+(!t;.t;.0.1*_0.5+1000*t%+/t:0^"ABCDF"##'=x)} /P3_Grade_Distribution (-10, @coltim, @chrispsn)
-p194:(&/'0<)#km+\:                           /P4_Knight_Moves
+p194:(&/'0<)#(+,/'|:\2 1*1 -1@!2 2)+\:       /P4_Knight_Moves
 p195:(|/=':" ",)'                            /P5_Doubling_Up
-p196:(tel,nums)@                             /P6_Telephone_Names
+p196:(AZ!&.'"0033333434"),*'=,/$!10          /P6_Telephone_Names
 p197:{ctr[x]'{(x&#y)#y}[x]'y}                /P7_In_the_Center_of_It_All
-p198:{+/%+/'{x*x}(*|x)-':x}                  /P8_Going_the_Distance (-4 via @coltim)
-p199:{{x|-x}0.5*-/+/rot 1_*':rot (1+#x)#x}   /P9_Area_Code_a_la_Gauss
+p198:{+/%+/'x*x:(*|x)-':x}                   /P8_Going_the_Distance (-4 via @coltim)
+p199:{x|-x:0.5*-/+/rot 1_*':rot x,,*x}       /P9_Area_Code_a_la_Gauss
 p19X:{(#;_)[;2!#:';x]}                       /P10_Odd_and_Evens (via @coltim)
 
 p201:{$[x<0;o[x+#y;y];(x;x-#y)#\:y]}         /P1_Lets_Split
-p202:{(&~{(~x<128)&~x>191}x)_x}              /P2_Characters
-p203:{26/1+ABC?x}                            /P3_Columns
-p204:{(~400!x)|(~4!x)&100!x}                 /P4_Take_a_Leap
+p202:{(&~2=-64!x)_x}                         /P2_Characters
+p203:26/1+AZ?                                /P3_Columns
+p204:{x|y<z}.~400 100 4!\:                   /P4_Take_a_Leap
 p205:{(x<y)|:/(x-!x-y),x&y}                  /P5_Integer_Range (-4 via @bubbler)
 p206:{,/(#;_)[;x=;y]}                        /P6_Move_To_Front
 p207:{|/&/((#2\|/x)#2)\'x}                   /P7_Bits
 p208:~|/1_+':-/0<-:\-':10\                   /P8_Zigzag
-p209:{$[|/m:<':x;&/(m?1)_m;1]}               /P9_Rise_and_Fall
-p20X:`k@ /very APL-specific                  /P10_Stacking_It_Up
+p209:&/{x~*\x=:|\x}'|:\                      /P9_Rise_and_Fall
+p20X:`k /very APL-specific                   /P10_Stacking_It_Up
 
 p211:{100*(+/|/"GC"=\:x)%#x}                 /P11
 p212:?                                       /P12
 p213:{y@&'~x!\:y}                            /P13
-p214:{(pi*r*r:x%2)-s*s:x%%2}                 /P14
+p214:{x*x*(pi-2)%4}                          /P14
 p215:{a,_x%a:![;x](-1+)/_%x}                 /P15
-p216:{(2!+/p"B")&~(<,/(p:=x)"KR")1}          /P16
+p216:{(2!+/p"B")>(<,/(p:=x)"KR")1}           /P16
 p217:{1=#=+/'x,(+x),(,/'x*/:(i;|i:=#x))^\:0} /P17
-p218:{x|-x}@-/0 24 60/'-3#'(&3),/:           /P18
+p218:|/-:\-/0 24 60/'-3#'(&3),/:             /P18
 p219:|/#'{(&~=':x)_x}@1_-/0<-:\-':           /P19
 p21X:{(-x)$y}                                /P110
 
@@ -221,12 +218,12 @@ M[p205 .].'((3 10;3 4 5 6 7 8 9 10);(4 -3;4 3 2 1 0 -1 -2 -3);(42 42;,42));
 M[p206 .].'(((3;1 2 3 4 1 3 1 4 5);3 3 1 2 4 1 1 4 5);((3;,1);,1);((42;!0);!0));
 M[p207].'((2 7;1);(4 11;0);(3 11;1);(4 0;0));
 E[p208].'(123 0;31115 0;3141514131415 1); /A[p208;132;1] /FAIL FIX ME
-E[p209].'((1 3 3 4 5 2 1;1);(,42;1);(1 3 2 4;0);(23 23 23;1)); /A[p209;!0;1] /dubious
+M[p209].'((1 3 3 4 5 2 1;1);(,42;1);(1 3 2 4;0);(23 23 23;1);(!0;1));
 /skipping p20X; too APL-specific
 A[p211].'(("GCGCGCGCCCGGGGCCG";100);("ACGTACGTACGTACGT";50);("ACGT"@&10 12 16 10;58.33333333));
 /skipping p212, as `?` is a k primitive
 /M[p212["DYALOG"];"APL";2 0N 3]
-/M[p212[5 5#ABC];("UVWXY";"FGHIJ";"XYZZY");4 1 0N]
+/M[p212[5 5#AZ];("UVWXY";"FGHIJ";"XYZZY");4 1 0N]
 M[p213 .].'(((2 4 7 3 9;5 7 8 1 12 10 20 16 11 4 2 15 3 18 14 19 13 9 17 6);(8 12 10 20 16 4 2 18 14 6;8 12 20 16 4;7 14;12 15 3 18 9 6;18 9))
  ((,3;1+!10);,3 6 9);((6 7;,42);(,42;,42));((2 3 5;!0);(!0;!0;!0));((!0;1+!10);()));
 D[p214].'((2*1+!5;1.141592654 4.566370614 10.27433388 18.26548246 28.53981634)
