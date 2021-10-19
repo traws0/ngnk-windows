@@ -23,12 +23,9 @@ $["kw"~`argv 0;;{repl.line@1:`}::/`];
 Types: ACBHILDSMmcildsopqruvw
 list atom
  `A        generic list   ()   ,"ab"   (0;`1;"2";{3};%)
- `C   `c   char    8bit   "a"   0x6263   "d\0\"\n\r\t"
- `B        byte    8bit   -128 127
- `H        short  16bit   -32768 32787
- `I   `i   int    32bit   -2147483648 2147483647
- `L   `l   long   64bit   0N 9223372036854775807
- `D   `d   double 64bit   -0w -0.0 0.0 0w 1.2e308 0n
+ `I   `i   int            0N -9223372036854775807 01b
+ `D   `d   float          -0w -0.0 0.0 0w 1.2e308 0n
+ `C   `c   char           "a"   0x6263   "d\0\"\n\r\t"
  `S   `s   symbol         `   `a   `"file.txt"   `b`cd`"ef"
  `M   `m   table&dict     +`a`b!(0 1;"23")   (0#`)!()
       `o   lambda         {1+x*y#z}  {[a;b]+/*/2#,a,b}
@@ -114,7 +111,7 @@ f_y weed out  (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
 X_i delete    "abcde"_2 -> "abde"
  $x string    $(12;"ab";`cd;+) -> ("12";(,"a";,"b");"cd";,"+")
 i$C pad       5$"abc" -> "abc  "   -3$"a" -> "  a"
-s$y cast      `c$97 -> "a"   `d$1 -> 1.0   `$"a" -> `a
+s$y cast      `c$97 -> "a"   `i$-1.2 -> -1   `$"a" -> `a
 s$y int       `I$"-12" -> -12
  ?x uniq      ?"abacus" -> "abcus"
 X?y find      "abcde"?"bfe" -> 1 0N 4
