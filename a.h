@@ -140,8 +140,7 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;AA e##t##n;
  EA
 #undef h
-#define N_(r,a) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
-#define N(r) N_(r,)
+#define N(r,a...) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through
 
 #define ov(x) ov_(#x":",(L)(x))
 #define oo os("["__FILE__":"M2(__LINE__)"]");
