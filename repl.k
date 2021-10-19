@@ -171,6 +171,7 @@ f f\x  whiles    (1<){$[2!x;1+3*x;-2!x]}\3 -> 3 10 5 16 8 4 2 1
   C\C  split     "ra"\"abracadabra" -> ("ab";"cadab";"")
   I/x  decode    24 60 60/1 2 3 -> 3723   2/1 1 0 1 -> 13
   I\x  encode    24 60 60\3723 -> 1 2 3   2\13 -> 1 1 0 1
+i f':x stencil   3{x,"."}':"abcde" -> ("abc.";"bcd.";"cde.")
   F':x eachprior -':12 13 11 17 14 -> 12 1 -2 6 -3
 x F':y seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3
 x F/:y eachright 1 2*/:3 4 -> (3 6;4 8)
