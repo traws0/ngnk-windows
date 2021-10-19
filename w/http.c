@@ -1,4 +1,4 @@
-#define _GNU_SOURCE // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
+#define _GNU_SOURCE // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 #include<stdlib.h>  // apt-get install libc6-dev-i386
 #include<unistd.h>
 #include<string.h>

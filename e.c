@@ -1,4 +1,4 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/blob/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 S C m[32];S I n,o;A src; //message,length,offset,source
 SN A e0(Qs)_(n=min(Sn(s),SZ m-1);Mc(m,s,n);m[n]=0;0)
 NI A e1(Ax,Qs)_(x(e0(s)))
