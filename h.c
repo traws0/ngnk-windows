@@ -4,7 +4,7 @@ SN A flt(Ax,Ay,Cb)_(Q(xtF);P(xK-1,er2(x,y))Ym(K("{y@&z~:/x y}",x,y,ai(!b)))x=Ny(
 S V rshV(OV*a,Nm,V*b,Nn){Q(m);Mc(b,a,min(m,n));W(2*m<=n,Mc(b+m,b,m);m*=2)I(n>m,Mc(b+m,b,n-m))}
 ALA(rshN,Xt(rshN(n,enl(x)))
  XT(P(!xn,rshN(n,enl(fir(x))))P(n<0,n-NL?rev(rshN(-n,rev(x))):x)Ay=atn(xt,n);rshV(xV,xn*xW,yV,n*xW);x(ytA?sqz(mRa(y)):y))
- XM(Ay=kv(&x);aM(x,Nx(ear(RSH,az(n),y))))Q(xtm)Ay=kv(&x);x=Ny(rshN(n,x));y=Nx(rshN(n,y));am(x,y))
+ XM(Ay=kv(&x);aM(x,Nx(ear2(RSH,az(n),y))))Q(xtm)Ay=kv(&x);x=Ny(rshN(n,x));y=Nx(rshN(n,y));am(x,y))
 S A slc(Ax/*0*/,Ni,Nj)_(Q(xtT&&i<=j&&i<=xn)Ay=atn(xt,j-i);Mc(yV,xV+i*xW,(j-i)*xW);XA(sqz(mRa(y)))y)
 S ALA(chp,P(n<0,ed1(x))Lm=(xn+n-1)/n;Ay=aA(m);i(m,ya=slc(x,n*i,min(xn,n*i+n)))x(y))
 S A shp(O L*s,Nn,Ax,Lm)_(Q(xtT)Q(xn)P(n<=0,en1(x))P(n==1,rshN(m**s,x))

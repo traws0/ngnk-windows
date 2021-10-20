@@ -18,7 +18,7 @@ S AAL(getr,/*0*/xtt||in(i,xN)?get(x,i):xN?mkn(get(x,0)):xtm?getr(xy,i):_R(cn[xt]
  L l=n/g*g;j(n-l,P(!in(q[j],m),l))j(n-l,r[j]=p[q[j]]))
 iC_(I)iC_(L)i_(B,I)j_(B,I)i_(B,L)j_(B,L)i_(H,I)j_(H,I)i_(H,L)j_(H,L)i_(I,I)j_(I,I)i_(I,L)j_(I,L)j_(L,I)j_(L,L)
 iD_(I)iD_(L)iS_(I)iS_(L)
-S A2(idx_,/*01*/Xt(er1(y))P(y==PLH||y==au,xR)YA(ear(AP1,xR,y))Ym(y=mut(y);yy=idx_(x,yy);y)YF(et1(y))Yt(getr(x,gl(y)))
+S A2(idx_,/*01*/Xt(er1(y))P(y==PLH||y==au,xR)YA(ear2(AP1,xR,y))Ym(y=mut(y);yy=idx_(x,yy);y)YF(et1(y))Yt(getr(x,gl(y)))
  I(!ytL&&!ytI,y=N(cI(y)))Nn=yn;P(xtA||xtM,Az=oA;I(ytL,i(n,zq(getr(x,yl))))E(i(n,zq(getr(x,yi))))y(z))
  Az=xtL&&ytL&&yr==1?y:atn(xt,n);Lm=CH(xt-tB+7*ytL,&iBI,iHI,iII,jLI,iDI,iCI,iSI,iBL,iHL,iIL,jLL,iDL,iCL,iSL)(xV,xn,yV,zV,n);
  I(m<n,z=z(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xV,xn,yV,zV,n))y-z?y(z):z)

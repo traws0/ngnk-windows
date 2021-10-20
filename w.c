@@ -56,9 +56,12 @@ S A3(eap2,/*011*/P(ztm,Au=kv(&z);am(z,Nz(eap2(x,y,u))))P(!ztT,et2(y,z))P(!zn,y(z
  Au=oA;i(zn,y=app(x,A(get(z,i),y),2);P(!y,z(u(0)))uq(y);y=get(z,i))y(z(u)))
 S A2(eap1,/*01*/Ym(Az=kv(&y);am(y,Ny(eap1(x,z))))eap2(x,id_(x,y),y))
 S A3(ste,/*011*/K("{x'y'z}",xR,y,z))
+A3(ear2,/*011*/x=prj(x,A(y,PLH),2);x(eac(x,&z,1)))
+A3(eal2,/*011*/x=prj(x,A(PLH,z),2);x(eac(x,&y,1)))
+AX(eal,Ab8;Mc(b,a,n*SZ x);*b=PLH;x=prj(x,b,n);x(eac(x,a,1)))
 AX(w0,I(n==1, Xz(win(xR,*a))XT(bin(xR,*a)))                              eac(x,a,n)) /* '  */
 AX(w1,I(n==1,XzZ(dec(xR,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a)))xK<2?lr(x,a,n):rdc(x,a,n)) /* /  */
 AX(w2,I(n==1,XzZ(enc(xR,*a))Xc(sc(xv,*a))XC(sC(xV,xn,*a)))xK<2?ls(x,a,n):scn(x,a,n)) /* \  */
 AX(w3,n==1?eap1(x,*a):n==2?xK==1?ste(x,*a,a[1]):eap2(x,*a,a[1]):ern(a,n))            /* ': */
-AX(w4,n-2?ern(a,n):ear(x,*a,a[1]))A3(ear,/*011*/x=prj(x,A(y,PLH),2);x(eac(x,&z,1)))  /* /: */
-AX(w5,n-2?ern(a,n):eal(x,*a,a[1]))A3(eal,/*011*/x=prj(x,A(PLH,z),2);x(eac(x,&y,1)))  /* \: */
+AX(w4,P(n==2,ear2(x,*a,a[1]))ern(a,n))                                               /* /: */
+AX(w5,P(n==2,eal2(x,*a,a[1]))eal(x,a,n))                                             /* \: */
