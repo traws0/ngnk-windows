@@ -18,8 +18,7 @@ ALA(drp,XT(n*=n!=NL;P(n<=0&&-n<=xn&&xr==1,I(xtA,mrn(-n,xA+xn+n))AN(xn+n,x))x(slc
 S AAL(rmv,XT(P(!in(i,xn),x)Ay=atn(xt,xn-1);Mc(yV,xV,i*xW);Mc(yV+i*xW,xV+i*xW+xW,(xn-i-1)*xW);I(xtA,y=sqz(mRa(y)))x(y))et1(x))
 A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am(Nz(cut(x,y)),Nx(cut(z,y))))
  YMT(K("{y$[|/0<':x,#y;`err\"dom\";x+!'1_-':x,#y]}",Ny(cL(x)),y))Ym(K("{((!y)^x)#y}",x,y))Yz(rmv(x,gl(y)))et2(x,y))
-A1(enl,Xi(Iv=xv;aV(v==(B)v?tB:v==(H)v?tH:tI,1,&v))Xl(Lv=*xL;v==(I)v?enl(x(ai(v))):AT(tL,mut(x)))Xd(AT(tD,mut(x)))
- P(xtzc||xts,aV(TT[xt],1,&x))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
+A1(enl,Xi(aV(tZ(xv),1,&x))XF(a1(x))XP(aV(TT[xt],1,&x))Xt(x(aV(TT[xt],1,xV)))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
 A1(enla,Xmt(enl(x))x)
 A2(cat,
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);K("@[;;:;]",x,y,z))P(!mtc_(xx,yx),ed2(x,y))
