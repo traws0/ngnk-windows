@@ -3,7 +3,7 @@ MD=mkdir -p $(@D)
 STRIP ?= strip
 O=@opts
 O3=@opts -O3 -march=native -mtune=native
-L=-Wl,-N -Wl,--build-id=none -Wl,-gc-sections -fno-pie #-Wl,--orphan-handling=discard
+L= #-Wl,-N -Wl,--build-id=none -Wl,-gc-sections -fno-pie #-Wl,--orphan-handling=discard
 
 t:k o/t;o/t;dy/a.sh;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
 c:;rm -rf o k k-libc libk.so k32 k-obsd #clean
