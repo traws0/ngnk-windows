@@ -110,7 +110,8 @@ t:{[q;f;a;e] `1:`k$[q[e;r:f a];.;(`fail;f;q;a;e;r)]} /assert
 M:t[~];A:t{1e-6>x|-x-:y};D:t{~/_1000000*(x;y)} /A:approx equal,D:approx float deep-match
 
 M[p131].'((10;1 3 5 7 9 11 13 15 17 19);(1;,1);(0;!0));
-M[p132].'((25 90 100 64 65;60.0);(,50;0.0);(80 90 100;100.0);(!0;0n)); /Dyalog wants 100% instead of 0n, but that makes no sense
+M[p132].'((25 90 100 64 65;60.0);(,50;0.0);(80 90 100;100.0)); /Dyalog wants 100% instead of 0n, but that makes no sense
+M[$p132@;!0;$0n]; /Dyalog wants 100% instead of 0n, but that makes no sense
 M[p133].'(("Testing one, two, three";4);("";0);(" this vector has extra blanks ";5));
 M[p134].'(("((2×3)+4)";1);("";1);("hello world!";1);(")(2×3)+4(";0);("(()";0);(")";0));
 /skipping p135, as =: is a primitive k function
@@ -151,7 +152,8 @@ M[p15X;10]("                 1"
            "      1 8 28 56 70 56 28 8 1"
            "    1 9 36 84 126 126 84 36 9 1"
            "1 10 45 120 210 252 210 120 45 10 1")
-A[p161].'((1+!6;3.5);(!0;0n);17 17;(5 3#1+!15;7 8 9.0)); /dyalog wants 0 instead of 0n, which makes no sense
+A[p161].'((1+!6;3.5);17 17;(5 3#1+!15;7 8 9.0));
+A[p161].'(!0;0n); /dyalog wants 0 instead of 0n, which makes no sense
 M[p162].'((1+!9;5.0);(1 8 2 7 3 6 4 5;4.5);(!0;0.0);(,7;7.0));
 M[p163].'((2 1 4 3 2 5 1 2;,2);(!0;,!0);(1 2 3 4 1 2;1 2)); /result ,!0 is dubious
 M[p164].'($(`MENS`EKES;`MEEKNESS);$(`Dyalog`APL;`DAyPaLlog);$(`APL`Dyalog;`ADPyLalog)
