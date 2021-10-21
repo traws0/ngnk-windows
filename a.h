@@ -66,6 +66,8 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define max(x,y) extr(x,y,>)
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
+#define c3(x,y,z) ((y)-(x)<=(UI)((z)-(x)))
+#define in(i,n) ((i)<(UL)(n))
 A1 a1,amd,asc,ax,blw,cC,cD,cH,cI,cL,cS,cf,des,dmd,dsc,enl,enla,epr,expx,fir,flp,flr,frk,grp,hex,ins,js0,js1,kst,las,len,
  logx,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prng,prs,rev,ser,sinx,spl,sqr,sqz,sqzZ,str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,sub,v0c,v1c,exc;
@@ -76,7 +78,7 @@ A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C
 V exit(I),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
  mrn(N,OA*),tilV(V*,L,I);D gd(A);N strlen(Q),_N(A);
 C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);char*strchr(O char*,I),*strchrnul(O char*,I),*strstr(Q,Q);
-I _K(A),c3(C,C,C),qD(D,D),eS(A,I),in(L,UL),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
+I _K(A),qD(D,D),eS(A,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;

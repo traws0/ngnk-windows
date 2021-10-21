@@ -1,5 +1,4 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-I in(Li,UL n)_(i<n)I c3(Cc,Cv,Cd)_(c<=v&&v<=d)
 I c09(Cc)_(c3('0',c,'9'))I caf(Cc)_(c3('a',c,'f'))I cAz(Cc)_(c3('a',c|32,'z'))I cA9(Cc)_(cAz(c)||c09(c))
 I cAZ(Cc)_(c3('A',c,'Z'))I cAF(Cc)_(c3('A',c,'F'))I cAf(Cc)_(c3('a',c|32,'f'))I c01(Cc)_(c3('0',c,'1'))
 I si(Qs,Iv)_(SC0(s,v)-(char*)s)S D p10(In)_(Dv=1;i(n,v*=10)v)S Q p32(Qs)_(W(*s==32,s++)s)
@@ -20,7 +19,7 @@ S A0(pS,Ax=oS;W(1,Ay=*s-'"'?ps():Nx(pC());y=str0(y);xq(y(syP(yV)));Qp=p32(s);P(*
 S A0(pP,Ax=oS;W(1,Ay=str0(ps());y(xq(syP(yV)));P(*s-'.',x)++s)0)
 S A lam(Ik,Ax,Ay,Az)_(AK(k,a3(x,y,z))) //x:src,y:bytecode,z:locals
 S A1(shy,P(xn<2,x)Ay=xA[xn-1];I(ytA&&yn>2,Az=yx;I((z==av||ztu)&&_tsSA(yy),xq(au)))x) //if last is assignment, return ::
-S A px(In)_(Q(in(n,4));Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
+S A px(In)_(Q(n<4u);Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
 S A0(po,C nb=nx;nx=1;Q s1=s0,t=s0=s++;Ay;I(*s-'[',y=au)E(s++;y=sqz(N(pb(oA,']')));P(!ytS,ep1(y))P(yN>8,s--;ez1(y)))
  Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))I(y==au,y=px(nx))E(nx=yn)Ax=AK(nx,N(cpl(aCn(t,s-t),shy(z),y)));s0=s1;nx=nb;x)
 S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS());xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
