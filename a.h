@@ -138,7 +138,7 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
 #define K(s,a...) ({S A f;K0(&f,s,A(a),ZZ(A(a)));})
 
-#define EA h(c,cpl)h(d,dom)h(i,idx)h(l,len)h(n,nyi)h(o,io)h(p,prs)h(r,rnk)h(s,stk)h(t,typ)h(v,val)h(z,lmt)
+#define EA h(c,compile)h(d,domain)h(i,index)h(l,length)h(n,nyi)h(o,io)h(p,parse)h(r,rank)h(s,stack)h(t,type)h(v,value)h(z,limit)
 #define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;AA e##t##n;
  EA
 #undef h
