@@ -20,10 +20,10 @@ A2(cut,Xz(drp(gl(x),y))XF(flt(x,y,0))Xm(Az=kv(&x);y=fnd(xR,y);P(!y,x(z(0)))yR;am
  YMT(K("{y$[|/0<':x,#y;`err\"domain\";x+!'1_-':x,#y]}",Ny(cL(x)),y))Ym(K("{((!y)^x)#y}",x,y))Yz(rmv(x,gl(y)))et2(x,y))
 A1(enl,Xi(aV(tZ(xv),1,&x))XF(a1(x))XP(aV(TT[xt],1,&x))Xt(x(aV(TT[xt],1,xV)))Xm(Ay=kv(&x);aM(x,eac1(y,enl)))a1(x))
 A1(enla,Xmt(enl(x))x)
-A2(cat,
+A2(cat,Xt(cat(enl(x),y))Yt(cat(x,enl(y)))
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);K("@[;;:;]",x,y,z))P(!mtc_(xx,yx),ed2(x,y))
               Az=eac2(_R(xy),_R(yy),cat);x(y(z?aM(_R(xx),z):0)))
- x=enla(x);P(ytT&&!yn,y(x))P(!xn,x(enla(y)))y=enla(y);I(xtZ&&ytzZ,N(sup(&x,&y)))I(xt-yt,x=blw(x);y=blw(y))
+ P(!yn,y(x))P(!xn,x(y))I(xtZ&&ytzZ,N(sup(&x,&y)))I(xt-yt,x=blw(x);y=blw(y))
  Nm=xn,n=yn;x=room(m+n,x);Mc(xV+m*xW,yV,n*xW);y(!ytA?0:yr-1?mRa(y):AN(0,y));x)
 A2(apd,XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,get(yy,i)))y(x))
  Q(xtT);P(xtZ&&ytz,N(sup(&x,&y));ytP?apv(x,&y):y(apv(x,yV)))
