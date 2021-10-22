@@ -48,7 +48,7 @@ S A1(kss,Nn=xn+2;Iv=1;i(xn,I e=esc(xc)>=0;n+=e;v&=e||c3(32,xc,126))P(!v,cat(aCz(
  Ay=aC(n);C*s=yV;*s++='"';i(xn,Ij=esc(xc);I(j<0,*s++=xc)E(*s++='\\';*s++="0tnr\"\\"[j]))*s++='"';x(y))
 S A ksp(Ax,Qp,Qq,Qs)_(Ct=TS[xt];(SC(p,t)?xn==1:SC(q,t)?xn<2:!!SC(s,t))?par(kst(x)):kst(x))
 A1(ksl,ksp(x,"AC","IDS","Mmqruvw"))A1(ksr,ksp(x,"","","qruvw"))A1(ksw,ksp(x,"AC","IDS","Mmpqw"))
-A1(kst,P(xtT&&xn==1,pre(',',ksr(fir(x))))XA(par(jc(';',ek(x))))XcC(kss(enla(x)))
+A1(kst,P(xtT&&xn==1,pre(',',ksr(fir(x))))XA(par(jc(';',ek(x))))Xc(kss(enl(x)))XC(kss(x))
  XZD(xn?jc(32,eac1(x,str)):x(aCz(xtD?"0#0n":"!0")))XS(xn?raz(ek(x)):x(aCz("0#`")))XM(pre('+',kst(flp(x))))
  Xm(Ay=kv(&x);cat(apc(ksl(x),'!'),ksr(y)))Xzd(str(x))
  Xs(x=str(x);Iv=1;i(xn,v&=c09(xc)||cAz(xc))I(!v,x=kst(x);I(*xC==',',x=drp(1,x)))pre('`',x))Xo(x(_R(xx)))
