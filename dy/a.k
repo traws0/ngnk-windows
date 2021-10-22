@@ -111,7 +111,7 @@ M:t[~];A:t{1e-6>x|-x-:y};D:t{~/_1000000*(x;y)} /A:approx equal,D:approx float de
 
 M[p131].'((10;1 3 5 7 9 11 13 15 17 19);(1;,1);(0;!0));
 M[p132].'((25 90 100 64 65;60.0);(,50;0.0);(80 90 100;100.0)); /Dyalog wants 100% instead of 0n, but that makes no sense
-M[$p132@;!0;$0n]; /Dyalog wants 100% instead of 0n, but that makes no sense
+M[-2#$p132@;!0;"0n"]; /Dyalog wants 100% instead of 0n, but that makes no sense
 M[p133].'(("Testing one, two, three";4);("";0);(" this vector has extra blanks ";5));
 M[p134].'(("((2×3)+4)";1);("";1);("hello world!";1);(")(2×3)+4(";0);("(()";0);(")";0));
 /skipping p135, as =: is a primitive k function
