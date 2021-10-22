@@ -13,7 +13,8 @@
 #include<sys/time.h>
 #undef __USE_EXTERN_INLINES
 #include<sys/stat.h>
-I main(In,O char**a)_(__builtin_ia32_ldmxcsr(__builtin_ia32_stmxcsr()|1<<6|1<<15); //daz,ftz
+I main(In,O char**a)_(
+ //__builtin_ia32_ldmxcsr(__builtin_ia32_stmxcsr()|1<<6|1<<15); //daz,ftz
  kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 #ifndef libc
  V*memcpy (V*x,OV*y,Nn)_(C*p=x  ;Qq=y  ;i(n,*p++=*q++)x)
