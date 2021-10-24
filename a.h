@@ -36,21 +36,6 @@
 #define EX extern
 #define Q(x) DBG(I(!(x),die(__FILE__":"M2(__LINE__)": "M2(x)"\n"))) //assert
 #define Ab8 A b[8];
-
-TD void V;TD char B;TD char unsigned C,UC;TD O char*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
-TD long long L;TD double D;TD size_t N;
-TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL(L),ALA(L,A),AAL(A,L),AQ(Q);
-#define  A0(f,b...) A f(          )_(b)
-#define  A1(f,b...) A f(Ax        )_(b)
-#define  A2(f,b...) A f(Ax,Ay     )_(b)
-#define  A3(f,b...) A f(Ax,Ay,Az  )_(b)
-#define  AX(f,b...) A f(Ax,OA*a,In)_(b) //doesn't consume x
-#define  AA(f,b...) A f(   OA*a,In)_(b)
-#define  AL(f,b...) A f(Ln        )_(b)
-#define ALA(f,b...) A f(Ln,Ax     )_(b)
-#define AAL(f,b...) A f(Ax,Li     )_(b)
-#define  AQ(f,b...) A f(Qs        )_(b)
-
 #define Ms(a...) __builtin_memset(a)
 #define Mm(a...) __builtin_memmove(a)
 #define Mc(a...) __builtin_memcpy(a)
@@ -66,8 +51,30 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define max(x,y) extr(x,y,>)
 #define extr(x,y,c) ({TY(x) x_=(x),y_=(y);x_ c y_?x_:y_;})
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
-#define c3(x,y,z) ((y)-(x)<=(UI)((z)-(x)))
 #define in(i,n) ((i)<(UL)(n))
+#define c3(x,y,z) ((y)-(x)<=(UI)((z)-(x)))
+#define c01(c) c3('0',c,'1')
+#define c09(c) c3('0',c,'9')
+#define cAF(c) c3('A',c,'F')
+#define caf(c) c3('a',c,'f')
+#define cAf(c) c3('a',(c)|32,'f')
+#define cAZ(c) c3('A',c,'Z')
+#define cAz(c) c3('a',(c)|32,'z')
+#define cA9(c) (cAz(c)||c09(c))
+
+TD void V;TD char B;TD char unsigned C,UC;TD O char*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
+TD long long L;TD double D;TD size_t N;
+TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL(L),ALA(L,A),AAL(A,L),AQ(Q);
+#define  A0(f,b...) A f(          )_(b)
+#define  A1(f,b...) A f(Ax        )_(b)
+#define  A2(f,b...) A f(Ax,Ay     )_(b)
+#define  A3(f,b...) A f(Ax,Ay,Az  )_(b)
+#define  AX(f,b...) A f(Ax,OA*a,In)_(b) //doesn't consume x
+#define  AA(f,b...) A f(   OA*a,In)_(b)
+#define  AL(f,b...) A f(Ln        )_(b)
+#define ALA(f,b...) A f(Ln,Ax     )_(b)
+#define AAL(f,b...) A f(Ax,Li     )_(b)
+#define  AQ(f,b...) A f(Qs        )_(b)
 A1 a1,amd,asc,ax,blw,cC,cD,cH,cI,cL,cS,cf,des,dmd,dsc,enl,enla,epr,expx,fir,flp,flr,frk,grp,hex,ins,js0,js1,kst,las,len,
  logx,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prng,prs,rev,ser,sinx,spl,sqr,sqz,sqzZ,str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,sub,v0c,v1c,exc;

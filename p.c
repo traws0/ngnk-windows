@@ -1,6 +1,4 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-I c09(Cc)_(c3('0',c,'9'))I caf(Cc)_(c3('a',c,'f'))I cAz(Cc)_(c3('a',c|32,'z'))I cA9(Cc)_(cAz(c)||c09(c))
-I cAZ(Cc)_(c3('A',c,'Z'))I cAF(Cc)_(c3('A',c,'F'))I cAf(Cc)_(c3('a',c|32,'f'))I c01(Cc)_(c3('0',c,'1'))
 I si(Qs,Iv)_(SC0(s,v)-(char*)s)S D p10(In)_(Dv=1;i(n,v*=10)v)S Q p32(Qs)_(W(*s==32,s++)s)
 L pu(Q*p)_(Qs=*p;Lv=0;Cc=*s;W(c09(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(Q*p)_(Im=**p=='-';*p+=m;(1-2*m)*pu(p))
 S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
