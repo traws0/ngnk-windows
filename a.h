@@ -84,7 +84,7 @@ A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C
  eac2(A,A,A2),e1(A,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),mnd(OA*,I,AA*),pen(A,A1*),sur(C,A,C),wdn(A,N,N,N);
 V exit(I),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
  mrn(N,OA*),tilV(V*,L,I);D gd(A);N strlen(Q),_N(A);
-C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L),hx1(I);char*strchr(O char*,I),*strchrnul(O char*,I),*strstr(Q,Q);
+C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);char*strchr(O char*,I),*strchrnul(O char*,I),*strstr(Q,Q);
 I _K(A),qD(D,D),eS(A,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpA(A*,A),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
