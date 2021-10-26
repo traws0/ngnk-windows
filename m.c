@@ -51,11 +51,12 @@ AQ(evs,P(*s-'\\',Ax=N(cplprs(s));x(run(x,0,0)))Cc=s[1],d=s[2];P(c=='c'&&d=='d'&&
  P(!d||d==32||d==':',CH(si("\\flmtv",c),&cmdX,cmdf,cmdl,cmdm,cmdt,cmdv,en0)(s+2+(d==32)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",aCz(s+1)))
 
-A glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
+A glbk,glbv,glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,SZ(b)-1);P(n<0,0)b[n]=0;C*p=b;W(*p,C*q=SC0(p,10);*q=0;ln(p);p=q+1)1)I repl()_(W(rep());0)
 L k(O char*s)_(Ax=N(evs(s));Xz(gl(x))x(0))
 V kf(O char*s,L(*f)(L)){K("@[;::;:;]",syP(s),AT(te,(A)f));}
-V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));glb=aa0();
+V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;Ax=AN(0,aA(32));
+ glbk=AN(1,aS(256));*_I(glbk)=0;glbv=AN(1,aA(256));_x(glbv)=au;glb=am(glbk,glbv);
  i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
  cn[tA]=ce[tC];xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tC]=ac(32);cn[tS]=as(0);
  Mc(cn+ti,cn+tI,(tS-tI+1)*SZ(A));i(tn-to,cn[to+i]=au)
