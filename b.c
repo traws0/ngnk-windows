@@ -1,14 +1,14 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-//bu,bv:apply unary|binary verb;bs,bg,bd:set|get|delete local;bm,bM:l|glb modified assign;bl:list,bL:unlist
-//ba:n-adic apply;bP:projection;bz:branch if falsey;bj:jmp,bp:pop;b4:tetradic dot;bc:load constant
 enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bG,bS,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=128};
-#define h(a) {m[nb]=o;b[nb]=a;nb+=nb<SZ b-1;}        //add instruction
-#define hc(a) {Ij=bc+fpA(&fc,a);P(j>255,ez0())h(j);} //add a "load constant" instruction
+#define h(a) {b[nb]=a;m[nb]=o;nb+=nb<SZ b-1;}
+#define hc(a) N(ldc(a,o))
 #define OK -1
 #define Nr(a...) {I r=cr(a);P(r-OK,r);}
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
 S UC b[2048],m[SZ b];S A fl,fc;S I nb,lu[16];S A1 cr;
-S I gvi(Iv)_(Ax=glbk,y=glbv;Li=fAI(x,v);P(i>=0,i)i=xn;P(i-(UC)i,-1)xn=yn=i+1;xi=v;ya=0;i)
+S I fca(Ax/*1*/)_(Ay=fc;Nn=yn;i(n,P(mtc_(x,ya),x(0);i))_q(fc,x);n)
+SN I ldc(Ax/*1*/,I o)_(Ii=bc+fca(x);P(i-(UC)i,ez0())h(i);1)
+SN I gvi(Iv)_(Ax=glbk,y=glbv;Li=fAI(x,v);P(i>=0,i)i=xn;P(i-(UC)i,-1)xn=yn=i+1;xi=v;ya=0;i)
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);
  Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())lu[i]=nb;h(bs|i);OK)
   Li=fAI(fl,yv);P(i>=0,lu[i]=nb;hc(oA);h(bm);h(i);h(v);OK)
