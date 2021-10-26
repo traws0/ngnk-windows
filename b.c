@@ -42,13 +42,13 @@ S I mxs(Ii,I s)_(I r=s;W(1,UC c=b[i++];Q(s>=0);r=max(r,s);P(!c,r)P(c==bz,i++;s--
  I(c>=bc||c==bo||c-bg<32u,s++)EI(c-bv<32u||c==bp,s--)EI(c==bm,i+=2;s--)EI(c==bM,i++;s-=2)EI(c==bL,s+=b[i++])
  EI(c==bl||c==ba||c==bP,s-=b[i++]-1)EI(c==bj,i+=b[i])EI(c==b4,s-=3))r)
 A3(cpl,/*src,ast,loc*/y=cf(y);P(!y,x(z(0)))
- nb=0;fl=z;fc=a1(au);Ms(fu,-1,SZ fu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
+ nb=1;fl=z;fc=a1(au);Ms(fu,-1,SZ fu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
  P(nb>=SZ b-1,eS(xR,r);ez0())i(16,Ij=fu[i];I(j>=0&&b[j]==bg,b[j]=bd))
- b[nb]=mxs(0,0);m[nb]=-1;nb++;AK(0,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
+ *b=mxs(1,0);*m=-1;AK(0,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
 
 S V mrn0(A*a,Nn){i(n,Ax=a[i];I(x,x(0)))}
 AX(run,Q(xto);Q(n==xk);S I d;P(++d>1024,esn(a,n))
- UC*b=_V(xy),ns=b[_n(xy)-1];Im=_n(xA[3]);A t[ns],l[m],*s=t+ns,r;Mc(l,a,n*SZ x);i(m-n,l[n+i]=au)
+ UC*b=_V(xy),ns=*b++;Im=_n(xA[3]);A t[ns],l[m],*s=t+ns,r;Mc(l,a,n*SZ x);i(m-n,l[n+i]=au)
  W(1,UC c=*b++;Q(t<=s)Q(s<=t+ns)
   I(c>=bc,*--s=_R(xA[c-bc+4]))
   EI(c>=bm,
