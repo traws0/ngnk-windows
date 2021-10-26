@@ -18,7 +18,7 @@ S ALA(rnd,Xz(rd(n,gl(x)))Xc(cC(add(xv-'A'?ac('a'):x,Nx(rd(n,26)))))Xd(mul(x,Nx(r
  NI V F##T(OV*p,Nm,TY(fB)f,OV*q,Nn,L*r){O T*a=q;i(n,r[i]=f(p,m,a[i]))}\
  NI L fp##T(A*p,T v)_(Ax=*p;Nn=xn;Li=f##T(xV,n,v);P(i<0,*p=apv(x,&v);n)i)
 h(B)h(H)h(I)h(L)
-S L fA(Ax,Ay/*00*/)_(i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
+S L fA(Ax,Ay/*00*/)_(XA(i(xn,P(mtc_(xa,y),i))NL)i(xN,Az=get(x,i);P(mtc_(z,y),z(0);i)z(0))NL)
 L fpA(A*p,Ay/*1*/)_(Ax=*p;Nn=xn;i(n,P(mtc_(xa,y),y(0);i))_q(*p,y);n)
 L fAI(Ax,Iv)_(fI(xV,xn,v))
 I rnk(Ax/*0*/)_(XA(P(!xn,2)Iv=rnk(xx);P(v<0,v)i(xn,P(v-rnk(xa),-1))v+1)XmM(rnk(xy))xtT) //-1 for mixed rank
@@ -34,4 +34,4 @@ A2(fnd,
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=urnk(x),l=urnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear2(QUE,x,y))er2(x,y))
 
-A2(que,Xt(Xz(rnd(gl(x),y))Xs(Ss("","j","hex")Sf(x,y,des,js0,unh))et2(x,y))fnd(x,y))
+A2(que,Xs(Ss("","j","hex")Sf(x,y,des,js0,unh))Xz(rnd(gl(x),y))Xt(et2(x,y))fnd(x,y))
