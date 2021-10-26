@@ -7,16 +7,17 @@ enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=128};
 #define OK -1
 #define Nr(a...) {I r=cr(a);P(r-OK,r);}
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
-S UC b[2048],m[SZ b];S A fl,fc;S I nb,fu[16];S A1 cr;
+S UC b[2048],m[SZ b];S A fl,fc;S I nb,lu[16];S A1 cr;
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu);Iv=_v(xx);
- Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())fu[i]=nb;h(bs|i);OK)
-  hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
+ Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())lu[i]=nb;h(bs|i);OK)
+  hc(oA);Ik=yv;Li=fAI(fl,k);I(i<0,hc(as(k));h(bM))E(lu[i]=nb;h(bm);h(i))h(v);OK)
  YS(hc(av+v);hc(au);hc(yR);h(b4);OK)
- YA(In=yn-1;P(n-(UC)n,o)Az=yx;P(zt==tS,hc(av+v);i(n,Nr(yA[n-i]))h(bl);h(n);hc(zR);h(b4);OK)
-  P(zt==ts,i(n,Nr(yA[n-i]))h(bl);h(n);Li=fAI(fl,zv);I(i<0,hc(z);h(bM))E(fu[i]=nb;h(bm);h(i))h(v);OK)
+ YA(In=yn-1;P(n-(UC)n,o)Az=yx;
+  P(ztS,hc(av+v);i(n,Nr(yA[n-i]))h(bl);h(n);hc(zR);h(b4);OK)
+  P(zts,i(n,Nr(yA[n-i]))h(bl);h(n);Li=fAI(fl,zv);I(i<0,hc(z);h(bM))E(lu[i]=nb;h(bm);h(i))h(v);OK)
   P(z==MKL&&xx==av,h(bL);h(n);i(n,Nl(x,yA[i+1]);h(bp))OK)o)o)
 S A1(cr,/*0*/I o=xo;
- Xs(Li=fAI(fl,xv);P(i>=0,fu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);OK)hc(AO(0,xR));h(bu|APN-av);OK)
+ Xs(Li=fAI(fl,xv);P(i>=0,lu[i]=nb;h(bg|i);OK)P(xv=='o',h(bo);OK)hc(xR);h(bu|APN-av);OK)
  XS(P(xn-1,hc(AO(0,xR));h(bu|APN-av);OK)hc(get(x,0));OK)
  P(!xtA||!xn,hc(x-PLH?xR:au);OK)
  Nn=xn;Ay=xx;
@@ -42,29 +43,31 @@ S I mxs(Ii,I s)_(I r=s;W(1,UC c=b[i++];Q(s>=0);r=max(r,s);P(!c,r)P(c==bz,i++;s--
  I(c>=bc||c==bo||c-bg<32u,s++)EI(c-bv<32u||c==bp,s--)EI(c==bm,i+=2;s--)EI(c==bM,i++;s-=2)EI(c==bL,s+=b[i++])
  EI(c==bl||c==ba||c==bP,s-=b[i++]-1)EI(c==bj,i+=b[i])EI(c==b4,s-=3))r)
 A3(cpl,/*src,ast,loc*/y=cf(y);P(!y,x(z(0)))
- nb=1;fl=z;fc=a1(au);Ms(fu,-1,SZ fu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
- P(nb>=SZ b-1,eS(xR,r);ez0())i(16,Ij=fu[i];I(j>=0&&b[j]==bg,b[j]=bd))
+ nb=1;fl=z;fc=a1(au);Ms(lu,-1,SZ lu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
+ P(nb>=SZ b-1,eS(xR,r);ez0())i(16,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))
  *b=mxs(1,0);*m=-1;AK(0,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
 
-S V mrn0(A*a,Nn){i(n,Ax=a[i];I(x,x(0)))}
+S V mrn0(A*a,Nn){i(n,I(a[i],mr(a[i])))}
+#define p(x) ({A x1=(x);Q(x1)Q(s0<s)*--s=x1;})
+#define q() ({Q(s<s0+ns)Q(*s)*s++;})
 AX(run,Q(xto);Q(n==xk);S I d;P(++d>1024,esn(a,n))
- UC*b=_V(xy),ns=*b++;Im=_n(xA[3]);A t[ns],l[m],*s=t+ns,r;Mc(l,a,n*SZ x);i(m-n,l[n+i]=au)
- W(1,UC c=*b++;Q(t<=s)Q(s<=t+ns)
-  I(c>=bc,*--s=_R(xA[c-bc+4]))
+ UC*b=_V(xy);I ns=*b++,nl=_n(xA[3]);A s0[ns],l[nl],*s=s0+ns,r;Mc(l,a,n*SZ x);Ms(l+n,0,(nl-n)*SZ*l);
+ W(1,UC c=*b++;Q(s0<=s)Q(s<=s0+ns)
+  I(c>=bc,p(_R(xA[c-bc+4])))
   EI(c>=bm,
-   I(c==bm,A*v=l+*b++,x=*v,y=*s++,z=*s;*v=*s=0;*v=dmn(A(x,yR,av+*b++,z),4);B(!*v,r=y(0))*s=apn(_R(*v),y);B(!*s,r=0))
-   EI(c==bM,Ax=*s++,y=*s++,z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dmn);B(!w,r=y(0))*s=apn(w,y);B(!*s,r=0))
+   I(c==bm,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dmn(A(x,yR,av+*b++,z),4);B(!*v,r=y(0))*s=apn(_R(*v),y);B(!*s,r=0))
+   EI(c==bM,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dmn);B(!w,r=y(0))*s=apn(w,y);B(!*s,r=0))
    EI(c==bl,Nn=*b++;s+=n-1;*s=sqz(aV(tA,n,s-n+1)))
-   EI(c==bL,Nn=*b++;Ax=*s;B(!xtt&&xN-n,r=el0())i(n,*--s=get(x,n-1-i)))
+   EI(c==bL,Nn=*b++;Ax=*s;B(!xtt&&xN-n,r=el0())i(n,p(get(x,n-1-i))))
    EI(c==ba||c==bP,Nn=*b++;Ax=s[n]=(c-ba?prj:app)(*s,s+1,n);mr(*s);s+=n;B(!x,r=0))
-   EI(c==bz,b+=1+*b*!tru(*s++))
+   EI(c==bz,b+=1+*b*!tru(q()))
    EI(c==bj,b+=*b)
-   EI(c==bo,*--s=xR)
-   EI(c==bp,mr(*s++))
+   EI(c==bo,p(xR))
+   EI(c==bp,mr(q()))
    EI(c==b4,s+=3;*s=dmd(aV(tA,4,s-3));B(!x,r=0)))
-  EI(c>=bs,A*v=l+c%16,x=*v;I(c>=bd,*--s=x;*v=0)EI(c>=bg,*--s=xR)E(x=x(*v=_R(*s))))
-  EI(c>=bv,Ax=*s++;*s=v2[c-bv](x,*s);B(!*s,r=0))
+  EI(c>=bs,A*v=l+c%16,x=*v?*v:au;I(c>=bd,p(x);*v=0)EI(c>=bg,p(xR))E(x=x(*v=_R(*s))))
+  EI(c>=bv,Ax=q();*s=v2[c-bv](x,*s);B(!*s,r=0))
   EI(c,*s=v1[c](*s);B(!*s,r=0))
-  E(B(1,r=*s++)))
- I(!r,eS(_R(xx),_C(xz)[b-1-_C(xy)]);mrn0(s,t-s))
- mrn0(l,m);d--;r)
+  E(B(1,r=q())))
+ I(!r,eS(_R(xx),_C(xz)[b-1-_C(xy)]);mrn0(s,s0+ns-s))
+ mrn0(l,nl);d--;r)
