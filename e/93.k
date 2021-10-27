@@ -1,5 +1,5 @@
 #!../k
 \l l.k
-f:{(a;b;c;d):x;(f;g;h):y;{$[1<*|x;(-gcd/x)!x;x]}'(h[g[f[a]b]c]d;h[g[a]f[b]c]d;h[f[a]b]g[c]d;h[a]g[f[b]c]d;h[a]g[b]f[c]d)}
+f:{(f;g;h):y;(x;y;Z;W):x;{$[1<*|x;(-gcd/x)!x;x]}'(h[g[f[x]y]Z]W;h[g[x]f[y]Z]W;h[f[x]y]g[Z]W;h[x]g[f[y]Z]W;h[x]g[y]f[Z]W)}
 g:{+/&\@[1,&99;{(99&0|*x)*1=x 1}@+,/,/x[+prm 4]f/:\:a@+!3##a:({(+/x*|y;*|x*y)};{(-/x*|y;*|x*y)};*;{x*|$[0>*y;-y;y]});:;1]}
 10/*c@&v=|/v:g'((!10),'1)c:+cmb[4]10
