@@ -46,7 +46,7 @@ S I mxs(Ii,I s)_(I r=s;W(1,UC c=b[i++];Q(s>=0)r=max(r,s);P(!c,r)P(c==bz,i++;s--;
  EI(c==bl||c==ba||c==bP,s-=b[i++]-1)EI(c==bj,i+=b[i])EI(c==b4,s-=3)EI(c==bG,i++;s++)EI(c==bS,i++))r)
 A3(cpl,/*src,ast,loc*/y=cf(y);P(!y,x(z(0)))
  nb=1;fl=z;fc=a1(au);Ms(lu,-1,SZ lu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
- P(_n(fl)>8||nb>=SZ b-1,eS(xR,r);ez0())i(16,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))
+ P(_n(fl)>8||nb>=SZ b-1,eS(xR,0);ez0())i(16,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))
  *b=mxs(1,0);*m=-1;AK(0,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
 
 S V mrn0(A*a,Nn){i(n,I(a[i],mr(a[i])))}
