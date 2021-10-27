@@ -4,5 +4,10 @@
 -fomit-frame-pointer
 -Werror
 -Wfatal-errors
+-Wno-assume
+-Wno-constant-conversion
+-Wno-int-to-pointer-cast
 -Wno-pointer-sign
+-Wno-pointer-to-int-cast
 -Wno-shift-op-parentheses
+-Wno-unused-result
