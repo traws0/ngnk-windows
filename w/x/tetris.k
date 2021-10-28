@@ -1,12 +1,12 @@
 A:("####|##|###|## |###| ##|###"
    "    |##| # | ##|#  |## |  #")
 T:&''3(|+:)\'(|/')#'+"#"="|"\'A /tetrominos by type and rotation
-C:`cyan`yellow`magenta`green`blue`red`orange /colours by tetromino type
-a:20 10#0 /grid (boolean matrix without the falling tetromino)
-g:!0 /randomized bag of 0..6
+C:`cyan`yellow`magenta`green`blue`red`orange /colours by piece type
+a:20 10#0 /grid (boolean matrix without the falling piece)
+g:0N?#T /randomized bag of 0..6
 s:0 /score
 
-/falling tetromino (p:position,t:type,r:rotation)
+/falling piece (p:position,t:type,r:rotation)
 i:{$[g;;g::0N?#T];f[3 0;*g;3];g::1_g;0} /init
 f:{$[*/~a ./:+|x+T[y]z   /try to set position,type,rotation
  [p::x;t::y;r::z;1];0]}  /return 1 for success, 0 for collision
@@ -25,7 +25,8 @@ q:{"g.fillRect(",(","/$(B*x),2#b),");"}  /draw a square(block)
 w:{"g.fillText(",(","/(,`k[x]),$y),");"} /write text
 draw:{`js@,//("g.clearRect(0,0,1,1);"
               c`"#80808020";q'+|&1|a     /semi-transparent grid background
-              c C t;q'+p+T[t]r           /draw falling tetromino
+              c C t;q'+p+T[t]r           /draw falling piece
+              c C@*g;q'+(2+#*a;4)+T[*g]3 /shadow piece
               c`white;q'+|&a             /draw stationary blocks
               w["score:",$s;1%2 16])}    /draw score
 
