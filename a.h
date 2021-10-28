@@ -130,6 +130,9 @@ enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,
 A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 
 #define Lt(t) (L)t<<56
+#define ac(v) (Lt(tc)|(UC)(v))
+#define ai(v) (Lt(ti)|(UI)(v))
+#define as(v) (Lt(ts)|(UI)(v))
 #define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
            U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,com,dex,dex})\
            U(vn,{er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,ins,amd,dmd,er1,er1,er1,er1,er1,er1})\
