@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))VS
-A1(mkn,XmMA(eac1(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw||xte?1:xtv?2:xtF?xk:0) //_K:arity
+A1(mkn,XmMA(eac1f(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw||xte?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 AX(prj,XA(app(x,a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
  x=(xtp?val:a1)(xR);Ii=0,j=1;W(i<n&&j<xn,I(xA[j]==PLH,xA[j]=a[i++])j++)W(i<n,xq(a[i++]))P(xn>9,ez1(x))AT(tp,AK(k,x)))
@@ -31,7 +31,7 @@ S A1(avf,Ay=oA;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
 S A1(enf,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(cS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au?ap1(y,x):y)
 S A1(exf,exit(xtz?gl(x):1);0)
 S A1(rcf,x(ai(xr)))
-S A1(jsf,XC(WASM(Cb[4096];I js_eval(C*,I,C*,I);In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n))NWASM(en1(x)))XA(eac1(x,jsf))et1(x))
+S A1(jsf,XC(WASM(Cb[4096];I js_eval(C*,I,C*,I);In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n))NWASM(en1(x)))XA(eac1f(x,jsf))et1(x))
 AX(app,XA(idxA(x,a,n))XT(n-1?ern(a,n):idx_(x,*a))Xz(n-1?ern(a,n):wrt(xR,*a))
  Xs(Ss("","k","j","p","cf","t","x","hex","err","epr","argv","env","exit","js","prng","sin","exp","ln","r")
   Sf(x,*a,ser,kst,js1,prs,cf,tme,frk,hex,e1f,epr,avf,enf,exf,jsf,prng,sinx,expx,logx,rcf))
