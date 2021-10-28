@@ -3,10 +3,11 @@ A:("####|##|###|## |###| ##|###"
 T:&''3(|+:)\'(|/')#'+"#"="|"\'A /tetrominos by type and rotation
 C:`cyan`yellow`magenta`green`blue`red`orange /colours by tetromino type
 a:20 10#0 /grid (boolean matrix without the falling tetromino)
+g:!0 /randomized bag of 0..6
 s:0 /score
 
 /falling tetromino (p:position,t:type,r:rotation)
-i:{f[3 0;*1?#T;*1?4];0}  /init
+i:{$[g;;g::0N?#T];f[3 0;*g;3];g::1_g;0} /init
 f:{$[*/~a ./:+|x+T[y]z   /try to set position,type,rotation
  [p::x;t::y;r::z;1];0]}  /return 1 for success, 0 for collision
 d:{$[f[p+0 1;t;r];:1;]   /try to move it down. if successful, return 1
