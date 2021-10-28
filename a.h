@@ -9,7 +9,7 @@
 #define B(x,a...) I(x,a;break)
 #define P(x,a...) I(x,_(a))
 #define I(x,a...) if(x){a;}
-#define  EI(a...) else I(a)
+#define   J(a...) else I(a)
 #define   E(a...) else{a;}
 #define   A(a...) (A[]){a}
 #define   i(a...) ij(i,a)

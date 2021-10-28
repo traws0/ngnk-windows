@@ -7,7 +7,7 @@ A1(flp,XM(Ay=kv(&x);am(x,y))
  Xm(Ay=kv(&x);I(ytT>ytA,y=flp(flp(y)))P(!ytA,et2(x,y))Ln=cfm(yA,yn);P(n<0,el2(x,y))i(yn,Az=ya;I(ztt,y=mut(y);ya=rshN(n,z)))aM(x,y))
  Xt(enl(enl(x)))P(!xtA||!xn,enl(x))Ln=cfm(xA,xn);P(n==-1,enl(x))P(n<0,el1(x))
  Ct=_t(*xA);I(t<tM,i(xn,Ay=xa;B(yt-t,t=0)))E(t=0)Ay=aA(n);P(!t,i(n,Az=aA(xn);j(xn,zA[j]=get(xA[j],i))ya=sqz(z))x(y))
- I w=Tz[t];i(n,Az=ya=atn(t,xn);j(xn,Ay=xA[j];I(!w,zB[j]=yb)EI(w==1,zH[j]=yh)EI(w==2,zI[j]=yi)E(zL[j]=yl))
+ I w=Tz[t];i(n,Az=ya=atn(t,xn);j(xn,Ay=xA[j];I(!w,zB[j]=yb)J(w==1,zH[j]=yh)J(w==2,zI[j]=yi)E(zL[j]=yl))
                I(w==4,ya=sqz(mRa(z))))x(y))
 V tilV(V*p,Ln,I w){L*a=p,v=CH(w,0x706050403020100ll,0x3000200010000ll,1ll<<32,0),
  d=CH(w,0x808080808080808ll,0x4000400040004ll,2ll<<32|2,1);LN(a)i(PD((n-1>>3-w)+1,a),a[i]=v;v+=d)}
@@ -17,10 +17,10 @@ A1(whr,Xt(XF(et1(x))whr(enl(x)))XA(K("{$[`A~@x;(,&#'*'x),,'/x@\\:!0|/#'x:o'x;,&x
  Xm(Ay=kv(&x);idx(x,Nx(whr(y))))XM(et1(x))
  x=N(cL(x));Ln=0;i(xn,n+=xl;P(n<0||xl<0,ed1(x)))Ct=tZ(xn-!!xn);P(t>tI,ez1(x))
  Ay=atn(t,n);x2(I(t==tB,B*a=yV;i(xn,j(xl,*a++=i)))
-               EI(t==tH,H*a=yV;i(xn,j(xl,*a++=i)))
+               J(t==tH,H*a=yV;i(xn,j(xl,*a++=i)))
                E(       I*a=yV;i(xn,j(xl,*a++=i)))y))
 A1(rev,Xm(Ay=kv(&x);am(rev(x),rev(y)))XM(Ay=kv(&x);aM(x,Nx(eac1(y,rev))))Xt(x)x=mut(x);Ii=0,j=xn-1,w=Tz[xt];
- W(i<j,I(!w,SWP(xb,xB[j]))EI(w==1,SWP(xh,xH[j]))EI(w==2,SWP(xi,xI[j]))E(SWP(xl,xL[j]))i++;j--)x)
+ W(i<j,I(!w,SWP(xb,xB[j]))J(w==1,SWP(xh,xH[j]))J(w==2,SWP(xi,xI[j]))E(SWP(xl,xL[j]))i++;j--)x)
 A1(typ,x(as(TS[xt])))
 A1(len,x(az(xN)))N _N(Ax/*0*/)_(XT(xn)Xm(_N(xy))XM(_n(xy)?_N(*_A(xy)):1)1)
 A1(unq,XT(xN<2?x:K("{x@i@<i@:&@[;0;:;1]@~~':x@i:<x}",x))Xz(Ln=gl(x);P(n<0,ed0())rndD(n))et1(x))
