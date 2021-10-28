@@ -90,7 +90,7 @@ p204:{x|y<z}.~400 100 4!\:                   / https://problems.tryapl.org/psets
 p205:{(x<y)|:/(x-!x-y),x&y}                  / https://problems.tryapl.org/psets/2020.html?goto=P5_Integer_Range (-4 via @bubbler)
 p206:{,/(#;_)[;x=;y]}                        / https://problems.tryapl.org/psets/2020.html?goto=P6_Move_To_Front
 p207:{|/&/((#2\|/x)#2)\'x}                   / https://problems.tryapl.org/psets/2020.html?goto=P7_Bits
-p208:~|/1_+':-/0<-:\-':10\                   / https://problems.tryapl.org/psets/2020.html?goto=P8_Zigzag
+p208:*/0>1_*':1_-':10\                       / https://problems.tryapl.org/psets/2020.html?goto=P8_Zigzag
 p209:&/{x~*\x=:|\x}'|:\                      / https://problems.tryapl.org/psets/2020.html?goto=P9_Rise_and_Fall
 p20X:`k /very APL-specific                   / https://problems.tryapl.org/psets/2020.html?goto=P10_Stacking_It_Up
 
@@ -216,7 +216,7 @@ M[p204].'(2020 1;(1901+10 10#!100;10 10#100#0001b));
 M[p205 .].'((3 10;3 4 5 6 7 8 9 10);(4 -3;4 3 2 1 0 -1 -2 -3);(42 42;,42));
 M[p206 .].'(((3;1 2 3 4 1 3 1 4 5);3 3 1 2 4 1 1 4 5);((3;,1);,1);((42;!0);!0));
 M[p207].'((2 7;1);(4 11;0);(3 11;1);(4 0;0));
-M[p208].'(123 0;31115 0;3141514131415 1); /A[p208;132;1] /FAIL FIX ME
+M[p208].'(123 0;31115 0;3141514131415 1;132 1);
 M[p209].'((1 3 3 4 5 2 1;1);(,42;1);(1 3 2 4;0);(23 23 23;1);(!0;1));
 /skipping p20X; too APL-specific
 A[p211].'(("GCGCGCGCCCGGGGCCG";100);("ACGTACGTACGTACGT";50);("ACGT"@&10 12 16 10;58.33333333));
