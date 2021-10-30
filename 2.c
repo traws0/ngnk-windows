@@ -17,14 +17,13 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,qD(x,y)<0)hc(gtn,x>y,ltn(y,x))hc(eql,x=
 #define  hr(v,T,R,Q) SN I v##r##T(V*RE p,OV*RE q,Ln)_(O T*b=q;R*a=p,c=*a;i(n,c=v##Q(c,b[i]))*a=c;n)
 #define  ha(v,t,T,R) SN I v##a##T(V*RE p,Ln,O L*RE q,Lm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),-1)a[j]=v##t(a[j],b[d*i]))0)
 #define  hs(v,t,T,R) hF(v##s##T,T,R,R c=*a;i(PD(n,b),r[i]=c=v##t(c,b[i]))0)
-#define  hp(v,t,T,R) hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
 #define htt(v,t,T,R) hF(v##t##t,T,R,*r=v##t(*a,*b);0)
 #define htT(v,t,T,R) hF(v##t##T,T,R,LN(b)LN(r)TY(*a)c=*a;i(PD(n,a),*r++=v##t(   c,*b++))0)
 #define hTT(v,t,T,R) hF(v##T##T,T,R,LN(a)LN(b)LN(r)      i(PD(n,a),*r++=v##t(*a++,*b++))0)
 #define hTt(v,t,T,R) hF(v##T##t,T,R,LN(a)LN(r)TY(*b)c=*b;i(PD(n,a),*r++=v##t(*a++,   c))0)
 #define hsw(v,t,T,R) hF(v##T##t,T,R,v##t##T(b,a,r,n))
 
-#define h0(a...) ha(a)hs(a)hp(a)
+#define h0(a...) ha(a)hs(a)
 #define h1(a...) h0(a)htt(a)htT(a)hTT(a)hTt(a)
 #define h2(a...) h0(a)htt(a)htT(a)hTT(a)hsw(a)
 h0(dex,b,B,B)h0(dex,h,H,H)h0(dex,i,I,I)h0(dex,l,L,L)h0(dex,d,D,D)
@@ -75,11 +74,6 @@ U(arsT,{{    0,    0,    0,    0,0,0,mnmsB,mxmsB},//scan
         {    0,    0,    0,    0,0,0,mnmsI,mxmsI},
         {    0,    0,    0,    0,0,0,mnmsL,mxmsL},
         {    0,    0,    0,    0,0,0,mnmsD,mxmsD}})
-U(arpT,{{dexpB,    0,    0,    0,0,0,mnmpB,mxmpB,ltnpB,gtnpB,eqlpB},//eachprior
-        {dexpH,    0,    0,    0,0,0,mnmpH,mxmpH,ltnpH,gtnpH,eqlpH},
-        {dexpI,    0,    0,    0,0,0,mnmpI,mxmpI,ltnpI,gtnpI,eqlpI},
-        {dexpL,    0,    0,    0,0,0,mnmpL,mxmpL,ltnpL,gtnpL,eqlpL},
-        {dexpL,    0,    0,    0,0,0,mnmpD,mxmpD,ltnpL,gtnpL,eqlpL}})
 U(araT,{{dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},//amend
         {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
         {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
@@ -106,3 +100,17 @@ A2(mxm,ari(x,y,MXM-av))
 A2(ltn,ari(x,y,LTN-av))
 A2(gtn,ltn(y,x))
 A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):ari(x,y,EQL-av))
+
+#define hp(v,t,T,R) hF(v##p##T,T,R,T c=*a;i(PD(n,b),T d=b[i];r[i]=v##t(b[i],c);c=d);0)
+hp(mnm,b,B,B)hp(mnm,h,H,H)hp(mnm,i,I,I)hp(mnm,l,L,L)
+hp(mxm,b,B,B)hp(mxm,h,H,H)hp(mxm,i,I,I)hp(mxm,l,L,L)
+hp(ltn,b,B,B)hp(ltn,h,H,B)hp(ltn,i,I,B)hp(ltn,l,L,B)
+hp(gtn,b,B,B)hp(gtn,h,H,B)hp(gtn,i,I,B)hp(gtn,l,L,B)
+hp(eql,b,B,B)hp(eql,h,H,B)hp(eql,i,I,B)hp(eql,l,L,B)
+S A3(dexp,cat(x,drp(-1,y)))
+S A3(modp,eac2f(y,dexp(x,yR,av),mod))
+S A3(mmmp,Lv=gl(x);Ii=(z-MNM)<<2|Tz[yt];x=ax(y);CH(i,&mnmpB,mnmpH,mnmpI,mnmpL,mxmpB,mxmpH,mxmpI,mxmpL)(&v,yV,xV,yn);x)
+S A3(cmpp,Lv=gl(x);Ii=(z-LTN)<<2|Tz[yt];x=aB(yn);
+ y2(CH(i,&ltnpB,ltnpH,ltnpI,ltnpL,gtnpB,gtnpH,gtnpI,gtnpL,eqlpB,eqlpH,eqlpI,eqlpL)(&v,yV,xV,yn);x))
+S A3(___p,v2[zv](y,dexp(x,yR,av)))
+U(arp,{dexp,___p,___p,___p,___p,modp,mmmp,mmmp,cmpp,cmpp,cmpp})

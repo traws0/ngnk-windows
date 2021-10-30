@@ -24,7 +24,7 @@ A atn(Ct,Nn)_(Q(!lck);Q(c3(tA,t,tn-1));Q(!TP(t));Cb=59-__builtin_clzll(ZA|ZA-1+n
  I(b<i,xU=b;W(b<i--,z[i]=mb(i,(A)x+(ZA<<i))))xr=1;AT(t,AN(n,x)))
 A aV(Ct,Nn,OV*v)_(Ax=atn(t,n);Mc(xV,v,n*TZ[t]);x)A1(ax,xr>1?xr--,atn(xt,xn):x)A0(aa0,am(enl(as(0)),enl(au)))
 A1(a1,aV(tA,1,A(x)))A2(a2,aV(tA,2,A(x,y)))A3(a3,aV(tA,3,A(x,y,z)))A2(aM,aV(tM,2,A(x,y)))A2(am,aV(tm,2,A(x,y)))
-AL(aA,atn(tA,n))AL(aC,atn(tC,n))AL(aI,atn(tI,n))AL(aL,atn(tL,n))AL(aD,atn(tD,n))AL(aS,atn(tS,n))
+AL(aA,atn(tA,n))AL(aB,atn(tB,n))AL(aC,atn(tC,n))AL(aI,atn(tI,n))AL(aL,atn(tL,n))AL(aD,atn(tD,n))AL(aS,atn(tS,n))
 A al(Lv)_(aV(tl,1,&v))A ad(Dv)_(aV(td,1,&v))A aCn(Qs,Nn)_(aV(tC,n,s))A aCm(Qp,Qq)_(aCn(p,q-p))AQ(aCz,aCn(s,Sn(s)))
 C tZ(Lv)_(v==(B)v?tB:v==(H)v?tH:v==(I)v?tI:tL)A kv(A*p)_(Ax=*p;Q(xn==2);P(xr>1,--xr;*p=_R(xx);_R(xy))*p=xx;AN(0,x);x(xy))
 AL(az,n-(I)n?al(n):ai(n))A1(mut,XP(x)P(xr==1,x)x=x(aV(xt,xn,xV));XR(mRa(x))x)

@@ -79,7 +79,7 @@ A1 a1,amd,asc,ax,blw,cC,cD,cH,cI,cL,cS,cf,des,dmd,dsc,enl,enla,epr,expx,fir,flp,
  logx,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prng,prs,rev,ser,sinx,cosx,spl,sqr,sqz,sqzZ,str,str0,til,typ,u0c,u1c,unh,unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rsh,sub,v0c,v1c,exc;
 A0 aa0;A3 a3,cpl,try,ear2;ALA drp,room,rshN;AAL get;AX rdc,app,prj,run,w0,w1,w2,w3,w4,w5;AA amn,dmn;
-AL aA,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCz,cmdl,cmdm,die,evs,pk,syP;
+AL aA,aB,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCz,cmdl,cmdm,die,evs,pk,syP;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1f(A,A1),
  eac2f(A,A,A2),e1(A,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),mnd(OA*,I,AA*),pen(A,A1*),sur(C,A,C),wdn(A,N,N,N);
 V exit(I),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*memmem(OV*,N,OV*,N),*memmove(V*,OV*,N),*memset(V*,I,N),
@@ -89,8 +89,9 @@ I _K(A),qD(D,D),eS(A,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),r
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
-EX A glb,glbk,glbv,cns,ce[],cn[],ci[2][5];EX A2*v2[];EX A1*v1[],*vn[],*cT[];EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
-TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arpT[][11],*arf[][5][7];
+EX A glb,glbk,glbv,cns,ce[],cn[],ci[2][5];EX A2*v2[];EX A1*v1[],*vn[],*cT[];EX A3*arp[11];
+EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
+TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arf[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
 TD I Tr(V*,OV*,L);         EX Tr*arrT[][11];
 
