@@ -101,7 +101,8 @@ x,y concat    0,1 2 -> 0 1 2  "a",1 -> ("a";1)
 a^y fill      1^0 0N 2 3 0N -> 0 1 2 3 1   "b"^" " -> "b"
 X^y without   "abracadabra"^"bc" -> "araadara"
  #x length    #"abc" -> 3   #4 -> 1   #`a`b`c!0 1 0 -> 3
-I#y reshape   2 3#` -> (```;```)   3#2 -> 2 2 2
+i#y reshape   3#2 -> 2 2 2
+I#y reshape   2 3#` -> (```;```)
 f#y replicate (3>#:')#(0;2 1 3;5 4) -> (0;5 4)   {2}#"ab" -> "aabb"
  _n floor     _12.34 -12.34 -> 12 -13
  _c lowercase _"Ab" -> "ab"
