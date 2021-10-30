@@ -109,8 +109,8 @@ hp(gtn,b,B,B)hp(gtn,h,H,B)hp(gtn,i,I,B)hp(gtn,l,L,B)
 hp(eql,b,B,B)hp(eql,h,H,B)hp(eql,i,I,B)hp(eql,l,L,B)
 S A3(dexp,cat(x,drp(-1,y)))
 S A3(modp,eac2f(y,dexp(x,yR,av),mod))
-S A3(mmmp,Lv=gl(x);Ii=(z-MNM)<<2|Tz[yt];x=ax(y);CH(i,&mnmpB,mnmpH,mnmpI,mnmpL,mxmpB,mxmpH,mxmpI,mxmpL)(&v,yV,xV,yn);x)
-S A3(cmpp,Lv=gl(x);Ii=(z-LTN)<<2|Tz[yt];x=aB(yn);
- y2(CH(i,&ltnpB,ltnpH,ltnpI,ltnpL,gtnpB,gtnpH,gtnpI,gtnpL,eqlpB,eqlpH,eqlpI,eqlpL)(&v,yV,xV,yn);x))
+S A3(mmmp,N(sup(&x,&y));Lv=gl(x);Ii=(z-MNM)<<2|Tz[yt];x=ax(y);CH(i,&mnmpB,mnmpH,mnmpI,mnmpL,mxmpB,mxmpH,mxmpI,mxmpL)(&v,yV,xV,yn);x)
+S A3(cmpp,Ii=z-LTN,j=Tz[yt];Lv=gl(x);x=aB(yn);Cc=tZ(v)-tB<=j?2:!i?v>0:i==1?v<0:0;
+ y2(CH(i<<2|j,&ltnpB,ltnpH,ltnpI,ltnpL,gtnpB,gtnpH,gtnpI,gtnpL,eqlpB,eqlpH,eqlpI,eqlpL)(&v,yV,xV,yn);I(c-2,*xB=c)x))
 S A3(___p,v2[zv](y,dexp(x,yR,av)))
 U(arp,{dexp,___p,___p,___p,___p,modp,mmmp,mmmp,cmpp,cmpp,cmpp})
