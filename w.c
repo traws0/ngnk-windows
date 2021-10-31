@@ -47,12 +47,18 @@ A eac2f(Ax,Ay,A2 f)_(Ik=2*xtt+ytt;P(k==3,f(x,y))
  x(y(z)))
 S A nr(Ax,Ln,Ay/*0n1*/)_(      i(n,       y= N(app1(x,y)))   y )
 S A ns(Ax,Ln,Ay/*0n1*/)_(Az=oC;i(n,zq(yR);y=Nz(app1(x,y)))zq(y))
+S A nR(Ax,Lm,OA*a,Nn/*0m1n*/)_(P(n==1,nr(x,m,*a))
+ Ab8;Mc(b,a,n*SZ x);i(m,mRn(n-1,b+1);Ay=app(x,b,n);Mm(b,b+1,(n-1)*SZ x);b[n-1]=y;B(!y))mrn(n-1,b);b[n-1])
+S A nS(Ax,Lm,OA*a,Nn/*0m1n*/)_(P(n==1,ns(x,m,*a))Q(m>=0)
+ Az=aA(n+m),*b=zA;zn=n;Mc(b,a,n*SZ x);i(m,mRn(n,b);b[n]=Nz(app(x,b,n));zn++;b++)sqz(z))
 S A3(wr,/*011*/           W(1,zR;A w=app1(y,z);B(!w,z=z(0))B(!tru(w))z=app1(x,z);Ny(z)              )y(z)   )
 S A3(ws,/*011*/Au=enl(zR);W(1,zR;A w=app1(y,z);B(!w,u=u(0))B(!tru(w))z=app1(x,z);P(!z,y(u(0)))uq(zR))y(z(u)))
 S A2(cr,/*01*/Az=yR,u;W(1,zR;u=app1(x,z);B(!u)P(mtc_(u,y)||mtc_(u,z),y(u(z)))z=z(u))y(z(u)))
 S A2(cs,/*01*/Az=yR,v=yR,u=enl(y);W(1,z=yR;y=app1(x,y);P(!y,z(u(dex(v,0))))Im=mtc_(y,z)||mtc_(y,v);z(0);B(m)uq(yR))y(dex(v,u)))
 S AX(lr,Ay=*a;P(n==1,cr(x,y))P(n==2,Yz(nr(x,gl(y),a[1]))wr(x,y,a[1]))ern(a,n))
 S AX(ls,Ay=*a;P(n==1,cs(x,y))P(n==2,Yz(ns(x,gl(y),a[1]))ws(x,y,a[1]))ern(a,n))
+S AX(lR,Ay=*a;Yz(nR(x,gl(y),a+1,n-1))enn(a,n))
+S AX(lS,Ay=*a;Yz(nS(x,gl(y),a+1,n-1))enn(a,n))
 A2(rdc1,/*10*/Lm=cfm(&x,1);P(m==-1,x)P(m<0,el1(x))P(!m,x(id_(y,x)))
  I(ytv&&yv&&yv<11&&xtZDC,XC(rdc1(cH(x),y))
   Ct=xt;V(f,arrT[t-tB][yv])P(f,Lv=gl(get(x,0));x2(f(&v,xV+xW,m-1));t-tD?az(v):ad(*(D*)&v)))
@@ -72,8 +78,8 @@ S A3(eap2,/*110*/Ym(Au=kv(&y);am(y,Ny(eap2(x,u,z))))Yt(et2(x,y))P(!yN,x(y))P(ztv
 S A2(eap1,/*10*/eap2(id_(y,x),x,y))
 SN A3(ste,/*110*/K("{z'x'y}",x,y,zR))
 AX(w0, Xz(win(x,*a))XT(bin(xR,*a))                              eac(x,a,n))/* '  */
-AX(w1,XzZ(dec(x,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a))xK<2?lr(x,a,n):rdc(x,a,n))/* /  */
-AX(w2,XzZ(enc(x,*a))Xc(sc(xv,*a))XC(sC(xV,xn,*a))xK<2?ls(x,a,n):scn(x,a,n))/* \  */
+AX(w1,XzZ(dec(x,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a))xK<2?lr(x,a,n):n-xK==1?lR(x,a,n):rdc(x,a,n))/* /  */
+AX(w2,XzZ(enc(x,*a))Xc(sc(xv,*a))XC(sC(xV,xn,*a))xK<2?ls(x,a,n):n-xK==1?lS(x,a,n):scn(x,a,n))/* \  */
 AX(w3,n==1?eap1(*a,x):n==2?xK==1?ste(*a,a[1],x):eap2(*a,a[1],x):  ern(a,n))/* ': */
 AX(w4,P(n==2,ear2(*a,a[1],x))                                     ern(a,n))/* /: */
 AX(w5,P(n==2,eal2(*a,a[1],x))                                   eal(x,a,n))/* \: */

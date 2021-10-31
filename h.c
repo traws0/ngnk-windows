@@ -39,7 +39,6 @@ A2(apd,Q(xtMT);
 A apv(Ax,OV*v )_(Q(xtT);Nn=xn;x=room(n+1,x);Mc(xV+n*xW,v,xW);x)
 A apc(Ax,Cc   )_(Q(xtC);Nn=xn;x=room(n+1,x);xC[n]=c;x)
 A cts(Ax,Qs,Nm)_(Q(xtC);Nn=xn;x=room(n+m,x);Mc(xV+n,s,m);x)
-S V mRn(Nn,OA*a){i(n,_R(a[i]))}
 S A insL(Ax,Li,Ln,Ay)_(Xmt(et2(x,y))Ymt(insL(x,i,n,enl(y)))P(xtM||ytM,en2(x,y))
  P(xtZ&&ytZ&&xt-yt,V(f,cT[max(xt,yt)])insL(f(x),i,n,f(y)))P(xt-yt,insL(blw(x),i,n,blw(y)))
  P(!in(i,xN+1)||!in(n,xN+1-i),el2(x,y))
