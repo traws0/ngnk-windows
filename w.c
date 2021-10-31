@@ -52,9 +52,12 @@ S A2(cr,/*01*/Az=yR,u;W(1,zR;u=app1(x,z);B(!u)P(mtc_(u,y)||mtc_(u,z),y(u(z)))z=z
 S A2(cs,/*01*/Az=yR,v=yR,u=enl(y);W(1,z=yR;y=app1(x,y);P(!y,z(u(dex(v,0))))Im=mtc_(y,z)||mtc_(y,v);z(0);B(m)uq(yR))y(dex(v,u)))
 S AX(lr,Ay=*a;P(n==1,cr(x,y))P(n==2,Yz(nr(x,gl(y),a[1]))wr(x,y,a[1]))ern(a,n))
 S AX(ls,Ay=*a;P(n==1,cs(x,y))P(n==2,Yz(ns(x,gl(y),a[1]))ws(x,y,a[1]))ern(a,n))
-AX(rdc,Ay=n>1?n--,*a++:0,z=*a;Lm=cfm(a,n);P(m==-1,y?app(x,a-1,n+1):z)P(m<0,I(y,y(0))eln(a,n))P(!m&&!y,x=id_(x,z);mrn(n,a);x)
- I(n==1&&xtv&&xv<11&&(!y||ytz||ytd||ytc)&&ztZDC,I(ztC,z=cH(z))I(y&&(ytd||ztD),y=cD(y);z=cD(z))Ct=zt;
-  V(f,arrT[t-tB][xv])P(f,Lv=gl(y?y:get(z,0));z2(f(&v,zV+!y*zW,m-!y));t-tD?az(v):ad(*(D*)&v)))
+A2(rdc1,/*10*/Lm=cfm(&x,1);P(m==-1,x)P(m<0,el1(x))P(!m,x(id_(y,x)))
+ I(ytv&&yv&&yv<11&&xtZDC,XC(rdc1(cH(x),y))
+  Ct=xt;V(f,arrT[t-tB][yv])P(f,Lv=gl(get(x,0));x2(f(&v,xV+xW,m-1));t-tD?az(v):ad(*(D*)&v)))
+ Li=1;Az=get(x,0),b[2];W(i<m,*b=z;b[1]=get(x,i);z=app(y,b,2);B(!z)i++)x(z))
+AX(rdc,P(n==1,rdc1(*a,x))n--;Ay=*a++,z=*a;Lm=cfm(a,n);
+ P(m==-1,y?app(x,a-1,n+1):z)P(m<0,I(y,y(0))eln(a,n))P(!m&&!y,x=id_(x,z);mrn(n,a);x)
  Li=!y;I(i,y=get(z,0))Ab8;W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);B(!y)i++)mrn(n-1,a+1);z(y))
 S AX scn;
 S A2(scn1,/*10*/Xt(x)P(!xN,x)Xm(Az=kv(&x);am(x,Nx(scn1(z,y))))P(y==CAT,scn(y,A(oA,x),2))
@@ -63,11 +66,10 @@ S A2(scn1,/*10*/Xt(x)P(!xN,x)Xm(Az=kv(&x);am(x,Nx(scn1(z,y))))P(y==CAT,scn(y,A(o
 S AX(scn,P(n==1,scn1(*a,x))I(n==2,Ay=a[1];Yt(app(x,a,n))Ym(y=mut(y);yy=scn(x,A(*a,yy),2);y)P(!yn,mr(*a),y))
  Ay=*a++;n--;Lm=cfm(a,n);P(m==-2,y(eln(a,n)))
  Az=oA,b[8];i(m,*b=y;j(n,b[j+1]=get(a[j],i))y=app(x,b,n+1);P(!y,mrn(n,a);z(0))zq(yR))mrn(n,a);y(z))
-S A3(eap2,/*110*/Ym(Au=kv(&y);am(y,Ny(eap2(x,u,z))))Yt(et2(x,y))P(!yN,x(y))
- P(ztv&&zv<11&&xtzc&&ytZC,arp[zv](x,y,z))
+S A3(eap2,/*110*/Ym(Au=kv(&y);am(y,Ny(eap2(x,u,z))))Yt(et2(x,y))P(!yN,x(y))P(ztv&&zv<11&&xtzc&&ytZC,arp[zv](x,y,z))
  Au=oA;i(yn,x=app(z,A(get(y,i),x),2);P(!x,y(u(0)))uq(x);x=get(y,i))x(y(u)))
 S A2(eap1,/*10*/eap2(id_(y,x),x,y))
-S A3(ste,/*110*/K("{z'x'y}",x,y,zR))
+SN A3(ste,/*110*/K("{z'x'y}",x,y,zR))
 AX(w0, Xz(win(x,*a))XT(bin(xR,*a))                              eac(x,a,n))/* '  */
 AX(w1,XzZ(dec(x,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a))xK<2?lr(x,a,n):rdc(x,a,n))/* /  */
 AX(w2,XzZ(enc(x,*a))Xc(sc(xv,*a))XC(sC(xV,xn,*a))xK<2?ls(x,a,n):scn(x,a,n))/* \  */

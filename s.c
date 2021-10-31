@@ -43,7 +43,7 @@ A1(str0,Q(xtC);Nn=xn;x=AN(n,room(n+1,x));xC[n]=0;x)
 A1(str,Xzd(Ay=aC(24);V(f,xtd?sd:sl)AN(f(yC,gl(x))-yC,y))Xs(Lv=xv;aCz(syp(&v)))Xc(enl(x))XF(kst(x))K("$:'",x))
 
 S A pre(Cc,Ax)_(cat(ac(c),x))A sur(Cc,Ax,Cd)_(apc(pre(c,x),d))S A1(par,sur('(',x,')'))
-S A1(raz,rdc(CAT,A(x),1))S I esc(Cc)_(i(6,P(c=="\0\t\n\r\"\\"[i],i))-1)S A1(ek,eac1f(x,kst))
+S A1(raz,rdc1(x,CAT))S I esc(Cc)_(i(6,P(c=="\0\t\n\r\"\\"[i],i))-1)S A1(ek,eac1f(x,kst))
 S A1(kss,Nn=xn+2;Iv=1;i(xn,I e=esc(xc)>=0;n+=e;v&=e||c3(32,xc,126))P(!v,cat(aCz("0x"),hex(x)))
  Ay=aC(n);C*s=yV;*s++='"';i(xn,Ij=esc(xc);I(j<0,*s++=xc)E(*s++='\\';*s++="0tnr\"\\"[j]))*s++='"';x(y))
 S A ksp(Ax,Qp,Qq,Qs)_(Ct=TS[xt];(SC(p,t)?xn==1:SC(q,t)?xn<2:!!SC(s,t))?par(kst(x)):kst(x))
