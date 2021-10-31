@@ -18,11 +18,4 @@ d("o@ _R(ce[t@])";"ABLDCS")
 d'(,"@$ @ $"),/:":"\'" "\"C:bcdt ILN:ijkmn CBHILD:v I:f A:xyzu O:ACV Q:spq";
 r,:{"#define _",x,"(x) ((A*)_V(x))[",y,"]"}'["xyz";"012"]
 r,:{"#define _t",x,"(x) (_t",(-1_x),"(x)||_t",(-1#x),"(x))"}'(1<#:')#U
-m:("#ifdef @"
-   " #define  $(a...) a"
-   " #define N$(a...)"
-   "#else"
-   " #define  $(a...)"
-   " #define N$(a...) a"
-   "#endif")
 "g.h"0:r
