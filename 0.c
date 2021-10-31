@@ -37,8 +37,8 @@ I main(In,O char**a)_(
   #else
    asm(".globl _start;_start:pop %rdi;mov %rsp,%rsi;and $-16,%rsp;call main;mov %rax,%rdi;jmp exit");
   #endif
-  #define  h(x,a...) I386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;")\
-                    NI386(".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%rax;syscall;ret;")
+  #define  h(x,a...) I386(".globl "#x";"#x":"a"movq $"M2(SYS_##x)",%eax;int $0x80;ret;")\
+                    NI386(".globl "#x";"#x":"a"movq $"M2(SYS_##x)",%rax;syscall;ret;")
   #define h1(x,a...) I386( h(x,a"mov  4(%esp),%ebx;"))NI386(h(x,a))
   #define h2(x,a...) I386(h1(x,a"mov  8(%esp),%ecx;"))NI386(h(x,a))
   #define h3(x,a...) I386(h2(x,a"mov 12(%esp),%edx;"))NI386(h(x,a))
