@@ -58,18 +58,21 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
  asm(h(pipe));
 #endif
 
-//getdents()
+//directory iteration
 #if defined(wasm)
- I getdents(If,char*s,Nn)_(-1)
-#elif defined(libc)
- ;
-#elif defined(libc)&&defined(__linux__)
- ssize_t getdents(If,char*a,Nn)_(syscall(SYS_getdents,f,a,n))
-#elif defined(__FreeBSD__)
- #define SYS_getdents SYS_freebsd11_getdents
- asm(h3(getdents));
+ V dir(If,void(*d)(V*,Q),V*x){}
 #else
- asm(h3(getdents));
+ #if defined(__FreeBSD__)
+  #define SYS_getdents SYS_freebsd11_getdents
+  TD ST{UI d_fileno;UH d_reclen;C d_type,d_namlen,d_name[255+1];}DE;
+ #else
+  TD ST{long d_ino;off_t d_off;UH d_reclen;C d_name[];}DE;
+ #endif
+ ssize_t getdents(I,char*,N);
+ #if !defined(libc)
+  asm(h3(getdents));
+ #endif
+ V dir(If,void(*d)(V*,Q),V*x){Cb[ZP];Ik;W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;d(x,s);i+=e->d_reclen))}
 #endif
 
 //getcwd()

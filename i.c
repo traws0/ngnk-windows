@@ -10,12 +10,6 @@
 #include<sys/stat.h>
 #include<sys/mman.h>
 #include"a.h"
-ssize_t getdents(I,char*,N);
-#ifdef __FreeBSD__
- TD ST{UI d_fileno;UH d_reclen;C d_type,d_namlen,d_name[255+1];}DE;
-#else
- TD ST{long d_ino;off_t d_off;UH d_reclen;C d_name[];}DE;
-#endif
 S UI addr(Q*p)_(Qs=*p;P(!*s,0x0100007f)UC v[4];i(4,I(i,P(*s-'.',ed0())s++)v[i]=pu(&s);P(v[i]>255,ed0()))*p=s;*(UI*)v)
 S I skt(UI h,UH p)_(If=socket(AF_INET,SOCK_STREAM,0);P(f<0,eo0())Iv=setsockopt(f,IPPROTO_TCP,TCP_NODELAY,(I[]){1},4);P(v<0,eo0())
  ST sockaddr_in a;a.sin_family=AF_INET;a.sin_addr.s_addr=h;a.sin_port=rot(p,8);P(connect(f,(ST sockaddr*)&a,SZ a)<0,eo0())f)
@@ -25,11 +19,10 @@ S I fmd(If)_(ST stat s;fstat(f,&s)<0?0:s.st_mode)
 A1(opn,az(N(o(x,O_RDWR|O_CREAT))))
 AL(cls,close(n);au)
 A1(u0c,x=N(spl(N(u1c(x))));xn&&!_n(xA[xn-1])?drp(-1,x):x)
+S V d(V*p,Qs){*(A*)p=apc(cts(*(A*)p,s,Sn(s)),10);}
 A1(u1c,Xz(If=gl(x);Cb[1024];x=oC;W(1,Ik=read(f,b,SZ b);P(k<0,eo1(x))x=cts(x,b,k);P(k-SZ b,x))0)
  If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Im=fmd(f);
- P(S_ISDIR(m),Cb[ZP];Ik;Ay=oC;
-  W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;y=cts(y,s,Sn(s));y=apc(y,10);i+=e->d_reclen))
-  close(f);y)
+ P(S_ISDIR(m),Ax=oC;dir(f,d,&x);close(f);x)
  P(S_ISREG(m),Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
  Ay=u1c(ai(f));close(f);y)
 A2(v0c,YA(v0c(x,Nx(jc(10,y))))YC(v1c(x,apc(y,10)))et2(x,y))
