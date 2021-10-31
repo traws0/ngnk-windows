@@ -1,5 +1,10 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 //#define DEBUG
+#ifdef DEBUG
+ #define  DBG(a...) a
+#else
+ #define  DBG(a...)
+#endif
 #include<unistd.h>
 #include"g.h"
 #define   _(a...) {return({a;});}

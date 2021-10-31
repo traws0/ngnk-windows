@@ -18,8 +18,9 @@ A1(flr,Xc(fir(flr(enl(x))))XC(Az=K("`c$@[!256;65+!26;+;32]");FX(i(PD(xn,xC),yc=z
  XdD(Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))XsS(cS(flr(str(x))))XzZ(x)XmMA(eac1f(x,flr))et1(x))
 
 SN A fx(F1 f,Ax)_(FX(f(xV,yV,xn)))
-hf(sqrD,D,i(PD(n,a),r[i]=__builtin_sqrt(a[i]))n)                 A1(sqr ,XmMA(eac1f(x,sqr ))fx( sqrD,N(cD(x))))
-NLIBC(A1(sinx,en1(x)))LIBC(hf(sinxD,D,i(PD(n,a),r[i]=sin(a[i]))n)A1(sinx,XmMA(eac1f(x,sinx))fx(sinxD,N(cD(x)))))
-NLIBC(A1(cosx,en1(x)))LIBC(hf(cosxD,D,i(PD(n,a),r[i]=cos(a[i]))n)A1(cosx,XmMA(eac1f(x,cosx))fx(cosxD,N(cD(x)))))
-NLIBC(A1(expx,en1(x)))LIBC(hf(expxD,D,i(PD(n,a),r[i]=exp(a[i]))n)A1(expx,XmMA(eac1f(x,expx))fx(expxD,N(cD(x)))))
-NLIBC(A1(logx,en1(x)))LIBC(hf(logxD,D,i(PD(n,a),r[i]=log(a[i]))n)A1(logx,XmMA(eac1f(x,logx))fx(logxD,N(cD(x)))))
+hf(sqrD,D,i(PD(n,a),r[i]=__builtin_sqrt(a[i]))n)A1(sqr,XmMA(eac1f(x,sqr))fx(sqrD,N(cD(x))))
+
+hf(sinxD,D,i(PD(n,a),r[i]=sin(a[i]))n)A1(sinx,XmMA(eac1f(x,sinx))fx(sinxD,N(cD(x))))
+hf(cosxD,D,i(PD(n,a),r[i]=cos(a[i]))n)A1(cosx,XmMA(eac1f(x,cosx))fx(cosxD,N(cD(x))))
+hf(expxD,D,i(PD(n,a),r[i]=exp(a[i]))n)A1(expx,XmMA(eac1f(x,expx))fx(expxD,N(cD(x))))
+hf(logxD,D,i(PD(n,a),r[i]=log(a[i]))n)A1(logx,XmMA(eac1f(x,logx))fx(logxD,N(cD(x))))

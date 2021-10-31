@@ -499,38 +499,3 @@
 #define _tZDC(x) (_tZD(x)||_tC(x))
 #define _tmMA(x) (_tmM(x)||_tA(x))
 #define _tsSA(x) (_tsS(x)||_tA(x))
-#ifdef DEBUG
- #define  DBG(a...) a
- #define NDBG(a...)
-#else
- #define  DBG(a...)
- #define NDBG(a...) a
-#endif
-#ifdef libc
- #define  LIBC(a...) a
- #define NLIBC(a...)
-#else
- #define  LIBC(a...)
- #define NLIBC(a...) a
-#endif
-#ifdef i386
- #define  I386(a...) a
- #define NI386(a...)
-#else
- #define  I386(a...)
- #define NI386(a...) a
-#endif
-#ifdef wasm
- #define  WASM(a...) a
- #define NWASM(a...)
-#else
- #define  WASM(a...)
- #define NWASM(a...) a
-#endif
-#ifdef __FreeBSD__
- #define  FBSD(a...) a
- #define NFBSD(a...)
-#else
- #define  FBSD(a...)
- #define NFBSD(a...) a
-#endif
