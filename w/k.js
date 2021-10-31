@@ -24,7 +24,7 @@ ma=n=>{heap+=n;let m=app.memory,l=m.buffer.byteLength;heap>l&&m.grow((heap-l-1>>
 msn=s=>{s=t1(s);let p=ma(s.length);M(p,s.length).set(s);return[p,s.length]},
 ms=s=>msn(s)[0],
 wa=_=>kw.then(x=>WebAssembly.instantiate(x,{env})),
-env={
+env={sin:Math.sin,cos:Math.cos,log:Math.log,exp:Math.exp,
  js_in:(a,n)=>{const s=inp||prompt`stdin:\n`;inp='';return T1.encodeInto(s,M(a,n)).written},
  js_out:(a,n)=>(ap(t0(M(a,n))),n),
  js_log:a=>console.log(t0(gb(a))),

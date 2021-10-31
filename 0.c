@@ -131,7 +131,7 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 #endif
 
 //mathematical functions
-#if !defined(libc)
+#if !defined(wasm)&&!defined(libc)
  D sin(Dv)_(ND)D cos(Dv)_(ND)D log(Dv)_(ND)D exp(Dv)_(ND)
 #endif
 
