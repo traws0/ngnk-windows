@@ -134,3 +134,8 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 #if !defined(libc)
  D sin(Dv)_(ND)D cos(Dv)_(ND)D log(Dv)_(ND)D exp(Dv)_(ND)
 #endif
+
+//`js@
+#if !defined(wasm)
+ I js_eval(C*s,Im,C*r,In)_(0)
+#endif

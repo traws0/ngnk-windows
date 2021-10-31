@@ -31,13 +31,7 @@ S A1(avf,Ay=oA;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
 S A1(enf,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(cS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au?ap1(y,x):y)
 S A1(exf,exit(xtz?gl(x):1);0)
 S A1(rcf,x(ai(xr)))
-S A1(jsf,XC(
- #ifdef wasm
-  Cb[4096];I js_eval(C*,I,C*,I);In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n)
- #else
-  en1(x)
- #endif
- )XA(eac1f(x,jsf))et1(x))
+S A1(jsf,XC(Cb[4096];I js_eval(C*,I,C*,I);In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n))XA(eac1f(x,jsf))et1(x))
 A2(app1,/*01*/XA(idxA(x,&y,1))XT(idx_(x,y))Xz(wrt(xR,y))
  Xs(Ss("","k","j","p","cf","t","x","hex","err","epr","argv","env","exit","js","prng","sin","cos","exp","ln","r")
   Sf(x,y,ser,kst,js1,prs,cf,tme,frk,hex,e1f,epr,avf,enf,exf,jsf,prng,sinx,cosx,expx,logx,rcf))
