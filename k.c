@@ -42,6 +42,7 @@ AX(app,Q(n);P(n==1,app1(x,*a))XA(idxA(x,a,n))XM(Ay=*a;YsS(idxm(x,a,n))x=idx_(x,y
  Xm(idxm(x,a,n))Ik=xK;P(n<k,prj(x,a,n))Xv(n-2?vn[xv](aV(tA,n,a)):v2[xv](*a,a[1]))Xr(CH(xw,&w0,w1,w2,w3,w4,w5)(xx,a,n))
  Xp(P(xn+k>9,ern(a,n))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);app(xx,b,m+l))
  Xq(app1(xx,N(app(xy,a,n))))P(n>k,ern(a,n))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))Xo(run(x,a,n))enn(a,n))
+A3(app2,app(z,A(x,y),2))
 S A valS(I*a,Nn)_(P(!n,am(mut(_R(glbk)),mut(_R(glbv))))
  Ax=glb;i(n,P(!xtm,et0())Ay=xx,z=xy;P(!ytS||!ztA,ed0())Ik=a[i];Lj=fAI(y,k);P(j<0,ev0())x=zA[j])xR)
 A1(val,XS(x2(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_R(xy)))
