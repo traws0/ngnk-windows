@@ -119,19 +119,19 @@ enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,
 #define _o(x) (_ts(x)?(x)>>32:_tP(x)?0u:_B(x)[-13]) //srcoffset
 #define _q(x,y) (x=apd(x,y))                        //append
 #define _r(x) ((I*)_V(x))[-3]                       //refcount
+#define _t(x) ({Ct=_t0(x);t?t:_t1(x);})             //type
 #define _t0(x) ((x)>>56)
 #define _t1(x) _C(x)[-15]
-#define _t(x) ({Ct=_t0(x);t?t:_t1(x);})             //type
-#define _tt(x) (_t(x)>tm)                           //  atom?
-#define _tT(x) (_t(x)<tM)                           //  list?
-#define _tz(x) c3(ti,_t(x),tl)                      //  intatom?
-#define _tZ(x) c3(tB,_t(x),tL)                      //  intlist?
-#define _tP(x) TP(_t(x))                            //  packed?
 #define _tF(x) TF(_t(x))                            //  func?
+#define _tP(x) TP(_t(x))                            //  packed?
 #define _tR(x) (Tz[_t(x)]==4)                       //  ref?
+#define _tT(x) (_t(x)<tM)                           //  list?
+#define _tZ(x) c3(tB,_t(x),tL)                      //  intlist?
+#define _tt(x) (_t(x)>tm)                           //  atom?
+#define _tz(x) c3(ti,_t(x),tl)                      //  intatom?
 #define _v(x) (I)(x)                                //value(i32)
 #define _w(x) _C(x)[-14]                            //adverb(for tr)
-#define _2(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
+#define _e(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
 A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 
 #define Lt(t) (L)t<<56

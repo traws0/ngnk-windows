@@ -15,7 +15,7 @@ A1(not,XmMA(eac1f(x,not))XF(x(ai(x==au)))eql(xtsS?as(0):ai(0),x))
 A1(nul,XmMA(eac1f(x,nul))XF(x(ai(x==au)))eql(_R(cn[xt]),x))
 
 A1(flr,Xc(fir(flr(enl(x))))XC(Az=K("`c$@[!256;65+!26;+;32]");FX(i(PD(xn,xC),yc=zC[xc])))
- XdD(Ay=atn(xt+tl-td,xn);x2(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))XsS(cS(flr(str(x))))XzZ(x)XmMA(eac1f(x,flr))et1(x))
+ XdD(Ay=atn(xt+tl-td,xn);xe(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))XsS(cS(flr(str(x))))XzZ(x)XmMA(eac1f(x,flr))et1(x))
 
 #define h(k,f) A1(k,XdD(Ay=xr-1?atn(xt,xn):x;i(PD(xn,xD),yd=f(xd));x-y?x(y):y)XmMA(eac1f(x,k))k(N(cD(x))))
 h(ksin,sin)h(kcos,cos)h(klog,log)h(kexp,exp)h(sqr,__builtin_sqrt)

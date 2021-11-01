@@ -58,5 +58,5 @@ A1(kst,P(xtT&&xn==1,pre(',',ksr(fir(x))))XA(par(jc(';',ek(x))))Xc(kss(enl(x)))XC
  P(x==PLH,oC)Xu(apc(kst(au^av^x),':'))Xv(Ay=aCn(vc+xv,1);xv<20?y:apc(y,':'))aCz("???"))
 A1(out,P(x==au,x)dex(v0c(ai(1),xtA&&1<xn?par(jC("\n ",2,ek(xR))):kst(xR)),x))
 S Qp="0123456789abcdef0123456789ABCDEF";
-A1(hex,XC(Ay=aC(2*xn);C*s=yC;x2(i(xn,*s++=p[(UC)xc>>4];*s++=p[xc&15])y))pen(x,hex))
-A1(unh,XC(P(xn&1,el1(x))S C q[256];I(!q['1'],i(32,q[p[i]]=15&i))Ay=aC(xn/2);x2(i(yn,yc=q[xC[2*i]]<<4|q[xC[2*i+1]])y))pen(x,unh))
+A1(hex,XC(Ay=aC(2*xn);C*s=yC;xe(i(xn,*s++=p[(UC)xc>>4];*s++=p[xc&15])y))pen(x,hex))
+A1(unh,XC(P(xn&1,el1(x))S C q[256];I(!q['1'],i(32,q[p[i]]=15&i))Ay=aC(xn/2);xe(i(yn,yc=q[xC[2*i]]<<4|q[xC[2*i+1]])y))pen(x,unh))

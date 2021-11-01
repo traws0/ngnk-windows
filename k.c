@@ -45,7 +45,7 @@ AX(app,Q(n);P(n==1,app1(x,*a))XA(idxA(x,a,n))XM(Ay=*a;YsS(idxm(x,a,n))x=idx_(x,y
 A3(app2,/*110*/app(z,A(x,y),2))
 S A valS(I*a,Nn)_(P(!n,am(mut(_R(glbk)),mut(_R(glbv))))
  Ax=glb;i(n,P(!xtm,et0())Ay=xx,z=xy;P(!ytS||!ztA,ed0())Ik=a[i];Lj=fAI(y,k);P(j<0,ev0())x=zA[j])xR)
-A1(val,XS(x2(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_R(xy)))
+A1(val,XS(xe(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_R(xy)))
  XA(P(!xn,x)P(xn==1,fir(x))P(xn>9,ez1(x))x=mut(x);Ay=app(xx,&xy,xn-1);AN(1,x);x(y))
  Xr(cat(AT(tA,mut(x)),aw+xw))P(c3(tu,xt,tw),ai(xv))P(c3(to,xt,tq),AT(tA,mut(x)))et1(x))
 A2(idx,x(idx_(x,y)))
@@ -69,9 +69,9 @@ AA(amn,Ax=*a,y=a[1];Xt(etn(a,n))
   Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(app(z,b,n-2)))))
  I(n==4,Az=a[2],u=a[3];
   P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))x=mut(x);y=cL(y);Ny(sup(&x,&u));
-   y2(u2(araT[xt-tB][zv](xV,xn,yL,yn,utP?&u:_V(u),utT)))+1?x:ei1(x))
+   ye(ue(araT[xt-tB][zv](xV,xn,yL,yn,utP?&u:_V(u),utT)))+1?x:ei1(x))
   P(xtC&&ytZ&&z==av&&utcC,x=mut(x);y=cL(y);I d=utT;u=enla(u);P(d&&yn-un,el2(x(y),u))
-   x=y2(u2(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));P(!x,ei0())x))
+   x=ye(ue(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));P(!x,ei0())x))
  rdc(AP1,a,n))
 A1(amd,Nn=xn;Ay=xx;
  Ys(x=AN(0,mut(x));x(mnd(xA,n,amn)))

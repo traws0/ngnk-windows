@@ -17,7 +17,7 @@ S V mrg(OA*v,I*p,I*p1,I*q,I*q1,I*r){W(p<p1&&q<q1,*r++=qA(v[*p],v[*q])<=0?*p++:*q
 S V ascA(OA*v,I*a,In,I*b){P(n<2,I(n,*b=*a);)I m=n/2;ascA(v,a+m,n-m,b+m);ascA(v,a,m,a+m);mrg(v,a+m,a+2*m,b+m,b+n,b);}
 A1(asc,Xt(opn(x))Xm(K("{(!x)@<. x}",x))XM(K("{(!#x){x@<y x}/|.+x}",x))XS(asc(str(x)))XD(asc(ordD(x)))In=xn;P(n-xn,ez1(x))
  XA(Im=n/2;OA*v=xA;Ay=aI(n),z=aI(n-m);I*a=yV,*b=zV;tilV(a,n,2);ascA(v,a+m,n-m,b);ascA(v,a,m,a+n-m);mrg(v,a+n-m,a+n,b,b+n-m,a);x(z(y)))
- x=N(K("{x-&/x}",x));Ay=aC(n),z=aI(n),u=aI(n);x2(y2(ascZ(xV,yV,zV,uV,n,xW)==zV?u(z):z(u))))
+ x=N(K("{x-&/x}",x));Ay=aC(n),z=aI(n),u=aI(n);xe(ye(ascZ(xV,yV,zV,uV,n,xW)==zV?u(z):z(u))))
 A1(dsc,Xz(cls(gl(x)))Xt(en1(x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))x=rev(asc(rev(x)));sub(ai(xN-1),x))
 A1(grp,Xz(K("{@[&x;;:;1]'!x}",x))Xt(et1(x))Xm(Ay=grp(kv(&x));yy=idx(x,yy);y)
  K("{x[(!0),*'g]!g@:<g:(&(!0),~x~':x i)_i:<x}",x))

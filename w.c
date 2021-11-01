@@ -59,7 +59,7 @@ S AX(lR,Ay=*a;Yz(nR(x,gl(y),a+1,n-1))enn(a,n))
 S AX(lS,Ay=*a;Yz(nS(x,gl(y),a+1,n-1))enn(a,n))
 A2(rdc1,/*10*/Lm=cfm(&x,1);P(m==-1,x)P(m<0,el1(x))P(!m,x(id_(y,x)))
  I(ytv&&yv&&yv<11&&xtZDC,XC(rdc1(cH(x),y))
-  Ct=xt;V(f,arrT[t-tB][yv])P(f,Lv=gl(get(x,0));x2(f(&v,xV+xW,m-1));t-tD?az(v):ad(*(D*)&v)))
+  Ct=xt;V(f,arrT[t-tB][yv])P(f,Lv=gl(get(x,0));xe(f(&v,xV+xW,m-1));t-tD?az(v):ad(*(D*)&v)))
  Li=1;Az=get(x,0),b[2];W(i<m,*b=z;b[1]=get(x,i);z=app2(*b,b[1],y);B(!z)i++)x(z))
 AX(rdc,P(n==1,rdc1(*a,x))n--;Ay=*a++,z=*a;Lm=cfm(a,n);
  P(m==-1,y?app(x,a-1,n+1):z)P(m<0,I(y,y(0))eln(a,n))P(!m&&!y,x=id_(x,z);mrn(n,a);x)
