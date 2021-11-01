@@ -75,10 +75,13 @@ S A3(eap2,/*110*/Ym(Au=kv(&y);am(y,Ny(eap2(x,u,z))))Yt(et2(x,y))P(!yN,x(y))P(ztv
  Au=oA;i(yn,x=z2(get(y,i),x);P(!x,y(u(0)))uq(x);x=get(y,i))x(y(u)))
 S A2(eap1,/*10*/eap2(id_(y,x),x,y))
 S A3(ste,/*110*/K("{z'x'y}",x,y,zR))
-S AX(w0, Xz(win(x,*a))XT(bin(xR,*a))                                                eac(x,a,n))/* '  */
-S AX(w1,XzZ(dec(x,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a))xK<2?lr(x,a,n):n-xK==1?lR(x,a,n):rdc(x,a,n))/* /  */
-S AX(w2,XzZ(enc(x,*a))Xc(sc(xv,*a))XC(sC(xV,xn,*a))xK<2?ls(x,a,n):n-xK==1?lS(x,a,n):scn(x,a,n))/* \  */
-S AX(w3,n==1?eap1(*a,x):n==2?xK==1?ste(*a,a[1],x):eap2(*a,a[1],x):                    ern(a,n))/* ': */
-S AX(w4,P(n==2,ear2(*a,a[1],x))                                                       ern(a,n))/* /: */
-S AX(w5,P(n==2,eal2(*a,a[1],x))                                                     eal(x,a,n))/* \: */
-AX*adv[]={w0,w1,w2,w3,w4,w5};
+#define SW(x,a...) switch(x){a}
+#define C(x,a...) case x:return({a;});
+AX(adv,Q(xtw)Ii=xw;x=xx;
+ SW(i,C(0,I(n==1,Xz(win(x,*a))XT(bin(xR,*a)))eac(x,a,n))
+      C(1,I(n==1,XzZ(dec(x,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a)))xK<2?lr(x,a,n):n-xK==1?lR(x,a,n):rdc(x,a,n))
+      C(2,I(n==1,XzZ(enc(x,*a))Xc(sc(xv,*a))XC(sC(xV,xn,*a)))xK<2?ls(x,a,n):n-xK==1?lS(x,a,n):scn(x,a,n))
+      C(3,n==1?eap1(*a,x):n==2?xK==1?ste(*a,a[1],x):eap2(*a,a[1],x):ern(a,n))
+      C(4,P(n==2,ear2(*a,a[1],x))ern(a,n))
+      C(5,P(n==2,eal2(*a,a[1],x))eal(x,a,n)))
+ ern(a,n))

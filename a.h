@@ -80,7 +80,7 @@ A1 a1,amd,asc,ax,blw,cC,cD,cH,cI,cL,cS,cf,des,dmd,dsc,enl,enla,epr,fir,flp,flr,f
  unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rdc1,
  rsh,sub,v0c,v1c,exc,_1;
-A0 aa0;A3 a3,cpl,try,ear2,_2;ALA drp,room,rshN;AAL get;AX rdc,prj,run,_8;AA amn,dmn;
+A0 aa0;A3 a3,cpl,try,ear2,_2;ALA drp,room,rshN;AAL get;AX adv,rdc,prj,run,_8;AA amn,dmn;
 AL aA,aB,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCz,cmdl,cmdm,die,evs,pk,syP;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),atn(C,N),aV(C,N,OV*),cts(A,Q,N),eac1f(A,A1),
  eac2f(A,A,A2),e1(A,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),mnd(OA*,I,AA*),pen(A,A1*),sur(C,A,C),wdn(A,N,N,N);
@@ -91,7 +91,7 @@ I _K(A),qD(D,D),eS(A,I),js_eval(C*,I,C*,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
-EX A glb,glbk,glbv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*vn[],*cT[];EX A2*v2[];EX A3*arp[];EX AX*adv[];
+EX A glb,glbk,glbv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*vn[],*cT[];EX A2*v2[];EX A3*arp[];
 EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
 TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arf[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
