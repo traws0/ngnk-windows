@@ -37,7 +37,7 @@ AQ(syP,In=Sn(s)+1;P(n<6&&(n<5||!(s[3]&128)),Lv=0;Mc(&v,s,n);as(v))Qp=s0+1;W(p<s1
  P(s1+n>s0+SZ s0,die("syms oom\n"))Mc(s1,s,n);s1+=n;as(s0-s1+n))
 
 S C*skp(C*s)_(W(!MQ(s,"/\n",2),C*p=SS(s+1,"\n\\\n");s=p?p+3:s+Sn(s))s)
-S I ln(Qs)_(Ax=evs(s);x=x?out(x):0;x?x(1):epr(0))
+S I ln(Qs)_(Ax=evs(s);P(x,x(out(x));1)epr(0))
 AQ(cplprs,Ax=N(pk(s));cpl(str0(aCz(s)),x,oS))
 AQ(cmdX,exit(0);0)
 AQ(cmdcd,s+=*s==32;P(!*s||*s==10,Cb[256];getcwd(b,SZ b);aCz(b))chdir(s);au)
