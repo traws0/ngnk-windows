@@ -80,7 +80,7 @@ S A2(eap1,/*10*/eap2(id_(y,x),x,y))
 S A3(ste,/*110*/K("{z'x'y}",x,y,zR))
 #define SW(x,a...) switch(x){a}
 #define C(x,a...) case x:return({a;});
-AX(adv,Q(xtw)Ii=xw;x=xx;
+AX(adv,Q(xtr)Ii=xw;x=xx;
  SW(i,
   C(0,P(n==1,Xz(win(x,*a))XT(bin(xR,*a))eac1(*a,x))eac(x,a,n))
   C(1,Ik=xK;P(n==1,XzZ(dec(x,*a))Xc(jc(xv,*a))XC(jC(xV,xn,*a))P(k<2,cf(x,*a))P(n-k==1,nwf(x,a,n))fld(x,a,n))P(k<2,nwf(x,a,n))P(n-k==1,nwf(x,a,n))fld(x,a,n))
