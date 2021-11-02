@@ -56,11 +56,12 @@ I rep()_(Cb[256];Ln=read(0,b,SZ(b)-1);P(n<0,0)b[n]=0;C*p=b;W(*p,C*q=SC0(p,10);*q
 L k(O char*s)_(Ax=N(evs(s));Xz(gl(x))x(0))
 V kf(O char*s,L(*f)(L)){K("@[;::;:;]",syP(s),AT(te,(A)f));}
 V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;
- Ax=AN(0,aA(32));i(tS-tA+1,xq(ce[tA+i]=atn(tA+i,0)))xq(ce[tm]=am(oS,oA));
- cn[tA]=ce[tC];xq(cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL));xq(cn[tD]=ad(ND));cn[tC]=ac(32);cn[tS]=as(0);
+ Ax=AN(0,aA(32)),*c=xA;i(tS-tA+1,*c++=ce[tA+i]=atn(tA+i,0))*c++=ce[tm]=am(oS,oA);
+ cn[tA]=ce[tC];*c++=cn[tB]=cn[tH]=cn[tI]=cn[tL]=al(NL);*c++=cn[tD]=ad(ND);cn[tC]=ac(32);cn[tS]=as(0);
  Mc(cn+ti,cn+tI,(tS-tI+1)*SZ(A));i(tn-to,cn[to+i]=au)
-    ci[0][0]=ai(0);    ci[0][1]=ai(1); xq(ci[0][2]=al(WL));xq(ci[0][3]=al(-WL));ci[0][4]=cn[tL];
- xq(ci[1][0]=ad(0));xq(ci[1][1]=ad(1));xq(ci[1][2]=ad(WD));xq(ci[1][3]=ad(-WD));ci[1][4]=cn[tD];cns=x;
+      ci[0][0]=ai(0);     ci[0][1]=ai(1);*c++=ci[0][2]=al(WL);*c++=ci[0][3]=al(-WL);ci[0][4]=cn[tL];
+ *c++=ci[1][0]=ad(0);*c++=ci[1][1]=ad(1);*c++=ci[1][2]=ad(WD);*c++=ci[1][3]=ad(-WD);ci[1][4]=cn[tD];
+ xn=c-xA;Q(xn<=32);cns=x;
  n=max(0,n-2);x=aA(n);i(n,xa=aCz(a[2+i]))glbk=AN(1,aS(256));*_I(glbk)='x';glbv=AN(1,aA(256));_x(glbv)=x;glb=am(glbk,glbv);}
 
 A AT(UL t,Ax)_(Q(c3(0,t,tn));P(TP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
