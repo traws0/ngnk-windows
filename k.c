@@ -82,7 +82,7 @@ AA(amn,Ax=*a,y=a[1];Xt(etn(a,n))
    ye(ue(araT[xt-tB][zv](xV,xn,yL,yn,utP?&u:_V(u),utT)))+1?x:ei1(x))
   P(xtC&&ytZ&&z==av&&utcC,x=mut(x);y=cL(y);I d=utT;u=enla(u);P(d&&yn-un,el2(x(y),u))
    x=ye(ue(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));P(!x,ei0())x))
- rdc(AP1,a,n))
+ fld(AP1,a,n))
 A1(amd,Nn=xn;Ay=xx;
  Ys(x=AN(0,mut(x));x(mnd(xA,n,amn)))
  YF(x=AN(1,mut(x));x(_8(xx,xA+1,n-1)))
