@@ -75,7 +75,7 @@ TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),AA(OA*,I),AX(A,OA*,I),AL
 #define ALA(f,b...) A f(Ln,Ax     )_(b)
 #define AAL(f,b...) A f(Ax,Li     )_(b)
 #define  AQ(f,b...) A f(Qs        )_(b)
-A1 a1,amd,asc,ax,blw,cC,cD,cH,cI,cL,cS,cf,des,dmd,dsc,enl,enla,epr,fir,flp,flr,frk,grp,hex,ins,js0,js1,kst,ksin,kcos,
+A1 a1,amd,asc,ax,blw,cC,cD,cH,cI,cL,cS,des,dmd,dsc,enl,enla,epr,fir,flp,flr,frk,grp,hex,ins,js0,js1,kst,ksin,kcos,
  klog,kexp,las,len,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prng,prs,rev,ser,spl,sqr,sqz,sqzZ,str,str0,til,typ,u0c,u1c,unh,
  unq,val,whr;
 A2 a2,add,aM,am,ap1,apn,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,rdc1,
