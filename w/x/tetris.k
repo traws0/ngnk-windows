@@ -7,7 +7,7 @@ g:0N?#T /randomized bag of 0..6
 s:0 /score
 
 /falling piece (p:position,t:type,r:rotation)
-i:{$[g;;g::0N?#T];f[3 0;*g;3];g::1_g;0} /init
+i:{f[3 0;*g;3];g::1_g;$[g;;g::0N?#T];0} /init
 f:{$[*/~a ./:+|x+T[y]z   /try to set position,type,rotation
  [p::x;t::y;r::z;1];0]}  /return 1 for success, 0 for collision
 d:{$[f[p+0 1;t;r];:1;]   /try to move it down. if successful, return 1
