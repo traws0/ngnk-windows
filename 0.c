@@ -69,6 +69,9 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
   TD ST{long d_ino;off_t d_off;UH d_reclen;C d_name[];}DE;
  #endif
  ssize_t getdents(I,char*,N);
+ #if defined(libc) && defined(__linux__)
+  ssize_t getdents(If,char*a,Nn)_(syscall(SYS_getdents,f,a,n))
+ #endif
  #if !defined(libc)
   asm(h3(getdents));
  #endif
