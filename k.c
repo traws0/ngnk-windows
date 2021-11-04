@@ -40,7 +40,7 @@ S A1(ken,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(cS(aCm(p,q)));zq(aCz(q
 S A1(kex,exit(xtz?gl(x):1);0)
 S A1(krc,x(ai(xr)))
 S A1(kjs,XC(Cb[ZP];In=js_eval(xC,xn,b,SZ b);x(0);aCn(b,n))XA(eac1f(x,kjs))et1(x))
-A2(_1,/*01*/P(!xtt,i1(x,y))Xz(dex(v1c(x,yR),y))
+A2(_1,/*01*/P(!xtt,i1(x,y))Xz(dex(Ny(v1c(x,yR)),y))
  Xs(Ss("","k","j","p","t","x","hex","err","epr","argv","env","exit","js","prng","sin","cos","exp","ln","r")
   Sf(x,y,ser,kst,js1,prs,ktm,frk,hex,ker,epr,kav,ken,kex,kjs,prng,ksin,kcos,kexp,klog,krc))
  Ik=xK;P(1<k,prj(x,&y,1))Xo(run(x,&y,1))Xv(en1(y))Xr(adv(x,&y,1))Xe(az(((A1*)(x<<8>>8))(gl(N(cL(y))))))
