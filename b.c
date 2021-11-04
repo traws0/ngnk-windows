@@ -7,7 +7,7 @@ enum{bu,bv=32,bs=64,bg=72,bd=80,bm=88,bM,bG,bS,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc};
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
 S UC b[2048],m[SZ b];S A fl,fc;S I nb,lu[8];S A1 cr;
 SN I lc(Ax/*1*/,I o)_(Ay=fc;Nn=yn,i=0;W(i<n,B(mtc_(x,ya),x(0))i++)I(i==n,_q(fc,x))i+=bc;P(i-(UC)i,ez0())h(i);1)
-SN I ig(Iv)_(Ax=glbk,y=glbv;Li=fAI(x,v);P(i>=0,i)i=xn;P(i-(UC)i,-1)xn=yn=i+1;xi=v;ya=0;i)
+SN I ig(Iv)_(Ax=gk,y=gv;Li=fAI(x,v);P(i>=0,i)i=xn;P(i-(UC)i,-1)xn=yn=i+1;xi=v;ya=0;i)
 SN I il(Iv)_(Li=fAI(fl,v);P(i>=0,lu[i]=nb;i)-1)
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
  Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())lu[i]=nb;h(bs|i)OK)
@@ -58,8 +58,8 @@ AX(run,Q(xto)P(n-xk,ern(a,n))S I d;P(++d>1024,esn(a,n))
   J(c>=bm,
    I(c==bm,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dmn(A(x,yR,av+*b++,z),4);B(!*v,y(0))*s=apn(_R(*v),y);B(!*s))
    J(c==bM,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dmn);B(!w,y(0))*s=apn(w,y);B(!*s))
-   J(c==bG,Ax=*--s=_A(glbv)[*b++];B(!x,ev0())xR)
-   J(c==bS,A*v=_A(glbv)+*b++;I(*v,mr(*v))*v=_R(*s);)
+   J(c==bG,Ax=*--s=_A(gv)[*b++];B(!x,ev0())xR)
+   J(c==bS,A*v=_A(gv)+*b++;I(*v,mr(*v))*v=_R(*s);)
    J(c==bl,Nn=*b++;s+=n-1;*s=sqz(aV(tA,n,s-n+1)))
    J(c==bL,Nn=*b++;Ax=*s;B(!xtt&&xN-n,*s=el1(x))i(n,p(get(x,n-1-i))))
    J(c==ba||c==bP,Nn=*b++;Ax=s[n]=(c-ba?prj:_8)(*s,s+1,n);mr(*s);s+=n;B(!x))

@@ -51,7 +51,7 @@ AQ(evs,P(*s-'\\',Ax=N(cplprs(s));x(run(x,0,0)))Cc=s[1],d=s[2];P(c=='c'&&d=='d'&&
  P(!d||d==32||d==':',CH(si("\\flmtv",c),&cmdX,cmdf,cmdl,cmdm,cmdt,cmdv,en0)(s+2+(d==32)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",aCz(s+1)))
 
-A glbk,glbv,glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
+A gk,gv,glb,cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;
 I rep()_(Cb[256];Ln=read(0,b,SZ(b)-1);P(n<0,0)b[n]=0;C*p=b;W(*p,C*q=SC0(p,10);*q=0;ln(p);p=q+1)1)I repl()_(W(rep());0)
 L k(O char*s)_(Ax=N(evs(s));Xz(gl(x))x(0))
 V kf(O char*s,L(*f)(L)){dmd(aV(tA,4,A(syP(s),au,av,AT(te,(A)f))));}
@@ -62,7 +62,7 @@ V kinit(In,O char**a){argv=(Q*)a;env=(Q*)a+n+1;z[ZZ(z)-1]=1;
       ci[0][0]=ai(0);     ci[0][1]=ai(1);*c++=ci[0][2]=al(WL);*c++=ci[0][3]=al(-WL);ci[0][4]=cn[tL];
  *c++=ci[1][0]=ad(0);*c++=ci[1][1]=ad(1);*c++=ci[1][2]=ad(WD);*c++=ci[1][3]=ad(-WD);ci[1][4]=cn[tD];
  xn=c-xA;Q(xn<=32);cns=x;
- n=max(0,n-2);x=aA(n);i(n,xa=aCz(a[2+i]))glbk=AN(1,aS(256));*_I(glbk)='x';glbv=AN(1,aA(256));_x(glbv)=x;glb=am(glbk,glbv);}
+ n=max(0,n-2);x=aA(n);i(n,xa=aCz(a[2+i]))gk=AN(1,aS(256));*_I(gk)='x';gv=AN(1,aA(256));_x(gv)=x;glb=am(gk,gv);}
 
 A AT(UL t,Ax)_(Q(c3(0,t,tn));P(TP(t),x=x<<8>>8|t<<56)xC[-15]=t;x)
 A AV(UL v,Ax)_(Q(v<32);x&~31ll|v)
