@@ -69,10 +69,11 @@ AX(fld,P(n==1,fld1(*a,x))n--;Ay=*a++,z=*a;Lm=cfm(a,n);
  P(m==-1,y?x8(a-1,n+1):z)P(m<0,I(y,y(0))el8(a,n))P(!m&&!y,x=id_(x,z);mrn(n,a);x)
  Li=!y;I(i,y=get(z,0))Ab8;W(i<m,*b=y;j(n,b[j+1]=get(a[j],i))y=x8(b,n+1);B(!y)i++)mrn(n-1,a+1);z(y))
 S AX scn;
-S A2(scn1,/*10*/Xt(x)P(!xN,x)Xm(Az=kv(&x);am(x,Nx(scn1(z,y))))P(y==CAT,scn(y,A(oA,x),2))
+S A3(scn2,/*110*/scn(z,A(x,y),2))
+S A2(scn1,/*10*/Xt(x)P(!xN,x)Xm(Az=kv(&x);am(x,Nx(scn1(z,y))))P(y==CAT,scn2(oA,x,y))
  I(ytv&&yv&&yv<8&&xtZDC,I(xtC,x=N(cL(x)))V(f,arsT[xt-tB][yv])P(f,Au=ax(x);Mc(uV,xV,xW);f(xV,xV+xW,uV+xW,xN-1);u))
  Ni=0,n=xN;Az=get(x,0),u=enl(zR);W(++i<n,z=N(y2(z,get(x,i)));uq(zR))z(x(u)))
-S AX(scn,P(n==1,scn1(*a,x))I(n==2,Ay=a[1];Yt(x8(a,n))Ym(y=mut(y);yy=scn(x,A(*a,yy),2);y)P(!yn,mr(*a),y))
+S AX(scn,P(n==1,scn1(*a,x))I(n==2,Ay=a[1];Yt(x8(a,n))Ym(Az=kv(&y);am(y,Ny(scn2(*a,z,x))))P(!yn,mr(*a),y))
  Ay=*a++;n--;Lm=cfm(a,n);P(m==-2,y(el8(a,n)))
  Az=oA,b[8];i(m,*b=y;j(n,b[j+1]=get(a[j],i))y=x8(b,n+1);P(!y,mrn(n,a);z(0))zq(yR))mrn(n,a);y(z))
 S A3(eap2,/*110*/Ym(Au=kv(&y);am(y,Ny(eap2(x,u,z))))Yt(et2(x,y))P(!yN,x(y))P(ztv&&zv<11&&xtzc&&ytZC,arp[zv](x,y,z))
