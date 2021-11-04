@@ -50,7 +50,7 @@ A3(_2,/*011*/P(!xtt,i2(x,y,z))A a[]={y,z};Ik=xK;P(2<k,prj(x,a,2))Xo(run(x,a,2))X
  Xp(P(xn+k>9,er2(y,z))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<2?a[j++]:_R(xA[i+1]))I l=max(0,2-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
  Xq(_1(xx,N(_2(xy,y,z))))P(2>k,er2(y,z))Xw(AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et2(y,z))
 AX(_8,Q(n);P(n==1,x1(*a))P(n==2,x2(*a,a[1]))P(!xtt,i8(x,a,n))
- Ik=xK;P(n<k,prj(x,a,n))Xo(run(x,a,n))Xv(vn[xv](aV(tA,n,a)))Xr(adv(x,a,n))
+ Ik=xK;P(n<k,prj(x,a,n))Xo(run(x,a,n))Xv(v8[xv](aV(tA,n,a)))Xr(adv(x,a,n))
  Xp(P(xn+k>9,er8(a,n))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
  Xq(_1(xx,N(_8(xy,a,n))))P(n>k,er8(a,n))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et8(a,n))
 S A valS(I*a,Nn)_(P(!n,am(mut(_R(gk)),mut(_R(gv))))

@@ -91,7 +91,7 @@ I _K(A),qD(D,D),eS(A,I),js_eval(C*,I,C*,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
-EX A glb,gk,gv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*vn[],*cT[];EX A2*v2[];EX A3*arp[];
+EX A glb,gk,gv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*v8[],*cT[];EX A2*v2[];EX A3*arp[];
 EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
 TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arf[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
@@ -140,7 +140,7 @@ A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 #define as(v) (Lt(ts)|(UI)(v))
 #define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
            U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,apn,v0c,v1c,dex,com,dex,dex})\
-           U(vn,{er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,ins,amd,dmd,er1,er1,er1,er1,er1,er1})\
+           U(v8,{er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,er1,ins,amd,dmd,er1,er1,er1,er1,er1,er1})\
            U(vc,{':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'})
 enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,UNQ,TYP,VAL,U0C,U1C,U2C,U3C,LAS,OUT,
            av=Lt(tv),ADD,SUB,MUL,DVD,MOD,MNM,MXM,LTN,GTN,EQL,MTC,CAT,EXC,RSH,CUT,CST,QUE,AP1,APN,V0C,V1C,V2C,COM,MKL,PLH,
