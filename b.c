@@ -1,13 +1,12 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-enum{bu,bv=32,bs=64,bg=80,bd=96,bm=112,bM,bG,bS,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc=128};
+enum{bu,bv=32,bs=64,bg=72,bd=80,bm=88,bM,bG,bS,bl,bL,ba,bP,bz,bj,bo,bp,b4,bc};
 #define h(a) {b[nb]=a;m[nb]=o;nb+=nb<SZ b-1;}
 #define hc(a) {N(lc(a,o));}
 #define OK -1
 #define Nr(a...) {I r=cr(a);P(r-OK,r);}
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
-S UC b[2048],m[SZ b];S A fl,fc;S I nb,lu[16];S A1 cr;
-SN I ic(Ax/*1*/)_(Ay=fc;Nn=yn;i(n,P(mtc_(x,ya),x(0);i))_q(fc,x);n)
-SN I lc(Ax/*1*/,I o)_(Ii=bc+ic(x);P(i-(UC)i,ez0())h(i);1)
+S UC b[2048],m[SZ b];S A fl,fc;S I nb,lu[8];S A1 cr;
+SN I lc(Ax/*1*/,I o)_(Ay=fc;Nn=yn,i=0;W(i<n,B(mtc_(x,ya),x(0))i++)I(i==n,_q(fc,x))i+=bc;P(i-(UC)i,ez0())h(i);1)
 SN I ig(Iv)_(Ax=glbk,y=glbv;Li=fAI(x,v);P(i>=0,i)i=xn;P(i-(UC)i,-1)xn=yn=i+1;xi=v;ya=0;i)
 SN I il(Iv)_(Li=fAI(fl,v);P(i>=0,lu[i]=nb;i)-1)
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
@@ -42,11 +41,11 @@ S A1(cf,XA(P(xx==MKL,i(xn,Ay=xa;YsSA(x))a1(drp(1,x)))
            P(xn==2?f2(xx,xy):xn==3?f3(xx,xy,xz):0,qt(N(val(x))))
            AO(xo,blw(eac1f(x,cf))))x)
 S I mxs(Ii,I s)_(I r=s;W(1,UC c=b[i++];Q(s>=0)r=max(r,s);P(!c,r)P(c==bz,i++;s--;max(r,max(mxs(i,s),mxs(i+b[i-1],s))))
- I(c>=bc||c==bo||c-bg<32u,s++)J(c-bv<32u||c==bp,s--)J(c==bm,i+=2;s--)J(c==bM,i++;s-=2)J(c==bL,s+=b[i++])
+ I(c>=bc||c==bo||c-bg<16u,s++)J(c-bv<32u||c==bp,s--)J(c==bm,i+=2;s--)J(c==bM,i++;s-=2)J(c==bL,s+=b[i++])
  J(c==bl||c==ba||c==bP,s-=b[i++]-1)J(c==bj,i+=b[i])J(c==b4,s-=3)J(c==bG,i++;s++)J(c==bS,i++))r)
 A3(cpl,/*src,ast,loc*/y=cf(y);P(!y,x(z(0)))
  nb=1;fl=z;fc=a1(au);Ms(lu,-1,SZ lu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
- P(_n(fl)>8||nb>=SZ b-1,eS(xR,0);ez0())i(16,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))
+ P(_n(fl)>8||nb>=SZ b-1,eS(xR,0);ez0())i(8,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))
  *b=mxs(1,0);*m=-1;AK(0,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
 
 S V mrn0(A*a,Nn){i(n,I(a[i],mr(a[i])))}
@@ -69,7 +68,9 @@ AX(run,Q(xto)P(n-xk,ern(a,n))S I d;P(++d>1024,esn(a,n))
    J(c==bo,p(xR))
    J(c==bp,mr(q()))
    J(c==b4,s+=3;*s=dmd(aV(tA,4,s-3));B(!*s)))
-  J(c>=bs,A*v=l+c%16,x=*v?*v:au;I(c>=bd,p(x);*v=0)J(c>=bg,p(xR))E(x=x(*v=_R(*s))))
+  J(c>=bd,A*v=l+c-bd;p(*v?*v:au);*v=0)
+  J(c>=bg,A*v=l+c-bg;p(_R(*v?*v:au)))
+  J(c>=bs,A*v=l+c-bs,x=*v?*v:au;x(*v=_R(*s)))
   J(c>=bv,Ax=q();*s=v2[c-bv](x,*s);B(!*s))
   E(*s=v1[c](*s);B(!*s)))
  I(!*s,eS(_R(xx),_C(xz)[b-1-_C(xy)]);mrn0(s+1,t+ns-s-1))
