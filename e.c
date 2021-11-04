@@ -17,5 +17,5 @@ A die(Qs)_(write(1,s,Sn(s));exit(1);0)
  NI A0(e##t##0,e0(    #m))\
  NI A1(e##t##1,e1(x,  #m))\
  NI A2(e##t##2,e2(x,y,#m))\
- NI AA(e##t##n,eN(a,n,#m))
+ NI AA(e##t##8,eN(a,n,#m))
 EA

@@ -51,7 +51,7 @@ A3(cpl,/*src,ast,loc*/y=cf(y);P(!y,x(z(0)))
 S V mrn0(A*a,Nn){i(n,I(a[i],mr(a[i])))}
 #define p(x) ({A x1=(x);Q(x1)Q(t<s)*--s=x1;})
 #define q() ({Q(s<t+ns)Q(*s)*s++;})
-AX(run,Q(xto)P(n-xk,ern(a,n))S I d;P(++d>1024,esn(a,n))
+AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))
  UC*b=_V(xy),c;I ns=*b++,nl=_n(xA[3]);A t[ns+nl],*s=t+ns,*l=s;Mc(l,a,n*SZ x);Ms(l+n,0,(nl-n)*SZ*l);
  W((c=*b++),
   I(c>=bc,p(_R(xA[c-bc+4])))

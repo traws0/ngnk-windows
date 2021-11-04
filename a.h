@@ -154,7 +154,7 @@ enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR
 #define K(s,a...) ({S A f;K0(&f,s,A(a),ZZ(A(a)));})
 
 #define EA h(c,compile)h(d,domain)h(i,index)h(l,length)h(n,nyi)h(o,io)h(p,parse)h(r,rank)h(s,stack)h(t,type)h(v,value)h(z,limit)
-#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;AA e##t##n;
+#define h(t,m) A0 e##t##0;A1 e##t##1;A2 e##t##2;AA e##t##8;
  EA
 #undef h
 #define N(r,a...) ({A r_=(r);P(!r_,a;0)r_;}) //error pass-through

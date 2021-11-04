@@ -51,8 +51,8 @@ A3(_2,/*011*/P(!xtt,i2(x,y,z))A a[]={y,z};Ik=xK;P(2<k,prj(x,a,2))Xo(run(x,a,2))X
  Xq(_1(xx,N(_2(xy,y,z))))P(2>k,er2(y,z))Xw(AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et2(y,z))
 AX(_8,Q(n);P(n==1,x1(*a))P(n==2,x2(*a,a[1]))P(!xtt,i8(x,a,n))
  Ik=xK;P(n<k,prj(x,a,n))Xo(run(x,a,n))Xv(vn[xv](aV(tA,n,a)))Xr(adv(x,a,n))
- Xp(P(xn+k>9,ern(a,n))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
- Xq(_1(xx,N(_8(xy,a,n))))P(n>k,ern(a,n))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))etn(a,n))
+ Xp(P(xn+k>9,er8(a,n))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
+ Xq(_1(xx,N(_8(xy,a,n))))P(n>k,er8(a,n))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et8(a,n))
 S A valS(I*a,Nn)_(P(!n,am(mut(_R(gk)),mut(_R(gv))))
  Ax=glb;i(n,P(!xtm,et0())Ay=xx,z=xy;P(!ytS||!ztA,ed0())Ik=a[i];Lj=fAI(y,k);P(j<0,ev0())x=zA[j])xR)
 A1(val,XS(xe(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_R(xy)))
@@ -71,11 +71,11 @@ S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;P(!ytm,ed1(x))**p=y=mut(y);Az=yx;P(!ztS,ed1(x))
 S A*pth(Ax/*1*/)_(Xt(pth(enl(x)))Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj=fpI(&yx,*xI);
  I(j==_n(yy),_q(yy,xn>1?aa0():au))A*p=(A*)_V(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 A mnd(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)Ab8;*b=*p;Mc(b+1,a+1,(n-1)*8);*p=au;*p=_R(N(f(b,n))))
-AA(amn,Ax=*a,y=a[1];Xt(etn(a,n))
+AA(amn,Ax=*a,y=a[1];Xt(et8(a,n))
  Xm(Az=kv(&x),u=fnd(xR,yR);P(!u,mrn(n-1,a+1);x(z(0)))I(utlL,Q(ur==1);i(uN,I(ul==NL,ul=xN;xq(get(y,i));zq(id_(a[2],z)))))
   Ab8;Mc(b+2,a+2,(n-2)*SZ*a);*b=y(z);b[1]=u;am(x,Nx(amn(b,n))))
  P(y==au,Ab8;Mc(b,a,n*8);b[1]=tilL(xN);amn(b,n))
- Yt(x=mut(x);y=cL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ein(a+2,n-2)))
+ Yt(x=mut(x);y=cL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ei8(a+2,n-2)))
   Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(z8(b,n-2)))))
  I(n==4,Az=a[2],u=a[3];
   P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))x=mut(x);y=cL(y);Ny(sup(&x,&u));
@@ -92,7 +92,7 @@ AA(dmn,Ax=*a,y=a[1];
  P(yN==1,Ab8;Mc(b,a,n*8);b[1]=fir(y);amn(b,n))
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,a[2],a[3]))
  P(n==3,K("{         @[x;*y;.[;1_y;z;]  ]}",x,y,a[2]     ))
- enn(a,n))
+ en8(a,n))
 A1(dmd,Nn=xn;Ay=xx;
  YF(P(n-3,er1(x))x=AN(0,mut(x));x(try(xx,xy,xz)))
  YsS(x=AN(0,mut(x));x(mnd(xA,n,dmn)))
