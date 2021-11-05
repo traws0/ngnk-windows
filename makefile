@@ -40,7 +40,6 @@ o/w/x/%.k:w/x/%.k;$(MD);ln -f $< $@
 o/w/index.html:w/index.html k w/inl.k w/*.js;$(MD);cd w && ./inl.k index.html *.js >../$@ && cd -
 o/w/http:w/http.c;$(MD);$(CC) $< -o $@
 
-# C32=$(CC) $(O) -m32
-# o/32/%.o:%.c *.h
-# 	@echo -n '$< ' && mkdir -p o/32 && $(C32) -c $< -o $@
-# k32:$(patsubst %.c,o/32/%.o,$(wildcard *.c));$(C32) $^ -static -o $@ -lgcc
+O_32=$(O) -m32 -Dlibc
+o/32/%.o:%.c *.h;$(MD);$(CC) $(O_32) -o $@ -c $<
+k32:$(patsubst %.c,o/32/%.o,$(wildcard *.c));$(CC) $(O_32) -o $@ $^ -lgcc -lm

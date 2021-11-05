@@ -31,7 +31,7 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 //syscall helper macros
 #if !defined(libc)&&!defined(wasm)
  #if defined(i386)
-  #define  h(x,a...) ".globl "#x";"#x":"a"movq $"M2(SYS_##x)",%eax;int $0x80;ret;"
+  #define  h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;"
   #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
   #define h2(x,a...) h1(x,a"mov  8(%esp),%ecx;")
   #define h3(x,a...) h2(x,a"mov 12(%esp),%edx;")
