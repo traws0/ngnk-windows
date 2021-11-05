@@ -95,7 +95,7 @@ L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 EX A glb,gk,gv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*v8[],*cT[];EX A2*v2[];EX A3*arp[];
 EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
-TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*arf[][5][7];
+TD I Tf(OV*,OV*,V*,L);     EX Tf*arsT[][11],*aro[][5][7];
 TD I Ta(V*,L,O L*,L,OV*,I);EX Ta*araT[][11];
 TD I Tr(V*,OV*,L);         EX Tr*arrT[][11];
 
