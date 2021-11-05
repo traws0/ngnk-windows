@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-#define hv(v,T,R,f) S T v(T x,T y)_(f)
+#define hv(v,T,R,f) S R v(T x,T y)_(f)
 #define hd(v,f,g) hv(v##b,B,B,f)hv(v##h,H,H,f)hv(v##i,I,I,f)hv(v##l,L,L,f)hv(v##d,D,D,g)
 #define hc(v,f,g) hv(v##b,B,B,f)hv(v##h,H,B,f)hv(v##i,I,B,f)hv(v##l,L,B,f)hv(v##d,D,B,g)
 #define h(v,f) hd(v,f,f)
