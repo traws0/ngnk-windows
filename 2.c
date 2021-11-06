@@ -101,16 +101,15 @@ A3(arp,Q(ztv)Q(zv<11)Q(xtzc)Q(ytZC)CH(zv,&dexp,___p,___p,___p,___p,modp,mmmp,mmm
 
 #define ha(v,T) S I v##a##T(V*RE p,Nn,O L*RE q,Lm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),-1)a[j]=v##o##T(a[j],b[d*i]))0)
 ha(dex,B)ha(dex,H)ha(dex,I)ha(dex,L)
-                           ha(add,L)ha(add,D)
-                           ha(sub,L)ha(sub,D)
-                           ha(mul,L)ha(mul,D)
-ha(mnm,B)ha(mnm,H)ha(mnm,I)ha(mnm,L)ha(mnm,D)
-ha(mxm,B)ha(mxm,H)ha(mxm,I)ha(mxm,L)ha(mxm,D)
-S TY(&mxmaB)araT[][11]=
- {{dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},
-  {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
-  {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
-  {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
-  {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
-A ara(Ax,Ay,Az,Au/*1111*/)_(Q(xtZ)Q(ytZ)Q(ztv)Q(zv<11)Q(utzZ)P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))
+                           ha(add,L)
+                           ha(sub,L)
+                           ha(mul,L)
+ha(mnm,B)ha(mnm,H)ha(mnm,I)ha(mnm,L)
+ha(mxm,B)ha(mxm,H)ha(mxm,I)ha(mxm,L)
+S TY(&mxmaB)araT[][11]={
+ {dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},
+ {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
+ {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
+ {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL}};
+A4(ara,/*1111*/Q(xtZ)Q(ytZ)Q(ztv)Q(zv<11)Q(utzZ)P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))
  x=mut(x);y=cL(y);Ny(sup(&x,&u));ye(ue(araT[xt-tB][zv](xV,xn,yV,yn,utP?&u:uV,utT)))+1?x:ei1(x))
