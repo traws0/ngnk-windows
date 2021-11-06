@@ -78,8 +78,7 @@ AA(amn,Ax=*a,y=a[1];Xt(et8(a,n))
  Yt(x=mut(x);y=cL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ei8(a+2,n-2)))
   Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(z8(b,n-2)))))
  I(n==4,Az=a[2],u=a[3];
-  P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))x=mut(x);y=cL(y);Ny(sup(&x,&u));
-   ye(ue(araT[xt-tB][zv](xV,xn,yL,yn,utP?&u:_V(u),utT)))+1?x:ei1(x))
+  P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,ara(x,y,z,u))
   P(xtC&&ytZ&&z==av&&utcC,x=mut(x);y=cL(y);I d=utT;u=enla(u);P(d&&yn-un,el2(x(y),u))
    x=ye(ue(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));P(!x,ei0())x))
  fld(AP1,a,n))

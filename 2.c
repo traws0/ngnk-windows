@@ -8,7 +8,7 @@
 h(dex,y)h(add,x+y)h(sub,x-y)h(mul,x*y)hv(dvd,D,D,x/y)hd(mod,x>0?(y%x+x)%x:!x?y:y<0?-1-(-1-y)/-x:y/-x,x>0?y-(L)(y/x)*x:dvdoD(y,-x))
 h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,qD(x,y)<0)hc(gtn,x>y,ltn(y,x))hc(eql,x==y,*(L*)&x==*(L*)&y)
 #undef h
-#define hV(f,T,R,e...) SN I f(OV*RE p,OV*RE q,V*RE s,Ln)_(O T*a=p,*b=q;R*r=s;e)
+#define hV(f,T,R,e...) SN I f(OV*RE p,OV*RE q,V*RE s,Nn)_(O T*a=p,*b=q;R*r=s;e)
 #define h0(v,T,R) hV(v##0##T,T,R,*r=v##o##T(*a,*b);0)
 #define h1(v,T,R) hV(v##1##T,T,R,LN(b)LN(r)TY(*a)c=*a;i(PD(n,a),*r++=v##o##T(   c,*b++))0)
 #define h2(v,T,R) hV(v##2##T,T,R,LN(a)LN(r)TY(*b)c=*b;i(PD(n,a),*r++=v##o##T(*a++,   c))0)
@@ -43,27 +43,25 @@ TY(&mod0B)aro[][5][7]={
   {    0,mod3I,mnm3I,mxm3I,ltn3I,0,eql3I},
   {    0,mod3L,mnm3L,mxm3L,ltn3L,0,eql3L},
   {dvd3D,mod3D,mnm3D,mxm3D,ltn3D,0,eql3D}}};
-
 S C tZx(Ax)_(XcC(tH)Xz(tZ(gl_(x)))Xd(tD)XZD(xt)XsS(tI)tB)
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(cT[t](x));*q=y=Nx(cT[t](y));t)
-S A ar2(Ax,Ay,Iv)_(P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,v2[v]))N(sup(&x,&y));Ik=xtT<<1|ytT;
- P(k==3&&xn-yn,el2(x,y))Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;V(f,aro[k][TT[t]-tB][v-4]);
- I(t>tD,t+=tD-td)I(v>MXM-av&&t==tD,t=tI)I(!k,t+=tc-tC;P(TP(t),Ii=0;f(a,b,&i,1);x(y(az(i)))))
+S A ar2(Ax,Ay,Az)_(Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,v2[zv]))N(sup(&x,&y));Ik=xtT<<1|ytT;
+ P(k==3&&xn-yn,el2(x,y))Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;V(f,aro[k][TT[t]-tB][zv-4]);
+ I(t>tD,t+=tD-td)I(z>MXM&&t==tD,t=tI)I(!k,t+=tc-tC;P(TP(t),Ii=0;f(a,b,&i,1);x(y(az(i)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zV,zn);x-z?x(y-z?y(z):z):y(z))
 S ALA(ext,XMT(x)rshN(n,xtm?enl(x):x))
 A2(dct,P(rnk(x)<0,ed2(x,y))x=ext(yN,x);y=ext(xN,y);(xN-yN?el2:am)(x,y))
-
 A2(dex,mr(x);y)
 A2(add,adm(x,y,0))
 A2(sub,add(x,Nx(neg(y))))
 A2(mul,adm(x,y,1))
-A2(dvd,P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,dvd))ar2(Ny(cD(x)),Nx(cD(y)),DVD-av))
-A2(mod,Xzc(ar2(x,y,MOD-av))dct(x,y))
-A2(mnm,ar2(x,y,MNM-av))
-A2(mxm,ar2(x,y,MXM-av))
-A2(ltn,ar2(x,y,LTN-av))
+A2(dvd,P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,dvd))ar2(Ny(cD(x)),Nx(cD(y)),DVD))
+A2(mod,Xzc(ar2(x,y,MOD))dct(x,y))
+A2(mnm,ar2(x,y,MNM))
+A2(mxm,ar2(x,y,MXM))
+A2(ltn,ar2(x,y,LTN))
 A2(gtn,ltn(y,x))
-A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):ar2(x,y,EQL-av))
+A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):ar2(x,y,EQL))
 
 #define hf(v,T)S L v##f##T(L a,O V*b,Nn)_(O T*p=b;i(n,a=v##oL(a,p[i]))a)
 #define hfD(v) S D v##f##D(D a,O D*b,Nn)_(i(n,a=v##oD(a,b[i]))a)
@@ -101,16 +99,18 @@ S A3(cmpp,Ii=z-LTN,j=Tz[yt];Lv=gl(x);x=aB(yn);Cc=tZ(v)-tB<=j?2:!i?v>0:i==1?v<0:0
  ye(CH(i<<2|j,&ltnpB,ltnpH,ltnpI,ltnpL,gtnpB,gtnpH,gtnpI,gtnpL,eqlpB,eqlpH,eqlpI,eqlpL)(&v,yV,xV,yn);I(c-2,*xB=c)x))
 A3(arp,Q(ztv)Q(zv<11)Q(xtzc)Q(ytZC)CH(zv,&dexp,___p,___p,___p,___p,modp,mmmp,mmmp,cmpp,cmpp,cmpp)(x,y,z))
 
-#define ha(v,T) SN I v##a##T(V*RE p,Ln,O L*RE q,Lm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),-1)a[j]=v##o##T(a[j],b[d*i]))0)
+#define ha(v,T) S I v##a##T(V*RE p,Nn,O L*RE q,Lm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),-1)a[j]=v##o##T(a[j],b[d*i]))0)
 ha(dex,B)ha(dex,H)ha(dex,I)ha(dex,L)
                            ha(add,L)ha(add,D)
                            ha(sub,L)ha(sub,D)
                            ha(mul,L)ha(mul,D)
 ha(mnm,B)ha(mnm,H)ha(mnm,I)ha(mnm,L)ha(mnm,D)
 ha(mxm,B)ha(mxm,H)ha(mxm,I)ha(mxm,L)ha(mxm,D)
-U(araT,{{dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},
-        {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
-        {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
-        {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
-        {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}})
-
+S TY(&mxmaB)araT[][11]=
+ {{dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},
+  {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
+  {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
+  {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL},
+  {dexaL,addaD,subaD,mulaD,0,0,mnmaD,mxmaD}};
+A ara(Ax,Ay,Az,Au/*1111*/)_(Q(xtZ)Q(ytZ)Q(ztv)Q(zv<11)Q(utzZ)P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))
+ x=mut(x);y=cL(y);Ny(sup(&x,&u));ye(ue(araT[xt-tB][zv](xV,xn,yV,yn,utP?&u:uV,utT)))+1?x:ei1(x))
