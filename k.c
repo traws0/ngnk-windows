@@ -71,17 +71,21 @@ S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;P(!ytm,ed1(x))**p=y=mut(y);Az=yx;P(!ztS,ed1(x))
 S A*pth(Ax/*1*/)_(Xt(pth(enl(x)))Ay=glb;Q(xtS&&yr==1&&ytm&&_t(yx)==tS&&_t(yy)==tA);Lj=fpI(&yx,*xI);
  I(j==_n(yy),_q(yy,xn>1?aa0():au))A*p=(A*)_V(yy)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 A mnd(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)Ab8;*b=*p;Mc(b+1,a+1,(n-1)*8);*p=au;*p=_R(N(f(b,n))))
-AA(amn,Ax=*a,y=a[1];Xt(et8(a,n))
- Xm(Az=kv(&x),u=fnd(xR,yR);P(!u,mrn(n-1,a+1);x(z(0)))I(utlL,Q(ur==1);i(uN,I(ul==NL,ul=xN;xq(get(y,i));zq(id_(a[2],z)))))
-  Ab8;Mc(b+2,a+2,(n-2)*SZ*a);*b=y(z);b[1]=u;am(x,Nx(amn(b,n))))
- P(y==au,Ab8;Mc(b,a,n*8);b[1]=tilL(xN);amn(b,n))
- Yt(x=mut(x);y=cL(y);P(!y,mrn(n-2,a+2);x(0))Li=gl(y);P(!in(i,xn),x(ei8(a+2,n-2)))
-  Az=a[2],b[8];*b=get(x,i);Mc(b+1,a+3,(n-3)*8);set(x,i,Nx(z(z8(b,n-2)))))
- I(n==4,Az=a[2],u=a[3];
-  P(xtZ&&ytZ&&ztv&&utzZ&&zv<11,ara(x,y,z,u))
-  P(xtC&&ytZ&&z==av&&utcC,x=mut(x);y=cL(y);I d=utT;u=enla(u);P(d&&yn-un,el2(x(y),u))
-   x=ye(ue(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));P(!x,ei0())x))
- fld(AP1,a,n))
+S AA(amn,Ax=*a;
+ XT(Ay=a[1];
+    P(y==au,Ab8;Mc(b,a,n*8);b[1]=tilL(xN);amn(b,n))
+    Yz(Li=gl_(y);P(!in(i,xn),ei8(a,n))x=mut(y(x));Ab8;Az=a[2];*b=get(x,i);Mc(b+1,a+3,8*n-24);set(x,i,Nx(z(z8(b,n-2)))))
+    I(ytZ&&n==4,Az=a[2],u=a[3];
+     P(xtZ&&ztv&&utzZ&&zv<11,ara(x,y,z,u))
+     P(xtC&&z==av&&utcC,x=mut(x);y=cL(y);I d=utT;u=enla(u);P(d&&yn-un,el2(x(y),u))
+      x=ye(ue(i(yn,Lj=yl;B(!in(j,xn),x=0)xC[j]=uC[d*i])x));P(!x,ei0())x))
+    Yt(et8(a,n))
+    fld(AP1,a,n))
+ XM(Ab8;i(n,Ax=a[i];b[i]=xtM?flp(x):x;Q(b[i]))flp(N(eac(AP1,b,n))))
+ Xm(Ay=a[1],z=kv(&x),u=fnd(xR,yR);P(!u,mrn(n-1,a+1);x(z(0)))
+    I(utlL,Q(ur==1);i(uN,I(ul==NL,ul=xN;xq(get(y,i));zq(id_(a[2],z)))))
+    Ab8;Mc(b+2,a+2,(n-2)*SZ*a);*b=y(z);b[1]=u;am(x,Nx(amn(b,n))))
+ et8(a,n))
 A1(amd,Nn=xn;Ay=xx;
  Ys(x=AN(0,mut(x));x(mnd(xA,n,amn)))
  YF(x=AN(1,mut(x));x(_8(xx,xA+1,n-1)))
