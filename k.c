@@ -31,8 +31,9 @@ S A2(i1,/*01*/
  Lm=CH(xt-tB+7*ytL,&iBI,iHI,iII,jLI,iDI,iCI,iSI,iBL,iHL,iIL,jLL,iDL,iCL,iSL)(xV,xn,yV,zV,n);
  I(m<n,z=z(aL(n));CH(xt-tB+3*ytL,&jBI,jHI,jII,jBL,jHL,jIL)(xV,xn,yV,zV,n))
  y-z?y(z):z)
-S AX(i8,Ay=*a++;n--;Cb=ytT||y==PLH||y==au;x=i1(x,y);P(!n,x)P(!x,mrn(n,a);x)P(!b,x(i8(x,a,n)))K(".\\:",x,aV(tA,n,a)))
-S A3(i2,/*011*/i8(x,A(y,z),2))
+S A3(i2,/*011*/Cb=ytT||y==PLH||y==au;x=Nz(i1(x,y));P(!b,x(i1(x,z)))K(".\\:",x,a1(z)))
+S AX(i8,Ay=*a;P(n==1,i1(x,y))P(n==2,i2(x,y,a[1]))
+ a++;n--;Cb=ytT||y==PLH||y==au;x=i1(x,y);P(!n,x)P(!x,mrn(n,a);x)P(!b,x(i8(x,a,n)))K(".\\:",x,aV(tA,n,a)))
 S A1(ktm,x(al(now())))
 S A1(ker,e1(x,xtC?xV:"err"))
 S A1(kav,Ay=oA;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
