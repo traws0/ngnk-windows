@@ -61,7 +61,7 @@ A1(val,XS(xe(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_
  Xr(cat(AT(tA,mut(x)),aw+xw))P(c3(tu,xt,tw),ai(xv))P(c3(to,xt,tq),AT(tA,mut(x)))et1(x))
 A2(idx,x(i1(x,y)))
 A2(ap1,x(x1(y)))
-A2(apn,Ym(et2(x,y))Nn=yN;P(!n,y(x))P(n>8,ez2(x,y))y=mRa(Nx(blw(y)));x(y(x8(yA,n))))
+A2(dot,Ym(et2(x,y))Nn=yN;P(!n,y(x))P(n>8,ez2(x,y))y=mRa(Nx(blw(y)));x(y(x8(yA,n))))
 S I knd(Ax/*0*/)_(Xz(ti)XZ(tI)xt)
 S A set(Ax,Li,Ay/*1i1*/)_(Q(xr==1);XA(Az=xa;xa=z(y);ytt&&!ytF?sqz(x):x)
  XM(Az=kv(&x);z=mut(z);Q(ztA);I(ytT&&yN-zn,x(el2(y,z)))Ij=i;i(zn,za=set(mut(za),j,ii(y,i));P(!za,za=au;x(y(z(0)))))y(aM(x,z)))

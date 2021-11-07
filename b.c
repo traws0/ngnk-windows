@@ -19,7 +19,7 @@ S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
   P(z==MKL&&xx==av,h(bL)h(n);i(n,Nl(x,yA[i+1]);h(bp))OK)o)o)
 S A1(cr,/*0*/I o=xo;
  Xs(Ii=il(xv);P(i>=0,h(bg|i)OK)P(xv=='o',h(bo)OK)i=ig(xv);P(i<0,ez0())h(bG)h(i)OK)
- XS(P(xn-1,hc(AO(0,xR))h(bu|APN-av)OK)hc(ii(x,0))OK)
+ XS(P(xn-1,hc(AO(0,xR))h(bu|DOT-av)OK)hc(ii(x,0))OK)
  P(!xtA||!xn,hc(x-PLH?xR:au)OK)
  Nn=xn;Ay=xx;
  P(y==PRG,i(n-1,I(i,h(bp))Nr(xA[i+1]))OK)
@@ -56,8 +56,8 @@ AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))
  W((c=*b++),
   I(c>=bc,p(_R(xA[c-bc+4])))
   J(c>=bm,
-   I(c==bm,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dm8(A(x,yR,av+*b++,z),4);B(!*v,y(0))*s=apn(_R(*v),y);B(!*s))
-   J(c==bM,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dm8);B(!w,y(0))*s=apn(w,y);B(!*s))
+   I(c==bm,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dm8(A(x,yR,av+*b++,z),4);B(!*v,y(0))*s=dot(_R(*v),y);B(!*s))
+   J(c==bM,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dm8);B(!w,y(0))*s=dot(w,y);B(!*s))
    J(c==bG,Ax=*--s=_A(gv)[*b++];B(!x,ev0())xR)
    J(c==bS,A*v=_A(gv)+*b++;I(*v,mr(*v))*v=_R(*s);)
    J(c==bl,Nn=*b++;s+=n-1;*s=sqz(aV(tA,n,s-n+1)))
