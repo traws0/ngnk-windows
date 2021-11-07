@@ -1,5 +1,5 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))VS
+S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))VS;OC Tz[]={Tzv},TZ[]={TZv},TT[]={TTv};
 A1(mkn,XmMA(eac1f(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw||xte?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][CH(xv,(C)4,0,0,1,1,2,2,3,3,2,4)]):mkn(fir(yR)))
 AX(prj,XmMA(x8(a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
@@ -62,8 +62,8 @@ A1(val,XS(xe(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_
 A2(idx,x(i1(x,y)))
 A2(ap1,x(x1(y)))
 A2(apn,Ym(et2(x,y))Nn=yN;P(!n,y(x))P(n>8,ez2(x,y))y=mRa(Nx(blw(y)));x(y(x8(yA,n))))
-S I knd(Ax)_(Xz(ti)XZ(tI)xt)
-S A set(Ax/*1*/,Li,Ay/*1*/)_(Q(xr==1);XA(Az=xa;xa=z(y);ytt&&!ytF?sqz(x):x)
+S I knd(Ax/*0*/)_(Xz(ti)XZ(tI)xt)
+S A set(Ax,Li,Ay/*1i1*/)_(Q(xr==1);XA(Az=xa;xa=z(y);ytt&&!ytF?sqz(x):x)
  XM(Az=kv(&x);z=mut(z);Q(ztA);I(ytT&&yN-zn,x(el2(y,z)))Ij=i;i(zn,za=set(mut(za),j,ii(y,i));P(!za,za=au;x(y(z(0)))))y(aM(x,z)))
  P(knd(x)-knd(y)-tC+tc,set(blw(x),i,y))
  I(xtZ,N(sup(&x,&y)))C w=Tz[xt];w==0?xb=yv:w==1?xh=yv:w==2?xi=yv:(xl=gl(y));x)
@@ -88,7 +88,7 @@ S AA(am8,Ax=*a;
     Ab8;Mc(b+2,a+2,(n-2)*SZ*a);*b=y(z);b[1]=u;am(x,Nx(am8(b,n))))
  et8(a,n))
 AA(dm8,Ax=*a,y=a[1];
- P(y==au||!yN,Ab8;*b=y(x);Mc(b+1,a+3,(n-3)*8);Az=a[2];z(z8(b,n-2)))
+ P(y==au||!yN,Ab8;*b=y(x);Mc(b+1,a+3,8*n-24);Az=a[2];z(z8(b,n-2)))
  P(yN==1,Ab8;Mc(b,a,n*8);b[1]=fir(y);am8(b,n))
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,a[2],a[3]))
  P(n==3,K("{         @[x;*y;.[;1_y;z;]  ]}",x,y,a[2]     ))
@@ -96,4 +96,3 @@ AA(dm8,Ax=*a,y=a[1];
 AA(amd,Ax=*a;Xs(mnd(a,n,am8))XF(Q(n>1)x(_8(x,a+1,n-1)))am8(a,n))
 AA(dmd,Ax=*a;XF(P(n-3,er8(a,n))try(x,a[1],a[2]))XsS(mnd(a,n,dm8))dm8(a,n))
 A K0(A*p,Qs,OA*a,In)_(I(!*p,cns=apd(cns,*p=N(val(aCz(s)))))n?_8(*p,a,n):*p)
-OC Tz[]={Tzv},TZ[]={TZv},TT[]={TTv};
