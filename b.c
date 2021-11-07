@@ -7,7 +7,7 @@ enum{bu,bv=32,bs=64,bg=72,bd=80,bi=88,bI,bm,bM,bG,bS,bl,bL,ba,bP,bz,bj,bo,bp,b4,
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
 S UC b[256],m[256];S A fl,fc;S I nb,lu[8];S A1 cr;
 SN I lc(Ax/*1*/,I o)_(Ay=fc;Nn=yn,i=0;W(i<n,B(mtc_(x,ya),x(0))i++)I(i==n,_q(fc,x))i+=bc;P(i-(UC)i,ez0())h(i);1)
-SN I ig(Iv)_(Ax=gk,y=gv;Li=fAI(x,v);P(i>=0,i)i=xn;P(i-(UC)i,-1)xn=yn=i+1;xi=v;ya=0;i)
+SN I ig(Iv)_(Ay=gv;Li=fI(gk,yn,v);P(i>=0,i)i=yn;P(i-(UC)i,-1)yn=i+1;gk[i]=v;ya=0;i)
 SN I il(Iv)_(Li=fAI(fl,v);P(i>=0,lu[i]=nb;i)-1)
 S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
  Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())lu[i]=nb;h(bs|i)OK)

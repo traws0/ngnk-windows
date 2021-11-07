@@ -93,7 +93,7 @@ I _K(A),qD(D,D),eS(A,I),js_eval(C*,I,C*,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
 TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
-EX A gk,gv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*cT[];EX A2*v2[];EX AA*v8[];
+EX I gk[];EX A gv,cns,ce[],cn[],ci[2][5];EX A1*v1[],*cT[];EX A2*v2[];EX AA*v8[];
 EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
 
 //            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  / 2:
