@@ -3,7 +3,7 @@
 //serialize
 S A f8(Lv,Ay)_(cts(y,(V*)&v,8))
 S A2(f,y=Nx(apc(y,xt));
- P(xtA||xtS,y=Nx(f8(xn,y));i(xn,y=Nx(f(get(x,i),y)))x(y))
+ P(xtA||xtS,y=Nx(f8(xn,y));i(xn,y=Nx(f(ii(x,i),y)))x(y))
  XmMA(f(AT(tA,mut(x)),y))
  Xs(Lv=xv;Qs=syp(&v);In=Sn(s)+1;y=Nx(apc(y,n));cts(y,s,n))
  XP(f8(x,y))
