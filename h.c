@@ -45,4 +45,4 @@ S A insL(Ax,Li,Ln,Ay)_(Xmt(et2(x,y))Ymt(insL(x,i,n,enl(y)))P(xtM||ytM,en2(x,y))
  Az=atn(xt,xn-n+yn);Mc(zV,xV,i*xW);Mc(zV+i*xW,yV,yn*xW);Mc(zV+(i+yn)*xW,xV+(i+n)*xW,(xn-n-i)*xW);
  I(xtR,I(xr-1,mRn(i,xA);mRn(xn-i-n,xA+i+n))E(mrn(n,xA+i);AN(0,x))I(yr-1,mRa(y))E(AN(0,y)))x(y(z)))
 S A3(ins3,Yz(insL(x,gl(y),0,z))YZ(P(yN-2,z(el2(x,y)))Ln=gl(ii(y,1));insL(x,gl(fir(y)),n,z))z(et2(x,y)))
-A1(ins,XA(P(xn-3,en1(x))x=AN(0,mut(x));x(ins3(xx,xy,xz)))et1(x))
+AA(ins,P(n-3,en8(a,n))ins3(*a,a[1],a[2]))

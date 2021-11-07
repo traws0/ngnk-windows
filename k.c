@@ -51,7 +51,7 @@ A3(_2,/*011*/P(!xtt,i2(x,y,z))A a[]={y,z};Ik=xK;P(2<k,prj(x,a,2))Xo(run(x,a,2))X
  Xp(P(xn+k>9,er2(y,z))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<2?a[j++]:_R(xA[i+1]))I l=max(0,2-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
  Xq(_1(xx,N(_2(xy,y,z))))P(2>k,er2(y,z))Xw(AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et2(y,z))
 AX(_8,Q(n);P(n==1,x1(*a))P(n==2,x2(*a,a[1]))P(!xtt,i8(x,a,n))
- Ik=xK;P(n<k,prj(x,a,n))Xo(run(x,a,n))Xv(v8[xv](aV(tA,n,a)))Xr(adv(x,a,n))
+ Ik=xK;P(n<k,prj(x,a,n))Xo(run(x,a,n))Xv(v8[xv](a,n))Xr(adv(x,a,n))
  Xp(P(xn+k>9,er8(a,n))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
  Xq(_1(xx,N(_8(xy,a,n))))P(n>k,er8(a,n))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et8(a,n))
 S A valS(I*a,Nn)_(P(!n,am(mut(_R(gk)),mut(_R(gv))))
@@ -87,19 +87,13 @@ S AA(am8,Ax=*a;
     I(utlL,Q(ur==1);i(uN,I(ul==NL,ul=xN;xq(ii(y,i));zq(id_(a[2],z)))))
     Ab8;Mc(b+2,a+2,(n-2)*SZ*a);*b=y(z);b[1]=u;am(x,Nx(am8(b,n))))
  et8(a,n))
-A1(amd,Nn=xn;Ay=xx;
- Ys(x=AN(0,mut(x));x(mnd(xA,n,am8)))
- YF(x=AN(1,mut(x));x(_8(xx,xA+1,n-1)))
- x=AN(0,mut(x));x(am8(xA,n)))
 AA(dm8,Ax=*a,y=a[1];
  P(y==au||!yN,Ab8;*b=y(x);Mc(b+1,a+3,(n-3)*8);Az=a[2];z(z8(b,n-2)))
  P(yN==1,Ab8;Mc(b,a,n*8);b[1]=fir(y);am8(b,n))
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,a[2],a[3]))
  P(n==3,K("{         @[x;*y;.[;1_y;z;]  ]}",x,y,a[2]     ))
  en8(a,n))
-A1(dmd,Nn=xn;Ay=xx;
- YF(P(n-3,er1(x))x=AN(0,mut(x));x(try(xx,xy,xz)))
- YsS(x=AN(0,mut(x));x(mnd(xA,n,dm8)))
- x=AN(0,mut(x));x(dm8(xV,n)))
+AA(amd,Ax=*a;Xs(mnd(a,n,am8))XF(Q(n>1)x(_8(x,a+1,n-1)))am8(a,n))
+AA(dmd,Ax=*a;XF(P(n-3,er8(a,n))try(x,a[1],a[2]))XsS(mnd(a,n,dm8))dm8(a,n))
 A K0(A*p,Qs,OA*a,In)_(I(!*p,cns=apd(cns,*p=N(val(aCz(s)))))n?_8(*p,a,n):*p)
 OC Tz[]={Tzv},TZ[]={TZv},TT[]={TTv};
