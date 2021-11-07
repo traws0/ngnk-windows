@@ -56,8 +56,8 @@ AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))
  W((c=*b++),
   I(c>=bc,p(_R(xA[c-bc+4])))
   J(c>=bm,
-   I(c==bm,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dmn(A(x,yR,av+*b++,z),4);B(!*v,y(0))*s=apn(_R(*v),y);B(!*s))
-   J(c==bM,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dmn);B(!w,y(0))*s=apn(w,y);B(!*s))
+   I(c==bm,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dm8(A(x,yR,av+*b++,z),4);B(!*v,y(0))*s=apn(_R(*v),y);B(!*s))
+   J(c==bM,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dm8);B(!w,y(0))*s=apn(w,y);B(!*s))
    J(c==bG,Ax=*--s=_A(gv)[*b++];B(!x,ev0())xR)
    J(c==bS,A*v=_A(gv)+*b++;I(*v,mr(*v))*v=_R(*s);)
    J(c==bl,Nn=*b++;s+=n-1;*s=sqz(aV(tA,n,s-n+1)))
