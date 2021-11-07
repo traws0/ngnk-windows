@@ -146,6 +146,7 @@ Special symbols:
  `env[] dict of env variables
 `prng[] `prng@I get/set pseudo-random number generator internal state
                      s:`prng[];r:9?0;`prng s;r~9?0 -> 1
+        `prng@0 use current time to set state
  `err@C throw error
 Special symbols available only in an interpreter built with "make k-libc":
  `sin@N trigonometry `sin 12.34 -> -0.22444212919135995
