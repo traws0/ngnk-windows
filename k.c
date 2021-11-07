@@ -54,7 +54,7 @@ AX(_8,Q(n);P(n==1,x1(*a))P(n==2,x2(*a,a[1]))P(!xtt,i8(x,a,n))
  Ik=xK;P(n<k,prj(x,a,n))Xo(run(x,a,n))Xv(v8[xv](a,n))Xr(adv(x,a,n))
  Xp(P(xn+k>9,er8(a,n))Im=xn-1,j=0;Ab8;i(m,b[i]=xA[i+1]==PLH&&j<n?a[j++]:_R(xA[i+1]))I l=max(0,n-j);Mc(b+m,a+j,8*l);_8(xx,b,m+l))
  Xq(_1(xx,N(_8(xy,a,n))))P(n>k,er8(a,n))Xw(Ay=*a;AK(0<xv&&xv<4&&yK==2?1:ytF?yK:1,AW(xv,aV(tr,1,a))))et8(a,n))
-S A valS(I*a,Nn)_(I*k=gk;A*v=_V(gv);Nm=_n(gv);P(!n,am(aV(tS,_n(gv),k),mut(_R(gv))))
+S A valS(I*a,Nn)_(I*k=gk;A*v=gv;Nm=gn;P(!n,i(gn,_R(gv[i]))am(aV(tS,gn,k),aV(tA,gn,gv)))
  W(1,Li=fI(k,m,*a++);P(i<0,ev0())Ax=v[i];P(!--n,xR)P(!xtm,ed0())Ay=xy;x=xx;P(!xtS||!ytA,ed0())k=_V(x);v=_V(y);m=_n(k))0)
 A1(val,XS(xe(valS(xV,xn)))XC(x=str0(x);x(evs(xV)))P(xtc||xts,val(enl(x)))XmM(x(_R(xy)))
  XA(P(!xn,x)P(xn==1,fir(x))P(xn>9,ez1(x))x=mut(x);Ay=_8(xx,&xy,xn-1);AN(1,x);x(y))
@@ -70,7 +70,7 @@ S A set(Ax,Li,Ay/*1i1*/)_(Q(xr==1);XA(Az=xa;xa=z(y);ytt&&!ytF?sqz(x):x)
 S I stp(Li,Ax/*0*/,A**p)_(Ay=**p;P(!ytm,ed1(x))**p=y=mut(y);Az=yx;P(!ztS,ed1(x))Lj=fpI(&yx,xI[i+1]);
  z=yy;P(!ztA,ed1(x))yy=j==zn?zq(aa0()):mut(z);Q(_r(yy)==1);*p=(A*)_V(yy)+j;1)
 S A*pth(Ax/*1*/)_(Xt(pth(enl(x)))
- Lj=fI(gk,_n(gv),*xI);I(j<0,gk[j=_n(gv)]=*xI;_q(gv,xn>1?aa0():au))A*p=(A*)_V(gv)+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
+ Lj=fI(gk,gn,*xI);I(j<0,gk[j=gn]=*xI;gv[gn++]=xn>1?aa0():au)A*p=gv+j;i(xn-1,P(!stp(i,x,&p),(A*)0))x(0);p)
 A mnd(OA*a,In,AA*f)_(A*p=pth(*a);P(!p,mrn(n-1,a+1);0)Ab8;*b=*p;Mc(b+1,a+1,(n-1)*8);*p=au;*p=_R(N(f(b,n))))
 S AA(am8,Ax=*a;
  XT(Ay=a[1];
