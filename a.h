@@ -5,7 +5,6 @@
 #define   _(a...) {return({a;});}
 #define W(x,a...) while(x){a;}
 #define V(x,a...) TY(a)x=(a);
-#define U(x,a...) TY(x)x=a;
 #define B(x,a...) I(x,a;break)
 #define P(x,a...) I(x,_(a))
 #define I(x,a...) if(x){a;}
@@ -136,13 +135,14 @@ A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 #define ac(v) (Lt(tc)|(UC)(v))
 #define ai(v) (Lt(ti)|(UI)(v))
 #define as(v) (Lt(ts)|(UI)(v))
-#define VS U(v1,{sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out})\
-           U(v2,{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,dot,v0c,v1c,dex,com,dex,dex})\
-           U(v8,{er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,ins,amd,dmd,er8,er8,er8,er8,er8,er8})\
-           U(vc,{':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'})
-enum{      au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,UNQ,TYP,VAL,U0C,U1C,U2C,U3C,LAS,OUT,
-           av=Lt(tv),ADD,SUB,MUL,DVD,MOD,MNM,MXM,LTN,GTN,EQL,MTC,CAT,EXC,RSH,CUT,CST,QUE,AP1,DOT,V0C,V1C,V2C,COM,MKL,PLH,
-           aw=Lt(tw),PRG=PLH};
+#define VS \
+  A1*v1[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out};\
+  A2*v2[]={dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,dot,v0c,v1c,dex,com,dex,dex};\
+  AA*v8[]={er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,ins,amd,dmd,er8,er8,er8,er8,er8,er8};\
+  OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'};
+enum{au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,UNQ,TYP,VAL,U0C,U1C,U2C,U3C,LAS,OUT,
+     av=Lt(tv),ADD,SUB,MUL,DVD,MOD,MNM,MXM,LTN,GTN,EQL,MTC,CAT,EXC,RSH,CUT,CST,QUE,AP1,DOT,V0C,V1C,V2C,COM,MKL,PLH,
+     aw=Lt(tw),PRG=PLH};
 #define ND (D)(0./0.)
 #define WD __builtin_inf()
 #define NL (1ll<<63)

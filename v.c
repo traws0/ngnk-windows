@@ -38,7 +38,7 @@ A1(cL,XlL(x)Xzc(al(gl(x)))Xt(fir(N(cL(enl(x)))))XD(Ay=aL(xn);xe(cDL(xV,yV,yn);y)
 A1(cD,XdD(x)Xzc(ad(gl(x)))Xt(fir(N(cD(enl(x)))))x=N(cL(x));Ay=aD(xn);xe(cLD(xV,yV,yn);y))
 A1(cS,XsS(x)XC(x=str0(x);x(syP(xV)))Xc(as(xv))pen(x,cS))
 A1(pI,Xc(pI(enl(x)))XC(x=str0(x);Qs=xV;P(!*s,x(_R(cn[tl])))Lv=pl(&s);x(*s?_R(cn[tl]):az(v)))pen(x,pI))
-U(cT,{[tA]=blw,cB,cH,cI,cL,cD,cC,cS})
+A1*cT[]={[tA]=blw,cB,cH,cI,cL,cD,cC,cS};
 A1(csti,XD(sqzZ(cL(x)))Xd(az(gd(x)))XC(sqzZ(cH(x)))Xc(ai(xv))XzZ(x)et1(x))
 A2(cst,P(xtS||ytmMA,eac2f(x,y,cst))
  Xz(YC(K("{y@(!x)+(x<0)*#y}",x,y))Yc(cst(x,enl(y)))et2(x,y))
