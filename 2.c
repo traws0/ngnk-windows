@@ -78,15 +78,20 @@ A3(arf,Q(ztv)Q(zv<11)Q(!x||xtzdc)Q(ytZDC)CH(zv,&dexf,ammf,subf,ammf,___f,___f,am
 
 #define hs(v,T) S V v##s##T(L a,V*RE q,V*RE s,Nn){T*b=q,*r=s,c=a;i(PD(n,b),c=r[i]=v##o##T(c,b[i]));}
 hs(mxm,B)hs(mxm,H)hs(mxm,I)hs(mxm,L)
-S A3(___s,Nn=yn,i=!x;Au;I(i,x=ii(y,0);u=enl(xR))E(u=oA)W(i<n,x=z2(x,ii(y,i++));B(!x)uq(xR))I(x,x(0))y(u))
+S A3(___s,Ni=!x;Au=i?x=ii(y,0),enl(xR):oA;Nn=yn;W(i<n,x=z2(x,ii(y,i++));P(!x,y(u))uq(xR))x(y(u)))
 S A3(dexs,x?x(y):y)
+S A3(adds,Lv=x?gl_(x):0;Nn=yn;Au=atn(yt,n);
+ YB(i(n,ub=v+=yb;P(v-(B)v,adds(x,cH(u(y)),z)))y(x?x(u):u))
+ YH(i(n,uh=v+=yh;P(v-(H)v,adds(x,cI(u(y)),z)))y(x?x(u):u))
+ YI(i(n,ui=v+=yi;P(v-(I)v,adds(x,cL(u(y)),z)))y(x?x(u):u))
+    i(n,ul=v+=yl                             )y(x?x(u):u))
 S A3(mxms,
  P((!x||xtz)&&ytZ,Lv=x?gl(x):-WL,l=-1ll<<8*yW-1,h=~l;I(v<=l||h<=v,P(v>=0,y(rshN(yn,az(v))))v=v<0?l:h)
   Au=yr==1?y:atn(yt,yn);CH(yt-tB,&mxmsB,mxmsH,mxmsI,mxmsL)(v,yV,uV,un);y-u?y(u):u)
  ___s(x,y,z))
 SN A1(inv,x=mut(x);Nn=xn*xW;i(PD(n,xC),xc^=-1)x)
 S A3(mnms,P((!x||xtz)&&ytZ,inv(mxms(x?az(-1-gl(x)):0,inv(y),MXM)))___s(x,y,z))
-A3(ars,Q(ztv)Q(zv<11)Q(!x||xtzdc)Q(ytZDC)CH(zv,&dexs,___s,___s,___s,___s,___s,mnms,mxms,___s,___s,___s)(x,y,z))
+A3(ars,Q(ztv)Q(zv<11)Q(!x||xtzdc)Q(ytZDC)CH(zv,&dexs,adds,___s,___s,___s,___s,mnms,mxms,___s,___s,___s)(x,y,z))
 
 #define hp(v,T,R) S I v##p##T(OV*RE p,OV*RE q,V*RE s,Nn)_(O T*a=p,*b=q;R*r=s;T c=*a;i(PD(n,b),T d=b[i];r[i]=v##o##T(b[i],c);c=d);0)
 hp(mnm,B,B)hp(mnm,H,H)hp(mnm,I,I)hp(mnm,L,L) hp(ltn,B,B)hp(ltn,H,B)hp(ltn,I,B)hp(ltn,L,B)
