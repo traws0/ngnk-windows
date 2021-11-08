@@ -87,7 +87,7 @@ L ov_(Qs,Nn)_(os(s);write(2,"           ",max(1,9-Sn(s)));Cv[17];
 C*h8(C*s,Lv)_(i(16,Cc=v>>4*(15-i)&15;*s++="0W"[9<c]+c)s)
 A1(hx,hb(s=h8(s,x);hS(" U",xU);Ct=xC[-15];hs(" t");I(c3(1,t,tn),*s++=TS[t])E(s=sl(s,t))
  hS(" r",xr);hS("=",xm);hS(" n",xn)i(min(5,xZ/8),hs(" ");s=h8(s,xl)))x)
-AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));i(gn,_m(gv[i])++)_m(cns)++;
+AQ(cmdm,obs(xm=0);xys(I(!ytP,_m(y)++));i(gn,Ax=gv[i];I(!xtP,xm++))_m(cns)++;
 // In=0;obs(hx(x);n++);hb(hS("nObjs:",n))
 // hb(hs("mapped regions:"));mms(hb(s=h8(s,(L)p);hs("-");s=h8(s,(L)q);hS(" F",*(C*)p);hS(" N",q-p)))
  obs(I(!c3(tA,xt,tn-1)&&xr,hb(hs("bad type:"));hx(x)));
