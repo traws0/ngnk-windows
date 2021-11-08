@@ -28,8 +28,8 @@ A2(fnd,
  P(xtT&&!xtA&&!ytmMA,
   P(xtZ&&ytzZ||xt==TT[yt],
    P(Tz[xt]<2&&xn>99&&yN>99,sdf(x,y))
-   V(f,CH(Tz[xt],&fB,fH,fI,fL))Yt(x(az(f(xV,xn,gl(y)))))
-   Az=aL(yn);Ii=Tz[yt];xe(ye(CH(i,&FB,FH,FI,FL)(xV,xn,f,yV,yn,zV);z)))
+   V(f,T(&fB,fH,fI,fL)[Tz[xt]])Yt(x(az(f(xV,xn,gl(y)))))
+   Az=aL(yn);Ii=Tz[yt];xe(ye(T(&FB,FH,FI,FL)[i](xV,xn,f,yV,yn,zV);z)))
   Az=cn[tl];zR;x(y(ytt?z:rshN(yN,z))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=urnk(x),l=urnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear2(x,y,QUE))er2(x,y))

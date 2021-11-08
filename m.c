@@ -45,7 +45,7 @@ SN A cmdfv(Ii)_(K("{`0:($!h),'\":\",'`k'. h:(&x=^`o`p`q`r`u`v`w?@'h)#h:``repl_.:
 AQ(cmdf,cmdfv(0))
 AQ(cmdv,cmdfv(1))
 AQ(evs,P(*s-'\\',Ax=N(cplprs(s));x(run(x,0,0)))Cc=s[1],d=s[2];P(c=='c'&&d=='d'&&(!s[3]||s[3]==32),cmdcd(s+3))
- P(!d||d==32||d==':',CH(si("\\flmtv",c),&cmdX,cmdf,cmdl,cmdm,cmdt,cmdv,en0)(s+2+(d==32)))
+ P(!d||d==32||d==':',T(&cmdX,cmdf,cmdl,cmdm,cmdt,cmdv,en0)[si("\\flmtv",c)](s+2+(d==32)))
  K("0x0a\\`x(,,\"/bin/sh\"),,:",aCz(s+1)))
 
 I gn,gk[256];A gv[256],cns,ce[tn],cn[tn],ci[2][5];Q*argv,*env;

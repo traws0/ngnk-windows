@@ -10,13 +10,13 @@
 #define I(x,a...) if(x){a;}
 #define Y(x,a...) switch(x){a}
 #define C(x,a...) case x:return({a;});
+#define T(x,a...) (TY(x)[]){x,a}
 #define   J(a...) else I(a)
 #define   E(a...) else{a;}
 #define   A(a...) (A[]){a}
 #define   i(a...) ij(i,a)
 #define   j(a...) ij(j,a)
 #define ij(i,n,a...) for(TY(n)n_=(n),i=0;i<n_;i++){a;}
-#define CH(x,y,a...) (TY(y)[]){y,a}[x] //choose
 #define O const
 #define S static
 #define SZ sizeof
@@ -151,7 +151,7 @@ enum{au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,U
 #define NL (1ll<<63)
 #define WL (~NL)
 #define Ss(a...) S O C s[][4]={a};
-#define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,CH(i,&f)(y)));ed1(y);})
+#define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,T(&f)[i](y)));ed1(y);})
 #define K(s,a...) ({S A f;K0(&f,s,A(a),ZZ(A(a)));})
 
 #define EA h(c,compile)h(d,domain)h(i,index)h(l,length)h(n,nyi)h(o,io)h(p,parse)h(r,rank)h(s,stack)h(t,type)h(v,value)h(z,limit)
