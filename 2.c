@@ -81,8 +81,12 @@ hs(mxm,B)hs(mxm,H)hs(mxm,I)hs(mxm,L)
 S A3(___s,Ni=!x;Au=i?x=ii(y,0),enl(xR):oA;Nn=yn;W(i<n,x=z2(x,ii(y,i++));P(!x,y(u))uq(xR))x(y(u)))
 S A3(dexs,x?x(y):y)
 S A3(adds,L w=x?gl(x):0;Nn=yn;
- W(1,I b=1;Lv=w;Ct=yt;Au=atn(t,n);I(t==tL,i(n,ul=v+=yl))J(t==tI,i(n,ui=v+=yi;B(v-(I)v,b=0)))
-  J(t==tH,i(n,uh=v+=yh;B(v-(H)v,b=0)))J(t==tB,i(n,ub=v+=yb;B(v-(B)v,b=0)))E(Q(0))P(b,y(u))y=cT[t+1](u(y)))0)
+ W(1,I b=1;Lv=w;Ct=yt;Au=atn(t,n);
+  I(t==tB,i(n,ub=v+=yb;B(v-(B)v,b=0)))
+  J(t==tH,i(n,uh=v+=yh;B(v-(H)v,b=0)))
+  J(t==tI,i(n,ui=v+=yi;B(v-(I)v,b=0)))
+  E(i(n,ul=v+=yl))
+  P(b,y(u))y=cT[t+1](u(y)))0)
 S A3(muls,L w=x?gl(x):1;Nn=yn;
  W(1,I b=1;Lv=w;Ct=yt;Au=atn(t,n);I(t==tL,i(n,ul=v*=yl))J(t==tI,i(n,ui=v*=yi;B(v-(I)v,b=0)))
   J(t==tH,i(n,uh=v*=yh;B(v-(H)v,b=0)))J(t==tB,i(n,ub=v*=yb;B(v-(B)v,b=0)))E(Q(0))P(b,y(u))y=cT[t+1](u(y)))0)
@@ -104,17 +108,22 @@ S A3(cmpp,Ii=z-LTN,j=Tz[yt];Lv=gl(x);x=aB(yn);Cc=tZ(v)-tB<=j?2:!i?v>0:i==1?v<0:0
  ye(T(&ltnpB,ltnpH,ltnpI,ltnpL,gtnpB,gtnpH,gtnpI,gtnpL,eqlpB,eqlpH,eqlpI,eqlpL)[i<<2|j](&v,yV,xV,yn);I(c-2,*xB=c)x))
 A3(arp,Q(ztv)Q(zv<11)Q(xtzc)Q(ytZC)T(&dexp,___p,___p,___p,___p,modp,mmmp,mmmp,cmpp,cmpp,cmpp)[zv](x,y,z))
 
-#define ha(v,T) S I v##a##T(V*RE p,Nn,O L*RE q,Lm,O V*RE r,I d)_(T*a=p;O T*b=r;i(m,Lj=q[i];P(!in(j,n),-1)a[j]=v##o##T(a[j],b[d*i]))0)
+#define ha(v,T)\
+ S V v##a##T##L(V*RE p,Nn,OV*RE q,Nm,O V*RE r,N d){T*a=p;O L*b=q;O T*c=r;i(m,Lj=b[i];a[j]=v##o##T(a[j],c[d*i]))}\
+ S V v##a##T##I(V*RE p,Nn,OV*RE q,Nm,O V*RE r,N d){T*a=p;O I*b=q;O T*c=r;i(m,Ij=b[i];a[j]=v##o##T(a[j],c[d*i]))}
 ha(dex,B)ha(dex,H)ha(dex,I)ha(dex,L)
                            ha(add,L)
                            ha(sub,L)
                            ha(mul,L)
 ha(mnm,B)ha(mnm,H)ha(mnm,I)ha(mnm,L)
 ha(mxm,B)ha(mxm,H)ha(mxm,I)ha(mxm,L)
-S TY(&mxmaB)araT[][11]={
- {dexaB,    0,    0,    0,0,0,mnmaB,mxmaB},
- {dexaH,    0,    0,    0,0,0,mnmaH,mxmaH},
- {dexaI,    0,    0,    0,0,0,mnmaI,mxmaI},
- {dexaL,addaL,subaL,mulaL,0,0,mnmaL,mxmaL}};
+S TY(&mxmaBL)araT[][11][2]={
+ {{dexaBI,dexaBL},{             },{             },{             },{},{},{mnmaBI,mnmaBL},{mxmaBI,mxmaBL}},
+ {{dexaHI,dexaHL},{             },{             },{             },{},{},{mnmaHI,mnmaHL},{mxmaHI,mxmaHL}},
+ {{dexaII,dexaIL},{             },{             },{             },{},{},{mnmaII,mnmaIL},{mxmaII,mxmaIL}},
+ {{dexaLI,dexaLL},{addaLI,addaLL},{subaLI,subaLL},{mulaLI,mulaLL},{},{},{mnmaLI,mnmaLL},{mxmaLI,mxmaLL}}};
 A4(ara,/*1111*/Q(xtZ)Q(ytZ)Q(ztv)Q(zv<11)Q(utzZ)P(utT&&yn-un,el2(x(y),u))I(ADD<=z&&z<=MUL,/*todo*/x=cL(x))
- x=mut(x);y=cL(y);Ny(sup(&x,&u));ye(ue(araT[xt-tB][zv](xV,xn,yV,yn,utP?&u:uV,utT)))+1?x:ei1(x))
+ x=mut(x);Ny(sup(&x,&u));Nn=xn;
+ I(ytL,    i(yn,P(yl>=n,ei2(x(y),u))))
+ E(y=cI(y);i(yn,P(yi>=n,ei2(x(y),u))))
+ ye(ue(araT[xt-tB][zv][ytL](xV,xn,yV,yn,utP?&u:uV,utT);x)))
