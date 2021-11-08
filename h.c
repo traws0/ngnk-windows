@@ -24,7 +24,7 @@ A2(cat,Xt(cat(enl(x),y))Yt(cat(x,enl(y)))
  P(xtmM&&ytmM,P(xtm&&ytm,Az=kv(&y);K("@[;;:;]",x,y,z))P(!mtc_(xx,yx),ed2(x,y))
               Az=eac2f(_R(xy),_R(yy),cat);x(y(z?aM(_R(xx),z):0)))
  P(!yn,y(x))P(!xn,x(y))I(xtZ&&ytzZ,N(sup(&x,&y)))I(xt-yt,x=blw(x);y=blw(y))
- Nm=xn,n=yn;x=room(m+n,x);Mc(xV+m*xW,yV,n*xW);y(!ytA?0:yr-1?mRa(y):AN(0,y));x)
+ Nm=xn,n=yn,w=xW;x=room(m+n,x);Mc(xV+m*w,yV,n*w);I(ytA,yr-1?mRa(y):AN(0,y))y(x))
 A2(apd,Q(xtMT);
  XM(P(!ytm||!mtc_(xx,yx),apd(Ny(blw(x)),y))x=mut(x);Az=xy=mut(xy);i(zn,_q(za,ii(yy,i)))y(x))
  Nn=xn;P(!n,enl(x(y)))
