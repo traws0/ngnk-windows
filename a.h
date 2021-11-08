@@ -128,6 +128,9 @@ enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,
 #define _tz(x) c3(ti,_t(x),tl)                      // intatom?
 #define _v(x) (I)(x)                                //value(i32)
 #define _w(x) _C(x)[-14]                            //adverb(for tr)
+#define _U(x) _C(x)[-16]                            //bucket
+#define _X(x) _A(x)[-3]                             //next
+#define _Z(x) ((ZA<<_U(x))-ZA)                      //capacity
 #define _e(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
 A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 

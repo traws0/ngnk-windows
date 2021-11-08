@@ -4,9 +4,6 @@
 #ifndef MAP_NORESERVE
  #define MAP_NORESERVE 0
 #endif
-#define xU xC[-16]       //bucket
-#define xX xA[-3]        //next
-#define xZ ((ZA<<xU)-ZA) //capacity
 S I nm;S ST{V*p;Ln;}m[8];SN A0(oom,die("oom\n"))
 S V*mm(V*p,Nn,If)_(
  p=mmap(p,n,PROT_READ|PROT_WRITE,MAP_NORESERVE|(f>0&&!p?MAP_SHARED:MAP_PRIVATE)|(p?MAP_FIXED:0)|(f<0?MAP_ANON:0),f,0);
