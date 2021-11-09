@@ -54,12 +54,7 @@
 #define rot(x,y) ({TY(x) x_=(x);TY(y) y_=(y);y?x_<<y_|x_>>SZ(x)*8-y_:x;})
 #define in(i,n) ((i)<(UL)(n))
 #define c3(x,y,z) ((y)-(x)<=(UI)((z)-(x)))
-#define c01(c) c3('0',c,'1')
 #define c09(c) c3('0',c,'9')
-#define cAF(c) c3('A',c,'F')
-#define caf(c) c3('a',c,'f')
-#define cAf(c) c3('a',(c)|32,'f')
-#define cAZ(c) c3('A',c,'Z')
 #define cAz(c) c3('a',(c)|32,'z')
 #define cA9(c) (cAz(c)||c09(c))
 
@@ -91,7 +86,6 @@ D gd(A);N strlen(Q),_N(A);C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);char*strchr(O cha
 I _K(A),qD(D,D),eS(A,I),js_eval(C*,I,C*,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpB(A*,B),fpH(A*,H),
  fpI(A*,I),fpL(A*,L);
-TD I IC(C);IC c09,caf,cAz,cA9,cAZ,cAF,cAf;
 EX I gn,gk[];EX A gv[],cns,ce[],cn[],ci[2][5];EX A1*v1[],*cT[];EX A2*v2[];EX AA*v8[];EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[];
 
 //            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  / 2:
@@ -107,30 +101,30 @@ enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,
 //tagged ptr bits (t=type,v=value,o=srcoffset,x=ptr):
 // tttttttt........................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv tc,ti,tu,tv,tw
 // tttttttt................oooooooovvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv ts
-// ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 tA,tC,tB,tH,tI,tL,tD,tS,tM,tm,tl,td,to,tp,tq,tr
 // tttttttt........xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx te
-#define _V(x) (V*)(x)                               //ptr to data
-#define _W(x) TZ[_t(x)]                             //item size in bytes
-#define _k(x) _C(x)[-13]                            //arity(for funcs)
-#define _n(x) ((N*)_V(x))[-1]                       //length
+// ................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00000 other
+#define _V(x) (V*)(x)          //ptr to data
+#define _W(x) TZ[_t(x)]        //item size in bytes
+#define _k(x) _C(x)[-13]       //arity(for funcs)
+#define _n(x) ((N*)_V(x))[-1]  //length
 #define _o(x) (_ts(x)?(x)>>32:_tP(x)?0u:_B(x)[-13]) //srcoffset
-#define _q(x,y) (x=apd(x,y))                        //append
-#define _r(x) ((I*)_V(x))[-3]                       //refcount
-#define _t(x) ({Ct=_t0(x);t?t:_t1(x);})             //type
-#define _t0(x) ((x)>>56)                            //type(as tag)
-#define _t1(x) _C(x)[-15]                           //type(as hdr field)
-#define _tF(x) TF(_t(x))                            // func?
-#define _tP(x) TP(_t(x))                            // packed?
-#define _tR(x) (Tz[_t(x)]==4)                       // ref?
-#define _tT(x) (_t(x)<tM)                           // list?
-#define _tZ(x) c3(tB,_t(x),tL)                      // intlist?
-#define _tt(x) (_t(x)>tm)                           // atom?
-#define _tz(x) c3(ti,_t(x),tl)                      // intatom?
-#define _v(x) (I)(x)                                //value(i32)
-#define _w(x) _C(x)[-14]                            //adverb(for tr)
-#define _U(x) _C(x)[-16]                            //bucket
-#define _X(x) _A(x)[-3]                             //next
-#define _Z(x) ((ZA<<_U(x))-ZA)                      //capacity
+#define _q(x,y) (x=apd(x,y))   //append
+#define _r(x) ((I*)_V(x))[-3]  //refcount
+#define _t(x) ({Ct=_t0(x);t?t:_t1(x);}) //type
+#define _t0(x) ((x)>>56)       //type(tag)
+#define _t1(x) _C(x)[-15]      //type(hdr)
+#define _tF(x) TF(_t(x))       // func?
+#define _tP(x) TP(_t(x))       // packed?
+#define _tR(x) (Tz[_t(x)]==4)  // ref?
+#define _tT(x) (_t(x)<tM)      // list?
+#define _tZ(x) c3(tB,_t(x),tL) // intlist?
+#define _tt(x) (_t(x)>tm)      // atom?
+#define _tz(x) c3(ti,_t(x),tl) // intatom?
+#define _v(x) (I)(x)           //value
+#define _w(x) _C(x)[-14]       //adverb(for tr)
+#define _U(x) _C(x)[-16]       //bucket
+#define _X(x) _A(x)[-3]        //next
+#define _Z(x) ((ZA<<_U(x))-ZA) //capacity
 #define _e(x,a...) ({A t_=m0(x);TY(({a;}))r_=({a;});DBG(x=0);m1(t_);r_;}) //two-phase free()
 A1 _R;A AT(UL,A),AV(UL,A),AW(C,A),AK(C,A),AO(UC,A),AN(N,A);
 
