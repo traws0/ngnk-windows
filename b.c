@@ -52,12 +52,12 @@ S V mrn0(A*a,Nn){i(n,I(a[i],mr(a[i])))}
 #define p(x) ({A x_=(x);Q(x_)Q(t<s)*--s=x_;})
 #define q() ({Q(s<t+ns)Q(*s)Ax=*s;*s++=0;x;})
 AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))
- UC*b=_V(xy),c;I ns=*b++,nl=_n(xA[3]);A t[ns+nl],*s=t+ns,*l=s;Mc(l,a,n*SZ x);Ms(l+n,0,(nl-n)*SZ*l);
+ UC*b=_V(xy),c;I ns=*b++,nl=_n(xA[3]);A t[ns+nl],*s=t+ns,*l=s;Mc(l,a,n*SZ x);Ms(l+n,0,8*(nl-n));
  W((c=*b++),
   I(c>=bc,p(_R(xA[c-bc+4])))
   J(c>=bi,
-   I(c==bi,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dm8(A(x,yR,av+*b++,z),4);B(!*v,y(0))*s=dot(_R(*v),y);B(!*s))
-   J(c==bI,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dm8);B(!w,y(0))*s=dot(w,y);B(!*s))
+   I(c==bi,A*v=l+*b++,x=*v?*v:au,y=q(),z=*s;*v=*s=0;*v=dm8(A(x,yR,av+*b++,z),4);B(!*v,mr(y))*s=dot(_R(*v),y);B(!*s))
+   J(c==bI,Ax=q(),y=q(),z=*s;*s=0;A w=mnd(A(x,yR,av+*b++,z),4,dm8);B(!w,mr(y))*s=dot(w,y);B(!*s))
    J(c==bm,A*v=l +*b++;            *s=*v=v2[*b++](*v,*s);B(!*s)_R(*s))
    J(c==bM,A*v=gv+*b++;B(!*v,ev0())*s=*v=v2[*b++](*v,*s);B(!*s)_R(*s))
    J(c==bG,A*v=gv+*b++;B(!*v,ev0())*--s=_R(*v))
