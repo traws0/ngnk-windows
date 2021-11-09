@@ -144,8 +144,6 @@ enum{au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,U
 #define WD __builtin_inf()
 #define NL (1ll<<63)
 #define WL (~NL)
-#define Ss(a...) S O C s[][4]={a};
-#define Sf(x,y,f...) ({Iv=xv;i(SZ(s)/4,P(((I*)(V*)s)[i]==v,T(&f)[i](y)));ed1(y);})
 #define K(s,a...) ({S A f;K0(&f,s,A(a),ZZ(A(a)));})
 
 #define EA h(c,compile)h(d,domain)h(i,index)h(l,length)h(n,nyi)h(o,io)h(p,parse)h(r,rank)h(s,stack)h(t,type)h(v,value)h(z,limit)
