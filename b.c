@@ -43,10 +43,10 @@ S A1(cf,XA(P(xx==MKL,i(xn,Ay=xa;YsSA(x))a1(drp(1,x)))
 S I mxs(Ii,I s)_(I r=s;W(1,UC c=b[i++];Q(s>=0)r=max(r,s);P(!c,r)P(c==bz,i++;s--;max(r,max(mxs(i,s),mxs(i+b[i-1],s))))
  I(c>=bc||c==bo||c-bg<16u,s++)J(c-bv<32u||c==bp,s--)J(c==bm,i+=2)J(c==bi,i+=2;s--)J(c==bM,i+=2)J(c==bI,i++;s-=2)
  J(c==bL,s+=b[i++])J(c==bl||c==ba||c==bP,s-=b[i++]-1)J(c==bj,i+=b[i])J(c==b4,s-=3)J(c==bG,i++;s++)J(c==bS,i++))r)
-A3(cpl,/*src,ast,loc*/y=cf(y);P(!y,x(z(0)))
+A3(cpl,/*src,ast,loc*/Ik=zn;y=cf(y);P(!y,x(z(0)))
  nb=1;fl=z;fc=a1(au);Ms(lu,-1,SZ lu);I r=cr(y);y(0);I o=0;h(bu);P(r-OK,eS(xR,r);ec0())
  P(_n(fl)>8||nb>=SZ b-1,eS(xR,0);ez0())i(8,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))
- *b=mxs(1,0);*m=-1;AK(0,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
+ *b=mxs(1,0);*m=-1;AK(k,AT(to,cat(aV(tA,4,A(x,aCn(b,nb),aCn(m,nb),fl)),fc))))
 
 S V mrn0(A*a,Nn){i(n,I(a[i],mr(a[i])))}
 #define p(x) ({A x_=(x);Q(x_)Q(t<s)*--s=x_;})
