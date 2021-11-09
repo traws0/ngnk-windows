@@ -9,7 +9,7 @@ S UC b[256],m[256];S A fl,fc;S I nb,lu[8];S A1 cr;
 SN I lc(Ax/*1*/,I o)_(Ay=fc;Nn=yn,i=0;W(i<n,B(mtc_(x,ya),x(0))i++)I(i==n,_q(fc,x))i+=bc;P(i-(UC)i,ez0())h(i);1)
 SN I ig(Iv)_(Li=fI(gk,gn,v);P(i>=0,i)P(gn-(UC)gn,-1)gk[gn]=v;gv[gn]=0;gn++)
 SN I il(Iv)_(Li=fAI(fl,v);P(i>=0,lu[i]=nb;i)-1)
-S A2(cl,/*0*/I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
+S A2(cl,/*00*/I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
  Ys(P(xx==av&&_n(fl),Li=fpI(&fl,yv);P(i>15,ez0())lu[i]=nb;h(bs|i)OK)
   Ii=il(yv);P(i>=0,h(bm)h(i)h(v)OK)i=ig(yv);P(i<0,ez0())P(!v,h(bS)h(i)OK)h(bM)h(i)h(v)OK)
  YS(hc(av+v)hc(au)hc(yR)h(b4)OK)
