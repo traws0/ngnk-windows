@@ -48,7 +48,7 @@ C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(cT[t](x));*q=y=Nx(cT[t]
 S A ar2(Ax,Ay,Az)_(Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,v2[zv]))N(sup(&x,&y));Ik=xtT<<1|ytT;
  P(k==3&&xn-yn,el2(x,y))Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;V(f,aro[k][TT[t]-tB][zv-4]);
  I(t>tD,t+=tD-td)I(z>MXM&&t==tD,t=tI)I(!k,t+=tc-tC;P(TP(t),Ii=0;f(a,b,&i,1);x(y(az(i)))))
- Az=xt==t&&xr==1?x:yt==t&&yr==1?y:atn(t,k-1?xn:yn);f(a,b,zV,zn);x-z?x(y-z?y(z):z):y(z))
+ Az=xt==t&&xr==1?x:yt==t&&yr==1?y:an(t,k-1?xn:yn);f(a,b,zV,zn);x-z?x(y-z?y(z):z):y(z))
 S ALA(ext,XMT(x)rshN(n,xtm?enl(x):x))
 A2(dct,P(rnk(x)<0,ed2(x,y))x=ext(yN,x);y=ext(xN,y);(xN-yN?el2:am)(x,y))
 A2(dex,mr(x);y)
@@ -81,18 +81,18 @@ hs(mxm,B)hs(mxm,H)hs(mxm,I)hs(mxm,L)
 S A3(___s,Ni=!x;Au=i?x=ii(y,0),enl(xR):oA;Nn=yn;W(i<n,x=z2(x,ii(y,i++));P(!x,y(u))uq(xR))x(y(u)))
 S A3(dexs,x?x(y):y)
 S A3(adds,L w=x?gl(x):0;Nn=yn;
- W(1,I b=1;Lv=w;Ct=yt;Au=atn(t,n);
+ W(1,I b=1;Lv=w;Ct=yt;Au=an(t,n);
   I(t==tB,i(n,ub=v+=yb;B(v-(B)v,b=0)))
   J(t==tH,i(n,uh=v+=yh;B(v-(H)v,b=0)))
   J(t==tI,i(n,ui=v+=yi;B(v-(I)v,b=0)))
   E(i(n,ul=v+=yl))
   P(b,y(u))y=cT[t+1](u(y)))0)
 S A3(muls,L w=x?gl(x):1;Nn=yn;
- W(1,I b=1;Lv=w;Ct=yt;Au=atn(t,n);I(t==tL,i(n,ul=v*=yl))J(t==tI,i(n,ui=v*=yi;B(v-(I)v,b=0)))
+ W(1,I b=1;Lv=w;Ct=yt;Au=an(t,n);I(t==tL,i(n,ul=v*=yl))J(t==tI,i(n,ui=v*=yi;B(v-(I)v,b=0)))
   J(t==tH,i(n,uh=v*=yh;B(v-(H)v,b=0)))J(t==tB,i(n,ub=v*=yb;B(v-(B)v,b=0)))E(Q(0))P(b,y(u))y=cT[t+1](u(y)))0)
 S A3(subs,neg(adds(neg(x?x:mul(ai(2),ii(y,0))),y,0)))
 S A3(mxms,P((!x||xtz)&&ytZ,Lv=x?gl(x):-WL,l=-1ll<<8*yW-1,h=~l;I(v<=l||h<=v,P(v>=0,y(rshN(yn,az(v))))v=v<0?l:h)
-            Au=yr==1?y:atn(yt,yn);T(&mxmsB,mxmsH,mxmsI,mxmsL)[yt-tB](v,yV,uV,un);y-u?y(u):u)___s(x,y,z))
+            Au=yr==1?y:an(yt,yn);T(&mxmsB,mxmsH,mxmsI,mxmsL)[yt-tB](v,yV,uV,un);y-u?y(u):u)___s(x,y,z))
 SN A1(inv,x=mut(x);Nn=xn*xW;i(PD(n,xC),xc^=-1)x)
 S A3(mnms,P((!x||xtz)&&ytZ,inv(mxms(x?az(-1-gl(x)):0,inv(y),MXM)))___s(x,y,z))
 A3(ars,Q(ztv)Q(zv<11)Q(!x||xtzdc)Q(ytZDC)T(&dexs,adds,subs,muls,___s,___s,mnms,mxms,___s,___s,___s)[zv](x,y,z))

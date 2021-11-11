@@ -6,16 +6,16 @@
 TD size_t(*F1)(OV*,V*,N);NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])
 
 A pen(Ax,A1*f)_(XmMA(eac1f(x,f))et1(x))
-#define FX(a...) ({Ay=xr-1?atn(xt,xn):x;{a;}x-y?x(y):y;})
+#define FX(a...) ({Ay=xr-1?an(xt,xn):x;{a;}x-y?x(y):y;})
 A1(neg,XmMA(eac1f(x,neg))Xzc(az(-gl(x)))Xd(ad(-gd(x)))XC(neg(cH(x)))
- XZD(S O F1 f[]={negB,negH,negI,negL,negD};Nn=xn;Ay=xr>1?atn(xt,n):x;Nm=f[xt-tB](xV,yV,n);
+ XZD(S O F1 f[]={negB,negH,negI,negL,negD};Nn=xn;Ay=xr>1?an(xt,n):x;Nm=f[xt-tB](xV,yV,n);
   I(m<n,I(x-y,x=wdn(x,m,n,n-m);y=wdn(y,0,m,n))E(x=y=wdn(y,0,n,n))N mw=m*yW;f[xt-tB](xV+(x-y?0:mw),yV+mw,n-m))x-y?x(y):y)
  et1(x))
 A1(not,XmMA(eac1f(x,not))XF(x(ai(x==au)))eql(xtsS?as(0):ai(0),x))
 A1(nul,XmMA(eac1f(x,nul))XF(x(ai(x==au)))eql(_R(cn[xt]),x))
 
 A1(flr,Xc(fir(flr(enl(x))))XC(Az=K("`c$@[!256;65+!26;+;32]");FX(i(PD(xn,xC),yc=zC[xc])))
- XdD(Ay=atn(xt+tl-td,xn);xe(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))XsS(cS(flr(str(x))))XzZ(x)XmMA(eac1f(x,flr))et1(x))
+ XdD(Ay=an(xt+tl-td,xn);xe(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))XsS(cS(flr(str(x))))XzZ(x)XmMA(eac1f(x,flr))et1(x))
 
-#define h(k,f) A1(k,XdD(Ay=xr-1?atn(xt,xn):x;i(PD(xn,xD),yd=f(xd));x-y?x(y):y)XmMA(eac1f(x,k))k(N(cD(x))))
+#define h(k,f) A1(k,XdD(Ay=xr-1?an(xt,xn):x;i(PD(xn,xD),yd=f(xd));x-y?x(y):y)XmMA(eac1f(x,k))k(N(cD(x))))
 h(ksin,sin)h(kcos,cos)h(klog,log)h(kexp,exp)h(sqr,__builtin_sqrt)

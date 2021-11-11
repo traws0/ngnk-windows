@@ -27,7 +27,7 @@ S A2(i1,/*01*/
  YA(ear2(xR,y,AP1))
  I(!ytL&&!ytI,y=N(cI(y)))
  Nn=yn;P(xtA||xtM,Az=oA;I(ytL,i(n,zq(io(x,yl))))E(i(n,zq(io(x,yi))))y(z))
- Az=xtL&&ytL&&yr==1?y:atn(xt,n);
+ Az=xtL&&ytL&&yr==1?y:an(xt,n);
  Lm=T(&iBI,iHI,iII,jLI,iDI,iCI,iSI,iBL,iHL,iIL,jLL,iDL,iCL,iSL)[xt-tB+7*ytL](xV,xn,yV,zV,n);
  I(m<n,z=z(aL(n));T(&jBI,jHI,jII,jBL,jHL,jIL)[xt-tB+3*ytL](xV,xn,yV,zV,n))
  y-z?y(z):z)

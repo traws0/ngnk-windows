@@ -26,7 +26,7 @@ A adm(Ax,Ay,Iv)_(
  P(!k,Xd(ad(v?gd(x)*gd(y):gd(x)+gd(y)))az(v?gl(x)*gl(y):gl(x)+gl(y)))
  I(k==2||(k==3&&xr==1),SWP(x,y))
  S O TY(&abB)f[][2][5]={{{abB,ahH,aiI,alL,adD},{aBB,aHH,aII,aLL,aDD}},{{mbB,mhH,miI,mlL,mdD},{mBB,mHH,mII,mLL,mDD}}};
- Nn=yn;P(k==3&&xn-n,el2(x,y))Az=yr-1?atn(yt,n):y;Lm=f[v][k==3][yt-tB](xtP?(V*)&x:xV,yV,zV,n);
+ Nn=yn;P(k==3&&xn-n,el2(x,y))Az=yr-1?an(yt,n):y;Lm=f[v][k==3][yt-tB](xtP?(V*)&x:xV,yV,zV,n);
  I(m<n,I(k-3,x=cT[xt+1+tC-tc](x))E(x=wdn(x,m,n,n-m))
        I(y-z,y=wdn(y,m,n,n-m);z=wdn(z,0,m,n))E(y=z=wdn(z,0,n,n))
        N l=m*zW;f[v][k==3][yt-tB](xtP?(V*)&x:xV,yV+(y-z?0:l),zV+l,n-m))
