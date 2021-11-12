@@ -7,7 +7,7 @@ enum{bu,bv=32,bs=64,bg=72,bd=80,ba=88,bP,bi,bx,bI,bX,bm,bM,bG,bS,bl,bL,bz,bj,bA,
 #define Nl(a...) {I r=cl(a);P(r-OK,r);}
 #define fl uA[3]
 S A u;S UC*b,*m;S I nb,lu[8];S A cr(A,I);
-SN I lc(Ax/*1*/,I o)_(Ay=u;Nn=yn,i=4;W(i<n,B(mtc_(x,ya),x(0))i++)I(i==n,uq(x))i+=bc-4;P(i-(UC)i,ez0())h(i);1)
+SN I lc(Ax/*1*/,I o)_(Ay=u;Nn=yn,i=4;W(i<n,B(mtc_(x,ya),x=x(0))i++)I(x,uq(x))h(i+bc-4);1)
 SN I ig(Iv)_(Li=fI(gk,gn,v);P(i>=0,i)P(gn-(UC)gn,-1)gk[gn]=v;gv[gn]=0;gn++)
 SN I il(Iv)_(Li=fAI(fl,v);P(i>=0,lu[i]=nb;i)-1)
 S A cl(Ax,Ay/*00*/,I r)_(I o=xo;Q(xx==av||_t(xx)==tu)Iv=_v(xx);
@@ -46,7 +46,7 @@ S I mxs(Ii,I s)_(I r=s;W(1,UC c=b[i++];Q(s>=0)r=max(r,s);P(!c,r)P(c==bz,i++;s--;
  J(c==bi||c==bX,s-=2)J(c==bI||c==bA,s-=3)J(c==bL,s+=b[i])J(c==bl||c==ba||c==bP,s-=b[i]-1)
  I(c==bm||c==bx||c==bM||c==bi,i+=2)J(c==bX||c==bI||c==bL||c==bl||c==ba||c==bP||c==bG||c==bS,i++)J(c==bj,i+=b[i]+1))r)
 A3(cpl,/*src,ast,loc*/UC b0[256],m0[256];b=b0;m=m0;nb=1;Ik=zn;u=aV(tA,4,A(x,au,au,z));Ms(lu,-1,SZ lu);y=Nu(cf(y));
- I r=cr(y,1);y(0);I o=0;h(bu);P(r-OK,eS(_R(ux),r);u(0);ec0())P(_n(fl)>8||nb>=255,eS(_R(ux),0);u(0);ez0())
+ I r=cr(y,1);y(0);I o=0;h(bu);P(r-OK,eS(_R(ux),r);u(0);ec0())P(_n(fl)>8||nb>=255||bc-4+un>255,eS(_R(ux),0);u(0);ez0())
  i(8,Ij=lu[i];I(j>=0&&b[j]==bg,b[j]=bd))*b=mxs(1,0);*m=-1;uy=aCn(b,nb);uz=aCn(m,nb);AK(k,AT(to,u)))
 
 #define U(x,a...) B(!(x),a)
@@ -63,8 +63,8 @@ AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))UC*b=_V(xy),c,ns=*b++,nl=
     I(c==ba||c==bP,Ax=*s,*p=s+1;s+=n;U(*s=x((c==ba?_8:prj)(x,p,n))))
     J(c==bi,Ax=l[n],y=*s++;U(x=l[n]=dm8(A(x?x:au,y ,av+*b++,*s),4),*s=0)s++)
     J(c==bx,Ax=l[n],y=*s++;U(x=l[n]=dm8(A(x?x:au,yR,av+*b++,*s),4),*s=y(0))U(*s=dot(xR,y)))
-    J(c==bI,Ax=*s++,y=*s++;x=mnd(A(x,y ,av+n,*s),4,dm8);U(x,*s=0)s++)
-    J(c==bX,Ax=*s++,y=*s++;x=mnd(A(x,yR,av+n,*s),4,dm8);U(x,*s=y(0))U(*s=dot(x,y)))
+    J(c==bI,Ax=*s++,y=*s++;U(x=mnd(A(x,y ,av+n,*s),4,dm8),*s=0)s++)
+    J(c==bX,Ax=*s++,y=*s++;U(x=mnd(A(x,yR,av+n,*s),4,dm8),*s=y(0))U(*s=dot(x,y)))
     J(c==bm||c==bM,A*v=(c==bm?l:gv)+n,x=*v;U(x,*s=ev1(*s))U(x=*v=v2[*b++](x,*s++),*--s=0))
     J(c==bG,Ax=*--s=gv[n];U(x,ev0())xR)
     J(c==bS,Ax=*s++,y=gv[n];gv[n]=y?y(x):x)
