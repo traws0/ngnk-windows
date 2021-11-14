@@ -1,6 +1,9 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 #include"a.h"
 #include<sys/syscall.h>
+#if defined(libc)&&defined(__APPLE__)
+#include<dirent.h>
+#endif
 #include<stdarg.h>
 #include<stdio.h>
 #include<fcntl.h>
@@ -69,13 +72,17 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
   TD ST{long d_ino;off_t d_off;UH d_reclen;C d_name[];}DE;
  #endif
  ssize_t getdents(I,char*,N);
- #if defined(libc) && defined(__linux__)
+ #if defined(libc)&&defined(__linux__)
   ssize_t getdents(If,char*a,Nn)_(syscall(SYS_getdents,f,a,n))
  #endif
  #if !defined(libc)
   asm(h3(getdents));
  #endif
- V dir(If,void(*d)(V*,Q),V*x){Cb[ZP];Ik;W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;d(x,s);i+=e->d_reclen))}
+ #if defined(libc)&&defined(__APPLE__)
+  V dir(If,void(*d)(V*,Q),V*x){DIR*a=fdopendir(f);ST dirent*e;W((e=readdir(a)),d(x,e->d_name))closedir(a);} //thanks eightsixfivezero
+ #else
+  V dir(If,void(*d)(V*,Q),V*x){Cb[ZP];Ik;W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;d(x,s);i+=e->d_reclen))}
+ #endif
 #endif
 
 //getcwd()
@@ -131,9 +138,11 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
  I memcmp(OV*x,OV*y,Nn)_(Qs=x,t=y;i(n,Iv=*s++-*t++;P(v,v))0)
  N strlen(Qs)_(Qp=s;W(*p,p++)p-s)
  char*strchr(O char*s,Iv)_(W(1,P(*s==v,(V*)s)P(!*s++,(V*)0))(V*)0)
- char*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
  char*strstr(O char*p,O char*q)_(MM(p,Sn(p),q,Sn(q)))
  I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
+#endif
+#if !defined(libc)||!defined(_GNU_SOURCE)
+ char*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
 #endif
 
 //mathematical functions
