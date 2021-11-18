@@ -35,7 +35,7 @@ S A3(i2,/*011*/Cb=ytT||y==PLH||y==au;x=Nz(i1(x,y));P(!b,x(i1(x,z)))K(".\\:",x,a1
 S AX(i8,Ay=*a;P(n==1,i1(x,y))P(n==2,i2(x,y,a[1]))
  a++;n--;Cb=ytT||y==PLH||y==au;x=i1(x,y);P(!n,x)P(!x,mrn(n,a);x)P(!b,x(i8(x,a,n)))K(".\\:",x,aV(tA,n,a)))
 S A1(ktm,x(al(now())))
-S A1(ker,e1(x,xtC?xV:"err"))
+S A1(ker,XC(x=str0(x);e1(x,xV))e1(x,"err"))
 S A1(kav,Ay=oA;Q*p=argv;W(*p,yq(aCz(*p++)))ap1(y,x))
 S A1(ken,Ay=oS,z=oA;Q*e=env;W(*e,Qp=*e++,q=p+si(p,'=');yq(cS(aCm(p,q)));zq(aCz(q+!!*q)))y=am(y,z);x-au?ap1(y,x):y)
 S A1(kex,exit(xtz?gl(x):1);0)
