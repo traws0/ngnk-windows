@@ -61,8 +61,8 @@ AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))UC*b=_V(xy),c,ns=*b++,nl=
     E(Q(c==bp)mr(*s++)))
    E(Nn=*b++;
     I(c==ba||c==bP,Ax=*s,*p=s+1;s+=n;U(*s=x((c==ba?_8:prj)(x,p,n))))
-    J(c==bi,Ax=l[n],y=*s++;U(x=l[n]=dm8(A(x?x:au,y ,av+*b++,*s),4),*s=0)s++)
-    J(c==bx,Ax=l[n],y=*s++;U(x=l[n]=dm8(A(x?x:au,yR,av+*b++,*s),4),*s=y(0))U(*s=dot(xR,y)))
+    J(c==bi,Ax=l[n],y=*s++;U(x=l[n]=dm4(x?x:au,y ,av+*b++,*s),*s=0)s++)
+    J(c==bx,Ax=l[n],y=*s++;U(x=l[n]=dm4(x?x:au,yR,av+*b++,*s),*s=y(0))U(*s=dot(xR,y)))
     J(c==bI,Ax=*s++,y=*s++;U(x=mnd(A(x,y ,av+n,*s),4,dm8),*s=0)s++)
     J(c==bX,Ax=*s++,y=*s++;U(x=mnd(A(x,yR,av+n,*s),4,dm8),*s=y(0))U(*s=dot(x,y)))
     J(c==bm||c==bM,A*v=(c==bm?l:gv)+n,x=*v;U(x,*s=ev1(*s))U(x=*v=v2[*b++](x,*s++),*--s=0))

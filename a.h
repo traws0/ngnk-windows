@@ -76,7 +76,7 @@ A1 a1,asc,ax,cA,cC,cD,cH,cI,cL,cS,des,dsc,enl,enla,epr,fir,flp,flr,frk,grp,hex,j
  len,mr,m0,m1,mRa,mut,neg,not,nul,opn,out,prng,prs,rev,ser,spl,sqr,sqz,sqzZ,str,str0,til,typ,u0c,u1c,unh,unq,val,whr,_R;
 A2 a2,add,aM,am,ap1,dot,apd,bin,cat,cst,cut,dct,dex,dvd,eql,fil,fnd,gtn,id_,idx,ltn,mnm,mod,mtc,mul,mxm,que,fld1,
  rsh,sub,v0c,v1c,exc,_1;
-A0 aa0;A3 a3,arf,arp,ars,cpl,try,ear2,_2;A4 ara;ALA drp,room,rshN;AAL ii;AX adv,eac,fld,prj,run,_8;AA amd,dmd,dm8,ins;
+A0 aa0;A3 a3,arf,arp,ars,cpl,try,ear2,_2;A4 ara,dm4;ALA drp,room,rshN;AAL ii;AX adv,eac,fld,prj,run,_8;AA am8,dmd,dm8,ins;
 AL aA,aB,aC,aI,aL,aD,aS,al,az,cls,tilL,rndD;AQ aCz,cmdl,cmdm,die,evs,pk,syP;
 A ac(C),ai(I),as(I),ad(D),adm(A,A,I),aCm(Q,Q),aCn(Q,N),apc(A,C),apv(A,OV*),an(C,N),aV(C,N,OV*),cts(A,Q,N),eac1f(A,A1),
  eac2f(A,A,A2),e1(A,Q),K0(A*,Q,OA*,I),jc(C,A),jC(Q,N,A),kv(A*),mf(I,N),mnd(OA*,I,AA*),pen(A,A1*),sur(C,A,C),wdn(A,N,N,N),
@@ -134,7 +134,7 @@ enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,
 #define VS \
   A1*v1[]={sam,flp,neg,fir,sqr,til,whr,rev,asc,dsc,grp,not,enl,nul,len,flr,str,unq,typ,val,u0c,u1c,sam,sam,las,out};\
   A2*v2[]={dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql,mtc,cat,exc,rsh,cut,cst,que,ap1,dot,v0c,v1c,dex,com,dex,dex};\
-  AA*v8[]={er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,ins,amd,dmd,er8,er8,er8,er8,er8,er8};\
+  AA*v8[]={er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,er8,ins,am8,dmd,er8,er8,er8,er8,er8,er8};\
   OC vc[]={':','+','-','*','%','!','&','|','<','>','=','~',',','^','#','_','$','?','@','.','0','1','2','3','4','5'};
 enum{au=Lt(tu),FLP,NEG,FIR,SQR,TIL,WHR,REV,ASC,DSC,GRP,NOT,ENL,NUL,LEN,FLR,STR,UNQ,TYP,VAL,U0C,U1C,U2C,U3C,LAS,OUT,
      av=Lt(tv),ADD,SUB,MUL,DVD,MOD,MNM,MXM,LTN,GTN,EQL,MTC,CAT,EXC,RSH,CUT,CST,QUE,AP1,DOT,V0C,V1C,V2C,COM,MKL,PLH,
