@@ -93,6 +93,6 @@ AA(dm8,Ax=*a,y=a[1];
  P(n==4,K("{[x;y;z;u]@[x;*y;.[;1_y;z;];u]}",x,y,a[2],a[3]))
  P(n==3,K("{         @[x;*y;.[;1_y;z;]  ]}",x,y,a[2]     ))
  en8(a,n))
-AA(amd,Ax=*a;Xs(mnd(a,n,am8))XF(Q(n>1)x(_8(x,a+1,n-1)))am8(a,n))
+AA(amd,Ax=*a;XF(Q(n>1)x(_8(x,a+1,n-1)))am8(a,n))
 AA(dmd,Ax=*a;XF(P(n-3,er8(a,n))try(x,a[1],a[2]))XsS(mnd(a,n,dm8))dm8(a,n))
 A K0(A*p,Qs,OA*a,In)_(I(!*p,cns=apd(cns,*p=N(val(aCz(s)))))n?_8(*p,a,n):*p)
