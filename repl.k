@@ -104,6 +104,7 @@ X^y without   "abracadabra"^"bc" -> "araadara"
 i#y reshape   3#2 -> 2 2 2
 I#y reshape   2 3#` -> (```;```)
 f#y replicate (3>#:')#(0;2 1 3;5 4) -> (0;5 4)   {2}#"ab" -> "aabb"
+x#d take      `c`d`f#`a`b`c`d!1 2 3 4 -> `c`d`f!3 4 0N
  _n floor     _12.34 -12.34 -> 12 -13
  _c lowercase _"Ab" -> "ab"
 i_Y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
