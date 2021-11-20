@@ -109,7 +109,7 @@ x#d take      `c`d`f#`a`b`c`d!1 2 3 4 -> `c`d`f!3 4 0N
  _c lowercase _"Ab" -> "ab"
 i_Y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
 I_Y cut       2 4 4_"abcde" -> ("cd";"";,"e")
-f_y weed out  (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
+f_Y weed out  (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
 X_i delete    "abcde"_2 -> "abde"
  $x string    $(12;"ab";`cd;+) -> ("12";(,"a";,"b");"cd";,"+")
 i$C pad       5$"abc" -> "abc  "   -3$"a" -> "  a"
