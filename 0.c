@@ -1,6 +1,5 @@
 // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 #include"a.h"
-#include<sys/syscall.h>
 #include<stdarg.h>
 #include<stdio.h>
 #include<fcntl.h>
@@ -30,6 +29,7 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 
 //syscall helper macros
 #if !defined(libc)&&!defined(wasm)
+ #include<sys/syscall.h>
  #if defined(i386)
   #define  h(x,a...) ".globl "#x";"#x":"a"mov $"M2(SYS_##x)",%eax;int $0x80;ret;"
   #define h1(x,a...)  h(x,a"mov  4(%esp),%ebx;")
