@@ -3,7 +3,7 @@
 // ","/"abcd",'"=0x",/:+"0123456789abcdef"@(16#16)\2/|+4 64#(n{(|(8#2)\30)@2/'3'0,x,0}\n=!2*n)@'n:256
 S UL a[]={0xd5a986ae75c9a33b,0x1016d8e3483a8f0f,0x81f9e6260eb8e5df,0xfa9b718d8d0769bf};
 UL rnd1()_(Lv=a[1]<<17;a[2]^=a[0];a[3]^=a[1];a[1]^=a[2];a[0]^=a[3];a[2]^=v;a[3]=rot(a[3],45);a[0]+a[3])
-A1(prng,P(x==au,aV(tL,4,a))XZ(x=cL(rshN(4,x));Mc(a,xV,SZ a);x(au))
+A1(prng,P(x==au,aV(tL,4,a))XZ(x=cL(rsh(4,x));Mc(a,xV,SZ a);x(au))
  Xz(UL v=gl(x);I(!v,v=now())i(ZZ(a),a[i]=v=v*6364136223846793005+1442695040888963407)au)et1(x)) //knuth mmix
 S UI rm(UL m)_((UI)rnd1()*m>>32)
 S V shf(L*r,Nn){i(n,Ij=rm(i+1);SWP(r[i],r[j]))}
@@ -30,7 +30,7 @@ A2(fnd,
    P(Tz[xt]<2&&xn>99&&yN>99,sdf(x,y))
    V(f,T(&fB,fH,fI,fL)[Tz[xt]])Yt(x(az(f(xV,xn,gl(y)))))
    Az=aL(yn);Ii=Tz[yt];xe(ye(T(&FB,FH,FI,FL)[i](xV,xn,f,yV,yn,zV);z)))
-  Az=cn[tl];zR;x(y(ytt?z:rshN(yN,z))))
+  Az=cn[tl];zR;x(y(ytt?z:rsh(yN,z))))
  Xm(Az=kv(&x);idx(x,Nx(fnd(z,y))))
  Ik=urnk(x),l=urnk(y);P(k==l+1,x(y(az(fA(x,y)))))P(k<=l,ear2(x,y,QUE))er2(x,y))
 

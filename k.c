@@ -1,6 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 S A1(sam,x)S A2(com,AK(yK,AT(tq,a2(x,y))))VS;OC Tz[]={Tzv},TZ[]={TZv},TT[]={TTv};
-A1(mkn,XmMA(eac1f(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rshN(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw||xte?1:xtv?2:xtF?xk:0) //_K:arity
+A1(mkn,XmMA(eac1f(x,mkn))Ay=_R(cn[xt]);Xt(x(y))rsh(xN,x(y)))I _K(Ax/*0*/)_(xtu||xtw||xte?1:xtv?2:xtF?xk:0) //_K:arity
 A2(id_,/*00*/x==CAT?_R(ce[ce[yt]?yt:tA]):xtv&&xv<11&&xv?_R(ci[ytdD][T((C)4,0,0,1,1,2,2,3,3,2,4)[xv]]):mkn(fir(yR)))
 AX(prj,XmMA(x8(a,n))Ik=max(n,xK);i(n,k-=a[i]!=PLH)
  x=(xtp?val:a1)(xR);Ii=0,j=1;W(i<n&&j<xn,I(xA[j]==PLH,xA[j]=a[i++])j++)W(i<n,xq(a[i++]))P(xn>9,ez1(x))AT(tp,AK(k,x)))
