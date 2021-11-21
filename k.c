@@ -23,7 +23,7 @@ S A2(i1,/*01*/
  P(xtm||xtM&&ytsS,i1(xy,N(fnd(_R(xx),y))))
  Yzc(io(x,gl(y)))
  Yt(et1(y))
- YmM(Az=kv(&y);am(y,i1(x,z)))
+ YmM(Az=kv(&y);am(y,Ny(i1(x,z))))
  YA(ear2(xR,y,AP1))
  I(!ytL&&!ytI,y=N(cI(y)))
  Nn=yn;P(xtA||xtM,Az=oA;I(ytL,i(n,zq(io(x,yl))))E(i(n,zq(io(x,yi))))y(z))
