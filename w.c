@@ -77,7 +77,7 @@ SN A2(eap1,/*10*/eap2(id_(y,x),x,y))
 SN A3(ste,/*110*/K("{z'x'y}",x,y,zR))
 AX(adv,Q(xtr)Ii=xw;x=xx;Ik=xK;
  Y(i,
-  C(0,P(n==1,Xz(win(x,*a))XT(bin(xR,*a))eac1(*a,x))eac(x,a,n))
+  C(0,P(n==1,Xz(win(x,*a))Xt(eac1(*a,x))bin(xR,*a))eac(x,a,n))
   C(1,P(n==1,Ay=*a;XzZ(dec(x,y))Xc(jc(xv,y))XC(jC(xV,xn,y))P(k<2,cf(x,y))fld1(y,x))P(k<2,nwf(x,a,n))P(n-k==1,nwf(x,a,n))fld(x,a,n))
   C(2,P(n==1,Ay=*a;XzZ(enc(x,y))Xc(sc(xv,y))XC(sC(xV,xn,y))P(k<2,cs(x,y))scn1(y,x))P(k<2,nws(x,a,n))P(n-k==1,nws(x,a,n))scn(x,a,n))
   C(3,n==1?eap1(*a,x):n==2?k==1?ste(*a,a[1],x):eap2(*a,a[1],x):er8(a,n))

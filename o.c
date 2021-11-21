@@ -20,4 +20,5 @@ A1(asc,Xt(opn(x))Xm(K("{(!x)@<. x}",x))XM(K("{(!#x){x@<y x}/|.+x}",x))XS(asc(str
  x=N(K("{x-&/x}",x));Ay=aC(n),z=aI(n),u=aI(n);xe(ye(ascZ(xV,yV,zV,uV,n,xW)==zV?u(z):z(u))))
 A1(dsc,XMT(x=rev(asc(rev(x)));sub(ai(xN-1),x))Xm(Ay=kv(&x);idx(x,Nx(dsc(y))))Xz(cls(gl(x)))et1(x))
 A1(grp,Xz(K("{@[&x;;:;1]'!x}",x))Xt(et1(x))Xm(Ay=grp(kv(&x));yy=idx(x,yy);y)K("{x[(!0),*'g]!g@:<g:(&(!0),~x~':x i)_i:<x}",x))
-A2(bin,Xmt(er2(x,y))YMT(K("{x''y}",x,y))Li=-1,j=xn;W(i+1<j,Lm=(i+j)/2;Az=ii(x,m);qA(y,z)<0?j=m:(i=m);z(0))x(y(az(i))))
+A2(bin,Xt(er2(x,y))Xm(Az=kv(&x);x(x1(bin(z,y))))YMT(K("{x''y}",x,y))
+ Li=-1,j=xn;W(i+1<j,Lm=(i+j)/2;Az=ii(x,m);qA(y,z)<0?j=m:(i=m);z(0))x(y(az(i))))
