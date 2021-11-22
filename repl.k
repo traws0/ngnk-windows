@@ -131,7 +131,7 @@ x.y apply(n)  {x*y+1}. 2 3 -> 8   (`a`b`c;`d`e`f). 1 0 -> `d
 .[x;y;f]   drill  .[("AB";"CD");1 0;_:] -> ("AB";"cD")
 .[x;y;F;z] drill  .[("ab";"cd");1 0;:;"x"] -> ("ab";"xd")
 .[f;y;f]   try    .[+;1 2;"E:",] -> 3   .[+;1,`2;"E:",] -> "E:typ"
-?[x;y;z]   splice ?["abcd";1 2;"xyz"] -> "axyzd"
+?[x;y;z]   splice ?["abcd";1 3;"xyz"] -> "axyzd"
 --------------------------------------------------------------------------------
 \`
 Special symbols:
