@@ -58,7 +58,7 @@
 #define cAz(c) c3('a',(c)|32,'z')
 #define cA9(c) (cAz(c)||c09(c))
 
-TD void V;TD char B;TD char unsigned C,UC;TD O char*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
+TD void V;TD char B,C;TD char unsigned UC;TD O char*Q;TD short H;TD unsigned short UH;TD int I;TD unsigned int UI;
 TD long long L;TD double D;TD size_t N;
 TD unsigned long long UL,A,A0(),A1(A),A2(A,A),A3(A,A,A),A4(A,A,A,A),AA(OA*,I),AX(A,OA*,I),AL(L),ALA(L,A),AAL(A,L),AQ(Q);
 #define  A0(f,b...) A f(           )_(b)

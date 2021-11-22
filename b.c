@@ -78,4 +78,4 @@ AX(run,Q(xto)P(n-xk,er8(a,n))S I d;P(++d>1024,es8(a,n))UC*b=_V(xy),c,ns=*b++,nl=
    E(Q(c>=bs)Ay=*s++;*v=x?x(y):y))
   J(c>=bv,Ax=*s++;U(*s=v2[c-bv](x,*s)))
   E(U(*s=v1[c](*s))))
- I(!*s,eS(_R(xx),_C(xz)[b-1-_C(xy)]))i(t+ns+nl-s-1,Ax=s[i+1];I(x,mr(x)))d--;Q(s==l-1)*s)
+ I(!*s,eS(_R(xx),_C(xz)[(C*)b-1-_C(xy)]))i(t+ns+nl-s-1,Ax=s[i+1];I(x,mr(x)))d--;Q(s==l-1)*s)
