@@ -14,13 +14,13 @@
 #include<sys/stat.h>
 
 //__builtin_ia32_ldmxcsr(__builtin_ia32_stmxcsr()|1<<6|1<<15); //daz,ftz
-I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
+I main(In,Q*a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
 
 //_start()
 #if defined(libc)||defined(wasm)
  ;
 #elif defined(__OpenBSD__)||defined(__FreeBSD__)
- V _start(O char**a){exit(main(*(I*)(V*)a,a+1));}
+ V _start(Q*a){exit(main(*(I*)(V*)a,a+1));}
 #elif defined(i386)
  asm(".globl _start;_start:pop %eax;push %esp;push %eax;call main;jmp exit");
 #else
@@ -71,17 +71,17 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
  #else
   TD ST{long d_ino;off_t d_off;UH d_reclen;C d_name[];}DE;
  #endif
- ssize_t getdents(I,char*,N);asm(h3(getdents));
+ ssize_t getdents(I,C*,N);asm(h3(getdents));
  V dir(If,void(*d)(V*,Q),V*x){Cb[ZP];Ik;W((k=getdents(f,b,SZ b))>0,Ii=0;W(i<k,DE*e=(V*)b+i;Qs=e->d_name;d(x,s);i+=e->d_reclen))}
 #endif
 
 //getcwd()
 #if defined(wasm)
- char*getcwd(char*s,Nn)_((V*)0)
+ C*getcwd(C*s,Nn)_((V*)0)
 #elif defined(libc)
  ;
 #elif defined(__FreeBSD__)
- asm(h(__getcwd));char*__getcwd(char*,N);char*getcwd(char*s,Nn)_(__getcwd(s,n))
+ asm(h(__getcwd));C*__getcwd(C*,N);C*getcwd(C*s,Nn)_(__getcwd(s,n))
 #else
  asm(h(getcwd));
 #endif
@@ -107,7 +107,7 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
  I munmap(If,In)_(0)
  I gettimeofday(ST timeval*a,ST timezone*b)_(js_time(&a->tv_sec,&a->tv_usec);0)
  V exit(Iv){js_exit(v);}
- I dup2(If,Iv)_(-1)I execve(Qp,char*O*a,char*O*e)_(-1)I fork()_(-1)I socket(Ii,Ij,Ik)_(-1)
+ I dup2(If,Iv)_(-1)I execve(Qp,C*O*a,C*O*e)_(-1)I fork()_(-1)I socket(Ii,Ij,Ik)_(-1)
  I setsockopt(If,I l,I s,OV*v,socklen_t n)_(-1)I connect(If,O ST sockaddr*s,socklen_t n)_(-1)I chdir(Qp)_(-1)
  I ftruncate(If,off_t o)_(-1)
 #elif defined(libc)
@@ -127,12 +127,12 @@ I main(In,O char**a)_(kinit(n,a);I r=n>1?!cmdl(a[1]):repl();Q(cmdm(""));r)
  V*memmem(OV*x,Nm,OV*y,Nn)_(Qp=x,q=y;i((L)m-(L)n+1,P(!memcmp(p+i,q,n),(V*)(p+i)))(V*)0)
  I memcmp(OV*x,OV*y,Nn)_(Qs=x,t=y;i(n,Iv=*s++-*t++;P(v,v))0)
  N strlen(Qs)_(Qp=s;W(*p,p++)p-s)
- char*strchr(O char*s,Iv)_(W(1,P(*s==v,(V*)s)P(!*s++,(V*)0))(V*)0)
- char*strstr(O char*p,O char*q)_(MM(p,Sn(p),q,Sn(q)))
+ C*strchr(O C*s,Iv)_(W(1,P(*s==v,(V*)s)P(!*s++,(V*)0))(V*)0)
+ C*strstr(O C*p,O C*q)_(MM(p,Sn(p),q,Sn(q)))
  I strcmp(Qp,Qq)_(W(*p&&*p==*q,p++;q++)*p-*q)
 #endif
 #if !defined(libc)||!defined(_GNU_SOURCE)
- char*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
+ C*strchrnul(Qs,Iv)_(W(1,P(*s==v,(V*)s)P(!*s,(V*)s)s++)(V*)s)
 #endif
 
 //mathematical functions

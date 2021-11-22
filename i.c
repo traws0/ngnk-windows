@@ -34,6 +34,6 @@ A2(v1c,P(!ytC,et2(x,y))
 S A rda(If)_(Ax=aC(256-ZA);L m=0,k;
  W((k=read(f,xV+m,xn-m))>0,m+=k;I(m+1000000>xn&&2*m>xn,Ay=aC(2*xn+ZA);Mc(yV,xV,m);x=x(y)))close(f);AN(m,x))
 A1(frk,P(!xtA||xn-2,et1(x))Ay=kv(&x);P(!xtA||!ytC,ed2(x,y))x=Ny(eac1f(x,str0));Q a[xn+1];i(xn,a[i]=_V(xa))a[xn]=0;
- I p[4];pipe(p);pipe(p+2);P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(char**)a,(char*O*)env));0)
+ I p[4];pipe(p);pipe(p+2);P(!fork(),dup2(*p,0);dup2(p[3],1);i(4,close(p[i]))exit(execve(*a,(C**)a,(C*O*)env));0)
  close(*p);close(p[3]);N(v0c(ai(p[1]),x(y)));close(p[1]);rda(p[2]))
 L now()_(ST timeval t;gettimeofday(&t,0);1000000ll*t.tv_sec+t.tv_usec)
