@@ -35,3 +35,9 @@ e/   https://projecteuler.net/
 a19/ https://adventofcode.com/2019
 a20/ https://adventofcode.com/2020
 d14/ https://problems.tryapl.org/psets/2014.html
+
+related projects:
+* continuous integration for osx - https://github.com/xpqz/ngnk_mirror
+* aoc20 solutions - http://copy.sh/kaoc20/
+* kpl, apl-like extensions for k - https://codeberg.org/CptJimKirk/kpl
+
