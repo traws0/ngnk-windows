@@ -4,7 +4,7 @@ STRIP ?= strip
 
 0:;$(MAKE) k-dflt && $(MAKE) t #default target
 t:o/t;o/t;dy/a.sh;g/0.sh;a19/a.sh;a20/a.sh;e/a.sh #test
-c:;rm -rf o k k-libc libk.so k32 k-obsd #clean
+c:;rm -rf o k libk.so #clean
 k:k-dflt
 w:k o/w/fs.h o/w/k.wasm o/w/index.html $(patsubst w/x/%.k,o/w/x/%.k,$(wildcard w/x/*.k))
 h:w o/w/http;cd o/w;./http
