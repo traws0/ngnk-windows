@@ -20,8 +20,8 @@ h(mnm,min(x,y))h(mxm,max(x,y))hc(ltn,x<y,qD(x,y)<0)hc(gtn,x>y,ltn(y,x))hc(eql,x=
 h0123(mod,B,B)h0123(mod,H,H)h0123(mod,I,I)h0123(mod,L,L)h0123(mod,D,D)
 h01S3(mnm,B,B)h01S3(mnm,H,H)h01S3(mnm,I,I)h01S3(mnm,L,L)h01S3(mnm,D,D)
 h01S3(mxm,B,B)h01S3(mxm,H,H)h01S3(mxm,I,I)h01S3(mxm,L,L)h01S3(mxm,D,D)
-h0123(ltn,B,B)h0123(ltn,H,H)h0123(ltn,I,I)h0123(ltn,L,L)h0123(ltn,D,I)
-h01S3(eql,B,B)h01S3(eql,H,H)h01S3(eql,I,I)h01S3(eql,L,L)h01S3(eql,D,I)
+h0123(ltn,B,B)h0123(ltn,H,B)h0123(ltn,I,B)h0123(ltn,L,B)h0123(ltn,D,B)
+h01S3(eql,B,B)h01S3(eql,H,B)h01S3(eql,I,B)h01S3(eql,L,B)h01S3(eql,D,B)
 TY(&mod0B)aro[][5][7]={
  {{    0,mod0B,mnm0B,mxm0B,ltn0B,0,eql0B},//a+a
   {    0,mod0H,mnm0H,mxm0H,ltn0H,0,eql0H},
@@ -54,8 +54,8 @@ S A3(ar2,Q(ztv)
  V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;
  V(f,aro[k][TT[t]-tB][zv-4]);
  I(t>tD,t+=tD-td)
- I(z>MXM&&t==tD,t=tI)
- I(!k,t+=tc-tC;P(TP(t),Ii=0;f(a,b,&i,1);x(y(az(i)))))
+ I(z>MXM,t=tB)
+ I(!k,t=max(ti,t+tc-tC);P(TP(t),Ii=0;f(a,b,&i,1);x(y(az(i)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:an(t,k-1?xn:yn);
  f(a,b,zV,zn);
  x-z?x(y-z?y(z):z):y(z))
