@@ -40,8 +40,8 @@ A2(apd,Q(xtMT);
 A apv(Ax,OV*v )_(Q(xtT);Nn=xn;x=room(n+1,x);Mc(xV+n*xW,v,xW);x)
 A apc(Ax,Cc   )_(Q(xtC||xtB);Nn=xn;x=room(n+1,x);xC[n]=c;x)
 A cts(Ax,Qs,Nm)_(Q(xtC);Nn=xn;x=room(n+m,x);Mc(xV+n,s,m);x)
-S A insL(Ax,Li,Lj,Ay)_(Xmt(et2(x,y))Ymt(insL(x,i,j,enl(y)))P(xtM||ytM,en2(x,y))P(!in(i,j+1)||!in(j,xN+1),ei2(x,y))
- P(xtZ&&ytZ&&xt-yt,V(f,cT[max(xt,yt)])insL(f(x),i,j,f(y)))P(xt-yt,insL(cA(x),i,j,cA(y)))
+S A insL(Ax,Li,Lj,Ay)_(YF(insL(x,i,j,Nx(y(y1(slc(x,i,j))))))Xmt(et2(x,y))Ymt(insL(x,i,j,enl(y)))P(xtM||ytM,en2(x,y))
+ P(!in(i,j+1)||!in(j,xN+1),ei2(x,y))P(xtZ&&ytZ&&xt-yt,N(sup(&x,&y));insL(x,i,j,y))P(xt-yt,insL(cA(x),i,j,cA(y)))
  Az=an(xt,xn-j+i+yn);Mc(zV,xV,i*xW);Mc(zV+i*xW,yV,yn*xW);Mc(zV+(i+yn)*xW,xV+j*xW,(xn-j)*xW);
  I(xtR,I(xr-1,mRn(i,xA);mRn(xn-j,xA+j))E(mrn(j-i,xA+i);AN(0,x))I(yr-1,mRa(y))E(AN(0,y)))x(y(z)))
 S A3(ins3,Yz(Li=gl(y);insL(x,i,i,z))YZ(P(yN-2,el2(x,z(y)))Li=gl(ii(y,0)),j=gl(las(y));insL(x,i,j,z))et2(x,z(y)))
