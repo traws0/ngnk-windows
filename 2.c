@@ -43,7 +43,7 @@ TY(&mod0B)aro[][5][7]={
   {    0,mod3I,mnm3I,mxm3I,ltn3I,0,eql3I},
   {    0,mod3L,mnm3L,mxm3L,ltn3L,0,eql3L},
   {dvd3D,mod3D,mnm3D,mxm3D,ltn3D,0,eql3D}}};
-S C tZx(Ax)_(Xi(tZ(xv))Xl(tZ(gl_(x)))Q(TX[xt]);TX[xt])
+S C tZx(Ax)_(Ct=TX[xt];P(t,t)Xl(tZ(gl_(x)))tZ(xv))
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(cT[t](x));*q=y=Nx(cT[t](y));t)
 S A3(ar2,Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,v2[zv]))N(sup(&x,&y));Ik=xtT<<1|ytT;P(k==3&&xn-yn,el2(x,y))
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;t=TT[t];V(f,aro[k][t-tB][zv-4]);I(z>MXM,t=tB)
