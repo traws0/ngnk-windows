@@ -1,5 +1,6 @@
-0:a
+0:a makefile
+	LD_LIBRARY_PATH=../.. ./a
+a:../../libk.so a.c makefile
+	$(CC) -L../.. -lk a.c -o a
+../../libk.so:../../*.c ../../*.h
 	$(MAKE) -C../.. libk.so
-	./a
-a:a.c makefile
-	$(CC) -ldl a.c -o a

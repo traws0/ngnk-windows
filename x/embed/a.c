@@ -1,21 +1,25 @@
 #include<stdio.h>
-#include<dlfcn.h>
+#include"../../k.h" //new api
+void kinit(int,const char**);void kf(const char*s,long long(*)(long long));long long k(const char*); //old api
 
-//function that will be visible from k
-long sqr(long x){
- printf("sqr %ld\n",x);
- return x*x;
-}
+K inc(K x){
+ printf("inc()\n");
+ return K2('+',Ki(1),x);}
 
-int main(int n,const char**a){
+int main(int c,const char**a){
  setbuf(stdout,0);
- void*l=dlopen("../../libk.so",RTLD_NOW);if(!l){printf("%s\n",dlerror());return 1;}
- void(*kinit)(int,const char**)      =dlsym(l,"kinit");
- void(*kf)(const char*,long(*)(long))=dlsym(l,"kf"   );
- long(*k)(const char*)               =dlsym(l,"k"    );
- kinit(n,a);
- kf("sqr",sqr); //export to k
- k("a:2;b:3");
- printf("%ld\n",k("sqr a+b")); //prints 25
+ kinit(c,a);
+
+ //1 2+3
+ K x=KI((I[]){1,2},2),y=Ki(3),z=K2('+',x,y);int r[2];IK(r,z);size_t n=NK(z);
+ for(int i=0;i<n;i++)printf("r[%d]:%d\n",i,r[i]);
+
+ //inc 123
+ x=KR(inc,1,"inc");
+ KA("inc",x);
+// k(" \\. 0#`");
+
+ k("`0:$inc 123");
+
  return 0;
 }
