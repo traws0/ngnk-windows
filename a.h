@@ -86,15 +86,17 @@ V dir(I,void(*)(V*,Q),V*),exit(I),kinit(),*memchr(OV*,I,N),*memcpy(V*,OV*,N),*me
 D gd(A);N strlen(Q),_N(A);C*sl(C*,L),sup(A*,A*),*syp(L*),tZ(L);C*strchr(Q,I),*strchrnul(Q,I),*strstr(Q,Q);
 I _K(A),qD(D,D),eS(A,I),js_eval(C*,I,C*,I),memcmp(OV*,OV*,N),mtc_(A,A),repl(),si(Q,I),strcmp(Q,Q),rnk(A);
 L cfm(OA*,I),gl_(A),gl(A),now(),pl(Q*),pu(Q*),tru(A),fI(OV*,N,L),fL(OV*,N,L),fAI(A,I),fpI(A*,I);
-EX I gn,gk[];EX A gv[],cns,ce[],cn[],ci[2][5];EX A1*v1[],*cT[];EX A2*v2[];EX AA*v8[];EX Q*argv,*env;EX OC vc[],Tz[],TZ[],TT[],TX[];
+EX I gn,gk[];EX A gv[],cns,ce[],cn[],ci[2][5];EX A1*v1[],*cT[];EX A2*v2[];EX AA*v8[];EX Q*argv,*env;
+EX OC vc[],Tz[],TZ[],TT[],TX[],Tk[];
 
-//            () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  / 2:
-enum       {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
-#define TS "?""A""I""I""I""I""D""C""S""M""m""i""i""d""c""s""o""p""q""r""u""v""w""e"     //their symbols
-#define TZv 0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8      //item size in bytes
-#define Tzv 0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3      //log2(size) or 4=reftypes
-#define TTv 0,tA,tB,tH,tI,tL,tD,tC,tS,tM,tM,tI,tL,tD,tC,tS,tA,tA,tA,tA,tA,tA,tA,tA      //corresponding list type
-#define TXv 0,tB,tB,tH,tI,tL,tD,tB,tI,tB,tB, 0, 0,tD,tB,tI,tB,tB,tB,tB,tB,tB,tB,tB      //type for arith conformance
+//             () ,3 ,4 ,5 ,6 ,d "" ,` +!  !  5  6 .6 "c" ` {} 1+ ++ +/ +:  +  / 2:
+enum        {tA=1,tB,tH,tI,tL,tD,tC,tS,tM,tm,ti,tl,td,tc,ts,to,tp,tq,tr,tu,tv,tw,te,tn}; //types
+#define TS  "?""A""I""I""I""I""D""C""S""M""m""i""i""d""c""s""o""p""q""r""u""v""w""e" //their symbols
+#define TZv  0, 8, 1, 2, 4, 8, 8, 1, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8  //item size in bytes
+#define Tzv  0, 4, 0, 1, 2, 3, 3, 0, 2, 4, 4, 3, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3  //log2(size) or 4=reftypes
+#define TTv  0,tA,tB,tH,tI,tL,tD,tC,tS,tM,tM,tI,tL,tD,tC,tS,tA,tA,tA,tA,tA,tA,tA,tA  //corresponding list type
+#define TXv  0,tB,tB,tH,tI,tL,tD,tB,tI,tB,tB, 0, 0,tD,tB,tI,tB,tB,tB,tB,tB,tB,tB,tB  //type for arith conformance
+#define Tkv "0""L""I""I""I""I""F""C""S""T""D""i""i""f""c""s""?""?""?""?""?""?""?""?" //types for k.h
 #define TP(t) ((1<<ti|1<<tc|1<<ts|1<<tu|1<<tv|1<<tw|1<<te)>>(t)&1)
 #define TF(t) ((t)>=to)
 
