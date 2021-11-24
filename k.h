@@ -1,10 +1,5 @@
 //https://github.com/ktye/i/blob/master/kc
-typedef int64_t K;
-K Kc(char),Ks(char*),Ki(int),Kf(double),KC(char*,int),KS(char**,int),KI(int*,int),KF(double*,int);
-char TK(K);int NK(K);
-char cK(K);int iK(K);double fK(K);
-void CK(char*,K),IK(int*,K),FK(double*,K),LK(K*,K); //(void *)dK(K);
-//K K1(char,K),K2(char,K,K),KR(void*,int,char*),tri(K,K,K);
-//void KA(K,K);
-K ref(K),unref(K);
-//K Kp(void*);
+typedef void V;typedef char C;typedef int I;typedef double D;typedef int64_t K;
+K Kc(C),Ks(C*),Ki(I),Kf(D),KC(C*,I),KS(C**,I),KI(I*,I),KF(D*,I),ref(K),unref(K);
+C TK(K),cK(K);I NK(K),iK(K);D fK(K);V CK(C*,K),IK(I*,K),FK(D*,K),LK(K*,K);//(V*)dK(K);
+//K K1(C,K),K2(C,K,K),KR(V*,I,C*),tri(K,K,K),Kp(V*);V KA(K,K);
