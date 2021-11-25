@@ -21,4 +21,4 @@ V KA(Qs,Kx){x=dmd(A(as(syP(s)),oA,av,x),4);if(x)mr(x);}
 K KR(V*f,In,C*s)_(ae(f,n))
 
 K ref(Kx)_(xR)
-K unref(Kx)_(x(x))
+V unref(Kx){mr(x);}
