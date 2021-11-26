@@ -1,4 +1,6 @@
 #include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
+#define XYmMA(a...) P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),a)
+
 //{dex,add,sub,mul,dvd,mod,mnm,mxm,ltn,gtn,eql}x{o0123fspa}x{BHILD} =
 // = {:+-*%!&|<>=}x{op,a+a,a+l,l+a,l+l,f/,f\,f':,@}x{byte,short,int,long,double}
 #define hv(v,T,R,f) S R v##o##T(T x,T y)_(f)
@@ -45,7 +47,7 @@ TY(&mod0B)aro[][5][7]={
   {dvd3D,mod3D,mnm3D,mxm3D,ltn3D,0,eql3D}}};
 S C tZx(Ax)_(Ct=TX[xt];P(t,t)Xl(tZ(gl_(x)))tZ(xv))
 C sup(A*p,A*q)_(Ax=*p,y=*q;Ct=max(tZx(x),tZx(y));*p=x=Ny(cT[t](x));*q=y=Nx(cT[t](y));t)
-S A3(ar2,Q(ztv)P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,v2[zv]))N(sup(&x,&y));Ik=xtT<<1|ytT;P(k==3&&xn-yn,el2(x,y))
+S A3(ar2,Q(ztv)XYmMA(eac2f(x,y,v2[zv]))N(sup(&x,&y));Ik=xtT<<1|ytT;P(k==3&&xn-yn,el2(x,y))
  Ct=k?min(xt,yt):max(xt,yt);V*a=xtP?(V*)&x:xV,*b=ytP?(V*)&y:yV;t=TT[t];V(f,aro[k][t-tB][zv-4]);I(z>MXM,t=tB)
  I(!k,t=max(ti,t+tc-tC);P(TP(t),Ii=0;f(a,b,&i,1);x(y(az(i)))))
  Az=xt==t&&xr==1?x:yt==t&&yr==1?y:an(t,k-1?xn:yn);f(a,b,zV,zn);x-z?x(y-z?y(z):z):y(z))
@@ -55,13 +57,13 @@ A2(dex,mr(x);y)
 A2(add,adm(x,y,0))
 A2(sub,add(x,Nx(neg(y))))
 A2(mul,adm(x,y,1))
-A2(dvd,P((1<<xt|1<<yt)&(1<<tm|1<<tM|1<<tA),eac2f(x,y,dvd))ar2(Ny(cD(x)),Nx(cD(y)),DVD))
+A2(dvd,XYmMA(eac2f(x,y,dvd))ar2(Ny(cD(x)),Nx(cD(y)),DVD))
 A2(mod,Xzc(ar2(x,y,MOD))dct(x,y))
 A2(mnm,ar2(x,y,MNM))
 A2(mxm,ar2(x,y,MXM))
 A2(ltn,ar2(x,y,LTN))
 A2(gtn,ltn(y,x))
-A2(eql,xtsS&&ytsS?eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))):ar2(x,y,EQL))
+A2(eql,XYmMA(eac2f(x,y,eql))P(xtsS-ytsS,et2(x,y))P(xtsS,eql(AT(xt+ti-ts,mut(x)),AT(yt+ti-ts,mut(y))))ar2(x,y,EQL))
 
 #define hf(v,T)S L v##f##T(L a,O V*b,Nn)_(O T*p=b;i(n,a=v##oL(a,p[i]))a)
 #define hfD(v) S D v##f##D(D a,O D*b,Nn)_(i(n,a=v##oD(a,b[i]))a)
