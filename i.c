@@ -23,7 +23,7 @@ S V d(V*p,Qs){*(A*)p=apc(cts(*(A*)p,s,Sn(s)),10);}
 A1(u1c,Xz(If=gl(x);Cb[1024];x=oC;W(1,Ik=read(f,b,SZ b);P(k<0,eo1(x))x=cts(x,b,k);P(k-SZ b,x))0)
  If=N(o(x,O_RDONLY));P(f<3,u1c(ai(f)))Im=fmd(f);
  P(S_ISDIR(m),Ax=oC;dir(f,d,&x);close(f);x)
- P(S_ISREG(m),Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())Ax=mf(f,n);close(f);x)
+ P(S_ISREG(m),Ln=lseek(f,0,SEEK_END);P(n<0,close(f);eo0())P(!n,oC)Ax=mf(f,n);close(f);x)
  Ay=u1c(ai(f));close(f);y)
 A2(v0c,YA(v0c(x,Nx(jc(10,y))))YC(v1c(x,apc(y,10)))et2(x,y))
 A2(v1c,P(!ytC,et2(x,y))
