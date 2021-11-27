@@ -9,13 +9,16 @@ k:k-dflt
 w:k o/w/fs.h o/w/k.wasm o/w/index.html $(patsubst w/x/%.k,o/w/x/%.k,$(wildcard w/x/*.k))
 h:w o/w/http;cd o/w;./http
 
+COS=-Wl,--gc-sections -fuse-ld=bfd -Wl,-T,ape.lds -include cosmopolitan.h crt.o ape.o cosmopolitan.a -Istubs -D__W__ -Dlibc -D__linux__ -DCOSMO
+
 k-dflt:; $(MAKE) a N=$@ R=k  O='-O3 -march=native -nostdlib -ffreestanding'                L=''
+k-cosm:; $(MAKE) a N=$@ R=k  O='-O3 -march=native -nostdlib -ffreestanding -fno-pie -no-pie -mno-red-zone -nostdinc -fno-omit-frame-pointer -pg -mnop-mcount' L='' STRIP=true
 k-libc:; $(MAKE) a N=$@ R=k  O='-O3 -march=native -Dlibc'                                  L='-lm'                       STRIP=true
 k-obsd:; $(MAKE) a N=$@ R=k  O='-fPIC -Dlibc=1 -DSYS_getcwd=304 -Dstrchrnul=strchr'        L='--static -fno-pie -lm -lc' STRIP=true
 libk.so:;$(MAKE) a N=$@ R=$@ O='-O3 -march=native -nostdlib -ffreestanding -fPIC -Dshared' L='-shared'                   STRIP=true
-o/$N/%.o:%.c *.h;$M;$(CC) @opts $O -o $@ -c $<
-o/$N/bin:$(patsubst %.c,o/$N/%.o,$(wildcard *.c));$(CC) $O $L -o $@ $^;$(STRIP) -R .comment $@ -R '.note*'
-a:o/$N/bin;cp o/$N/bin $R
+o/$N/%.o:%.c *.h;$M;$(CC) @opts $O -o $@ -c $< $(COS)
+o/$N/bin:$(patsubst %.c,o/$N/%.o,$(wildcard *.c));$(CC) $O $L -o $@ $^ $(COS);$(STRIP) -R .comment $@ -R '.note*'
+a:o/$N/bin;cp o/$N/bin $R;objcopy -SO binary k k.com
 
 o/t:t/t.c;$(CC) $< -o $@ -Wall -Wno-unused-result -Werror
 o/asm/%.s:%.c *.h;$M;$(CC) $(O_DFLT) -c $< -o $@ -S -masm=intel

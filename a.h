@@ -21,7 +21,7 @@
 #define S static
 #define SZ sizeof
 #define ZZ(x) (SZ(x)/SZ((x)[0]))
-#define ZP 4096ll //page
+#define ZP 65536ll //page
 #define ZA 32ll   //hdr
 #define NI __attribute__((noinline))
 #define SN S NI
