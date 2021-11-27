@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include"../../k.h" //new api
-void kinit(int,const char**);void kf(const char*s,long long(*)(long long));long long k(const char*); //old api
+void kinit();void kf(const char*s,long long(*)(long long));long long k(const char*); //old api
 
 K inc(K x){
  printf("inc()\n");
  return K2('+',Ki(1),x);}
 
-int main(int c,const char**a){
+int main(){
  setbuf(stdout,0);
- kinit(c,a);
+ kinit();
 
  //1 2+3
  K x=KI((I[]){1,2},2),y=Ki(3),z=K2('+',x,y);int r[2];IK(r,z);size_t n=NK(z);

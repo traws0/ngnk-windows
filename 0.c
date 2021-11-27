@@ -14,7 +14,7 @@
 #include<sys/stat.h>
 
 //__builtin_ia32_ldmxcsr(__builtin_ia32_stmxcsr()|1<<6|1<<15); //daz,ftz
-I main(In,Q*a)_(kinit(n,a);I r=0;I(n<2,repl())J(!cmdl(a[1]),r=1;epr(0))Q(cmdm(""));r)
+I main(In,Q*a)_(kinit();kargs(n,a);I r=0;I(n<2,repl())J(!cmdl(a[1]),r=1;epr(0))Q(cmdm(""));r)
 
 //_start()
 #if defined(libc)||defined(wasm)
