@@ -1,6 +1,7 @@
 ngn/k is a simple fast vector programming language
 license: GNU AGPLv3 (v3 only) - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 
+build with "make k-cosm" on wsl and copy the k.com to main windows
 
 that is an attempt to make a working build for Windows using comspolitan libc
 included the bestline library from jart since we don't have rlwrap
