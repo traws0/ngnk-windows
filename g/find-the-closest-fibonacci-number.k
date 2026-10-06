@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/133365/find-the-closest-fibonacci-number/217047#217047
+/ https://codegolf.stackexchange.com/questions/133365/find-the-closest-fibonacci-number/217047#217047
 f:{F@&x=&/x|:-x-:F:x(+':1,)/1}
 
 \l 0.k

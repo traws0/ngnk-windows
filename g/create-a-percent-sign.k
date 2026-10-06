@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/133798/create-a-percent-sign/214553#214553
+/ https://codegolf.stackexchange.com/questions/133798/create-a-percent-sign/214553#214553
 f:{(x,x)#1,2_&x}
 
 \l 0.k

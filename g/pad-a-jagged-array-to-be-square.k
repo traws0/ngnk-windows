@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/219041/pad-a-jagged-array-to-be-square/219082#219082
+/ https://codegolf.stackexchange.com/questions/219041/pad-a-jagged-array-to-be-square/219082#219082
 f:{y^x .!'2#|/#'x,,x}
 
 \l 0.k

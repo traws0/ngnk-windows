@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/21841/shortest-program-to-split-a-string-at-non-digits-without-regexps/217235#217235
+/ https://codegolf.stackexchange.com/questions/21841/shortest-program-to-split-a-string-at-non-digits-without-regexps/217235#217235
 f:{x@.t@=t-!#t:&~^(,/$!10)?x}
 
 \l 0.k

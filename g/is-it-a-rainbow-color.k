@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/214678/is-it-a-rainbow-color/214681#214681
+/ https://codegolf.stackexchange.com/questions/214678/is-it-a-rainbow-color/214681#214681
 f:^"rwpc"?*|9#
 
 \l 0.k

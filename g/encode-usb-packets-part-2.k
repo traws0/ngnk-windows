@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/229504/encode-usb-packets-part-2/229565#229565
+/ https://codegolf.stackexchange.com/questions/229504/encode-usb-packets-part-2/229565#229565
 f:0=\.'(a,$0)/(a:6#$1)\
 
 l:"JK"!0 1

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/18887/fibonacci-distribution-validator/214256#214256
+/ https://codegolf.stackexchange.com/questions/18887/fibonacci-distribution-validator/214256#214256
 f:{(+\|:)/[(#x)>+/;!2]~+/'~:\=/"/9"<\:x}
 
 \l 0.k

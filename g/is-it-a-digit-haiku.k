@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/213850/is-it-a-digit-haiku/214202#214202
+/ https://codegolf.stackexchange.com/questions/213850/is-it-a-digit-haiku/214202#214202
 f:{(17=*|o)>/^(o:+\1+~7!x)?5 12}
 
 \l 0.k

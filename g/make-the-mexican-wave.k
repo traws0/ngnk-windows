@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/53812/make-the-mexican-wave/217492#217492
+/ https://codegolf.stackexchange.com/questions/53812/make-the-mexican-wave/217492#217492
 f:x,1_|x:`c$97++(!26)-32*=26
 
 \l 0.k

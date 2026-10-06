@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/84416/groups-of-repeating-items/218906#218906
+/ https://codegolf.stackexchange.com/questions/84416/groups-of-repeating-items/218906#218906
 f:{(&~~':x)_x}
 
 \l 0.k

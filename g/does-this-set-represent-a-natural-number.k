@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/177870/does-this-set-represent-a-natural-number/177885#177885
+/ https://codegolf.stackexchange.com/questions/177870/does-this-set-represent-a-natural-number/177885#177885
 f:{{o'!x}[#x]~{x@<x:o'x}x}`j?
 
 \l 0.k

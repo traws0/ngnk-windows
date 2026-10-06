@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/70615/the-rats-sequence/214919#214919
+/ https://codegolf.stackexchange.com/questions/70615/the-rats-sequence/214919#214919
 f:{x{.o@<o:$x+.|$x}/1}
 
 \l 0.k

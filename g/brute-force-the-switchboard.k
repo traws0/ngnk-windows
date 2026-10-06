@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/188556/brute-force-the-switchboard/188577#188577
+/ https://codegolf.stackexchange.com/questions/188556/brute-force-the-switchboard/188577#188577
 f:{(?,/,/:\:)/x,'"^"/"v"\x}
 \l 0.k
 t["-v-v-v-\n-v-v-"

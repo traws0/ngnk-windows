@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/193357/convert-a-string-of-digits-from-words-to-an-integer/216977#216977
+/ https://codegolf.stackexchange.com/questions/193357/convert-a-string-of-digits-from-words-to-an-integer/216977#216977
 f:10/"rothuvsein"?(*|7#)'" "\
 
 \l 0.k

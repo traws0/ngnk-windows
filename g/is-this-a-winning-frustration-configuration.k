@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/203892/is-this-a-winning-frustration-configuration/214189#214189
+/ https://codegolf.stackexchange.com/questions/203892/is-this-a-winning-frustration-configuration/214189#214189
 f:~|/(52#"A23456789TJQK")=
 
 \l 0.k

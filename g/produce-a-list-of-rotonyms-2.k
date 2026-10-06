@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/165622/produce-a-list-of-rotonyms-2/165668#165668
+/ https://codegolf.stackexchange.com/questions/165622/produce-a-list-of-rotonyms-2/165668#165668
 f:{x^x^,/1_'(,/|0 1_)\'x}
 \l 0.k
 a:" "\'-4#0:"produce-a-list-of-rotonyms-2.k"

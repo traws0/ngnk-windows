@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/217690/speed-of-lobsters/218688#218688
+/ https://codegolf.stackexchange.com/questions/217690/speed-of-lobsters/218688#218688
 f:{y@<>y{y_x,y~:*x}/x}
 
 \l 0.k

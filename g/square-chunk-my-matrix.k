@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/229826/square-chunk-my-matrix/229913#229913
+/ https://codegolf.stackexchange.com/questions/229826/square-chunk-my-matrix/229913#229913
 f:{(*>#'=,/)''2((0N;y)#/:+:)/x}
 
 \l 0.k

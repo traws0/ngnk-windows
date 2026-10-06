@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/212371/targeted-duplicate-removal/216454#216454
+/ https://codegolf.stackexchange.com/questions/212371/targeted-duplicate-removal/216454#216454
 f:{y_/|1_&x=y}
 
 \l 0.k

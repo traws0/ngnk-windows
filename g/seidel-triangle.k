@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/162637/seidel-triangle/214508#214508
+/ https://codegolf.stackexchange.com/questions/162637/seidel-triangle/214508#214508
 f:{x|:/x{|+\x,0}/1}
 
 \l 0.k

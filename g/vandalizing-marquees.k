@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/217183/vandalizing-marquees/217288#217288
+/ https://codegolf.stackexchange.com/questions/217183/vandalizing-marquees/217288#217288
 f:{(1_t_x;!0)@^t:(x?y)*~^y}/
 
 \l 0.k

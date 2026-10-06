@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/177517/convert-to-suzhou-numerals/177536#177536
+/ https://codegolf.stackexchange.com/questions/177517/convert-to-suzhou-numerals/177536#177536
 f:{,/(0N 3#"〇一二三〤〥〦〧〨〩〡〢〣")x+9*<\x&x<4}@10\
 \l 0.k
 t[1         ;"〡"]

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/92120/convert-to-bibi-binary/214520#214520
+/ https://codegolf.stackexchange.com/questions/92120/convert-to-bibi-binary/214520#214520
 f:,/(,/"HBKD",/:\:"OAEI")@16\
 
 \l 0.k

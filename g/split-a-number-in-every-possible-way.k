@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/210321/split-a-number-in-every-possible-way/215938#215938
+/ https://codegolf.stackexchange.com/questions/210321/split-a-number-in-every-possible-way/215938#215938
 f:{?.''(&'+1,!1_2&$x)_\:$x}
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/216113/for-what-block-sizes-is-this-checksum-valid/216122#216122
+/ https://codegolf.stackexchange.com/questions/216113/for-what-block-sizes-is-this-checksum-valid/216122#216122
 f:{((|/2!+/#[;x]0N,)')_&~(!#x)!'#x}
 
 \l 0.k

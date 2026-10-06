@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/130158/clarks-triangle/213944#213944
+/ https://codegolf.stackexchange.com/questions/130158/clarks-triangle/213944#213944
 f:{(x{+':x,6}/1 6)y}
 
 \l 0.k

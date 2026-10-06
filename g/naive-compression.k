@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/214277/na%c3%afve-compression/214359#214359
+/ https://codegolf.stackexchange.com/questions/214277/na%c3%afve-compression/214359#214359
 c:{|(2/'8#'0N 8#,/(,/c[3],/:'c:{+!x#2}'!8)e?x;e:>#'=x;#x)}
 d:{*x{((*y),x(,/c[3],/:'c:{+!x#2}'!8)?d#t;(d:3+/2/3#t)_t:*|y)}[y]/("";,/+(8#2)\z)}
 f:{(c x;x~d .c x)};

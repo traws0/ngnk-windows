@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/169366/remove-surrounding-zeroes-of-a-2d-array#169396
+/ https://codegolf.stackexchange.com/questions/169366/remove-surrounding-zeroes-of-a-2d-array#169396
 f:4{+|(+/&\~+/x)_'x}/
 \l 0.k
 t[(0 0 0 0 0;0 0 0 1 0;0 0 0 0 1;0 0 1 1 1;0 0 0 0 0)
@@ -9,4 +9,4 @@ t[(0 0 0 0;0 0 0 3;0 0 0 0;0 5 0 0;0 0 0 0)
 t[(1 2 3;4 5 6;7 8 9)
   (1 2 3;4 5 6;7 8 9)]
 t[(0 0 0 0;0 0 0 0;0 0 0 0)
-  ,()]
+  0#,!0]

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/65770/cover-up-zeroes-in-a-list/222682#222682
+/ https://codegolf.stackexchange.com/questions/65770/cover-up-zeroes-in-a-list/222682#222682
 f:{y+x*~y}\
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/119994/decode-the-void#169659
+/ https://codegolf.stackexchange.com/questions/119994/decode-the-void#169659
 e:{$[#x;2/,/1,'&:'o'x;0]};d:{$[x;o'|-1+-1-':&|2\x;()]}
 \l 0.k
 f:d@e@;{ \t[x;x]}'(();,();(();());,,();(,();());(();,())); / test d(e(l)) is l

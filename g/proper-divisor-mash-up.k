@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/128147/proper-divisor-mash-up/216788#216788
+/ https://codegolf.stackexchange.com/questions/128147/proper-divisor-mash-up/216788#216788
 f:+/{*|&~(!x)!'x}'2_!1+
 
 \l 0.k

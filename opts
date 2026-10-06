@@ -1,4 +1,5 @@
--ffast-math
+-fsigned-char
+-fno-math-errno
 -fno-signed-zeros
 -fno-stack-protector
 -fomit-frame-pointer
@@ -10,4 +11,6 @@
 -Wno-pointer-sign
 -Wno-pointer-to-int-cast
 -Wno-shift-op-parentheses
+-Wno-parentheses
+-Wno-string-plus-int
 -Wno-unused-result

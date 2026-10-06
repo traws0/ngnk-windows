@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/165664/cartesian-product-of-a-list-with-itself-n-times/165673#165673
+/ https://codegolf.stackexchange.com/questions/165664/cartesian-product-of-a-list-with-itself-n-times/165673#165673
 f:{x@+!y##x}
 \l 0.k
 T[(1 2 3;3)

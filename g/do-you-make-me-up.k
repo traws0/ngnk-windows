@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/194869/do-you-make-me-up/218957#218957
+/ https://codegolf.stackexchange.com/questions/194869/do-you-make-me-up/218957#218957
 f:~^&/?
 
 \l 0.k

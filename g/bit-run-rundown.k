@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/106656/bit-run-rundown/214611#214611
+/ https://codegolf.stackexchange.com/questions/106656/bit-run-rundown/214611#214611
 f:|//{y+x*y}\'~:\2\
 
 \l 0.k

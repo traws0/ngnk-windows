@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/172891/pronunciationsort/172893#172893
+/ https://codegolf.stackexchange.com/questions/172891/pronunciationsort/172893#172893
 f:{x@<"54-9176320"?/:$x}
 \l 0.k
 t[1 2 3;1 3 2]

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/214796/convert-height-to-us-men-s-jacket-size/214802#214802
+/ https://codegolf.stackexchange.com/questions/214796/convert-height-to-us-men-s-jacket-size/214802#214802
 g:{"XSL"(&0|(-4!x)|-3!-7-x),1+0>x}173-
 
 v:!/($`XXXS`XXS`XS`S`M`L`XL`XXL`XXXL`XXXXL`XXXXXL`XXXXXXL

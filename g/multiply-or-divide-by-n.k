@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/215607/multiply-or-divide-by-n/215630#215630
+/ https://codegolf.stackexchange.com/questions/215607/multiply-or-divide-by-n/215630#215630
 f:{_x*(1.%y;y)y>x}/1+!:
 
 \l 0.k

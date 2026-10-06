@@ -1,6 +1,6 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/133610/construct-a-tornado/217057#217057
-f:{(-x,x-\y)$|,\x#$0}
+/ https://codegolf.stackexchange.com/questions/133610/construct-a-tornado/217057#217057
+f:{(-x,x-\y)$'|,\x#$0}
 
 \l 0.k
 T[(5;1 0 0 1);("00000";"0000";" 000";"  00";"  0")]

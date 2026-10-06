@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/49042/telescopic-parentheses/230244#230244
+/ https://codegolf.stackexchange.com/questions/49042/telescopic-parentheses/230244#230244
 f:{+(|/i)$(-i:m-+\m-~m:2!x)$'x}
 
 \l 0.k

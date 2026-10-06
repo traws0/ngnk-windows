@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/39951/verify-magic-square/217144#217144
+/ https://codegolf.stackexchange.com/questions/39951/verify-magic-square/217144#217144
 f:{1=#?{+/x,'x@'!#x}'(|+:)\(x,x)#y}
 
 \l 0.k

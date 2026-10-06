@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/181958/multiplicative-persistence/181971#181971
+/ https://codegolf.stackexchange.com/questions/181958/multiplicative-persistence/181971#181971
 f:{*/.'$x}\
 \l 0.k
 t[277777788888899

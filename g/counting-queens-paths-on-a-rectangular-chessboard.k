@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/203430/counting-queens-paths-on-a-rectangular-chessboard/203448#203448
+/ https://codegolf.stackexchange.com/questions/203430/counting-queens-paths-on-a-rectangular-chessboard/203448#203448
 f:{(x~1 1)+/o'x-/:{|/'~x,'-/'x}#1_+!x}
 f:0+f@
 \l 0.k

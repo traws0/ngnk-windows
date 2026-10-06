@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/162161/make-a-word-icicle/162183#162183
+/ https://codegolf.stackexchange.com/questions/162161/make-a-word-icicle/162183#162183
 f:{?(,x),x{x[y]:" ";x}\<x}
 \l 0.k
 t["Word Icicle!"

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/166623/generate-a-deck-of-cards/166652#166652
+/ https://codegolf.stackexchange.com/questions/166623/generate-a-deck-of-cards/166652#166652
 f:{"JJ",/("AKQJ",$2+!9),'/:"SHDC"}
 \l 0.k
 t[0;("J";"J";"AS";"KS";"QS";"JS";"2S";"3S";"4S";"5S";"6S";"7S";"8S";"9S";"10S"

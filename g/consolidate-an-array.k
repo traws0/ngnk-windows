@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/70779/consolidate-an-array/160506#160506
+/ https://codegolf.stackexchange.com/questions/70779/consolidate-an-array/160506#160506
 f:{x@<~x}
 \l 0.k
 t[0 5 8 8 3 5 1 6 8 4 0 3 7 5 6 4 4 7 5 6 7 4 4 9 1 0 5 7 9 3 0 2 2 4 3 0 4 8 7 3 1 4 7 5 1 2 1 8 7 8 7 7 2 6 3 1 2 8 5 1 4 2 0 5 0 6 0 3

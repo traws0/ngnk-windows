@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/135323/create-a-binary-wall/214854#214854
+/ https://codegolf.stackexchange.com/questions/135323/create-a-binary-wall/214854#214854
 f:" *"@+2\
 
 \l 0.k

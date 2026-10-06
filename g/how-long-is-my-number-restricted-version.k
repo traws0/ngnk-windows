@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/121566/how-long-is-my-number-restricted-version/216791#216791
+/ https://codegolf.stackexchange.com/questions/121566/how-long-is-my-number-restricted-version/216791#216791
 f:#10\#!:
 
 \l 0.k

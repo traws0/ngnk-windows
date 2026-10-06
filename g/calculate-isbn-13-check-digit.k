@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/342/calculate-isbn-13-check-digit/217841#217841
+/ https://codegolf.stackexchange.com/questions/342/calculate-isbn-13-check-digit/217841#217841
 f:{x,$10!2+/x*12#9 7}
 
 \l 0.k

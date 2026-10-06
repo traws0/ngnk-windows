@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/63999/parenthifiable-binary-numbers/214019#214019
+/ https://codegolf.stackexchange.com/questions/63999/parenthifiable-binary-numbers/214019#214019
 f:~#(""/"10"\)/,/$2\
 
 \l 0.k

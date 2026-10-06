@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/149045/append-and-erase/217234#217234
+/ https://codegolf.stackexchange.com/questions/149045/append-and-erase/217234#217234
 f:|&2!#'=|:
 
 \l 0.k

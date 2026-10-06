@@ -1,1 +1,1 @@
-au bufread,bufnewfile *.k se ft=k
+au! bufread,bufnewfile *.k se ft=k

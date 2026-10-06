@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/75448/making-an-acronym/217855#217855
+/ https://codegolf.stackexchange.com/questions/75448/making-an-acronym/217855#217855
 f:{`c$-32+*'(" "\_x)^$`and`or`by`of}
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/170077/split-the-bits/170082#170082
+/ https://codegolf.stackexchange.com/questions/170077/split-the-bits/170082#170082
 f:{(&1,-1_~^(+\*|a)?+\b)_b:b@>b:,/*/:/2#a:{|*/'(&|2\x)#'2}'x,*/x}
 \l 0.k
 t[3 3  ;(4 2 2;,1)]

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/224849/implement-swap-encoding/224929#224929
+/ https://codegolf.stackexchange.com/questions/224849/implement-swap-encoding/224929#224929
 f:*'{1<#x}{{(|x),y}.(1|2#*=x)_x}\
 
 \l 0.k

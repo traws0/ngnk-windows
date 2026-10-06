@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/164056/modular-broadcasting/164060#164060
+/ https://codegolf.stackexchange.com/questions/164056/modular-broadcasting/164060#164060
 f:{+/2{+:'(|/#:'x)#'x}/x}
 \l 0.k
 t[((2 4;6 8);+,10 20 30);(12 14;26 28;32 34)]

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/173937/chiral-three-dimensional-texts/173960#173960
+/ https://codegolf.stackexchange.com/questions/173937/chiral-three-dimensional-texts/173960#173960
 f:{^*({?x,((++:')'x),(|+:)'x}/,x)?,|x}
 \l 0.k
 t[(("Z--Z";"----";"Z--Z");("Z--Z";"----";"Z--Z"));0]

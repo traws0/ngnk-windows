@@ -1,6 +1,6 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/195009/generate-input-for-this-hardware/226356#226356
-f:(8'"FEDCBA98",/$!8)4+
+/ https://codegolf.stackexchange.com/questions/195009/generate-input-for-this-hardware/226356#226356
+f:(8':"FEDCBA98",/$!8)4+
 
 \l 0.k
 t[-4;"FEDCBA98"]

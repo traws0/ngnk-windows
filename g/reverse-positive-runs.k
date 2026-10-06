@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/78510/reverse-positive-runs/223215#223215
+/ https://codegolf.stackexchange.com/questions/78510/reverse-positive-runs/223215#223215
 f:"0"/|'"0"\
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/163188/detect-heat-waves/164941#164941
+/ https://codegolf.stackexchange.com/questions/163188/detect-heat-waves/164941#164941
 f:{+/7<,/4_'*\'|:',\+/x>/:24 29}
 g:f;f:{~~g x}
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/69127/convert-salesforce-15-character-id-to-18-character/214507#214507
+/ https://codegolf.stackexchange.com/questions/69127/convert-salesforce-15-character-id-to-18-character/214507#214507
 f:{x,(A,/$!6)@2/'~^(A:`c$65+!26)?/:|'3 5#x}
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/61684/calculate-the-bounded-cumulative-sum-of-a-vector/215096#215096
+/ https://codegolf.stackexchange.com/questions/61684/calculate-the-bounded-cumulative-sum-of-a-vector/215096#215096
 f:{0(x&y|+)\z}
 
 \l 0.k

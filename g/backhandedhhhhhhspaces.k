@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/52946/backhandedhhhhhhspaces/223161#223161
+/ https://codegolf.stackexchange.com/questions/52946/backhandedhhhhhhspaces/223161#223161
 f:{x_/3#-1+x?"^"}/
 
 \l 0.k

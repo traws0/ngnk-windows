@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/226877/split-a-list-at-the-second-occurrence-of-the-first-element/226894#226894
+/ https://codegolf.stackexchange.com/questions/226877/split-a-list-at-the-second-occurrence-of-the-first-element/226894#226894
 f:{(2#*=x)_x}
 
 \l 0.k

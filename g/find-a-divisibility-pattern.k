@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/212111/find-a-divisibility-pattern/212161#212161
+/ https://codegolf.stackexchange.com/questions/212111/find-a-divisibility-pattern/212161#212161
 f:{{(n+^k),k:*&(&/x=)'~(n(1+)\y)!''n:*z}[^y?x;x:1+!x]/1}
 
 \l 0.k

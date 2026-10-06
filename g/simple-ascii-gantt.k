@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/52400/simple-ascii-gantt/166987#166987
+/ https://codegolf.stackexchange.com/questions/52400/simple-ascii-gantt/166987#166987
 f:{" -"@&-':x}'
 \l 0.k
 t[0#,!0;()]

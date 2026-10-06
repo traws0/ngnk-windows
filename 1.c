@@ -1,21 +1,12 @@
-#include<math.h> // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
+#include<math.h> // ngn/k, (c) 2019-2024 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 #include"a.h"
-#define hf(f,T,e...) S N f(OV*RE a0,V*RE r0,Nn)_(O T*a=a0;T*r=r0;LN(a)LN(r)e)
-#define NG(T) hf(neg##T,T,Ni=0;I g=ZA/SZ(T);W(i<n,I o=0;j(g,o|=a[j]==(T)(1<<SZ(T)*8-1))P(o,i)j(g,r[j]=-a[j])a+=g;r+=g;i+=g)n)
-#define F1(f,T,c...) hf(f##T,T,i(PD(n,a),r[i]=({c;}))n)
-TD size_t(*F1)(OV*,V*,N);NG(B)NG(H)NG(I)F1(neg,L,-a[i])F1(neg,D,-a[i])
+Z A mMA(A x,A1*f)_(X(RA(e1f(f,x))RmM(x=mut(x);xy=f(xy);P(xy,x)xy=au;x(0)))0)
+X1(neg,RmMA(mMA(x,neg))RE(neg(gZ(x)))Rilc(az(-gl(x)))Rf(af(-gf(x)))RC(neg(cG(x)))RB(neg(cG(x)))R_(et(x))
+ RGHILF(U n=xn;I(xw-3<3&&minfZ(0,x)==-1<<(8<<xw-3)-1,x=ct(ai(tH+xw-3),x))A y=MINE(x)?x:an(n,xt),z=x-y?x:au;n=((n<<xw-3)+31&~31)>>xw-3;
+  X(C(tG,F(n,yg=-xg))C(tH,F(n,yh=-xh))C(tI,F(n,yi=-xi))C(tL,F(n,yl=-xl))D(F(n,yf=-xf)))z(y)))
+X1(not,RmMA(mMA(x,not))RU(x(ai(x==au)))RB(x=mut(x);W*a=xV;F((xn+255&-256)>>6,*a++^=-1)x)R_(eql(xtsS?as(0):ai(0),x)))
+X1(nul,RmMA(mMA(x,nul))RU(x(ai(x==au)))RB(whr(len(x)))RF(A y=aG(xn);F(xn,yg=xf!=xf)x(y))Rf(x(ai(*xF!=*xF)))R_(eql(cn[xt],x)))
+X1(flr,RmMA(mMA(x,flr))RcC(K1("{`c$x+32*~\"A[\"'x}",x))RsS(cS(N(flr(str(x)))))RilEBGHIL(x)RfF(A y=an(xn,xt+tl-tf);F(yn,yl=xf<0?(L)xf-(xf<(L)xf):(L)xf)x(sqzZ(y)))R_(et(x)))
 
-A pen(Ax,A1*f)_(XmMA(eac1f(x,f))et1(x))
-#define FX(a...) ({Ay=xr-1?an(xt,xn):x;{a;}x-y?x(y):y;})
-A1(neg,XmMA(eac1f(x,neg))Xzc(az(-gl(x)))Xd(ad(-gd(x)))XC(neg(cH(x)))
- XZD(S O F1 f[]={negB,negH,negI,negL,negD};Nn=xn;Ay=xr>1?an(xt,n):x;Nm=f[xt-tB](xV,yV,n);
-  I(m<n,I(x-y,x=wdn(x,m,n,n-m);y=wdn(y,0,m,n))E(x=y=wdn(y,0,n,n))N mw=m*yW;f[xt-tB](xV+(x-y?0:mw),yV+mw,n-m))x-y?x(y):y)
- et1(x))
-A1(not,XmMA(eac1f(x,not))XF(x(ai(x==au)))eql(xtsS?as(0):ai(0),x))
-A1(nul,XmMA(eac1f(x,nul))XF(x(ai(x==au)))eql(_R(cn[xt]),x))
-
-A1(flr,Xc(fir(flr(enl(x))))XC(Az=K("`c$@[!256;65+!26;+;32]");FX(i(PD(xn,xC),yc=zC[xc])))
- XdD(Ay=an(xt+tl-td,xn);xe(i(yn,yl=xd<0?(L)xd-(xd<(L)xd):(L)xd)y))XsS(cS(flr(str(x))))XzZ(x)XmMA(eac1f(x,flr))et1(x))
-
-#define h(k,f) A1(k,XdD(Ay=xr-1?an(xt,xn):x;i(PD(xn,xD),yd=f(xd));x-y?x(y):y)XmMA(eac1f(x,k))k(N(cD(x))))
-h(ksin,sin)h(kcos,cos)h(klog,log)h(kexp,exp)h(sqr,__builtin_sqrt)
+#define M(k,f) X1(k,RmMA(mMA(x,k))RfF(A y=MINE(x)?x:an(xn,xt);F(xn+3&~3,yf=f(xf));x-y?x(y):y)R_(k(N(cF(x)))))
+M(ksin,sin)M(kcos,cos)M(klog,log)M(kexp,exp)M(sqr,SQ)

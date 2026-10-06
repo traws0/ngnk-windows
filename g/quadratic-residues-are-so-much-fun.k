@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/172613/quadratic-residues-are-so-much-fun/172666#172666
+/ https://codegolf.stackexchange.com/questions/172613/quadratic-residues-are-so-much-fun/172666#172666
 g:{&/#:'=,/x!r-\:r:?x!i*i:!x}
 \l 0.k
 f:{g'1+!x}

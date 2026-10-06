@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/167337/lets-design-a-digit-mosaic/167372#167372
+/ https://codegolf.stackexchange.com/questions/167337/lets-design-a-digit-mosaic/167372#167372
 f:{x@i|\:i:&1+!#x}
 \l 0.k
 t["65"

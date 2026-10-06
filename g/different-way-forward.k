@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/47005/different-way-forward/224226#224226
+/ https://codegolf.stackexchange.com/questions/47005/different-way-forward/224226#224226
 f:(1_-':)/
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/158239/transitive-equality/167104#167104
+/ https://codegolf.stackexchange.com/questions/158239/transitive-equality/167104#167104
 f:{&a[z]=a:{y[x]&:|y x;y}[+y,,&2]/!x}
 \l 0.k
 T[(3;(1 2;2 0            );1);0 1 2      ]

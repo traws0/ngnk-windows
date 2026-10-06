@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/129965/what-is-the-standard-scratch/217018#217018
+/ https://codegolf.stackexchange.com/questions/129965/what-is-the-standard-scratch/217018#217018
 f:{-y-/x*3+!3}
 
 \l 0.k

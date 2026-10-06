@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/68600/sort-a-concatenated-sequence/215384#215384
+/ https://codegolf.stackexchange.com/questions/68600/sort-a-concatenated-sequence/215384#215384
 f:(|/<':){@[x;t-1;(0^x t)+10*]_t:1+*&~0>':x}/.',/$13{x,+/-2#x}/
 
 \l 0.k

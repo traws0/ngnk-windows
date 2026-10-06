@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/47134/from-0-to-2n-1-in-popcorn-order/216532#216532
+/ https://codegolf.stackexchange.com/questions/47134/from-0-to-2n-1-in-popcorn-order/216532#216532
 f:<+/!2+&:
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/52577/recursive-binary-description/223218#223218
+/ https://codegolf.stackexchange.com/questions/52577/recursive-binary-description/223218#223218
 f:{,/{(,/$2\#x),*x}'(&~~':x)_x}\[;,"0"]
 
 \l 0.k

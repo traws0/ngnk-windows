@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/164760/orthodiagonal-steps/164772#164772
+/ https://codegolf.stackexchange.com/questions/164760/orthodiagonal-steps/164772#164772
 f:{(+1-!x#3)^,&x}
 \l 0.k
 t[3

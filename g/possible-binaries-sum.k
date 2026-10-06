@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/216369/possible-binaries-sum/217237#217237
+/ https://codegolf.stackexchange.com/questions/216369/possible-binaries-sum/217237#217237
 f:{_2/(d-1.5*t),&+/t:2=d:.'x}
 
 \l 0.k

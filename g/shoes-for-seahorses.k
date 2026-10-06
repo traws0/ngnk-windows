@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/132369/shoes-for-seahorses/217041#217041
+/ https://codegolf.stackexchange.com/questions/132369/shoes-for-seahorses/217041#217041
 f:{#,/0N 2#/:(0,&~t)_t:3>-':x@<x}
 
 \l 0.k

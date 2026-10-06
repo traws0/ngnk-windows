@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/143278/am-i-an-insignificant-array/221444#221444
+/ https://codegolf.stackexchange.com/questions/143278/am-i-an-insignificant-array/221444#221444
 f:&/2>#'!'1_-':
 
 \l 0.k

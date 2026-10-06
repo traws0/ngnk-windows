@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/44540/into-how-many-pieces-can-you-cut-this-string/217483#217483
+/ https://codegolf.stackexchange.com/questions/44540/into-how-many-pieces-can-you-cut-this-string/217483#217483
 f:{|/+/'~~':'x>/:x}
 
 \l 0.k

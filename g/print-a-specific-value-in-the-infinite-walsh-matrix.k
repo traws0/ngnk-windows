@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/20906/print-a-specific-value-in-the-infinite-walsh-matrix/217970#217970
+/ https://codegolf.stackexchange.com/questions/20906/print-a-specific-value-in-the-infinite-walsh-matrix/217970#217970
 f:-:/[;1]@+/&/+2\,
 
 \l 0.k

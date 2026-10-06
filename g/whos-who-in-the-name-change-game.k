@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/195022/whos-who-in-the-name-change-game/226365#226365
+/ https://codegolf.stackexchange.com/questions/195022/whos-who-in-the-name-change-game/226365#226365
 f:{(>x)!x@>x}(0#`!0){(n;a):y;$[`i~@a;@[x;n;+;a];@[x;a;:;0^x@n]_n]}/
 
 \l 0.k

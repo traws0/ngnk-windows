@@ -1,6 +1,6 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/44818/find-the-substring-with-the-most-1s-in-a-sequence/216835#216835
-f:{*>+/'x'y}
+/ https://codegolf.stackexchange.com/questions/44818/find-the-substring-with-the-most-1s-in-a-sequence/216835#216835
+f:{*>+/'x':y}
 
 \l 0.k
 T[(4;0 1 1 0 1 1 1 0 0 0 0 1 1);1]

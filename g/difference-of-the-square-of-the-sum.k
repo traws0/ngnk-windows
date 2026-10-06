@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/83338/difference-of-the-square-of-the-sum/215980#215980
+/ https://codegolf.stackexchange.com/questions/83338/difference-of-the-square-of-the-sum/215980#215980
 f:{(t*t:+/s)-+/s*s:x_!1+y}
 
 \l 0.k

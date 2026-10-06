@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/65748/find-the-sum-of-all-possible-base-representations/214199#214199
+/ https://codegolf.stackexchange.com/questions/65748/find-the-sum-of-all-possible-base-representations/214199#214199
 f:{+/t{y/x}/:(|/t:x+7*3>x-:55)_1+!36}
 
 \l 0.k

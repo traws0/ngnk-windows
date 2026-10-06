@@ -1,28 +1,41 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
+#include"a.h" // ngn/k, (c) 2019-2024 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
 
-//serialize
-S A f8(Lv,Ay)_(cts(y,(V*)&v,8))
-S A2(f,y=Nx(apc(y,xt));
- P(xtA||xtS,y=Nx(f8(xn,y));i(xn,y=Nx(f(ii(x,i),y)))x(y))
- XmMA(f(AT(tA,mut(x)),y))
- Xs(Lv=xv;Qs=syp(&v);In=Sn(s)+1;y=Nx(apc(y,n));cts(y,s,n))
- XP(f8(x,y))
- Xr(f(AT(tA,mut(x)),Nx(apc(y,xw<<3|xk))))
- XF(f(AT(tA,mut(x)),Nx(apc(y,xv<<3|xk))))
- In=8*xtT;x(cts(y,xV-n,n+xn*xW)))
-A1(ser,f(x,oC))
+Z A f(A,A,C);
+Z C VER=0x01;
+Z A sh=0;
+Z A ser_(A x,C m)_(P((UC)m>1,en(x))sh=emp(tS);A y=aC(0);y=f(x,apc(y,VER),m);mr(sh);x(y))
+Z A ff(L v,A y)_(cts(y,(V*)&v,8))
+Z A fi(I v,A y)_(cts(y,(V*)&v,4))
+Z A fA(A x,A y,C m)_(/*01*/N n=xn;y=fi(n,y);F(n|!n,y=N(f(xa,y,m)))y)
+Z A f(A x,A y,C m)_(/*01*/
+ X(
+   RmMA(fA(x,apc(y,xt),m))
+   RE(y=ff(xL[0],apc(y,xt));ff(xL[1],y))
+   RS(y=fi(xn,apc(y,xt));F(xn,y=N(f(as(xi),y,m)))y)
+   Rs(U u=xv;P(!(u&1<<31),ff(x,apc(y,xt)));A z=fnd(sh,x);P(gl_(z)-NL,ff(x,apc(y,xt|0x80)))
+      PSH(sh,x);y=ff(x,apc(y,xt));S s=su(u);I n=SL(s)+1;y=apc(y,n);cts(y,s,n))
+   R6(ti,tc,tu,tv,tw,tx,ff(x,apc(y,xt)))
+   R4(to,tp,tq,tr,Q(xw==4);P(!m,fA(x,apc(apc(y,xt),(xtr?xE:0)<<3|xk),m))P(m==1,y=fi(xn,apc(y,xt|0x80));ff(x,y))ed(y))
+   R_(P(!m,y=fi(xn,apc(y,xt));cts(y,xV,xtB?(xn+7>>3):(xn<<xw-3)))P(m==1,y=fi(xn,apc(y,xt|0x80));ff(x,y))ed(y)))0)
+A1(ser, /*1*/ser_(x,0))
+A2(ser2,/*11*/P(!xtz,ed(x(y)))x(ser_(y,xv)))
 
-//deserialize
-S C*s,*p;
 #define h(n) ({P(p-s<n,ed0());C*r=s;s+=n;r;})
 #define h1 (*(C*)h(1))
+#define h4 (*(I*)h(4))
 #define h8 (*(L*)h(8))
-S A0(g,Ct=h1;P(!in(t,tn),ed0())
- P(t==tA||t==tS,Ln=h8;P(!in(n,1ll<<45),ed0())Ax=AN(0,an(t,n));i(n,xq(Nx(g())))x)
- P(t==tm||t==tM,Ax=N(g());P(!xtA||xn-2||_t(xx)>tM||_t(xy)>tM||_N(xx)-_N(xy),ed0())AT(t,mut(x)))
- P(t==ts,Nn=h1;syP(h(n)))
- P(TP(t),h8)
- P(t==tr,Cc=h1;AT(t,AK(c&7,AW(c>>3,N(g())))))
- P(TF(t),Cc=h1;AT(t,AK(c&7,AV(c>>3,N(g())))))
- Ln=t<tm?h8:1;P(!in(n,1ll<<45),ed0())aV(t,n,h(n*TZ[t])))
-A1(des,XC(s=xV;p=s+xn;x(g()))ed1(x))
+Z A0 g;Z C*s,*p;
+A des_(C* x, I n)_(sh=am(emp(tS),emp(tS));s=x;p=s+n;C ver=h1;P(ver!=VER,0)A y=N(g());mr(sh);y)
+Z A0(gA,I n=h4;P(!(n<(W)(1ll<<45)),ed0())A x=aA(n);F(n|!n,P(!(xa=g()),mrn(i,xA);AZ(x);x(0)))x)
+Z A0(g,C t=h1;B r=t&0x80;t&=0x7f;P(!(t<(W)tn),ed0())
+ S(t,
+  RA(gA())
+  RE(L i,j;i=h8;j=h8;A x=aE(i,j);AT(t,x))
+  R2(tm,tM,A x=N(gA());P(!xtA||xn-2||_t(xx)>tM||_t(xy)>tM||_N(xx)-_N(xy),ed(x))AT(t,mut(x)))
+  RS(I n=h4;P(!(n<(W)(1ll<<45)),ed0())A x=aS(n);F(n,xi=Nx(g()))x)
+  Rs(P(!r,A x=h8;U u=xv;P(u&1<<31,N n=h1;A y=sym(h(n));sh=a4(sh,x,av,y);y)x)A x=h8,y=sh;y1(x))
+  R2(ti,tc,Lt(t)|(U)h8)
+  R4(tu,tv,tw,tx,h8)
+  R4(to,tp,tq,tr,P(!r,C c=h1;A x=N(gA());AT(t,AK(c&7,t==tr?AW(c>>3,x):x)))I n=h4;V*a=(V*)h8;a?aV(t,n,a):an(n,t))
+  R_(I n=h4;P(!(n<(W)(1ll<<45)),ed0())P(r,V*a=(V*)h8;a?aV(t,n,a):an(n,t))P(t==tB,I m=n+7>>3;AN(n,AT(tB,aV(tC,m,h(m)))))aV(t,n,h(n*(1<<Tw[t]-3)))))0)
+A1(des,XC(N(des_(xC, xn),ed(x)))ed(x))

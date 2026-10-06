@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/114749/when-integers-join-the-queue/220562#220562
+/ https://codegolf.stackexchange.com/questions/114749/when-integers-join-the-queue/220562#220562
 f:(){$[y;y,;-1_]x}/
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/136078/how-does-the-square-end/216834#216834
+/ https://codegolf.stackexchange.com/questions/136078/how-does-the-square-end/216834#216834
 f:{?x!r*r:!x}
 
 \l 0.k

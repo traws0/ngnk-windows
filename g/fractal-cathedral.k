@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/138883/fractal-cathedral/160585#160585
+/ https://codegolf.stackexchange.com/questions/138883/fractal-cathedral/160585#160585
 f:{" #"@+a,1_|a:!x#2}
 \l 0.k
 t[4;("       "

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/217077/bedevil-your-hangman-opponent/217086#217086
+/ https://codegolf.stackexchange.com/questions/217077/bedevil-your-hangman-opponent/217086#217086
 f:{x@*>+//'+x=/:&c=&/c:#'=,/x}
 
 \l 0.k

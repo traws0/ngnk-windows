@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/10966/generate-ordered-combinations-with-repetition/168593#168593
+/ https://codegolf.stackexchange.com/questions/10966/generate-ordered-combinations-with-repetition/168593#168593
 f:{,/(,/,'/:)\x#,y}
 \l 0.k
 T[(3;"ab");("a";"b";"aa";"ba";"ab";"bb";"aaa";"baa";"aba";"bba";"aab";"bab";"abb";"bbb")]

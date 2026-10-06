@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/176168/drawing-the-peano-curve/176179#176179
+/ https://codegolf.stackexchange.com/questions/176168/drawing-the-peano-curve/176179#176179
 f:{+y,(|'y:x,,~>+x),x}/1,&2* /not synced with codegolf.SE
 \l 0.k
 t[1;(1 1 1 0 1

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/224278/count-the-trailing-zeros/224287#224287
+/ https://codegolf.stackexchange.com/questions/224278/count-the-trailing-zeros/224287#224287
 f:{*&|y\x}
 
 \l 0.k

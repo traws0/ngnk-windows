@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/104121/sever-sort-an-array/218907#218907
+/ https://codegolf.stackexchange.com/questions/104121/sever-sort-an-array/218907#218907
 f:{,/|'(&0N>':x)_x}
 
 \l 0.k

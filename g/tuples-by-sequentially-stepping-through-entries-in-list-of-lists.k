@@ -1,8 +1,8 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/168561/tuples-by-sequentially-stepping-through-entries-in-list-of-lists/168566#168566
+/ https://codegolf.stackexchange.com/questions/168561/tuples-by-sequentially-stepping-through-entries-in-list-of-lists/168566#168566
 f:{x@'/:?|\+|!|#'x}
 \l 0.k
-t[();,()]
+t[0 0#0;1 0#0]
 t[,,1;,,1]
 t[(1 2;3 4;,5);(1 3 5;2 3 5;2 4 5)]
 t[(,1;,2;5 6;,3;,4);(1 2 5 3 4;1 2 6 3 4)]

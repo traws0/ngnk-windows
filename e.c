@@ -1,21 +1,25 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-S C m[32];S I n,o;A src; //message,length,offset,source
-SN A e0(Qs)_(n=min(Sn(s),SZ m-1);Mc(m,s,n);m[n]=0;0)
-NI A e1(Ax,Qs)_(x(e0(s)))
-SN A e2(Ax,Ay,Qs)_(y(e1(x,s)))
-SN A eN(OA*a,In,Qs)_(mrn(n,a);e0(s))
-SN I eC()_(n=0;I(src,mr(src);src=0)o=0)
-NI I eS(Ax/*1*/,Ii)_(P(src,x(0))src=x;o=i;0)
-A3(try,x=dot(x,y);P(x,z(x))I(ztF&&zK<3,Ay=aCn(m,n);z=zK<2?ap1(z,y):dot(z,a2(y,a2(src?_R(src):oC,az(o)))))eC();z)
-A1(epr,I h=64;Cb[3*h+6+SZ m],*r=b;*r++='\'';Mc(r,m,n);r+=n;*r++=10;
- I(src,Ax=src;C*t=xV+o,*p=t,*q=t;W(p>xC&&p>t-h&&p[-1]&&p[-1]-10,p--)W(q<xC+xn&&q<=t+h&&*q&&*q-10,q++)
-  Mc(r,p,q-p);I(p<=t-h,*r=r[1]='.')I(q>t+h,r[q-p-2]=r[q-p-1]='.')r+=q-p;*r++=10;Ms(r,32,t-p);r+=t-p;*r++='^';*r++=10)
- eC();write(1,b,r-b);x)
-A die(Qs)_(write(1,s,Sn(s));exit(1);0)
+#include"a.h" // ngn/k, (c) 2019-2024 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
+Z C b[4096],*r=b;Z U d;
+NI A err0(S s)_(r=b;d=0;N n=MIN(SL(s),32);r=b;*r++='\'';MC(r,s,n);r+=n;*r++=10;0)
+ZN A err1(A x,S s)_(x(err0(s)))
+ZN A err8(CO A*a,U n,S s)_(mrn(n,a);err0(s))
+NI V eQ(S s,U n,U i){
+ I(++d>=5,I(d==5,MC(r," ..\n",4);r+=4)return)
+ S p=s+i,q=p,t=p;U h=64,o=1;
+ W(s<p&&t-h<p&&p[-1]&&p[-1]-10,p--;o+=(*p&0xc0)!=0x80)
+ W(q<s+n&&q<=t+h&&*q&&*q-10,q++)
+ *r++=32;MC(r,p,q-p);
+ I(p<=t-h,*r=r[1]='.')
+ I(q>t+h,r[q-p-2]=r[q-p-1]='.')
+ r+=q-p;*r++=10;MS(r,32,o);r+=o;*r++='^';*r++=10;}
+NI V eS(A x/*0*/,U i)_(eQ(xV,xn,i))
+A3(try,/*100*/x=x(dot(x,yR));P(x,x)I(ztU,z=z1(aCn(b,r-b)))E(zR)r=b;d=0;z)
+A1(epr,write(2,b,r-b);r=b;x)
+A1(err,XC(x=str0(x);err1(x,xV))P(x==au,aCn(b,r-b))err1(x,"err"))
+NI A die(S s)_(U n=SL(s);C v[n+1];MC(v,s,n);v[n]=10;write(1,"'",1);write(2,v,n+1);exit(1);0)
 
-#define h(t,m)\
- NI A0(e##t##0,e0(    #m))\
- NI A1(e##t##1,e1(x,  #m))\
- NI A2(e##t##2,e2(x,y,#m))\
- NI AA(e##t##8,eN(a,n,#m))
-EA
+#define M(t,m)\
+ NI A0(e##t##0,err0(    #m))\
+ NI A1(e##t   ,err1(x,  #m))\
+ NI AA(e##t##8,err8(a,n,#m))
+ERR

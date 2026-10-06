@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/21326/sort-numbers-by-binary-1s-count/164966#164966
+/ https://codegolf.stackexchange.com/questions/21326/sort-numbers-by-binary-1s-count/164966#164966
 f:{x@>+/2\x}
 \l 0.k
 t[11746 825 16375 15752 15342 21826 3944 32425 28436 28943 19944

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/114146/get-your-dubs-together/214676#214676
+/ https://codegolf.stackexchange.com/questions/114146/get-your-dubs-together/214676#214676
 f:{+/&\|x=*|x}
 
 \l 0.k

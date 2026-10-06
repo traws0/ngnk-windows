@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/194835/spelling-on-a-grid/194838#194838
+/ https://codegolf.stackexchange.com/questions/194835/spelling-on-a-grid/194838#194838
 f:{,/(|4,&0|,/-:\)'-':+(0,y)\x-97}
 \l 0.k
 s:{"!"/{x@<"DRUL"?x}'"!"\x} /sort !-separated groups

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/215449/compatible-strings/215471#215471
+/ https://codegolf.stackexchange.com/questions/215449/compatible-strings/215471#215471
 f:=/9!+/'3+
 
 \l 0.k

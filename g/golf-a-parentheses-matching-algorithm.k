@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/166457/golf-a-parentheses-matching-algorithm/166462#166462
+/ https://codegolf.stackexchange.com/questions/166457/golf-a-parentheses-matching-algorithm/166462#166462
 f:{b@0N 2#,/=(|':+\-/a)b:&|/a:"[]"=\:x}
 \l 0.k
 g:f;f:{r@<r:g x}

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/215858/perfect-radicals/215869#215869
+/ https://codegolf.stackexchange.com/questions/215858/perfect-radicals/215869#215869
 f:{x+~x^:(x{+/y\x}'!x)?1}
 
 \l 0.k

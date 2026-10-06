@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/177662/rotation-invariant-fingerprinting/177667#177667
+/ https://codegolf.stackexchange.com/questions/177662/rotation-invariant-fingerprinting/177667#177667
 f:{x@*<x:4(+|:)\x}
 a:(((1 0;1 0;1 1)
     (0 0 1;1 1 1)

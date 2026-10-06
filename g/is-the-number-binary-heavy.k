@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/132243/is-the-number-binary-heavy/216724#216724
+/ https://codegolf.stackexchange.com/questions/132243/is-the-number-binary-heavy/216724#216724
 f:0>+/1-2*2\
 
 \l 0.k

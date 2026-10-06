@@ -1,41 +1,74 @@
-#include"a.h" // ngn/k, (c) 2019-2021 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
-I si(Qs,Iv)_(SC0(s,v)-(C*)s)S D p10(In)_(Dv=1;i(n,v*=10)v)S Q p32(Qs)_(W(*s==32,s++)s)
-L pu(Q*p)_(Qs=*p;Lv=0;Cc=*s;W(c09(c),v=10*v+c-'0';c=*++s)*p=s;v)L pl(Q*p)_(Im=**p=='-';*p+=m;(1-2*m)*pu(p))
-S D pdu(Q*p)_(UL v=pu(p);Qs=*p;Cc=*s;P(c=='n'||c=='w',(*p)++;c=='n'?ND:WD)I e=0;
- I(c=='.',c=*++s;W(c09(c),I(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))I(c=='e',s++;e+=pl(&s))*p=s;e<0?v/p10(-e):v*p10(e))
-S D pd(Q*p)_(Im=**p=='-';(*p)+=m;(1-2*m)*pdu(p))
-S Qs,s0;S I k;S I num(Qs)_(c09(s[*s=='-']))
-S A0(pZ,Qp=s;W(*p-'0'<2u,p++)P(*p=='b',Ax=aB(p-s);i(xn,xb=*s++&1)s++;x)
- Ax=oL;W(1,Lv=pl(&s);I(!v&&*s=='N',v=NL;s++)x=apv(x,&v);Qp=p32(s);B(p==s||!num(p))s=p)sqzZ(x))
-S A0(pD,Ax=oD;W(1,x=apv(x,(D[]){pd(&s)});Qp=p32(s);B(p==s||!num(p))s=p)x)
-S A0(pC,Ax=oC;Cc=*++s;W(c&&c-'"',I(c=='\\',c=*++s;Ii=si("tnr0",c);I(i<4,c="\t\n\r"[i]))x=apc(x,c);c=*++s)P(!c,ep1(x))c=*++s;x)
-S C ph()_(Cc=*s;c09(c)?c-'0':c-'a'<6u?c+10-'a':16)
-S A0(p0x,Ax=oC;s+=2;W(1,Cc=ph();P(c>15,x)s++;Cd=ph();P(d>15,ep1(x))s++;x=apc(x,c<<4|d))x)
-S A0(ps,Qp=s;Cc=*s;I(c>>7,W((c=*++s)>>6==2)s+=c==':')J(cAz(c),W(cA9(c),c=*++s))aCm(p,s))
-S A0(pS,Ax=oS;W(1,Ay=*s-'"'?ps():Nx(pC());y=str0(y);xq(y(syP(yV)));Qp=p32(s);P(*p-'`',x)s=p+1)0)
-S A0(pP,Ax=oS;W(1,Ay=str0(ps());y(xq(syP(yV)));P(*s-'.',x)++s)0)
-S A1(shy,P(xn<2,x)Ay=xA[xn-1];I(ytA&&yn>2,Az=yx;I((z==av||ztu)&&_tsSA(yy),xq(au)))x) //if last is assignment, return ::
-S A px(In)_(Q(n<4u);Ax=aS(n);i(xn,xi='x'+i)x)S A1(p1,xn-1?x:fir(x))S A pb(A,C);
-S A0(po,C k0=k;k=1;Q s1=s0,t=s0=s++;Ay;I(*s-'[',y=au)E(s++;y=sqz(N(pb(oA,']')));P(!ytS,ep1(y))P(yN>8,s--;ez1(y)))
- Az=pb(a1(PRG),'}');P(!z,s0=s1;y(0))I(y==au,y=px(k))Ax=N(cpl(aCn(t,s-t),shy(z),y));s0=s1;k=k0;x)
-S A pt(C*v)_(Ax;Cc=*s;P(c=='`',s++;x=N(pS());xn>1?enl(x):x)P(c=='{',po())P(c=='"',p1(N(pC())))
- P(c=='(',s++;P(*s==')',s++;oA)x=N(pb(enl(MKL),')'));xn-2?x:las(x))P(c=='[',s++;pb(a1(PRG),']'))
- P(c09(c)&&s[1]==':',I u=s[2]==':';s+=2+u;Ii=20+c-'0';P(i>25,ep0())*v=1;AT(tv-u,i))P(c=='0'&&s[1]=='x',p1(N(p0x())))
- P(num(s)&&(c-'-'||(!cA9(s[-1])&&si(")]}\"",s[-1])==4)),L d=0;Qp=s;c=*p;
-  W(1,p+=*p==32;B(!num(p))p+=*p=='-';c=*p;B(!cA9(c))W(cA9(c)||c=='.'||c==':',d|=si(".nwe",c)<4;c=*++p))p1(N(d?pD():pZ())))
- P(cAz(c),Qp=s;x=pP();I(s-p==1&&c-'y'<2u,k=max(k,c-'w'))AO(p-s0,p1(x)))P(c>127,Qp=s;x=pP();*v=1;AO(p-s0,p1(x)))
- Ii=si("'/\\",c);P(i<3,c=*++s;I h=c==':';s+=h;*v=1;aw+i+3*h)i=si(vc,c);P(i>19,PLH)I u=*++s==':';s+=u;*v=1;AT(tv-u,i))
-S A1(mon,Xv(x^au^av)XA(I(xn==2&&xx==aw||xn==3&&xx==COM,x=mut(x);xA[xn-1]=mon(xA[xn-1]))x)
- Xs(Lv=xv;Qs=syp(&v);Nn;P(*s>>7&&s[(n=Sn(s))-1]-':',Cb[8];Mc(b,s,n);b[n]=':';b[n+1]=0;syP(b))x)x)
-S A pT(C*v)_(Ax=N(pt(v));
- W(1,Cc=*s;Ii=si("'/\\[",c);P(i>3,x)s++;
-  I(i>2,x=AO(s-1-s0,N(pb(a1(x),']')));I(xn==2,I(xy==PLH,xy=au)E(xx=mon(xx)))*v=0)
-  E(I u=*s==':';s+=u;x=a2(aw+i+3*u,x);*v=1))x)
-S V pw()_(s=p32(s);Cc=*s;P(c-'/')c=s[-1];P(s>s0&&c-32&&c-10)W((c=*++s)&&c-10))
-S A pe(Ax,C*v)_(pw();P(s>s0&&*s=='\\'&&s[-1]==32,s++;Ay=pe(0,v);P(!y,x?x(0):0);*v=0;y=a2(OUT,y);I(x,y=a2(mon(x),y))y)
- UH o=s-s0;Cb=0;Ay=pT(&b);P(!y,x?x(0):0)P(y==PLH,x?x:y)P(!b,Az=pe(y,v);P(!x,z)Nx(z);*v?a3(COM,x,z):AO(o,a2(mon(x),z)))
- Az=pe(0,v);P(!z,y(x?x(0):0))P(z==PLH,*v=1;P(!x,y)Yu(ep1(x))AO(o,a3(y,x,z)))
- *v&=y!=av;I(!x,y=mon(y))*v?a3(COM,x?AO(o,a3(y,x,PLH)):y,z):AO(o,x?a3(y,x,z):a2(mon(y),z)))
-S A pb(Ax,Cc)_(W(1,Cv=0;Ay=Nx(pe(0,&v));I(y==PLH&&c-']',P(c==')',ep2(x,y))y=au)xq(y);B(*s-';'&&*s-10)s++)P(*s-c,ep1(x))s++;x)
-A pk(Qp)_(s0=s=p;Ax=pb(a1(PRG),0);P(!x,eS(aCz(s0),s-s0);0)x=shy(x);xn-2?x:las(x))
-A1(prs,XC(x=str0(x);x(pk(xV)))et1(x))
+#include"a.h" // ngn/k, (c) 2019-2024 ngn, GNU AGPLv3 - https://codeberg.org/ngn/k/raw/branch/master/LICENSE
+TD ST {S s0;S s;S sr;U k;} P;Z A pb(P*,A,C);                                                        //parser state (s:current pointer, s0:start of source, sr:start of last statement, k:implicit arg counter)
+U si(S s,C v)_(strchrnul(s,v)-(C*)s)                                                                //find char (string index)
+B id0(UC c)_(CAz(c)|(c|1)==0xd1)                                                                    //is identifier start char?
+Z B id1(C c)_(id0(c)|C09(c))                                                                        //is identifier char?
+Z B num(S s)_(C09(s[*s=='-']))                                                                      //is number start?
+Z S pw(S s)_(W(*s==32,s++)s)                                                                        //skip whitespace
+Z A p1(P*w,A x)_(x&&xn==1?fir(x):x)                                                                 //singleton list to atom
+S pID(S s)_(W(id1(*s),s+=0xe555>>((UC)*s>>4&-2)&3)s)                                                //parse identifier
+W pu(S*p)_(S s=*p;W v=0;C c=*s;W(C09(c),v=10*v+c-'0';c=*++s)*p-s?*p=s,v:NL)                         //parse unsigned long
+L pl(S*p)_(B m=**p=='-';*p+=m;(1-2*m)*pu(p))                                                        //parse long
+Z L plN(S*p)_(S s=*p;L v=pl(&s);P((*s)&&!!strchr(".nwef",*s),NL)
+ I(*s=='b'&&s-*p-1,S r=*p;F(s-*p,B(*r-'0'>=2u);++r)P(r==s,NL))*p=s;!v&&**p=='N'?(*p)++,NL:v)        //parse long (with support for nulls)
+Z L pfu(S*p)_(L v=pu(p);S s=*p;C c=*s;P(c=='w',(*p)++;WFL)P(c=='n',(*p)++;v^NFL)I e=0;              //parse float unsigned
+ I(c=='.',c=*++s;W(C09(c),I(v<(1ull<<63)/10,v=10*v+c-'0';e--)c=*++s))
+ I(c=='e',s++;e+=pl(&s);P(e<-308,0)P(e>308,WFL))
+ Z F t[309];I(!*t,*t=1;F(308,t[i+1]=10*t[i]))
+ *p=s;*(L*)A(e<0?v/t[-e]:v*t[e]))
+L pf(S*p)_(B m=**p=='-';(*p)+=m;L v=(L)m<<63|pfu(p);(*p)+=**p=='f';v)                               //parse float
+Z A pV(P*w,C t,TY(pl)*f)_(L a[1<<9];U n=0;S p=w->s,m;B d=1;A x=an(0,t);                             //parse ints or floats
+ W(d,n=0;W(n<L(a),m=p;L v=f(&p);B(p==m,d=0)w->s=p;a[n++]=v;p=pw(w->s);B(p==w->s||!num(p),d=0))x=cat11(x,aV(t,n,a)))x)
+Z A pZ(P*w)_(S p=w->s;W(*p-'0'<2u,p++)                                                              //parse ints
+ P(*p=='B',S t=w->s;w->s=p+1;cB(aV(tG,p-t,t)))//todo
+ P(*p=='b',S t=w->s;w->s=p+1;cG(cB(aV(tG,p-t,t))))
+ sqzZ(N(pV(w,tL,plN))))
+Z A pF(P*w)_(pV(w,tF,pf))                                                                           //parse floats
+Z A pC(P*w)_(C a[1<<9];U n;C c=*++w->s;A x=an(0,tC);B d=1;                                          //parse "string"
+ W(c&&d,n=0;W(c&&c-'"'&&n<L(a),I(c=='\\',c=*++w->s;U i=fG("tnr0",4,c);I(i<4,c="\t\n\r"[i]))a[n++]=c;c=*++w->s)
+ x=cat11(x,aV(tC,n,a));B(c=='"',d=0))P(!c,x(0);ep0())w->s++;x)
+Z A p0x(P*w)_(S p=w->s;W(CA9(*p),p++)A x=N(unhC(w->s,p-w->s));w->s=p;x)                             //parse 0x string
+Z A ps(P*w)_(S p=w->s;C c=*w->s;I(id0(c),w->s=pID(w->s))J(c>>7,W(*++w->s<-64)w->s+=*w->s==':')aCm(p,w->s))     //parse symbol
+Z A pS(P*w,C c)_(I a[256];U n=0;I m=w->s-w->sr;                                                     //parse symbols
+ W(1,P(n>=L(a),ez0())A y=*++w->s-'"'?ps(w):N(pC(w));y=str0(y);a[n++]=us(yC);y(0);S p=pw(w->s);B(*p-c)w->s=p)AO(m,aV(tS,n,a)))
+Z A pP(P*w)_(I a[8];U n=0;I m=w->s-w->sr;                                                           //parse dot-separated path of identifiers
+ W(1,P(n>=L(a),ez0())A y=str0(ps(w));a[n++]=us(yV);y(0);B(*(w->s)-'.'||!id0((w->s)[1]))++w->s)
+ AO(m,aV(tS,n,a)))
+Z A pp(P*w)_(P(*(w->s)-'[',au)A x=N(pS(w,';'));P(*(w->s)-']'||!xn,ep(x))P(xN>8,ez(x))w->s++;x)      //parse parameter list
+Z A pt(P*w,C*b)_(C c=*w->s;                                                                         //parse term
+ P(c=='`',A x=p1(w,N(pS(w,'`')));I m=xo;AO(m,qte(x)))
+ P(c=='"',p1(w,pC(w)))
+ P(c=='[',w->s++;AO(-1,N(pb(w,GAP,']'))))
+ P(c=='(',w->s++;I m=w->s-w->sr;A x=N(pb(w,MKL,')'));xn-2?(xn?AO(m,x):x):las(x))
+ P(c=='{',P w0;MC(&w0,w,SZ(w0));w0.k=1;S t=w0.sr=w0.s++;w->s=w0.s;A y=N(pp(&w0)),z=pb(&w0,GAP,'}');P(!z,y(0))I(y==au,y=aS(w0.k);F(3,yi='x'+i))A x=N(cpl(aCn(t,w0.s-t),z,y));w->s=w0.s;x)
+ P(id0(c),S p=w->s;A x=N(pP(w));I(w->s-p==1&&c-'y'<2u,w->k=MAX(w->k,c-'w'))AO(p-w->sr,x))
+ P(C09(c)&&(w->s)[1]==':',B u=(w->s)[2]==':';w->s+=2+u;U i=20+c-'0';P(i>25,ep0())*b=1;Lt(tv-u)|i)
+ P(c=='0'&&w->s[1]=='x',w->s+=2;p1(w,p0x(w)))
+ P(num(w->s)&&(c-'-'||w->s==w->s0||(!id1((w->s)[-1])&&!strchr(")]}\"",(w->s)[-1]))),
+  B d;S p=w->s;A x=an(0,tL);W(1,d=xtF;p+=*p=='-';c=*p;B(!CA9(c))W(CA9(c)||c=='.'||c==':',d|=!!strchr(".nwef",c);c=*++p)x=cat11(d-xtF?cF(x):x,d?pF(w):pZ(w));p=pw(w->s);B(p==w->s||!num(p))w->s=p)p1(w,x))
+ P(c>>7,S p=w->s;A x=pP(w);*b=1;AO(p-w->sr,x))
+ U i=si("'/\\",c);P(i<3,c=*++w->s;B h=c==':';w->s+=h;*b=1;aw+i+3*h)i=si(vc,c);P(i>19,GAP)
+ B u=*++w->s==':';w->s+=u;*b=1;Lt(tv-u)|i)
+Z X1(pm,                                                                                            //monadify
+ Rv(x^au^av)
+ RA(I(xx==aw,x=mut(x);xA[xn-1]=pm(xA[xn-1]))x)
+ Rs(S s=su(xv);U n;P(*s>>7&&s[(n=SL(s))-1]-':',C b[n+2];MC(b,s,n);b[n]=':';b[n+1]=0;sym(b))x)
+ RS(I o=xo;xn==1?AO(o,enl(pm(fir(x)))):x)
+ R_(x))
+A pT(P*w,C*b)_(I m=w->s-w->sr;A x=N(pt(w,b));                                                       //parse term and the adverbs or square brackets after it (v:verb?)
+  W(1,C c=*w->s;U i=si("'/\\[",c);P(i>3,x)w->s++;
+  I(i>2,x=AO(m,N(pb(w,x,']')));I(xn==2,I(xy==GAP,xy=au)E(xx=pm(xx)))*b=0)
+  E(I c=*(w->s)==':';w->s+=c;x=AO(m,aA2(aw+i+3*c,x));*b=1))x)
+Z A pe(P*w,A x,C*v)_(w->s=pw(w->s);C c=*w->s;                                                       //parse expression
+  I(c=='/'&&(w->s==w->s0||(w->s)[-1]==32||(w->s)[-1]==10),
+ I((w->s)[1]==10,C*e=(C*)strstr(w->s+1,"\n\\\n");w->s=e?e+2:w->s+SL(w->s))
+  E(W((c=*++w->s)&&c-10)))
+ P(w->s>w->s0&&*w->s=='\\'&&(w->s)[-1]==32,w->s++;A y=pe(w,0,v);P(!y,x?x(0):0);*v=0;I o=yo;y=AO(o,aA2(OUT,y));I(x,y=aA2(pm(x),y))y)
+  UH o=w->s-w->sr;C b=0;A y=pT(w,&b);P(!y,x?x(0):0)P(y==GAP,x?x:y)
+ P(!b,A z=pe(w,y,v);P(!x,z)Nx(z);*v?AO(o,aA3(aw,x,z)):AO(o,aA2(pm(x),z)))
+ A z=pe(w,0,v);P(!z,y(x?x(0):0))P(z==GAP,*v=1;P(!x,y)Yu(ep(x))AO(o,aA3(y,x,z)))
+ *v&=y!=av&y!=au;I(!x,y=pm(y))*v?AO(o,aA3(aw,x?AO(o,aA3(y,x,GAP)):y,z)):AO(o,x?aA3(y,x,z):aA2(pm(y),z)))
+Z A pb(P*w,A x,C c)_(x=x?aA1(x):emp(tA);B st=!!strchr("\n}",c);                                     //parse body (sequence of ;-separated expressions)
+ W(1,C v=0;I m=w->s-w->s0;A y=Nx(pe(w,0,&v));A z=c-']'&&y==GAP?au:y;P(y==GAP&&c==')'&&*w->s==c&&xn==1,++w->s;x(emp(tA)))PSH(x,z);B(*w->s-';'&&*w->s-10)B(c==10&&*w->s==10)w->s++)
+ P(c==10&&!*w->s,x)P(*w->s-c,ep(x))w->s++;AO(1,x))
+A pk(S*p,C c)_(P w={.sr=*p,.s0=*p,.s=*p};A x=pb(&w,GAP,c);*p=w.s;P(x,xn==2?las(x):AO(0,x))eQ(w.s0,SL(w.s0),w.s-w.s0);0)  //parse either a group of lines (c='\n') or til '\0' (c='\0')

@@ -1,6 +1,6 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/111991/rotating-a-2d-matrix/217637#217637
-f:{(,()){(,y),+|x}/|,/{1_{1_y,*x}':x,,*x}'0N 4#-1_*'(|+1_)\x}/
+/ https://codegolf.stackexchange.com/questions/111991/rotating-a-2d-matrix/217637#217637
+f:{(,()){(,y),+|x}/|,/{1_{1_y,*x}':x,,*x}'0N 4#-1_*'(*:)(|+1_)\x}/
 
 \l 0.k
 T[(2;(1 2 3 4;5 6 7 8;9 10 11 12;13 14 15 16));(3 4 8 12;2 11 10 16;1 7 6 15;5 9 13 14)]

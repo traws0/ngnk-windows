@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/59625/type-uniqchars/217599#217599
+/ https://codegolf.stackexchange.com/questions/59625/type-uniqchars/217599#217599
 f:{x@&(!#x)=x?x}
 
 \l 0.k

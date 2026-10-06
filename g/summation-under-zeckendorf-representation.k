@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/54287/summation-under-zeckendorf-representation/196177#196177
+/ https://codegolf.stackexchange.com/questions/54287/summation-under-zeckendorf-representation/196177#196177
 f:{2/<':(+/F@&+/'|2\x){y!x}\|F:64(+':1,)/0}
 \l 0.k
 t[73865 9077257;9478805]

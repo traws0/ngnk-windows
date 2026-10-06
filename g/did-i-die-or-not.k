@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/223994/did-i-die-or-not/224276#224276
+/ https://codegolf.stackexchange.com/questions/223994/did-i-die-or-not/224276#224276
 f:12>+/~2\2/|~^?
 
 \l 0.k

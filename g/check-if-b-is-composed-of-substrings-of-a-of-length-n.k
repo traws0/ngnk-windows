@@ -1,6 +1,6 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/221420/check-if-b-is-composed-of-substrings-of-a-of-length-n/221441#221441
-f:{i~?,/(x'i:!#z)@&~^(x'y)?x'z}
+/ https://codegolf.stackexchange.com/questions/221420/check-if-b-is-composed-of-substrings-of-a-of-length-n/221441#221441
+f:{i~?,/(x':i:!#z)@&~^(x':y)?x':z}
 
 \l 0.k
 T[(2;"abcdefg";"bcabcdebcdef");1]

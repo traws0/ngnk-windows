@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/143213/score-a-game-of-boggle/219020#219020
+/ https://codegolf.stackexchange.com/questions/143213/score-a-game-of-boggle/219020#219020
 f:{+/'(&7\5782020)'#''x^\:&1<#'=,/x}
 
 \l 0.k

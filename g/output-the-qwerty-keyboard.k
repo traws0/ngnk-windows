@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/64639/output-the-qwerty-keyboard/214036#214036
+/ https://codegolf.stackexchange.com/questions/64639/output-the-qwerty-keyboard/214036#214036
 f:{1_*|x\"\n"/" "/'$$`qwertyuiop`asdfghjkl`zxcvbnm}
 
 \l 0.k

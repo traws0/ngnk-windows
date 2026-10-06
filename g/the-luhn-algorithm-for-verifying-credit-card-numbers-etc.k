@@ -1,6 +1,6 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/22/the-luhn-algorithm-for-verifying-credit-card-numbers-etc/216110#216110
-f:{~10!+//10\(1+=\~x)*.'|x}
+/ https://codegolf.stackexchange.com/questions/22/the-luhn-algorithm-for-verifying-credit-card-numbers-etc/216110#216110
+f:{~10!+//10\(1+2!!#x)*.'|x}
 
 \l 0.k
 t["49927398716";1]

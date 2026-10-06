@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/77138/are-the-brackets-fully-matched/166986#166986
+/ https://codegolf.stackexchange.com/questions/77138/are-the-brackets-fully-matched/166986#166986
 f:~#{x@&~||':|4=9-':"([{<)]}>"?x}/
 \l 0.k
 t["()"                      ;1]

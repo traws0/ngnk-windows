@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/216430/equality-up-to-swapping/216462#216462
+/ https://codegolf.stackexchange.com/questions/216430/equality-up-to-swapping/216462#216462
 f:{~/x@'<'*''x}
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/172910/how-many-threes/172981#172981
+/ https://codegolf.stackexchange.com/questions/172910/how-many-threes/172981#172981
 g:{+/~3!+\.:'$3*x}
 \l 0.k
 

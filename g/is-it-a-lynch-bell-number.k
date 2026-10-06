@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/129773/is-it-a-lynch-bell-number/222872#222872
+/ https://codegolf.stackexchange.com/questions/129773/is-it-a-lynch-bell-number/222872#222872
 f:{&/~(t*t~?t:10\x)!\:x}
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/193629/replace-by-most-recent-nonzero/193632#193632
+/ https://codegolf.stackexchange.com/questions/193629/replace-by-most-recent-nonzero/193632#193632
 f:{$[y;y;x]}\
 \l 0.k
 t[1 4 3 0 0 7 5 5 0 3

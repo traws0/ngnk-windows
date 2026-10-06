@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/216512/compute-the-redwolf-checksum-of-some-data/216524#216524
+/ https://codegolf.stackexchange.com/questions/216512/compute-the-redwolf-checksum-of-some-data/216524#216524
 f:{(,/($!10),`c$97+!26)36!+/256 32 2!'2(,/|0 1_)\+/-1_(0N;y)#x,0,y#0}
 
 \l 0.k

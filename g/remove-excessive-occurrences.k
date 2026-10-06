@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/219631/remove-excessive-occurrences/219750#219750
+/ https://codegolf.stackexchange.com/questions/219631/remove-excessive-occurrences/219750#219750
 f:{x@&~y<+/'x=,\x}
 
 \l 0.k

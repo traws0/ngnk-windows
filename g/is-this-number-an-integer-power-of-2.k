@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/115516/is-this-number-an-integer-power-of-2/216680#216680
+/ https://codegolf.stackexchange.com/questions/115516/is-this-number-an-integer-power-of-2/216680#216680
 f:{|/x=*\1,x#-2}
 
 \l 0.k

@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/198237/whats-my-telephone-number/217903#217903
+/ https://codegolf.stackexchange.com/questions/198237/whats-my-telephone-number/217903#217903
 f:{*|x{x,+/(2#|x)*1,#2_x}/!2}
 
 \l 0.k

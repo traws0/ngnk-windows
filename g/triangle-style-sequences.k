@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/226532/triangle-style-sequences/226690#226690
+/ https://codegolf.stackexchange.com/questions/226532/triangle-style-sequences/226690#226690
 f:{1+/x+!y}
 
 f:f .',/:[;!10]@

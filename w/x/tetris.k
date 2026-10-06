@@ -7,7 +7,7 @@ g:0N?#T /randomized bag of 0..6
 s:0 /score
 
 /falling piece (p:position,t:type,r:rotation)
-i:{f[3 0;*g;3];g::1_g;$[g;;g::0N?#T];0} /init
+i:{$[f[3 0;*g;3];;tick::(::)];g::1_g;$[g;;g::0N?#T];0} /init piece
 f:{$[*/~a ./:+|x+T[y]z   /try to set position,type,rotation
  [p::x;t::y;r::z;1];0]}  /return 1 for success, 0 for collision
 d:{$[f[p+0 1;t;r];:1;]   /try to move it down. if successful, return 1
@@ -26,9 +26,10 @@ w:{"g.fillText(",(","/(,`k[x]),$y),");"} /write text
 draw:{`js@,//("g.clearRect(0,0,1,1);"
               c`"#80808020";q'+|&1|a     /semi-transparent grid background
               c C t;q'+p+T[t]r           /draw falling piece
-              c C@*g;q'+(2+#*a;4)+T[*g]3 /shadow piece
               c`white;q'+|&a             /draw stationary blocks
-              w["score:",$s;1%2 16])}    /draw score
+              w["score:",$s;1%2 16]      /draw score
+              $[tick;c C@*g;q'+(2+#*a;4)+T[*g]3 /shadow piece..
+                     w["game over";1%2 2]])}    /..or "game over"
 
 /key down event handler
 kd:{$[32=x;(::)d/1      /space(drop)

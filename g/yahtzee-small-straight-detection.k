@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/74997/yahtzee-small-straight-detection/217532#217532
+/ https://codegolf.stackexchange.com/questions/74997/yahtzee-small-straight-detection/217532#217532
 f:{|/&/~^x?x+/:!4}
 
 f:?f'

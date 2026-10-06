@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/182010/calculating-total-slots/182394#182394
+/ https://codegolf.stackexchange.com/questions/182010/calculating-total-slots/182394#182394
 f:{#2_``{y,#[0|2-x?y;`],x}/x}
 \l 0.k
 t[1 2 3 4 5 6 7 8 9 10;10]

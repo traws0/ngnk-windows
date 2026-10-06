@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/171681/check-my-tunneling-arrays/171719#171719
+/ https://codegolf.stackexchange.com/questions/171681/check-my-tunneling-arrays/171719#171719
 f:{*/(x<0)|(x<#x)&(~x=!#x)&x=x?x?x}
 \l 0.k
 t[-1 -1 -1 6 -1 -1 3 -1 -1;1]

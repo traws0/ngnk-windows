@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/79037/smallest-groups-in-an-array/216391#216391
+/ https://codegolf.stackexchange.com/questions/79037/smallest-groups-in-an-array/216391#216391
 f:{((&/#'t)=#:')#t:(&~=':x)_x}
 
 \l 0.k

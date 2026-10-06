@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/176251/the-hungry-mouse/186102#186102
+/ https://codegolf.stackexchange.com/questions/176251/the-hungry-mouse/186102#186102
 f:{{h[,x]:0;*>(+x+0,'1-!3 3)#h}\*>h::(+!4 4)!x;+/h}
 \l 0.k
 t[4 3 2 1 5 6 7 8 12 11 10 9 13 14 15 16;0  ]

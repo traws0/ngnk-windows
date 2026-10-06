@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/171255/find-array-runs/171260#171260
+/ https://codegolf.stackexchange.com/questions/171255/find-array-runs/171260#171260
 f:{1_,//${H:" ",h:*x;l:+/&\x=h+(!#x)*d:--/2#x;$[l>2;(H;"to";x l-1;(~d=1)#,"by",d;o l_x);l;H,o 1_x;""]}x}
 \l 0.k
 t[1000 1002 1004 1006 1008 1010;"1000to1010by2"]

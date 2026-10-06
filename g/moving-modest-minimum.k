@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/117774/moving-modest-minimum/215007#215007
+/ https://codegolf.stackexchange.com/questions/117774/moving-modest-minimum/215007#215007
 f:{(&/x_)'!#x}
 
 \l 0.k

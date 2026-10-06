@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/165484/sort-a-string-by-a-given-ordering/165485#165485
+/ https://codegolf.stackexchange.com/questions/165484/sort-a-string-by-a-given-ordering/165485#165485
 f:{y@>-x?y}
 \l 0.k
 T[("axd";"haxuizzxaxduxha");"aaaxxxxdhuizzuh"]

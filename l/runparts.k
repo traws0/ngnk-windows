@@ -1,12 +1,14 @@
-#!../k
-skip:(`I$","\*x)^0N
-k:{$[82<#x:`k x;(80#x),"..";x]}
-a@:<`I$-2_'a:(>/"/9"<\:*:')#."\\ls" /0:,"."
-u:{(|6$|$-1000!500+x),"ms"}
-OK:1
-t:-`t[]
-{1@-2_x;e:.[1::;,"o/",-2_x;""];t:-`t[];r:`x(,x;"");t+:`t[];OK&:ok:e~r
- 1$[ok;u[t],"\n";"FAIL\n expected:",k[e],"\n   actual:",k[r],"\n"]}'a^{x,".k"}'$skip;
-t+:`t[]
-1"      ",u[t],$[#skip;" (skipped: ",`k[skip],")";""],"\n";
-`exit@~OK
+#!k
+$[x;."\\cd ",c:*x;]
+k:{$[82<#x:`k x;(80#x),"..";x]} /truncated `k@
+d:>/"/9"<\: /is digit?
+t@:<t:(^:)_`I$-2_'({".k"~-2#x}')#0:,"." /all-digit k files without the .k extension
+$[1<#x;t@:&~(`I$1_x)'t;]; /filter those between argv[1] and argv[2]
+`exit@|/{x:-2#$100+x
+         e:.[1::;,"o/",x;""] /expected
+         a:`x(,x,".k";"")    /actual
+         $[e~a;;`0:(""
+                    "FAIL ",c,"/",x,".k"
+                    " expected:",k e
+                    "   actual:",k a)]
+         e~a}'t

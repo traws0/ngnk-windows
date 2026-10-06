@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/177866/translate-english-to-corpus/177907#177907
+/ https://codegolf.stackexchange.com/questions/177866/translate-english-to-corpus/177907#177907
 f:{`c$x-a-@[!128;98+!25;:;0+"typetjkitkpstokrtyputjkyb"]a:_x}
 \l 0.k
 t["Hello, World!"

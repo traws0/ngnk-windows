@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/229414/generate-this-number-table/229433#229433
+/ https://codegolf.stackexchange.com/questions/229414/generate-this-number-table/229433#229433
 f:{x|\x}1+!:
 
 \l 0.k

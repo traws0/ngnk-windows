@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/167924/in-for-a-bumpy-ride/167933#167933
+/ https://codegolf.stackexchange.com/questions/167924/in-for-a-bumpy-ride/167933#167933
 f:. s:"{*/ 0 >1_ *':1_ -': x }"
 
 /` 0:1_'(,\(1+#s)#"|"),'$0+s,,""

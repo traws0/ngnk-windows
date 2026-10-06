@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/214156/repetend-length-in-1-n/214188#214188
+/ https://codegolf.stackexchange.com/questions/214156/repetend-length-in-1-n/214188#214188
 f:{1+(x(x!10*)\10)?1}
 
 \l 0.k

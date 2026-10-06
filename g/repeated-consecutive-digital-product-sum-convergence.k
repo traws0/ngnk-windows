@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/132029/repeated-consecutive-digital-product-sum-convergence/214855#214855
+/ https://codegolf.stackexchange.com/questions/132029/repeated-consecutive-digital-product-sum-convergence/214855#214855
 f:{+/*/'(&~=':x)_x:10\x}/
 
 \l 0.k

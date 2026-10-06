@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/220281/semidivisibility/220360#220360
+/ https://codegolf.stackexchange.com/questions/220281/semidivisibility/220360#220360
 f:{>/~y!10 1*x}
 
 \l 0.k

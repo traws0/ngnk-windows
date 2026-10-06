@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/216303/iterate-over-the-neighborhood-of-a-string/216579#216579
+/ https://codegolf.stackexchange.com/questions/216303/iterate-over-the-neighborhood-of-a-string/216579#216579
 f:{?"ab"@?,/e'e"b"=x}
 e:{?,/(~+x==#x;{y,x,z}.',/0 1,/:\:(0,'!1+#x)_\:x;x_/:!#x)}
 \l 0.k

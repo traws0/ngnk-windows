@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/165212/generalized-cantor-set-segment-lengths/165291#165291
+/ https://codegolf.stackexchange.com/questions/165212/generalized-cantor-set-segment-lengths/165291#165291
 f:{x{,/y*(#y)#x}[(y;+/y)]/,1}
 \l 0.k
 T[(0;3 1 1 1 2);,1]

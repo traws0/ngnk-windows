@@ -1,40 +1,81 @@
 #!k
-`1:"ngn/k, (c) 2019-2021 ngn, GNU AGPLv3. type \\ for more info\n",repl.prompt:," "
-repl.cmds:(,"a")!{`1:1:repl.joinpath[repl.basename`argv 0]"LICENSE";}
-repl.basename:{$[#x:"/"/-1_"/"\x;x;,"."]}
-repl.joinpath:{$[x~,".";y;"/"~*|x;x,y;x,"/",y]}
-repl.fmt:{$[x~(::);"";(`A~@x)&1<#x;"(",("\n "/`k'x),")\n";`k[x],"\n"]}
-repl.line:{$[#x;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!repl.cmds)?x 1;repl.cmds[x 1]x 1;.[`1:repl.fmt@.:;,x;`epr@]];`1:repl.prompt;1}
-{repl.cmds[x[1]1]:{y;`0:x}2_x}'{(&x~\:80#"-")_x:(1+*&x~\:,"/")_-1_x}@0:`argv 1;
-$["kw"~`argv 0;;{repl.line@1:`}::/`];
+\d repl
+/ -- unicode --
+R:2/+(0;11000000b;11100000b;11110000b)
+u8s:{_[-2_s:@[+/1(!#:)\1+R'256!x;]\0;x]}
+/ -------------
+banner:"ngn/k, (c) 2019-2024 ngn, GNU AGPLv3. type \\ for more info\n"
+prompt:," " /use 0x0720 for emacs integration
+(opn;sem;cls):"(;)"
+/(opn;sem;cls):("( ";" ; ";" )") /uncomment this line for extra spacing
+lines:cols:999
+lc:{(lines;cols)::x}
+upd:{$[x:.[`x@;,(("/usr/bin/env";"tput";"-S");"lines\ncols\n");{0}];lc`I$"\n"\x;]}
+lim:{(x<#y)(x#)/y}
+dd:{,/(x<#y)(,[;".."](x-2)#)/u8s@y}
+ser:{$[(::)~x;"";`@x]}
+fmt:{upd[];$[(::)~x;"";(1<#x)&|/`m`M`A`S=@x;mMAS x;(dd[cols]`k@lim[cols]x),"\n"]}
+fmtx:{$[(::)~x;"";`k[x],"\n"]}
+mMAS:{(P;f;q):((,"!/+(";dct;,")");(("+![";" +(");tbl;")]");(,,"(";lst;,")");(,,"(";lst;,")"))`m`M`A`S?t:@x
+ w:cols-#*P;u:w-#q;h:lines-2
+ x:$[h<(`M=t)+#x;,[;,".."](h-1)#f[w;u;h#x];f[w;u;x]]
+ ,[;"\n"]@"\n"/@[;-1+#x;,;q]P[!#x],'x}
+lst:{[w;u;x](((-1+#x)#w),u)dd'k'lim[cols]'x}
+qq:{,/x?[;;"\\"]/|&,["\""]~/:x:u8s x}
+k:{$[`s=t:@x;"`",qq[$x]/"\"\"";`C=t;#[1=#x;","],qq[x]/"\"\"";`k x]}
+dct:{[w;u;x]k:,'/1(#'[;" "]@-/||/\len')\k:k'!x;par'(((-1+#x)#w-3),u-3)dd'sem/'+(k;`k'.x)}
+len:#u8s@
+tbl:{[w;u;x]h:k'!x;d:k''.x;W:(len'h)|/'len''d
+ r:,$[`S~@!x;dd[w](""opn),(""sem)/;par@dd[w-2]@sem/]@,'/1(#[;" "]'0|W-len')\h
+ r,par'dd[w-2]'sem/'+@[W;&~^`i`d?_@'.x;-:]$'d}
+cell:{$[|/`i`d=@y;-x;x]$z}
+par:{opn,x,cls}
+cmds:(,"a")!{`1:1:joinpath[dirname`argv 0]"LICENSE";}
+basename:{*|"/"\x}
+dirname:{$[#x:"/"/-1_"/"\x;x;,"."]}
+joinpath:{$[x~,".";y;"/"~*|x;x,y;x,"/",y]}
+chunk:512;buf:"";eof:0;rd:{$[eof;"";~#r:1:(0;0,x);[eof::1;""];r]};bufrd:{l:1+&"\n"=s:"\n",buf,rd x;l:l_s;buf::*|l;-1_l}
+buflns:();bufln:{$[#bl:$[#buflns;buflns;*{~(#[buf]=x 1)|#x 0}{(bufrd chunk;#buf)}/(bufrd chunk;#buf)];;:""];(,n;r):0 1_bl;;buflns::r;n}
+line0:{c:{0x07~*-2#*x}{(l;r):x;(bufln[];r,,(-2_l))}/(x;());"\n"/(*|c),,*c}
+line1:{$[#x;;:0];x:-1_x;$[(3>#x)&("\\"=*x)&~^(!cmds)?x 1;cmds[x 1]x 1;.[`1:(fmt;fmtx;ser;fmt)[3&+/&\" "=x]@.:;,x;{`0:`err[]}]];`1:prompt;1}
+line:line1@line0@
+$["repl.k"~basename`argv 1;[{cmds::@[cmds;x[1]1;:;{y;`0:x}2_x]}'{(&x~\:80#"-")_full::x:(1+*&x~\:,"/")_-1_x}@0:`argv 1;cmds,:(,"?")!{y;`0:x}[full]];];
+run:{`1:banner,prompt;{line@bufln[]}::/`;}
+\d .
+
+$[(~"kw"~`argv 0)&~"--non-interactive"~*x;repl.run[];]
+$["kw"~`argv 0;`1:repl.banner,repl.prompt;]
+
 /
 --------------------------------------------------------------------------------
 
-\   help               \\         exit
+\   help help          \\         exit
 \a  license(AGPLv3)    \l file.k  load
-\0  types              \t:n expr  time(elapsed milliseconds after n runs)
-\+  verbs              \v         variables
-\:  I/O verbs          \f         functions
-\'  adverbs            \cd path   change directory
-\`  symbols            \other     command(through /bin/sh)
-\h  summary
+\0  types              \d foo     set namespace; restore with  \d .
+\+  verbs              \t:n expr  time(elapsed milliseconds after n runs)
+\:  I/O verbs          \v         variables
+\'  adverbs            \f         functions
+\`  symbols            \cd path   change directory
+\h  summary            \other     command(through /bin/sh)
+\?  full help
 --------------------------------------------------------------------------------
 \0
-Types: ACBHILDSMmcildsopqruvw
+Types:
 list atom
  `A        generic list   ()   ,"ab"   (0;`1;"2";{3};%)
  `I   `i   int            0N -9223372036854775807 01b
- `D   `d   float          -0w -0.0 0.0 0w 1.2e308 0n
+ `F   `f   float          -0w -0.0 0.0 0w 1.2e308 0n
  `C   `c   char           "a"   0x6263   "d\0\"\n\r\t"
  `S   `s   symbol         `   `a   `"file.txt"   `b`cd`"ef"
  `M   `m   table&dict     +`a`b!(0 1;"23")   (0#`)!()
       `o   lambda         {1+x*y#z}  {[a;b]+/*/2#,a,b}
       `p   projection     1+   {z}[0;1]   @[;i;;]
-      `q   composition    *|:   {1+x*y}@
+      `q   composition    *|:   1+{x*y}@
       `r   derived verb   +/   2\   {y,x}':
       `u   monadic verb   +:   0::
       `v   dyadic  verb   +   0:
       `w   adverb         '   /:
+      `x   external func
 --------------------------------------------------------------------------------
 \:
 I/O verbs
@@ -53,17 +94,18 @@ x can be a file descriptor (int) or symbol or string such as
 --------------------------------------------------------------------------------
 \+
 Verbs:    : + - * % ! & | < > = ~ , ^ # _ $ ? @ . 0: 1:
-notation: [c]har [i]nt [n]umber(int|float) [s]ymbol [a]tom [d]ict
+notation: [c]har [i]nt [n]umber(int|float|char) [s]ymbol [a]tom [d]ict
           [f]unc(monad) [F]unc(dyad) [xyz]any
 special:  var:y     set    a:1;a -> 1
+          var::y    global a:1;{a::2}[];a -> 2
           (v;..):y  unpack (b;(c;d)):(2 3;4 5);c -> 4
           :x        return {:x+1;2}[3] -> 4
-          $[x;y;..] cond   $[0;`a;"\0";`b;`;`c;();`d;`e] -> `e
-          o[..]     recur  {$[x<2;x;+/o'x-1 2]}9 -> 34
+          :[x;y;..] cond   :[0;`a;"\0";`b;`;`c;();`d;`e] -> `e
+          o[..]     recur  {:[x<2;x;+/o'x-1 2]}9 -> 34
           [..]      progn  [0;1;2;3] -> 3
 
-::  self      ::12 -> 12
- :  right     1 :2 -> 2   "abc":'"d" -> "ddd"
+::  self      f:(::);f 12 -> 12
+ :  right     f:(:);f[1;2] -> 2   "abc":'"d" -> "ddd"
  +x flip      +("ab";"cd") -> ("ac";"bd")
 N+N add       1 2+3 -> 4 5
  -N negate    - 1 2 -> -1 -2
@@ -71,11 +113,11 @@ N-N subtract  1-2 3 -> -1 -2
  *x first     *`a`b -> `a   *(0 1;"cd") -> 0 1
 N*N multiply  1 2*3 4 -> 3 8
  %N sqrt      %25 -> 5.0   %-1 -> 0n
-N%N divide    4 3%2 -> 2 1   4 3%2.0 -> 2.0 1.5
+N%N divide    2 3%4 -> 0.5 0.75
  !i enum      !3 -> 0 1 2   !-3 -> -3 -2 -1
  !I odometer  !2 3 -> (0 0 0 1 1 1;0 1 2 0 1 2)
  !d keys      !`a`b!0 1 -> `a`b
- !S ns keys   a.b.c:1;a.b.d:2;!`a`b -> ``c`d
+ !S ns keys   a.b.c:1;a.b.d:2;!`a`b -> `c`d
 x!y dict      `a`b!1 2 -> `a`b!1 2
 i!I div       -10!1234 567 -> 123 56
 i!I mod       10!1234 567 -> 4 7
@@ -97,17 +139,19 @@ N=N equal     0 1 2=0 1 3 -> 1 1 0
 x~y match     2 3~2 3 -> 1   "4"~4 -> 0   0~0.0 -> 0
  ,x enlist    ,0 -> ,0   ,0 1 -> ,0 1   ,`a!1 -> +(,`a)!,,1
 x,y concat    0,1 2 -> 0 1 2  "a",1 -> ("a";1)
+d,d merge     (`a`b!0 1),`b`c!2 3 -> `a`b`c!0 2 3
  ^x null      ^(" a";0 1 0N;``a;0.0 0n) -> (1 0;0 0 1;1 0;0 1)
 a^y fill      1^0 0N 2 3 0N -> 0 1 2 3 1   "b"^" " -> "b"
 X^y without   "abracadabra"^"bc" -> "araadara"
  #x length    #"abc" -> 3   #4 -> 1   #`a`b`c!0 1 0 -> 3
-i#y reshape   3#2 -> 2 2 2
+i#y take      5#"abc" -> "abcab"   -5#`a`b`c -> `b`c`a`b`c
+X#d take keys `c`d`f#`a`b`c`d!1 2 3 4 -> `c`d`f!3 4 0N
 I#y reshape   2 3#` -> (```;```)
 f#y replicate (3>#:')#(0;2 1 3;5 4) -> (0;5 4)   {2}#"ab" -> "aabb"
-x#d take      `c`d`f#`a`b`c`d!1 2 3 4 -> `c`d`f!3 4 0N
  _n floor     _12.34 -12.34 -> 12 -13
  _c lowercase _"Ab" -> "ab"
-i_Y drop      2_"abcde" -> "cde"   `b_`a`b`c!0 1 2 -> `a`c!0 2
+i_Y drop      2_"abcde" -> "cde"   -2_`a`b`c -> ,`a
+X_d drop keys `a`c_`a`b`c!0 1 2 -> (,`b)!,1
 I_Y cut       2 4 4_"abcde" -> ("cd";"";,"e")
 f_Y weed out  (3>#:')_(0;2 1 3;5 4) -> ,2 1 3
 X_i delete    "abcde"_2 -> "abde"
@@ -115,11 +159,12 @@ X_i delete    "abcde"_2 -> "abde"
 i$C pad       5$"abc" -> "abc  "   -3$"a" -> "  a"
 s$y cast      `c$97 -> "a"   `i$-1.2 -> -1   `$"a" -> `a
 s$y int       `I$"-12" -> -12
- ?x uniq      ?"abacus" -> "abcus"
+ ?X distinct  ?"abacus" -> "abcus"
+ ?i uniform   ?2 -> 0.6438163747387873 0.8852656305774402 /random
 X?y find      "abcde"?"bfe" -> 1 0N 4
 i?x roll      3?1000 -> 11 398 293   1?0 -> ,-8164324247243690787
 i?x deal      -3?1000 -> 11 398 293 /guaranteed distinct
- @x type      @1 -> `b   @"ab" -> `C   @() -> `A   @(@) -> `v
+ @x type      @1 -> `i   @"ab" -> `C   @() -> `A   @(@) -> `v
 x@y apply(1)  {x+1}@2 -> 3   "abc"@1 -> "b"   (`a`b!0 1)@`b -> 1
  .S get       a:1;.`a -> 1   b.c:2;.`b`c -> 2
  .C eval      ."1+2" -> 3
@@ -130,76 +175,77 @@ x.y apply(n)  {x*y+1}. 2 3 -> 8   (`a`b`c;`d`e`f). 1 0 -> `d
 @[x;y;F;z] amend  @["abc";1;:;"x"] -> "axc"   @[2 3;0;+;4] -> 6 3
 .[x;y;f]   drill  .[("AB";"CD");1 0;_:] -> ("AB";"cD")
 .[x;y;F;z] drill  .[("ab";"cd");1 0;:;"x"] -> ("ab";"xd")
-.[f;y;f]   try    .[+;1 2;"E:",] -> 3   .[+;1,`2;"E:",] -> "E:typ"
+.[f;y;f]   try    .[+;1 2;"E:",] -> 3   .[+;1,`;"E:",] -> "E:'type\n"
 ?[x;y;z]   splice ?["abcd";1 3;"xyz"] -> "axyzd"
 --------------------------------------------------------------------------------
 \`
 Special symbols:
-    `@x serialize    ` 7 8 9 -> 0x020300000000000000070809
-    `?C deserialize  `?0x020300000000000000070809 -> 7 8 9
    `j?C parse json   `j?"{\"a\":1,\"b\":[true,\"c\"]}" -> `a`b!(1.0;(1;,"c"))
    `k@x pretty-print `k("ab";2 3) -> "(\"ab\";2 3)"
    `p@C parse k
  `hex@C hexadecimal  `hex"ab" -> "6162"
+ `pri@i primes       `pri 20  ->  2 3 5 7 11 13 17 19
    `x@x fork-exec    `x(("/bin/wc";"-l");"a\nbc\nd\n") -> "3\n"
    `t[] current time (microseconds)
-`argv[] list of cmd line args
+`argv[] list of cmd line args (also in global variable x)
  `env[] dict of env variables
 `prng[] `prng@I get/set pseudo-random number generator internal state
                      s:`prng[];r:9?0;`prng s;r~9?0 -> 1
         `prng@0 use current time to set state
  `err@C throw error
-Special symbols available only in an interpreter built with "make k-libc":
  `sin@N trigonometry `sin 12.34 -> -0.22444212919135995
  `exp@N exponential  `exp 1 -> 2.7182818284590455
   `ln@N logarithm    `ln 2 -> 0.6931471805599453
+`exit@i exit
 --------------------------------------------------------------------------------
 \'
 Adverbs:   ' / \ ': /: \:
-  f'x  each1     #'("abc";3 4 5 6) -> 3 4
-x F'y  each2     2 3#'"ab" -> ("aa";"bbb")
-  i'x  window    3'"abcdef" -> ("abc";"bcd";"cde";"def")
-  X'x  binsearch 1 3 5 7 9'8 9 0 -> 3 4 -1
-  F/x  fold      +/1 2 3 -> 6
-  F\x  scan      +\1 2 3 -> 1 3 6
-x F/y  seeded /  10+/1 2 3 -> 16
-y F\x  seeded \  10+\1 2 3 -> 11 13 16
-  f/x  converge  {1+1.0%x}/1 -> 1.618033988749895
-  f\x  converges (-2!)\100 -> 100 50 25 12 6 3 1 0
-i f/x  n-do      5(2*)/1 -> 32
-i f\x  n-dos     5(2*)\1 -> 1 2 4 8 16 32
-f f/x  while     (1<){$[2!x;1+3*x;-2!x]}/3 -> 1
-f f\x  whiles    (1<){$[2!x;1+3*x;-2!x]}\3 -> 3 10 5 16 8 4 2 1
-  C/X  join      "ra"/("ab";"cadab";"") -> "abracadabra"
-  C\C  split     "ra"\"abracadabra" -> ("ab";"cadab";"")
-  I/x  decode    24 60 60/1 2 3 -> 3723   2/1 1 0 1 -> 13
-  I\x  encode    24 60 60\3723 -> 1 2 3   2\13 -> 1 1 0 1
-i f':x stencil   3{x,"."}':"abcde" -> ("abc.";"bcd.";"cde.")
-  F':x eachprior -':12 13 11 17 14 -> 12 1 -2 6 -3
-x F':y seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3
-x F/:y eachright 1 2*/:3 4 -> (3 6;4 8)
-x F\:y eachleft  1 2*\:3 4 -> (3 4;6 8)
+   f' each1     #'("abc";3 4 5 6) -> 3 4
+ x F' each2     2 3#'"ab" -> ("aa";"bbb")
+   X' binsearch 1 3 5 7 9'8 9 0 -> 3 4 -1
+  I'[X;..] case 2 0 1 2'[`a`b`c`d;1 2 3 4;"abcd"] -> ("a";`b;3;"d")
+   F/ fold      +/1 2 3 -> 6
+   F\ scan      +\1 2 3 -> 1 3 6
+ x F/ seeded /  10+/1 2 3 -> 16
+ x F\ seeded \  10+\1 2 3 -> 11 13 16
+ i f/ n-do      5(2*)/1 -> 32
+ i f\ n-dos     5(2*)\1 -> 1 2 4 8 16 32
+ f f/ while     (1<){:[2!x;1+3*x;-2!x]}/3 -> 1
+ f f\ whiles    (1<){:[2!x;1+3*x;-2!x]}\3 -> 3 10 5 16 8 4 2 1
+   f/ converge  {1+1.0%x}/1 -> 1.618033988749895
+   f\ converges (-2!)\100 -> 100 50 25 12 6 3 1 0
+   C/ join      "ra"/("ab";"cadab";"") -> "abracadabra"
+   C\ split     "ra"\"abracadabra" -> ("ab";"cadab";"")
+   I/ decode    24 60 60/1 2 3 -> 3723   2/1 1 0 1 -> 13
+   I\ encode    24 60 60\3723 -> 1 2 3   2\13 -> 1 1 0 1
+  i': window    3':"abcdef" -> ("abc";"bcd";"cde";"def")
+i f': stencil   3{x,"."}':"abcde" -> ("abc.";"bcd.";"cde.")
+  F': eachprior -':12 13 11 17 14 -> 12 1 -2 6 -3
+x F': seeded ': 10-':12 13 11 17 14 -> 2 1 -2 6 -3
+x F/: eachright 1 2*/:3 4 -> (3 6;4 8)
+x F\: eachleft  1 2*\:3 4 -> (3 4;6 8)
 --------------------------------------------------------------------------------
 \h
-: SET      RETURN    '  each|slide|bin
-+ add      flip      /  fold|join |dec
-- subtract negate    \  scan|split|enc
-* multiply first     ': eachprior
-% divide   sqrt      /: eachright
-! mod|dict enum|key  \: eachleft
-& min|and  where
-| max|or   reverse
-< less     ascend    0: lines i/o
-> more     descend   1: bytes i/o
-= equal    group
-~ match    not
+: SET      RETURN    :[c;t;f]     COND
++ add      flip
+- subtract negate    '  each|slide|bin
+* multiply first     /  fold|join |dec|comment
+% divide   sqrt      \  scan|split|enc|trace
+! mod|dict enum|key  ': eachprior
+& min|and  where     /: eachright
+| max|or   reverse   \: eachleft
+< less     ascend
+> more     descend   /
+= equal    group     multiline comment
+~ match    not       \
 , concat   enlist
-^ without  null
-# reshape  length
+^ without  null      0: lines i/o
+# reshape  length    1: bytes i/o
 _ drop|cut floor
-$ cast     string    $[c;t;f] COND
-? find|rnd uniq
+$ cast     string
+? find|rnd uniq      ?[a;i;b]     splice
 @ apply(1) type      @[x;i;[f;]y] amend
 . apply(n) eval      .[x;i;[f;]y] drill
 grammar:  E:E;e|e e:nve|te| t:n|v v:tA|V n:t[E]|(E)|{E}|N
+limits:   8args 16locals 256globals 256bytecode 2048stack
 \

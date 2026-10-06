@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/216929/based-palindromes/216971#216971
+/ https://codegolf.stackexchange.com/questions/216929/based-palindromes/216971#216971
 f:{&{x~|x}'x\'!1001}
 
 \l 0.k

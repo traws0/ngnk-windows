@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/128858/the-dragon-curve-sequence/217839#217839
+/ https://codegolf.stackexchange.com/questions/128858/the-dragon-curve-sequence/217839#217839
 f:~1=-/|-2#&2\
 
 f:f'1+!:

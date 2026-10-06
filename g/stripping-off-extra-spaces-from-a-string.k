@@ -1,5 +1,5 @@
 #!../k
-/https://codegolf.stackexchange.com/questions/50510/stripping-off-extra-spaces-from-a-string/215875#215875
+/ https://codegolf.stackexchange.com/questions/50510/stripping-off-extra-spaces-from-a-string/215875#215875
 f:" "/^[;,""]@" "\
 
 \l 0.k
